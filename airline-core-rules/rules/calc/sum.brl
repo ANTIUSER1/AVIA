@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>sum</name>
+  <uuid>b16a046d-1fad-47f0-a59e-d2e07902c92b</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[then
+set the result of the summator to the first argument of the summator + the second argumant of the summator;
+set the comment of the summator to "Processed by airline-core-rules"; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

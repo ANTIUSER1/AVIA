@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="sum" usingRuleflow="true" ruleflowName="sum" targetRuleProjectName="SU-rules">
+  <name>sum</name>
+  <uuid>939cacbb-3219-4c45-99f9-467b94f0749b</uuid>
+  <referencedVariables variableName="summator" variableSetName="sumParams" direction="IN_OUT">
+    <variableSet href="../rules/sumParams.var#64354ca5-d3a7-46f2-89d0-3eb3c01aa75c"/>
+  </referencedVariables>
+  <ruleflow href="../rules/sum.rfl#5c29718f-2ea9-4686-afdf-92de7931ab70"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="sum_extractor" validator="Default Validator"/>
+  <targetRuleProject href="../../SU-rules#acc26832-2255-4fd6-8c0a-3dbd27f5596b"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

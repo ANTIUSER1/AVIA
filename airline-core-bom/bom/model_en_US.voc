@@ -1,0 +1,13 @@
+# Vocabulary Properties
+uuid = b5874b4a-4ea9-49cf-a9ec-e9352ea81d76
+
+# ru.integrotech.sample.Summator
+ru.integrotech.sample.Summator#concept.label = summator
+ru.integrotech.sample.Summator.comment#phrase.action = set the comment of {this} to {comment}
+ru.integrotech.sample.Summator.comment#phrase.navigation = {comment} of {this}
+ru.integrotech.sample.Summator.first#phrase.action = set the first argument of {this} to {first}
+ru.integrotech.sample.Summator.first#phrase.navigation = {first} argument of {this}
+ru.integrotech.sample.Summator.result#phrase.action = set the result of {this} to {result}
+ru.integrotech.sample.Summator.result#phrase.navigation = {result} of {this}
+ru.integrotech.sample.Summator.second#phrase.action = set the second argument of {this} to {second}
+ru.integrotech.sample.Summator.second#phrase.navigation = {second} argumant of {this}

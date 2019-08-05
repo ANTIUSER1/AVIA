@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>surules</groupId>
+		<artifactId>parent</artifactId>
+		<version>1.0.0</version>
+		<relativePath>..</relativePath>
+	</parent>
+
+	<artifactId>SU-rules</artifactId>
+	<packaging>decisionservice</packaging>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.ibm.rules.buildcommand</groupId>
+				<artifactId>rules-compiler-maven-plugin</artifactId>
+				<configuration>
+					<resolvers>
+						<resolver>
+							<!-- The values of the kind and url of the project correspond to the 'kind' and 'url' attribute values of an 'entries' element in the .ruleproject file. -->
+							<kind>JAVA_PROJECT</kind>
+							<url>platform:/airline-core-xom</url>		
+							<!-- The artifactKey references the groupId and artifactId of a Maven dependency. -->
+							<artifactKey>${project.groupId}:airline-core-xom</artifactKey>
+						</resolver>
+					</resolvers>
+
+					<deployments>
+						<deployment>
+							<name>surules</name>
+						</deployment>
+
+					</deployments>
+
+				</configuration>
+			</plugin>
+		</plugins>
+
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>airline-core-xom</artifactId>
+			<type>jar</type>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+
+</project>
