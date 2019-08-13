@@ -1,28 +1,28 @@
 <?xml version="1.0"?>
 <project name="surules" >
 
-	<property name="executionserver.home" value="C:/dev/IBM/ODM89/executionserver"/>
-	<import file="${executionserver.home}/lib/classpath-executionserver.xml"/>
+	<!-- <property name="executionserver.home" value="C:/dev/IBM/ODM89/executionserver"/> -->
+	<!-- <import file="${executionserver.home}/lib/classpath-executionserver.xml"/> -->
 
-	<taskdef resource="res-tasks.properties" classpath="${executionserver.tools.classpath}">
-	<classpath refid="executionserver.tools.classpath"/>
-	</taskdef>
+	<!-- <taskdef resource="res-tasks.properties" classpath="${executionserver.tools.classpath}"> -->
+	<!-- <classpath refid="executionserver.tools.classpath"/> -->
+	<!-- </taskdef> -->
 	
 	<property environment="env"/>
 
-	<!-- <patternset id="tools.classpath.patternset"> -->
-		<!-- <include name="*.jar"/> -->
-	<!-- </patternset> -->
+	<patternset id="tools.classpath.patternset">
+		<include name="*.jar"/>
+	</patternset>
 
-	<!-- <path id="tools.classpath"> -->
-		<!-- <fileset dir="."> -->
-			<!-- <patternset refid="tools.classpath.patternset"/> -->
-		<!-- </fileset> -->
-	<!-- </path> -->
+	<path id="tools.classpath">
+		<fileset dir=".">
+			<patternset refid="tools.classpath.patternset"/>
+		</fileset>
+	</path>
 
-	<!-- <taskdef resource="res-tasks.properties"> -->
-		<!-- <classpath refid="tools.classpath"/> -->
-	<!-- </taskdef> -->
+	<taskdef resource="res-tasks.properties">
+		<classpath refid="tools.classpath"/>
+	</taskdef>
 
 	<target name="DeployRulesArchive">
 		<res-deploy 
