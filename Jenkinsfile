@@ -18,6 +18,7 @@ pipeline {
                 sh 'ls -la'
                 sh 'ls -la /tmp/'
                 sh 'echo $USER'
+                sh 'env'
                 // sh 'ls -la ~/.m2/repository/com/ibm/rules'
                 sh 'mvn clean install'
             }
