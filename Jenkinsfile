@@ -18,7 +18,7 @@ pipeline {
                 sh 'ls -la'
                 sh 'ls -la /tmp/'
                 // sh 'whoami'
-                sh 'ls -la /root/.m2/repository/com/ibm/rules'
+                sh 'ls -la ~/.m2/repository/com/ibm/rules'
                 sh 'mvn clean install'
             }
         }
