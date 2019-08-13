@@ -12,7 +12,10 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'mvn -B -DskipTests clean package' 
+                // sh 'mvn -B -DskipTests clean package' 
+                sh 'pwd'
+                sh 'ls -la'
+                sh 'mvn clean install'
             }
         }
     }
