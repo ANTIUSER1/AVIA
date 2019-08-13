@@ -13,12 +13,12 @@ pipeline {
         stage('Build') { 
             steps {
                 // sh 'mvn -B -DskipTests clean package' 
-                sh 'hostname'
+                sh 'hostname && uname -a'
                 sh 'pwd'
                 sh 'ls -la'
                 sh 'ls -la /tmp/'
-                // sh 'whoami'
-                sh 'ls -la ~/.m2/repository/com/ibm/rules'
+                sh 'echo $USER'
+                // sh 'ls -la ~/.m2/repository/com/ibm/rules'
                 sh 'mvn clean install'
             }
         }
