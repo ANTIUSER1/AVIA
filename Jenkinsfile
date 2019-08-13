@@ -16,6 +16,7 @@ pipeline {
                 sh 'hostname'
                 sh 'pwd'
                 sh 'ls -la'
+                sh 'ls -la /tmp/'
                 sh 'mvn clean install'
             }
         }
