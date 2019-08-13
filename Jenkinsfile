@@ -6,21 +6,13 @@ pipeline {
     agent {
         docker {
             image '10.77.18.10:8082/odm/su-rules-deploy:jdk-8-alpine' 
-            args '-u root:root -w /usr/src'
+            args '-u root:root'
         }
     }
     stages {
         stage('Build') { 
             steps {
                 // sh 'mvn -B -DskipTests clean package' 
-                sh 'hostname && uname -a'
-                sh 'pwd'
-                sh 'ls -la'
-                sh 'ls -la /tmp/'
-                sh 'echo $USER'
-                sh 'env'
-                sh 'ls -la ~/.m2'
-                // sh 'ls -la ~/.m2/repository/com/ibm/rules'
                 sh 'mvn clean install'
             }
         }
