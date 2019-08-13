@@ -31,7 +31,8 @@
    userid="${env.ODM_USER_CREDS_USR}" 
    password="${env.ODM_USER_CREDS_PSW}" 
    file="./SU-rules/target/surules.jar" 
-   versioningpolicy="MINOR_VERSION_POLICY">
+   mergingpolicy="ADD_AT_END_RULESET_MERGING_POLICY"
+   versioningpolicy="MAJOR_VERSION_POLICY">
 			<!-- ruleset paths -->
 			<!-- <xompath> -->
 				<!-- <fileset dir="./airline-core-xom/target"> -->
