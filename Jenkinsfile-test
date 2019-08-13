@@ -23,13 +23,6 @@ pipeline {
             updateGitlabCommitStatus name: 'build', state: 'success'
         }
     }
-    triggers {
-      gitlab(
-        triggerOnPush: true,
-        triggerOnMergeRequest: true,
-        branchFilterType: 'All'
-      )
-    }
     stages {
         stage('Build') {
             steps {
