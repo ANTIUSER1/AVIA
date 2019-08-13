@@ -17,6 +17,7 @@ pipeline {
                 sh 'pwd'
                 sh 'ls -la'
                 sh 'ls -la /tmp/'
+                sh 'ls -la /root/.m2/repository'
                 sh 'mvn clean install'
             }
         }
