@@ -30,7 +30,8 @@
    portnumber="${env.ODM_PORT}" 
    userid="${env.ODM_USER_CREDS_USR}" 
    password="${env.ODM_USER_CREDS_PSW}" 
-   file="./SU-rules/target/surules.jar">
+   file="./SU-rules/target/surules.jar" 
+   versioningpolicy="MINOR_VERSION_POLICY">
 			<!-- ruleset paths -->
 			<!-- <xompath> -->
 				<!-- <fileset dir="./airline-core-xom/target"> -->
