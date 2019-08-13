@@ -28,8 +28,8 @@
 		<res-deploy 
    hostname="${env.ODM_HOST}" 
    portnumber="${env.ODM_PORT}" 
-   userid="${env.ODM_USER}" 
-   password="${env.ODM_PASSWORD}" 
+   userid="${env.ODM_USER_CREDS_USR}" 
+   password="${env.ODM_USER_CREDS_PSW}" 
    file="./SU-rules/target/surules.jar">
 			<!-- ruleset paths -->
 			<!-- <xompath> -->

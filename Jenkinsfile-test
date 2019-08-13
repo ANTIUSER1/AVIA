@@ -4,8 +4,7 @@ pipeline {
         registryCredential = 'NEXUS_JENKINS'
         ODM_HOST = '172.20.207.70'
         ODM_PORT = '9090'
-        ODM_USER = 'resAdmin'
-        ODM_PASSWORD = 'resAdmin'
+        ODM_USER_CREDS = credentials('IBM_USER_TEST')
     }
     agent {
         docker {
