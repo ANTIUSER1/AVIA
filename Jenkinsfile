@@ -6,7 +6,7 @@ pipeline {
     agent {
         docker {
             image '10.77.18.10:8082/odm/su-rules-deploy:jdk-8-alpine' 
-            // args '-v /root/.m2:/root/.m2'
+            args '-w /usr/src'
         }
     }
     stages {
