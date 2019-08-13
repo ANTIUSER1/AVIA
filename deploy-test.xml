@@ -26,8 +26,8 @@
 
 	<target name="DeployRulesArchive">
 		<res-deploy 
-   hostname="localhost" 
-   portnumber="9090" 
+   hostname="${env.ODM_HOST}" 
+   portnumber="${env.ODM_PORT}" 
    userid="${env.ODM_USER}" 
    password="${env.ODM_PASSWORD}" 
    file="./SU-rules/target/surules.jar">
