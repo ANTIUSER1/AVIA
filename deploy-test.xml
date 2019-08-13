@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<project name="surules" >
+
+	<!-- <property name="executionserver.home" value="C:/dev/IBM/ODM89/executionserver"/> -->
+	<!-- <import file="${executionserver.home}/lib/classpath-executionserver.xml"/> -->
+
+	<!-- <taskdef resource="res-tasks.properties" classpath="${executionserver.tools.classpath}"> -->
+	<!-- <classpath refid="executionserver.tools.classpath"/> -->
+	<!-- </taskdef> -->
+
+	<patternset id="tools.classpath.patternset">
+		<include name="*.jar"/>
+	</patternset>
+
+	<path id="tools.classpath">
+		<fileset dir=".">
+			<patternset refid="tools.classpath.patternset"/>
+		</fileset>
+	</path>
+
+	<taskdef resource="res-tasks.properties">
+		<classpath refid="tools.classpath"/>
+	</taskdef>
+
+	<target name="DeployRulesArchive">
+		<res-deploy 
+   hostname="localhost" 
+   portnumber="9090" 
+   userid="resAdmin" 
+   password="resAdmin" 
+   file="./SU-rules/target/surules.jar">
+			<!-- ruleset paths -->
+			<xompath>
+				<fileset dir="./airline-core-xom/target">
+					<include name="*.jar" />
+				</fileset>
+			</xompath>
+		</res-deploy>
+	</target>
+</project>
