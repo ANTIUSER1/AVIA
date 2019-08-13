@@ -7,6 +7,8 @@
 	<!-- <taskdef resource="res-tasks.properties" classpath="${executionserver.tools.classpath}"> -->
 	<!-- <classpath refid="executionserver.tools.classpath"/> -->
 	<!-- </taskdef> -->
+	
+	<property environment="env"/>
 
 	<patternset id="tools.classpath.patternset">
 		<include name="*.jar"/>
@@ -26,8 +28,8 @@
 		<res-deploy 
    hostname="localhost" 
    portnumber="9090" 
-   userid="resAdmin" 
-   password="resAdmin" 
+   userid="${env.ODM_USER}" 
+   password="${env.ODM_PASSWORD}" 
    file="./SU-rules/target/surules.jar">
 			<!-- ruleset paths -->
 			<xompath>
