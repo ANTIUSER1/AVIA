@@ -15,10 +15,10 @@ pipeline {
     }
     post {
         failure {
-            updateGitlabCommitStatus name: 'build', state: 'failed'
+            updateGitlabCommitStatus name: 'su-rules-test', state: 'failed'
         }
         success {
-            updateGitlabCommitStatus name: 'build', state: 'success'
+            updateGitlabCommitStatus name: 'su-rules-test', state: 'success'
         }
     }
     stages {
