@@ -1,4 +1,6 @@
 pipeline {
+    updateGitlabCommitStatus name: 'build', state: 'pending'
+
     environment {
         ODM_HOST = '172.20.207.70'
         ODM_PORT = '9090'
