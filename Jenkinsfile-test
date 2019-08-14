@@ -20,10 +20,14 @@ pipeline {
         success {
             updateGitlabCommitStatus name: 'su-rules-test', state: 'success'
         }
+        aborted {
+            updateGitlabCommitStatus name: 'su-rules-test', state: 'canceled'
+        }
     }
     stages {
         stage('Build') {
             steps {
+                updateGitlabCommitStatus name: 'su-rules-test', state: 'running'
                 sh 'env'
                 sh 'mvn -B -DskipTests clean package' 
                 sh 'ant -f deploy-test.xml DeployRulesArchive'
