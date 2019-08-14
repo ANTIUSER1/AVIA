@@ -1,3 +1,4 @@
+updateGitlabCommitStatus name: 'build', state: 'pending'
 pipeline {
     environment {
         ODM_HOST = '172.20.207.70'
@@ -25,11 +26,6 @@ pipeline {
         }
     }
     stages {
-        stage('Environment') {
-            steps {
-                updateGitlabCommitStatus name: 'build', state: 'pending'
-            }
-        }
         stage('Build') {
             steps {
                 updateGitlabCommitStatus name: 'build', state: 'running'
