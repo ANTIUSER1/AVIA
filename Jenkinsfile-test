@@ -1,5 +1,6 @@
 pipeline {
     environment {
+        TEST = 'TEST'
         ODM_HOST = '172.20.207.70'
         ODM_PORT = '9090'
         ODM_USER_CREDS = credentials('IBM_USER_TEST')
