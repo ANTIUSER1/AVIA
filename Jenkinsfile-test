@@ -17,9 +17,9 @@ pipeline {
         failure {
             updateGitlabCommitStatus name: 'su-rules-test', state: 'failed'
         }
-        success {
-            updateGitlabCommitStatus name: 'su-rules-test', state: 'success'
-        }
+        // success {
+        //     updateGitlabCommitStatus name: 'su-rules-test', state: 'success'
+        // }
         aborted {
             updateGitlabCommitStatus name: 'su-rules-test', state: 'canceled'
         }
@@ -31,6 +31,7 @@ pipeline {
                 // sh 'env'
                 sh 'mvn -B -DskipTests clean package' 
                 sh 'ant -f deploy-test.xml DeployRulesArchive'
+                updateGitlabCommitStatus name: 'su-rules-test', state: 'success'
             }
         }
     }
