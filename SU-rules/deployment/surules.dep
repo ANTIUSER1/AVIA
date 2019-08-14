@@ -3,6 +3,12 @@
   <name>surules</name>
   <uuid>441f8506-be9d-452d-877e-8c12bf9e8a73</uuid>
   <targets label="local"/>
+  <operations operationName="checkOnlineRegistrationAvailability">
+    <operation href="checkOnlineRegistrationAvailability.dop#231ce270-fcba-4431-b3cd-9841b40d8bc0"/>
+    <properties key="ruleset.version">
+      <value><![CDATA[1.0]]></value>
+    </properties>
+  </operations>
   <operations operationName="sum">
     <operation href="sum.dop#939cacbb-3219-4c45-99f9-467b94f0749b"/>
     <properties key="ruleset.version">

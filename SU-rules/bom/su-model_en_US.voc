@@ -1,0 +1,17 @@
+# Vocabulary Properties
+uuid = e91b09ef-18d5-469c-b8ec-d48bed0663db
+
+# ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable
+ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable#concept.label = check online registration available
+ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.airlineCode#phrase.action = set the airline code of {this} to {airline code}
+ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.airlineCode#phrase.navigation = {airline code} of {this}
+ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.departureAirportCode#phrase.action = set the departure airport code of {this} to {departure airport code}
+ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.departureAirportCode#phrase.navigation = {departure airport code} of {this}
+ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.flightNumber#phrase.action = set the flight number of {this} to {flight number}
+ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.flightNumber#phrase.navigation = {flight number} of {this}
+ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.onlineRegistrationAvailable#phrase.action = make it {online registration available} that {this} is online registration available
+ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.onlineRegistrationAvailable#phrase.navigation = {this} is online registration available
+ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.passengerFlightInfo#phrase.action = set the passenger flight info of {this} to {passenger flight info}
+ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.passengerFlightInfo#phrase.navigation = {passenger flight info} of {this}
+ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.ssrCodes#phrase.action = set the ssr codes of {this} to {ssr code}
+ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.ssrCodes#phrase.navigation = {ssr code} of {this}
