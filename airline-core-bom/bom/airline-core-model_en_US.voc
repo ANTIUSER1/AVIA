@@ -1,0 +1,26 @@
+# Vocabulary Properties
+uuid = b5874b4a-4ea9-49cf-a9ec-e9352ea81d76
+
+# ru.integrotech.airline.core.PassengerFlightInfo
+ru.integrotech.airline.core.PassengerFlightInfo#concept.label = passenger flight info
+ru.integrotech.airline.core.PassengerFlightInfo.airlineCode#phrase.action = set the airline code of {this} to {airline code}
+ru.integrotech.airline.core.PassengerFlightInfo.airlineCode#phrase.navigation = {airline code} of {this}
+ru.integrotech.airline.core.PassengerFlightInfo.departureAirportCode#phrase.action = set the departure airport code of {this} to {departure airport code}
+ru.integrotech.airline.core.PassengerFlightInfo.departureAirportCode#phrase.navigation = {departure airport code} of {this}
+ru.integrotech.airline.core.PassengerFlightInfo.flightNumber#phrase.action = set the flight number of {this} to {flight number}
+ru.integrotech.airline.core.PassengerFlightInfo.flightNumber#phrase.navigation = {flight number} of {this}
+ru.integrotech.airline.core.PassengerFlightInfo.onlineRegistrationAvailable#phrase.action = make it {online registration available} that online registration is available for {this} 
+ru.integrotech.airline.core.PassengerFlightInfo.onlineRegistrationAvailable#phrase.navigation = online registration available for {this} 
+ru.integrotech.airline.core.PassengerFlightInfo.ssrCodes#phrase.action = set the ssr codes of {this} to {ssr code}
+ru.integrotech.airline.core.PassengerFlightInfo.ssrCodes#phrase.navigation = {ssr code} of {this}
+
+# ru.integrotech.sample.Summator
+ru.integrotech.sample.Summator#concept.label = summator
+ru.integrotech.sample.Summator.comment#phrase.action = set the comment of {this} to {comment}
+ru.integrotech.sample.Summator.comment#phrase.navigation = {comment} of {this}
+ru.integrotech.sample.Summator.first#phrase.action = set the first argument of {this} to {first}
+ru.integrotech.sample.Summator.first#phrase.navigation = {first} argument of {this}
+ru.integrotech.sample.Summator.result#phrase.action = set the result of {this} to {result}
+ru.integrotech.sample.Summator.result#phrase.navigation = {result} of {this}
+ru.integrotech.sample.Summator.second#phrase.action = set the second argument of {this} to {second}
+ru.integrotech.sample.Summator.second#phrase.navigation = {second} argumant of {this}

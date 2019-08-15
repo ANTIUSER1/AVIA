@@ -1,3 +1,7 @@
 **/.metadata
 **/.settings
 **/bin
+**/output
+**/reports
+**/target
+**/resources/xom-libraries

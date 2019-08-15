@@ -2,6 +2,20 @@
 property loadGetterSetterAsProperties "true"
 property origin "xom:/airline-core-bom//airline-core-xom"
 property uuid "dab88187-e574-4bb8-837e-c4a2f374c9a0"
+package ru.integrotech.airline.core;
+
+
+public class PassengerFlightInfo
+        property automaticVariable "true"
+{
+    public string airlineCode;
+    public string departureAirportCode;
+    public int flightNumber;
+    public boolean onlineRegistrationAvailable;
+    public java.util.List ssrCodes domain 0,* class string;
+    public PassengerFlightInfo();
+}
+
 package ru.integrotech.sample;
 
 

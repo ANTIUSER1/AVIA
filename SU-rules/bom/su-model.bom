@@ -1,0 +1,18 @@
+
+property loadGetterSetterAsProperties "true"
+property origin "xom:/SU-rules//SU-xom"
+property uuid "2eecd928-4d80-4157-bb76-fcf0d8e4f554"
+package ru.integrotech.su.ioparams;
+
+
+public class CheckOnlineRegistrationAvailable
+{
+    public string airlineCode;
+    public string departureAirportCode;
+    public int flightNumber;
+    public boolean onlineRegistrationAvailable;
+    public ru.integrotech.airline.core.PassengerFlightInfo passengerFlightInfo;
+    public java.util.List ssrCodes domain 0,* class string;
+    public CheckOnlineRegistrationAvailable();
+}
+

@@ -6,17 +6,14 @@
   <categories>any</categories>
   <paths xsi:type="ilog.rules.studio.model.xom:XOMPath" pathID="XOM">
     <entries xsi:type="ilog.rules.studio.model.xom:LibraryXOMPathEntry" name="org.eclipse.jdt.launching.JRE_CONTAINER" url="file:org.eclipse.jdt.launching.JRE_CONTAINER" kind="LIBRARY" exported="false"/>
-    <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="airline-core-bom" url="platform:/airline-core-bom" kind="RULE_PROJECT" exported="false"/>
     <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="airline-core-rules" url="platform:/airline-core-rules" kind="RULE_PROJECT" exported="true"/>
-    <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="airline-core-xom" url="platform:/airline-core-xom" kind="JAVA_PROJECT" exported="true"/>
+    <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="SU-xom" url="platform:/SU-xom" kind="JAVA_PROJECT" exported="true"/>
   </paths>
   <paths xsi:type="ilog.rules.studio.model.bom:BOMPath" pathID="BOM">
-    <entries xsi:type="ilog.rules.studio.model.bom:ProjectBOMEntry" name="airline-core-bom" url="platform:/airline-core-bom" kind="RULE_PROJECT">
-      <ruleProject href="airline-core-bom#2a0cbb24-f27f-4f49-b9e0-0357e6de6d44"/>
-    </entries>
     <entries xsi:type="ilog.rules.studio.model.bom:ProjectBOMEntry" name="airline-core-rules" url="platform:/airline-core-rules" kind="RULE_PROJECT">
       <ruleProject href="airline-core-rules#7697c986-66ca-49ab-b9d0-000cf5809f41"/>
     </entries>
+    <entries xsi:type="ilog.rules.studio.model.bom:BOMEntry" name="su-model" url="platform:/SU-rules/bom/su-model.bom" origin="xom:/SU-rules//SU-xom"/>
   </paths>
   <modelFolders xsi:type="ilog.rules.studio.model.base:SourceFolder">
     <name>rules</name>

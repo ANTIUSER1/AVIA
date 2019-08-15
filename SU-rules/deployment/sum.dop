@@ -3,7 +3,7 @@
   <name>sum</name>
   <uuid>939cacbb-3219-4c45-99f9-467b94f0749b</uuid>
   <referencedVariables variableName="summator" variableSetName="sumParams" direction="IN_OUT">
-    <variableSet href="../rules/sumParams.var#64354ca5-d3a7-46f2-89d0-3eb3c01aa75c"/>
+    <variableSet href="../rules/sumParams.var#a1a63ddb-6cf6-417b-90c9-40228a3a72ef"/>
   </referencedVariables>
   <ruleflow href="../rules/sum.rfl#5c29718f-2ea9-4686-afdf-92de7931ab70"/>
   <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="sum_extractor" validator="Default Validator"/>
