@@ -14,11 +14,6 @@ pipeline {
         timestamps()
         gitlabBuilds(builds: ['Build', 'Deploy'])
     }
-    post {
-        aborted {
-            updateGitlabCommitStatus state: 'canceled'
-        }
-    }
     stages {
         stage('Build') {
             steps {
