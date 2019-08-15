@@ -5,3 +5,4 @@
 **/reports
 **/target
 **/resources/xom-libraries
+*.jar
