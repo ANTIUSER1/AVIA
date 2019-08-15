@@ -1,4 +1,3 @@
-updateGitlabCommitStatus name: 'Build', state: 'pending'
 pipeline {
     environment {
         ODM_HOST = '172.20.207.70'
@@ -13,6 +12,7 @@ pipeline {
     }
     options {
         timestamps()
+        gitlabBuilds(builds: ['Build', 'Deploy'])
     }
     post {
         aborted {
@@ -33,6 +33,9 @@ pipeline {
                 success {
                     updateGitlabCommitStatus name: 'Build', state: 'success'
                 }
+                aborted {
+                    updateGitlabCommitStatus name: 'Build', state: 'canceled'
+                }
             }
         }
         stage('Deploy') {
@@ -46,6 +49,9 @@ pipeline {
                 }
                 success {
                     updateGitlabCommitStatus name: 'Deploy', state: 'success'
+                }
+                aborted {
+                    updateGitlabCommitStatus name: 'Deploy', state: 'canceled'
                 }
             }
         }
