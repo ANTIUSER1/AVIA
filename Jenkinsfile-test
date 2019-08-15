@@ -31,6 +31,10 @@ pipeline {
                 updateGitlabCommitStatus name: 'build', state: 'running'
                 // sh 'env'
                 sh 'mvn -B -DskipTests clean package' 
+            }
+        }
+        stage('Deploy') {
+            steps {
                 sh 'ant -f deploy-test.xml DeployRulesArchive'
             }
         }
