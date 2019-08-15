@@ -13,7 +13,7 @@ public class CheckOnlineRegistrationAvailable {
 
 	public PassengerFlightInfo passengerFlightInfo = new PassengerFlightInfo();
 
-	@XmlTransient
+	@XmlElement(name="pfi")
 	public PassengerFlightInfo getPassengerFlightInfo() {
 		return passengerFlightInfo;
 	}
