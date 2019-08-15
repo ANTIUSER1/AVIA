@@ -30,7 +30,7 @@ pipeline {
             steps {
                 updateGitlabCommitStatus name: 'build', state: 'running'
                 // sh 'env'
-                sh 'mvn -B -DskipTests clean package' 
+                sh 'mvn -B -DskipTests clean install' 
             }
         }
         stage('Deploy') {
