@@ -28,24 +28,24 @@ pipeline {
             }
             post {
                 failure {
-                    updateGitlabCommitStatus state: 'failed'
+                    updateGitlabCommitStatus name: 'Build', state: 'failed'
                 }
                 success {
-                    updateGitlabCommitStatus state: 'success'
+                    updateGitlabCommitStatus name: 'Build', state: 'success'
                 }
             }
         }
         stage('Deploy') {
             steps {
-                updateGitlabCommitStatus state: 'running'
+                updateGitlabCommitStatus name: 'Deploy', state: 'running'
                 sh 'ant -f deploy-test.xml DeployRulesArchive'
             }
             post {
                 failure {
-                    updateGitlabCommitStatus state: 'failed'
+                    updateGitlabCommitStatus name: 'Deploy', state: 'failed'
                 }
                 success {
-                    updateGitlabCommitStatus state: 'success'
+                    updateGitlabCommitStatus name: 'Deploy', state: 'success'
                 }
             }
         }
