@@ -25,5 +25,14 @@
             </plugin>
         </plugins>
     </build>
+	
+	<dependencies>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>airline-core-xom</artifactId>
+			<type>jar</type>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
 
 </project>
