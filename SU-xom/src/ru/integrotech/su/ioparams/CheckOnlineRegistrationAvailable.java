@@ -2,18 +2,15 @@ package ru.integrotech.su.ioparams;
 
 import java.util.List;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
 import ru.integrotech.airline.core.PassengerFlightInfo;
 
-@XmlRootElement
 public class CheckOnlineRegistrationAvailable {
 
-	public PassengerFlightInfo passengerFlightInfo = new PassengerFlightInfo();
+	private PassengerFlightInfo passengerFlightInfo = new PassengerFlightInfo();
 
-	@XmlElement(name="pfi")
+	@XmlTransient
 	public PassengerFlightInfo getPassengerFlightInfo() {
 		return passengerFlightInfo;
 	}
@@ -63,7 +60,4 @@ public class CheckOnlineRegistrationAvailable {
 		passengerFlightInfo
 				.setOnlineRegistrationAvailable(onlineRegistrationAvailable);
 	}
-	
-	
-	
 }
