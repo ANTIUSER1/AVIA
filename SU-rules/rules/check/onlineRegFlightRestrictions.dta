@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
-  <name>flightAvail</name>
+  <name>onlineRegFlightRestrictions</name>
   <uuid>454ce206-e1cc-4a39-9891-d636a0587e26</uuid>
   <locale>en_US</locale>
   <definition>
-<DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+<DT Version="7.0" xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable">
   <Body>
     <Structure>
       <ConditionDefinitions>

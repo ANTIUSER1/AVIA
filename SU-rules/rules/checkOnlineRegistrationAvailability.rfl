@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
-  <name>checkOnlineRegistrationAvailable</name>
+  <name>checkOnlineRegistrationAvailability</name>
   <uuid>2ec7d036-8b37-4f69-81f3-2a97b4a94bdc</uuid>
   <locale>en_US</locale>
   <categories>any</categories>
@@ -10,8 +10,8 @@
     <TaskList>
       <StartTask Identifier="task_0"/>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="check" Ordering="Default">
-        <InitialActions Language="irl"><![CDATA[insert checkOnlineRegistrationAvailable.passengerFlightInfo;]]></InitialActions>
-        <FinalActions/>
+        <InitialActions Language="irl"><![CDATA[ checkOnlineRegistrationAvailable.passengerFlightInfo.onlineRegistrationAvailable = true;]]>&#13;<![CDATA[
+insert checkOnlineRegistrationAvailable.passengerFlightInfo;]]></InitialActions>
         <RuleList>
           <Package Name="check"/>
         </RuleList>
@@ -50,6 +50,7 @@
   <Properties>
     <imports><![CDATA[import ru.integrotech.airline.core.PassengerFlightInfo;
 use checkOnlineRegistrationAvailable;
+use passengerFlightInfo;
 ]]></imports>
   </Properties>
 </Ruleflow></rfModel>
