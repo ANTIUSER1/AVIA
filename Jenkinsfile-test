@@ -1,4 +1,3 @@
-updateGitlabCommitStatus name: 'build', state: 'pending'
 pipeline {
     environment {
         ODM_HOST = '172.20.207.70'
@@ -13,29 +12,42 @@ pipeline {
     }
     options {
         timestamps()
-    }
-    post {
-        failure {
-            updateGitlabCommitStatus name: 'build', state: 'failed'
-        }
-        success {
-            updateGitlabCommitStatus name: 'build', state: 'success'
-        }
-        aborted {
-            updateGitlabCommitStatus name: 'build', state: 'canceled'
-        }
+        gitlabBuilds(builds: ['Build', 'Deploy'])
     }
     stages {
         stage('Build') {
             steps {
-                updateGitlabCommitStatus name: 'build', state: 'running'
+                updateGitlabCommitStatus name: 'Build', state: 'running'
                 // sh 'env'
                 sh 'mvn -B -DskipTests clean install' 
+            }
+            post {
+                failure {
+                    updateGitlabCommitStatus name: 'Build', state: 'failed'
+                }
+                success {
+                    updateGitlabCommitStatus name: 'Build', state: 'success'
+                }
+                aborted {
+                    updateGitlabCommitStatus name: 'Build', state: 'canceled'
+                }
             }
         }
         stage('Deploy') {
             steps {
-                sh 'ant -f deploy-test-8.9.1.xml DeployRulesArchive'
+                updateGitlabCommitStatus name: 'Deploy', state: 'running'
+                sh 'ant -f deploy-test-8.9.1.xml DeployRulesArchive'				
+            }
+            post {
+                failure {
+                    updateGitlabCommitStatus name: 'Deploy', state: 'failed'
+                }
+                success {
+                    updateGitlabCommitStatus name: 'Deploy', state: 'success'
+                }
+                aborted {
+                    updateGitlabCommitStatus name: 'Deploy', state: 'canceled'
+                }
             }
         }
     }
