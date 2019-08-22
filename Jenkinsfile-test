@@ -35,7 +35,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'ant -f deploy-test.xml DeployRulesArchive'
+                sh 'ant -f deploy-test-8.9.1.xml DeployRulesArchive'
             }
         }
     }

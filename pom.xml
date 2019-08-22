@@ -21,7 +21,7 @@
 				<plugin>
 					<groupId>com.ibm.rules.buildcommand</groupId>
 					<artifactId>rules-compiler-maven-plugin</artifactId>
-					<version>8.9.0.0</version>
+					<version>8.9.2.0</version>
 					<extensions>true</extensions>
 				</plugin>
 			</plugins>
