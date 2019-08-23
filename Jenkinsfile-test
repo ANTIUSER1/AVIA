@@ -1,6 +1,6 @@
 pipeline {
     environment {
-		JRULES_ANT_LIB = /usr/lib/jrules-ant-lib-8.9.1
+		JRULES_ANT_LIB = '/usr/lib/jrules-ant-lib-8.9.1'
         ODM_USER_CREDS = credentials('IBM_USER_TEST')
     }
     agent {
