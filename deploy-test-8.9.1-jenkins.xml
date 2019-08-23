@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<project name="surules" >
+
+
+	<property environment="env"/>
+
+	<target name="DeployRulesArchive">
+		<res-deploy 
+			hostname="${env.ODM_HOST}" 
+			portnumber="${env.ODM_PORT}" 
+			userid="${env.ODM_USER_CREDS_USR}" 
+			password="${env.ODM_USER_CREDS_PSW}" 
+			file="./SU-rules/target/surules.jar" 
+			mergingpolicy="ADD_AT_END_RULESET_MERGING_POLICY"
+			versioningpolicy="MAJOR_VERSION_POLICY">
+			<xompath libname="surules">
+				<fileset dir="./SU-rules/target/lib">
+					<include name="*.jar" />
+				</fileset>
+			</xompath>
+		</res-deploy>
+	</target>
+</project>
