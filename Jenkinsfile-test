@@ -5,7 +5,7 @@ pipeline {
     }
     agent {
         docker {
-            image '10.77.18.10:8082/odm/su-rules-deploy:jdk-8-alpine-jrules-8.9.1' 
+            image '10.77.18.10:8082/odm/su-rules-deploy:jdk-8-alpine-jrules-v1.0.0' 
             args '-u root:root'
 			registryUrl 'http://10.77.18.10:8082'
 			registryCredentialsId 'NEXUS_JENKINS'			
