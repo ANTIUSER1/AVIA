@@ -38,7 +38,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 updateGitlabCommitStatus name: 'Deploy', state: 'running'
-                sh 'ant -f deploy-test-8.9.1.xml DeployRulesArchive'				
+                sh 'ant -f deploy-test-8.9.1-jenkins.xml DeployRulesArchive'				
             }
             post {
                 failure {
