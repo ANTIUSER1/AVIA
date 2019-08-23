@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <project name="surules" >
 
-
 	<property environment="env"/>
 
 	<patternset id="tools.classpath.patternset">
@@ -9,7 +8,7 @@
 	</patternset>
 
 	<path id="tools.classpath">
-		<fileset dir="../ant-lib-8.9.1">
+		<fileset dir="${JRULES_ANT_LIB_8_9_1}">
 			<patternset refid="tools.classpath.patternset"/>
 		</fileset>
 	</path>
