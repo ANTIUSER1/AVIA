@@ -1,22 +1,17 @@
 <?xml version="1.0"?>
 <project name="surules" >
-
 	<property environment="env"/>
-
 	<patternset id="tools.classpath.patternset">
 		<include name="*.jar"/>
 	</patternset>
-
 	<path id="tools.classpath">
 		<fileset dir="${env.JRULES_ANT_LIB}">
 			<patternset refid="tools.classpath.patternset"/>
 		</fileset>
 	</path>
-
 	<taskdef resource="res-tasks.properties">
 		<classpath refid="tools.classpath"/>
 	</taskdef>
-
 	<target name="deploy-surules">
 		<res-deploy 
 			hostname="${ODM_HOST}" 
