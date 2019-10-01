@@ -4,7 +4,7 @@
   <uuid>454ce206-e1cc-4a39-9891-d636a0587e26</uuid>
   <locale>en_US</locale>
   <definition>
-<DT Version="7.0" xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable">
+<DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
   <Body>
     <Structure>
       <ConditionDefinitions>
@@ -36,7 +36,7 @@
       <Partition DefId="C0">
         <Condition>
           <Expression>
-            <Param><![CDATA["HZ"]]></Param>
+            <Param><![CDATA["SU"]]></Param>
           </Expression>
           <Partition DefId="C1">
             <Condition>
@@ -203,7 +203,7 @@
         </Condition>
         <Condition>
           <Expression>
-            <Param><![CDATA["FV"]]></Param>
+            <Param><![CDATA["SU"]]></Param>
           </Expression>
           <Partition DefId="C1">
             <Condition>
@@ -554,13 +554,13 @@
   <Resources DefaultLocale="en_US">
     <ResourceSet Locale="en_US">
       <Data Name="Definitions(A0)#HeaderText"><![CDATA[Online Registration Available]]></Data>
-      <Data Name="Definitions(A0)#Width"><![CDATA[349]]></Data>
+      <Data Name="Definitions(A0)#Width"><![CDATA[460]]></Data>
       <Data Name="Definitions(C0)#HeaderText"><![CDATA[Airline]]></Data>
-      <Data Name="Definitions(C0)#Width"><![CDATA[179]]></Data>
+      <Data Name="Definitions(C0)#Width"><![CDATA[291]]></Data>
       <Data Name="Definitions(C1)#HeaderText"><![CDATA[Airport]]></Data>
-      <Data Name="Definitions(C1)#Width"><![CDATA[200]]></Data>
+      <Data Name="Definitions(C1)#Width"><![CDATA[312]]></Data>
       <Data Name="Definitions(C2)#HeaderText"><![CDATA[Flight number]]></Data>
-      <Data Name="Definitions(C2)#Width"><![CDATA[205]]></Data>
+      <Data Name="Definitions(C2)#Width"><![CDATA[317]]></Data>
     </ResourceSet>
   </Resources>
 </DT></definition>
