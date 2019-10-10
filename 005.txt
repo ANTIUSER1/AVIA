@@ -1,22 +1,4 @@
-1n 123456 n njgbljglgl bjfkfkyf hjhfkftdje65tb hyuh n b    fdsa
-1n 123456 n njgb n b    fdsa
-1n 12356 n njgb n b    fdsa
 
-wtwytwy
-
-ljguguig
-
-
-
-
-
-
-
-	public void setAsd(int asd) {
-		this.asd = asd;
-	}
-
-	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("BBdm [rss=");
