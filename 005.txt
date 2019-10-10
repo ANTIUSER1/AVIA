@@ -1,28 +1,4 @@
 
-
-
-package ru.integrotech.su.ioparams;
-
-public class BGrrt {
-	private int K = 110000;
-
-}
-
-1n 123456 n njgbljglgl bjfkfkyf hjhfkftdje65tb hyuh n b    fdsa
-1n 123456 n njgb n b    fdsa
-1n 12356 n njgb n b    fdsa
-
-
-
-
-
-
-
-
-	public void setAsd(int asd) {
-		this.asd = asd;
-	}
-
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
