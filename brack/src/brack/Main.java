@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import berk.CNVgson;
 import berk.Protect;
 import berk.ScoreType;
 
@@ -14,6 +15,8 @@ public class Main {
 		ScoreType scoreType = ScoreType.create();
 		System.out.println(scoreType);
 		System.out.println(new Date());
+		CNVgson cnv = CNVgson.create();
+		System.err.println(cnv.conv(scoreType));
 	}
 
 	private static List<Protect> makeProtects() {
