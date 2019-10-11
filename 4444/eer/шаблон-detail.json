@@ -1,0 +1,45 @@
+
+{
+  "__DecisionID__": "string",
+  "chargeInput": {
+    "airline": {
+      "airlineCode": "SU"
+    },
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 3
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": ""
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "VVO"
+      },
+      "city": {
+        "cityCode": "VVO",
+        "weight": 3
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": ""
+      }
+    },
+    "tierLevel": {
+      "tierLevelCode": "basic"
+    },
+    "roundTrip": false
+  }
+}
+
+

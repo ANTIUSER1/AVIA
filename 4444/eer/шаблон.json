@@ -1,0 +1,23 @@
+{
+"__DecisionID__": "string",
+"inputParams": {
+"airline" : {
+"airlineCode" : "SU" 
+},
+"origin" : {
+"airport" : {
+"airportCode" : "SVO" 
+}
+},
+"destination" : {
+"airport" : {
+"airportCode" : "MMK" 
+}
+},
+"tierLevel" : {
+"tierLevelCode" : "gold" 
+},
+"isRoundTrip" : false,
+"lang" : "ru" 
+}
+}
