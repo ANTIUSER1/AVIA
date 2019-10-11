@@ -1,0 +1,2114 @@
+ADT
+CityRecord [code=ADT, name=Ada, longitude=-96.6667, latitude=34.8, country_code=US, weight=1000]
+
+ADU
+CityRecord [code=ADU, name=Ardabil, longitude=48.4217, latitude=38.3236, country_code=IR, weight=1000]
+
+RFG
+CityRecord [code=RFG, name=Refugio, longitude=-97.3264, latitude=28.2961, country_code=US, weight=1000]
+
+ADW
+CityRecord [code=ADW, name=Camp Springs, Maryland, longitude=-76.8667, latitude=38.8167, country_code=US, weight=1000]
+
+ADX
+CityRecord [code=ADX, name=St Andrews, longitude=-2.8667, latitude=56.3667, country_code=GB, weight=1000]
+
+RFK
+CityRecord [code=RFK, name=Anguilla, longitude=-90.8167, latitude=32.9667, country_code=US, weight=1000]
+
+ADY
+CityRecord [code=ADY, name=Alldays, longitude=29.05, latitude=-22.6667, country_code=ZA, weight=1000]
+
+ADZ
+CityRecord [code=ADZ, name=San Andres Island, longitude=-81.7, latitude=12.5833, country_code=CO, weight=1000]
+
+RFN
+CityRecord [code=RFN, name=Raufarhofn, longitude=-15.9183, latitude=66.4064, country_code=IS, weight=1000]
+
+AEA
+CityRecord [code=AEA, name=Abemama, longitude=173.85, latitude=0.4833, country_code=KI, weight=1000]
+
+RFP
+CityRecord [code=RFP, name=Raiatea, longitude=-151.4658, latitude=-16.7228, country_code=PF, weight=1000]
+
+AEB
+CityRecord [code=AEB, name=Baise, longitude=106.9592, latitude=23.7194, country_code=CN, weight=1000]
+
+RFS
+CityRecord [code=RFS, name=Rosita, longitude=-84.4, latitude=13.8833, country_code=NI, weight=1000]
+
+RFR
+CityRecord [code=RFR, name=Rio Frio, longitude=-83.8833, latitude=10.3333, country_code=CR, weight=1000]
+
+AED
+CityRecord [code=AED, name=Aleneva, longitude=-152.9, latitude=58.0333, country_code=US, weight=1000]
+
+AEG
+CityRecord [code=AEG, name=Aek Godang, longitude=99.4167, latitude=1.3997, country_code=ID, weight=1000]
+
+AEH
+CityRecord [code=AEH, name=Abeche, longitude=20.8508, latitude=13.8514, country_code=TD, weight=1000]
+
+AEK
+CityRecord [code=AEK, name=Aseki, longitude=146.2833, latitude=-7.3667, country_code=PG, weight=1000]
+
+AEL
+CityRecord [code=AEL, name=Albert Lea, longitude=-93.3667, latitude=43.65, country_code=US, weight=1000]
+
+AEO
+CityRecord [code=AEO, name=Aioun el Atrouss, longitude=-9.6356, latitude=16.7092, country_code=MR, weight=1000]
+
+RGA
+CityRecord [code=RGA, name=Rio Grande, longitude=-67.75, latitude=-53.7792, country_code=AR, weight=1000]
+
+AER
+CityRecord [code=AER, name=Sochi, longitude=39.9469, latitude=43.4444, country_code=RU, weight=5]
+
+AES
+CityRecord [code=AES, name=Aalesund, longitude=6.1103, latitude=62.5603, country_code=NO, weight=547]
+
+AET
+CityRecord [code=AET, name=Allakaket, longitude=-152.6583, latitude=66.5617, country_code=US, weight=1000]
+
+RGE
+CityRecord [code=RGE, name=Porgera, longitude=143.15, latitude=-5.4167, country_code=PG, weight=1000]
+
+AEU
+CityRecord [code=AEU, name=Abu Musa Island, longitude=55.0417, latitude=25.8875, country_code=IR, weight=1000]
+
+RGH
+CityRecord [code=RGH, name=Balurghat, longitude=88.7333, latitude=25.25, country_code=IN, weight=1000]
+
+AEX
+CityRecord [code=AEX, name=Alexandria, longitude=-92.55, latitude=31.3333, country_code=US, weight=1000]
+
+AEY
+CityRecord [code=AEY, name=Akureyri, longitude=-18.0722, latitude=65.6586, country_code=IS, weight=1000]
+
+RGI
+CityRecord [code=RGI, name=Rangiroa, longitude=-147.6578, latitude=-14.9553, country_code=PF, weight=1000]
+
+RGL
+CityRecord [code=RGL, name=Rio Gallegos, longitude=-69.3125, latitude=-51.6089, country_code=AR, weight=1000]
+
+RGN
+CityRecord [code=RGN, name=Yangon, longitude=96.1333, latitude=16.9072, country_code=MM, weight=477]
+
+AFA
+CityRecord [code=AFA, name=San Rafael, longitude=-68.4006, latitude=-34.5892, country_code=AR, weight=1000]
+
+RGR
+CityRecord [code=RGR, name=Ranger, longitude=-98.6833, latitude=32.4667, country_code=US, weight=1000]
+
+RGT
+CityRecord [code=RGT, name=Rengat, longitude=102.55, latitude=-0.4, country_code=ID, weight=1000]
+
+RGS
+CityRecord [code=RGS, name=Burgos, longitude=-3.6136, latitude=42.3575, country_code=ES, weight=1000]
+
+AFD
+CityRecord [code=AFD, name=Port Alfred, longitude=26.8833, latitude=-33.5833, country_code=ZA, weight=1000]
+
+AFI
+CityRecord [code=AFI, name=Amalfi, longitude=-75.0667, latitude=6.9167, country_code=CO, weight=1000]
+
+AFL
+CityRecord [code=AFL, name=Alta Floresta, longitude=-56.1061, latitude=-9.8661, country_code=BR, weight=1000]
+
+AFN
+CityRecord [code=AFN, name=Jaffrey, longitude=-72.0667, latitude=42.8333, country_code=US, weight=1000]
+
+RHA
+CityRecord [code=RHA, name=Reykholar, longitude=-22.23, latitude=65.4497, country_code=IS, weight=1000]
+
+AFO
+CityRecord [code=AFO, name=Afton, longitude=-110.9333, latitude=42.7333, country_code=US, weight=1000]
+
+AFR
+CityRecord [code=AFR, name=Afore, longitude=148.3833, latitude=-9.1333, country_code=PG, weight=1000]
+
+AFS
+CityRecord [code=AFS, name=Zarafshan, longitude=64.2331, latitude=41.6136, country_code=UZ, weight=1000]
+
+RHE
+CityRecord [code=RHE, name=Reims, longitude=4.0508, latitude=49.3103, country_code=FR, weight=1000]
+
+RHD
+CityRecord [code=RHD, name=Rio Hondo, longitude=-64.8833, latitude=-27.45, country_code=AR, weight=1000]
+
+AFT
+CityRecord [code=AFT, name=Afutara, longitude=160.85, latitude=-9.2, country_code=SB, weight=1000]
+
+RHG
+CityRecord [code=RHG, name=Ruhengeri, longitude=29.6, latitude=-1.5, country_code=RW, weight=1000]
+
+RHI
+CityRecord [code=RHI, name=Rhinelander, longitude=-89.4667, latitude=45.6308, country_code=US, weight=1000]
+
+AFY
+CityRecord [code=AFY, name=Afyon, longitude=30.6, latitude=38.7333, country_code=TR, weight=1000]
+
+AFZ
+CityRecord [code=AFZ, name=Sabzevar, longitude=57.5964, latitude=36.1686, country_code=IR, weight=1000]
+
+RHL
+CityRecord [code=RHL, name=Roy Hill Station, longitude=120, latitude=-22.75, country_code=AU, weight=1000]
+
+RHO
+CityRecord [code=RHO, name=Rhodes, longitude=28.0861, latitude=36.4056, country_code=GR, weight=541]
+
+RHP
+CityRecord [code=RHP, name=Ramechhap, longitude=86.0833, latitude=27.3333, country_code=NP, weight=1000]
+
+AGA
+CityRecord [code=AGA, name=Agadir, longitude=-9.4094, latitude=30.3311, country_code=MA, weight=278]
+
+AGB
+CityRecord [code=AGB, name=Augsburg, longitude=10.09, latitude=48.367, country_code=DE, weight=1000]
+
+AGD
+CityRecord [code=AGD, name=Anggi, longitude=133.8667, latitude=-1.3833, country_code=ID, weight=1000]
+
+AGE
+CityRecord [code=AGE, name=Wangerooge, longitude=7.9158, latitude=53.7872, country_code=DE, weight=1000]
+
+AGF
+CityRecord [code=AGF, name=Agen, longitude=0.5986, latitude=44.1736, country_code=FR, weight=1000]
+
+AGG
+CityRecord [code=AGG, name=Angoram, longitude=144.0739, latitude=-4.1686, country_code=PG, weight=1000]
+
+AGH
+CityRecord [code=AGH, name=Angelholm/Helsingborg, longitude=12.8625, latitude=56.2931, country_code=SE, weight=1000]
+
+AGI
+CityRecord [code=AGI, name=Wageningen, longitude=-56.8333, latitude=5.8333, country_code=SR, weight=1000]
+
+AGJ
+CityRecord [code=AGJ, name=Aguni, longitude=127.2381, latitude=26.5897, country_code=JP, weight=1000]
+
+AGK
+CityRecord [code=AGK, name=Kagua, longitude=143.8467, latitude=-6.4033, country_code=PG, weight=1000]
+
+AGL
+CityRecord [code=AGL, name=Wanigela, longitude=149.1553, latitude=-9.3403, country_code=PG, weight=1000]
+
+AGM
+CityRecord [code=AGM, name=Tasiilaq, longitude=-37.6181, latitude=65.6119, country_code=GL, weight=1000]
+
+AGN
+CityRecord [code=AGN, name=Angoon, longitude=-134.5833, latitude=57.5039, country_code=US, weight=1000]
+
+AGO
+CityRecord [code=AGO, name=Magnolia, longitude=-93.2333, latitude=33.2667, country_code=US, weight=1000]
+
+AGP
+CityRecord [code=AGP, name=Malaga, longitude=-4.4981, latitude=36.6717, country_code=ES, weight=40]
+
+RIB
+CityRecord [code=RIB, name=Riberalta, longitude=-66.0931, latitude=-11.0069, country_code=BO, weight=1000]
+
+RIA
+CityRecord [code=RIA, name=Santa Maria, longitude=-53.6881, latitude=-29.7114, country_code=BR, weight=1000]
+
+AGQ
+CityRecord [code=AGQ, name=Agrinion, longitude=21.3511, latitude=38.6019, country_code=GR, weight=1000]
+
+RID
+CityRecord [code=RID, name=Richmond, longitude=-84.9, latitude=39.8333, country_code=US, weight=1000]
+
+AGR
+CityRecord [code=AGR, name=Agra, longitude=77.9628, latitude=27.1583, country_code=IN, weight=1000]
+
+AGS
+CityRecord [code=AGS, name=Augusta, longitude=-81.9669, latitude=33.3664, country_code=US, weight=1000]
+
+RIC
+CityRecord [code=RIC, name=Richmond, longitude=-77.3197, latitude=37.5053, country_code=US, weight=405]
+
+RIF
+CityRecord [code=RIF, name=Richfield, longitude=-112.0944, latitude=38.7411, country_code=US, weight=1000]
+
+AGT
+CityRecord [code=AGT, name=Ciudad del Este, longitude=-54.8333, latitude=-25.5, country_code=PY, weight=1000]
+
+RIE
+CityRecord [code=RIE, name=Rice Lake, longitude=-91.7236, latitude=45.4786, country_code=US, weight=1000]
+
+AGU
+CityRecord [code=AGU, name=Aguascalientes, longitude=-102.3178, latitude=21.7056, country_code=MX, weight=1000]
+
+AGV
+CityRecord [code=AGV, name=Acarigua, longitude=-69.2333, latitude=9.5522, country_code=VE, weight=1000]
+
+AGW
+CityRecord [code=AGW, name=Agnew, longitude=142.15, latitude=-12.15, country_code=AU, weight=1000]
+
+RIG
+CityRecord [code=RIG, name=Rio Grande, longitude=-52.1667, latitude=-32.0825, country_code=BR, weight=1000]
+
+AGX
+CityRecord [code=AGX, name=Agatti Island, longitude=72.1761, latitude=10.8236, country_code=IN, weight=1000]
+
+RIJ
+CityRecord [code=RIJ, name=Rioja, longitude=-77.15, latitude=-6.05, country_code=PE, weight=1000]
+
+RIL
+CityRecord [code=RIL, name=Rifle, longitude=-107.7833, latitude=39.5333, country_code=US, weight=1000]
+
+AGZ
+CityRecord [code=AGZ, name=Aggeneys, longitude=18.85, latitude=-29.05, country_code=ZA, weight=1000]
+
+RIK
+CityRecord [code=RIK, name=Carrillo, longitude=-85.48, latitude=9.87, country_code=CR, weight=1000]
+
+RIN
+CityRecord [code=RIN, name=Ringi Cove, longitude=157.0333, latitude=-8.2, country_code=SB, weight=1000]
+
+RIM
+CityRecord [code=RIM, name=Rodriguez De Men, longitude=-78, latitude=-6, country_code=PE, weight=1000]
+
+RIO
+CityRecord [code=RIO, name=Rid-de-Janeiro, longitude=-43.2061, latitude=-22.8658, country_code=BR, weight=200]
+
+AHB
+CityRecord [code=AHB, name=Abha, longitude=42.65, latitude=18.2333, country_code=SA, weight=1000]
+
+AHC
+CityRecord [code=AHC, name=Herlong, longitude=-120.1333, latitude=40.15, country_code=US, weight=1000]
+
+RIT
+CityRecord [code=RIT, name=Rio Tigre, longitude=-78.5, latitude=9.25, country_code=PA, weight=1000]
+
+RIS
+CityRecord [code=RIS, name=Rishiri, longitude=141.1875, latitude=45.2417, country_code=JP, weight=1000]
+
+AHE
+CityRecord [code=AHE, name=Ahe, longitude=-146.2569, latitude=-14.4281, country_code=PF, weight=1000]
+
+AHF
+CityRecord [code=AHF, name=Arapahoe, longitude=-99.9, latitude=40.3, country_code=US, weight=1000]
+
+RIX
+CityRecord [code=RIX, name=Riga, longitude=23.9711, latitude=56.9236, country_code=LV, weight=39]
+
+AHH
+CityRecord [code=AHH, name=Amery, longitude=-92.35, latitude=45.3, country_code=US, weight=1000]
+
+RIW
+CityRecord [code=RIW, name=Riverton, longitude=-108.4597, latitude=43.0642, country_code=US, weight=1000]
+
+RIZ
+CityRecord [code=RIZ, name=Rio Alzucar, longitude=119.3167, latitude=35.4, country_code=PA, weight=1000]
+
+AHI
+CityRecord [code=AHI, name=Amahai, longitude=128.9167, latitude=-3.3333, country_code=ID, weight=1000]
+
+RIY
+CityRecord [code=RIY, name=Mukalla, longitude=49.375, latitude=14.6628, country_code=YE, weight=1000]
+
+AHL
+CityRecord [code=AHL, name=Aishalton, longitude=-59.3167, latitude=2.4833, country_code=GY, weight=1000]
+
+AHN
+CityRecord [code=AHN, name=Athens, longitude=-83.3269, latitude=33.9483, country_code=US, weight=1000]
+
+AHO
+CityRecord [code=AHO, name=Alghero, longitude=8.2886, latitude=40.6311, country_code=IT, weight=202]
+
+RJA
+CityRecord [code=RJA, name=Rajahmundry, longitude=81.8206, latitude=17.1097, country_code=IN, weight=1000]
+
+RJB
+CityRecord [code=RJB, name=Rajbiraj, longitude=86.8333, latitude=26.4833, country_code=NP, weight=1000]
+
+AHS
+CityRecord [code=AHS, name=Ahuas, longitude=-84.425, latitude=15.4417, country_code=HN, weight=1000]
+
+AHT
+CityRecord [code=AHT, name=Amchitka, longitude=179, latitude=51.5, country_code=US, weight=1000]
+
+AHU
+CityRecord [code=AHU, name=Al Hoceima, longitude=-3.8369, latitude=35.1797, country_code=MA, weight=1000]
+
+RJI
+CityRecord [code=RJI, name=Rajauri, longitude=74.3025, latitude=33.3686, country_code=IN, weight=1000]
+
+RJH
+CityRecord [code=RJH, name=Rajshahi, longitude=88.6164, latitude=24.4372, country_code=BD, weight=1000]
+
+RJK
+CityRecord [code=RJK, name=Rijeka, longitude=14.5703, latitude=45.2169, country_code=HR, weight=1000]
+
+AHY
+CityRecord [code=AHY, name=Ambatolahy, longitude=45.5333, latitude=-20.0167, country_code=MG, weight=1000]
+
+AHZ
+CityRecord [code=AHZ, name=L'Alpe-d'Huez, longitude=6.0833, latitude=45.0833, country_code=FR, weight=1000]
+
+RJL
+CityRecord [code=RJL, name=Logrono, longitude=-2.3206, latitude=42.4606, country_code=ES, weight=1000]
+
+RJN
+CityRecord [code=RJN, name=Rafsanjan, longitude=56.0567, latitude=30.2969, country_code=IR, weight=1000]
+
+AIA
+CityRecord [code=AIA, name=Alliance, longitude=-102.8067, latitude=42.0517, country_code=US, weight=1000]
+
+AIB
+CityRecord [code=AIB, name=Anita Bay, longitude=-132.3833, latitude=56.2333, country_code=US, weight=1000]
+
+AIC
+CityRecord [code=AIC, name=Airok, longitude=170.8333, latitude=7.5, country_code=MH, weight=1000]
+
+AID
+CityRecord [code=AID, name=Anderson, longitude=-85.6131, latitude=40.1086, country_code=US, weight=1000]
+
+AIE
+CityRecord [code=AIE, name=Aiome, longitude=144.6667, latitude=-5.1667, country_code=PG, weight=1000]
+
+AIF
+CityRecord [code=AIF, name=Assis, longitude=-50.4167, latitude=-22.6667, country_code=BR, weight=1000]
+
+AIG
+CityRecord [code=AIG, name=Yalinga, longitude=23.25, latitude=6.5167, country_code=CF, weight=1000]
+
+AIH
+CityRecord [code=AIH, name=Aiambak, longitude=141.2664, latitude=-7.3486, country_code=PG, weight=1000]
+
+AII
+CityRecord [code=AII, name=Ali Sabieh, longitude=42.7167, latitude=11.15, country_code=DJ, weight=1000]
+
+AIK
+CityRecord [code=AIK, name=Aiken, longitude=-81.7167, latitude=33.5667, country_code=US, weight=1000]
+
+AIL
+CityRecord [code=AIL, name=Ailigandi, longitude=-78.0833, latitude=9.25, country_code=PA, weight=1000]
+
+AIM
+CityRecord [code=AIM, name=Ailuk Island, longitude=169.9833, latitude=10.2, country_code=MH, weight=1000]
+
+AIN
+CityRecord [code=AIN, name=Wainwright, longitude=-160.0333, latitude=70.6333, country_code=US, weight=1000]
+
+AIO
+CityRecord [code=AIO, name=Atlantic, longitude=-95.0167, latitude=41.4, country_code=US, weight=1000]
+
+AIP
+CityRecord [code=AIP, name=Ailinglapalap Island, longitude=168.82, latitude=7.27, country_code=MH, weight=1000]
+
+AIR
+CityRecord [code=AIR, name=Aripuana, longitude=-59.3833, latitude=-10.25, country_code=BR, weight=1000]
+
+RKD
+CityRecord [code=RKD, name=Rockland, longitude=-69.0992, latitude=44.06, country_code=US, weight=1000]
+
+AIS
+CityRecord [code=AIS, name=Arorae, longitude=176.8333, latitude=-2.65, country_code=KI, weight=1000]
+
+RKC
+CityRecord [code=RKC, name=Yreka, longitude=-122.6333, latitude=41.7333, country_code=US, weight=1000]
+
+AIT
+CityRecord [code=AIT, name=Aitutaki Island, longitude=-159.75, latitude=-18.85, country_code=CK, weight=1000]
+
+AIU
+CityRecord [code=AIU, name=Atiu Island, longitude=-158.1, latitude=-20.0333, country_code=CK, weight=1000]
+
+RKH
+CityRecord [code=RKH, name=Rock Hill, longitude=-81.0167, latitude=34.9167, country_code=US, weight=1000]
+
+AIV
+CityRecord [code=AIV, name=Aliceville, longitude=-88.15, latitude=33.1333, country_code=US, weight=1000]
+
+AIW
+CityRecord [code=AIW, name=Ai-Ais, longitude=17.5833, latitude=-27.9833, country_code=NA, weight=1000]
+
+AIY
+CityRecord [code=AIY, name=Atlantic City, longitude=-74.4572, latitude=39.36, country_code=US, weight=1000]
+
+RKI
+CityRecord [code=RKI, name=Rokot, longitude=100.75, latitude=-0.95, country_code=ID, weight=1000]
+
+AIZ
+CityRecord [code=AIZ, name=Kaiser/Lake Ozark, longitude=-92.5472, latitude=38.0983, country_code=US, weight=1000]
+
+RKP
+CityRecord [code=RKP, name=Rockport, longitude=-97.0436, latitude=28.0861, country_code=US, weight=1000]
+
+RKO
+CityRecord [code=RKO, name=Sipora, longitude=99.68, latitude=-2.08, country_code=ID, weight=1000]
+
+AJA
+CityRecord [code=AJA, name=Ajaccio, longitude=8.8031, latitude=41.9242, country_code=FR, weight=546]
+
+RKR
+CityRecord [code=RKR, name=Poteau, longitude=-94.6211, latitude=35.0217, country_code=US, weight=1000]
+
+RKT
+CityRecord [code=RKT, name=Ras Al Khaimah, longitude=55.9389, latitude=25.6136, country_code=AE, weight=1000]
+
+RKS
+CityRecord [code=RKS, name=Rock Springs, longitude=-109.0653, latitude=41.5942, country_code=US, weight=1000]
+
+RKU
+CityRecord [code=RKU, name=Yule Island, longitude=146.5167, latitude=-8.8167, country_code=PG, weight=1000]
+
+AJF
+CityRecord [code=AJF, name=Jouf, longitude=40.0997, latitude=29.7853, country_code=SA, weight=1000]
+
+RKW
+CityRecord [code=RKW, name=Rockwood, longitude=-84.6833, latitude=35.8667, country_code=US, weight=1000]
+
+AJI
+CityRecord [code=AJI, name=Agri, longitude=43.0272, latitude=39.6544, country_code=TR, weight=1000]
+
+RKZ
+CityRecord [code=RKZ, name=Xigaze/Rikaze, longitude=88.8806, latitude=29.2667, country_code=CN, weight=1000]
+
+RKY
+CityRecord [code=RKY, name=Rokeby, longitude=143.4333, latitude=-13.1667, country_code=AU, weight=1000]
+
+AJJ
+CityRecord [code=AJJ, name=Akjoujt, longitude=-14.3744, latitude=19.7306, country_code=MR, weight=1000]
+
+AJK
+CityRecord [code=AJK, name=Arak, longitude=49.8333, latitude=34.1333, country_code=IR, weight=1000]
+
+AJL
+CityRecord [code=AJL, name=Aizawl, longitude=92.6247, latitude=23.8389, country_code=IN, weight=1000]
+
+AJN
+CityRecord [code=AJN, name=Anjouan, longitude=44.4297, latitude=-12.1264, country_code=KM, weight=1000]
+
+RLA
+CityRecord [code=RLA, name=Rolla, longitude=-91.7781, latitude=38.1278, country_code=US, weight=1000]
+
+AJR
+CityRecord [code=AJR, name=Arvidsjaur, longitude=19.2856, latitude=65.5914, country_code=SE, weight=1000]
+
+AJS
+CityRecord [code=AJS, name=Abreojos, longitude=-113.6667, latitude=26.8333, country_code=MX, weight=1000]
+
+RLD
+CityRecord [code=RLD, name=Richland, longitude=-119.3056, latitude=46.3083, country_code=US, weight=1000]
+
+AJU
+CityRecord [code=AJU, name=Aracaju, longitude=-37.05, latitude=-10.9833, country_code=BR, weight=664]
+
+RLG
+CityRecord [code=RLG, name=Rostock, longitude=12.2783, latitude=53.9181, country_code=DE, weight=1000]
+
+AJY
+CityRecord [code=AJY, name=Agadez, longitude=7.9931, latitude=16.9642, country_code=NE, weight=1000]
+
+RLO
+CityRecord [code=RLO, name=Merlo, longitude=-65.5525, latitude=-32.3844, country_code=AR, weight=1000]
+
+RLP
+CityRecord [code=RLP, name=Rosella Plains, longitude=145, latitude=-18, country_code=AU, weight=1000]
+
+AKA
+CityRecord [code=AKA, name=Ankang, longitude=109.2, latitude=32.6667, country_code=CN, weight=1000]
+
+AKB
+CityRecord [code=AKB, name=Atka, longitude=-174.2008, latitude=52.2172, country_code=US, weight=1000]
+
+AKD
+CityRecord [code=AKD, name=Akola, longitude=77.0833, latitude=20.6667, country_code=IN, weight=1000]
+
+RLU
+CityRecord [code=RLU, name=Bornite, longitude=-156, latitude=67.75, country_code=US, weight=1000]
+
+RLT
+CityRecord [code=RLT, name=Arlit, longitude=7.3667, latitude=18.7833, country_code=NE, weight=1000]
+
+AKE
+CityRecord [code=AKE, name=Akieni, longitude=13.9167, latitude=-1.1722, country_code=GA, weight=1000]
+
+AKF
+CityRecord [code=AKF, name=Kufra, longitude=23.3139, latitude=24.1786, country_code=LY, weight=1000]
+
+AKG
+CityRecord [code=AKG, name=Anguganak, longitude=142.0167, latitude=-3.6333, country_code=PG, weight=1000]
+
+AKH
+CityRecord [code=AKH, name=Al Kharj, longitude=47.5806, latitude=24.0633, country_code=SA, weight=1000]
+
+AKI
+CityRecord [code=AKI, name=Akiak, longitude=-161.2233, latitude=60.9056, country_code=US, weight=1000]
+
+AKJ
+CityRecord [code=AKJ, name=Asahikawa, longitude=142.45, latitude=43.6667, country_code=JP, weight=1000]
+
+AKK
+CityRecord [code=AKK, name=Akhiok, longitude=-154.1667, latitude=56.9444, country_code=US, weight=1000]
+
+AKL
+CityRecord [code=AKL, name=Auckland, longitude=174.7917, latitude=-37.0081, country_code=NZ, weight=197]
+
+AKM
+CityRecord [code=AKM, name=Zakouma, longitude=19.8167, latitude=10.8833, country_code=TD, weight=1000]
+
+AKN
+CityRecord [code=AKN, name=King Salmon, longitude=-156.6356, latitude=58.6686, country_code=US, weight=1000]
+
+AKO
+CityRecord [code=AKO, name=Akron, longitude=-103.2167, latitude=40.1667, country_code=US, weight=1000]
+
+RMB
+CityRecord [code=RMB, name=Buraimi, longitude=55.7833, latitude=24.25, country_code=OM, weight=1000]
+
+AKP
+CityRecord [code=AKP, name=Anaktuvuk, longitude=-151.7433, latitude=68.1336, country_code=US, weight=1000]
+
+AKQ
+CityRecord [code=AKQ, name=Astraksetra, longitude=105.2333, latitude=-4.6167, country_code=ID, weight=1000]
+
+RMA
+CityRecord [code=RMA, name=Roma, longitude=148.7731, latitude=-26.5472, country_code=AU, weight=1000]
+
+AKR
+CityRecord [code=AKR, name=Akure, longitude=5.0833, latitude=7.25, country_code=NG, weight=1000]
+
+RMD
+CityRecord [code=RMD, name=Ramagundam, longitude=79.4, latitude=18.7667, country_code=IN, weight=1000]
+
+AKS
+CityRecord [code=AKS, name=Auki, longitude=160.6808, latitude=-8.6978, country_code=SB, weight=1000]
+
+RMF
+CityRecord [code=RMF, name=Marsa  Alam, longitude=34.5836, latitude=25.5572, country_code=EG, weight=1000]
+
+AKT
+CityRecord [code=AKT, name=Akrotiri, longitude=32.9878, latitude=34.5906, country_code=CY, weight=1000]
+
+AKU
+CityRecord [code=AKU, name=Aksu, longitude=80.2917, latitude=41.2625, country_code=CN, weight=1000]
+
+RME
+CityRecord [code=RME, name=Rome, longitude=-75.4069, latitude=43.2339, country_code=US, weight=1000]
+
+AKV
+CityRecord [code=AKV, name=Akulivik, longitude=-78.1483, latitude=60.8183, country_code=CA, weight=1000]
+
+RMG
+CityRecord [code=RMG, name=Rome, longitude=-85.1586, latitude=34.3508, country_code=US, weight=1000]
+
+AKW
+CityRecord [code=AKW, name=Aghajari, longitude=49.6833, latitude=30.75, country_code=IR, weight=1000]
+
+AKX
+CityRecord [code=AKX, name=Aktobe, longitude=57.2167, latitude=50.25, country_code=KZ, weight=184]
+
+AKY
+CityRecord [code=AKY, name=Sittwe, longitude=92.8803, latitude=20.1303, country_code=MM, weight=1000]
+
+RMI
+CityRecord [code=RMI, name=Rimini, longitude=12.6094, latitude=44.0194, country_code=IT, weight=239]
+
+RMK
+CityRecord [code=RMK, name=Renmark, longitude=140.6833, latitude=-34.2, country_code=AU, weight=1000]
+
+RMN
+CityRecord [code=RMN, name=Rumginae, longitude=141.1667, latitude=-6.1667, country_code=PG, weight=1000]
+
+RMP
+CityRecord [code=RMP, name=Rampart, longitude=-150.1403, latitude=65.5083, country_code=US, weight=1000]
+
+ALA
+CityRecord [code=ALA, name=Almaty, longitude=77.0333, latitude=43.35, country_code=KZ, weight=63]
+
+RMQ
+CityRecord [code=RMQ, name=Taichung, longitude=120.6206, latitude=24.2647, country_code=TW, weight=1000]
+
+ALB
+CityRecord [code=ALB, name=Albany, longitude=-73.8019, latitude=42.7492, country_code=US, weight=1000]
+
+RMT
+CityRecord [code=RMT, name=Rimatara, longitude=-152.8086, latitude=-22.6397, country_code=PF, weight=1000]
+
+ALC
+CityRecord [code=ALC, name=Alicante, longitude=-0.5667, latitude=38.2833, country_code=ES, weight=88]
+
+ALD
+CityRecord [code=ALD, name=Alerta, longitude=-69.3333, latitude=-11.6833, country_code=PE, weight=1000]
+
+RMS
+CityRecord [code=RMS, name=Ramstein, longitude=7.6003, latitude=49.4369, country_code=DE, weight=1000]
+
+ALE
+CityRecord [code=ALE, name=Alpine, longitude=-103.75, latitude=30.4167, country_code=US, weight=1000]
+
+ALF
+CityRecord [code=ALF, name=Alta, longitude=23.3806, latitude=69.9761, country_code=NO, weight=1000]
+
+ALG
+CityRecord [code=ALG, name=Algiers, longitude=3.2172, latitude=36.6933, country_code=DZ, weight=176]
+
+ALH
+CityRecord [code=ALH, name=Albany, longitude=117.8058, latitude=-34.945, country_code=AU, weight=1000]
+
+ALI
+CityRecord [code=ALI, name=Alice, longitude=-98.0667, latitude=27.75, country_code=US, weight=1000]
+
+ALJ
+CityRecord [code=ALJ, name=Alexander Bay, longitude=16.5364, latitude=-28.5672, country_code=ZA, weight=1000]
+
+ALK
+CityRecord [code=ALK, name=Asela, longitude=39.1167, latitude=7.9667, country_code=ET, weight=1000]
+
+ALL
+CityRecord [code=ALL, name=Albenga, longitude=8.1256, latitude=44.0458, country_code=IT, weight=1000]
+
+ALM
+CityRecord [code=ALM, name=Alamogordo, longitude=-105.9853, latitude=32.8458, country_code=US, weight=1000]
+
+ALN
+CityRecord [code=ALN, name=Alton, longitude=-90.0483, latitude=38.8917, country_code=US, weight=1000]
+
+RNA
+CityRecord [code=RNA, name=Arona, longitude=161.9831, latitude=-9.8644, country_code=SB, weight=1000]
+
+ALO
+CityRecord [code=ALO, name=Waterloo, longitude=-92.4003, latitude=42.5569, country_code=US, weight=1000]
+
+ALP
+CityRecord [code=ALP, name=Aleppo, longitude=37.2267, latitude=36.1808, country_code=SY, weight=1000]
+
+RNC
+CityRecord [code=RNC, name=Mcminnville, longitude=-85.7667, latitude=35.6833, country_code=US, weight=1000]
+
+ALQ
+CityRecord [code=ALQ, name=Alegrete, longitude=-55.7633, latitude=-29.7997, country_code=BR, weight=1000]
+
+RNB
+CityRecord [code=RNB, name=Ronneby/Karlskrona, longitude=15.2611, latitude=56.2583, country_code=SE, weight=1000]
+
+ALR
+CityRecord [code=ALR, name=Alexandra, longitude=169.3694, latitude=-45.2139, country_code=NZ, weight=1000]
+
+RNE
+CityRecord [code=RNE, name=Roanne, longitude=4.0008, latitude=46.0533, country_code=FR, weight=1000]
+
+ALS
+CityRecord [code=ALS, name=Alamosa, longitude=-105.8667, latitude=37.4367, country_code=US, weight=1000]
+
+ALT
+CityRecord [code=ALT, name=Alenquer, longitude=-54.7667, latitude=-1.9333, country_code=BR, weight=1000]
+
+RNG
+CityRecord [code=RNG, name=Rangely, longitude=-108.7631, latitude=40.0939, country_code=US, weight=1000]
+
+ALU
+CityRecord [code=ALU, name=Alula, longitude=50.8, latitude=11.9667, country_code=SO, weight=1000]
+
+ALW
+CityRecord [code=ALW, name=Walla Walla, longitude=-118.2911, latitude=46.0947, country_code=US, weight=1000]
+
+RNI
+CityRecord [code=RNI, name=Corn Island, longitude=-83.0667, latitude=12.15, country_code=NI, weight=1000]
+
+RNH
+CityRecord [code=RNH, name=New Richmond, longitude=-92.55, latitude=45.1333, country_code=US, weight=1000]
+
+ALX
+CityRecord [code=ALX, name=Alexander City, longitude=-85.95, latitude=32.9333, country_code=US, weight=1000]
+
+ALY
+CityRecord [code=ALY, name=Alexandria, longitude=29.9464, latitude=31.1817, country_code=EG, weight=1000]
+
+ALZ
+CityRecord [code=ALZ, name=Alitak, longitude=-154.2458, latitude=56.8958, country_code=US, weight=1000]
+
+RNJ
+CityRecord [code=RNJ, name=Yoronjima, longitude=128.4333, latitude=27.0333, country_code=JP, weight=1000]
+
+RNL
+CityRecord [code=RNL, name=Rennell, longitude=160.3, latitude=-11.6667, country_code=SB, weight=1000]
+
+RNO
+CityRecord [code=RNO, name=Reno, longitude=-119.7681, latitude=39.4992, country_code=US, weight=352]
+
+RNN
+CityRecord [code=RNN, name=Bornholm, longitude=14.7594, latitude=55.0633, country_code=DK, weight=1000]
+
+RNP
+CityRecord [code=RNP, name=Rongelap Island, longitude=166.8872, latitude=11.1572, country_code=MH, weight=1000]
+
+AMA
+CityRecord [code=AMA, name=Amarillo, longitude=-101.7219, latitude=35.2272, country_code=US, weight=1000]
+
+RNS
+CityRecord [code=RNS, name=Rennes, longitude=-1.7322, latitude=48.0719, country_code=FR, weight=234]
+
+AMB
+CityRecord [code=AMB, name=Ambilobe, longitude=48.9833, latitude=-13.1833, country_code=MG, weight=1000]
+
+AMC
+CityRecord [code=AMC, name=Am Timan, longitude=20.2833, latitude=11.0333, country_code=TD, weight=1000]
+
+RNR
+CityRecord [code=RNR, name=Robinson River, longitude=147.75, latitude=-10.1333, country_code=PG, weight=1000]
+
+RNU
+CityRecord [code=RNU, name=Ranau, longitude=116.6667, latitude=5.95, country_code=MY, weight=1000]
+
+AMD
+CityRecord [code=AMD, name=Ahmedabad, longitude=72.6242, latitude=23.0664, country_code=IN, weight=1000]
+
+RNT
+CityRecord [code=RNT, name=Renton, longitude=-122.2158, latitude=47.4931, country_code=US, weight=1000]
+
+AME
+CityRecord [code=AME, name=Alto Molocue, longitude=37.5833, latitude=-15.8333, country_code=MZ, weight=1000]
+
+AMF
+CityRecord [code=AMF, name=Ama, longitude=141.6667, latitude=-4.1667, country_code=PG, weight=1000]
+
+AMG
+CityRecord [code=AMG, name=Amboin, longitude=143.7, latitude=-4.6167, country_code=PG, weight=1000]
+
+AMH
+CityRecord [code=AMH, name=Arba Minch, longitude=37.5769, latitude=6.0361, country_code=ET, weight=1000]
+
+AMI
+CityRecord [code=AMI, name=Mataram, longitude=116.0969, latitude=-8.56, country_code=ID, weight=1000]
+
+AMJ
+CityRecord [code=AMJ, name=Almenara, longitude=-40.6833, latitude=-16.1833, country_code=BR, weight=1000]
+
+RNZ
+CityRecord [code=RNZ, name=Rensselaer, longitude=-87.15, latitude=40.95, country_code=US, weight=1000]
+
+AML
+CityRecord [code=AML, name=Puerto Armuellas, longitude=-82.8667, latitude=8.2667, country_code=PA, weight=1000]
+
+AMM
+CityRecord [code=AMM, name=Amman, longitude=36, latitude=31.7167, country_code=JO, weight=311]
+
+AMN
+CityRecord [code=AMN, name=Alma, longitude=-84.65, latitude=43.3833, country_code=US, weight=1000]
+
+AMO
+CityRecord [code=AMO, name=Mao, longitude=15.3167, latitude=14.1167, country_code=TD, weight=1000]
+
+AMP
+CityRecord [code=AMP, name=Ampanihy, longitude=44.7333, latitude=-24.7, country_code=MG, weight=1000]
+
+AMQ
+CityRecord [code=AMQ, name=Ambon, longitude=128.0892, latitude=-3.7103, country_code=ID, weight=602]
+
+ROA
+CityRecord [code=ROA, name=Roanoke, longitude=-79.9753, latitude=37.3256, country_code=US, weight=1000]
+
+ROD
+CityRecord [code=ROD, name=Robertson, longitude=19.9, latitude=-33.8167, country_code=ZA, weight=1000]
+
+AMR
+CityRecord [code=AMR, name=Arno, longitude=-2.4561, latitude=36.8344, country_code=MH, weight=1000]
+
+ROC
+CityRecord [code=ROC, name=Rochester, longitude=-77.6719, latitude=43.1192, country_code=US, weight=304]
+
+AMS
+CityRecord [code=AMS, name=Amsterdam, longitude=4.7639, latitude=52.3086, country_code=NL, weight=17]
+
+AMT
+CityRecord [code=AMT, name=Amata, longitude=131.1333, latitude=-26.15, country_code=AU, weight=1000]
+
+AMU
+CityRecord [code=AMU, name=Amanab, longitude=141.15, latitude=-3.5167, country_code=PG, weight=1000]
+
+ROH
+CityRecord [code=ROH, name=Robinhood, longitude=144, latitude=-18.25, country_code=AU, weight=1000]
+
+AMV
+CityRecord [code=AMV, name=Amderma, longitude=61.55, latitude=69.7667, country_code=RU, weight=1000]
+
+ROG
+CityRecord [code=ROG, name=Rogers, longitude=-94.1067, latitude=36.3722, country_code=US, weight=1000]
+
+AMW
+CityRecord [code=AMW, name=Ames, longitude=-93.6183, latitude=41.9942, country_code=ES, weight=1000]
+
+AMX
+CityRecord [code=AMX, name=Ammaroo, longitude=135.24, latitude=-21.74, country_code=AU, weight=1000]
+
+ROI
+CityRecord [code=ROI, name=Roi Et, longitude=103.7739, latitude=16.1167, country_code=TH, weight=1000]
+
+AMY
+CityRecord [code=AMY, name=Ambatomainty, longitude=45.6667, latitude=-17.6833, country_code=MG, weight=1000]
+
+AMZ
+CityRecord [code=AMZ, name=Ardmore, longitude=174.9667, latitude=-37.0333, country_code=NZ, weight=1000]
+
+ROL
+CityRecord [code=ROL, name=Roosevelt, longitude=-109.9833, latitude=40.3, country_code=US, weight=1000]
+
+ROK
+CityRecord [code=ROK, name=Rockhampton, longitude=150.475, latitude=-23.3772, country_code=AU, weight=1000]
+
+RON
+CityRecord [code=RON, name=Rondon, longitude=-71.0833, latitude=6.3, country_code=CO, weight=1000]
+
+ROM
+CityRecord [code=ROM, name=Rome, longitude=12.4833, latitude=41.9, country_code=IT, weight=4]
+
+ROP
+CityRecord [code=ROP, name=Rota, longitude=145.2494, latitude=14.1683, country_code=MP, weight=1000]
+
+ROO
+CityRecord [code=ROO, name=Rondonopolis, longitude=-54.7247, latitude=-16.5858, country_code=BR, weight=1000]
+
+ROR
+CityRecord [code=ROR, name=Koror, longitude=134.5442, latitude=7.3672, country_code=PW, weight=1000]
+
+ANA
+CityRecord [code=ANA, name=Anaheim, longitude=-117.9333, latitude=33.8167, country_code=US, weight=1000]
+
+ANB
+CityRecord [code=ANB, name=Anniston, longitude=-85.8558, latitude=33.5903, country_code=US, weight=1000]
+
+ROT
+CityRecord [code=ROT, name=Rotorua, longitude=176.3172, latitude=-38.1092, country_code=NZ, weight=1000]
+
+ANC
+CityRecord [code=ANC, name=Anchorage, longitude=-149.9853, latitude=61.1692, country_code=US, weight=380]
+
+ROS
+CityRecord [code=ROS, name=Rosario, longitude=-60.785, latitude=-32.9036, country_code=AR, weight=1000]
+
+AND
+CityRecord [code=AND, name=Anderson, longitude=-82.71, latitude=34.4936, country_code=US, weight=1000]
+
+ROV
+CityRecord [code=ROV, name=Rostov-on-Don, longitude=39.8033, latitude=47.255, country_code=RU, weight=30]
+
+ANE
+CityRecord [code=ANE, name=Angers, longitude=-0.3133, latitude=47.5633, country_code=FR, weight=1000]
+
+ANF
+CityRecord [code=ANF, name=Antofagasta, longitude=-70.445, latitude=-23.4444, country_code=CL, weight=1000]
+
+ROU
+CityRecord [code=ROU, name=Ruse, longitude=26.0567, latitude=43.6947, country_code=BG, weight=1000]
+
+ANG
+CityRecord [code=ANG, name=Angouleme, longitude=0.2167, latitude=45.7333, country_code=FR, weight=1000]
+
+ANH
+CityRecord [code=ANH, name=Anuha Island Resort, longitude=160.5, latitude=-8.98, country_code=SB, weight=1000]
+
+ROW
+CityRecord [code=ROW, name=Roswell, longitude=-104.5306, latitude=33.3017, country_code=US, weight=1000]
+
+ANI
+CityRecord [code=ANI, name=Aniak, longitude=-159.5333, latitude=61.5667, country_code=US, weight=1000]
+
+ROY
+CityRecord [code=ROY, name=Rio Mayo, longitude=-70.25, latitude=-45.6667, country_code=AR, weight=1000]
+
+ANJ
+CityRecord [code=ANJ, name=Zanaga, longitude=13.8333, latitude=-2.85, country_code=CG, weight=1000]
+
+ANK
+CityRecord [code=ANK, name=Ankara, longitude=32.8333, latitude=39.9833, country_code=TR, weight=360]
+
+ANL
+CityRecord [code=ANL, name=Andulo, longitude=17.25, latitude=-11.25, country_code=AO, weight=1000]
+
+ANM
+CityRecord [code=ANM, name=Antalaha, longitude=50.3203, latitude=-14.9994, country_code=MG, weight=1000]
+
+ANN
+CityRecord [code=ANN, name=Annette Island, longitude=-131.5706, latitude=55.0369, country_code=US, weight=1000]
+
+ANO
+CityRecord [code=ANO, name=Angoche, longitude=39.9369, latitude=-16.1778, country_code=MZ, weight=1000]
+
+RPA
+CityRecord [code=RPA, name=Rolpa, longitude=87.3333, latitude=26.9833, country_code=NP, weight=1000]
+
+ANP
+CityRecord [code=ANP, name=Annapolis, longitude=-76.5, latitude=38.9833, country_code=US, weight=1000]
+
+ANQ
+CityRecord [code=ANQ, name=Angola, longitude=-85, latitude=41.6333, country_code=US, weight=1000]
+
+ANR
+CityRecord [code=ANR, name=Antwerp, longitude=4.46, latitude=51.19, country_code=BE, weight=1000]
+
+RPB
+CityRecord [code=RPB, name=Roper Bar, longitude=134.7333, latitude=-14.7333, country_code=AU, weight=1000]
+
+ANS
+CityRecord [code=ANS, name=Andahuaylas, longitude=-73.3517, latitude=-13.7089, country_code=PE, weight=1000]
+
+ANU
+CityRecord [code=ANU, name=Antigua, longitude=-61.7639, latitude=17.1083, country_code=AG, weight=548]
+
+ANV
+CityRecord [code=ANV, name=Anvik, longitude=-160.1889, latitude=62.6478, country_code=US, weight=1000]
+
+ANW
+CityRecord [code=ANW, name=Ainsworth, longitude=-99.8667, latitude=42.55, country_code=US, weight=1000]
+
+ANX
+CityRecord [code=ANX, name=Andenes, longitude=16.1417, latitude=69.2931, country_code=NO, weight=1000]
+
+ANY
+CityRecord [code=ANY, name=Anthony, longitude=-98.0333, latitude=37.15, country_code=US, weight=1000]
+
+ANZ
+CityRecord [code=ANZ, name=Angus Downs Station, longitude=132.1667, latitude=-25.0833, country_code=AU, weight=1000]
+
+RPM
+CityRecord [code=RPM, name=Ngukurr, longitude=134, latitude=-14.9333, country_code=AU, weight=1000]
+
+RPN
+CityRecord [code=RPN, name=Rosh Pina, longitude=35.5711, latitude=32.9817, country_code=IL, weight=1000]
+
+AOA
+CityRecord [code=AOA, name=Aroa, longitude=146.8, latitude=-9.05, country_code=PG, weight=1000]
+
+AOB
+CityRecord [code=AOB, name=Annanberg, longitude=144.65, latitude=-4.9167, country_code=PG, weight=1000]
+
+AOC
+CityRecord [code=AOC, name=Altenburg, longitude=12.45, latitude=50.9833, country_code=DE, weight=1000]
+
+RPR
+CityRecord [code=RPR, name=Raipur, longitude=81.7389, latitude=21.1803, country_code=IN, weight=1000]
+
+AOD
+CityRecord [code=AOD, name=Abou Deia, longitude=19.2889, latitude=11.4747, country_code=TD, weight=1000]
+
+AOE
+CityRecord [code=AOE, name=Eskisehir, longitude=30.517, latitude=39.783, country_code=TR, weight=1000]
+
+AOG
+CityRecord [code=AOG, name=Anshan, longitude=123.0333, latitude=41.1667, country_code=CN, weight=1000]
+
+RPV
+CityRecord [code=RPV, name=Roper Valley, longitude=134.0333, latitude=-14.9667, country_code=AU, weight=1000]
+
+AOH
+CityRecord [code=AOH, name=Lima, longitude=-84.1, latitude=40.7667, country_code=US, weight=1000]
+
+RPX
+CityRecord [code=RPX, name=Roundup, longitude=-108.5433, latitude=46.475, country_code=US, weight=1000]
+
+AOI
+CityRecord [code=AOI, name=Ancona, longitude=13.3603, latitude=43.6167, country_code=IT, weight=181]
+
+AOJ
+CityRecord [code=AOJ, name=Aomori, longitude=140.7, latitude=40.7333, country_code=JP, weight=1000]
+
+AOK
+CityRecord [code=AOK, name=Karpathos, longitude=27.1461, latitude=35.4214, country_code=GR, weight=1000]
+
+AOL
+CityRecord [code=AOL, name=Paso De Los Libres, longitude=-57.15, latitude=-29.6833, country_code=AR, weight=1000]
+
+AON
+CityRecord [code=AON, name=Arona, longitude=146, latitude=-6.3333, country_code=PG, weight=1000]
+
+AOO
+CityRecord [code=AOO, name=Altoona, longitude=-78.32, latitude=40.2964, country_code=US, weight=1000]
+
+AOR
+CityRecord [code=AOR, name=Alor Setar, longitude=100.3953, latitude=6.1917, country_code=MY, weight=1000]
+
+AOS
+CityRecord [code=AOS, name=Amook, longitude=-153.8333, latitude=57.4667, country_code=US, weight=1000]
+
+AOT
+CityRecord [code=AOT, name=Aosta, longitude=7.3681, latitude=45.7386, country_code=IT, weight=1000]
+
+AOU
+CityRecord [code=AOU, name=Attopeu, longitude=106.8333, latitude=14.8, country_code=LA, weight=1000]
+
+APB
+CityRecord [code=APB, name=Apolo, longitude=-68.5167, latitude=-14.7167, country_code=BO, weight=1000]
+
+APC
+CityRecord [code=APC, name=Napa, longitude=-122.28, latitude=38.2122, country_code=US, weight=1000]
+
+APE
+CityRecord [code=APE, name=San Juan Aposento, longitude=-75.17, latitude=-15.35, country_code=PE, weight=1000]
+
+APF
+CityRecord [code=APF, name=Naples, longitude=-81.7753, latitude=26.1528, country_code=US, weight=1000]
+
+APG
+CityRecord [code=APG, name=Aberdeen, longitude=-76.1667, latitude=39.5, country_code=US, weight=1000]
+
+APH
+CityRecord [code=APH, name=Bowling Green, longitude=-77.35, latitude=38.05, country_code=US, weight=1000]
+
+API
+CityRecord [code=API, name=Apiay, longitude=-73.0519, latitude=4.0689, country_code=CO, weight=1000]
+
+APK
+CityRecord [code=APK, name=Apataki, longitude=-146.0833, latitude=-15.4167, country_code=PF, weight=1000]
+
+APL
+CityRecord [code=APL, name=Nampula, longitude=39.2872, latitude=-15.1017, country_code=MZ, weight=1000]
+
+APN
+CityRecord [code=APN, name=Alpena, longitude=-83.5558, latitude=45.0817, country_code=US, weight=1000]
+
+APO
+CityRecord [code=APO, name=Apartado, longitude=-76.7164, latitude=7.8119, country_code=CO, weight=1000]
+
+APP
+CityRecord [code=APP, name=Asapa, longitude=148.1333, latitude=-8.9833, country_code=PG, weight=1000]
+
+APQ
+CityRecord [code=APQ, name=Arapiraca, longitude=-36.65, latitude=-9.75, country_code=BR, weight=1000]
+
+APR
+CityRecord [code=APR, name=April River, longitude=145, latitude=-8.5, country_code=PG, weight=1000]
+
+RRE
+CityRecord [code=RRE, name=Marree, longitude=138.0667, latitude=-29.65, country_code=AU, weight=1000]
+
+APS
+CityRecord [code=APS, name=Anapolis, longitude=-48.9667, latitude=-16.3333, country_code=BR, weight=1000]
+
+APT
+CityRecord [code=APT, name=Jasper, longitude=-85.5, latitude=35.0667, country_code=US, weight=1000]
+
+RRG
+CityRecord [code=RRG, name=Rodrigues Island, longitude=63.3611, latitude=-19.7578, country_code=MU, weight=1000]
+
+APU
+CityRecord [code=APU, name=Apucarana, longitude=-51.4833, latitude=-23.55, country_code=BR, weight=1000]
+
+APV
+CityRecord [code=APV, name=Apple Valley, longitude=-117.2128, latitude=34.5264, country_code=US, weight=1000]
+
+APW
+CityRecord [code=APW, name=Apia, longitude=-172, latitude=-13.8333, country_code=WS, weight=1000]
+
+RRI
+CityRecord [code=RRI, name=Barora, longitude=158.2667, latitude=-7.5, country_code=SB, weight=1000]
+
+APX
+CityRecord [code=APX, name=Arapongas, longitude=-51.4667, latitude=-23.4833, country_code=BR, weight=1000]
+
+APY
+CityRecord [code=APY, name=Alto Parnaiba, longitude=-45.9333, latitude=-9.1333, country_code=BR, weight=1000]
+
+RRK
+CityRecord [code=RRK, name=Rourkela, longitude=84.8147, latitude=22.2567, country_code=IN, weight=1000]
+
+APZ
+CityRecord [code=APZ, name=Zapala, longitude=-70.0833, latitude=-38.9167, country_code=AR, weight=1000]
+
+RRM
+CityRecord [code=RRM, name=Marromeu, longitude=35.9333, latitude=-18.3333, country_code=MZ, weight=1000]
+
+RRL
+CityRecord [code=RRL, name=Merrill, longitude=-89.7128, latitude=45.1989, country_code=US, weight=1000]
+
+RRN
+CityRecord [code=RRN, name=Serra Norte, longitude=-50.3, latitude=-6, country_code=BR, weight=1000]
+
+AQA
+CityRecord [code=AQA, name=Araraquara, longitude=-48.1333, latitude=-21.8167, country_code=BR, weight=1000]
+
+AQB
+CityRecord [code=AQB, name=Quiche, longitude=-91.1506, latitude=15.0122, country_code=GT, weight=1000]
+
+RRS
+CityRecord [code=RRS, name=Roros, longitude=11.3456, latitude=62.5792, country_code=NO, weight=1000]
+
+RRT
+CityRecord [code=RRT, name=Warroad, longitude=-95.3, latitude=48.9, country_code=US, weight=1000]
+
+RRV
+CityRecord [code=RRV, name=Robinson River, longitude=136.9667, latitude=-16.75, country_code=AU, weight=1000]
+
+AQG
+CityRecord [code=AQG, name=Anqing, longitude=117.0333, latitude=30.5167, country_code=CN, weight=1000]
+
+AQI
+CityRecord [code=AQI, name=Qaisumah, longitude=46.1306, latitude=28.3281, country_code=SA, weight=1000]
+
+AQJ
+CityRecord [code=AQJ, name=Aqaba, longitude=35.0167, latitude=29.6167, country_code=JO, weight=1000]
+
+AQM
+CityRecord [code=AQM, name=Ariquemes, longitude=-63.0667, latitude=-9.9333, country_code=BR, weight=1000]
+
+RSB
+CityRecord [code=RSB, name=Roseberth, longitude=139.6333, latitude=-25.8333, country_code=AU, weight=1000]
+
+AQP
+CityRecord [code=AQP, name=Arequipa, longitude=-71.555, latitude=-16.3378, country_code=PE, weight=1000]
+
+RSA
+CityRecord [code=RSA, name=Santa Rosa, longitude=-64.2756, latitude=-36.5883, country_code=AR, weight=1000]
+
+RSD
+CityRecord [code=RSD, name=Rock Sound, longitude=-76.1781, latitude=24.8917, country_code=BS, weight=1000]
+
+AQS
+CityRecord [code=AQS, name=Saqani, longitude=170.9, latitude=-17, country_code=FJ, weight=1000]
+
+RSH
+CityRecord [code=RSH, name=Russian Mission, longitude=-161.3192, latitude=61.7831, country_code=US, weight=1000]
+
+RSG
+CityRecord [code=RSG, name=Serra Pelada, longitude=-49.65, latitude=-5.95, country_code=BR, weight=1000]
+
+RSJ
+CityRecord [code=RSJ, name=Rosario, longitude=-122.85, latitude=48.6333, country_code=US, weight=1000]
+
+RSI
+CityRecord [code=RSI, name=Rio Sidra, longitude=-79.28, latitude=9.32, country_code=PA, weight=1000]
+
+AQY
+CityRecord [code=AQY, name=Alyeska, longitude=-149.1167, latitude=60.9667, country_code=US, weight=1000]
+
+RSL
+CityRecord [code=RSL, name=Russell, longitude=-98.85, latitude=38.8833, country_code=US, weight=1000]
+
+RSK
+CityRecord [code=RSK, name=Ransiki, longitude=134.1833, latitude=-1.5, country_code=ID, weight=1000]
+
+RSN
+CityRecord [code=RSN, name=Ruston, longitude=-92.6333, latitude=32.5167, country_code=US, weight=1000]
+
+RSP
+CityRecord [code=RSP, name=Raspberry Strait, longitude=-154.8333, latitude=58.1667, country_code=US, weight=1000]
+
+ARA
+CityRecord [code=ARA, name=New Iberia, longitude=-91.8839, latitude=30.0378, country_code=US, weight=1000]
+
+ARB
+CityRecord [code=ARB, name=Ann Arbor, longitude=-83.745, latitude=42.2253, country_code=US, weight=1000]
+
+ARC
+CityRecord [code=ARC, name=Arctic Village, longitude=-145.5792, latitude=68.1142, country_code=US, weight=1000]
+
+RST
+CityRecord [code=RST, name=Rochester, longitude=-92.5, latitude=43.9083, country_code=US, weight=1000]
+
+ARD
+CityRecord [code=ARD, name=Alor Island, longitude=124.5969, latitude=-8.1322, country_code=ID, weight=1000]
+
+RSS
+CityRecord [code=RSS, name=Damazin, longitude=34.4, latitude=11.7833, country_code=SD, weight=1000]
+
+ARE
+CityRecord [code=ARE, name=Arecibo, longitude=-66.6758, latitude=18.45, country_code=PR, weight=1000]
+
+RSU
+CityRecord [code=RSU, name=Yeosu, longitude=127.6139, latitude=34.8397, country_code=KR, weight=1000]
+
+ARF
+CityRecord [code=ARF, name=Acaricuara, longitude=-70.1333, latitude=0.5333, country_code=CO, weight=1000]
+
+ARG
+CityRecord [code=ARG, name=Walnut Ridge, longitude=-90.95, latitude=36.0667, country_code=US, weight=1000]
+
+RSX
+CityRecord [code=RSX, name=Rouses Point, longitude=-73.3522, latitude=44.9847, country_code=US, weight=1000]
+
+ARH
+CityRecord [code=ARH, name=Arkhangelsk, longitude=40.7167, latitude=64.5997, country_code=RU, weight=70]
+
+ARI
+CityRecord [code=ARI, name=Arica, longitude=-70.35, latitude=-18.35, country_code=CL, weight=1000]
+
+ARJ
+CityRecord [code=ARJ, name=Arso, longitude=140.7833, latitude=-2.9333, country_code=ID, weight=1000]
+
+ARK
+CityRecord [code=ARK, name=Arusha, longitude=36.625, latitude=-3.3678, country_code=TZ, weight=1000]
+
+ARL
+CityRecord [code=ARL, name=Arly, longitude=1.4833, latitude=11.6, country_code=BF, weight=1000]
+
+ARM
+CityRecord [code=ARM, name=Armidale, longitude=151.6233, latitude=-30.5283, country_code=AU, weight=1000]
+
+ARO
+CityRecord [code=ARO, name=Arboletas, longitude=-76.4333, latitude=8.85, country_code=CO, weight=1000]
+
+RTA
+CityRecord [code=RTA, name=Rotuma Island, longitude=177.0711, latitude=-12.4825, country_code=FJ, weight=1000]
+
+ARP
+CityRecord [code=ARP, name=Aragip, longitude=149.5, latitude=-9.8, country_code=PG, weight=1000]
+
+RTC
+CityRecord [code=RTC, name=Ratnagiri, longitude=73.3167, latitude=17, country_code=IN, weight=1000]
+
+ARQ
+CityRecord [code=ARQ, name=Arauquita, longitude=-71.4317, latitude=7.0331, country_code=CO, weight=1000]
+
+ARR
+CityRecord [code=ARR, name=Alto Rio Senguerr, longitude=-70.8333, latitude=-45.0333, country_code=AR, weight=1000]
+
+RTB
+CityRecord [code=RTB, name=Roatan, longitude=-86.5222, latitude=16.3172, country_code=HN, weight=1000]
+
+ARS
+CityRecord [code=ARS, name=Aragarcas, longitude=-52.2333, latitude=-15.9, country_code=BR, weight=1000]
+
+RTE
+CityRecord [code=RTE, name=Marguerite Bay, longitude=-131.6333, latitude=55.7, country_code=US, weight=1000]
+
+RTD
+CityRecord [code=RTD, name=Rotunda, longitude=-82.2667, latitude=26.8667, country_code=US, weight=1000]
+
+ART
+CityRecord [code=ART, name=Watertown, longitude=-76.0214, latitude=43.9908, country_code=US, weight=1000]
+
+RTG
+CityRecord [code=RTG, name=Ruteng, longitude=120.45, latitude=-8.6, country_code=ID, weight=1000]
+
+ARU
+CityRecord [code=ARU, name=Aracatuba, longitude=-50.4247, latitude=-21.1414, country_code=BR, weight=1000]
+
+ARV
+CityRecord [code=ARV, name=Minocqua, longitude=-89.7322, latitude=45.9242, country_code=US, weight=1000]
+
+ARW
+CityRecord [code=ARW, name=Arad, longitude=21.2667, latitude=46.1833, country_code=RO, weight=1000]
+
+RTI
+CityRecord [code=RTI, name=Roti, longitude=122.9667, latitude=-10.8833, country_code=ID, weight=1000]
+
+ARX
+CityRecord [code=ARX, name=Asbury Park, longitude=-74.1, latitude=40.2167, country_code=US, weight=1000]
+
+ARY
+CityRecord [code=ARY, name=Ararat, longitude=143, latitude=-37.3167, country_code=AU, weight=1000]
+
+ARZ
+CityRecord [code=ARZ, name=N'zeto, longitude=13.5, latitude=-7.5, country_code=AO, weight=1000]
+
+RTM
+CityRecord [code=RTM, name=Rotterdam, longitude=4.4444, latitude=51.9583, country_code=NL, weight=1000]
+
+RTL
+CityRecord [code=RTL, name=Spirit Lake, longitude=-95.1394, latitude=43.3875, country_code=US, weight=1000]
+
+RTN
+CityRecord [code=RTN, name=Raton, longitude=-104.5017, latitude=36.7425, country_code=US, weight=1000]
+
+ASA
+CityRecord [code=ASA, name=Assab, longitude=42.6383, latitude=13.07, country_code=ER, weight=1000]
+
+RTP
+CityRecord [code=RTP, name=Rutland Plains, longitude=141.8333, latitude=-15.6, country_code=AU, weight=1000]
+
+RTS
+CityRecord [code=RTS, name=Rottnest Island, longitude=115.5367, latitude=-32.0069, country_code=AU, weight=1000]
+
+ASB
+CityRecord [code=ASB, name=Ashgabat, longitude=58.3608, latitude=37.9817, country_code=TM, weight=1000]
+
+ASC
+CityRecord [code=ASC, name=Ascension, longitude=-63.15, latitude=-15.9167, country_code=BO, weight=1000]
+
+ASD
+CityRecord [code=ASD, name=Andros Town, longitude=-77.7961, latitude=24.6978, country_code=BS, weight=1000]
+
+ASE
+CityRecord [code=ASE, name=Aspen, longitude=-106.8689, latitude=39.2242, country_code=US, weight=1000]
+
+ASF
+CityRecord [code=ASF, name=Astrakhan, longitude=48.0019, latitude=46.2856, country_code=RU, weight=77]
+
+RTW
+CityRecord [code=RTW, name=Saratov, longitude=46.0456, latitude=51.5656, country_code=RU, weight=115]
+
+ASG
+CityRecord [code=ASG, name=Ashburton, longitude=171.7833, latitude=-43.9, country_code=NZ, weight=1000]
+
+ASH
+CityRecord [code=ASH, name=Nashua, longitude=-71.5094, latitude=42.7789, country_code=US, weight=1000]
+
+RTY
+CityRecord [code=RTY, name=Merty Merty, longitude=139, latitude=-28.25, country_code=AU, weight=1000]
+
+ASI
+CityRecord [code=ASI, name=Ascension Island, longitude=-14.4, latitude=-7.9667, country_code=SH, weight=1000]
+
+ASJ
+CityRecord [code=ASJ, name=Amami O Shima, longitude=129.6975, latitude=28.4169, country_code=JP, weight=1000]
+
+ASK
+CityRecord [code=ASK, name=Yamoussoukro, longitude=-5.2833, latitude=6.8167, country_code=CI, weight=1000]
+
+ASM
+CityRecord [code=ASM, name=Asmara, longitude=38.9103, latitude=15.2911, country_code=ER, weight=1000]
+
+ASN
+CityRecord [code=ASN, name=Talladega, longitude=-86.1, latitude=33.4333, country_code=US, weight=1000]
+
+ASO
+CityRecord [code=ASO, name=Asosa, longitude=34.5367, latitude=10.0472, country_code=ET, weight=1000]
+
+ASP
+CityRecord [code=ASP, name=Alice Springs, longitude=133.8842, latitude=-23.8033, country_code=AU, weight=1000]
+
+RUA
+CityRecord [code=RUA, name=Arua, longitude=30.9333, latitude=3.0333, country_code=UG, weight=1000]
+
+ASQ
+CityRecord [code=ASQ, name=Austin, longitude=-117.1667, latitude=39.4667, country_code=US, weight=1000]
+
+RUD
+CityRecord [code=RUD, name=Shahrud, longitude=55.1047, latitude=36.425, country_code=IR, weight=1000]
+
+ASR
+CityRecord [code=ASR, name=Kayseri Province, longitude=35.5097, latitude=38.7042, country_code=TR, weight=1000]
+
+AST
+CityRecord [code=AST, name=Astoria, longitude=-123.88, latitude=46.1597, country_code=US, weight=1000]
+
+ASU
+CityRecord [code=ASU, name=Asuncion, longitude=-57.5192, latitude=-25.2392, country_code=PY, weight=472]
+
+RUH
+CityRecord [code=RUH, name=Riyadh, longitude=46.7081, latitude=24.9628, country_code=SA, weight=461]
+
+ASV
+CityRecord [code=ASV, name=Amboseli, longitude=37.25, latitude=-2.6333, country_code=KE, weight=1000]
+
+RUG
+CityRecord [code=RUG, name=Rugao, longitude=120.5553, latitude=32.3883, country_code=CN, weight=1000]
+
+ASW
+CityRecord [code=ASW, name=Aswan, longitude=32.82, latitude=23.9644, country_code=EG, weight=1000]
+
+ASX
+CityRecord [code=ASX, name=Ashland, longitude=-90.9167, latitude=46.55, country_code=US, weight=1000]
+
+RUI
+CityRecord [code=RUI, name=Ruidoso, longitude=-105.6625, latitude=33.3608, country_code=US, weight=1000]
+
+ASY
+CityRecord [code=ASY, name=Ashley, longitude=-99.3667, latitude=46.0333, country_code=US, weight=1000]
+
+RUK
+CityRecord [code=RUK, name=Rukumkot, longitude=82.4667, latitude=28.625, country_code=NP, weight=1000]
+
+RUN
+CityRecord [code=RUN, name=St-Denis, longitude=55.5214, latitude=-20.8772, country_code=RE, weight=500]
+
+RUM
+CityRecord [code=RUM, name=Rumjatar, longitude=86.5333, latitude=27.3167, country_code=NP, weight=1000]
+
+RUP
+CityRecord [code=RUP, name=Rupsi, longitude=89.9167, latitude=26.15, country_code=IN, weight=1000]
+
+ATA
+CityRecord [code=ATA, name=Anta, longitude=-72.1103, latitude=-13.4783, country_code=PE, weight=1000]
+
+RUR
+CityRecord [code=RUR, name=Rurutu, longitude=-151.3606, latitude=-22.4342, country_code=PF, weight=1000]
+
+ATB
+CityRecord [code=ATB, name=Atbara, longitude=34.0167, latitude=17.7167, country_code=SD, weight=1000]
+
+RUT
+CityRecord [code=RUT, name=Rutland, longitude=-72.9497, latitude=43.53, country_code=US, weight=1000]
+
+ATC
+CityRecord [code=ATC, name=Arthur's Town, longitude=-75.6714, latitude=24.6286, country_code=BS, weight=1000]
+
+ATD
+CityRecord [code=ATD, name=Atoifi, longitude=161.0333, latitude=-8.8667, country_code=SB, weight=1000]
+
+RUS
+CityRecord [code=RUS, name=Marau Sound, longitude=160.8253, latitude=-9.8617, country_code=SB, weight=1000]
+
+ATE
+CityRecord [code=ATE, name=Antlers, longitude=-95.6167, latitude=34.2333, country_code=US, weight=1000]
+
+RUV
+CityRecord [code=RUV, name=Rubelsanto, longitude=-90.3333, latitude=15.8333, country_code=GT, weight=1000]
+
+RUU
+CityRecord [code=RUU, name=Ruti, longitude=144.15, latitude=-5.1833, country_code=PG, weight=1000]
+
+ATF
+CityRecord [code=ATF, name=Ambato, longitude=-78.7, latitude=-1.0833, country_code=EC, weight=1000]
+
+ATG
+CityRecord [code=ATG, name=Attock, longitude=72.25, latitude=33.9, country_code=PK, weight=1000]
+
+ATH
+CityRecord [code=ATH, name=Athens, longitude=23.9444, latitude=37.9364, country_code=GR, weight=64]
+
+ATI
+CityRecord [code=ATI, name=Artigas, longitude=-56.5083, latitude=-30.4, country_code=UY, weight=1000]
+
+RUY
+CityRecord [code=RUY, name=Copan, longitude=-88, latitude=15, country_code=HN, weight=1000]
+
+ATJ
+CityRecord [code=ATJ, name=Antsirabe, longitude=47.0167, latitude=-19.85, country_code=MG, weight=1000]
+
+ATK
+CityRecord [code=ATK, name=Atqasuk, longitude=-157.4358, latitude=70.4669, country_code=US, weight=1000]
+
+ATL
+CityRecord [code=ATL, name=Atlanta, longitude=-84.4278, latitude=33.6367, country_code=US, weight=125]
+
+ATM
+CityRecord [code=ATM, name=Altamira, longitude=-52.2489, latitude=-3.2536, country_code=BR, weight=1000]
+
+ATN
+CityRecord [code=ATN, name=Namatanai, longitude=152.4667, latitude=-3.6667, country_code=PG, weight=1000]
+
+RVA
+CityRecord [code=RVA, name=Farafangana, longitude=47.8194, latitude=-22.8019, country_code=MG, weight=1000]
+
+ATO
+CityRecord [code=ATO, name=Athens, longitude=-82.1, latitude=39.3333, country_code=US, weight=1000]
+
+ATP
+CityRecord [code=ATP, name=Aitape, longitude=142.2833, latitude=-3.1667, country_code=PG, weight=1000]
+
+ATQ
+CityRecord [code=ATQ, name=Amritsar, longitude=74.7972, latitude=31.7097, country_code=IN, weight=1000]
+
+RVC
+CityRecord [code=RVC, name=River Cess, longitude=-9.5833, latitude=5.4667, country_code=LR, weight=1000]
+
+ATR
+CityRecord [code=ATR, name=Atar, longitude=-13.0464, latitude=20.4994, country_code=MR, weight=1000]
+
+RVE
+CityRecord [code=RVE, name=Saravena, longitude=-71.9, latitude=6.9167, country_code=CO, weight=1000]
+
+ATS
+CityRecord [code=ATS, name=Artesia, longitude=-104.4669, latitude=32.8483, country_code=US, weight=1000]
+
+RVD
+CityRecord [code=RVD, name=Rio Verde, longitude=-50.9553, latitude=-17.8333, country_code=BR, weight=1000]
+
+ATT
+CityRecord [code=ATT, name=Atmautluak, longitude=-162.2675, latitude=60.8669, country_code=US, weight=1000]
+
+ATU
+CityRecord [code=ATU, name=Attu Island, longitude=173.1756, latitude=52.8325, country_code=US, weight=1000]
+
+ATV
+CityRecord [code=ATV, name=Ati, longitude=18.3075, latitude=13.2422, country_code=TD, weight=1000]
+
+ATW
+CityRecord [code=ATW, name=Appleton, longitude=-88.5211, latitude=44.2589, country_code=US, weight=679]
+
+RVI
+CityRecord [code=RVI, name=Ростов-на-Дону, longitude=40, latitude=37, country_code=RU, weight=1000]
+
+ATX
+CityRecord [code=ATX, name=Atbasar, longitude=68.4, latitude=51.8833, country_code=KZ, weight=1000]
+
+RVK
+CityRecord [code=RVK, name=Rorvik, longitude=11.1444, latitude=64.8383, country_code=NO, weight=1000]
+
+ATY
+CityRecord [code=ATY, name=Watertown, longitude=-97.1542, latitude=44.9089, country_code=US, weight=1000]
+
+ATZ
+CityRecord [code=ATZ, name=Asyut, longitude=31.0119, latitude=27.0464, country_code=EG, weight=1000]
+
+RVO
+CityRecord [code=RVO, name=Reivilo, longitude=24.1333, latitude=-27.6, country_code=ZA, weight=1000]
+
+RVN
+CityRecord [code=RVN, name=Rovaniemi, longitude=25.8308, latitude=66.5617, country_code=FI, weight=211]
+
+AUA
+CityRecord [code=AUA, name=Aruba, longitude=-70.0139, latitude=12.5022, country_code=AW, weight=416]
+
+AUB
+CityRecord [code=AUB, name=Itauba, longitude=10.8769, latitude=48.4017, country_code=BR, weight=1000]
+
+AUC
+CityRecord [code=AUC, name=Arauca, longitude=-70.7425, latitude=7.0717, country_code=CO, weight=1000]
+
+RVR
+CityRecord [code=RVR, name=Green River, longitude=-110.2272, latitude=38.9614, country_code=US, weight=1000]
+
+AUD
+CityRecord [code=AUD, name=Augustus Downs, longitude=139.8817, latitude=-18.5069, country_code=AU, weight=1000]
+
+RVT
+CityRecord [code=RVT, name=Ravensthorpe, longitude=120.2081, latitude=-33.7972, country_code=AU, weight=1000]
+
+AUE
+CityRecord [code=AUE, name=Abu Rudeis, longitude=33.1833, latitude=28.9, country_code=EG, weight=1000]
+
+AUF
+CityRecord [code=AUF, name=Auxerre, longitude=3.5, latitude=47.85, country_code=FR, weight=1000]
+
+RVV
+CityRecord [code=RVV, name=Raivavae, longitude=-147.6653, latitude=-23.8861, country_code=PF, weight=1000]
+
+AUG
+CityRecord [code=AUG, name=Augusta, longitude=-69.7967, latitude=44.3181, country_code=US, weight=1000]
+
+RVY
+CityRecord [code=RVY, name=Rivera, longitude=-55.4761, latitude=-30.9744, country_code=UY, weight=1000]
+
+AUH
+CityRecord [code=AUH, name=Abu Dabi, longitude=54.65, latitude=24.4333, country_code=AE, weight=343]
+
+AUI
+CityRecord [code=AUI, name=Aua Island, longitude=143.075, latitude=-1.4583, country_code=PG, weight=1000]
+
+AUJ
+CityRecord [code=AUJ, name=Ambunti, longitude=142.85, latitude=-4.25, country_code=PG, weight=1000]
+
+AUK
+CityRecord [code=AUK, name=Alakanuk, longitude=-164.6108, latitude=62.6892, country_code=US, weight=1000]
+
+AUL
+CityRecord [code=AUL, name=Aur Island, longitude=171.1667, latitude=8.1333, country_code=MH, weight=1000]
+
+AUM
+CityRecord [code=AUM, name=Austin, longitude=-92.9833, latitude=43.6667, country_code=US, weight=1000]
+
+AUN
+CityRecord [code=AUN, name=Auburn, longitude=-121.0667, latitude=38.9, country_code=US, weight=1000]
+
+AUO
+CityRecord [code=AUO, name=Auburn, longitude=-85.4339, latitude=32.615, country_code=US, weight=1000]
+
+AUP
+CityRecord [code=AUP, name=Agaun, longitude=149.5833, latitude=-9.9833, country_code=PG, weight=1000]
+
+RWB
+CityRecord [code=RWB, name=Rowan Bay, longitude=-134.1333, latitude=56.75, country_code=US, weight=1000]
+
+AUQ
+CityRecord [code=AUQ, name=Hiva Oa, longitude=-139.0167, latitude=-9.7667, country_code=PF, weight=1000]
+
+AUR
+CityRecord [code=AUR, name=Aurillac, longitude=2.4181, latitude=44.8975, country_code=FR, weight=1000]
+
+AUS
+CityRecord [code=AUS, name=Austin, longitude=-97.6667, latitude=30.2, country_code=US, weight=244]
+
+RWF
+CityRecord [code=RWF, name=Redwood Falls, longitude=-95.0819, latitude=44.5469, country_code=US, weight=1000]
+
+AUT
+CityRecord [code=AUT, name=Atauro, longitude=125.5833, latitude=-8.2167, country_code=ID, weight=1000]
+
+AUU
+CityRecord [code=AUU, name=Aurukun, longitude=141.7208, latitude=-13.3539, country_code=AU, weight=1000]
+
+AUV
+CityRecord [code=AUV, name=Aumo, longitude=148.4333, latitude=-5.7167, country_code=PG, weight=1000]
+
+AUW
+CityRecord [code=AUW, name=Wausau, longitude=-89.6231, latitude=44.9233, country_code=US, weight=1000]
+
+AUX
+CityRecord [code=AUX, name=Araguaina, longitude=-48.2, latitude=-7.2, country_code=BR, weight=1000]
+
+AUY
+CityRecord [code=AUY, name=Aneityum, longitude=169.7714, latitude=-20.2492, country_code=VU, weight=1000]
+
+RWI
+CityRecord [code=RWI, name=Rocky Mount, longitude=-77.8919, latitude=35.8564, country_code=US, weight=1000]
+
+AUZ
+CityRecord [code=AUZ, name=Aurora, longitude=-88.4756, latitude=41.7719, country_code=US, weight=1000]
+
+RWL
+CityRecord [code=RWL, name=Rawlins, longitude=-107.2014, latitude=41.8044, country_code=US, weight=1000]
+
+RWN
+CityRecord [code=RWN, name=Rovno, longitude=26.15, latitude=50.6, country_code=UA, weight=1000]
+
+AVA
+CityRecord [code=AVA, name=Anshun, longitude=105.8728, latitude=26.2572, country_code=CN, weight=1000]
+
+AVB
+CityRecord [code=AVB, name=Aviano, longitude=12.5964, latitude=46.0319, country_code=IT, weight=1000]
+
+RWS
+CityRecord [code=RWS, name=Sumare, longitude=-47.1922, latitude=-22.8006, country_code=BR, weight=1000]
+
+AVG
+CityRecord [code=AVG, name=Auvergne Station, longitude=130.0167, latitude=-15.65, country_code=AU, weight=1000]
+
+AVI
+CityRecord [code=AVI, name=Ciego De Avila, longitude=-78.7914, latitude=22.025, country_code=CU, weight=1000]
+
+AVK
+CityRecord [code=AVK, name=Arvaikheer, longitude=102.7833, latitude=46.2667, country_code=MN, weight=1000]
+
+AVL
+CityRecord [code=AVL, name=Asheville, longitude=-82.5417, latitude=35.4361, country_code=US, weight=1000]
+
+AVN
+CityRecord [code=AVN, name=Avignon, longitude=4.9, latitude=43.9, country_code=FR, weight=1000]
+
+AVO
+CityRecord [code=AVO, name=Avon Park, longitude=-81.5167, latitude=27.6, country_code=US, weight=1000]
+
+RXA
+CityRecord [code=RXA, name=Rawdah, longitude=44.2167, latitude=15.4333, country_code=YE, weight=1000]
+
+AVP
+CityRecord [code=AVP, name=Scranton, longitude=-75.7258, latitude=41.3392, country_code=US, weight=1000]
+
+AVU
+CityRecord [code=AVU, name=Avu Avu, longitude=160.3833, latitude=-9.8333, country_code=SB, weight=1000]
+
+AVX
+CityRecord [code=AVX, name=Catalina Island, longitude=-118.3153, latitude=33.3417, country_code=US, weight=1000]
+
+AWA
+CityRecord [code=AWA, name=Awasa, longitude=38.4875, latitude=7.0611, country_code=ET, weight=1000]
+
+RXS
+CityRecord [code=RXS, name=Roxas City, longitude=122.7511, latitude=11.6, country_code=PH, weight=1000]
+
+AWB
+CityRecord [code=AWB, name=Awaba, longitude=142.75, latitude=-8.0167, country_code=PG, weight=1000]
+
+AWD
+CityRecord [code=AWD, name=Aniwa, longitude=169.5994, latitude=-19.2533, country_code=VU, weight=1000]
+
+AWE
+CityRecord [code=AWE, name=Alowe, longitude=9.45, latitude=-0.75, country_code=GA, weight=1000]
+
+AWK
+CityRecord [code=AWK, name=Wake Island, longitude=166.6333, latitude=19.2833, country_code=UM, weight=1000]
+
+AWM
+CityRecord [code=AWM, name=West Memphis, longitude=-90.2344, latitude=35.135, country_code=US, weight=1000]
+
+AWN
+CityRecord [code=AWN, name=Alton Downs, longitude=138.6667, latitude=-26.25, country_code=AU, weight=1000]
+
+AWP
+CityRecord [code=AWP, name=Austral Downs Station, longitude=137.75, latitude=-20.5, country_code=AU, weight=1000]
+
+RYB
+CityRecord [code=RYB, name=Rybinsk, longitude=38.8667, latitude=58.1333, country_code=RU, weight=1000]
+
+AWR
+CityRecord [code=AWR, name=Awar, longitude=144.8703, latitude=-4.1242, country_code=PG, weight=1000]
+
+AWZ
+CityRecord [code=AWZ, name=Ahwaz, longitude=48.7597, latitude=31.3378, country_code=IR, weight=1000]
+
+RYK
+CityRecord [code=RYK, name=Rahim Yar Khan, longitude=70.3, latitude=28.4167, country_code=PK, weight=1000]
+
+RYN
+CityRecord [code=RYN, name=Royan, longitude=-1.0167, latitude=45.6167, country_code=FR, weight=1000]
+
+RYO
+CityRecord [code=RYO, name=Rio Turbio, longitude=-72.2167, latitude=-51.5833, country_code=AR, weight=1000]
+
+AXA
+CityRecord [code=AXA, name=Anguilla, longitude=-63.0667, latitude=18.2167, country_code=AI, weight=1000]
+
+AXB
+CityRecord [code=AXB, name=Alexandria Bay, longitude=-75.8997, latitude=44.3167, country_code=US, weight=1000]
+
+AXC
+CityRecord [code=AXC, name=Aramac, longitude=145.2425, latitude=-22.9581, country_code=AU, weight=1000]
+
+AXD
+CityRecord [code=AXD, name=Alexandroupolis, longitude=25.9564, latitude=40.8558, country_code=GR, weight=1000]
+
+AXE
+CityRecord [code=AXE, name=Xanxere, longitude=-52.3833, latitude=-26.8833, country_code=BR, weight=1000]
+
+AXG
+CityRecord [code=AXG, name=Algona, longitude=-94.2333, latitude=43.0667, country_code=US, weight=1000]
+
+AXK
+CityRecord [code=AXK, name=Ataq, longitude=46.8261, latitude=14.5514, country_code=YE, weight=1000]
+
+AXL
+CityRecord [code=AXL, name=Alexandria Station, longitude=136.6667, latitude=-19.0833, country_code=AU, weight=1000]
+
+AXM
+CityRecord [code=AXM, name=Armenia, longitude=-75.7658, latitude=4.4533, country_code=CO, weight=1000]
+
+AXN
+CityRecord [code=AXN, name=Alexandria, longitude=-95.3942, latitude=45.8672, country_code=US, weight=1000]
+
+RZA
+CityRecord [code=RZA, name=Santa Cruz, longitude=-68.5333, latitude=-50, country_code=AR, weight=1000]
+
+AXP
+CityRecord [code=AXP, name=Spring Point, longitude=-73.9667, latitude=22.45, country_code=BS, weight=1000]
+
+AXR
+CityRecord [code=AXR, name=Arutua, longitude=-146.6203, latitude=-15.2464, country_code=PF, weight=1000]
+
+RZE
+CityRecord [code=RZE, name=Rzeszow, longitude=22.0189, latitude=50.11, country_code=PL, weight=535]
+
+AXT
+CityRecord [code=AXT, name=Akita, longitude=140.2186, latitude=39.6156, country_code=JP, weight=1000]
+
+AXU
+CityRecord [code=AXU, name=Axum, longitude=38.7778, latitude=14.1442, country_code=ET, weight=1000]
+
+AXV
+CityRecord [code=AXV, name=Wapakoneta, longitude=-84.2, latitude=40.5667, country_code=US, weight=1000]
+
+AXX
+CityRecord [code=AXX, name=Angel Fire, longitude=-105.2833, latitude=36.4167, country_code=US, weight=1000]
+
+RZN
+CityRecord [code=RZN, name=Ryazan, longitude=39.5833, latitude=54.6333, country_code=RU, weight=1000]
+
+RZP
+CityRecord [code=RZP, name=Taytay Sandoval, longitude=121.9417, latitude=11.0533, country_code=PH, weight=1000]
+
+AYA
+CityRecord [code=AYA, name=Ayapel, longitude=-75.15, latitude=8.3167, country_code=CO, weight=1000]
+
+RZS
+CityRecord [code=RZS, name=Sawan, longitude=68.8739, latitude=26.9594, country_code=PK, weight=1000]
+
+AYC
+CityRecord [code=AYC, name=Ayacucho, longitude=-73.6167, latitude=8.6, country_code=CO, weight=1000]
+
+RZR
+CityRecord [code=RZR, name=Ramsar, longitude=50.6806, latitude=36.9108, country_code=IR, weight=1000]
+
+AYD
+CityRecord [code=AYD, name=Alroy Downs, longitude=135.95, latitude=-19.3, country_code=AU, weight=1000]
+
+AYG
+CityRecord [code=AYG, name=Yaguara, longitude=-73.9333, latitude=1.5333, country_code=CO, weight=1000]
+
+AYI
+CityRecord [code=AYI, name=Yari, longitude=-72.3333, latitude=-0.3333, country_code=CO, weight=1000]
+
+RZZ
+CityRecord [code=RZZ, name=Roanoke Rapids, longitude=-77.6667, latitude=36.4667, country_code=US, weight=1000]
+
+AYK
+CityRecord [code=AYK, name=Arkalyk, longitude=66.9667, latitude=50.3167, country_code=KZ, weight=1000]
+
+AYL
+CityRecord [code=AYL, name=Anthony Lagoon, longitude=135.5333, latitude=-18.0333, country_code=AU, weight=1000]
+
+AYN
+CityRecord [code=AYN, name=Anyang, longitude=114.35, latitude=36.1, country_code=CN, weight=1000]
+
+AYO
+CityRecord [code=AYO, name=Ayolas, longitude=-56.85, latitude=-27.3667, country_code=PY, weight=1000]
+
+AYP
+CityRecord [code=AYP, name=Ayacucho, longitude=-74.2472, latitude=-13.1972, country_code=PE, weight=1000]
+
+AYQ
+CityRecord [code=AYQ, name=Ayers Rock, longitude=131.05, latitude=-25.3333, country_code=AU, weight=1000]
+
+AYR
+CityRecord [code=AYR, name=Ayr, longitude=147.3244, latitude=-19.5967, country_code=AU, weight=1000]
+
+AYS
+CityRecord [code=AYS, name=Waycross, longitude=-82.3967, latitude=31.2486, country_code=US, weight=1000]
+
+AYT
+CityRecord [code=AYT, name=Antalya, longitude=30.7906, latitude=36.9056, country_code=TR, weight=74]
+
+AYU
+CityRecord [code=AYU, name=Aiyura, longitude=145.9, latitude=-6.3333, country_code=PG, weight=1000]
+
+AYW
+CityRecord [code=AYW, name=Ayawasi, longitude=132.5, latitude=-1.2, country_code=ID, weight=1000]
+
+AYY
+CityRecord [code=AYY, name=Pothuvil, longitude=81.8311, latitude=6.855, country_code=LK, weight=1000]
+
+AYZ
+CityRecord [code=AYZ, name=Amityville, longitude=-73.4167, latitude=40.6667, country_code=US, weight=1000]
+
+AZB
+CityRecord [code=AZB, name=Amazon Bay, longitude=148.8167, latitude=-10.15, country_code=PG, weight=1000]
+
+AZD
+CityRecord [code=AZD, name=Yazd, longitude=54.2817, latitude=31.8978, country_code=IR, weight=1000]
+
+AZG
+CityRecord [code=AZG, name=Apatzingan, longitude=-102.3528, latitude=19.0681, country_code=MX, weight=1000]
+
+AZN
+CityRecord [code=AZN, name=Andijan, longitude=72.3, latitude=40.7333, country_code=UZ, weight=1000]
+
+AZO
+CityRecord [code=AZO, name=Kalamazoo, longitude=-85.5536, latitude=42.2364, country_code=US, weight=1000]
+
+AZR
+CityRecord [code=AZR, name=Adrar, longitude=-0.1853, latitude=27.8392, country_code=DZ, weight=1000]
+
+AZS
+CityRecord [code=AZS, name=Samana, longitude=-69.4325, latitude=19.2011, country_code=DO, weight=1000]
+
+AZT
+CityRecord [code=AZT, name=Zapatoca, longitude=-73.25, latitude=6.8667, country_code=CO, weight=1000]
+
+AZZ
+CityRecord [code=AZZ, name=Ambriz, longitude=13.15, latitude=-7.8833, country_code=AO, weight=1000]
+
+SAA
+CityRecord [code=SAA, name=Saratoga, longitude=-106.81, latitude=41.445, country_code=US, weight=1000]
+
+SAC
+CityRecord [code=SAC, name=Sacramento, longitude=-121.4933, latitude=38.5125, country_code=US, weight=203]
+
+SAB
+CityRecord [code=SAB, name=Saba Island, longitude=-63.2167, latitude=17.65, country_code=BQ, weight=1000]
+
+SAE
+CityRecord [code=SAE, name=Sangir, longitude=-51.6267, latitude=70.8086, country_code=ID, weight=1000]
+
+SAD
+CityRecord [code=SAD, name=Safford, longitude=-109.7167, latitude=32.8333, country_code=US, weight=1000]
+
+SAG
+CityRecord [code=SAG, name=Sagwon, longitude=-148.7, latitude=69.3667, country_code=US, weight=1000]
+
+SAH
+CityRecord [code=SAH, name=Sana'a, longitude=44.2197, latitude=15.4764, country_code=YE, weight=1000]
+
+SAK
+CityRecord [code=SAK, name=Saudarkrokur, longitude=-19.5728, latitude=65.7317, country_code=IS, weight=1000]
+
+SAM
+CityRecord [code=SAM, name=Salamo, longitude=150.8083, latitude=-9.65, country_code=PG, weight=1000]
+
+SAL
+CityRecord [code=SAL, name=San Salvador, longitude=-89.0558, latitude=13.4408, country_code=SV, weight=447]
+
+SAO
+CityRecord [code=SAO, name=San Paolo, longitude=-46.6167, latitude=-23.5333, country_code=BR, weight=191]
+
+SAN
+CityRecord [code=SAN, name=San Diego, longitude=-117.1872, latitude=32.7328, country_code=US, weight=192]
+
+SAQ
+CityRecord [code=SAQ, name=San Andros, longitude=-78.05, latitude=25.05, country_code=BS, weight=1000]
+
+SAP
+CityRecord [code=SAP, name=San Pedro Sula, longitude=-87.9242, latitude=15.4519, country_code=HN, weight=526]
+
+SAS
+CityRecord [code=SAS, name=Salton City, longitude=-115.9525, latitude=33.2411, country_code=US, weight=1000]
+
+SAR
+CityRecord [code=SAR, name=Sparta, longitude=-89.7, latitude=38.1333, country_code=US, weight=1000]
+
+SAU
+CityRecord [code=SAU, name=Sawu, longitude=121.9, latitude=-10.4833, country_code=ID, weight=1000]
+
+SAT
+CityRecord [code=SAT, name=San Antonio, longitude=-98.4719, latitude=29.5383, country_code=US, weight=421]
+
+SAV
+CityRecord [code=SAV, name=Savannah, longitude=-81.2022, latitude=32.1275, country_code=US, weight=390]
+
+SAY
+CityRecord [code=SAY, name=Siena, longitude=11.255, latitude=43.2586, country_code=IT, weight=1000]
+
+SAX
+CityRecord [code=SAX, name=Sambu, longitude=-78.2, latitude=8.0167, country_code=PA, weight=1000]
+
+SAZ
+CityRecord [code=SAZ, name=Sasstown, longitude=-8.4333, latitude=4.6667, country_code=LR, weight=1000]
+
+SBB
+CityRecord [code=SBB, name=Santa Barbara Ba, longitude=-71.1667, latitude=7.7833, country_code=VE, weight=1000]
+
+SBA
+CityRecord [code=SBA, name=Santa Barbara, longitude=-119.8414, latitude=34.4261, country_code=US, weight=1000]
+
+SBC
+CityRecord [code=SBC, name=Selbang, longitude=141.75, latitude=-5.3167, country_code=PG, weight=1000]
+
+SBF
+CityRecord [code=SBF, name=Sardeh Band, longitude=68.5333, latitude=33.6167, country_code=AF, weight=1000]
+
+SBE
+CityRecord [code=SBE, name=Suabi, longitude=142.2833, latitude=-6.1, country_code=PG, weight=1000]
+
+SBH
+CityRecord [code=SBH, name=St Barthelemy, longitude=-62.85, latitude=17.9, country_code=BL, weight=1000]
+
+SBG
+CityRecord [code=SBG, name=Sabang, longitude=95.3333, latitude=5.55, country_code=ID, weight=1000]
+
+SBJ
+CityRecord [code=SBJ, name=Sao Mateus, longitude=-39.7333, latitude=-18.5833, country_code=BR, weight=1000]
+
+SBI
+CityRecord [code=SBI, name=Koundara, longitude=-13.3, latitude=12.4833, country_code=GN, weight=1000]
+
+SBL
+CityRecord [code=SBL, name=Santa Ana, longitude=-65.45, latitude=-13.7167, country_code=BO, weight=1000]
+
+SBK
+CityRecord [code=SBK, name=St-Brieuc, longitude=-2.8089, latitude=48.5131, country_code=FR, weight=1000]
+
+SBN
+CityRecord [code=SBN, name=South Bend, longitude=-86.3172, latitude=41.7083, country_code=US, weight=1000]
+
+SBM
+CityRecord [code=SBM, name=Sheboygan, longitude=-87.8517, latitude=43.7697, country_code=US, weight=1000]
+
+SBO
+CityRecord [code=SBO, name=Salina, longitude=-111.8383, latitude=39.0292, country_code=US, weight=1000]
+
+BAA
+CityRecord [code=BAA, name=Bialla, longitude=151.0333, latitude=-5.3167, country_code=PG, weight=1000]
+
+SBR
+CityRecord [code=SBR, name=Saibai Island, longitude=142.6333, latitude=-9.3833, country_code=AU, weight=1000]
+
+SBQ
+CityRecord [code=SBQ, name=Sibi, longitude=67.8833, latitude=29.55, country_code=PK, weight=1000]
+
+BAC
+CityRecord [code=BAC, name=Barranca De Upia, longitude=-72.9667, latitude=4.5833, country_code=CO, weight=1000]
+
+SBT
+CityRecord [code=SBT, name=San Bernardino, longitude=-117.2833, latitude=34.1, country_code=US, weight=1000]
+
+SBS
+CityRecord [code=SBS, name=Steamboat Springs, longitude=-106.8625, latitude=40.5167, country_code=US, weight=1000]
+
+SBV
+CityRecord [code=SBV, name=Sabah, longitude=155.0167, latitude=-5.3333, country_code=PG, weight=1000]
+
+BAE
+CityRecord [code=BAE, name=Barcelonnette, longitude=6.6667, latitude=44.3833, country_code=FR, weight=1000]
+
+SBU
+CityRecord [code=SBU, name=Springbok, longitude=17.9394, latitude=-29.6886, country_code=ZA, weight=1000]
+
+BAG
+CityRecord [code=BAG, name=Baguio, longitude=120.6178, latitude=16.3767, country_code=PH, weight=1000]
+
+SBX
+CityRecord [code=SBX, name=Shelby, longitude=-111.8711, latitude=48.5406, country_code=US, weight=1000]
+
+BAH
+CityRecord [code=BAH, name=Bahrein, longitude=50.6336, latitude=26.2708, country_code=BH, weight=666]
+
+SBW
+CityRecord [code=SBW, name=Sibu, longitude=111.9864, latitude=2.2558, country_code=MY, weight=1000]
+
+BAI
+CityRecord [code=BAI, name=Buenos Aires, longitude=-83.3333, latitude=9.1667, country_code=CR, weight=1000]
+
+SBZ
+CityRecord [code=SBZ, name=Sibiu, longitude=24.0856, latitude=45.7858, country_code=RO, weight=1000]
+
+BAJ
+CityRecord [code=BAJ, name=Bali, longitude=149.1333, latitude=-4.8333, country_code=PG, weight=1000]
+
+SBY
+CityRecord [code=SBY, name=Salisbury-Ocean City, longitude=-75.51, latitude=38.3386, country_code=US, weight=1000]
+
+BAK
+CityRecord [code=BAK, name=Baku, longitude=50.0519, latitude=40.465, country_code=AZ, weight=52]
+
+BAL
+CityRecord [code=BAL, name=Batman, longitude=41.0833, latitude=37.9167, country_code=TR, weight=1000]
+
+BAM
+CityRecord [code=BAM, name=Battle Mountain, longitude=-116.8744, latitude=40.5992, country_code=US, weight=1000]
+
+BAN
+CityRecord [code=BAN, name=Basongo, longitude=20.4281, latitude=-4.3133, country_code=CD, weight=1000]
+
+SCA
+CityRecord [code=SCA, name=Santa Catalina, longitude=-75.2833, latitude=10.6, country_code=CO, weight=1000]
+
+BAO
+CityRecord [code=BAO, name=Ban Mak Khaen, longitude=102.78, latitude=17.38, country_code=TH, weight=1000]
+
+BAP
+CityRecord [code=BAP, name=Baibara, longitude=149.75, latitude=-10.3333, country_code=PG, weight=1000]
+
+BAQ
+CityRecord [code=BAQ, name=Barranquilla, longitude=-74.7789, latitude=10.8961, country_code=CO, weight=1000]
+
+SCC
+CityRecord [code=SCC, name=Prudhoe Bay/Deadhorse, longitude=-148.4667, latitude=70.2, country_code=US, weight=1000]
+
+BAR
+CityRecord [code=BAR, name=Baker Island, longitude=110.4536, latitude=19.1392, country_code=US, weight=1000]
+
+SCB
+CityRecord [code=SCB, name=Scribner, longitude=-96.6667, latitude=41.65, country_code=US, weight=1000]
+
+SCE
+CityRecord [code=SCE, name=State College, longitude=-77.8436, latitude=40.8558, country_code=US, weight=1000]
+
+BAS
+CityRecord [code=BAS, name=Balalae, longitude=155.8833, latitude=-6.9833, country_code=SB, weight=1000]
+
+SCD
+CityRecord [code=SCD, name=Sulaco, longitude=-87.2667, latitude=14.9161, country_code=HN, weight=1000]
+
+BAT
+CityRecord [code=BAT, name=Barretos, longitude=-48.55, latitude=-20.55, country_code=BR, weight=1000]
+
+SCG
+CityRecord [code=SCG, name=Spring Creek, longitude=142.4167, latitude=-38.0167, country_code=AU, weight=1000]
+
+BAV
+CityRecord [code=BAV, name=Baotou, longitude=109.9969, latitude=40.56, country_code=CN, weight=584]
+
+BAW
+CityRecord [code=BAW, name=Biawonque, longitude=146.35, latitude=-0.6667, country_code=GA, weight=1000]
+
+SCI
+CityRecord [code=SCI, name=San Cristobal, longitude=-72.2333, latitude=7.7667, country_code=VE, weight=1000]
+
+SCH
+CityRecord [code=SCH, name=Schenectady, longitude=-73.9319, latitude=42.8569, country_code=US, weight=1000]
+
+BAX
+CityRecord [code=BAX, name=Barnaul, longitude=83.5478, latitude=53.3614, country_code=RU, weight=65]
+
+BAY
+CityRecord [code=BAY, name=Baia Mare, longitude=23.4667, latitude=47.65, country_code=RO, weight=1000]
+
+BAZ
+CityRecord [code=BAZ, name=Barbelos, longitude=-62.9197, latitude=-0.9814, country_code=BR, weight=1000]
+
+SCJ
+CityRecord [code=SCJ, name=Smith Cove, longitude=-132.3333, latitude=55.4167, country_code=US, weight=1000]
+
+SCM
+CityRecord [code=SCM, name=Scammon Bay, longitude=-165.5939, latitude=61.8464, country_code=US, weight=1000]
+
+SCL
+CityRecord [code=SCL, name=Santiago, longitude=-70.7858, latitude=-33.3931, country_code=CL, weight=218]
+
+SCO
+CityRecord [code=SCO, name=Aktau, longitude=51.0908, latitude=43.86, country_code=KZ, weight=174]
+
+SCN
+CityRecord [code=SCN, name=Saarbrucken, longitude=7.1122, latitude=49.22, country_code=DE, weight=1000]
