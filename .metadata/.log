@@ -1,0 +1,13 @@
+!SESSION 2019-10-11 14:04:59.299 -----------------------------------------------
+eclipse.buildId=
+java.fullversion=JRE 1.8.0 IBM J9 2.8 Windows 10 amd64-64 Compressed References 20161013_322271 (JIT enabled, AOT enabled)
+J9VM - R28_Java8_SR3_20161013_1635_B322271
+JIT  - tr.r14.java.green_20161011_125790
+GC   - R28_Java8_SR3_20161013_1635_B322271_CMPRSS
+J9CL - 20161013_322271
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -init -perspective ilog.rules.studio.ui.perspectives.RuleEditingPerspective
+Command-line arguments:  -data C:\WS\su\su-rulesWork0 -os win32 -ws win32 -arch x86_64 -init -perspective ilog.rules.studio.ui.perspectives.RuleEditingPerspective
+
+!ENTRY org.eclipse.core.resources 4 380 2019-10-11 14:37:54.165
+!MESSAGE The resource tree is locked for modifications.

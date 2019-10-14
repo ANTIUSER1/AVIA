@@ -3,10 +3,13 @@ package brack;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
-import berk.CNVgson;
+import berk.Containers;
 import berk.Protect;
 import berk.ScoreType;
+import berk.Vect;
 
 public class Main {
 
@@ -15,8 +18,16 @@ public class Main {
 		ScoreType scoreType = ScoreType.create();
 		System.out.println(scoreType);
 		System.out.println(new Date());
-		CNVgson cnv = CNVgson.create();
-		System.err.println(cnv.conv(scoreType));
+
+		Set<Vect> vss = new TreeSet<>();
+		for (int k = 0; k < 4; k++) {
+			double x = Math.random();
+			double y = Math.random();
+			double z = Math.random();
+			Vect v = Vect.make(z, y, z);
+			vss.add(v);
+		}
+		Containers cont = Containers.make(vss);
 	}
 
 	private static List<Protect> makeProtects() {

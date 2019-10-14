@@ -1,0 +1,9 @@
+package berk;
+
+import java.util.Set;
+
+public class ScoreType {
+private String tp="";
+private Set<Protect> protectSet =  
+
+}

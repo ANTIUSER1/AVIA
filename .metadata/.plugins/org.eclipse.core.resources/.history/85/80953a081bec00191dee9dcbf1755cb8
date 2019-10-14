@@ -1,0 +1,31 @@
+package brack;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+
+
+public class Main {
+
+	 public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 List<Protect> list = makeProtects();
+		 System.out.println(list);
+			
+	}
+
+	private static List<Protect> makeProtects() {
+		 List<Protect> res = new ArrayList<>();
+		 for(int k=0; k<3+3*Math.random();k++){
+			 long ttm= (long)(Long.MAX_VALUE*Math.random());
+			 Date d = new Date(ttm);
+			 String sn=""+( (int) 10*Math.random() );
+			 String fn=""+( (int) 100*Math.random() );
+			 Protect  pr= new Protect(sn, fn, d);
+			 res.add(pr);
+		 }
+return res;
+	}
+
+}

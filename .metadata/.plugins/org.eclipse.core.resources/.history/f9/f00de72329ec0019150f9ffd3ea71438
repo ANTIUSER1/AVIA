@@ -1,0 +1,11 @@
+package berk;
+
+import java.util.Set;
+import java.util.TreeSet;
+
+public class ScoreType {
+
+private Set<Protect> protectSet = new TreeSet<>();
+
+	
+}

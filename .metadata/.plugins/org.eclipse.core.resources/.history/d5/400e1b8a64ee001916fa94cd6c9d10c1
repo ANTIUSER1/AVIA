@@ -1,0 +1,33 @@
+package berk;
+
+import java.util.Comparator;
+
+public class Vect implements Comparable {
+
+	private double x;
+	private double y;
+	private double z;
+	
+	private Vect(double X, double Y, double Z ){
+		x=X;y=Y;z=Z;
+	}
+
+	public double getX() {
+		return x;
+	}
+
+	public double getY() {
+		return y;
+	}
+
+	public double getZ() {
+		return z;
+	}
+
+	@Override
+	public int compareTo(Vect v1, Vect o2) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+}
