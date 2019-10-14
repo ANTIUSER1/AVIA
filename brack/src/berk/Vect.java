@@ -29,9 +29,31 @@ public class Vect implements Comparable {
 	}
 
 	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Vect [x=");
+		builder.append(x);
+		builder.append(", y=");
+		builder.append(y);
+		builder.append(", z=");
+		builder.append(z);
+		builder.append("]");
+		return builder.toString();
+	}
+
+	@Override
 	public int compareTo(Object o) {
 		// TODO Auto-generated method stub
-		return 0;
+		if (o instanceof Vect) {
+			Vect v = (Vect) o;
+			if (x < v.x) {
+				return -1;
+			} else if (x > v.x) {
+				return 1;
+			} else
+				return 0;
+		} else
+			return Integer.MAX_VALUE;
 	}
 
 }

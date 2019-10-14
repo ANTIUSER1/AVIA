@@ -25,9 +25,11 @@ public class Main {
 			double y = Math.random();
 			double z = Math.random();
 			Vect v = Vect.make(z, y, z);
+			System.err.println(v);
 			vss.add(v);
 		}
 		Containers cont = Containers.make(vss);
+		System.out.println(cont);
 	}
 
 	private static List<Protect> makeProtects() {
