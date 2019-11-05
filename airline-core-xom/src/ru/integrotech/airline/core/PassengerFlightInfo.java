@@ -20,7 +20,7 @@ public class PassengerFlightInfo {
 	}
 
 	public String getAirlineCode() {
-		return airlineCode;
+		return airlineCode == null ? null : airlineCode.toUpperCase();
 	}
 
 	public void setAirlineCode(String airlineCode) {
