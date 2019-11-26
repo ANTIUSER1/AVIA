@@ -1,0 +1,259 @@
+[
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 0
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "LED"
+      },
+      "city": {
+        "cityCode": "LED",
+        "weight": 0
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "segments": [
+      {
+        "origin": {
+          "airport": {
+            "airportCode": "SVO"
+          },
+          "city": {
+            "cityCode": "MOW",
+            "weight": 0
+          },
+          "country": {
+            "countryCode": "RU"
+          },
+          "region": {
+            "regionCode": "CIS"
+          }
+        },
+        "destination": {
+          "airport": {
+            "airportCode": "LED"
+          },
+          "city": {
+            "cityCode": "LED",
+            "weight": 0
+          },
+          "country": {
+            "countryCode": "RU"
+          },
+          "region": {
+            "regionCode": "CIS"
+          }
+        },
+        "milesAmounts": [
+          {
+            "airline": {
+              "airlineCode": "SU"
+            },
+            "classOfService": {
+              "classOfServiceCode": "business"
+            },
+            "distance": 396,
+            "fareGroups": [
+              {
+                "fareGroup": {
+                  "fareGroupCode": "business-premium"
+                },
+                "airlineFareGroups": [
+                  {
+                    "farePrefixes": [
+                      "CF",
+                      "DF",
+                      "JF"
+                    ],
+                    "milesCharged": 1500,
+                    "milesQualifying": 1250,
+                    "milesBonus": 250
+                  },
+                  {
+                    "farePrefixes": [
+                      "IF",
+                      "ZF"
+                    ],
+                    "milesCharged": 1250,
+                    "milesQualifying": 1000,
+                    "milesBonus": 250
+                  }
+                ]
+              },
+              {
+                "fareGroup": {
+                  "fareGroupCode": "business-optimum"
+                },
+                "airlineFareGroups": [
+                  {
+                    "farePrefixes": [
+                      "CC",
+                      "DC",
+                      "JC"
+                    ],
+                    "milesCharged": 1250,
+                    "milesQualifying": 1000,
+                    "milesBonus": 250
+                  },
+                  {
+                    "farePrefixes": [
+                      "IC",
+                      "ZC"
+                    ],
+                    "milesCharged": 1000,
+                    "milesQualifying": 750,
+                    "milesBonus": 250
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "airline": {
+              "airlineCode": "SU"
+            },
+            "classOfService": {
+              "classOfServiceCode": "economy"
+            },
+            "distance": 396,
+            "fareGroups": [
+              {
+                "fareGroup": {
+                  "fareGroupCode": "economy-premium"
+                },
+                "airlineFareGroups": [
+                  {
+                    "farePrefixes": [
+                      "BF",
+                      "HF",
+                      "KF",
+                      "LF",
+                      "MF",
+                      "UF",
+                      "YF"
+                    ],
+                    "milesCharged": 1250,
+                    "milesQualifying": 1000,
+                    "milesBonus": 250
+                  },
+                  {
+                    "farePrefixes": [
+                      "EF",
+                      "NF",
+                      "QF",
+                      "TF"
+                    ],
+                    "milesCharged": 1000,
+                    "milesQualifying": 750,
+                    "milesBonus": 250
+                  }
+                ]
+              },
+              {
+                "fareGroup": {
+                  "fareGroupCode": "economy-optimum"
+                },
+                "airlineFareGroups": [
+                  {
+                    "farePrefixes": [
+                      "BC",
+                      "HC",
+                      "KC",
+                      "LC",
+                      "MC",
+                      "UC",
+                      "YC"
+                    ],
+                    "milesCharged": 1000,
+                    "milesQualifying": 750,
+                    "milesBonus": 250
+                  },
+                  {
+                    "farePrefixes": [
+                      "EC",
+                      "NC",
+                      "QC",
+                      "TC"
+                    ],
+                    "milesCharged": 750,
+                    "milesQualifying": 500,
+                    "milesBonus": 250
+                  }
+                ]
+              },
+              {
+                "fareGroup": {
+                  "fareGroupCode": "economy-budget"
+                },
+                "airlineFareGroups": [
+                  {
+                    "farePrefixes": [
+                      "BV",
+                      "HV",
+                      "KV",
+                      "LV",
+                      "MV",
+                      "UV",
+                      "YV"
+                    ],
+                    "milesCharged": 875,
+                    "milesQualifying": 625,
+                    "milesBonus": 250
+                  },
+                  {
+                    "farePrefixes": [
+                      "EV",
+                      "NV",
+                      "QV",
+                      "TV"
+                    ],
+                    "milesCharged": 750,
+                    "milesQualifying": 500,
+                    "milesBonus": 250
+                  }
+                ]
+              },
+              {
+                "fareGroup": {
+                  "fareGroupCode": "economy-promo"
+                },
+                "airlineFareGroups": [
+                  {
+                    "farePrefixes": [
+                      "FS",
+                      "OS",
+                      "PS",
+                      "RS",
+                      "XS"
+                    ],
+                    "milesCharged": 750,
+                    "milesQualifying": 500,
+                    "milesBonus": 250
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

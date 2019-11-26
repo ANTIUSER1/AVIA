@@ -1,0 +1,50 @@
+[
+  {
+    "code": "SU",
+    "name": "Aeroflot",
+    "min_miles_charge": 500,
+    "min_miles_limit": "A"
+  },
+  {
+    "code": "OK",
+    "name": "Czech Airlines",
+    "min_miles_charge": 500,
+    "min_miles_limit": "I"
+  },
+  {
+    "code": "VN",
+    "name": "Vietnam Airlines",
+    "min_miles_charge": 0,
+    "min_miles_limit": "N"
+  },
+  {
+    "code": "DL",
+    "name": "Delta Airlines",
+    "min_miles_charge": 0,
+    "min_miles_limit": "N"
+  },
+  {
+    "code": "AZ",
+    "name": "Alitalia",
+    "min_miles_charge": 0,
+    "min_miles_limit": "N"
+  },
+  {
+    "code": "GA",
+    "name": "Garuda Indonesia",
+    "min_miles_charge": 0,
+    "min_miles_limit": "N"
+  },
+  {
+    "code": "SV",
+    "name": "Saudi Arabian Airlines",
+    "min_miles_charge": 500,
+    "min_miles_limit": "I"
+  },
+  {
+    "code": "KE",
+    "name": "Korean Air",
+    "min_miles_charge": 500,
+    "min_miles_limit": "A"
+  }
+]

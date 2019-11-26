@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="checkOnlineRegistrationAvailability" usingRuleflow="true" ruleflowName="checkOnlineRegAvail" targetRuleProjectName="SU-rules">
+  <name>checkOnlineRegAvail</name>
+  <uuid>231ce270-fcba-4431-b3cd-9841b40d8bc0</uuid>
+  <referencedVariables variableName="checkOnlineRegistrationAvailable" variableSetName="checkOnlineRegAvailParams" direction="IN_OUT">
+    <variableSet href="../../rules/checkOnlineRegAvailParams.var#a0a883df-fefc-4c28-9a3e-a01c89e80204"/>
+  </referencedVariables>
+  <ruleflow href="../../rules/checkOnlineRegAvail.rfl#2ec7d036-8b37-4f69-81f3-2a97b4a94bdc"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="checkOnlineRegistrationAvailability_extractor" validator="Default Validator"/>
+  <targetRuleProject href="../../../SU-rules#acc26832-2255-4fd6-8c0a-3dbd27f5596b"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

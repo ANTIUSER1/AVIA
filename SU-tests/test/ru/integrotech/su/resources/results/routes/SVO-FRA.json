@@ -1,0 +1,187 @@
+[
+  {
+    "code": "SVO JFK FRA",
+    "distance": 8506,
+    "flights": [
+      {
+        "origin": "SVO",
+        "destination": "JFK",
+        "distance": 4662,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "comfort",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "JFK",
+        "destination": "FRA",
+        "distance": 3844,
+        "carriers": [
+          {
+            "carrier": "VN",
+            "serviceClasses" : []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "SVO ICN FRA",
+    "distance": 9456,
+    "flights": [
+      {
+        "origin": "SVO",
+        "destination": "ICN",
+        "distance": 4096,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "comfort",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "ICN",
+        "destination": "FRA",
+        "distance": 5360,
+        "carriers": [
+          {
+            "carrier": "VN",
+            "serviceClasses" : []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "SVO PRG FRA",
+    "distance": 1294,
+    "flights": [
+      {
+        "origin": "SVO",
+        "destination": "PRG",
+        "distance": 1038,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          },
+          {
+            "carrier": "OK",
+            "serviceClasses" : []
+          }
+        ]
+      },
+      {
+        "origin": "PRG",
+        "destination": "FRA",
+        "distance": 256,
+        "carriers": [
+          {
+            "carrier": "VN",
+            "serviceClasses" : []
+          },
+          {
+            "carrier": "OK",
+            "serviceClasses" : []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "SVO CDG FRA",
+    "distance": 1805,
+    "flights": [
+      {
+        "origin": "SVO",
+        "destination": "CDG",
+        "distance": 1530,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "CDG",
+        "destination": "FRA",
+        "distance": 275,
+        "carriers": [
+          {
+            "carrier": "VN",
+            "serviceClasses" : []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "SVO FRA",
+    "distance": 1264,
+    "flights": [
+      {
+        "origin": "SVO",
+        "destination": "FRA",
+        "distance": 1264,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "SVO MAD FRA",
+    "distance": 3015,
+    "flights": [
+      {
+        "origin": "SVO",
+        "destination": "MAD",
+        "distance": 2131,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "MAD",
+        "destination": "FRA",
+        "distance": 884,
+        "carriers": [
+          {
+            "carrier": "VN",
+            "serviceClasses" : []
+          }
+        ]
+      }
+    ]
+  }
+]

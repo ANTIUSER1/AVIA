@@ -1,0 +1,74 @@
+[
+	{
+		"mask": "AD6\\d$",
+		"toZeroMiles":	true
+	},
+	{
+		"mask": "AD7\\d$",
+		"toZeroMiles":	true
+	},
+	{
+		"mask": "AD8\\d$",
+		"toZeroMiles":	true
+	},
+	{
+		"mask": "AD9\\d$",
+		"toZeroMiles":	true
+	},
+	{
+		"mask": "DP6\\d*",
+		"toZeroMiles":	true
+	},
+	{
+		"mask": "DP7\\d*",
+		"toZeroMiles":	true
+	},
+	{
+		"mask": "DP8\\d*",
+		"toZeroMiles":	true
+	},
+	{
+		"mask": "DP9\\d*",
+		"toZeroMiles":	true
+	},
+	{
+		"mask": "FA*",
+		"toZeroMiles":	true
+	},
+	{
+		"mask": "FW*",
+		"toZeroMiles":	true
+	},	
+	{
+		"mask": "JA*",
+		"toZeroMiles":	true
+	},
+	{
+		"mask": "JW*",
+		"toZeroMiles":	true
+	},	
+	{
+		"mask": "OA*",
+		"toZeroMiles":	true
+	},	
+	{
+		"mask": "OW*",
+		"toZeroMiles":	true
+	},	
+	{
+		"mask": "XA*",
+		"toZeroMiles":	true
+	},	
+	{
+		"mask": "XW*",
+		"toZeroMiles":	true
+	},	
+	{
+		"mask": "YA*",
+		"toZeroMiles":	true
+	},	
+	{
+		"mask": "YW*",
+		"toZeroMiles":	true
+	}
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "code": "basic",
+    "miles": 0,
+    "segments": 0,
+    "business_segments": 0,
+    "factor": 0
+  },
+  {
+    "code": "gold",
+    "miles": 50000,
+    "segments": 50,
+    "business_segments": 0,
+    "factor": 50
+  },
+  {
+    "code": "platinum",
+    "miles": 125000,
+    "segments": 50,
+    "business_segments": 50,
+    "factor": 75
+  },
+  {
+    "code": "silver",
+    "miles": 25000,
+    "segments": 25,
+    "business_segments": 0,
+    "factor": 25
+  }
+]

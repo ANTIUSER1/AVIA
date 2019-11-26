@@ -1,0 +1,194 @@
+[
+  {
+    "code": "MOW",
+    "name": "Moscow",
+    "longitude": 37.5833,
+    "latitude": 55.75,
+    "country_code": "RU",
+    "weight": 1
+  },
+  {
+    "code": "LED",
+    "name": "Saint Petersburg",
+    "longitude": 30.3,
+    "latitude": 59.8,
+    "country_code": "RU",
+    "weight": 2
+  },
+  {
+    "code": "ROV",
+    "name": "Rostov-on-Don",
+    "longitude": 39.8033,
+    "latitude": 47.255,
+    "country_code": "RU",
+    "weight": 30
+  },
+  {
+    "code": "KHV",
+    "name": "Khabarovsk",
+    "longitude": 135.1161,
+    "latitude": 48.5025,
+    "country_code": "RU",
+    "weight": 11
+  },
+  {
+    "code": "KJA",
+    "name": "Krasnoyarsk",
+    "longitude": 92.8931,
+    "latitude": 56.0153,
+    "country_code": "RU",
+    "weight": 20
+  },
+  {
+    "code": "AER",
+    "name": "Sochi",
+    "longitude": 39.9469,
+    "latitude": 43.4444,
+    "country_code": "RU",
+    "weight": 5
+  },
+  {
+    "code": "SVX",
+    "name": "Ekaterinburg",
+    "longitude": 60.8031,
+    "latitude": 56.7431,
+    "country_code": "RU",
+    "weight": 7
+  },
+  {
+    "code": "VVO",
+    "name": "Vladivostok",
+    "longitude": 132.1489,
+    "latitude": 43.3981,
+    "country_code": "RU",
+    "weight": 9
+  },
+  {
+    "code": "UFA",
+    "name": "Ufa",
+    "longitude": 55.8742,
+    "latitude": 54.5572,
+    "country_code": "RU",
+    "weight": 32
+  },
+  {
+    "code": "NYC",
+    "name": "New York",
+    "longitude": -74.0058,
+    "latitude": 40.7128,
+    "country_code": "US",
+    "weight": 8
+  },
+  {
+    "code": "LAX",
+    "name": "Los Angeles",
+    "longitude": -118.4072,
+    "latitude": 33.9422,
+    "country_code": "US",
+    "weight": 35
+  },
+  {
+    "code": "SEL",
+    "name": "Seoul",
+    "longitude": 126.7906,
+    "latitude": 37.5583,
+    "country_code": "KR",
+    "weight": 43
+  },
+  {
+    "code": "BJS",
+    "name": "Beijing",
+    "longitude": 116.6031,
+    "latitude": 40.0797,
+    "country_code": "CN",
+    "weight": 99
+  },
+  {
+    "code": "SHA",
+    "name": "Shanghai",
+    "longitude": 121.3333,
+    "latitude": 31.2,
+    "country_code": "CN",
+    "weight": 104
+  },
+  {
+    "code": "DEL",
+    "name": "Delhi",
+    "longitude": 77.1008,
+    "latitude": 28.5736,
+    "country_code": "IN",
+    "weight": 102
+  },
+  {
+    "code": "TLV",
+    "name": "Tel Aviv",
+    "longitude": 34.8867,
+    "latitude": 32.0114,
+    "country_code": "IL",
+    "weight": 25
+  },
+  {
+    "code": "TYO",
+    "name": "Tokyo",
+    "longitude": 139.7667,
+    "latitude": 35.7,
+    "country_code": "JP",
+    "weight": null
+  },
+  {
+    "code": "PRG",
+    "name": "Prague",
+    "longitude": 14.26,
+    "latitude": 50.1008,
+    "country_code": "CZ",
+    "weight": 10
+  },
+  {
+    "code": "FRA",
+    "name": "Frankfurt",
+    "longitude": 8.5706,
+    "latitude": 50.0389,
+    "country_code": "DE",
+    "weight": 47
+  },
+  {
+    "code": "MAD",
+    "name": "Madrid",
+    "longitude": -3.5633,
+    "latitude": 40.4722,
+    "country_code": "ES",
+    "weight": 41
+  },
+  {
+    "code": "ROM",
+    "name": "Rome",
+    "longitude": 12.4833,
+    "latitude": 41.9,
+    "country_code": "IT",
+    "weight": 4
+  },
+  {
+    "code": "PAR",
+    "name": "Paris",
+    "longitude": 2.4494,
+    "latitude": 48.9036,
+    "country_code": "FR",
+    "weight": 3
+  },
+  {
+    "code": "CAI",
+    "name": "Cairo",
+    "longitude": 31.4069,
+    "latitude": 30.1375,
+    "country_code": "EG",
+    "weight": 156
+  },
+  {
+    "code": "KLV",
+    "name": "Karlovy Vary",
+    "longitude": 12.915,
+    "latitude": 50.2031,
+    "country_code": "CZ",
+    "weight": 594
+  }
+]

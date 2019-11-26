@@ -1,0 +1,602 @@
+[
+  {
+    "code": "SVO",
+    "name": "Sheremetyevo",
+    "longitude": 37.4146,
+    "latitude": 55.9726,
+    "city_code": "MOW",
+    "zone_afl": "R1",
+    "zone_st": "R1",
+    "is_uc_available": 1
+  },
+  {
+    "code": "DME",
+    "name": "Domodedovo",
+    "longitude": 37.9063,
+    "latitude": 55.4088,
+    "city_code": "MOW",
+    "zone_afl": "R1",
+    "zone_st": "R1",
+    "is_uc_available": 0
+  },
+  {
+    "code": "BKA",
+    "name": "Bykovo",
+    "longitude": 38.06,
+    "latitude": 55.6172,
+    "city_code": "MOW",
+    "zone_afl": "R1",
+    "zone_st": "R1",
+    "is_uc_available": 0
+  },
+  {
+    "code": "VKO",
+    "name": "Vnukovo",
+    "longitude": 37.2615,
+    "latitude": 55.5915,
+    "city_code": "MOW",
+    "zone_afl": "R1",
+    "zone_st": "R1",
+    "is_uc_available": 0
+  },
+  {
+    "code": "RAX",
+    "name": "Airport Ramenskoye",
+    "longitude": 37.62,
+    "latitude": 55.75,
+    "city_code": "MOW",
+    "zone_afl": "R1",
+    "zone_st": "R1",
+    "is_uc_available": 0
+  },
+  {
+    "code": "ZIA",
+    "name": "Жуковский",
+    "longitude": 38.14,
+    "latitude": 55.56,
+    "city_code": "MOW",
+    "zone_afl": "",
+    "zone_st": "",
+    "is_uc_available": 0
+  },
+  {
+    "code": "LBN",
+    "name": "Lobnya",
+    "longitude": 37.62,
+    "latitude": 55.75,
+    "city_code": "MOW",
+    "zone_afl": "R1",
+    "zone_st": "R1",
+    "is_uc_available": 0
+  },
+  {
+    "code": "CKL",
+    "name": "Chkalovsky",
+    "longitude": 38.0617,
+    "latitude": 55.8783,
+    "city_code": "MOW",
+    "zone_afl": "R1",
+    "zone_st": "R1",
+    "is_uc_available": 0
+  },
+  {
+    "code": "LED",
+    "name": "Pulkovo",
+    "longitude": 30.2625,
+    "latitude": 59.8003,
+    "city_code": "LED",
+    "zone_afl": "R1",
+    "zone_st": "R1",
+    "is_uc_available": 1
+  },
+  {
+    "code": "RVH",
+    "name": "Rzhevka",
+    "longitude": 30.6,
+    "latitude": 59.9833,
+    "city_code": "LED",
+    "zone_afl": "",
+    "zone_st": "",
+    "is_uc_available": 0
+  },
+  {
+    "code": "VVO",
+    "name": "Vladivostok",
+    "longitude": 132.148,
+    "latitude": 43.399,
+    "city_code": "VVO",
+    "zone_afl": "R4",
+    "zone_st": "R4",
+    "is_uc_available": 1
+  },
+  {
+    "code": "KJA",
+    "name": "Emelyanovo",
+    "longitude": 92.4933,
+    "latitude": 56.1729,
+    "city_code": "KJA",
+    "zone_afl": "R3",
+    "zone_st": "R3",
+    "is_uc_available": 1
+  },
+  {
+    "code": "KHV",
+    "name": "Khabarovsk(Novy)",
+    "longitude": 135.188,
+    "latitude": 48.528,
+    "city_code": "KHV",
+    "zone_afl": "R4",
+    "zone_st": "R4",
+    "is_uc_available": 1
+  },
+  {
+    "code": "ROV",
+    "name": "Rostov-on-Don, new airport «Platitudeov»",
+    "longitude": 39.8181,
+    "latitude": 47.2582,
+    "city_code": "ROV",
+    "zone_afl": "R1",
+    "zone_st": "R1",
+    "is_uc_available": 1
+  },
+  {
+    "code": "AER",
+    "name": "Adler - Sochi",
+    "longitude": 39.9566,
+    "latitude": 43.4499,
+    "city_code": "AER",
+    "zone_afl": "R1",
+    "zone_st": "R1",
+    "is_uc_available": 1
+  },
+  {
+    "code": "SVX",
+    "name": "Koltsovo International Airport",
+    "longitude": 60.8027,
+    "latitude": 56.7431,
+    "city_code": "SVX",
+    "zone_afl": "R1",
+    "zone_st": "R1",
+    "is_uc_available": 1
+  },
+  {
+    "code": "UFA",
+    "name": "Ufa",
+    "longitude": 55.8744,
+    "latitude": 54.5575,
+    "city_code": "UFA",
+    "zone_afl": "R1",
+    "zone_st": "R1",
+    "is_uc_available": 1
+  },
+  {
+    "code": "JFK",
+    "name": "John F Kennedy Intl",
+    "longitude": -73.7789,
+    "latitude": 40.6398,
+    "city_code": "NYC",
+    "zone_afl": "NA",
+    "zone_st": "NA",
+    "is_uc_available": 1
+  },
+  {
+    "code": "LGA",
+    "name": "LaGuardia Airport",
+    "longitude": -73.8726,
+    "latitude": 40.7772,
+    "city_code": "NYC",
+    "zone_afl": "NA",
+    "zone_st": "NA",
+    "is_uc_available": 0
+  },
+  {
+    "code": "HEF",
+    "name": "Manassas Regional Airport",
+    "longitude": -73.98,
+    "latitude": 40.72,
+    "city_code": "NYC",
+    "zone_afl": "NA",
+    "zone_st": "NA",
+    "is_uc_available": 0
+  },
+  {
+    "code": "NBP",
+    "name": "Battery Pk City/N. Cov",
+    "longitude": -73.98,
+    "latitude": 40.72,
+    "city_code": "NYC",
+    "zone_afl": "",
+    "zone_st": "NA",
+    "is_uc_available": 0
+  },
+  {
+    "code": "FLU",
+    "name": "Flushing",
+    "longitude": -73.98,
+    "latitude": 40.72,
+    "city_code": "NYC",
+    "zone_afl": "",
+    "zone_st": "NA",
+    "is_uc_available": 0
+  },
+  {
+    "code": "LAX",
+    "name": "Los Angeles International",
+    "longitude": -118.408,
+    "latitude": 33.9425,
+    "city_code": "LAX",
+    "zone_afl": "NA",
+    "zone_st": "NA",
+    "is_uc_available": 1
+  },
+  {
+    "code": "JWC",
+    "name": "Warner Cntr Bus. Plaza",
+    "longitude": -118.25,
+    "latitude": 34.5,
+    "city_code": "LAX",
+    "zone_afl": "",
+    "zone_st": "NA",
+    "is_uc_available": 0
+  },
+  {
+    "code": "VNY",
+    "name": "Van Nuys",
+    "longitude": -118.49,
+    "latitude": 34.2098,
+    "city_code": "LAX",
+    "zone_afl": "",
+    "zone_st": "NA",
+    "is_uc_available": 0
+  },
+  {
+    "code": "JID",
+    "name": "City Of Industry H/P",
+    "longitude": -118.25,
+    "latitude": 34.5,
+    "city_code": "LAX",
+    "zone_afl": "",
+    "zone_st": "NA",
+    "is_uc_available": 0
+  },
+  {
+    "code": "JSN",
+    "name": "Sherman Oaks H/P",
+    "longitude": -118.25,
+    "latitude": 34.5,
+    "city_code": "LAX",
+    "zone_afl": "",
+    "zone_st": "NA",
+    "is_uc_available": 0
+  },
+  {
+    "code": "JUC",
+    "name": "Universal City H/P",
+    "longitude": -118.25,
+    "latitude": 34.5,
+    "city_code": "LAX",
+    "zone_afl": "",
+    "zone_st": "NA",
+    "is_uc_available": 0
+  },
+  {
+    "code": "ICN",
+    "name": "Incheon International",
+    "longitude": 126.451,
+    "latitude": 37.4691,
+    "city_code": "SEL",
+    "zone_afl": "A2",
+    "zone_st": "A2",
+    "is_uc_available": 0
+  },
+  {
+    "code": "GMP",
+    "name": "Gimpo International",
+    "longitude": 126.791,
+    "latitude": 37.5583,
+    "city_code": "SEL",
+    "zone_afl": "A2",
+    "zone_st": "A2",
+    "is_uc_available": 0
+  },
+  {
+    "code": "SSN",
+    "name": "Seoul Ab",
+    "longitude": 127.114,
+    "latitude": 37.4458,
+    "city_code": "SEL",
+    "zone_afl": "A2",
+    "zone_st": "A2",
+    "is_uc_available": 0
+  },
+  {
+    "code": "SEL",
+    "name": "Kimpo Int.",
+    "longitude": 126.98,
+    "latitude": 37.57,
+    "city_code": "SEL",
+    "zone_afl": "A2",
+    "zone_st": "A2",
+    "is_uc_available": 0
+  },
+  {
+    "code": "PEK",
+    "name": "Beijing Capital Int.",
+    "longitude": 116.585,
+    "latitude": 40.0801,
+    "city_code": "BJS",
+    "zone_afl": "A1",
+    "zone_st": "A1",
+    "is_uc_available": 1
+  },
+  {
+    "code": "NAY",
+    "name": "Nanyuan Airport",
+    "longitude": 116.388,
+    "latitude": 39.7828,
+    "city_code": "BJS",
+    "zone_afl": "A1",
+    "zone_st": "A1",
+    "is_uc_available": 0
+  },
+  {
+    "code": "PVG",
+    "name": "Pu Dong",
+    "longitude": 121.805,
+    "latitude": 31.1434,
+    "city_code": "SHA",
+    "zone_afl": "A1",
+    "zone_st": "A1",
+    "is_uc_available": 1
+  },
+  {
+    "code": "SHA",
+    "name": "Hongqiao",
+    "longitude": 121.336,
+    "latitude": 31.1979,
+    "city_code": "SHA",
+    "zone_afl": "A1",
+    "zone_st": "A1",
+    "is_uc_available": 0
+  },
+  {
+    "code": "DEL",
+    "name": "Indira Gandhi International Airport",
+    "longitude": 77.1031,
+    "latitude": 28.5665,
+    "city_code": "DEL",
+    "zone_afl": "A1",
+    "zone_st": "A1",
+    "is_uc_available": 1
+  },
+  {
+    "code": "TLV",
+    "name": "Ben Gurion Intl",
+    "longitude": 34.8867,
+    "latitude": 32.0114,
+    "city_code": "TLV",
+    "zone_afl": "ME",
+    "zone_st": "ME",
+    "is_uc_available": 1
+  },
+  {
+    "code": "SDV",
+    "name": "Sde Dov",
+    "longitude": 34.7822,
+    "latitude": 32.1147,
+    "city_code": "TLV",
+    "zone_afl": "",
+    "zone_st": "ME",
+    "is_uc_available": 0
+  },
+  {
+    "code": "OKO",
+    "name": "Yokota Afb",
+    "longitude": 139.348,
+    "latitude": 35.7485,
+    "city_code": "TYO",
+    "zone_afl": "",
+    "zone_st": "A2",
+    "is_uc_available": 0
+  },
+  {
+    "code": "HND",
+    "name": "Haneda",
+    "longitude": 139.78,
+    "latitude": 35.5523,
+    "city_code": "TYO",
+    "zone_afl": "A2",
+    "zone_st": "A2",
+    "is_uc_available": 0
+  },
+  {
+    "code": "NRT",
+    "name": "Narita International Airport",
+    "longitude": 140.386,
+    "latitude": 35.7647,
+    "city_code": "TYO",
+    "zone_afl": "A2",
+    "zone_st": "A2",
+    "is_uc_available": 1
+  },
+  {
+    "code": "PRG",
+    "name": "Václav Havel Airport",
+    "longitude": 14.26,
+    "latitude": 50.1008,
+    "city_code": "PRG",
+    "zone_afl": "E2",
+    "zone_st": "E2",
+    "is_uc_available": 1
+  },
+  {
+    "code": "VOD",
+    "name": "Vodochody",
+    "longitude": 14.3956,
+    "latitude": 50.2167,
+    "city_code": "PRG",
+    "zone_afl": "",
+    "zone_st": "E2",
+    "is_uc_available": 0
+  },
+  {
+    "code": "FRF",
+    "name": "Rhein-Main AFB",
+    "longitude": 8.68,
+    "latitude": 51.17,
+    "city_code": "FRA",
+    "zone_afl": "",
+    "zone_st": "E2",
+    "is_uc_available": 0
+  },
+  {
+    "code": "FRA",
+    "name": "Frankfurt International Airport (rhein-main)",
+    "longitude": 8.5706,
+    "latitude": 50.0333,
+    "city_code": "FRA",
+    "zone_afl": "E2",
+    "zone_st": "E2",
+    "is_uc_available": 1
+  },
+  {
+    "code": "QGV",
+    "name": "Neu Isenburg",
+    "longitude": 8.68,
+    "latitude": 51.17,
+    "city_code": "FRA",
+    "zone_afl": "",
+    "zone_st": "E2",
+    "is_uc_available": 0
+  },
+  {
+    "code": "MAD",
+    "name": "Barajas",
+    "longitude": -3.5626,
+    "latitude": 40.4719,
+    "city_code": "MAD",
+    "zone_afl": "E3",
+    "zone_st": "E3",
+    "is_uc_available": 1
+  },
+  {
+    "code": "TOJ",
+    "name": "Torrejon De Ardoz",
+    "longitude": -3.4459,
+    "latitude": 40.4967,
+    "city_code": "MAD",
+    "zone_afl": "E3",
+    "zone_st": "E3",
+    "is_uc_available": 0
+  },
+  {
+    "code": "FCO",
+    "name": "Leonardo da Vinci International (Fiumicino)",
+    "longitude": 12.2389,
+    "latitude": 41.8003,
+    "city_code": "ROM",
+    "zone_afl": "E3",
+    "zone_st": "E3",
+    "is_uc_available": 1
+  },
+  {
+    "code": "CIA",
+    "name": "Ciampino",
+    "longitude": 12.5949,
+    "latitude": 41.7994,
+    "city_code": "ROM",
+    "zone_afl": "E3",
+    "zone_st": "E3",
+    "is_uc_available": 0
+  },
+  {
+    "code": "ROM",
+    "name": "Chempino",
+    "longitude": 12.48,
+    "latitude": 41.9,
+    "city_code": "ROM",
+    "zone_afl": "E3",
+    "zone_st": "E3",
+    "is_uc_available": 0
+  },
+  {
+    "code": "CDG",
+    "name": "Charles De Gaulle",
+    "longitude": 2.55,
+    "latitude": 49.0128,
+    "city_code": "PAR",
+    "zone_afl": "E3",
+    "zone_st": "E4",
+    "is_uc_available": 1
+  },
+  {
+    "code": "ORY",
+    "name": "Orly",
+    "longitude": 2.3794,
+    "latitude": 48.7233,
+    "city_code": "PAR",
+    "zone_afl": "E3",
+    "zone_st": "E4",
+    "is_uc_available": 0
+  },
+  {
+    "code": "LBG",
+    "name": "Le Bourget",
+    "longitude": 2.4414,
+    "latitude": 48.9694,
+    "city_code": "PAR",
+    "zone_afl": "E3",
+    "zone_st": "E4",
+    "is_uc_available": 0
+  },
+  {
+    "code": "BVA",
+    "name": "Beauvais-Tille",
+    "longitude": 2.1128,
+    "latitude": 49.4544,
+    "city_code": "PAR",
+    "zone_afl": "E3",
+    "zone_st": "E4",
+    "is_uc_available": 0
+  },
+  {
+    "code": "XVS",
+    "name": "Denain Airport",
+    "longitude": 2.35,
+    "latitude": 48.85,
+    "city_code": "PAR",
+    "zone_afl": "E3",
+    "zone_st": "E4",
+    "is_uc_available": 0
+  },
+  {
+    "code": "CIR",
+    "name": "Cairo",
+    "longitude": 31.23,
+    "latitude": 30.05,
+    "city_code": "CAI",
+    "zone_afl": "",
+    "zone_st": "E3",
+    "is_uc_available": 0
+  },
+  {
+    "code": "CAI",
+    "name": "Cairo International",
+    "longitude": 31.4056,
+    "latitude": 30.1219,
+    "city_code": "CAI",
+    "zone_afl": "E3",
+    "zone_st": "E3",
+    "is_uc_available": 0
+  },
+  {
+    "code": "KLV",
+    "name": "Karlovy Vary",
+    "longitude": 12.915,
+    "latitude": 50.203,
+    "city_code": "KLV",
+    "zone_afl": "E2",
+    "zone_st": "E2",
+    "is_uc_available": 0
+  }
+]

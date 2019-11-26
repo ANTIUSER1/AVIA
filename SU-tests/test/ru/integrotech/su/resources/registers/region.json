@@ -1,0 +1,44 @@
+[
+  {
+    "code": "ME",
+    "name": "Middle East",
+    "longitude": 35.3123,
+    "latitude": 24.5334
+  },
+  {
+    "code": "AS",
+    "name": "Asia",
+    "longitude": 67.7352,
+    "latitude": 8.6726
+  },
+  {
+    "code": "EU",
+    "name": "Europe",
+    "longitude": 9.5466,
+    "latitude": 38.9962
+  },
+  {
+    "code": "AM",
+    "name": "America",
+    "longitude": -57.1718,
+    "latitude": 7.2767
+  },
+  {
+    "code": "AU",
+    "name": "Australia and Oceania",
+    "longitude": 47.9079,
+    "latitude": -11.8446
+  },
+  {
+    "code": "CIS",
+    "name": "Russia and the CIS",
+    "longitude": 51.034,
+    "latitude": 45.4029
+  },
+  {
+    "code": "AF",
+    "name": "Africa",
+    "longitude": 12.8082,
+    "latitude": 3.0942
+  }
+]

@@ -1,0 +1,805 @@
+[
+  {
+    "code": "LED SVO KHV",
+    "distance": 4216,
+    "flights": [
+      {
+        "origin": "LED",
+        "destination": "SVO",
+        "distance": 396,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "SVO",
+        "destination": "KHV",
+        "distance": 3820,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "comfort",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "LED SVX",
+    "distance": 1119,
+    "flights": [
+      {
+        "origin": "LED",
+        "destination": "SVX",
+        "distance": 1119,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "LED TLV ROV",
+    "distance": 3011,
+    "flights": [
+      {
+        "origin": "LED",
+        "destination": "TLV",
+        "distance": 1929,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "TLV",
+        "destination": "ROV",
+        "distance": 1082,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "LED UFA SVO",
+    "distance": 1735,
+    "flights": [
+      {
+        "origin": "LED",
+        "destination": "UFA",
+        "distance": 1013,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "UFA",
+        "destination": "SVO",
+        "distance": 722,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "LED SVO VVO",
+    "distance": 4385,
+    "flights": [
+      {
+        "origin": "LED",
+        "destination": "SVO",
+        "distance": 396,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "SVO",
+        "destination": "VVO",
+        "distance": 3989,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "comfort",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "LED SVO UFA",
+    "distance": 1118,
+    "flights": [
+      {
+        "origin": "LED",
+        "destination": "SVO",
+        "distance": 396,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "SVO",
+        "destination": "UFA",
+        "distance": 722,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "LED KJA SVO",
+    "distance": 4276,
+    "flights": [
+      {
+        "origin": "LED",
+        "destination": "KJA",
+        "distance": 2208,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "KJA",
+        "destination": "SVO",
+        "distance": 2068,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "LED AER",
+    "distance": 1203,
+    "flights": [
+      {
+        "origin": "LED",
+        "destination": "AER",
+        "distance": 1203,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "LED FCO SVO",
+    "distance": 2942,
+    "flights": [
+      {
+        "origin": "LED",
+        "destination": "FCO",
+        "distance": 1459,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "FCO",
+        "destination": "SVO",
+        "distance": 1483,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "LED KJA VVO",
+    "distance": 4154,
+    "flights": [
+      {
+        "origin": "LED",
+        "destination": "KJA",
+        "distance": 2208,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "KJA",
+        "destination": "VVO",
+        "distance": 1946,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "LED SVX SVO",
+    "distance": 2008,
+    "flights": [
+      {
+        "origin": "LED",
+        "destination": "SVX",
+        "distance": 1119,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "SVX",
+        "destination": "SVO",
+        "distance": 889,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "LED SVO SVX",
+    "distance": 1285,
+    "flights": [
+      {
+        "origin": "LED",
+        "destination": "SVO",
+        "distance": 396,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "SVO",
+        "destination": "SVX",
+        "distance": 889,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "LED TLV SVO",
+    "distance": 3565,
+    "flights": [
+      {
+        "origin": "LED",
+        "destination": "TLV",
+        "distance": 1929,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "TLV",
+        "destination": "SVO",
+        "distance": 1636,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "comfort",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "LED SVO ROV",
+    "distance": 984,
+    "flights": [
+      {
+        "origin": "LED",
+        "destination": "SVO",
+        "distance": 396,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "SVO",
+        "destination": "ROV",
+        "distance": 588,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "LED ROV",
+    "distance": 950,
+    "flights": [
+      {
+        "origin": "LED",
+        "destination": "ROV",
+        "distance": 950,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "LED ROV SVX",
+    "distance": 2051,
+    "flights": [
+      {
+        "origin": "LED",
+        "destination": "ROV",
+        "distance": 950,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "ROV",
+        "destination": "SVX",
+        "distance": 1101,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "LED PRG SVO",
+    "distance": 1953,
+    "flights": [
+      {
+        "origin": "LED",
+        "destination": "PRG",
+        "distance": 915,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "PRG",
+        "destination": "SVO",
+        "distance": 1038,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "LED KJA KHV",
+    "distance": 4053,
+    "flights": [
+      {
+        "origin": "LED",
+        "destination": "KJA",
+        "distance": 2208,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "KJA",
+        "destination": "KHV",
+        "distance": 1845,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "LED KJA",
+    "distance": 2208,
+    "flights": [
+      {
+        "origin": "LED",
+        "destination": "KJA",
+        "distance": 2208,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "LED SVX ROV",
+    "distance": 2220,
+    "flights": [
+      {
+        "origin": "LED",
+        "destination": "SVX",
+        "distance": 1119,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "SVX",
+        "destination": "ROV",
+        "distance": 1101,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "LED SVO KJA",
+    "distance": 2464,
+    "flights": [
+      {
+        "origin": "LED",
+        "destination": "SVO",
+        "distance": 396,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "SVO",
+        "destination": "KJA",
+        "distance": 2068,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "LED ROV SVO",
+    "distance": 1538,
+    "flights": [
+      {
+        "origin": "LED",
+        "destination": "ROV",
+        "distance": 950,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "ROV",
+        "destination": "SVO",
+        "distance": 588,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "LED AER SVO",
+    "distance": 2054,
+    "flights": [
+      {
+        "origin": "LED",
+        "destination": "AER",
+        "distance": 1203,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "AER",
+        "destination": "SVO",
+        "distance": 851,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "LED SVO",
+    "distance": 396,
+    "flights": [
+      {
+        "origin": "LED",
+        "destination": "SVO",
+        "distance": 396,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "LED SVO AER",
+    "distance": 1247,
+    "flights": [
+      {
+        "origin": "LED",
+        "destination": "SVO",
+        "distance": 396,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "SVO",
+        "destination": "AER",
+        "distance": 851,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "LED UFA",
+    "distance": 1013,
+    "flights": [
+      {
+        "origin": "LED",
+        "destination": "UFA",
+        "distance": 1013,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

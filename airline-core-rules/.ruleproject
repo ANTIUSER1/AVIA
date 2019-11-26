@@ -13,9 +13,6 @@
       <ruleProject href="airline-core-bom#2a0cbb24-f27f-4f49-b9e0-0357e6de6d44"/>
     </entries>
   </paths>
-  <modelFolders xsi:type="ilog.rules.studio.model.base:SourceFolder">
-    <name>rules</name>
-  </modelFolders>
   <modelFolders xsi:type="ilog.rules.studio.model.bom:BOMFolder">
     <name>bom</name>
   </modelFolders>

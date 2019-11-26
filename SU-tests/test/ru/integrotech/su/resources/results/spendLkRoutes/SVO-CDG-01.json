@@ -1,0 +1,60 @@
+[
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "CDG"
+      },
+      "city": {
+        "cityCode": "PAR",
+        "weight": 3
+      },
+      "country": {
+        "countryCode": "FR"
+      },
+      "region": {
+        "regionCode": "EU"
+      }
+    },
+    "requiredAwards": [
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "business"
+        },
+        "classOfService2": {
+          "classOfServiceName": null
+        },
+        "value": 25000,
+        "isLightAward": false,
+        "fitsMilesInterval": false
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": null
+        },
+        "value": 15000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      }
+    ]
+  }
+]

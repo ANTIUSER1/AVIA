@@ -1,0 +1,21 @@
+# Vocabulary Properties
+uuid = 4ee903a3-50e7-42fd-8889-5c465adb03db
+
+# ru.integrotech.airline.register.RegisterCache
+ru.integrotech.airline.register.RegisterCache#concept.label = register cache
+ru.integrotech.airline.register.RegisterCache.airlines#phrase.navigation = {airline} of {this}
+ru.integrotech.airline.register.RegisterCache.airports#phrase.navigation = {airport} of {this}
+ru.integrotech.airline.register.RegisterCache.bonusRouteMap#phrase.navigation = {bonus route map} of {this}
+ru.integrotech.airline.register.RegisterCache.chargeRules#phrase.navigation = {charge rule} of {this}
+ru.integrotech.airline.register.RegisterCache.cities#phrase.navigation = {city} of {this}
+ru.integrotech.airline.register.RegisterCache.countries#phrase.navigation = {country} of {this}
+ru.integrotech.airline.register.RegisterCache.loyalties#phrase.navigation = {loyalty} of {this}
+ru.integrotech.airline.register.RegisterCache.loyaltyMap#phrase.navigation = {loyalty map} of {this}
+ru.integrotech.airline.register.RegisterCache.regions#phrase.navigation = {region} of {this}
+ru.integrotech.airline.register.RegisterCache.wrongRouteMap#phrase.navigation = {wrong route map} of {this}
+
+# ru.integrotech.airline.register.RegisterLoader
+ru.integrotech.airline.register.RegisterLoader#concept.label = register loader
+ru.integrotech.airline.register.RegisterLoader.cacheDate#phrase.navigation = {cache date} of {this}
+ru.integrotech.airline.register.RegisterLoader.getInstance()#phrase.navigation = the instance
+ru.integrotech.airline.register.RegisterLoader.registerCache#phrase.navigation = {register cache} of {this}

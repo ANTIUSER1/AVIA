@@ -1,0 +1,108 @@
+[
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "JFK"
+      },
+      "city": {
+        "cityCode": "NYC",
+        "weight": 8
+      },
+      "country": {
+        "countryCode": "US"
+      },
+      "region": {
+        "regionCode": "AM"
+      }
+    },
+    "requiredAwards": [
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 35000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "comfort"
+        },
+        "classOfService2": {
+          "classOfServiceName": null
+        },
+        "value": 45000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "comfort"
+        },
+        "value": 17500,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "comfort"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 17500,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "business"
+        },
+        "classOfService2": {
+          "classOfServiceName": null
+        },
+        "value": 55000,
+        "isLightAward": false,
+        "fitsMilesInterval": false
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": null
+        },
+        "value": 35000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      }
+    ]
+  }
+]

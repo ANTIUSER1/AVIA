@@ -1,0 +1,335 @@
+[
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "KHV"
+      },
+      "city": {
+        "cityCode": "KHV",
+        "weight": 11
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "via": {
+      "airport": {
+        "airportCode": "ICN"
+      },
+      "city": {
+        "cityCode": "SEL",
+        "weight": 43
+      },
+      "country": {
+        "countryCode": "KR"
+      },
+      "region": {
+        "regionCode": "AS"
+      }
+    },
+    "isAfl": true,
+    "mileCosts": [
+      {
+        "airportFrom": {
+          "airportCode": "SVO"
+        },
+        "airportTo": {
+          "airportCode": "ICN"
+        },
+        "requiredAwards": [
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {},
+            "value": 40000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "UO",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {
+              "classOfServiceName": "business"
+            },
+            "value": 40000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "business"
+            },
+            "classOfService2": {},
+            "value": 60000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          }
+        ]
+      },  
+	  {
+        "airportFrom": {
+          "airportCode": "ICN"
+        },
+        "airportTo": {
+          "airportCode": "KHV"
+        },
+        "requiredAwards": [
+          {
+            "awardType": "UO",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {
+              "classOfServiceName": "business"
+            },
+            "value": 20000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {},
+            "value": 70000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "business"
+            },
+            "classOfService2": {},
+            "value": 35000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {},
+            "value": 20000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "business"
+            },
+            "classOfService2": {},
+            "value": 95000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "UO",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {
+              "classOfServiceName": "business"
+            },
+            "value": 70000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "KHV"
+      },
+      "city": {
+        "cityCode": "KHV",
+        "weight": 11
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "via": {
+      "airport": {
+        "airportCode": "PEK"
+      },
+      "city": {
+        "cityCode": "BJS",
+        "weight": 99
+      },
+      "country": {
+        "countryCode": "CN"
+      },
+      "region": {
+        "regionCode": "AS"
+      }
+    },
+    "isAfl": true,
+    "mileCosts": [
+      
+      {
+        "airportFrom": {
+          "airportCode": "SVO"
+        },
+        "airportTo": {
+          "airportCode": "PEK"
+        },
+        "requiredAwards": [
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "business"
+            },
+            "classOfService2": {},
+            "value": 55000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {},
+            "value": 30000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "UO",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {
+              "classOfServiceName": "business"
+            },
+            "value": 30000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          }
+        ]
+      },
+	  {
+        "airportFrom": {
+          "airportCode": "PEK"
+        },
+        "airportTo": {
+          "airportCode": "KHV"
+        },
+        "requiredAwards": [
+          {
+            "awardType": "UO",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {
+              "classOfServiceName": "business"
+            },
+            "value": 20000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "business"
+            },
+            "classOfService2": {},
+            "value": 95000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {},
+            "value": 55000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {},
+            "value": 20000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "business"
+            },
+            "classOfService2": {},
+            "value": 35000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "UO",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {
+              "classOfServiceName": "business"
+            },
+            "value": 55000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          }
+        ]
+      }
+    ]
+  }
+]

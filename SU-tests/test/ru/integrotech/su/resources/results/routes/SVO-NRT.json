@@ -1,0 +1,23 @@
+[
+  {
+    "code": "SVO NRT",
+    "distance": 4664,
+    "flights": [
+      {
+        "origin": "SVO",
+        "destination": "NRT",
+        "distance": 4664,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "comfort",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

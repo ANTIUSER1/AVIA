@@ -1,0 +1,506 @@
+[
+ {
+    "ap_from_code": "SVO",
+    "ap_to_code": "VVO",
+    "airline_code": "SU",
+    "distance": "3989",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "KJA",
+    "ap_to_code": "SVO",
+    "airline_code": "AZ",
+    "distance": "2068",
+    "allow_spend": false
+  },
+  {
+    "ap_from_code": "KJA",
+    "ap_to_code": "VVO",
+    "airline_code": "SU",
+    "distance": "1946",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "SVO",
+    "ap_to_code": "KJA",
+    "airline_code": "SU",
+    "distance": "2068",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "AER",
+    "ap_to_code": "SVO",
+    "airline_code": "AZ",
+    "distance": "851",
+    "allow_spend": false
+  },
+  {
+    "ap_from_code": "AER",
+    "ap_to_code": "SVO",
+    "airline_code": "DL",
+    "distance": "851",
+    "allow_spend": false
+  },
+  {
+    "ap_from_code": "SVO",
+    "ap_to_code": "AER",
+    "airline_code": "SU",
+    "distance": "851",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "AER",
+    "ap_to_code": "SVO",
+    "airline_code": "AZ",
+    "distance": "851",
+    "allow_spend": false
+  },
+  {
+    "ap_from_code": "AER",
+    "ap_to_code": "SVO",
+    "airline_code": "DL",
+    "distance": "851",
+    "allow_spend": false
+  },
+  {
+    "ap_from_code": "SVO",
+    "ap_to_code": "SVX",
+    "airline_code": "SU",
+    "distance": "889",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "SVO",
+    "ap_to_code": "SVX",
+    "airline_code": "DL",
+    "distance": "889",
+    "allow_spend": false
+  },
+  {
+    "ap_from_code": "ROV",
+    "ap_to_code": "LED",
+    "airline_code": "SU",
+    "distance": "950",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "LED",
+    "ap_to_code": "AER",
+    "airline_code": "SU",
+    "distance": "1203",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "LED",
+    "ap_to_code": "KJA",
+    "airline_code": "SU",
+    "distance": "2208",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "LED",
+    "ap_to_code": "SVO",
+    "airline_code": "SU",
+    "distance": "396",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "LED",
+    "ap_to_code": "SVX",
+    "airline_code": "SU",
+    "distance": "1119",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "LED",
+    "ap_to_code": "SVO",
+    "airline_code": "DL",
+    "distance": "396",
+    "allow_spend": false
+  },
+  {
+    "ap_from_code": "SVO",
+    "ap_to_code": "LED",
+    "airline_code": "KE",
+    "distance": "396",
+    "allow_spend": false
+  },
+  {
+    "ap_from_code": "SVO",
+    "ap_to_code": "ROV",
+    "airline_code": "SU",
+    "distance": "588",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "ROV",
+    "ap_to_code": "SVX",
+    "airline_code": "SU",
+    "distance": "1101",
+    "allow_spend": true
+  },
+   {
+    "ap_from_code": "ROV",
+    "ap_to_code": "LED",
+    "airline_code": "SU",
+    "distance": "950",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "SVO",
+    "ap_to_code": "ROV",
+    "airline_code": "SU",
+    "distance": "588",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "ROV",
+    "ap_to_code": "SVX",
+    "airline_code": "SU",
+    "distance": "1101",
+    "allow_spend": true
+  },
+    {
+    "ap_from_code": "ROV",
+    "ap_to_code": "LED",
+    "airline_code": "SU",
+    "distance": "950",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "SVO",
+    "ap_to_code": "UFA",
+    "airline_code": "SU",
+    "distance": "722",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "LED",
+    "ap_to_code": "UFA",
+    "airline_code": "SU",
+    "distance": "1013",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "SVO",
+    "ap_to_code": "JFK",
+    "airline_code": "SU",
+    "distance": "4662",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "SVO",
+    "ap_to_code": "LAX",
+    "airline_code": "SU",
+    "distance": "6088",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "VVO",
+    "ap_to_code": "ICN",
+    "airline_code": "SU",
+    "distance": "476",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "SVO",
+    "ap_to_code": "ICN",
+    "airline_code": "SU",
+    "distance": "4096",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "KHV",
+    "ap_to_code": "ICN",
+    "airline_code": "SU",
+    "distance": "874",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "KHV",
+    "ap_to_code": "KJA",
+    "airline_code": "SU",
+    "distance": "1845",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "KHV",
+    "ap_to_code": "SVO",
+    "airline_code": "AZ",
+    "distance": "3820",
+    "allow_spend": false
+  },
+  {
+    "ap_from_code": "VVO",
+    "ap_to_code": "PEK",
+    "airline_code": "SU",
+    "distance": "816",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "SVO",
+    "ap_to_code": "PEK",
+    "airline_code": "SU",
+    "distance": "3600",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "KHV",
+    "ap_to_code": "PEK",
+    "airline_code": "SU",
+    "distance": "1084",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "KHV",
+    "ap_to_code": "SEL",
+    "airline_code": "SU",
+    "distance": "874",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "SEL",
+    "ap_to_code": "SVO",
+    "airline_code": "SU",
+    "distance": "4096",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "SVO",
+    "ap_to_code": "KHV",
+    "airline_code": "SU",
+    "distance": "3820",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "SVO",
+    "ap_to_code": "PVG",
+    "airline_code": "SU",
+    "distance": "4243",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "SVO",
+    "ap_to_code": "DEL",
+    "airline_code": "SU",
+    "distance": "2693",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "SVO",
+    "ap_to_code": "TLV",
+    "airline_code": "SU",
+    "distance": "1636",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "ROV",
+    "ap_to_code": "TLV",
+    "airline_code": "SU",
+    "distance": "1082",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "LED",
+    "ap_to_code": "TLV",
+    "airline_code": "SU",
+    "distance": "1929",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "SVO",
+    "ap_to_code": "NRT",
+    "airline_code": "SU",
+    "distance": "4664",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "SVO",
+    "ap_to_code": "PRG",
+    "airline_code": "SU",
+    "distance": "1038",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "LED",
+    "ap_to_code": "PRG",
+    "airline_code": "SU",
+    "distance": "915",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "SVO",
+    "ap_to_code": "FRA",
+    "airline_code": "SU",
+    "distance": "1264",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "SVO",
+    "ap_to_code": "MAD",
+    "airline_code": "SU",
+    "distance": "2131",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "SVO",
+    "ap_to_code": "FCO",
+    "airline_code": "SU",
+    "distance": "1483",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "LED",
+    "ap_to_code": "FCO",
+    "airline_code": "SU",
+    "distance": "1459",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "SVO",
+    "ap_to_code": "CDG",
+    "airline_code": "SU",
+    "distance": "1530",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "SVO",
+    "ap_to_code": "CAI",
+    "airline_code": "SU",
+    "distance": "1791",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "PRG",
+    "ap_to_code": "KLV",
+    "airline_code": "OK",
+    "distance": "64",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "PRG",
+    "ap_to_code": "FRA",
+    "airline_code": "OK",
+    "distance": "256",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "PRG",
+    "ap_to_code": "CAI",
+    "airline_code": "OK",
+    "distance": "1642",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "PRG",
+    "ap_to_code": "ICN",
+    "airline_code": "OK",
+    "distance": "5134",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "PRG",
+    "ap_to_code": "JFK",
+    "airline_code": "OK",
+    "distance": "4069",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "PRG",
+    "ap_to_code": "LED",
+    "airline_code": "OK",
+    "distance": "915",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "PRG",
+    "ap_to_code": "MAD",
+    "airline_code": "OK",
+    "distance": "1093",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "PRG",
+    "ap_to_code": "ROV",
+    "airline_code": "OK",
+    "distance": "1173",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "PRG",
+    "ap_to_code": "SVO",
+    "airline_code": "OK",
+    "distance": "1038",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "PRG",
+    "ap_to_code": "TLV",
+    "airline_code": "OK",
+    "distance": "1632",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "PRG",
+    "ap_to_code": "UFA",
+    "airline_code": "OK",
+    "distance": "1754",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "PRG",
+    "ap_to_code": "FRA",
+    "airline_code": "VN",
+    "distance": "256",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "CDG",
+    "ap_to_code": "FRA",
+    "airline_code": "VN",
+    "distance": "275",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "JFK",
+    "ap_to_code": "FRA",
+    "airline_code": "VN",
+    "distance": "3844",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "MAD",
+    "ap_to_code": "FRA",
+    "airline_code": "VN",
+    "distance": "884",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "ICN",
+    "ap_to_code": "FRA",
+    "airline_code": "VN",
+    "distance": "5360",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "JFK",
+    "ap_to_code": "NRT",
+    "airline_code": "VN",
+    "distance": "6723",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "LAX",
+    "ap_to_code": "NRT",
+    "airline_code": "VN",
+    "distance": "5458",
+    "allow_spend": true
+  },
+  {
+    "ap_from_code": "CDG",
+    "ap_to_code": "MAD",
+    "airline_code": "VN",
+    "distance": "664",
+    "allow_spend": true
+  }
+]

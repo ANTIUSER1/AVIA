@@ -1,0 +1,1745 @@
+// 20180917155007
+// http://172.20.207.50:3004/api/tariff
+
+[
+  {
+    "fare_group": "business-premium",
+    "svc_class_code": "business",
+    "airline_code": "SU",
+    "fare_code": "F",
+    "charge_coef": "250",
+    "booking_class": "C",
+    "weight_svc_class": "30",
+    "weight_fare_group": "100"
+  },
+  {
+    "fare_group": "business-premium",
+    "svc_class_code": "business",
+    "airline_code": "SU",
+    "fare_code": "F",
+    "charge_coef": "250",
+    "booking_class": "D",
+    "weight_svc_class": "30",
+    "weight_fare_group": "100"
+  },
+  {
+    "fare_group": "business-premium",
+    "svc_class_code": "business",
+    "airline_code": "SU",
+    "fare_code": "F",
+    "charge_coef": "250",
+    "booking_class": "J",
+    "weight_svc_class": "30",
+    "weight_fare_group": "100"
+  },
+  {
+    "fare_group": "comfort-premium",
+    "svc_class_code": "comfort",
+    "airline_code": "SU",
+    "fare_code": "F",
+    "charge_coef": "200",
+    "booking_class": "W",
+    "weight_svc_class": "20",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "economy-premium",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "F",
+    "charge_coef": "200",
+    "booking_class": "B",
+    "weight_svc_class": "10",
+    "weight_fare_group": "100"
+  },
+  {
+    "fare_group": "economy-premium",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "F",
+    "charge_coef": "200",
+    "booking_class": "Y",
+    "weight_svc_class": "10",
+    "weight_fare_group": "100"
+  },
+  {
+    "fare_group": "business-optimum",
+    "svc_class_code": "business",
+    "airline_code": "SU",
+    "fare_code": "C",
+    "charge_coef": "150",
+    "booking_class": "I",
+    "weight_svc_class": "30",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "business-optimum",
+    "svc_class_code": "business",
+    "airline_code": "SU",
+    "fare_code": "C",
+    "charge_coef": "150",
+    "booking_class": "Z",
+    "weight_svc_class": "30",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-optimum",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "C",
+    "charge_coef": "150",
+    "booking_class": "H",
+    "weight_svc_class": "10",
+    "weight_fare_group": "80"
+  },
+  {
+    "fare_group": "economy-optimum",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "C",
+    "charge_coef": "150",
+    "booking_class": "K",
+    "weight_svc_class": "10",
+    "weight_fare_group": "80"
+  },
+  {
+    "fare_group": "economy-optimum",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "C",
+    "charge_coef": "150",
+    "booking_class": "L",
+    "weight_svc_class": "10",
+    "weight_fare_group": "80"
+  },
+  {
+    "fare_group": "economy-optimum",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "C",
+    "charge_coef": "150",
+    "booking_class": "M",
+    "weight_svc_class": "10",
+    "weight_fare_group": "80"
+  },
+  {
+    "fare_group": "economy-optimum",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "C",
+    "charge_coef": "150",
+    "booking_class": "U",
+    "weight_svc_class": "10",
+    "weight_fare_group": "80"
+  },
+  {
+    "fare_group": "economy-budget",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "V",
+    "charge_coef": "75",
+    "booking_class": "E",
+    "weight_svc_class": "10",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "economy-budget",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "V",
+    "charge_coef": "75",
+    "booking_class": "N",
+    "weight_svc_class": "10",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "economy-budget",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "V",
+    "charge_coef": "75",
+    "booking_class": "Q",
+    "weight_svc_class": "10",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "economy-budget",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "V",
+    "charge_coef": "75",
+    "booking_class": "T",
+    "weight_svc_class": "10",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "economy-promo",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "S",
+    "charge_coef": "25",
+    "booking_class": "R",
+    "weight_svc_class": "10",
+    "weight_fare_group": "5"
+  },
+  {
+    "fare_group": "economy-1",
+    "svc_class_code": "economy",
+    "airline_code": "GA",
+    "fare_code": "",
+    "charge_coef": "100",
+    "booking_class": "Y",
+    "weight_svc_class": "10",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "economy-1",
+    "svc_class_code": "economy",
+    "airline_code": "GA",
+    "fare_code": "",
+    "charge_coef": "100",
+    "booking_class": "B",
+    "weight_svc_class": "10",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "economy-2",
+    "svc_class_code": "economy",
+    "airline_code": "GA",
+    "fare_code": "",
+    "charge_coef": "50",
+    "booking_class": "M",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-2",
+    "svc_class_code": "economy",
+    "airline_code": "GA",
+    "fare_code": "",
+    "charge_coef": "50",
+    "booking_class": "K",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-2",
+    "svc_class_code": "economy",
+    "airline_code": "GA",
+    "fare_code": "",
+    "charge_coef": "50",
+    "booking_class": "N",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-3",
+    "svc_class_code": "economy",
+    "airline_code": "GA",
+    "fare_code": "",
+    "charge_coef": "25",
+    "booking_class": "Q",
+    "weight_svc_class": "10",
+    "weight_fare_group": "30"
+  },
+  {
+    "fare_group": "economy-3",
+    "svc_class_code": "economy",
+    "airline_code": "GA",
+    "fare_code": "",
+    "charge_coef": "25",
+    "booking_class": "T",
+    "weight_svc_class": "10",
+    "weight_fare_group": "30"
+  },
+  {
+    "fare_group": "business-1",
+    "svc_class_code": "business",
+    "airline_code": "GA",
+    "fare_code": "",
+    "charge_coef": "125",
+    "booking_class": "J",
+    "weight_svc_class": "30",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "business-1",
+    "svc_class_code": "business",
+    "airline_code": "GA",
+    "fare_code": "",
+    "charge_coef": "125",
+    "booking_class": "C",
+    "weight_svc_class": "30",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "business-1",
+    "svc_class_code": "business",
+    "airline_code": "GA",
+    "fare_code": "",
+    "charge_coef": "125",
+    "booking_class": "D",
+    "weight_svc_class": "30",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "business-1",
+    "svc_class_code": "business",
+    "airline_code": "GA",
+    "fare_code": "",
+    "charge_coef": "125",
+    "booking_class": "I",
+    "weight_svc_class": "30",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "first-1",
+    "svc_class_code": "first",
+    "airline_code": "GA",
+    "fare_code": "",
+    "charge_coef": "150",
+    "booking_class": "F",
+    "weight_svc_class": "40",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "first-1",
+    "svc_class_code": "first",
+    "airline_code": "GA",
+    "fare_code": "",
+    "charge_coef": "150",
+    "booking_class": "A",
+    "weight_svc_class": "40",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "economy-1",
+    "svc_class_code": "economy",
+    "airline_code": "SV",
+    "fare_code": "",
+    "charge_coef": "100",
+    "booking_class": "Y",
+    "weight_svc_class": "10",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "economy-2",
+    "svc_class_code": "economy",
+    "airline_code": "SV",
+    "fare_code": "",
+    "charge_coef": "75",
+    "booking_class": "E",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-2",
+    "svc_class_code": "economy",
+    "airline_code": "SV",
+    "fare_code": "",
+    "charge_coef": "75",
+    "booking_class": "B",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-2",
+    "svc_class_code": "economy",
+    "airline_code": "SV",
+    "fare_code": "",
+    "charge_coef": "75",
+    "booking_class": "M",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-2",
+    "svc_class_code": "economy",
+    "airline_code": "SV",
+    "fare_code": "",
+    "charge_coef": "75",
+    "booking_class": "K",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-2",
+    "svc_class_code": "economy",
+    "airline_code": "SV",
+    "fare_code": "",
+    "charge_coef": "75",
+    "booking_class": "H",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-2",
+    "svc_class_code": "economy",
+    "airline_code": "SV",
+    "fare_code": "",
+    "charge_coef": "75",
+    "booking_class": "T",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-2",
+    "svc_class_code": "economy",
+    "airline_code": "SV",
+    "fare_code": "",
+    "charge_coef": "75",
+    "booking_class": "Q",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-3",
+    "svc_class_code": "economy",
+    "airline_code": "SV",
+    "fare_code": "",
+    "charge_coef": "50",
+    "booking_class": "U",
+    "weight_svc_class": "10",
+    "weight_fare_group": "30"
+  },
+  {
+    "fare_group": "economy-3",
+    "svc_class_code": "economy",
+    "airline_code": "SV",
+    "fare_code": "",
+    "charge_coef": "50",
+    "booking_class": "L",
+    "weight_svc_class": "10",
+    "weight_fare_group": "30"
+  },
+  {
+    "fare_group": "economy-3",
+    "svc_class_code": "economy",
+    "airline_code": "SV",
+    "fare_code": "",
+    "charge_coef": "50",
+    "booking_class": "N",
+    "weight_svc_class": "10",
+    "weight_fare_group": "30"
+  },
+  {
+    "fare_group": "economy-3",
+    "svc_class_code": "economy",
+    "airline_code": "SV",
+    "fare_code": "",
+    "charge_coef": "50",
+    "booking_class": "V",
+    "weight_svc_class": "10",
+    "weight_fare_group": "30"
+  },
+  {
+    "fare_group": "economy-3",
+    "svc_class_code": "economy",
+    "airline_code": "SV",
+    "fare_code": "",
+    "charge_coef": "50",
+    "booking_class": "G",
+    "weight_svc_class": "10",
+    "weight_fare_group": "30"
+  },
+  {
+    "fare_group": "business-1",
+    "svc_class_code": "business",
+    "airline_code": "SV",
+    "fare_code": "",
+    "charge_coef": "150",
+    "booking_class": "J",
+    "weight_svc_class": "30",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "business-1",
+    "svc_class_code": "business",
+    "airline_code": "SV",
+    "fare_code": "",
+    "charge_coef": "150",
+    "booking_class": "C",
+    "weight_svc_class": "30",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "business-1",
+    "svc_class_code": "business",
+    "airline_code": "SV",
+    "fare_code": "",
+    "charge_coef": "150",
+    "booking_class": "D",
+    "weight_svc_class": "30",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "business-1",
+    "svc_class_code": "business",
+    "airline_code": "SV",
+    "fare_code": "",
+    "charge_coef": "150",
+    "booking_class": "I",
+    "weight_svc_class": "30",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "first-1",
+    "svc_class_code": "first",
+    "airline_code": "SV",
+    "fare_code": "",
+    "charge_coef": "200",
+    "booking_class": "F",
+    "weight_svc_class": "40",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "first-1",
+    "svc_class_code": "first",
+    "airline_code": "SV",
+    "fare_code": "",
+    "charge_coef": "200",
+    "booking_class": "P",
+    "weight_svc_class": "40",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "first-1",
+    "svc_class_code": "first",
+    "airline_code": "SV",
+    "fare_code": "",
+    "charge_coef": "200",
+    "booking_class": "A",
+    "weight_svc_class": "40",
+    "weight_fare_group": "10"
+  },  
+  {
+    "fare_group": "economy-1",
+    "svc_class_code": "economy",
+    "airline_code": "AZ",
+    "fare_code": "",
+    "charge_coef": "100",
+    "booking_class": "Y",
+    "weight_svc_class": "10",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "economy-1",
+    "svc_class_code": "economy",
+    "airline_code": "AZ",
+    "fare_code": "",
+    "charge_coef": "100",
+    "booking_class": "B",
+    "weight_svc_class": "10",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "economy-2",
+    "svc_class_code": "economy",
+    "airline_code": "AZ",
+    "fare_code": "",
+    "charge_coef": "50",
+    "booking_class": "M",
+    "weight_svc_class": "10",
+    "weight_fare_group": "5"
+  },
+  {
+    "fare_group": "economy-2",
+    "svc_class_code": "economy",
+    "airline_code": "AZ",
+    "fare_code": "",
+    "charge_coef": "50",
+    "booking_class": "H",
+    "weight_svc_class": "10",
+    "weight_fare_group": "5"
+  },
+  {
+    "fare_group": "economy-2",
+    "svc_class_code": "economy",
+    "airline_code": "AZ",
+    "fare_code": "",
+    "charge_coef": "50",
+    "booking_class": "K",
+    "weight_svc_class": "10",
+    "weight_fare_group": "5"
+  },
+  {
+    "fare_group": "economy-2",
+    "svc_class_code": "economy",
+    "airline_code": "AZ",
+    "fare_code": "",
+    "charge_coef": "50",
+    "booking_class": "V",
+    "weight_svc_class": "10",
+    "weight_fare_group": "5"
+  },
+  {
+    "fare_group": "economy-3",
+    "svc_class_code": "economy",
+    "airline_code": "AZ",
+    "fare_code": "",
+    "charge_coef": "25",
+    "booking_class": "T",
+    "weight_svc_class": "10",
+    "weight_fare_group": "2"
+  },
+  {
+    "fare_group": "economy-3",
+    "svc_class_code": "economy",
+    "airline_code": "AZ",
+    "fare_code": "",
+    "charge_coef": "25",
+    "booking_class": "N",
+    "weight_svc_class": "10",
+    "weight_fare_group": "2"
+  },
+  {
+    "fare_group": "economy-3",
+    "svc_class_code": "economy",
+    "airline_code": "AZ",
+    "fare_code": "",
+    "charge_coef": "25",
+    "booking_class": "L",
+    "weight_svc_class": "10",
+    "weight_fare_group": "2"
+  },
+  {
+    "fare_group": "economy-3",
+    "svc_class_code": "economy",
+    "airline_code": "AZ",
+    "fare_code": "",
+    "charge_coef": "25",
+    "booking_class": "Q",
+    "weight_svc_class": "10",
+    "weight_fare_group": "2"
+  },
+  {
+    "fare_group": "economy-3",
+    "svc_class_code": "economy",
+    "airline_code": "AZ",
+    "fare_code": "",
+    "charge_coef": "25",
+    "booking_class": "X",
+    "weight_svc_class": "10",
+    "weight_fare_group": "2"
+  },
+  {
+    "fare_group": "economy-3",
+    "svc_class_code": "economy",
+    "airline_code": "AZ",
+    "fare_code": "",
+    "charge_coef": "25",
+    "booking_class": "W",
+    "weight_svc_class": "10",
+    "weight_fare_group": "2"
+  },
+  {
+    "fare_group": "economy-3",
+    "svc_class_code": "economy",
+    "airline_code": "AZ",
+    "fare_code": "",
+    "charge_coef": "25",
+    "booking_class": "S",
+    "weight_svc_class": "10",
+    "weight_fare_group": "2"
+  },
+  {
+    "fare_group": "business-1",
+    "svc_class_code": "business",
+    "airline_code": "AZ",
+    "fare_code": "",
+    "charge_coef": "150",
+    "booking_class": "C",
+    "weight_svc_class": "30",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "business-1",
+    "svc_class_code": "business",
+    "airline_code": "AZ",
+    "fare_code": "",
+    "charge_coef": "150",
+    "booking_class": "J",
+    "weight_svc_class": "30",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "business-1",
+    "svc_class_code": "business",
+    "airline_code": "AZ",
+    "fare_code": "",
+    "charge_coef": "150",
+    "booking_class": "D",
+    "weight_svc_class": "30",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "business-2",
+    "svc_class_code": "business",
+    "airline_code": "AZ",
+    "fare_code": "",
+    "charge_coef": "125",
+    "booking_class": "I",
+    "weight_svc_class": "30",
+    "weight_fare_group": "5"
+  },  
+  {
+    "fare_group": "economy-1",
+    "svc_class_code": "economy",
+    "airline_code": "OK",
+    "fare_code": "",
+    "charge_coef": "100",
+    "booking_class": "Y",
+    "weight_svc_class": "10",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "economy-1",
+    "svc_class_code": "economy",
+    "airline_code": "OK",
+    "fare_code": "",
+    "charge_coef": "100",
+    "booking_class": "M",
+    "weight_svc_class": "10",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "economy-1",
+    "svc_class_code": "economy",
+    "airline_code": "OK",
+    "fare_code": "",
+    "charge_coef": "100",
+    "booking_class": "B",
+    "weight_svc_class": "10",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "economy-1",
+    "svc_class_code": "economy",
+    "airline_code": "OK",
+    "fare_code": "",
+    "charge_coef": "100",
+    "booking_class": "H",
+    "weight_svc_class": "10",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "economy-1",
+    "svc_class_code": "economy",
+    "airline_code": "OK",
+    "fare_code": "",
+    "charge_coef": "100",
+    "booking_class": "K",
+    "weight_svc_class": "10",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "economy-1",
+    "svc_class_code": "economy",
+    "airline_code": "OK",
+    "fare_code": "",
+    "charge_coef": "100",
+    "booking_class": "T",
+    "weight_svc_class": "10",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "economy-2",
+    "svc_class_code": "economy",
+    "airline_code": "OK",
+    "fare_code": "",
+    "charge_coef": "50",
+    "booking_class": "G",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-2",
+    "svc_class_code": "economy",
+    "airline_code": "OK",
+    "fare_code": "",
+    "charge_coef": "50",
+    "booking_class": "L",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-2",
+    "svc_class_code": "economy",
+    "airline_code": "OK",
+    "fare_code": "",
+    "charge_coef": "50",
+    "booking_class": "X",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-2",
+    "svc_class_code": "economy",
+    "airline_code": "OK",
+    "fare_code": "",
+    "charge_coef": "50",
+    "booking_class": "Q",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-2",
+    "svc_class_code": "economy",
+    "airline_code": "OK",
+    "fare_code": "",
+    "charge_coef": "50",
+    "booking_class": "U",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-2",
+    "svc_class_code": "economy",
+    "airline_code": "OK",
+    "fare_code": "",
+    "charge_coef": "50",
+    "booking_class": "A",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "business-1",
+    "svc_class_code": "business",
+    "airline_code": "OK",
+    "fare_code": "",
+    "charge_coef": "200",
+    "booking_class": "J",
+    "weight_svc_class": "30",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "business-1",
+    "svc_class_code": "business",
+    "airline_code": "OK",
+    "fare_code": "",
+    "charge_coef": "200",
+    "booking_class": "C",
+    "weight_svc_class": "30",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "business-2",
+    "svc_class_code": "business",
+    "airline_code": "OK",
+    "fare_code": "",
+    "charge_coef": "150",
+    "booking_class": "D",
+    "weight_svc_class": "30",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-1",
+    "svc_class_code": "economy",
+    "airline_code": "DL",
+    "fare_code": "",
+    "charge_coef": "75",
+    "booking_class": "Y",
+    "weight_svc_class": "10",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "economy-1",
+    "svc_class_code": "economy",
+    "airline_code": "DL",
+    "fare_code": "",
+    "charge_coef": "75",
+    "booking_class": "S",
+    "weight_svc_class": "10",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "economy-1",
+    "svc_class_code": "economy",
+    "airline_code": "DL",
+    "fare_code": "",
+    "charge_coef": "75",
+    "booking_class": "B",
+    "weight_svc_class": "10",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "economy-1",
+    "svc_class_code": "economy",
+    "airline_code": "DL",
+    "fare_code": "",
+    "charge_coef": "75",
+    "booking_class": "M",
+    "weight_svc_class": "10",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "economy-1",
+    "svc_class_code": "economy",
+    "airline_code": "DL",
+    "fare_code": "",
+    "charge_coef": "75",
+    "booking_class": "H",
+    "weight_svc_class": "10",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "economy-2",
+    "svc_class_code": "economy",
+    "airline_code": "DL",
+    "fare_code": "",
+    "charge_coef": "50",
+    "booking_class": "Q",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-2",
+    "svc_class_code": "economy",
+    "airline_code": "DL",
+    "fare_code": "",
+    "charge_coef": "50",
+    "booking_class": "K",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-2",
+    "svc_class_code": "economy",
+    "airline_code": "DL",
+    "fare_code": "",
+    "charge_coef": "50",
+    "booking_class": "L",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-2",
+    "svc_class_code": "economy",
+    "airline_code": "DL",
+    "fare_code": "",
+    "charge_coef": "50",
+    "booking_class": "U",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-2",
+    "svc_class_code": "economy",
+    "airline_code": "DL",
+    "fare_code": "",
+    "charge_coef": "50",
+    "booking_class": "T",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "business-1",
+    "svc_class_code": "business",
+    "airline_code": "DL",
+    "fare_code": "",
+    "charge_coef": "175",
+    "booking_class": "J",
+    "weight_svc_class": "30",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "business-1",
+    "svc_class_code": "business",
+    "airline_code": "DL",
+    "fare_code": "",
+    "charge_coef": "175",
+    "booking_class": "C",
+    "weight_svc_class": "30",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "business-2",
+    "svc_class_code": "business",
+    "airline_code": "DL",
+    "fare_code": "",
+    "charge_coef": "150",
+    "booking_class": "D",
+    "weight_svc_class": "30",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "business-2",
+    "svc_class_code": "business",
+    "airline_code": "DL",
+    "fare_code": "",
+    "charge_coef": "150",
+    "booking_class": "I",
+    "weight_svc_class": "30",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "first-1",
+    "svc_class_code": "first",
+    "airline_code": "DL",
+    "fare_code": "",
+    "charge_coef": "150",
+    "booking_class": "P",
+    "weight_svc_class": "40",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "first-1",
+    "svc_class_code": "first",
+    "airline_code": "DL",
+    "fare_code": "",
+    "charge_coef": "150",
+    "booking_class": "F",
+    "weight_svc_class": "40",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "first-2",
+    "svc_class_code": "first",
+    "airline_code": "DL",
+    "fare_code": "",
+    "charge_coef": "125",
+    "booking_class": "A",
+    "weight_svc_class": "40",
+    "weight_fare_group": "20"
+  },  
+  {
+    "fare_group": "economy-1",
+    "svc_class_code": "economy",
+    "airline_code": "VN",
+    "fare_code": "",
+    "charge_coef": "100",
+    "booking_class": "Y",
+    "weight_svc_class": "10",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "economy-1",
+    "svc_class_code": "economy",
+    "airline_code": "VN",
+    "fare_code": "",
+    "charge_coef": "100",
+    "booking_class": "M",
+    "weight_svc_class": "10",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "economy-2",
+    "svc_class_code": "economy",
+    "airline_code": "VN",
+    "fare_code": "",
+    "charge_coef": "75",
+    "booking_class": "B",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-2",
+    "svc_class_code": "economy",
+    "airline_code": "VN",
+    "fare_code": "",
+    "charge_coef": "75",
+    "booking_class": "H",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-2",
+    "svc_class_code": "economy",
+    "airline_code": "VN",
+    "fare_code": "",
+    "charge_coef": "75",
+    "booking_class": "K",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-2",
+    "svc_class_code": "economy",
+    "airline_code": "VN",
+    "fare_code": "",
+    "charge_coef": "75",
+    "booking_class": "L",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-2",
+    "svc_class_code": "economy",
+    "airline_code": "VN",
+    "fare_code": "",
+    "charge_coef": "75",
+    "booking_class": "S",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-3",
+    "svc_class_code": "economy",
+    "airline_code": "VN",
+    "fare_code": "",
+    "charge_coef": "50",
+    "booking_class": "Q",
+    "weight_svc_class": "10",
+    "weight_fare_group": "30"
+  },
+  {
+    "fare_group": "premium-1",
+    "svc_class_code": "premium",
+    "airline_code": "VN",
+    "fare_code": "",
+    "charge_coef": "100",
+    "booking_class": "W",
+    "weight_svc_class": "15",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "premium-1",
+    "svc_class_code": "premium",
+    "airline_code": "VN",
+    "fare_code": "",
+    "charge_coef": "100",
+    "booking_class": "Z",
+    "weight_svc_class": "15",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "business-1",
+    "svc_class_code": "business",
+    "airline_code": "VN",
+    "fare_code": "",
+    "charge_coef": "200",
+    "booking_class": "J",
+    "weight_svc_class": "30",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "business-1",
+    "svc_class_code": "business",
+    "airline_code": "VN",
+    "fare_code": "",
+    "charge_coef": "200",
+    "booking_class": "C",
+    "weight_svc_class": "30",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "business-2",
+    "svc_class_code": "business",
+    "airline_code": "VN",
+    "fare_code": "",
+    "charge_coef": "150",
+    "booking_class": "D",
+    "weight_svc_class": "30",
+    "weight_fare_group": "20"
+  },  
+  {
+    "fare_group": "economy-promo",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "S",
+    "charge_coef": "25",
+    "booking_class": "P",
+    "weight_svc_class": "10",
+    "weight_fare_group": "5"
+  },
+  {
+    "fare_group": "premium-1",
+    "svc_class_code": "premium",
+    "airline_code": "GA",
+    "fare_code": "",
+    "charge_coef": "100",
+    "booking_class": "W",
+    "weight_svc_class": "15",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "first-2",
+    "svc_class_code": "first",
+    "airline_code": "GA",
+    "fare_code": "",
+    "charge_coef": "130",
+    "booking_class": "P",
+    "weight_svc_class": "40",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "first-3",
+    "svc_class_code": "first",
+    "airline_code": "DL",
+    "fare_code": "",
+    "charge_coef": "100",
+    "booking_class": "G",
+    "weight_svc_class": "40",
+    "weight_fare_group": "30"
+  },
+  {
+    "fare_group": "business-3",
+    "svc_class_code": "business",
+    "airline_code": "DL",
+    "fare_code": "",
+    "charge_coef": "125",
+    "booking_class": "Z",
+    "weight_svc_class": "30",
+    "weight_fare_group": "30"
+  },
+  {
+    "fare_group": "economy-3",
+    "svc_class_code": "economy",
+    "airline_code": "DL",
+    "fare_code": "",
+    "charge_coef": "25",
+    "booking_class": "X",
+    "weight_svc_class": "10",
+    "weight_fare_group": "30"
+  },
+  {
+    "fare_group": "economy-3",
+    "svc_class_code": "economy",
+    "airline_code": "DL",
+    "fare_code": "",
+    "charge_coef": "25",
+    "booking_class": "V",
+    "weight_svc_class": "10",
+    "weight_fare_group": "30"
+  },
+  {
+    "fare_group": "comfort-optimum",
+    "svc_class_code": "comfort",
+    "airline_code": "SU",
+    "fare_code": "C",
+    "charge_coef": "150",
+    "booking_class": "S",
+    "weight_svc_class": "20",
+    "weight_fare_group": "5"
+  },
+  {
+    "fare_group": "comfort-optimum",
+    "svc_class_code": "comfort",
+    "airline_code": "SU",
+    "fare_code": "C",
+    "charge_coef": "150",
+    "booking_class": "A",
+    "weight_svc_class": "20",
+    "weight_fare_group": "5"
+  },
+  {
+    "fare_group": "premium-1",
+    "svc_class_code": "economy",
+    "airline_code": "DL",
+    "fare_code": "",
+    "charge_coef": "100",
+    "booking_class": "W",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "business-premium",
+    "svc_class_code": "business",
+    "airline_code": "SU",
+    "fare_code": "F",
+    "charge_coef": "200",
+    "booking_class": "I",
+    "weight_svc_class": "30",
+    "weight_fare_group": "90"
+  },
+  {
+    "fare_group": "business-premium",
+    "svc_class_code": "business",
+    "airline_code": "SU",
+    "fare_code": "F",
+    "charge_coef": "200",
+    "booking_class": "Z",
+    "weight_svc_class": "30",
+    "weight_fare_group": "90"
+  },
+  {
+    "fare_group": "business-optimum",
+    "svc_class_code": "business",
+    "airline_code": "SU",
+    "fare_code": "C",
+    "charge_coef": "200",
+    "booking_class": "J",
+    "weight_svc_class": "30",
+    "weight_fare_group": "30"
+  },
+  {
+    "fare_group": "business-optimum",
+    "svc_class_code": "business",
+    "airline_code": "SU",
+    "fare_code": "C",
+    "charge_coef": "200",
+    "booking_class": "C",
+    "weight_svc_class": "30",
+    "weight_fare_group": "30"
+  },
+  {
+    "fare_group": "business-optimum",
+    "svc_class_code": "business",
+    "airline_code": "SU",
+    "fare_code": "C",
+    "charge_coef": "200",
+    "booking_class": "D",
+    "weight_svc_class": "30",
+    "weight_fare_group": "30"
+  },
+  {
+    "fare_group": "economy-premium",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "F",
+    "charge_coef": "150",
+    "booking_class": "Q",
+    "weight_svc_class": "10",
+    "weight_fare_group": "90"
+  },
+  {
+    "fare_group": "economy-premium",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "F",
+    "charge_coef": "200",
+    "booking_class": "M",
+    "weight_svc_class": "10",
+    "weight_fare_group": "100"
+  },
+  {
+    "fare_group": "economy-premium",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "F",
+    "charge_coef": "200",
+    "booking_class": "U",
+    "weight_svc_class": "10",
+    "weight_fare_group": "100"
+  },
+  {
+    "fare_group": "economy-premium",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "F",
+    "charge_coef": "200",
+    "booking_class": "K",
+    "weight_svc_class": "10",
+    "weight_fare_group": "100"
+  },
+  {
+    "fare_group": "economy-premium",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "F",
+    "charge_coef": "200",
+    "booking_class": "H",
+    "weight_svc_class": "10",
+    "weight_fare_group": "100"
+  },
+  {
+    "fare_group": "economy-premium",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "F",
+    "charge_coef": "200",
+    "booking_class": "L",
+    "weight_svc_class": "10",
+    "weight_fare_group": "100"
+  },
+  {
+    "fare_group": "economy-premium",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "F",
+    "charge_coef": "150",
+    "booking_class": "N",
+    "weight_svc_class": "10",
+    "weight_fare_group": "90"
+  },
+  {
+    "fare_group": "economy-premium",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "F",
+    "charge_coef": "150",
+    "booking_class": "E",
+    "weight_svc_class": "10",
+    "weight_fare_group": "90"
+  },
+  {
+    "fare_group": "economy-premium",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "F",
+    "charge_coef": "150",
+    "booking_class": "T",
+    "weight_svc_class": "10",
+    "weight_fare_group": "90"
+  },
+  {
+    "fare_group": "economy-optimum",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "C",
+    "charge_coef": "150",
+    "booking_class": "Y",
+    "weight_svc_class": "10",
+    "weight_fare_group": "80"
+  },
+  {
+    "fare_group": "economy-optimum",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "C",
+    "charge_coef": "150",
+    "booking_class": "B",
+    "weight_svc_class": "10",
+    "weight_fare_group": "80"
+  },
+  {
+    "fare_group": "economy-optimum",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "C",
+    "charge_coef": "100",
+    "booking_class": "N",
+    "weight_svc_class": "10",
+    "weight_fare_group": "70"
+  },
+  {
+    "fare_group": "economy-optimum",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "C",
+    "charge_coef": "100",
+    "booking_class": "E",
+    "weight_svc_class": "10",
+    "weight_fare_group": "70"
+  },
+  {
+    "fare_group": "economy-optimum",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "C",
+    "charge_coef": "100",
+    "booking_class": "T",
+    "weight_svc_class": "10",
+    "weight_fare_group": "70"
+  },
+  {
+    "fare_group": "economy-optimum",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "C",
+    "charge_coef": "100",
+    "booking_class": "Q",
+    "weight_svc_class": "10",
+    "weight_fare_group": "70"
+  },
+  {
+    "fare_group": "economy-budget",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "V",
+    "charge_coef": "125",
+    "booking_class": "Y",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-budget",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "V",
+    "charge_coef": "125",
+    "booking_class": "B",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-budget",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "V",
+    "charge_coef": "125",
+    "booking_class": "M",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-budget",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "V",
+    "charge_coef": "125",
+    "booking_class": "U",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-budget",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "V",
+    "charge_coef": "125",
+    "booking_class": "K",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-budget",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "V",
+    "charge_coef": "125",
+    "booking_class": "H",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "economy-budget",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "V",
+    "charge_coef": "125",
+    "booking_class": "L",
+    "weight_svc_class": "10",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "comfort-premium",
+    "svc_class_code": "comfort",
+    "airline_code": "SU",
+    "fare_code": "F",
+    "charge_coef": "200",
+    "booking_class": "S",
+    "weight_svc_class": "20",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "comfort-premium",
+    "svc_class_code": "comfort",
+    "airline_code": "SU",
+    "fare_code": "F",
+    "charge_coef": "200",
+    "booking_class": "A",
+    "weight_svc_class": "20",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "comfort-optimum",
+    "svc_class_code": "comfort",
+    "airline_code": "SU",
+    "fare_code": "C",
+    "charge_coef": "150",
+    "booking_class": "W",
+    "weight_svc_class": "20",
+    "weight_fare_group": "5"
+  },
+  {
+    "fare_group": "business-2",
+    "svc_class_code": "business",
+    "airline_code": "AZ",
+    "fare_code": "",
+    "charge_coef": "125",
+    "booking_class": "E",
+    "weight_svc_class": "30",
+    "weight_fare_group": "5"
+  },
+  {
+    "fare_group": "premium-1",
+    "svc_class_code": "premium",
+    "airline_code": "AZ",
+    "fare_code": "",
+    "charge_coef": "110",
+    "booking_class": "P",
+    "weight_svc_class": "15",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "premium-1",
+    "svc_class_code": "premium",
+    "airline_code": "AZ",
+    "fare_code": "",
+    "charge_coef": "110",
+    "booking_class": "A",
+    "weight_svc_class": "15",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "economy-promo",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "S",
+    "charge_coef": "25",
+    "booking_class": "X",
+    "weight_svc_class": "10",
+    "weight_fare_group": "5"
+  },
+  {
+    "fare_group": "economy-promo",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "S",
+    "charge_coef": "25",
+    "booking_class": "F",
+    "weight_svc_class": "10",
+    "weight_fare_group": "5"
+  },
+  {
+    "fare_group": "economy-promo",
+    "svc_class_code": "economy",
+    "airline_code": "SU",
+    "fare_code": "S",
+    "charge_coef": "25",
+    "booking_class": "O",
+    "weight_svc_class": "10",
+    "weight_fare_group": "5"
+  },
+  {
+    "fare_group": "economy-1",
+    "svc_class_code": "economy",
+    "airline_code": "KE",
+    "fare_code": "",
+    "charge_coef": "100",
+    "booking_class": "Y",
+    "weight_svc_class": "10",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "economy-1",
+    "svc_class_code": "economy",
+    "airline_code": "KE",
+    "fare_code": "",
+    "charge_coef": "100",
+    "booking_class": "W",
+    "weight_svc_class": "10",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "economy-1",
+    "svc_class_code": "economy",
+    "airline_code": "KE",
+    "fare_code": "",
+    "charge_coef": "100",
+    "booking_class": "B",
+    "weight_svc_class": "10",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "economy-1",
+    "svc_class_code": "economy",
+    "airline_code": "KE",
+    "fare_code": "",
+    "charge_coef": "100",
+    "booking_class": "M",
+    "weight_svc_class": "10",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "economy-1",
+    "svc_class_code": "economy",
+    "airline_code": "KE",
+    "fare_code": "",
+    "charge_coef": "100",
+    "booking_class": "H",
+    "weight_svc_class": "10",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "economy-1",
+    "svc_class_code": "economy",
+    "airline_code": "KE",
+    "fare_code": "",
+    "charge_coef": "100",
+    "booking_class": "E",
+    "weight_svc_class": "10",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "economy-1",
+    "svc_class_code": "economy",
+    "airline_code": "KE",
+    "fare_code": "",
+    "charge_coef": "100",
+    "booking_class": "K",
+    "weight_svc_class": "10",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "prestige-1",
+    "svc_class_code": "prestige",
+    "airline_code": "KE",
+    "fare_code": "",
+    "charge_coef": "200",
+    "booking_class": "J",
+    "weight_svc_class": "25",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "prestige-1",
+    "svc_class_code": "prestige",
+    "airline_code": "KE",
+    "fare_code": "",
+    "charge_coef": "200",
+    "booking_class": "C",
+    "weight_svc_class": "25",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "prestige-1",
+    "svc_class_code": "prestige",
+    "airline_code": "KE",
+    "fare_code": "",
+    "charge_coef": "200",
+    "booking_class": "D",
+    "weight_svc_class": "25",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "prestige-1",
+    "svc_class_code": "prestige",
+    "airline_code": "KE",
+    "fare_code": "",
+    "charge_coef": "200",
+    "booking_class": "I",
+    "weight_svc_class": "25",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "prestige-2",
+    "svc_class_code": "prestige",
+    "airline_code": "KE",
+    "fare_code": "",
+    "charge_coef": "100",
+    "booking_class": "Z",
+    "weight_svc_class": "25",
+    "weight_fare_group": "20"
+  },
+  {
+    "fare_group": "first-1",
+    "svc_class_code": "first",
+    "airline_code": "KE",
+    "fare_code": "",
+    "charge_coef": "200",
+    "booking_class": "R",
+    "weight_svc_class": "40",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "first-1",
+    "svc_class_code": "first",
+    "airline_code": "KE",
+    "fare_code": "",
+    "charge_coef": "200",
+    "booking_class": "P",
+    "weight_svc_class": "40",
+    "weight_fare_group": "10"
+  },
+  {
+    "fare_group": "first-1",
+    "svc_class_code": "first",
+    "airline_code": "KE",
+    "fare_code": "",
+    "charge_coef": "200",
+    "booking_class": "F",
+    "weight_svc_class": "40",
+    "weight_fare_group": "10"
+  }  
+]
