@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>flowVariables</name>
+  <uuid>3ea40cc2-b0bb-4392-bf82-e2eddba74370</uuid>
+  <variables name="loyaltyFactor" type="int" initialValue="" verbalization="loyaltyFactor"/>
+  <variables name="routes" type="java.util.List" initialValue="" verbalization="routes"/>
+  <variables name="loader" type="ru.integrotech.airline.register.RegisterLoader" initialValue="" verbalization="loader"/>
+</ilog.rules.studio.model.base:VariableSet>

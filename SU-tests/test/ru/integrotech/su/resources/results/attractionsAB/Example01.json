@@ -1,0 +1,21 @@
+{
+   "data": {
+        "segments": [
+             {
+                "orignIATA": "SVO",
+                "destinationIATA": "VVO",
+                "bookingClassCode": "O",
+                "fareBasisCode": "OAMNB",
+                "ticketDesignator": "ADad92"
+            },
+            {
+                "orignIATA": "SVO",
+                "destinationIATA": "PRG",
+                "bookingClassCode": "L",
+                "fareBasisCode": "LFM",
+                "ticketDesignator": "AD92"
+            }
+        ],
+        "tierCode": "basic"
+    }
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>checkOnlineRegAvailParams</name>
+  <uuid>a0a883df-fefc-4c28-9a3e-a01c89e80204</uuid>
+  <variables name="checkOnlineRegistrationAvailable" type="ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable" initialValue="" verbalization=""/>
+</ilog.rules.studio.model.base:VariableSet>

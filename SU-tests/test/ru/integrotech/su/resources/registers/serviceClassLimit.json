@@ -1,0 +1,65 @@
+// 20181113200148
+// http://172.20.207.50:3005/api/serviceClassLimit
+
+[
+  {
+    "svc_class_code": "comfort",
+    "ap_from_code": "SVO",
+    "ap_to_code": "JFK",
+    "airline_code": "SU"
+  },
+  {
+    "svc_class_code": "comfort",
+    "ap_from_code": "SVO",
+    "ap_to_code": "VVO",
+    "airline_code": "SU"
+  },
+  {
+    "svc_class_code": "comfort",
+    "ap_from_code": "SVO",
+    "ap_to_code": "KHV",
+    "airline_code": "SU"
+  },
+  {
+    "svc_class_code": "comfort",
+    "ap_from_code": "SVO",
+    "ap_to_code": "ICN",
+    "airline_code": "SU"
+  },
+  {
+    "svc_class_code": "comfort",
+    "ap_from_code": "SVO",
+    "ap_to_code": "TLV",
+    "airline_code": "SU"
+  },
+  {
+    "svc_class_code": "comfort",
+    "ap_from_code": "SVO",
+    "ap_to_code": "PEK",
+    "airline_code": "SU"
+  },
+  {
+    "svc_class_code": "comfort",
+    "ap_from_code": "SVO",
+    "ap_to_code": "PVG",
+    "airline_code": "SU"
+  },
+  {
+    "svc_class_code": "comfort",
+    "ap_from_code": "SVO",
+    "ap_to_code": "LAX",
+    "airline_code": "SU"
+  },
+  {
+    "svc_class_code": "comfort",
+    "ap_from_code": "SEL",
+    "ap_to_code": "SVO",
+    "airline_code": "SU"
+  },
+  {
+    "svc_class_code": "comfort",
+    "ap_from_code": "SVO",
+    "ap_to_code": "NRT",
+    "airline_code": "SU"
+  }
+]

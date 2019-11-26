@@ -1,0 +1,136 @@
+[
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "KJA"
+      },
+      "city": {
+        "cityCode": "KJA",
+        "weight": 20
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "VVO"
+      },
+      "city": {
+        "cityCode": "VVO",
+        "weight": 9
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "via": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "isAfl": true,
+    "mileCosts": [
+      {
+        "airportFrom": {
+          "airportCode": "KJA"
+        },
+        "airportTo": {
+          "airportCode": "SVO"
+        },
+        "requiredAwards": [
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "business"
+            },
+            "classOfService2": {},
+            "value": 25000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {},
+            "value": 15000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "UO",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {
+              "classOfServiceName": "business"
+            },
+            "value": 15000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          }
+        ]
+      },
+      {
+        "airportFrom": {
+          "airportCode": "SVO"
+        },
+        "airportTo": {
+          "airportCode": "VVO"
+        },
+        "requiredAwards": [
+          {
+            "awardType": "UO",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {
+              "classOfServiceName": "business"
+            },
+            "value": 30000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {},
+            "value": 30000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "business"
+            },
+            "classOfService2": {},
+            "value": 45000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          }
+        ]
+      }
+    ]
+  }
+]

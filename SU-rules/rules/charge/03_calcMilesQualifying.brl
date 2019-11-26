@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>03_calcMilesQualifying</name>
+  <uuid>6ad10f7b-d5b8-42f9-8cd8-9c4b0947c21f</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if (the min miles limit of the airline of the passenger charge  is "A"  
+	or (the min miles limit of the airline of the passenger charge   is "I" 
+	and the country of the city of the origin of the passenger charge  is the country of the city of the destination of the passenger charge  )) 
+and the miles qualifying of the passenger charge  is less than the min miles charge of the airline of the passenger charge   
+
+then set the miles qualifying of the passenger charge  to the min miles charge of the airline of the passenger charge  ; 
+
+ ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

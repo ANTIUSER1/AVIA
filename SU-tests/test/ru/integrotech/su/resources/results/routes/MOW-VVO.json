@@ -1,0 +1,127 @@
+[
+  {
+    "code": "SVO ICN VVO",
+    "distance": 4572,
+    "flights": [
+      {
+        "origin": "SVO",
+        "destination": "ICN",
+        "distance": 4096,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "comfort",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "ICN",
+        "destination": "VVO",
+        "distance": 476,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "SVO VVO",
+    "distance": 3989,
+    "flights": [
+      {
+        "origin": "SVO",
+        "destination": "VVO",
+        "distance": 3989,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "comfort",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "SVO PEK VVO",
+    "distance": 4416,
+    "flights": [
+      {
+        "origin": "SVO",
+        "destination": "PEK",
+        "distance": 3600,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "comfort",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "PEK",
+        "destination": "VVO",
+        "distance": 816,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "SVO KJA VVO",
+    "distance": 4014,
+    "flights": [
+      {
+        "origin": "SVO",
+        "destination": "KJA",
+        "distance": 2068,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "KJA",
+        "destination": "VVO",
+        "distance": 1946,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

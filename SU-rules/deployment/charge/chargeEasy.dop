@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="chargeEasy" usingRuleflow="true" ruleflowName="chargeEasyFlow" targetRuleProjectName="SU-rules">
+  <name>chargeEasy</name>
+  <uuid>b98f545f-10fa-48f0-8fe1-e04f22732c71</uuid>
+  <referencedVariables variableName="chargeInput" variableSetName="chargeParams">
+    <variableSet href="../../rules/chargeParams.var#f97ae5f7-6349-43e6-8cc4-897648578d98"/>
+  </referencedVariables>
+  <referencedVariables variableName="resultMilesCharge" variableSetName="chargeParams" direction="OUT">
+    <variableSet href="../../rules/chargeParams.var#f97ae5f7-6349-43e6-8cc4-897648578d98"/>
+  </referencedVariables>
+  <ruleflow href="../../rules/chargeEasyFlow.rfl#da140715-4c7c-4b02-a227-6aa41287773b"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="chargeEasy_extractor" validator="Default Validator"/>
+  <targetRuleProject href="../../../SU-rules#acc26832-2255-4fd6-8c0a-3dbd27f5596b"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

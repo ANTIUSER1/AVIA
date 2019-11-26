@@ -1,0 +1,56 @@
+[
+  {
+    "code": "LED SVO AER",
+    "distance": 1247,
+    "flights": [
+      {
+        "origin": "LED",
+        "destination": "SVO",
+        "distance": 396,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "SVO",
+        "destination": "AER",
+        "distance": 851,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "LED AER",
+    "distance": 1203,
+    "flights": [
+      {
+        "origin": "LED",
+        "destination": "AER",
+        "distance": 1203,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

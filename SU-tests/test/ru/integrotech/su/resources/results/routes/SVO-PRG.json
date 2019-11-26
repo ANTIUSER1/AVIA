@@ -1,0 +1,327 @@
+[
+  {
+    "code": "SVO TLV PRG",
+    "distance": 3268,
+    "flights": [
+      {
+        "origin": "SVO",
+        "destination": "TLV",
+        "distance": 1636,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "comfort",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "TLV",
+        "destination": "PRG",
+        "distance": 1632,
+        "carriers": [
+          {
+            "airline": "OK",
+            "serviceClasses": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "SVO ROV PRG",
+    "distance": 1761,
+    "flights": [
+      {
+        "origin": "SVO",
+        "destination": "ROV",
+        "distance": 588,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "ROV",
+        "destination": "PRG",
+        "distance": 1173,
+        "carriers": [
+          {
+            "airline": "OK",
+            "serviceClasses": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "SVO JFK PRG",
+    "distance": 8731,
+    "flights": [
+      {
+        "origin": "SVO",
+        "destination": "JFK",
+        "distance": 4662,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "comfort",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "JFK",
+        "destination": "PRG",
+        "distance": 4069,
+        "carriers": [
+          {
+            "airline": "OK",
+            "serviceClasses": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "SVO LED PRG",
+    "distance": 1311,
+    "flights": [
+      {
+        "origin": "SVO",
+        "destination": "LED",
+        "distance": 396,
+        "carriers": [
+          {
+            "airline": "SU",
+            "serviceClasses": [
+              "economy",
+              "business"
+            ]
+          },
+          {
+            "airline": "DL",
+            "serviceClasses": []
+          },
+          {
+            "airline": "KE",
+            "serviceClasses": []
+          }
+        ]
+      },
+      {
+        "origin": "LED",
+        "destination": "PRG",
+        "distance": 915,
+        "carriers": [
+          {
+            "airline": "SU",
+            "serviceClasses": [
+              "economy",
+              "business"
+            ]
+          },
+          {
+            "airline": "OK",
+            "serviceClasses": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "SVO ICN PRG",
+    "distance": 9230,
+    "flights": [
+      {
+        "origin": "SVO",
+        "destination": "ICN",
+        "distance": 4096,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "comfort",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "ICN",
+        "destination": "PRG",
+        "distance": 5134,
+        "carriers": [
+          {
+            "airline": "OK",
+            "serviceClasses": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "SVO CAI PRG",
+    "distance": 3433,
+    "flights": [
+      {
+        "origin": "SVO",
+        "destination": "CAI",
+        "distance": 1791,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "CAI",
+        "destination": "PRG",
+        "distance": 1642,
+        "carriers": [
+          {
+            "airline": "OK",
+            "serviceClasses": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "SVO FRA PRG",
+    "distance": 1520,
+    "flights": [
+      {
+        "origin": "SVO",
+        "destination": "FRA",
+        "distance": 1264,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "FRA",
+        "destination": "PRG",
+        "distance": 256,
+        "carriers": [
+          {
+            "airline": "VN",
+            "serviceClasses": []
+          },
+          {
+            "airline": "OK",
+            "serviceClasses": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "SVO PRG",
+    "distance": 1038,
+    "flights": [
+      {
+        "origin": "SVO",
+        "destination": "PRG",
+        "distance": 1038,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          },
+          {
+            "airline": "OK",
+            "serviceClasses": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "SVO MAD PRG",
+    "distance": 3224,
+    "flights": [
+      {
+        "origin": "SVO",
+        "destination": "MAD",
+        "distance": 2131,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "MAD",
+        "destination": "PRG",
+        "distance": 1093,
+        "carriers": [
+          {
+            "airline": "OK",
+            "serviceClasses": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "SVO UFA PRG",
+    "distance": 2476,
+    "flights": [
+      {
+        "origin": "SVO",
+        "destination": "UFA",
+        "distance": 722,
+        "carriers": [
+          {
+            "carrier": "SU",
+            "serviceClasses" : [
+              "economy",
+              "business"
+            ]
+          }
+        ]
+      },
+      {
+        "origin": "UFA",
+        "destination": "PRG",
+        "distance": 1754,
+        "carriers": [
+          {
+            "airline": "OK",
+            "serviceClasses": []
+          }
+        ]
+      }
+    ]
+  }
+]

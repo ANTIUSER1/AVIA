@@ -1,0 +1,442 @@
+package ru.integrotech.su.test;
+
+import com.google.gson.JsonElement;
+import com.google.gson.JsonIOException;
+import com.google.gson.JsonSyntaxException;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+import ru.integrotech.su.inputparams.spend.SpendInput;
+import ru.integrotech.su.outputparams.spend.SpendRoute;
+
+import java.io.IOException;
+import java.util.Collections;
+import java.util.List;
+
+/*test for io.SpendRoute*/
+public class SpendTest {
+
+    private static final String RESULTS_FOLDER = "/results/spendRoutes/";
+
+    private final CommonTest common;
+
+    public SpendTest() {
+        this.common = CommonTest.of(SpendRoute.class);
+    }
+
+    private List<SpendRoute> getExpected(String jsonName) {
+        List<SpendRoute> expectedSpendRoutes = null;
+        try {
+            JsonElement jsonElement = this.common.getLoader().loadJson(RESULTS_FOLDER + jsonName);
+            expectedSpendRoutes = this.common.getTestsCache().loadSpendRoutes(jsonElement);
+        } catch (JsonIOException
+                | JsonSyntaxException
+                | IOException e) {
+            e.printStackTrace();
+        }
+        return expectedSpendRoutes;
+    }
+
+    /*
+    ////////////////////////////////////////////
+    //use this method for visualization actual//
+    ////////////////////////////////////////////
+    @Test
+    public void PRINT() {
+        SpendInput spendInput = SpendInput.of(
+                "airport", // from type
+                "SVO",// from
+                null, // to type
+                null, // to
+                -1, // miles min
+                100000, // miles max
+                null, // class listOf service name
+                "all", // award type
+                false, // afl only
+                false // is round trip
+        );
+        List<SpendRoute> actualSpend = this.common.getSpendBuilder().createSpendRoutes(spendInput);
+        this.common.sort(actualSpend);
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        String jsonResult = gson.toJson(actualSpend);
+        System.out.println(jsonResult);
+    }
+
+
+    //////////////////////////////////////////////
+    //use this method for visualization expected//
+    //////////////////////////////////////////////
+    @Test
+    public void PRINT_SAVED() {
+        List<SpendRoute> actualSpend = getExpected("SVO-LED-01.json");
+        this.common.sort(actualSpend);
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        String jsonResult = gson.toJson(actualSpend);
+        System.out.println(jsonResult);
+    }
+    */
+
+    @Test
+    public void SVO_VVO_01() {
+        SpendInput spendInput = SpendInput.of(
+                "airport", // from type
+                "SVO",// from
+                "airport", // to type
+                "VVO", // to
+                -1, // miles min
+                100000, // miles max
+                "economy", // class listOf service name
+                "all", // award type
+                true, // afl only
+                false // is round trip
+                );
+        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> expectedSpend = this.getExpected("SVO-VVO-01.json");
+        this.common.testIsEquals(expectedSpend, actualSpend);
+    }
+
+    @Test
+    public void SVO_VVO_02() {
+        SpendInput spendInput = SpendInput.of(
+                "airport", // from type
+                "SVO",// from
+                "airport", // to type
+                "VVO", // to
+                -1, // miles min
+                100000, // miles max
+                null, // class listOf service name
+                "all", // award type
+                true, // afl only
+                false // is round trip
+        );
+        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> expectedSpend = this.getExpected("SVO-VVO-02.json");
+        this.common.testIsPresent(expectedSpend, actualSpend);
+    }
+
+
+    @Test
+    public void SVO_AER_01() {
+        SpendInput spendInput = SpendInput.of(
+                "airport", // from type
+                "SVO",// from
+                "airport", // to type
+                "AER", // to
+                -1, // miles min
+                100000, // miles max
+                null, // class listOf service name
+                "all", // award type
+                false, // afl only
+                false // is round trip
+        );
+        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> expectedSpend = this.getExpected("SVO-AER-01.json");
+        this.common.testIsPresent(expectedSpend, actualSpend);
+    }
+
+    @Test
+    public void SVO_KHV_01() {
+        SpendInput spendInput = SpendInput.of(
+                "airport", // from type
+                "SVO",// from
+                "airport", // to type
+                "KHV", // to
+                -1, // miles min
+                100000, // miles max
+                null, // class listOf service name
+                "all", // award type
+                false, // afl only
+                false // is round trip
+        );
+        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> expectedSpend = this.getExpected("SVO-KHV-01.json");
+        this.common.testIsPresent(expectedSpend, actualSpend);
+    }
+
+    @Test
+    public void SVO_KJA_01() {
+        SpendInput spendInput = SpendInput.of(
+                "airport", // from type
+                "SVO",// from
+                "airport", // to type
+                "KJA", // to
+                -1, // miles min
+                100000, // miles max
+                null, // class listOf service name
+                "all", // award type
+                false, // afl only
+                false // is round trip
+        );
+        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> expectedSpend = this.getExpected("SVO-KJA-01.json");
+        this.common.testIsPresent(expectedSpend, actualSpend);
+    }
+
+    @Test
+    public void SVO_ROV_01() {
+        SpendInput spendInput = SpendInput.of(
+                "airport", // from type
+                "SVO",// from
+                "airport", // to type
+                "ROV", // to
+                -1, // miles min
+                100000, // miles max
+                null, // class listOf service name
+                "all", // award type
+                false, // afl only
+                false // is round trip
+        );
+        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> expectedSpend = this.getExpected("SVO-ROV-01.json");
+        this.common.testIsPresent(expectedSpend, actualSpend);
+    }
+
+    @Test
+    public void SVO_SVX_01() {
+        SpendInput spendInput = SpendInput.of(
+                "airport", // from type
+                "SVO",// from
+                "airport", // to type
+                "SVX", // to
+                -1, // miles min
+                100000, // miles max
+                null, // class listOf service name
+                "all", // award type
+                false, // afl only
+                false // is round trip
+        );
+        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> expectedSpend = this.getExpected("SVO-SVX-01.json");
+        this.common.testIsPresent(expectedSpend, actualSpend);
+    }
+
+    @Test
+    public void SVO_UFA_01() {
+        SpendInput spendInput = SpendInput.of(
+                "airport", // from type
+                "SVO",// from
+                "airport", // to type
+                "UFA", // to
+                -1, // miles min
+                100000, // miles max
+                null, // class listOf service name
+                "all", // award type
+                false, // afl only
+                false // is round trip
+        );
+        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> expectedSpend = this.getExpected("SVO-UFA-01.json");
+        this.common.testIsPresent(expectedSpend, actualSpend);
+    }
+
+
+    // http://support.integrotechnologies.ru/issues/20890
+    @Test
+    public void FITS_MILES_INTERVAL() {
+        SpendInput spendInput = SpendInput.of(
+                "airport", // from type
+                "SVO",// from
+                "country", // to type
+                "RU", // to
+                10000, // miles min
+                20000, // miles max
+                null, // class listOf service name
+                "all", // award type
+                false, // afl only
+                false // is round trip
+        );
+        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> expectedSpend = this.getExpected("FITS-MILES-INTERVAL.json");
+        this.common.testIsPresent(expectedSpend, actualSpend);
+    }
+
+
+    // http://support.integrotechnologies.ru/issues/20888
+    // task not closed yet
+    @Test
+    public void SVO_LED_01() {
+        SpendInput spendInput = SpendInput.of(
+                "airport", // from type
+                "SVO",// from
+                "airport", // to type
+                "LED", // to
+                -1, // miles min
+                100000, // miles max
+                null, // class listOf service name
+                "all", // award type
+                false, // afl only
+                false // is round trip
+        );
+        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> expectedSpend = this.getExpected("SVO-LED-01.json");
+        this.common.testIsEquals(expectedSpend, actualSpend);
+    }
+
+    // http://support.integrotechnologies.ru/issues/20890
+    @Test
+    public void SVO_LED_02() {
+        SpendInput spendInput = SpendInput.of(
+                "airport", // from type
+                "SVO",// from
+                "airport", // to type
+                "LED", // to
+                -1, // miles min
+                100000, // miles max
+                null, // class listOf service name
+                "all", // award type
+                false, // afl only
+                false // is round trip
+        );
+        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> expectedSpend = this.getExpected("SVO-LED-direct-01.json");
+        this.common.testIsPresent(expectedSpend, actualSpend);
+    }
+
+    // http://support.integrotechnologies.ru/issues/20890
+    @Test
+    public void SVO_LED_03() {
+        SpendInput spendInput = SpendInput.of(
+                "airport", // from type
+                "SVO",// from
+                "LED", // to
+                "airport", // to type
+                10000, // miles min
+                10001, // miles max
+                null, // class listOf service name
+                "all", // award type
+                false, // afl only
+                false // is round trip
+        );
+        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> expectedSpend = this.getExpected("SVO-LED-direct-02.json");
+        this.common.testIsPresent(expectedSpend, actualSpend);
+    }
+
+    // http://support.integrotechnologies.ru/issues/20890
+    @Test
+    public void SVO_LED_04() {
+        SpendInput spendInput = SpendInput.of(
+                "airport", // from type
+                "SVO",// from
+                "LED", // to
+                "airport", // to type
+                9500, // miles min
+                9999, // miles max
+                null, // class listOf service name
+                "all", // award type
+                false, // afl only
+                false // is round trip
+        );
+        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> expectedSpend = this.getExpected("SVO-LED-direct-01.json");
+        this.common.testIsNotPresent(expectedSpend, actualSpend);
+    }
+
+    // http://support.integrotechnologies.ru/issues/20890
+    @Test
+    public void SVO_LED_05() {
+        SpendInput spendInput = SpendInput.of(
+                "airport", // from type
+                "SVO",// from
+                "country", // to type
+                "RU", // to
+                9000, // miles min
+                9999, // miles max
+                null, // class listOf service name
+                "all", // award type
+                false, // afl only
+                false // is round trip
+        );
+        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> expectedSpend = this.getExpected("SVO-LED-01.json");
+        this.common.testIsNotPresent(expectedSpend, actualSpend);
+    }
+
+    // http://support.integrotechnologies.ru/issues/20894
+    // task not closed yet
+    @Test
+    public void SVO_ROV_SVX_01() {
+        SpendInput spendInput = SpendInput.of(
+                "airport", // from type
+                "SVO",// from
+                "airport", // to type
+                "SVX", // to
+                -1, // miles min
+                100000, // miles max
+                null, // class listOf service name
+                "all", // award type
+                true, // afl only
+                false // is round trip
+        );
+        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> expectedSpend = this.getExpected("SVO-ROV-SVX.json");
+        this.common.testIsPresent(expectedSpend, actualSpend);
+    }
+
+    // http://support.integrotechnologies.ru/issues/20894
+    // task not closed yet
+    @Test
+    public void KJA_VVO_01() {
+        SpendInput spendInput = SpendInput.of(
+                "airport", // from type
+                "KJA",// from
+                "airport", // to type
+                "VVO", // to
+                -1, // miles min
+                100000, // miles max
+                null, // class listOf service name
+                "all", // award type
+                true, // afl only
+                false // is round trip
+        );
+        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> expectedSpend = this.getExpected("KJA-SVO-VVO.json");
+        this.common.testIsPresent(expectedSpend, actualSpend);
+    }
+
+    // http://support.integrotechnologies.ru/issues/21198
+    // http://support.integrotechnologies.ru/issues/21200
+    @Test
+    public void SORT_CITIES() {
+        SpendInput spendInput = SpendInput.of(
+                "airport", // from type
+                "SVO",// from
+                null, // to type
+                null, // to
+                -1, // miles min
+                100000, // miles max
+                null, // class listOf service name
+                "all", // award type
+                false, // afl only
+                false // is round trip
+        );
+        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        Collections.sort(actualSpend);
+
+        for (int i = 0; i < actualSpend.size() - 1; i++) {
+            Assert.assertTrue(actualSpend.get(i + 1).compareTo(actualSpend.get(i)) >= 0);
+        }
+
+    }
+
+    @Test
+    public void SVO_WORLD() {
+        SpendInput spendInput = SpendInput.of(
+                "airport", // from type
+                "SVO",// from
+                null, // to type
+                null, // to
+                -1, // miles min
+                100000, // miles max
+                null, // class listOf service name
+                "all", // award type
+                false, // afl only
+                false // is round trip
+        );
+        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> expectedSpend = this.getExpected("SVO-WORLD.json");
+        this.common.testIsEquals(expectedSpend, actualSpend);
+
+    }
+}

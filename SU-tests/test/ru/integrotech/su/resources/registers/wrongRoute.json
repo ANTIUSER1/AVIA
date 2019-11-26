@@ -1,0 +1,416 @@
+[
+  {
+    "id": "1",
+    "city_from": "ROM",
+    "city_via": "MOW",
+    "city_to": "CAI"
+  },
+  {
+    "id": "2",
+    "city_from": "MAD",
+    "city_via": "MOW",
+    "city_to": "NYC"
+  },
+  {
+    "id": "2",
+    "city_from": "TYO",
+    "city_via": "VVO",
+    "city_to": "KHV"
+  },
+  {
+    "id": "2",
+    "city_from": "MAD",
+    "city_via": "MOW",
+    "city_to": "PAR"
+  },
+  {
+    "id": "2",
+    "city_from": "TYO",
+    "city_via": "MOW",
+    "city_to": "NYC"
+  },
+  {
+    "id": "2",
+    "city_from": "CAI",
+    "city_via": "MOW",
+    "city_to": "KLV"
+  },
+  {
+    "id": "2",
+    "city_from": "MAD",
+    "city_via": "MOW",
+    "city_to": "FRA"
+  },
+  {
+    "id": "2",
+    "city_from": "BJS",
+    "city_via": "VVO",
+    "city_to": "KHV"
+  },
+  {
+    "id": "2",
+    "city_from": "ROM",
+    "city_via": "MOW",
+    "city_to": "KLV"
+  },
+   {
+    "id": "2",
+    "city_from": "FRA",
+    "city_via": "MOW",
+    "city_to": "LAX"
+  },
+   {
+    "id": "2",
+    "city_from": "AER",
+    "city_via": "LED",
+    "city_to": "ROV"
+  },
+   {
+    "id": "2",
+    "city_from": "SVX",
+    "city_via": "ROV",
+    "city_to": "MOW"
+  },
+   {
+    "id": "2",
+    "city_from": "KHV",
+    "city_via": "VVO",
+    "city_to": "MOW"
+  },
+  {
+    "id": "2",
+    "city_from": "KHV",
+    "city_via": "KJA",
+    "city_to": "MOW"
+  },
+  {
+    "id": "2",
+    "city_from": "AER",
+    "city_via": "SVX",
+    "city_to": "ROV"
+  },
+  {
+    "id": "2",
+    "city_from": "TYO",
+    "city_via": "KHV",
+    "city_to": "KJA"
+  },
+  {
+    "id": "2",
+    "city_from": "SEL",
+    "city_via": "KHV",
+    "city_to": "VVO"
+  },
+   {
+    "id": "2",
+    "city_from": "TYO",
+    "city_via": "KHV",
+    "city_to": "VVO"
+  },
+   {
+    "id": "2",
+    "city_from": "VVO",
+    "city_via": "KJA",
+    "city_to": "MOW"
+  },
+   {
+    "id": "2",
+    "city_from": "VVO",
+    "city_via": "MOW",
+    "city_to": "KJA"
+  },
+   {
+    "id": "2",
+    "city_from": "PAR",
+    "city_via": "MOW",
+    "city_to": "PRG"
+  },
+   {
+    "id": "2",
+    "city_from": "SEL",
+    "city_via": "MOW",
+    "city_to": "NYC"
+  },
+  {
+    "id": "2",
+    "city_from": "SHA",
+    "city_via": "MOW",
+    "city_to": "NYC"
+  },
+  {
+    "id": "2",
+    "city_from": "TYO",
+    "city_via": "MOW",
+    "city_to": "LAX"
+  },
+  {
+    "id": "2",
+    "city_from": "MAD",
+    "city_via": "MOW",
+    "city_to": "KLV"
+  },
+  {
+    "id": "2",
+    "city_from": "PAR",
+    "city_via": "MOW",
+    "city_to": "PAR"
+  },  
+  {
+    "id": "2",
+    "city_from": "TYO",
+    "city_via": "MOW",
+    "city_to": "KJA"
+  },  
+  {
+    "id": "2",
+    "city_from": "ROM",
+    "city_via": "MOW",
+    "city_to": "NYC"
+  },  
+  {
+    "id": "2",
+    "city_from": "MAD",
+    "city_via": "MOW",
+    "city_to": "ROM"
+  },  
+  {
+    "id": "2",
+    "city_from": "TLV",
+    "city_via": "MOW",
+    "city_to": "LAX"
+  }, 
+  {
+    "id": "2",
+    "city_from": "DEL",
+    "city_via": "MOW",
+    "city_to": "KJA"
+  },   
+  {
+    "id": "2",
+    "city_from": "CAI",
+    "city_via": "MOW",
+    "city_to": "NYC"
+  },   
+  {
+    "id": "2",
+    "city_from": "DEL",
+    "city_via": "MOW",
+    "city_to": "VVO"
+  },   
+  {
+    "id": "2",
+    "city_from": "TLV",
+    "city_via": "MOW",
+    "city_to": "KLV"
+  },   
+  {
+    "id": "2",
+    "city_from": "ROM",
+    "city_via": "MOW",
+    "city_to": "PAR"
+  },   
+  {
+    "id": "2",
+    "city_from": "KHV",
+    "city_via": "MOW",
+    "city_to": "KJA"
+  },   
+  {
+    "id": "2",
+    "city_from": "TLV",
+    "city_via": "MOW",
+    "city_to": "NYC"
+  },   
+  {
+    "id": "2",
+    "city_from": "TYO",
+    "city_via": "MOW",
+    "city_to": "VVO"
+  }, 
+  {
+    "id": "2",
+    "city_from": "NYC",
+    "city_via": "MOW",
+    "city_to": "DEL"
+  }, 
+  {
+    "id": "2",
+    "city_from": "MAD",
+    "city_via": "MOW",
+    "city_to": "LAX"
+  }, 
+  {
+    "id": "2",
+    "city_from": "DEL",
+    "city_via": "MOW",
+    "city_to": "LAX"
+  }, 
+  {
+    "id": "2",
+    "city_from": "ROM",
+    "city_via": "MOW",
+    "city_to": "FRA"
+  }, 
+  {
+    "id": "2",
+    "city_from": "KHV",
+    "city_via": "MOW",
+    "city_to": "VVO"
+  }, 
+  {
+    "id": "2",
+    "city_from": "BJS",
+    "city_via": "MOW",
+    "city_to": "KJA"
+  }, 
+  {
+    "id": "2",
+    "city_from": "ROM",
+    "city_via": "MOW",
+    "city_to": "LAX"
+  }, 
+  {
+    "id": "2",
+    "city_from": "PRG",
+    "city_via": "MOW",
+    "city_to": "NYC"
+  }, 
+  {
+    "id": "2",
+    "city_from": "SEL",
+    "city_via": "MOW",
+    "city_to": "KJA"
+  }, 
+  {
+    "id": "2",
+    "city_from": "TYO",
+    "city_via": "MOW",
+    "city_to": "KHV"
+  }, 
+  {
+    "id": "2",
+    "city_from": "MAD",
+    "city_via": "MOW",
+    "city_to": "PRG"
+  }, 
+  {
+    "id": "2",
+    "city_from": "SHA",
+    "city_via": "MOW",
+    "city_to": "KJA"
+  }, 
+  {
+    "id": "2",
+    "city_from": "BJS",
+    "city_via": "MOW",
+    "city_to": "VVO"
+  }, 
+  {
+    "id": "2",
+    "city_from": "CAI",
+    "city_via": "MOW",
+    "city_to": "LAX"
+  }, 
+  {
+    "id": "2",
+    "city_from": "SHA",
+    "city_via": "MOW",
+    "city_to": "VVO"
+  }, 
+  {
+    "id": "2",
+    "city_from": "SEL",
+    "city_via": "MOW",
+    "city_to": "VVO"
+  }, 
+  {
+    "id": "2",
+    "city_from": "BJS",
+    "city_via": "MOW",
+    "city_to": "KHV"
+  }, 
+  {
+    "id": "2",
+    "city_from": "SHA",
+    "city_via": "MOW",
+    "city_to": "KHV"
+  }, 
+  {
+    "id": "2",
+    "city_from": "SHA",
+    "city_via": "MOW",
+    "city_to": "LAX"
+  }, 
+  {
+    "id": "2",
+    "city_from": "SEL",
+    "city_via": "MOW",
+    "city_to": "LAX"
+  }, 
+  {
+    "id": "2",
+    "city_from": "AER",
+    "city_via": "MOW",
+    "city_to": "ROV"
+  }, 
+  {
+    "id": "2",
+    "city_from": "PRG",
+    "city_via": "MOW",
+    "city_to": "LAX"
+  }, 
+  {
+    "id": "2",
+    "city_from": "FRA",
+    "city_via": "MOW",
+    "city_to": "NYC"
+  }, 
+  {
+    "id": "2",
+    "city_from": "FRA",
+    "city_via": "MOW",
+    "city_to": "NYC"
+  }, 
+  {
+    "id": "2",
+    "city_from": "TLV",
+    "city_via": "MOW",
+    "city_to": "CAI"
+  }, 
+  {
+    "id": "2",
+    "city_from": "PAR",
+    "city_via": "MOW",
+    "city_to": "LAX"
+  }, 
+  {
+    "id": "2",
+    "city_from": "NYC",
+    "city_via": "MOW",
+    "city_to": "PAR"
+  }, 
+  {
+    "id": "2",
+    "city_from": "DEL",
+    "city_via": "MOW",
+    "city_to": "KHV"
+  },   
+  {
+    "id": "2",
+    "city_from": "PAR",
+    "city_via": "MOW",
+    "city_to": "KLV"
+  }, 
+  {
+    "id": "2",
+    "city_from": "ROM",
+    "city_via": "MOW",
+    "city_to": "PRG"
+  }, 
+  {
+    "id": "2",
+    "city_from": "DEL",
+    "city_via": "MOW",
+    "city_to": "CAI"
+  }
+]

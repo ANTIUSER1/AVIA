@@ -1,0 +1,1874 @@
+// 20181113194848
+// http://172.20.207.50:3005/api/bonusroute
+
+[
+  {
+    "code": "R1R1",
+    "zone_from": "R1",
+    "zone_to": "R1",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "R1R1R1",
+    "zone_from": "R1",
+    "zone_to": "R1",
+    "zone_via": "R1",
+    "transferer_type": "A"
+  },
+  {
+    "code": "R1R2R1",
+    "zone_from": "R1",
+    "zone_to": "R1",
+    "zone_via": "R2",
+    "transferer_type": "A"
+  },
+  {
+    "code": "R2R1",
+    "zone_from": "R2",
+    "zone_to": "R1",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "R2R1R1",
+    "zone_from": "R2",
+    "zone_to": "R1",
+    "zone_via": "R1",
+    "transferer_type": "A"
+  },
+  {
+    "code": "R2R2R1",
+    "zone_from": "R2",
+    "zone_to": "R1",
+    "zone_via": "R2",
+    "transferer_type": "A"
+  },
+  {
+    "code": "R2R2",
+    "zone_from": "R2",
+    "zone_to": "R2",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "R3R1",
+    "zone_from": "R3",
+    "zone_to": "R1",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "R3R1R1",
+    "zone_from": "R3",
+    "zone_to": "R1",
+    "zone_via": "R1",
+    "transferer_type": "A"
+  },
+  {
+    "code": "R3R2R1",
+    "zone_from": "R3",
+    "zone_to": "R1",
+    "zone_via": "R2",
+    "transferer_type": "A"
+  },
+  {
+    "code": "R3R2",
+    "zone_from": "R3",
+    "zone_to": "R2",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "R3R3",
+    "zone_from": "R3",
+    "zone_to": "R3",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "R3R3R3",
+    "zone_from": "R3",
+    "zone_to": "R3",
+    "zone_via": "R3",
+    "transferer_type": "A"
+  },
+  {
+    "code": "R3R4R3",
+    "zone_from": "R3",
+    "zone_to": "R3",
+    "zone_via": "R4",
+    "transferer_type": "A"
+  },
+  {
+    "code": "R4R1",
+    "zone_from": "R4",
+    "zone_to": "R1",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "R4R1R1",
+    "zone_from": "R4",
+    "zone_to": "R1",
+    "zone_via": "R1",
+    "transferer_type": "A"
+  },
+  {
+    "code": "R4R2R1",
+    "zone_from": "R4",
+    "zone_to": "R1",
+    "zone_via": "R2",
+    "transferer_type": "A"
+  },
+  {
+    "code": "R4R2",
+    "zone_from": "R4",
+    "zone_to": "R2",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "R4R3",
+    "zone_from": "R4",
+    "zone_to": "R3",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "R4R3R3",
+    "zone_from": "R4",
+    "zone_to": "R3",
+    "zone_via": "R3",
+    "transferer_type": "A"
+  },
+  {
+    "code": "R4R4R3",
+    "zone_from": "R4",
+    "zone_to": "R3",
+    "zone_via": "R4",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E1R1",
+    "zone_from": "E1",
+    "zone_to": "R1",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E1R2",
+    "zone_from": "E1",
+    "zone_to": "R2",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E1R3",
+    "zone_from": "E1",
+    "zone_to": "R3",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E1R1R3",
+    "zone_from": "E1",
+    "zone_to": "R3",
+    "zone_via": "R1",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E1R4",
+    "zone_from": "E1",
+    "zone_to": "R4",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E1R1R4",
+    "zone_from": "E1",
+    "zone_to": "R4",
+    "zone_via": "R1",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E1E1",
+    "zone_from": "E1",
+    "zone_to": "E1",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E2R1",
+    "zone_from": "E2",
+    "zone_to": "R1",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E2R2",
+    "zone_from": "E2",
+    "zone_to": "R2",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E2R3",
+    "zone_from": "E2",
+    "zone_to": "R3",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E2R1R3",
+    "zone_from": "E2",
+    "zone_to": "R3",
+    "zone_via": "R1",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E2R4",
+    "zone_from": "E2",
+    "zone_to": "R4",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E2R1R4",
+    "zone_from": "E2",
+    "zone_to": "R4",
+    "zone_via": "R1",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E2E1",
+    "zone_from": "E2",
+    "zone_to": "E1",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E2E2",
+    "zone_from": "E2",
+    "zone_to": "E2",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E3R1",
+    "zone_from": "E3",
+    "zone_to": "R1",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E3R2",
+    "zone_from": "E3",
+    "zone_to": "R2",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E3R3",
+    "zone_from": "E3",
+    "zone_to": "R3",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E3R1R3",
+    "zone_from": "E3",
+    "zone_to": "R3",
+    "zone_via": "R1",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E3R4",
+    "zone_from": "E3",
+    "zone_to": "R4",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E3R1R4",
+    "zone_from": "E3",
+    "zone_to": "R4",
+    "zone_via": "R1",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E3E1",
+    "zone_from": "E3",
+    "zone_to": "E1",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E3E2",
+    "zone_from": "E3",
+    "zone_to": "E2",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E3E3",
+    "zone_from": "E3",
+    "zone_to": "E3",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E4R1",
+    "zone_from": "E4",
+    "zone_to": "R1",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E4R2",
+    "zone_from": "E4",
+    "zone_to": "R2",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E4R3",
+    "zone_from": "E4",
+    "zone_to": "R3",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E4R1R3",
+    "zone_from": "E4",
+    "zone_to": "R3",
+    "zone_via": "R1",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E4R4",
+    "zone_from": "E4",
+    "zone_to": "R4",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E4R1R4",
+    "zone_from": "E4",
+    "zone_to": "R4",
+    "zone_via": "R1",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E4E1",
+    "zone_from": "E4",
+    "zone_to": "E1",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E4E2",
+    "zone_from": "E4",
+    "zone_to": "E2",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E4E3",
+    "zone_from": "E4",
+    "zone_to": "E3",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "MAR1",
+    "zone_from": "MA",
+    "zone_to": "R1",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "MAR2",
+    "zone_from": "MA",
+    "zone_to": "R2",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "MAR3",
+    "zone_from": "MA",
+    "zone_to": "R3",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "MAR1R3",
+    "zone_from": "MA",
+    "zone_to": "R3",
+    "zone_via": "R1",
+    "transferer_type": "A"
+  },
+  {
+    "code": "MAR4",
+    "zone_from": "MA",
+    "zone_to": "R4",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "MAR1R4",
+    "zone_from": "MA",
+    "zone_to": "R4",
+    "zone_via": "R1",
+    "transferer_type": "A"
+  },
+  {
+    "code": "MAE1",
+    "zone_from": "MA",
+    "zone_to": "E1",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "MAE2",
+    "zone_from": "MA",
+    "zone_to": "E2",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "MAE3",
+    "zone_from": "MA",
+    "zone_to": "E3",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "MAE4",
+    "zone_from": "MA",
+    "zone_to": "E4",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "MER1",
+    "zone_from": "ME",
+    "zone_to": "R1",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "MER2",
+    "zone_from": "ME",
+    "zone_to": "R2",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "MER3",
+    "zone_from": "ME",
+    "zone_to": "R3",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "MER1R3",
+    "zone_from": "ME",
+    "zone_to": "R3",
+    "zone_via": "R1",
+    "transferer_type": "A"
+  },
+  {
+    "code": "MER4",
+    "zone_from": "ME",
+    "zone_to": "R4",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "MER1R4",
+    "zone_from": "ME",
+    "zone_to": "R4",
+    "zone_via": "R1",
+    "transferer_type": "A"
+  },
+  {
+    "code": "MEE1",
+    "zone_from": "ME",
+    "zone_to": "E1",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "MEE2",
+    "zone_from": "ME",
+    "zone_to": "E2",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "MEE3",
+    "zone_from": "ME",
+    "zone_to": "E3",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "MEE4",
+    "zone_from": "ME",
+    "zone_to": "E4",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "MEMA",
+    "zone_from": "ME",
+    "zone_to": "MA",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "NAR1",
+    "zone_from": "NA",
+    "zone_to": "R1",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "NAR2",
+    "zone_from": "NA",
+    "zone_to": "R2",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "NAR3",
+    "zone_from": "NA",
+    "zone_to": "R3",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "NAR1R3",
+    "zone_from": "NA",
+    "zone_to": "R3",
+    "zone_via": "R1",
+    "transferer_type": "A"
+  },
+  {
+    "code": "NAR4",
+    "zone_from": "NA",
+    "zone_to": "R4",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "NAR1R4",
+    "zone_from": "NA",
+    "zone_to": "R4",
+    "zone_via": "R1",
+    "transferer_type": "A"
+  },
+  {
+    "code": "AFR1",
+    "zone_from": "AF",
+    "zone_to": "R1",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "AFR2",
+    "zone_from": "AF",
+    "zone_to": "R2",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "AFR3",
+    "zone_from": "AF",
+    "zone_to": "R3",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "AFR1R3",
+    "zone_from": "AF",
+    "zone_to": "R3",
+    "zone_via": "R1",
+    "transferer_type": "A"
+  },
+  {
+    "code": "AFR4",
+    "zone_from": "AF",
+    "zone_to": "R4",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "AFR1R4",
+    "zone_from": "AF",
+    "zone_to": "R4",
+    "zone_via": "R1",
+    "transferer_type": "A"
+  },
+  {
+    "code": "AFE1",
+    "zone_from": "AF",
+    "zone_to": "E1",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "AFE2",
+    "zone_from": "AF",
+    "zone_to": "E2",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "AFE3",
+    "zone_from": "AF",
+    "zone_to": "E3",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "AFE4",
+    "zone_from": "AF",
+    "zone_to": "E4",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "AFMA",
+    "zone_from": "AF",
+    "zone_to": "MA",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "A1R1",
+    "zone_from": "A1",
+    "zone_to": "R1",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "A1R2",
+    "zone_from": "A1",
+    "zone_to": "R2",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "A1R3",
+    "zone_from": "A1",
+    "zone_to": "R3",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "A1R1R3",
+    "zone_from": "A1",
+    "zone_to": "R3",
+    "zone_via": "R1",
+    "transferer_type": "A"
+  },
+  {
+    "code": "A1R4R3",
+    "zone_from": "A1",
+    "zone_to": "R3",
+    "zone_via": "R4",
+    "transferer_type": "A"
+  },
+  {
+    "code": "A1R4",
+    "zone_from": "A1",
+    "zone_to": "R4",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "A1R1R4",
+    "zone_from": "A1",
+    "zone_to": "R4",
+    "zone_via": "R1",
+    "transferer_type": "A"
+  },
+  {
+    "code": "A1R4R4",
+    "zone_from": "A1",
+    "zone_to": "R4",
+    "zone_via": "R4",
+    "transferer_type": "A"
+  },
+  {
+    "code": "A1E1",
+    "zone_from": "A1",
+    "zone_to": "E1",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "A1E2",
+    "zone_from": "A1",
+    "zone_to": "E2",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "A1E3",
+    "zone_from": "A1",
+    "zone_to": "E3",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "A1E4",
+    "zone_from": "A1",
+    "zone_to": "E4",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "A1MA",
+    "zone_from": "A1",
+    "zone_to": "MA",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "A1ME",
+    "zone_from": "A1",
+    "zone_to": "ME",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "A2R1",
+    "zone_from": "A2",
+    "zone_to": "R1",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "A2R2",
+    "zone_from": "A2",
+    "zone_to": "R2",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "A2R3",
+    "zone_from": "A2",
+    "zone_to": "R3",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "A2R1R3",
+    "zone_from": "A2",
+    "zone_to": "R3",
+    "zone_via": "R1",
+    "transferer_type": "A"
+  },
+  {
+    "code": "A2R4R3",
+    "zone_from": "A2",
+    "zone_to": "R3",
+    "zone_via": "R4",
+    "transferer_type": "A"
+  },
+  {
+    "code": "A2R4",
+    "zone_from": "A2",
+    "zone_to": "R4",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "A2R1R4",
+    "zone_from": "A2",
+    "zone_to": "R4",
+    "zone_via": "R1",
+    "transferer_type": "A"
+  },
+  {
+    "code": "A2R4R4",
+    "zone_from": "A2",
+    "zone_to": "R4",
+    "zone_via": "R4",
+    "transferer_type": "A"
+  },
+  {
+    "code": "A2E1",
+    "zone_from": "A2",
+    "zone_to": "E1",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "A2E2",
+    "zone_from": "A2",
+    "zone_to": "E2",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "A2E3",
+    "zone_from": "A2",
+    "zone_to": "E3",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "A2E4",
+    "zone_from": "A2",
+    "zone_to": "E4",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "A2MA",
+    "zone_from": "A2",
+    "zone_to": "MA",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "A2ME",
+    "zone_from": "A2",
+    "zone_to": "ME",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "R4R4R4",
+    "zone_from": "R4",
+    "zone_to": "R4",
+    "zone_via": "R4",
+    "transferer_type": "A"
+  },
+  {
+    "code": "R4R3R4",
+    "zone_from": "R4",
+    "zone_to": "R4",
+    "zone_via": "R3",
+    "transferer_type": "A"
+  },
+  {
+    "code": "R4R4",
+    "zone_from": "R4",
+    "zone_to": "R4",
+    "zone_via": "",
+    "transferer_type": "A"
+  },
+  {
+    "code": "E1R1",
+    "zone_from": "E1",
+    "zone_to": "R1",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "E2R1",
+    "zone_from": "E2",
+    "zone_to": "R1",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "E3R1",
+    "zone_from": "E3",
+    "zone_to": "R1",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "E4R1",
+    "zone_from": "E4",
+    "zone_to": "R1",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "MAR1",
+    "zone_from": "MA",
+    "zone_to": "R1",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "MER1",
+    "zone_from": "ME",
+    "zone_to": "R1",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "NAR1",
+    "zone_from": "NA",
+    "zone_to": "R1",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "LAR1",
+    "zone_from": "LA",
+    "zone_to": "R1",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "SAR1",
+    "zone_from": "SA",
+    "zone_to": "R1",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "AFR1",
+    "zone_from": "AF",
+    "zone_to": "R1",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A1R1",
+    "zone_from": "A1",
+    "zone_to": "R1",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A2R1",
+    "zone_from": "A2",
+    "zone_to": "R1",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "AOR1",
+    "zone_from": "AO",
+    "zone_to": "R1",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "E1R2",
+    "zone_from": "E1",
+    "zone_to": "R2",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "E2R2",
+    "zone_from": "E2",
+    "zone_to": "R2",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "E3R2",
+    "zone_from": "E3",
+    "zone_to": "R2",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "E4R2",
+    "zone_from": "E4",
+    "zone_to": "R2",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "MAR2",
+    "zone_from": "MA",
+    "zone_to": "R2",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "MER2",
+    "zone_from": "ME",
+    "zone_to": "R2",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "NAR2",
+    "zone_from": "NA",
+    "zone_to": "R2",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "LAR2",
+    "zone_from": "LA",
+    "zone_to": "R2",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "SAR2",
+    "zone_from": "SA",
+    "zone_to": "R2",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "AFR2",
+    "zone_from": "AF",
+    "zone_to": "R2",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A1R2",
+    "zone_from": "A1",
+    "zone_to": "R2",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A2R2",
+    "zone_from": "A2",
+    "zone_to": "R2",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "AOR2",
+    "zone_from": "AO",
+    "zone_to": "R2",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "E1R3",
+    "zone_from": "E1",
+    "zone_to": "R3",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "E2R3",
+    "zone_from": "E2",
+    "zone_to": "R3",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "E3R3",
+    "zone_from": "E3",
+    "zone_to": "R3",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "E4R3",
+    "zone_from": "E4",
+    "zone_to": "R3",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "MAR3",
+    "zone_from": "MA",
+    "zone_to": "R3",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "MER3",
+    "zone_from": "ME",
+    "zone_to": "R3",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "NAR3",
+    "zone_from": "NA",
+    "zone_to": "R3",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "LAR3",
+    "zone_from": "LA",
+    "zone_to": "R3",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "SAR3",
+    "zone_from": "SA",
+    "zone_to": "R3",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "AFR3",
+    "zone_from": "AF",
+    "zone_to": "R3",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A1R3",
+    "zone_from": "A1",
+    "zone_to": "R3",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A2R3",
+    "zone_from": "A2",
+    "zone_to": "R3",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "AOR3",
+    "zone_from": "AO",
+    "zone_to": "R3",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "E1R4",
+    "zone_from": "E1",
+    "zone_to": "R4",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "E2R4",
+    "zone_from": "E2",
+    "zone_to": "R4",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "E3R4",
+    "zone_from": "E3",
+    "zone_to": "R4",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "E4R4",
+    "zone_from": "E4",
+    "zone_to": "R4",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "MAR4",
+    "zone_from": "MA",
+    "zone_to": "R4",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "MER4",
+    "zone_from": "ME",
+    "zone_to": "R4",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "NAR4",
+    "zone_from": "NA",
+    "zone_to": "R4",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "LAR4",
+    "zone_from": "LA",
+    "zone_to": "R4",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "SAR4",
+    "zone_from": "SA",
+    "zone_to": "R4",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "AFR4",
+    "zone_from": "AF",
+    "zone_to": "R4",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A1R4",
+    "zone_from": "A1",
+    "zone_to": "R4",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A2R4",
+    "zone_from": "A2",
+    "zone_to": "R4",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "AOR4",
+    "zone_from": "AO",
+    "zone_to": "R4",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "E1E1",
+    "zone_from": "E1",
+    "zone_to": "E1",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "E2E1",
+    "zone_from": "E2",
+    "zone_to": "E1",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "E3E1",
+    "zone_from": "E3",
+    "zone_to": "E1",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "E4E1",
+    "zone_from": "E4",
+    "zone_to": "E1",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "MAE1",
+    "zone_from": "MA",
+    "zone_to": "E1",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "MEE1",
+    "zone_from": "ME",
+    "zone_to": "E1",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "NAE1",
+    "zone_from": "NA",
+    "zone_to": "E1",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "LAE1",
+    "zone_from": "LA",
+    "zone_to": "E1",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "SAE1",
+    "zone_from": "SA",
+    "zone_to": "E1",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "AFE1",
+    "zone_from": "AF",
+    "zone_to": "E1",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A1E1",
+    "zone_from": "A1",
+    "zone_to": "E1",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A2E1",
+    "zone_from": "A2",
+    "zone_to": "E1",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "AOE1",
+    "zone_from": "AO",
+    "zone_to": "E1",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "E2E2",
+    "zone_from": "E2",
+    "zone_to": "E2",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "E3E2",
+    "zone_from": "E3",
+    "zone_to": "E2",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "E4E2",
+    "zone_from": "E4",
+    "zone_to": "E2",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "MAE2",
+    "zone_from": "MA",
+    "zone_to": "E2",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "MEE2",
+    "zone_from": "ME",
+    "zone_to": "E2",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "NAE2",
+    "zone_from": "NA",
+    "zone_to": "E2",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "LAE2",
+    "zone_from": "LA",
+    "zone_to": "E2",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "SAE2",
+    "zone_from": "SA",
+    "zone_to": "E2",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "AFE2",
+    "zone_from": "AF",
+    "zone_to": "E2",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A1E2",
+    "zone_from": "A1",
+    "zone_to": "E2",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A2E2",
+    "zone_from": "A2",
+    "zone_to": "E2",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "AOE2",
+    "zone_from": "AO",
+    "zone_to": "E2",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "E3E3",
+    "zone_from": "E3",
+    "zone_to": "E3",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "E4E3",
+    "zone_from": "E4",
+    "zone_to": "E3",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "MAE3",
+    "zone_from": "MA",
+    "zone_to": "E3",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "MEE3",
+    "zone_from": "ME",
+    "zone_to": "E3",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "NAE3",
+    "zone_from": "NA",
+    "zone_to": "E3",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "LAE3",
+    "zone_from": "LA",
+    "zone_to": "E3",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "SAE3",
+    "zone_from": "SA",
+    "zone_to": "E3",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "AFE3",
+    "zone_from": "AF",
+    "zone_to": "E3",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A1E3",
+    "zone_from": "A1",
+    "zone_to": "E3",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A2E3",
+    "zone_from": "A2",
+    "zone_to": "E3",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "AOE3",
+    "zone_from": "AO",
+    "zone_to": "E3",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "E4E4",
+    "zone_from": "E4",
+    "zone_to": "E4",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "MAE4",
+    "zone_from": "MA",
+    "zone_to": "E4",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "MEE4",
+    "zone_from": "ME",
+    "zone_to": "E4",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "NAE4",
+    "zone_from": "NA",
+    "zone_to": "E4",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "LAE4",
+    "zone_from": "LA",
+    "zone_to": "E4",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "SAE4",
+    "zone_from": "SA",
+    "zone_to": "E4",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "AFE4",
+    "zone_from": "AF",
+    "zone_to": "E4",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A1E4",
+    "zone_from": "A1",
+    "zone_to": "E4",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A2E4",
+    "zone_from": "A2",
+    "zone_to": "E4",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "AOE4",
+    "zone_from": "AO",
+    "zone_to": "E4",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "MEMA",
+    "zone_from": "ME",
+    "zone_to": "MA",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "NAMA",
+    "zone_from": "NA",
+    "zone_to": "MA",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "LAMA",
+    "zone_from": "LA",
+    "zone_to": "MA",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "SAMA",
+    "zone_from": "SA",
+    "zone_to": "MA",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "AFMA",
+    "zone_from": "AF",
+    "zone_to": "MA",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A1MA",
+    "zone_from": "A1",
+    "zone_to": "MA",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A2MA",
+    "zone_from": "A2",
+    "zone_to": "MA",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "AOMA",
+    "zone_from": "AO",
+    "zone_to": "MA",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "MEME",
+    "zone_from": "ME",
+    "zone_to": "ME",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "NAME",
+    "zone_from": "NA",
+    "zone_to": "ME",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "LAME",
+    "zone_from": "LA",
+    "zone_to": "ME",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "SAME",
+    "zone_from": "SA",
+    "zone_to": "ME",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "AFME",
+    "zone_from": "AF",
+    "zone_to": "ME",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A1ME",
+    "zone_from": "A1",
+    "zone_to": "ME",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A2ME",
+    "zone_from": "A2",
+    "zone_to": "ME",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "AOME",
+    "zone_from": "AO",
+    "zone_to": "ME",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "NANA",
+    "zone_from": "NA",
+    "zone_to": "NA",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "LANA",
+    "zone_from": "LA",
+    "zone_to": "NA",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "SANA",
+    "zone_from": "SA",
+    "zone_to": "NA",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "AFNA",
+    "zone_from": "AF",
+    "zone_to": "NA",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A1NA",
+    "zone_from": "A1",
+    "zone_to": "NA",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A2NA",
+    "zone_from": "A2",
+    "zone_to": "NA",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "AONA",
+    "zone_from": "AO",
+    "zone_to": "NA",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "LALA",
+    "zone_from": "LA",
+    "zone_to": "LA",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "SALA",
+    "zone_from": "SA",
+    "zone_to": "LA",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "AFLA",
+    "zone_from": "AF",
+    "zone_to": "LA",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A1LA",
+    "zone_from": "A1",
+    "zone_to": "LA",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A2LA",
+    "zone_from": "A2",
+    "zone_to": "LA",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "AOLA",
+    "zone_from": "AO",
+    "zone_to": "LA",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "SASA",
+    "zone_from": "SA",
+    "zone_to": "SA",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "AFSA",
+    "zone_from": "AF",
+    "zone_to": "SA",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A1SA",
+    "zone_from": "A1",
+    "zone_to": "SA",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A2SA",
+    "zone_from": "A2",
+    "zone_to": "SA",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "AOSA",
+    "zone_from": "AO",
+    "zone_to": "SA",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "AFAF",
+    "zone_from": "AF",
+    "zone_to": "AF",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A1AF",
+    "zone_from": "A1",
+    "zone_to": "AF",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A2AF",
+    "zone_from": "A2",
+    "zone_to": "AF",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "AOAF",
+    "zone_from": "AO",
+    "zone_to": "AF",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A1A1",
+    "zone_from": "A1",
+    "zone_to": "A1",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A2A1",
+    "zone_from": "A2",
+    "zone_to": "A1",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "AOA1",
+    "zone_from": "AO",
+    "zone_to": "A1",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A2A2",
+    "zone_from": "A2",
+    "zone_to": "A2",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "AOA2",
+    "zone_from": "AO",
+    "zone_to": "A2",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "AOAO",
+    "zone_from": "AO",
+    "zone_to": "AO",
+    "zone_via": "",
+    "transferer_type": "S"
+  },
+  {
+    "code": "A1R1R1",
+    "zone_from": "A1",
+    "zone_to": "R1",
+    "zone_via": "R1",
+    "transferer_type": "A"
+  },
+  {
+    "code": "A2R1R1",
+    "zone_from": "A2",
+    "zone_to": "R1",
+    "zone_via": "R1",
+    "transferer_type": "A"
+  }
+]

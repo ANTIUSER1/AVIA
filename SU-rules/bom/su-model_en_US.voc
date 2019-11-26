@@ -1,5 +1,33 @@
 # Vocabulary Properties
-uuid = e91b09ef-18d5-469c-b8ec-d48bed0663db
+uuid = f2b93461-5c94-4f32-8886-854c451ce368
+
+# ru.integrotech.su.inputparams.attractionAB.AttractionAbInput
+ru.integrotech.su.inputparams.attractionAB.AttractionAbInput#concept.label = attraction ab input
+
+# ru.integrotech.su.inputparams.charge.ChargeInput
+ru.integrotech.su.inputparams.charge.ChargeInput#concept.label = charge input
+ru.integrotech.su.inputparams.charge.ChargeInput.roundTrip#phrase.action = make it {round trip} that {this} is round trip
+ru.integrotech.su.inputparams.charge.ChargeInput.roundTrip#phrase.navigation = {this} is round trip
+
+# ru.integrotech.su.inputparams.spend.MilesInterval
+ru.integrotech.su.inputparams.spend.MilesInterval#concept.label = miles interval
+ru.integrotech.su.inputparams.spend.MilesInterval.milesMax#phrase.action = set the miles max of {this} to {miles max}
+ru.integrotech.su.inputparams.spend.MilesInterval.milesMax#phrase.navigation = {miles max} of {this}
+ru.integrotech.su.inputparams.spend.MilesInterval.milesMin#phrase.action = set the miles min of {this} to {miles min}
+ru.integrotech.su.inputparams.spend.MilesInterval.milesMin#phrase.navigation = {miles min} of {this}
+
+# ru.integrotech.su.inputparams.spend.SpendInput
+ru.integrotech.su.inputparams.spend.SpendInput#concept.label = spend input
+ru.integrotech.su.inputparams.spend.SpendInput.awardType#phrase.action = set the award type of {this} to {award type}
+ru.integrotech.su.inputparams.spend.SpendInput.awardType#phrase.navigation = {award type} of {this}
+ru.integrotech.su.inputparams.spend.SpendInput.lang#phrase.action = set the lang of {this} to {lang}
+ru.integrotech.su.inputparams.spend.SpendInput.lang#phrase.navigation = {lang} of {this}
+ru.integrotech.su.inputparams.spend.SpendInput.milesInterval#phrase.action = set the miles interval of {this} to {miles interval}
+ru.integrotech.su.inputparams.spend.SpendInput.milesInterval#phrase.navigation = {miles interval} of {this}
+ru.integrotech.su.inputparams.spend.SpendInput.onlyAfl#phrase.action = make it {only afl} that {this} is only afl
+ru.integrotech.su.inputparams.spend.SpendInput.onlyAfl#phrase.navigation = {this} is only afl
+ru.integrotech.su.inputparams.spend.SpendInput.roundTrip#phrase.action = make it {round trip} that {this} is round trip
+ru.integrotech.su.inputparams.spend.SpendInput.roundTrip#phrase.navigation = {this} is round trip
 
 # ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable
 ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable#concept.label = check online registration available
@@ -9,9 +37,43 @@ ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.departureAirportCode
 ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.departureAirportCode#phrase.navigation = {departure airport code} of {this}
 ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.flightNumber#phrase.action = set the flight number of {this} to {flight number}
 ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.flightNumber#phrase.navigation = {flight number} of {this}
-ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.onlineRegistrationAvailable#phrase.action = make it {online registration available} that {this} is online registration available
+ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.onlineRegistrationAvailable#phrase.action = make it {online registration available} that {this} is available
 ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.onlineRegistrationAvailable#phrase.navigation = {this} is online registration available
 ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.passengerFlightInfo#phrase.action = set the passenger flight info of {this} to {passenger flight info}
 ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.passengerFlightInfo#phrase.navigation = {passenger flight info} of {this}
 ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.ssrCodes#phrase.action = set the ssr codes of {this} to {ssr code}
 ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.ssrCodes#phrase.navigation = {ssr code} of {this}
+
+# ru.integrotech.su.outputparams.attractionAB.AttractionAbBuilder
+ru.integrotech.su.outputparams.attractionAB.AttractionAbBuilder#concept.label = attraction ab builder
+
+# ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput
+ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput#concept.label = attraction ab output
+ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput.miles#phrase.action = set the miles of {this} to {miles}
+ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput.miles#phrase.navigation = {miles} of {this}
+ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput.status#phrase.action = set the status of {this} to {status}
+ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput.status#phrase.navigation = {status} of {this}
+
+# ru.integrotech.su.outputparams.charge.ChargeBuilder
+ru.integrotech.su.outputparams.charge.ChargeBuilder#concept.label = charge builder
+
+# ru.integrotech.su.outputparams.charge.ResultMilesCharge
+ru.integrotech.su.outputparams.charge.ResultMilesCharge#concept.label = result miles charge
+ru.integrotech.su.outputparams.charge.ResultMilesCharge.routes#phrase.action = set the routes of {this} to {route}
+ru.integrotech.su.outputparams.charge.ResultMilesCharge.routes#phrase.navigation = {route} of {this}
+
+# ru.integrotech.su.outputparams.spend.ResultMilesSpend
+ru.integrotech.su.outputparams.spend.ResultMilesSpend#concept.label = result miles spend
+ru.integrotech.su.outputparams.spend.ResultMilesSpend.routes#phrase.action = set the routes of {this} to {route}
+ru.integrotech.su.outputparams.spend.ResultMilesSpend.routes#phrase.navigation = {route} of {this}
+
+# ru.integrotech.su.outputparams.spend.ResultMilesSpendLk
+ru.integrotech.su.outputparams.spend.ResultMilesSpendLk#concept.label = result miles spend lk
+ru.integrotech.su.outputparams.spend.ResultMilesSpendLk.routes#phrase.action = set the routes of {this} to {route}
+ru.integrotech.su.outputparams.spend.ResultMilesSpendLk.routes#phrase.navigation = {route} of {this}
+
+# ru.integrotech.su.outputparams.spend.SpendBuilder
+ru.integrotech.su.outputparams.spend.SpendBuilder#concept.label = spend builder
+
+# ru.integrotech.su.outputparams.spend.SpendLkBuilder
+ru.integrotech.su.outputparams.spend.SpendLkBuilder#concept.label = spend lk builder

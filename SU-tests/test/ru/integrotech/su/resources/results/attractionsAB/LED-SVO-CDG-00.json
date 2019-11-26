@@ -1,0 +1,21 @@
+{
+   "data": {
+        "segments": [
+            {
+                "orignIATA": "LED",
+                "destinationIATA": "SVO",
+                "bookingClassCode": "Q",
+                "fareBasisCode": "QVO",
+                "ticketDesignator": "AD952"
+            },
+            {
+                "orignIATA": "SVO",
+                "destinationIATA": "CDG",
+                "bookingClassCode": "L",
+                "fareBasisCode": "LFM",
+                "ticketDesignator": "AD95"
+            }
+        ],
+        "tierCode": "basic"
+    }
+}

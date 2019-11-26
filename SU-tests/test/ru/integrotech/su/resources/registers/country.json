@@ -1,0 +1,106 @@
+[
+  {
+    "code": "RU",
+    "name": "Russia",
+    "longitude": 37.5833,
+    "latitude": 55.75,
+    "capital": "MOW",
+    "region_code": "CIS"
+  },
+  {
+    "code": "US",
+    "name": "United States",
+    "longitude": -77.0367,
+    "latitude": 38.9069,
+    "capital": "WAS",
+    "region_code": "AM"
+  },
+  {
+    "code": "KR",
+    "name": "Korea, Republic",
+    "longitude": 126.7906,
+    "latitude": 37.5583,
+    "capital": "SEL",
+    "region_code": "AS"
+  },
+  {
+    "code": "CN",
+    "name": "China",
+    "longitude": 116.392,
+    "latitude": 39.914,
+    "capital": "PEK",
+    "region_code": "AS"
+  },
+  {
+    "code": "IN",
+    "name": "India",
+    "longitude": 77.1008,
+    "latitude": 28.5736,
+    "capital": "DEL",
+    "region_code": "AS"
+  },
+  {
+    "code": "JP",
+    "name": "Japan",
+    "longitude": 139.7667,
+    "latitude": 35.7,
+    "capital": "TYO",
+    "region_code": "AS"
+  },
+  {
+    "code": "CZ",
+    "name": "Czech Republic",
+    "longitude": 14.26,
+    "latitude": 50.1008,
+    "capital": "PRG",
+    "region_code": "EU"
+  },
+  {
+    "code": "DE",
+    "name": "Germany",
+    "longitude": 13.5003,
+    "latitude": 52.3669,
+    "capital": "BER",
+    "region_code": "EU"
+  },
+  {
+    "code": "ES",
+    "name": "Spain",
+    "longitude": -3.5633,
+    "latitude": 40.4722,
+    "capital": "MAD",
+    "region_code": "EU"
+  },
+  {
+    "code": "IT",
+    "name": "Italy",
+    "longitude": 12.4833,
+    "latitude": 41.9,
+    "capital": "ROM",
+    "region_code": "EU"
+  },
+  {
+    "code": "IL",
+    "name": "Israel",
+    "longitude": 35.2144,
+    "latitude": 31.8675,
+    "capital": "JRS",
+    "region_code": "ME"
+  },
+  {
+    "code": "EG",
+    "name": "Egypt",
+    "longitude": 31.4069,
+    "latitude": 30.1375,
+    "capital": "CAI",
+    "region_code": "AF"
+  },
+  {
+    "code": "FR",
+    "name": "France",
+    "longitude": 2.4494,
+    "latitude": 48.9036,
+    "capital": "PAR",
+    "region_code": "EU"
+  }
+]

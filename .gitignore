@@ -1,8 +1,11 @@
+**/.idea
+**/classes
 **/.metadata
 **/.settings
 **/bin
-**/output
 **/reports
+**/output
 **/target
 **/resources/xom-libraries
 *.jar
+*.iml

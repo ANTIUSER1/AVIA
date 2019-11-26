@@ -1,0 +1,58 @@
+[
+    {
+      "origin": {
+        "airport": {
+          "airportCode": "SVO"
+        },
+        "city": {
+          "cityCode": "MOW",
+          "weight": 1
+        },
+        "country": {
+          "countryCode": "RU"
+        },
+        "region": {
+          "regionCode": "CIS"
+        }
+      },
+      "destination": {
+        "airport": {
+          "airportCode": "LED"
+        },
+        "city": {
+          "cityCode": "LED",
+          "weight": 2
+        },
+        "country": {
+          "countryCode": "RU"
+        },
+        "region": {
+          "regionCode": "CIS"
+        }
+      },
+      "requiredAwards": [
+        {
+          "awardType": "RT",
+          "classOfService1": {
+            "classOfServiceName": "economy"
+          },
+          "classOfService2": {},
+          "value": 20000,
+          "isLightAward": false,
+          "fitsMilesInterval": true
+        },
+        {
+          "awardType": "U",
+          "classOfService1": {
+            "classOfServiceName": "economy"
+          },
+          "classOfService2": {
+            "classOfServiceName": "business"
+          },
+          "value": 20000,
+          "isLightAward": false,
+          "fitsMilesInterval": true
+        }
+      ]
+    }
+  ]

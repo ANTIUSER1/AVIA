@@ -1,0 +1,1860 @@
+[
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "LED"
+      },
+      "city": {
+        "cityCode": "LED",
+        "weight": 2
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "requiredAwards": [
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "business"
+        },
+        "classOfService2": {},
+        "value": 15000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {},
+        "value": 10000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 10000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      }
+    ]
+  },
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "CDG"
+      },
+      "city": {
+        "cityCode": "PAR",
+        "weight": 3
+      },
+      "country": {
+        "countryCode": "FR"
+      },
+      "region": {
+        "regionCode": "EU"
+      }
+    },
+    "requiredAwards": [
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "business"
+        },
+        "classOfService2": {},
+        "value": 25000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {},
+        "value": 15000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 15000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      }
+    ]
+  },
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "FCO"
+      },
+      "city": {
+        "cityCode": "ROM",
+        "weight": 4
+      },
+      "country": {
+        "countryCode": "IT"
+      },
+      "region": {
+        "regionCode": "EU"
+      }
+    },
+    "requiredAwards": [
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "business"
+        },
+        "classOfService2": {},
+        "value": 25000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {},
+        "value": 15000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 15000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      }
+    ]
+  },
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "AER"
+      },
+      "city": {
+        "cityCode": "AER",
+        "weight": 5
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "requiredAwards": [
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "business"
+        },
+        "classOfService2": {},
+        "value": 15000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {},
+        "value": 10000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 10000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      }
+    ]
+  },
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "SVX"
+      },
+      "city": {
+        "cityCode": "SVX",
+        "weight": 7
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "requiredAwards": [
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "business"
+        },
+        "classOfService2": {},
+        "value": 15000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {},
+        "value": 10000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 10000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      }
+    ]
+  },
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "JFK"
+      },
+      "city": {
+        "cityCode": "NYC",
+        "weight": 8
+      },
+      "country": {
+        "countryCode": "US"
+      },
+      "region": {
+        "regionCode": "AM"
+      }
+    },
+    "requiredAwards": [
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "business"
+        },
+        "classOfService2": {},
+        "value": 55000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "comfort"
+        },
+        "classOfService2": {},
+        "value": 45000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {},
+        "value": 35000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "comfort"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 17500,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 35000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "comfort"
+        },
+        "value": 17500,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      }
+    ]
+  },
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "VVO"
+      },
+      "city": {
+        "cityCode": "VVO",
+        "weight": 9
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "requiredAwards": [
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "business"
+        },
+        "classOfService2": {},
+        "value": 45000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "comfort"
+        },
+        "classOfService2": {},
+        "value": 37500,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {},
+        "value": 27500,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "comfort"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 15000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 27500,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "comfort"
+        },
+        "value": 15000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      }
+    ]
+  },
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "PRG"
+      },
+      "city": {
+        "cityCode": "PRG",
+        "weight": 10
+      },
+      "country": {
+        "countryCode": "CZ"
+      },
+      "region": {
+        "regionCode": "EU"
+      }
+    },
+    "requiredAwards": [
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "business"
+        },
+        "classOfService2": {},
+        "value": 20000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {},
+        "value": 12500,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 12500,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      }
+    ]
+  },
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "KHV"
+      },
+      "city": {
+        "cityCode": "KHV",
+        "weight": 11
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "requiredAwards": [
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "business"
+        },
+        "classOfService2": {},
+        "value": 45000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "comfort"
+        },
+        "classOfService2": {},
+        "value": 37500,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {},
+        "value": 27500,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "comfort"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 15000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 27500,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "comfort"
+        },
+        "value": 15000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      }
+    ]
+  },
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "KJA"
+      },
+      "city": {
+        "cityCode": "KJA",
+        "weight": 20
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "requiredAwards": [
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "business"
+        },
+        "classOfService2": {},
+        "value": 25000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {},
+        "value": 15000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 15000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      }
+    ]
+  },
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "TLV"
+      },
+      "city": {
+        "cityCode": "TLV",
+        "weight": 25
+      },
+      "country": {
+        "countryCode": "IL"
+      },
+      "region": {
+        "regionCode": "ME"
+      }
+    },
+    "requiredAwards": [
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "business"
+        },
+        "classOfService2": {},
+        "value": 30000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "comfort"
+        },
+        "classOfService2": {},
+        "value": 25000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {},
+        "value": 20000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "comfort"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 10000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 20000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "comfort"
+        },
+        "value": 10000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      }
+    ]
+  },
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "ROV"
+      },
+      "city": {
+        "cityCode": "ROV",
+        "weight": 30
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "requiredAwards": [
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "business"
+        },
+        "classOfService2": {},
+        "value": 15000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {},
+        "value": 10000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 10000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      }
+    ]
+  },
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "UFA"
+      },
+      "city": {
+        "cityCode": "UFA",
+        "weight": 32
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "requiredAwards": [
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "business"
+        },
+        "classOfService2": {},
+        "value": 15000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {},
+        "value": 10000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 10000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      }
+    ]
+  },
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "LAX"
+      },
+      "city": {
+        "cityCode": "LAX",
+        "weight": 35
+      },
+      "country": {
+        "countryCode": "US"
+      },
+      "region": {
+        "regionCode": "AM"
+      }
+    },
+    "requiredAwards": [
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "business"
+        },
+        "classOfService2": {},
+        "value": 55000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "comfort"
+        },
+        "classOfService2": {},
+        "value": 45000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {},
+        "value": 35000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "comfort"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 17500,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 35000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "comfort"
+        },
+        "value": 17500,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      }
+    ]
+  },
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "MAD"
+      },
+      "city": {
+        "cityCode": "MAD",
+        "weight": 41
+      },
+      "country": {
+        "countryCode": "ES"
+      },
+      "region": {
+        "regionCode": "EU"
+      }
+    },
+    "requiredAwards": [
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "business"
+        },
+        "classOfService2": {},
+        "value": 25000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {},
+        "value": 15000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 15000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      }
+    ]
+  },
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "SEL"
+      },
+      "city": {
+        "cityCode": "SEL",
+        "weight": 43
+      },
+      "country": {
+        "countryCode": "KR"
+      },
+      "region": {
+        "regionCode": "AS"
+      }
+    },
+    "requiredAwards": [
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "business"
+        },
+        "classOfService2": {},
+        "value": 60000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "comfort"
+        },
+        "classOfService2": {},
+        "value": 50000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {},
+        "value": 40000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "comfort"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 20000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 40000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "comfort"
+        },
+        "value": 20000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      }
+    ]
+  },
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "ICN"
+      },
+      "city": {
+        "cityCode": "SEL",
+        "weight": 43
+      },
+      "country": {
+        "countryCode": "KR"
+      },
+      "region": {
+        "regionCode": "AS"
+      }
+    },
+    "requiredAwards": [
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "business"
+        },
+        "classOfService2": {},
+        "value": 60000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "comfort"
+        },
+        "classOfService2": {},
+        "value": 50000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {},
+        "value": 40000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "comfort"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 20000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 40000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "comfort"
+        },
+        "value": 20000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      }
+    ]
+  },
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "FRA"
+      },
+      "city": {
+        "cityCode": "FRA",
+        "weight": 47
+      },
+      "country": {
+        "countryCode": "DE"
+      },
+      "region": {
+        "regionCode": "EU"
+      }
+    },
+    "requiredAwards": [
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "business"
+        },
+        "classOfService2": {},
+        "value": 20000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {},
+        "value": 12500,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 12500,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      }
+    ]
+  },
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "PEK"
+      },
+      "city": {
+        "cityCode": "BJS",
+        "weight": 99
+      },
+      "country": {
+        "countryCode": "CN"
+      },
+      "region": {
+        "regionCode": "AS"
+      }
+    },
+    "requiredAwards": [
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "business"
+        },
+        "classOfService2": {},
+        "value": 55000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "comfort"
+        },
+        "classOfService2": {},
+        "value": 42500,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {},
+        "value": 30000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "comfort"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 15000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 30000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "comfort"
+        },
+        "value": 15000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      }
+    ]
+  },
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "DEL"
+      },
+      "city": {
+        "cityCode": "DEL",
+        "weight": 102
+      },
+      "country": {
+        "countryCode": "IN"
+      },
+      "region": {
+        "regionCode": "AS"
+      }
+    },
+    "requiredAwards": [
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "business"
+        },
+        "classOfService2": {},
+        "value": 55000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {},
+        "value": 30000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 30000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      }
+    ]
+  },
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "PVG"
+      },
+      "city": {
+        "cityCode": "SHA",
+        "weight": 104
+      },
+      "country": {
+        "countryCode": "CN"
+      },
+      "region": {
+        "regionCode": "AS"
+      }
+    },
+    "requiredAwards": [
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "business"
+        },
+        "classOfService2": {},
+        "value": 55000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "comfort"
+        },
+        "classOfService2": {},
+        "value": 42500,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {},
+        "value": 30000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "comfort"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 15000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 30000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "comfort"
+        },
+        "value": 15000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      }
+    ]
+  },
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "CAI"
+      },
+      "city": {
+        "cityCode": "CAI",
+        "weight": 156
+      },
+      "country": {
+        "countryCode": "EG"
+      },
+      "region": {
+        "regionCode": "AF"
+      }
+    },
+    "requiredAwards": [
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "business"
+        },
+        "classOfService2": {},
+        "value": 25000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {},
+        "value": 15000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 15000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      }
+    ]
+  },
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "NRT"
+      },
+      "city": {
+        "cityCode": "TYO",
+        "weight": 2147483647
+      },
+      "country": {
+        "countryCode": "JP"
+      },
+      "region": {
+        "regionCode": "AS"
+      }
+    },
+    "requiredAwards": [
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "business"
+        },
+        "classOfService2": {},
+        "value": 60000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "comfort"
+        },
+        "classOfService2": {},
+        "value": 50000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {},
+        "value": 40000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "comfort"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 20000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 40000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "comfort"
+        },
+        "value": 20000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      }
+    ]
+  }
+]
