@@ -28,7 +28,7 @@ public class AttractionAbUtils {
 	
 	public int getTierLevelFactor(AttractionAbInput input) {
 		String passengerTierLevel = input.getData().getTierCode();
-		if (passengerTierLevel.isEmpty()) {
+		if (this.isEmpty(passengerTierLevel)) {
 			passengerTierLevel = "basic";
 		}
 		return registers.getLoyaltyMap().get(passengerTierLevel).getFactor() + 100;
