@@ -7,6 +7,7 @@ import org.junit.Test;
 
 import ru.integrotech.su.inputparams.spend.SpendInput;
 import ru.integrotech.su.mock.MockLoader;
+import ru.integrotech.su.outputparams.spend.SpendComparator;
 import ru.integrotech.su.outputparams.spend.SpendRoute;
 
 import java.io.IOException;
@@ -41,7 +42,10 @@ public class UnifySpendTest extends UnifyBaseTest {
         jsonElement = this.common.getLoader().loadJson(pathToCaseFolder, EXPECTED_RESPONSE_FILE_NAME);
         List<SpendRoute> expectedSpendRoutes = this.common.getTestsCache().loadSpendRoutes(jsonElement);
 
-        boolean result = this.common.isEquals(expectedSpendRoutes, actualSpendRoutes);
+        SpendComparator comparator = SpendComparator.of();
+        String testReport = comparator.compareSpendRoute(expectedSpendRoutes, actualSpendRoutes);
+
+        boolean result = testReport.endsWith("OK");
         printTestResults(result, actualSpendRoutes, pathToCaseFolder);
         return result;
     }
