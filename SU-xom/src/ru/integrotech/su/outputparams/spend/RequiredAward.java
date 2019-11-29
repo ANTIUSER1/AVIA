@@ -161,4 +161,15 @@ class RequiredAward implements Comparable<RequiredAward> {
         return result;
     }
 
+    @Override
+    public String toString() {
+        return "RequiredAward{" +
+                "awardType='" + awardType + '\'' +
+                ", classOfService1=" + classOfService1 +
+                ", classOfService2=" + classOfService2 +
+                ", value=" + value +
+                ", isLightAward=" + isLightAward +
+                ", fitsMilesInterval=" + fitsMilesInterval +
+                '}';
+    }
 }
