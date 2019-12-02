@@ -4,10 +4,11 @@ package ru.integrotech.su.outputparams.charge;
 import ru.integrotech.airline.core.flight.PassengerCharge;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
-class AirlineFareGroup {
+class AirlineFareGroup implements Comparable<AirlineFareGroup> {
  
     static AirlineFareGroup of(PassengerCharge charge) {
         List<String> prefixes = new ArrayList<>();
@@ -86,5 +87,10 @@ class AirlineFareGroup {
     @Override
     public int hashCode() {
         return Objects.hash(farePrefixes, milesCharged, milesQualifying, milesBonus);
+    }
+
+    @Override
+    public int compareTo(AirlineFareGroup o) {
+        return this.milesCharged - o.milesCharged;
     }
 }

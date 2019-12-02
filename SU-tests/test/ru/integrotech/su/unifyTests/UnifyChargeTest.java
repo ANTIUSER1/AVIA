@@ -10,7 +10,7 @@ import ru.integrotech.su.mock.MockLoader;
 import ru.integrotech.su.outputparams.charge.ChargeRoute;
 
 import java.io.IOException;
-import java.util.List;
+import java.util.*;
 
 /*Unify test for ru.aeroflot.fmc.io.charge
 * to create new tests, follow next steps
@@ -28,6 +28,10 @@ import java.util.List;
 public class UnifyChargeTest extends UnifyBaseTest {
 
     private static final String ROOT_TEST_DIRECTORY_PATH = "uniChargeTestDirectory";
+    private static final String SUCCESS = "OK\n";
+    private static final String INCORRECT = "INCORRECT\n";
+    private static final String NOT_FOUND = "not found\n";
+    private static final String EXTRA = "extra\n";
 
     public UnifyChargeTest() {
         super(MockLoader.ofRealRegisters(), ChargeRoute.class);
@@ -42,8 +46,13 @@ public class UnifyChargeTest extends UnifyBaseTest {
         jsonElement = this.common.getLoader().loadJson(pathToCaseFolder, EXPECTED_RESPONSE_FILE_NAME);
         List<ChargeRoute> expectedChargeRoutes = this.common.getTestsCache().loadChargeRoutes(jsonElement);
 
-        boolean result = this.common.isEquals(expectedChargeRoutes, actualChargeRoutes);
+        String testReport = this.compareSpendRoute(expectedChargeRoutes, actualChargeRoutes);
+        boolean result = testReport.contains(SUCCESS)
+                && ( !testReport.contains(INCORRECT)
+                &&!testReport.contains(NOT_FOUND)
+                &&!testReport.contains(EXTRA));
         printTestResults(result, actualChargeRoutes, pathToCaseFolder);
+        printReport(testReport, pathToCaseFolder);
         return result;
     }
 
@@ -51,5 +60,87 @@ public class UnifyChargeTest extends UnifyBaseTest {
     public void test() {
         Assert.assertTrue(executeTest(ROOT_TEST_DIRECTORY_PATH));
     }
+
+    private String compareSpendRoute(List<ChargeRoute> expected, List<ChargeRoute> actual) {
+        StringBuilder builder = new StringBuilder();
+        builder.append(String.format("%-23s     %s\n", " --- R O U T E ---", "RESULT"));
+        builder.append("\n");
+        this.sort(actual);
+        this.sort(expected);
+        ArrayList<ChargeRoute> actualArr = new ArrayList<>(actual);
+        ArrayList<ChargeRoute> expectedlArr = new ArrayList<>(expected);
+        Iterator<ChargeRoute> expectedIterator = expectedlArr.iterator();
+        expected: while (expectedIterator.hasNext()) {
+            ChargeRoute expectedRoute = expectedIterator.next();
+            Iterator<ChargeRoute> actualIterator = actualArr.iterator();
+            while (actualIterator.hasNext()) {
+                ChargeRoute actualRoute = actualIterator.next();
+                if (this.isShallowEquals(expectedRoute, actualRoute)) {
+                    if (this.isDeepEquals(expectedRoute, actualRoute)) {
+                        builder.append(String.format("%-25s     %s",
+                                this.getRoteCode(actualRoute),
+                                SUCCESS));
+                    } else {
+                        builder.append(String.format("%-25s     %s",
+                                this.getRoteCode(actualRoute),
+                                INCORRECT));
+                    }
+                    expectedIterator.remove();
+                    actualIterator.remove();
+                    continue expected;
+                }
+            }
+        }
+
+        for (ChargeRoute route : expectedlArr) {
+            builder.append(String.format("%-25s     %s",
+                    this.getRoteCode(route),
+                    NOT_FOUND));
+        }
+
+        for (ChargeRoute route : actualArr) {
+            builder.append(String.format("%-25s     %s",
+                    this.getRoteCode(route),
+                    EXTRA));
+        }
+
+        return builder.toString();
+    }
+
+    private String getRoteCode(ChargeRoute route) {
+        StringBuilder builder = new StringBuilder();
+        builder.append(String.format("%s  ", route.getOrigin().getAirport().getAirportCode()));
+        if (route.getVia() != null) {
+            builder.append(String.format("%s  ", route.getVia().getAirport().getAirportCode()));
+        } else {
+            builder.append(String.format("%s  ", "   "));
+        }
+        builder.append(String.format("%s ", route.getDestination().getAirport().getAirportCode()));
+        return builder.toString();
+    }
+
+    private void sort(List<ChargeRoute> list) {
+        Collections.sort(list);
+        this.sortInnerElements(list);
+    }
+
+
+    private void sortInnerElements(List<ChargeRoute> spendRoutes) {
+        for (ChargeRoute chargeRoute : spendRoutes) {
+            chargeRoute.sort();
+        }
+    }
+
+    private boolean isShallowEquals(ChargeRoute expected, ChargeRoute actual) {
+        if (expected == actual) return true;
+        return Objects.equals(expected.getOrigin(), actual.getOrigin()) &&
+                Objects.equals(expected.getDestination(), actual.getDestination()) &&
+                Objects.equals(expected.getVia(), actual.getVia());
+    }
+
+    private boolean isDeepEquals(ChargeRoute expected, ChargeRoute actual) {
+        return   Objects.equals(expected.getSegments(), actual.getSegments());
+    }
+
 
 }

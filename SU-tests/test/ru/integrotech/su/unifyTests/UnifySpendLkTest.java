@@ -10,7 +10,7 @@ import ru.integrotech.su.mock.MockLoader;
 import ru.integrotech.su.outputparams.spend.SpendLkRoute;
 
 import java.io.IOException;
-import java.util.List;
+import java.util.*;
 
 /* Unify test for ru.aeroflot.fmc.io.output.spend.SpendLkRoute
  * to create new tests, follow next steps
@@ -27,6 +27,10 @@ import java.util.List;
 public class UnifySpendLkTest extends UnifyBaseTest {
 
     private static final String ROOT_TEST_DIRECTORY_PATH = "uniSpendLkTestDirectory";
+    private static final String SUCCESS = "OK\n";
+    private static final String INCORRECT = "INCORRECT\n";
+    private static final String NOT_FOUND = "not found\n";
+    private static final String EXTRA = "extra\n";
 
     public UnifySpendLkTest() {
         super(MockLoader.ofRealRegisters(), SpendLkRoute.class);
@@ -41,8 +45,13 @@ public class UnifySpendLkTest extends UnifyBaseTest {
         jsonElement = this.common.getLoader().loadJson(pathToCaseFolder, EXPECTED_RESPONSE_FILE_NAME);
         List<SpendLkRoute> expectedSpendLkRoutes = this.common.getTestsCache().loadSpendLkRoutes(jsonElement);
 
-        boolean result = this.common.isEquals(expectedSpendLkRoutes, actualSpendLkRoutes);
+        String testReport = this.compareSpendRoute(expectedSpendLkRoutes, actualSpendLkRoutes);
+        boolean result = testReport.contains(SUCCESS)
+                && ( !testReport.contains(INCORRECT)
+                &&!testReport.contains(NOT_FOUND)
+                &&!testReport.contains(EXTRA));
         printTestResults(result, actualSpendLkRoutes, pathToCaseFolder);
+        printReport(testReport, pathToCaseFolder);
         return result;
     }
 
@@ -50,5 +59,82 @@ public class UnifySpendLkTest extends UnifyBaseTest {
     public void test() {
         Assert.assertTrue(executeTest(ROOT_TEST_DIRECTORY_PATH));
     }
+
+
+    private String compareSpendRoute(List<SpendLkRoute> expected, List<SpendLkRoute> actual) {
+        StringBuilder builder = new StringBuilder();
+        builder.append(String.format("%-23s     %s\n", " --- R O U T E ---", "RESULT"));
+        builder.append("\n");
+        this.sort(actual);
+        this.sort(expected);
+        ArrayList<SpendLkRoute> actualArr = new ArrayList<>(actual);
+        ArrayList<SpendLkRoute> expectedlArr = new ArrayList<>(expected);
+        Iterator<SpendLkRoute> expectedIterator = expectedlArr.iterator();
+        expected: while (expectedIterator.hasNext()) {
+            SpendLkRoute expectedRoute = expectedIterator.next();
+            Iterator<SpendLkRoute> actualIterator = actualArr.iterator();
+            while (actualIterator.hasNext()) {
+                SpendLkRoute actualRoute = actualIterator.next();
+                if (this.isShallowEquals(expectedRoute, actualRoute)) {
+                    if (this.isDeepEquals(expectedRoute, actualRoute)) {
+                        builder.append(String.format("%-25s     %s",
+                                this.getRoteCode(actualRoute),
+                                SUCCESS));
+                    } else {
+                        builder.append(String.format("%-25s     %s",
+                                this.getRoteCode(actualRoute),
+                                INCORRECT));
+                    }
+                    expectedIterator.remove();
+                    actualIterator.remove();
+                    continue expected;
+                }
+            }
+        }
+
+        for (SpendLkRoute route : expectedlArr) {
+            builder.append(String.format("%-25s     %s",
+                    this.getRoteCode(route),
+                    NOT_FOUND));
+        }
+
+        for (SpendLkRoute route : actualArr) {
+            builder.append(String.format("%-25s     %s",
+                    this.getRoteCode(route),
+                    EXTRA));
+        }
+
+        return builder.toString();
+    }
+
+    private String getRoteCode(SpendLkRoute route) {
+        String builder = String.format("%s  ", route.getOrigin().getAirport().getAirportCode()) +
+                String.format("%s ", route.getDestination().getAirport().getAirportCode());
+        return builder;
+    }
+
+    private void sort(List<SpendLkRoute> list) {
+        Collections.sort(list);
+        this.sortInnerElements(list);
+    }
+
+
+    private void sortInnerElements(List<SpendLkRoute> spendRoutes) {
+        for (SpendLkRoute spendLkRoute : spendRoutes) {
+            spendLkRoute.sort();
+        }
+    }
+
+    private boolean isShallowEquals(SpendLkRoute expected, SpendLkRoute actual) {
+        if (expected == actual) return true;
+        return  Objects.equals(expected.getOrigin(), actual.getOrigin()) &&
+                Objects.equals(expected.getDestination(), actual.getDestination());
+    }
+
+    private boolean isDeepEquals(SpendLkRoute expected, SpendLkRoute actual) {
+        return  Objects.equals(expected.getRequiredAwards(), actual.getRequiredAwards());
+    }
+
+
 
 }
