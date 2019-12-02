@@ -209,7 +209,7 @@ public class ChargeTest{
                 false //isRound
         );
         actualCharge = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
-        Assert.assertTrue(classOfServiceIsPresent(actualCharge, ServiceClass.SERVICE_CLASS_TYPE.comfort.name()));
+        Assert.assertTrue(!classOfServiceIsPresent(actualCharge, ServiceClass.SERVICE_CLASS_TYPE.comfort.name()));
 
         chargeInput = ChargeInput.of(
                 "airport", // from type

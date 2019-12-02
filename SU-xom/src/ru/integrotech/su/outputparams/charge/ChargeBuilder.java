@@ -2,6 +2,7 @@ package ru.integrotech.su.outputparams.charge;
 
 
 import ru.integrotech.airline.core.airline.Airline;
+import ru.integrotech.airline.core.airline.ServiceClass;
 import ru.integrotech.airline.core.flight.Flight;
 import ru.integrotech.airline.core.flight.FlightCarrier;
 import ru.integrotech.airline.core.flight.PassengerCharge;
@@ -106,19 +107,20 @@ public class ChargeBuilder {
 
         String airlineCode = this.getAirlineCode(chargeInput);
         Airline airline = this.cache.getAirline(airlineCode);
+        List<ServiceClass> allowedClasses = this.getServiceClasses(route, airline);
 
         if (airline != null) {
             for (Flight flight : route.getFlights(airline)) {
-                this.buildPassengerCharges(flight, chargeInput, airline, initFields);
+                this.buildPassengerCharges(flight, allowedClasses, chargeInput, airline, initFields);
             }
         } else {
             for (Flight flight : route.getFlights()) {
-                this.buildPassengerCharges(flight, chargeInput, initFields);
+                this.buildPassengerCharges(flight, allowedClasses, chargeInput, initFields);
             }
         }
     }
 
-    private void buildPassengerCharges(Flight flight, ChargeInput chargeInput, Airline airline, boolean initFields) {
+    private void buildPassengerCharges(Flight flight, List<ServiceClass> allowedClasses, ChargeInput chargeInput, Airline airline, boolean initFields) {
 
         boolean isRound = chargeInput.isRoundTrip();
         int factor;
@@ -128,10 +130,10 @@ public class ChargeBuilder {
             factor = -1;
         }
 
-        this.buildPassengerCharges(flight.getCarriers().get(airline), flight, factor, isRound);
+        this.buildPassengerCharges(flight.getCarriers().get(airline), allowedClasses, flight, factor, isRound);
     }
 
-    private void buildPassengerCharges(Flight flight, ChargeInput chargeInput, boolean initFields) {
+    private void buildPassengerCharges(Flight flight, List<ServiceClass> allowedClasses, ChargeInput chargeInput, boolean initFields) {
 
         boolean isRound = chargeInput.isRoundTrip();
         int factor;
@@ -142,12 +144,12 @@ public class ChargeBuilder {
         }
 
         for (FlightCarrier carrier : flight.getCarriers().values()) {
-            this.buildPassengerCharges(carrier, flight, factor, isRound);
+            this.buildPassengerCharges(carrier, allowedClasses, flight, factor, isRound);
         }
     }
 
-    private void buildPassengerCharges(FlightCarrier carrier, Flight flight, int factor, boolean isRound) {
-        carrier.setPassengerCharges(PassengerCharge.listOf(flight, factor, isRound, carrier.getCarrier()));
+    private void buildPassengerCharges(FlightCarrier carrier, List<ServiceClass> allowedClasses, Flight flight, int factor, boolean isRound) {
+        carrier.setPassengerCharges(PassengerCharge.listOf(flight, allowedClasses, factor, isRound, carrier.getCarrier()));
     }
 
     private String getAirlineCode(ChargeInput chargeInput) {
@@ -155,6 +157,25 @@ public class ChargeBuilder {
         if (chargeInput.getAirline() != null) {
             result = chargeInput.getAirline().getAirlineCode();
         }
+        return result;
+    }
+
+    private List<ServiceClass> getServiceClasses(Route route, Airline airline) {
+
+        List<ServiceClass.SERVICE_CLASS_TYPE> serviceClassTypes = new ArrayList<>(route.getAllowedClasses(airline));
+
+        if (serviceClassTypes.isEmpty()) {
+            serviceClassTypes.addAll(airline.getServiceClassMap().keySet());
+        }
+
+        List<ServiceClass> result = new ArrayList<>();
+
+        for (ServiceClass.SERVICE_CLASS_TYPE type : serviceClassTypes) {
+            result.add(airline.getServiceClassMap().get(type));
+        }
+
+        Collections.sort(result, Collections.reverseOrder());
+
         return result;
     }
 

@@ -3,6 +3,7 @@ package ru.integrotech.airline.core.flight;
 
 
 import ru.integrotech.airline.core.airline.Airline;
+import ru.integrotech.airline.core.airline.ServiceClass;
 import ru.integrotech.airline.core.bonus.Bonus;
 import ru.integrotech.airline.core.location.Airport;
 import ru.integrotech.airline.core.location.City;
@@ -160,19 +161,20 @@ public class Route implements Comparable<Route> {
         return true;
     }
 
-    /*if route can be completed fully without given airline return true*/
-    public boolean isOperatesWithout(Airline airline) {
-        int counter = 0;
-        Set<Airline> carriers;
+    /*if route can be completed fully only with others airlines with given airline return true*/
+    public boolean otherAirlinesIsPresent() {
         for (Flight flight : this.flights) {
-            carriers = flight.getCarriers().keySet();
-            if (!(carriers.contains(airline)) || (carriers.size() > 1)) counter++;
+            if (flight.getCarriers().values().size() > 1) return true;
         }
-        return counter == this.flights.size();
+        return false;
     }
 
-    /*if route can be completed fully without given airline return true*/
-    public boolean isOperatesWithout(String airlineCode) {
+    /*if route can be completed fully only with others airlines with given airline return true*/
+    public boolean otherAirlinesIsPresent(String airlineCode) {
+        return this.countFlights(airlineCode) < this.flights.size();
+    }
+
+    private int countFlights(String airlineCode) {
         int counter = 0;
         Set<Airline> airlines;
         for (Flight flight : this.flights) {
@@ -185,7 +187,15 @@ public class Route implements Comparable<Route> {
                 }
             }
         }
-        return counter == this.flights.size();
+        return counter;
+    }
+
+    private int countFlights(Airline airline) {
+        int counter = 0;
+        for (Flight flight : this.flights) {
+            if (flight.getCarriers().get(airline) != null) counter++;
+        }
+        return counter;
     }
 
     public String getAflZones() {
@@ -248,6 +258,16 @@ public class Route implements Comparable<Route> {
 
     public boolean isDirect() {
         return this.flights.size() == 1;
+    }
+
+    public List<ServiceClass.SERVICE_CLASS_TYPE> getAllowedClasses(Airline airline) {
+        List<Flight> flights = this.getFlights(airline);
+        Set<ServiceClass.SERVICE_CLASS_TYPE> commonTypes = new HashSet<>(flights.get(0).getAllowedClasses(airline));
+        for (int i = 1; i < flights.size(); i++) {
+            Set<ServiceClass.SERVICE_CLASS_TYPE> types = new HashSet<>(flights.get(i).getAllowedClasses(airline));
+            commonTypes.removeIf(commonType -> !types.contains(commonType));
+        }
+        return new ArrayList<>(commonTypes);
     }
 
     @Override

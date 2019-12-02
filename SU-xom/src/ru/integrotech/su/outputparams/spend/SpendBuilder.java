@@ -7,7 +7,6 @@ import ru.integrotech.airline.core.bonus.Bonus;
 import ru.integrotech.airline.core.flight.Flight;
 import ru.integrotech.airline.core.flight.Route;
 import ru.integrotech.airline.register.RegisterCache;
-import ru.integrotech.airline.register.RegisterLoader;
 import ru.integrotech.airline.searcher.BonusSearcher;
 import ru.integrotech.airline.utils.BonusFilters;
 import ru.integrotech.su.inputparams.route.RoutesInput;
@@ -40,13 +39,16 @@ public class SpendBuilder {
 
     private BonusSearcher bonusSearcher;
 
+    private final Airline afl;
+
+
     private SpendBuilder(RegisterCache cache) {
         this.cache = cache;
         this.routesBuilder = RoutesBuilder.of(cache);
         this.bonusSearcher = BonusSearcher.of(cache);
+        this.afl = this.cache.getAirline(Airline.AFL_CODE);
     }
 
-  
     /*method for use in ODM*/
     public ResultMilesSpend buildResult(SpendInput spendInput) {
         List<SpendRoute> routes = this.getSpendRoutes(spendInput);
@@ -97,14 +99,14 @@ public class SpendBuilder {
         List<SpendRoute> result = new ArrayList<>();
 
         for (Route route : routes) {
-            if (aflOnly || route.isOperatesBy(Airline.AFL_CODE)) {
+            if (route.isOperatesBy(this.afl)) {
                 SpendRoute bonusRoad = SpendRoute.ofAfl(route);
                 if (!bonusRoad.isInvalid()) {
                     result.add(bonusRoad);
                 }
             }
 
-            if (!aflOnly && route.isOperatesWithout(Airline.AFL_CODE)) {
+            if (!aflOnly && route.otherAirlinesIsPresent()) {
                 SpendRoute bonusRoad = SpendRoute.ofScyteam(route);
                 if (!bonusRoad.isInvalid()) {
                     result.add(bonusRoad);
@@ -130,7 +132,7 @@ public class SpendBuilder {
         ServiceClass.SERVICE_CLASS_TYPE serviceClassType = this.getServiceClassType(this.getClassOfServiceName(spendInput));
         String award = spendInput.getAwardType();
 
-        if (aflOnly || route.isOperatesBy(Airline.AFL_CODE)) {
+        if (route.isOperatesBy(this.afl)) {
             BonusFilters.byInputParams(route.getAflBonuses(), serviceClassType, route.getOrigin(), award, isRoundTrip, route.isDirect());
             BonusFilters.byMilesInterval(route.getAflBonuses(), milesMin, milesMax);
             for (Flight flight : route.getFlights()) {
@@ -139,7 +141,7 @@ public class SpendBuilder {
             }
         }
 
-        if (!aflOnly || route.isOperatesWithout(Airline.AFL_CODE)) {
+        if (!aflOnly && route.otherAirlinesIsPresent()) {
             BonusFilters.byInputParams(route.getScyteamBonuses(), serviceClassType, route.getOrigin(), award, isRoundTrip, route.isDirect());
             BonusFilters.byMilesInterval(route.getScyteamBonuses(), milesMin, milesMax);
             for (Flight flight : route.getFlights()) {

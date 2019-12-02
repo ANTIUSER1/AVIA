@@ -46,7 +46,7 @@ public class BonusSearcher {
             }
         }
 
-        if (!isAflOnly && route.isOperatesWithout(afl)){
+        if (!isAflOnly && route.otherAirlinesIsPresent()) {
             route.getScyteamBonuses().addAll(findBonuses(route.getScyteamZones()));
             route.getScyteamBonuses().addAll(findBonuses(route.getScyteamReverseZones()));
             //TODO add BonusFilters.byAllowedClasses for scyteam
@@ -65,7 +65,7 @@ public class BonusSearcher {
                 BonusFilters.byAllowedClasses(flight.getAflBonuses(), flight.getAllowedClasses(afl));
             }
 
-            if (!isAflOnly && route.isOperatesWithout(afl)) {
+            if (!isAflOnly && route.otherAirlinesIsPresent()) {
                 flight.getScyteamBonuses().addAll(findBonuses(flight.getScyteamZones()));
                 flight.getScyteamBonuses().addAll(findBonuses(flight.getScyteamReverseZones()));
                 //TODO add BonusFilters.byAllowedClasses for scyteam
