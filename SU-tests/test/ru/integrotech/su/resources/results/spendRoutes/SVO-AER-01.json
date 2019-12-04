@@ -30,22 +30,8 @@
         "regionCode": "CIS"
       }
     },
-    "via": {
-      "airport": {
-        "airportCode": "LED"
-      },
-      "city": {
-        "cityCode": "LED",
-        "weight": 2
-      },
-      "country": {
-        "countryCode": "RU"
-      },
-      "region": {
-        "regionCode": "CIS"
-      }
-    },
     "isAfl": true,
+    "single": true,
     "mileCosts": [
       {
         "airportFrom": {
@@ -71,6 +57,30 @@
               "classOfServiceName": "economy"
             },
             "classOfService2": {},
+            "value": 10000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "UC",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {
+              "classOfServiceName": "business"
+            },
+            "value": 10000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "UO",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {
+              "classOfServiceName": "business"
+            },
             "value": 10000,
             "isLightAward": false,
             "fitsMilesInterval": true
@@ -110,7 +120,23 @@
         "regionCode": "CIS"
       }
     },
+    "via": {
+      "airport": {
+        "airportCode": "LED"
+      },
+      "city": {
+        "cityCode": "LED",
+        "weight": 2
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
     "isAfl": true,
+    "single": true,
     "mileCosts": [
       {
         "airportFrom": {
@@ -136,30 +162,6 @@
               "classOfServiceName": "economy"
             },
             "classOfService2": {},
-            "value": 10000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          },
-          {
-            "awardType": "UO",
-            "classOfService1": {
-              "classOfServiceName": "economy"
-            },
-            "classOfService2": {
-              "classOfServiceName": "business"
-            },
-            "value": 10000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          },
-          {
-            "awardType": "UC",
-            "classOfService1": {
-              "classOfServiceName": "economy"
-            },
-            "classOfService2": {
-              "classOfServiceName": "business"
-            },
             "value": 10000,
             "isLightAward": false,
             "fitsMilesInterval": true

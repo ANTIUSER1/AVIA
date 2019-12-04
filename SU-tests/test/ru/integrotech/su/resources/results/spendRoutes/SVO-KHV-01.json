@@ -30,6 +30,154 @@
         "regionCode": "CIS"
       }
     },
+    "isAfl": true,
+    "single": true,
+    "mileCosts": [
+      {
+        "airportFrom": {
+          "airportCode": "SVO"
+        },
+        "airportTo": {
+          "airportCode": "KHV"
+        },
+        "requiredAwards": [
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "business"
+            },
+            "classOfService2": {},
+            "value": 45000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "comfort"
+            },
+            "classOfService2": {},
+            "value": 37500,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {},
+            "value": 30000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "UC",
+            "classOfService1": {
+              "classOfServiceName": "comfort"
+            },
+            "classOfService2": {
+              "classOfServiceName": "business"
+            },
+            "value": 15000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "UC",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {
+              "classOfServiceName": "business"
+            },
+            "value": 30000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "UC",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {
+              "classOfServiceName": "comfort"
+            },
+            "value": 15000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "UO",
+            "classOfService1": {
+              "classOfServiceName": "comfort"
+            },
+            "classOfService2": {
+              "classOfServiceName": "business"
+            },
+            "value": 15000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "UO",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {
+              "classOfServiceName": "business"
+            },
+            "value": 30000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "UO",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {
+              "classOfServiceName": "comfort"
+            },
+            "value": 15000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "KHV"
+      },
+      "city": {
+        "cityCode": "KHV",
+        "weight": 11
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
     "via": {
       "airport": {
         "airportCode": "ICN"
@@ -46,22 +194,33 @@
       }
     },
     "isAfl": true,
+    "single": true,
     "mileCosts": [
       {
         "airportFrom": {
           "airportCode": "SVO"
         },
         "airportTo": {
-          "airportCode": "ICN"
+          "airportCode": "KHV"
         },
         "requiredAwards": [
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "business"
+            },
+            "classOfService2": {},
+            "value": 45000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
           {
             "awardType": "OW",
             "classOfService1": {
               "classOfServiceName": "economy"
             },
             "classOfService2": {},
-            "value": 40000,
+            "value": 30000,
             "isLightAward": false,
             "fitsMilesInterval": true
           },
@@ -73,59 +232,78 @@
             "classOfService2": {
               "classOfServiceName": "business"
             },
-            "value": 40000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          },
-          {
-            "awardType": "OW",
-            "classOfService1": {
-              "classOfServiceName": "business"
-            },
-            "classOfService2": {},
-            "value": 60000,
+            "value": 30000,
             "isLightAward": false,
             "fitsMilesInterval": true
           }
         ]
-      },  
-	  {
+      }
+    ]
+  },
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "KHV"
+      },
+      "city": {
+        "cityCode": "KHV",
+        "weight": 11
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "via": {
+      "airport": {
+        "airportCode": "KJA"
+      },
+      "city": {
+        "cityCode": "KJA",
+        "weight": 20
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "isAfl": true,
+    "single": false,
+    "mileCosts": [
+      {
         "airportFrom": {
-          "airportCode": "ICN"
+          "airportCode": "SVO"
         },
         "airportTo": {
           "airportCode": "KHV"
         },
         "requiredAwards": [
           {
-            "awardType": "UO",
-            "classOfService1": {
-              "classOfServiceName": "economy"
-            },
-            "classOfService2": {
-              "classOfServiceName": "business"
-            },
-            "value": 20000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          },
-          {
-            "awardType": "OW",
-            "classOfService1": {
-              "classOfServiceName": "economy"
-            },
-            "classOfService2": {},
-            "value": 70000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          },
-          {
             "awardType": "OW",
             "classOfService1": {
               "classOfServiceName": "business"
             },
             "classOfService2": {},
-            "value": 35000,
+            "value": 45000,
             "isLightAward": false,
             "fitsMilesInterval": true
           },
@@ -135,17 +313,7 @@
               "classOfServiceName": "economy"
             },
             "classOfService2": {},
-            "value": 20000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          },
-          {
-            "awardType": "OW",
-            "classOfService1": {
-              "classOfServiceName": "business"
-            },
-            "classOfService2": {},
-            "value": 95000,
+            "value": 27500,
             "isLightAward": false,
             "fitsMilesInterval": true
           },
@@ -157,7 +325,7 @@
             "classOfService2": {
               "classOfServiceName": "business"
             },
-            "value": 70000,
+            "value": 27500,
             "isLightAward": false,
             "fitsMilesInterval": true
           }
@@ -212,14 +380,14 @@
       }
     },
     "isAfl": true,
+    "single": true,
     "mileCosts": [
-      
       {
         "airportFrom": {
           "airportCode": "SVO"
         },
         "airportTo": {
-          "airportCode": "PEK"
+          "airportCode": "KHV"
         },
         "requiredAwards": [
           {
@@ -228,7 +396,7 @@
               "classOfServiceName": "business"
             },
             "classOfService2": {},
-            "value": 55000,
+            "value": 45000,
             "isLightAward": false,
             "fitsMilesInterval": true
           },
@@ -255,34 +423,73 @@
             "fitsMilesInterval": true
           }
         ]
+      }
+    ]
+  },
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
       },
-	  {
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "KHV"
+      },
+      "city": {
+        "cityCode": "KHV",
+        "weight": 11
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "via": {
+      "airport": {
+        "airportCode": "SEL"
+      },
+      "city": {
+        "cityCode": "SEL",
+        "weight": 43
+      },
+      "country": {
+        "countryCode": "KR"
+      },
+      "region": {
+        "regionCode": "AS"
+      }
+    },
+    "isAfl": true,
+    "single": true,
+    "mileCosts": [
+      {
         "airportFrom": {
-          "airportCode": "PEK"
+          "airportCode": "SVO"
         },
         "airportTo": {
           "airportCode": "KHV"
         },
         "requiredAwards": [
           {
-            "awardType": "UO",
-            "classOfService1": {
-              "classOfServiceName": "economy"
-            },
-            "classOfService2": {
-              "classOfServiceName": "business"
-            },
-            "value": 20000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          },
-          {
             "awardType": "OW",
             "classOfService1": {
               "classOfServiceName": "business"
             },
             "classOfService2": {},
-            "value": 95000,
+            "value": 45000,
             "isLightAward": false,
             "fitsMilesInterval": true
           },
@@ -292,27 +499,7 @@
               "classOfServiceName": "economy"
             },
             "classOfService2": {},
-            "value": 55000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          },
-          {
-            "awardType": "OW",
-            "classOfService1": {
-              "classOfServiceName": "economy"
-            },
-            "classOfService2": {},
-            "value": 20000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          },
-          {
-            "awardType": "OW",
-            "classOfService1": {
-              "classOfServiceName": "business"
-            },
-            "classOfService2": {},
-            "value": 35000,
+            "value": 30000,
             "isLightAward": false,
             "fitsMilesInterval": true
           },
@@ -324,7 +511,7 @@
             "classOfService2": {
               "classOfServiceName": "business"
             },
-            "value": 55000,
+            "value": 30000,
             "isLightAward": false,
             "fitsMilesInterval": true
           }

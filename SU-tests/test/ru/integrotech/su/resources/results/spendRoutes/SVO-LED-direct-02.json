@@ -31,6 +31,7 @@
       }
     },
     "isAfl": true,
+    "single": true,
     "mileCosts": [
       {
         "airportFrom": {
@@ -40,6 +41,16 @@
           "airportCode": "LED"
         },
         "requiredAwards": [
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "business"
+            },
+            "classOfService2": {},
+            "value": 15000,
+            "isLightAward": false,
+            "fitsMilesInterval": false
+          },
           {
             "awardType": "OW",
             "classOfService1": {
@@ -61,16 +72,6 @@
             "value": 10000,
             "isLightAward": false,
             "fitsMilesInterval": true
-          },
-          {
-            "awardType": "OW",
-            "classOfService1": {
-              "classOfServiceName": "business"
-            },
-            "classOfService2": {},
-            "value": 15000,
-            "isLightAward": false,
-            "fitsMilesInterval": false
           },
           {
             "awardType": "UO",

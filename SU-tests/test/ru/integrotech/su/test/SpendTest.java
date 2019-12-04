@@ -36,7 +36,7 @@ public class SpendTest {
         return expectedSpendRoutes;
     }
 
-    /*
+
     ////////////////////////////////////////////
     //use this method for visualization actual//
     ////////////////////////////////////////////
@@ -46,9 +46,9 @@ public class SpendTest {
                 "airport", // from type
                 "SVO",// from
                 "airport", // to type
-                "FCO", // to
+                "UFA", // to
                 -1, // miles min
-                300000, // miles max
+                100000, // miles max
                 null, // class listOf service name
                 "all", // award type
                 false, // afl only
@@ -73,7 +73,7 @@ public class SpendTest {
         String jsonResult = gson.toJson(actualSpend);
         System.out.println(jsonResult);
     }
-    */
+
 
     @Test
     public void SVO_VVO_01() {
