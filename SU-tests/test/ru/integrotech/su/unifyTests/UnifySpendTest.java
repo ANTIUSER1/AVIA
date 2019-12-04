@@ -132,7 +132,8 @@ public class UnifySpendTest extends UnifyBaseTest {
 
     private boolean isShallowEquals(SpendRoute expected, SpendRoute actual) {
         if (expected == actual) return true;
-        return expected.isAfl() == actual.isAfl() &&
+        return  expected.isAfl() == actual.isAfl() &&
+                expected.isSingle() == actual.isSingle() &&
                 Objects.equals(expected.getOrigin(), actual.getOrigin()) &&
                 Objects.equals(expected.getDestination(), actual.getDestination()) &&
                 Objects.equals(expected.getVia(), actual.getVia());

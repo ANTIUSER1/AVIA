@@ -132,6 +132,7 @@ public class BonusSearcher {
             route.setAflBonuses(newBonuses);
             bonuses1.clear();
             bonuses2.clear();
+            route.setBonusSummation(true);
         }
     }
 

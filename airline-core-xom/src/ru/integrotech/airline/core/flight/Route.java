@@ -41,6 +41,8 @@ public class Route implements Comparable<Route> {
 
     private Set<Bonus> scyteamBonuses;
 
+    private boolean isBonusSummation;
+
     private Route(List<Flight> flights) {
         this.code = Route.createCode(flights);
         this.flights = new ArrayList<>();
@@ -81,6 +83,14 @@ public class Route implements Comparable<Route> {
 
     public void setScyteamBonuses(Set<Bonus> scyteamBonuses) {
         this.scyteamBonuses = scyteamBonuses;
+    }
+
+    public boolean isBonusSummation() {
+        return isBonusSummation;
+    }
+
+    public void setBonusSummation(boolean bonusSummation) {
+        isBonusSummation = bonusSummation;
     }
 
     public List<Flight> getFlights(Airline airline) {
