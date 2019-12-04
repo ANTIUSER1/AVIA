@@ -106,7 +106,7 @@ public class SpendBuilder {
                 }
             }
 
-            if (!aflOnly && route.otherAirlinesIsPresent()) {
+            if (!aflOnly && route.otherAirlinesIsPresent(this.afl)) {
                 SpendRoute bonusRoad = SpendRoute.ofScyteam(route);
                 if (!bonusRoad.isInvalid()) {
                     result.add(bonusRoad);
@@ -141,7 +141,7 @@ public class SpendBuilder {
             }
         }
 
-        if (!aflOnly && route.otherAirlinesIsPresent()) {
+        if (!aflOnly && route.otherAirlinesIsPresent(this.afl)) {
             BonusFilters.byInputParams(route.getScyteamBonuses(), serviceClassType, route.getOrigin(), award, isRoundTrip, route.isDirect());
             BonusFilters.byMilesInterval(route.getScyteamBonuses(), milesMin, milesMax);
             for (Flight flight : route.getFlights()) {

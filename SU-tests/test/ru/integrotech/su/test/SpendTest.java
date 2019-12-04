@@ -1,8 +1,6 @@
 package ru.integrotech.su.test;
 
-import com.google.gson.JsonElement;
-import com.google.gson.JsonIOException;
-import com.google.gson.JsonSyntaxException;
+import com.google.gson.*;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -47,16 +45,16 @@ public class SpendTest {
         SpendInput spendInput = SpendInput.of(
                 "airport", // from type
                 "SVO",// from
-                null, // to type
-                null, // to
+                "airport", // to type
+                "FCO", // to
                 -1, // miles min
-                100000, // miles max
+                300000, // miles max
                 null, // class listOf service name
                 "all", // award type
                 false, // afl only
                 false // is round trip
         );
-        List<SpendRoute> actualSpend = this.common.getSpendBuilder().createSpendRoutes(spendInput);
+        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
         this.common.sort(actualSpend);
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String jsonResult = gson.toJson(actualSpend);

@@ -230,7 +230,7 @@ public class ToStringTest{
                 "airport", //destination type
                 "SVO", // origin
                 "airport", //destination type
-                "JFK", //destination
+                "FCO", //destination
                 null //airline code
         );
 
@@ -248,7 +248,7 @@ public class ToStringTest{
         		  "airport", //destination type
                   "SVO", // origin
                   "airport", //destination type
-                  "PRG", //destination
+                  "FCO", //destination
                   null //airline code
         );
 

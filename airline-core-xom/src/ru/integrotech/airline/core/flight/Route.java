@@ -162,11 +162,13 @@ public class Route implements Comparable<Route> {
     }
 
     /*if route can be completed fully only with others airlines with given airline return true*/
-    public boolean otherAirlinesIsPresent() {
+    public boolean otherAirlinesIsPresent(Airline airline) {
+        Set<Airline> carriers = new HashSet<>();
         for (Flight flight : this.flights) {
-            if (flight.getCarriers().values().size() > 1) return true;
+            carriers.addAll(flight.getCarriers().keySet());
         }
-        return false;
+        carriers.remove(airline);
+        return carriers.size() > 0;
     }
 
     /*if route can be completed fully only with others airlines with given airline return true*/
@@ -247,6 +249,15 @@ public class Route implements Comparable<Route> {
         return sb.toString();
     }
 
+    public String getReverseCityCodes() {
+        StringBuilder sb = new StringBuilder();
+        for (int i = this.flights.size() - 1; i >= 0; i--) {
+            sb.append(this.flights.get(i).getOrigin().getCity().getCode());
+        }
+        sb.append(this.getDestination().getCity().getCode());
+        return sb.toString();
+    }
+
     public List<City> getCities() {
         List<City> result = new ArrayList<>();
         for (Flight flight : this.flights) {
@@ -260,14 +271,14 @@ public class Route implements Comparable<Route> {
         return this.flights.size() == 1;
     }
 
-    public List<ServiceClass.SERVICE_CLASS_TYPE> getAllowedClasses(Airline airline) {
+    public Set<ServiceClass.SERVICE_CLASS_TYPE> getAllowedClasses(Airline airline) {
         List<Flight> flights = this.getFlights(airline);
         Set<ServiceClass.SERVICE_CLASS_TYPE> commonTypes = new HashSet<>(flights.get(0).getAllowedClasses(airline));
         for (int i = 1; i < flights.size(); i++) {
             Set<ServiceClass.SERVICE_CLASS_TYPE> types = new HashSet<>(flights.get(i).getAllowedClasses(airline));
             commonTypes.removeIf(commonType -> !types.contains(commonType));
         }
-        return new ArrayList<>(commonTypes);
+        return commonTypes;
     }
 
     @Override
