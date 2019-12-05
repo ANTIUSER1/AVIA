@@ -5,6 +5,7 @@ import com.google.gson.JsonElement;
 import org.junit.Assert;
 import org.junit.Test;
 
+import ru.integrotech.su.common.Location;
 import ru.integrotech.su.inputparams.charge.ChargeInput;
 import ru.integrotech.su.mock.MockLoader;
 import ru.integrotech.su.outputparams.charge.ChargeRoute;
@@ -46,12 +47,14 @@ public class UnifyChargeTest extends UnifyBaseTest {
         jsonElement = this.common.getLoader().loadJson(pathToCaseFolder, EXPECTED_RESPONSE_FILE_NAME);
         List<ChargeRoute> expectedChargeRoutes = this.common.getTestsCache().loadChargeRoutes(jsonElement);
 
-        String testReport = this.compareSpendRoute(expectedChargeRoutes, actualChargeRoutes);
-        boolean result = testReport.contains(SUCCESS)
-                && ( !testReport.contains(INCORRECT)
-                &&!testReport.contains(NOT_FOUND)
-                &&!testReport.contains(EXTRA));
+        String testHeader = this.buildReportHeader(chargeInput);
+        String testBody = this.compareChargeRoute(expectedChargeRoutes, actualChargeRoutes);
+        boolean result = testBody.contains(SUCCESS)
+                && ( !testBody.contains(INCORRECT)
+                &&!testBody.contains(NOT_FOUND)
+                &&!testBody.contains(EXTRA));
         printTestResults(result, actualChargeRoutes, pathToCaseFolder);
+        String testReport = String.format("%s%s", testHeader, testBody);
         printReport(testReport, pathToCaseFolder);
         return result;
     }
@@ -61,14 +64,76 @@ public class UnifyChargeTest extends UnifyBaseTest {
         Assert.assertTrue(executeTest(ROOT_TEST_DIRECTORY_PATH));
     }
 
-    private String compareSpendRoute(List<ChargeRoute> expected, List<ChargeRoute> actual) {
+    private String printLocation(Location location) {
         StringBuilder builder = new StringBuilder();
-        builder.append(String.format("%-23s     %s\n", " --- R O U T E ---", "RESULT"));
+        if (location.getAirport() != null) {
+            builder.append(String.format("|  %-20s %-10s   |\n",
+                    "location type:", "airport"));
+            builder.append(String.format("|  %-20s %-10s   |\n",
+                    "location code:", location.getAirport().getAirportCode()));
+        } else  if (location.getCity() != null) {
+            builder.append(String.format("|  %-20s %-10s   |\n",
+                    "location type:", "city"));
+            builder.append(String.format("|  %-20s %-10s   |\n",
+                    "location code:", location.getCity().getCityCode()));
+        } else  if (location.getCountry() != null) {
+            builder.append(String.format("|  %-20s %-10s   |\n",
+                    "location type:", "country"));
+            builder.append(String.format("|  %-20s %-10s   |\n",
+                    "location code:", location.getCountry().getCountryCode()));
+        } else  if (location.getRegion() != null) {
+            builder.append(String.format("|  %-20s %-10s   |\n",
+                    "location type:", "region"));
+            builder.append(String.format("|  %-20s %-10s   |\n",
+                    "location code:", location.getRegion().getRegionCode()));
+        }
+
+        return builder.toString();
+    }
+
+    private String buildReportHeader(ChargeInput chargeInput) {
+        StringBuilder builder = new StringBuilder();
+        builder.append("----------- CHARGE TEST -------------\n");
+        builder.append("|  Parameters:                       |\n");
+
+        //airline block
+        builder.append("|------------------------------------|\n");
+        builder.append(String.format("|  %-20s %-10s   |\n",
+                "airline:", chargeInput.getAirline().getAirlineCode()));
+
+        //origin block
+        builder.append("|------------------------------------|\n");
+        builder.append("|  Origin:                           |\n");
+        builder.append(this.printLocation(chargeInput.getOrigin()));
+
+        //destination block
+        builder.append("|------------------------------------|\n");
+        builder.append("|  Destination:                      |\n");
+        builder.append(this.printLocation(chargeInput.getDestination()));
+
+        //other values block
+        builder.append("|------------------------------------|\n");
+        builder.append(String.format("|  %-20s %-10s   |\n",
+                "tier level code:", chargeInput.getTierLevel().getTierLevelCode()));
+        builder.append(String.format("|  %-20s %-10s   |\n",
+                "is round trip:", chargeInput.isRoundTrip()));
+        builder.append(" ------------------------------------\n");
+        builder.append("\n");
+
+        return builder.toString();
+    }
+
+
+    private String compareChargeRoute(List<ChargeRoute> expected, List<ChargeRoute> actual) {
+        StringBuilder builder = new StringBuilder();
+        builder.append(String.format("%-26s     %s\n", " --- R O U T E ---", "RESULT"));
         builder.append("\n");
         this.sort(actual);
         this.sort(expected);
         ArrayList<ChargeRoute> actualArr = new ArrayList<>(actual);
         ArrayList<ChargeRoute> expectedlArr = new ArrayList<>(expected);
+        int successCounter = 0;
+        int incorrectCounter = 0;
         Iterator<ChargeRoute> expectedIterator = expectedlArr.iterator();
         expected: while (expectedIterator.hasNext()) {
             ChargeRoute expectedRoute = expectedIterator.next();
@@ -77,13 +142,15 @@ public class UnifyChargeTest extends UnifyBaseTest {
                 ChargeRoute actualRoute = actualIterator.next();
                 if (this.isShallowEquals(expectedRoute, actualRoute)) {
                     if (this.isDeepEquals(expectedRoute, actualRoute)) {
-                        builder.append(String.format("%-25s     %s",
+                        builder.append(String.format("   %-25s     %s",
                                 this.getRoteCode(actualRoute),
                                 SUCCESS));
+                        successCounter++;
                     } else {
-                        builder.append(String.format("%-25s     %s",
+                        builder.append(String.format("   %-22s     %s",
                                 this.getRoteCode(actualRoute),
                                 INCORRECT));
+                        incorrectCounter++;
                     }
                     expectedIterator.remove();
                     actualIterator.remove();
@@ -93,16 +160,42 @@ public class UnifyChargeTest extends UnifyBaseTest {
         }
 
         for (ChargeRoute route : expectedlArr) {
-            builder.append(String.format("%-25s     %s",
+            builder.append(String.format("   %-22s     %s",
                     this.getRoteCode(route),
                     NOT_FOUND));
         }
 
         for (ChargeRoute route : actualArr) {
-            builder.append(String.format("%-25s     %s",
+            builder.append(String.format("   %-23s     %s",
                     this.getRoteCode(route),
                     EXTRA));
         }
+
+        builder.append("\n");
+        builder.append(" ------------- RESULTS --------------\n");
+
+        if ((expectedlArr.size() == 0)
+                && (actualArr.size() == 0)
+                && incorrectCounter == 0){
+            builder.append("|            Tests is OK             |\n");
+        } else {
+            builder.append(String.format("|  %-20s %,10d   |\n",
+                    "expected routes:", expected.size()));
+            builder.append(String.format("|  %-20s %,10d   |\n",
+                    "actual routes:", actual.size()));
+
+            builder.append(String.format("|  %-20s %,10d   |\n",
+                    "OK:", successCounter));
+            builder.append(String.format("|  %-20s %,10d   |\n",
+                    "incorrect:", incorrectCounter));
+
+            builder.append(String.format("|  %-20s %,10d   |\n",
+                    "not found:", expectedlArr.size()));
+            builder.append(String.format("|  %-20s %,10d   |\n",
+                    "extra:", actualArr.size()));
+        }
+
+        builder.append(" ------------------------------------ \n");
 
         return builder.toString();
     }

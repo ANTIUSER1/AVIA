@@ -70,7 +70,6 @@ public class UnifySpendLkTest extends UnifyBaseTest {
         //origin block
         builder.append("|------------------------------------|\n");
         builder.append("|  Origin:                           |\n");
-
         builder.append(String.format("|  %-20s %-10s   |\n",
                 "location type:",
                 spendInput.getOrigin().getLocationType()));
@@ -81,7 +80,6 @@ public class UnifySpendLkTest extends UnifyBaseTest {
         //destination block
         builder.append("|------------------------------------|\n");
         builder.append("|  Destination:                      |\n");
-
         builder.append(String.format("|  %-20s %-10s   |\n",
                 "location type:",
                 spendInput.getDestination().getLocationType()));
@@ -92,7 +90,6 @@ public class UnifySpendLkTest extends UnifyBaseTest {
         //miles interval block
         builder.append("|------------------------------------|\n");
         builder.append("|  Miles interval:                   |\n");
-
         builder.append(String.format("|  %-20s %,-10d   |\n",
                 "miles min:",
                 spendInput.getMilesInterval().getMilesMin()));
