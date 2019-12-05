@@ -170,10 +170,18 @@ public class SpendLkBuilder {
     }
 
     private void replaceUO(Set<Bonus> bonuses) {
+        List<Bonus> bonusesForRemove = new ArrayList<>();
+        List<Bonus> bonusesForAdd = new ArrayList<>();
         for (Bonus bonus : bonuses) {
             if (bonus.getType().equals(Bonus.BONUS_TYPE.UO)) {
-                bonus.setType(Bonus.BONUS_TYPE.UC);
+                bonusesForRemove.add(bonus);
+                Bonus bonusUC = Bonus.of("UC", bonus.getServiceClass(), bonus.getUpgradeServiceClass(), bonus.getValue(), bonus.isLight(), bonus.getValidFrom(), bonus.getValidTo());
+                bonusesForAdd.add(bonusUC);
             }
         }
+        for (Bonus bonus : bonusesForRemove) {
+            bonuses.remove(bonus);
+        }
+        bonuses.addAll(bonusesForAdd);
     }
 }
