@@ -36,7 +36,7 @@ public class SpendTest {
         return expectedSpendRoutes;
     }
 
-
+    /*
     ////////////////////////////////////////////
     //use this method for visualization actual//
     ////////////////////////////////////////////
@@ -73,7 +73,7 @@ public class SpendTest {
         String jsonResult = gson.toJson(actualSpend);
         System.out.println(jsonResult);
     }
-
+    */
 
     @Test
     public void SVO_VVO_01() {

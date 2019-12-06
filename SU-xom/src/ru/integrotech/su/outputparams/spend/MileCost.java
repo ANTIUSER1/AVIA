@@ -4,7 +4,7 @@ package ru.integrotech.su.outputparams.spend;
 import ru.integrotech.airline.core.bonus.Bonus;
 import ru.integrotech.airline.core.flight.Flight;
 import ru.integrotech.airline.core.flight.Route;
-import ru.integrotech.su.common.Airport;
+import ru.integrotech.airline.core.location.Airport;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,7 @@ class MileCost {
         } else {
             bonuses = flight.getScyteamBonuses();
         }
-        return new MileCost(flight.getOrigin(), flight.getDestination(), bonuses);
+        return new MileCost(flight.getOrigin(), flight.getDestination(), flight.getDistance(), bonuses, isAfl);
     }
 
     static MileCost of(Route route, boolean isAfl) {
@@ -30,21 +30,22 @@ class MileCost {
         } else {
             bonuses = route.getScyteamBonuses();
         }
-        return new MileCost(route.getOrigin(), route.getDestination(), bonuses);
+        return new MileCost(route.getOrigin(), route.getDestination(), route.getDistance(), bonuses, isAfl);
     }
 
-    private Airport airportFrom;
+    private AirportWithZone airportFrom;
 
-    private Airport airportTo;
+    private AirportWithZone airportTo;
+
+    private int distance;
 
     private List<RequiredAward> requiredAwards;
 
-    private MileCost(ru.integrotech.airline.core.location.Airport origin,
-                     ru.integrotech.airline.core.location.Airport destination,
-                     Set<Bonus> bonuses) {
+    private MileCost(Airport origin, Airport destination, int distance, Set<Bonus> bonuses, boolean isAfl) {
         if (bonuses.size() != 0) {
-            this.airportFrom = Airport.of(origin.getCode());
-            this.airportTo = Airport.of(destination.getCode());
+            this.airportFrom = AirportWithZone.of(origin, isAfl);
+            this.airportTo = AirportWithZone.of(destination, isAfl);
+            this.distance = distance;
             this.requiredAwards = new ArrayList<>();
             for (Bonus bonus : bonuses) {
                 this.requiredAwards.add(RequiredAward.of(bonus));
@@ -55,23 +56,31 @@ class MileCost {
     private MileCost() {
     }
 
-    public Airport getAirportFrom() {
+    public AirportWithZone getAirportFrom() {
         return airportFrom;
     }
 
-    public void setAirportFrom(Airport airportFrom) {
+    public void setAirportFrom(AirportWithZone airportFrom) {
         this.airportFrom = airportFrom;
     }
 
-    public Airport getAirportTo() {
+    public AirportWithZone getAirportTo() {
         return airportTo;
     }
 
-    public void setAirportTo(Airport airportTo) {
+    public void setAirportTo(AirportWithZone airportTo) {
         this.airportTo = airportTo;
     }
+    
+    public int getDistance() {
+		return distance;
+	}
 
-    public List<RequiredAward> getRequiredAwards() {
+	public void setDistance(int distance) {
+		this.distance = distance;
+	}
+
+	public List<RequiredAward> getRequiredAwards() {
         return requiredAwards;
     }
 
