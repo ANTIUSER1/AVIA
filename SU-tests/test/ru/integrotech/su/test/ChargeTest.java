@@ -1,8 +1,6 @@
 package ru.integrotech.su.test;
 
-import com.google.gson.JsonElement;
-import com.google.gson.JsonIOException;
-import com.google.gson.JsonSyntaxException;
+import com.google.gson.*;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -209,7 +207,7 @@ public class ChargeTest{
                 false //isRound
         );
         actualCharge = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
-        Assert.assertTrue(classOfServiceIsPresent(actualCharge, ServiceClass.SERVICE_CLASS_TYPE.comfort.name()));
+        Assert.assertTrue(!classOfServiceIsPresent(actualCharge, ServiceClass.SERVICE_CLASS_TYPE.comfort.name()));
 
         chargeInput = ChargeInput.of(
                 "airport", // from type

@@ -19,6 +19,7 @@ public abstract class UnifyBaseTest {
     protected static final String REQUEST_FILE_NAME = "request.json";
     protected static final String EXPECTED_RESPONSE_FILE_NAME = "expectedResponse.json";
     protected static final String ACTUAL_RESPONSE_FILE_NAME = "actualResponse.json";
+    protected static final String REPORT_FILE_NAME = "report.txt";
 
     final CommonTest common;
 
@@ -82,12 +83,18 @@ public abstract class UnifyBaseTest {
 
     protected <T> void printTestResults(boolean testIsOK, List<T> actualRoutes, String pathToCaseFolder) throws FileNotFoundException, UnsupportedEncodingException {
         if (testIsOK) {
-            this.removeRedundantFile( String.format("%s%s%s", pathToCaseFolder, "/", ACTUAL_RESPONSE_FILE_NAME));
+            this.removeRedundantFile(String.format("%s%s%s", pathToCaseFolder, "/", ACTUAL_RESPONSE_FILE_NAME));
             System.out.printf("Case in directory %s is OK\n", pathToCaseFolder);
         } else {
             this.writeActualResponseToFile(actualRoutes, String.format("%s%s%s", pathToCaseFolder, "/", ACTUAL_RESPONSE_FILE_NAME));
-            System.out.printf("Case in directory %s is not correct. See actual response in this directory in %s\n", pathToCaseFolder, ACTUAL_RESPONSE_FILE_NAME);
+            System.out.printf("Case in directory %s is INCORRECT\n", pathToCaseFolder);
         }
+    }
+
+    protected void printReport(String report, String pathToCaseFolder) throws FileNotFoundException, UnsupportedEncodingException {
+        PrintWriter writer = new PrintWriter(String.format("%s%s%s", pathToCaseFolder, "/", REPORT_FILE_NAME), ENCODING_FORMAT);
+        writer.println(report);
+        writer.close();
     }
 
 }

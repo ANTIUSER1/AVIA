@@ -113,7 +113,6 @@ public class Bonus implements Comparable<Bonus> {
 
     //TODO remove after equals and hashcode update
     public boolean equalsIgnoreValue(Object o) {
-        if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Bonus bonus = (Bonus) o;
         return type == bonus.type &&

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-class MilesAmount {
+class MilesAmount implements Comparable<MilesAmount> {
 
     public static MilesAmount of(PassengerCharge charge) {
         List<Fare> fareGroups = new ArrayList<>();
@@ -100,6 +100,9 @@ class MilesAmount {
     }
 
 
-
-
+    @Override
+    public int compareTo(MilesAmount o) {
+        return this.classOfService.getClassOfServiceCode().compareTo
+                            (o.getClassOfService().classOfServiceCode);
+    }
 }

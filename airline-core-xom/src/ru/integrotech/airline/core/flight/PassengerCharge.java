@@ -12,11 +12,11 @@ import java.util.*;
 
 public class PassengerCharge {
 
-    public static List<PassengerCharge> listOf(Flight flight, int factor, boolean isRound, Airline airline) {
+    public static List<PassengerCharge> listOf(Flight flight, List<ServiceClass> allowedClasses, int factor, boolean isRound, Airline airline) {
         List<PassengerCharge> result = new ArrayList<>();
         boolean isAfl = airline.getCode().equals("SU");
 
-        for (ServiceClass serviceClass : PassengerCharge.getServiceClasses(flight, airline)) {
+        for (ServiceClass serviceClass : allowedClasses) {
             for (Tariff tariff : PassengerCharge.getTariffs(serviceClass)) {
                 for (Map.Entry<Integer, List<SubTariff>> subTarifEntry : PassengerCharge.getSubTariffs(tariff).entrySet()) {
                     Integer chargeCoff = subTarifEntry.getKey();
@@ -29,15 +29,15 @@ public class PassengerCharge {
                                 SubTariff.of(subTariff, isAfl),
                                 flight.getDistance(),
                                 chargeCoff);
-                                passengerCharge.initFields(factor, isRound);
-                                result.add(passengerCharge);
+                        passengerCharge.initFields(factor, isRound);
+                        result.add(passengerCharge);
                     }
                 }
             }
         }
         return result;
     }
-    
+
     public static PassengerCharge of(Airport origin, Airport destination,
 			Airline airline, ServiceClass serviceClass, Tariff tariff,
 			SubTariff subTariff, int distance, int chargeCoeff) {
@@ -45,27 +45,6 @@ public class PassengerCharge {
 		
 	}
 
-	
-
-
-    private static List<ServiceClass> getServiceClasses(Flight flight, Airline airline) {
-
-        List<ServiceClass.SERVICE_CLASS_TYPE> serviceClassTypes = new ArrayList<>(flight.getAllowedClasses(airline));
-
-        if (serviceClassTypes.isEmpty()) {
-            serviceClassTypes.addAll(airline.getServiceClassMap().keySet());
-        }
-
-        List<ServiceClass> result = new ArrayList<>();
-
-        for (ServiceClass.SERVICE_CLASS_TYPE type : serviceClassTypes) {
-            result.add(airline.getServiceClassMap().get(type));
-        }
-
-        Collections.sort(result, Collections.reverseOrder());
-
-        return result;
-    }
 
     private static List<Tariff> getTariffs(ServiceClass serviceClass) {
         List<Tariff> result = new ArrayList<>(serviceClass.getTariffMap().values());

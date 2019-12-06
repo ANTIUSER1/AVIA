@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-class Fare {
+class Fare implements Comparable<Fare>{
 
     static Fare of(PassengerCharge charge) {
         List<AirlineFareGroup> airlineFareGroups = new ArrayList<>();
@@ -69,6 +69,12 @@ class Fare {
     @Override
     public int hashCode() {
         return Objects.hash(fareGroup, airlineFareGroups);
+    }
+
+    @Override
+    public int compareTo(Fare o) {
+        return this.fareGroup.getFareGroupCode().compareTo
+                            (o.fareGroup.getFareGroupCode());
     }
 }
 

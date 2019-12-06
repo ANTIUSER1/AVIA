@@ -7,6 +7,7 @@ import ru.integrotech.airline.core.flight.Route;
 import ru.integrotech.su.common.Location;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
@@ -81,6 +82,18 @@ public class ChargeRoute implements Comparable<ChargeRoute>{
 
     public void setSegments(List<Segment> segments) {
         this.segments = segments;
+    }
+
+    public void sort() {
+        for (Segment segment : this.segments) {
+            Collections.sort(segment.milesAmounts);
+            for (MilesAmount milesAmount : segment.milesAmounts) {
+                Collections.sort(milesAmount.getFareGroups());
+                for (Fare fare : milesAmount.getFareGroups()) {
+                    Collections.sort(fare.getAirlineFareGroups());
+                }
+            }
+        }
     }
 
     @Override

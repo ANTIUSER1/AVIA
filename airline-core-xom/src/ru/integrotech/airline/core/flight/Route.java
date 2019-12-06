@@ -3,6 +3,7 @@ package ru.integrotech.airline.core.flight;
 
 
 import ru.integrotech.airline.core.airline.Airline;
+import ru.integrotech.airline.core.airline.ServiceClass;
 import ru.integrotech.airline.core.bonus.Bonus;
 import ru.integrotech.airline.core.location.Airport;
 import ru.integrotech.airline.core.location.City;
@@ -39,6 +40,8 @@ public class Route implements Comparable<Route> {
     private Set<Bonus> aflBonuses;
 
     private Set<Bonus> scyteamBonuses;
+
+    private boolean isBonusSummation;
 
     private Route(List<Flight> flights) {
         this.code = Route.createCode(flights);
@@ -80,6 +83,14 @@ public class Route implements Comparable<Route> {
 
     public void setScyteamBonuses(Set<Bonus> scyteamBonuses) {
         this.scyteamBonuses = scyteamBonuses;
+    }
+
+    public boolean isBonusSummation() {
+        return isBonusSummation;
+    }
+
+    public void setBonusSummation(boolean bonusSummation) {
+        isBonusSummation = bonusSummation;
     }
 
     public List<Flight> getFlights(Airline airline) {
@@ -160,19 +171,22 @@ public class Route implements Comparable<Route> {
         return true;
     }
 
-    /*if route can be completed fully without given airline return true*/
-    public boolean isOperatesWithout(Airline airline) {
-        int counter = 0;
-        Set<Airline> carriers;
+    /*if route can be completed fully only with others airlines with given airline return true*/
+    public boolean otherAirlinesIsPresent(Airline airline) {
+        Set<Airline> carriers = new HashSet<>();
         for (Flight flight : this.flights) {
-            carriers = flight.getCarriers().keySet();
-            if (!(carriers.contains(airline)) || (carriers.size() > 1)) counter++;
+            carriers.addAll(flight.getCarriers().keySet());
         }
-        return counter == this.flights.size();
+        carriers.remove(airline);
+        return carriers.size() > 0;
     }
 
-    /*if route can be completed fully without given airline return true*/
-    public boolean isOperatesWithout(String airlineCode) {
+    /*if route can be completed fully only with others airlines with given airline return true*/
+    public boolean otherAirlinesIsPresent(String airlineCode) {
+        return this.countFlights(airlineCode) < this.flights.size();
+    }
+
+    private int countFlights(String airlineCode) {
         int counter = 0;
         Set<Airline> airlines;
         for (Flight flight : this.flights) {
@@ -185,7 +199,15 @@ public class Route implements Comparable<Route> {
                 }
             }
         }
-        return counter == this.flights.size();
+        return counter;
+    }
+
+    private int countFlights(Airline airline) {
+        int counter = 0;
+        for (Flight flight : this.flights) {
+            if (flight.getCarriers().get(airline) != null) counter++;
+        }
+        return counter;
     }
 
     public String getAflZones() {
@@ -237,6 +259,15 @@ public class Route implements Comparable<Route> {
         return sb.toString();
     }
 
+    public String getReverseCityCodes() {
+        StringBuilder sb = new StringBuilder();
+        for (int i = this.flights.size() - 1; i >= 0; i--) {
+            sb.append(this.flights.get(i).getOrigin().getCity().getCode());
+        }
+        sb.append(this.getDestination().getCity().getCode());
+        return sb.toString();
+    }
+
     public List<City> getCities() {
         List<City> result = new ArrayList<>();
         for (Flight flight : this.flights) {
@@ -248,6 +279,16 @@ public class Route implements Comparable<Route> {
 
     public boolean isDirect() {
         return this.flights.size() == 1;
+    }
+
+    public Set<ServiceClass.SERVICE_CLASS_TYPE> getAllowedClasses(Airline airline) {
+        List<Flight> flights = this.getFlights(airline);
+        Set<ServiceClass.SERVICE_CLASS_TYPE> commonTypes = new HashSet<>(flights.get(0).getAllowedClasses(airline));
+        for (int i = 1; i < flights.size(); i++) {
+            Set<ServiceClass.SERVICE_CLASS_TYPE> types = new HashSet<>(flights.get(i).getAllowedClasses(airline));
+            commonTypes.removeIf(commonType -> !types.contains(commonType));
+        }
+        return commonTypes;
     }
 
     @Override

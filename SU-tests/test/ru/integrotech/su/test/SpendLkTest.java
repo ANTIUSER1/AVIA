@@ -1,8 +1,6 @@
 package ru.integrotech.su.test;
 
-import com.google.gson.JsonElement;
-import com.google.gson.JsonIOException;
-import com.google.gson.JsonSyntaxException;
+import com.google.gson.*;
 
 import org.junit.Assert;
 import org.junit.Test;

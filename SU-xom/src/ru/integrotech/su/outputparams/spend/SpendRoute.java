@@ -27,7 +27,14 @@ public class SpendRoute implements Comparable<SpendRoute> {
                 }
             }
         }
-        return new SpendRoute(Location.of(route.getOrigin()), Location.of(route.getDestination()), getVia(route), true, null, mileCosts);
+
+        boolean isSingle;
+        if (route.isBonusSummation()) {
+            isSingle = false;
+        } else {
+            isSingle = mileCosts.size() == 1;
+        }
+        return new SpendRoute(Location.of(route.getOrigin()), Location.of(route.getDestination()), getVia(route), true, isSingle, null, mileCosts);
     }
 
     static SpendRoute ofScyteam(Route route) {
@@ -46,7 +53,14 @@ public class SpendRoute implements Comparable<SpendRoute> {
                 }
             }
         }
-        return new SpendRoute(Location.of(route.getOrigin()), Location.of(route.getDestination()), getVia(route), false, airlines, mileCosts);
+
+        boolean isSingle;
+        if (route.isBonusSummation()) {
+            isSingle = false;
+        } else {
+            isSingle = mileCosts.size() == 1;
+        }
+        return new SpendRoute(Location.of(route.getOrigin()), Location.of(route.getDestination()), getVia(route), false, isSingle, airlines, mileCosts);
     }
 
     private static Location getVia(Route route) {
@@ -66,15 +80,18 @@ public class SpendRoute implements Comparable<SpendRoute> {
 
     private boolean isAfl;
 
+    private boolean single;
+
     private List<Airline> airlines;
 
     private List<MileCost> mileCosts;
 
-    private SpendRoute(Location origin, Location destination, Location via, boolean isAfl, List<Airline> airlines, List<MileCost> mileCosts) {
+    private SpendRoute(Location origin, Location destination, Location via, boolean isAfl, boolean isSingle,  List<Airline> airlines, List<MileCost> mileCosts) {
         this.origin = origin;
         this.destination = destination;
         this.via = via;
         this.isAfl = isAfl;
+        this.single = isSingle;
         this.airlines = airlines;
         this.mileCosts = mileCosts;
     }
@@ -130,6 +147,14 @@ public class SpendRoute implements Comparable<SpendRoute> {
         this.mileCosts = mileCosts;
     }
 
+    public boolean isSingle() {
+        return single;
+    }
+
+    public void setSingle(boolean single) {
+        this.single = single;
+    }
+
     String getKey() {
         return String.format("%s%s", this.origin, this.destination);
     }
@@ -158,18 +183,19 @@ public class SpendRoute implements Comparable<SpendRoute> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        SpendRoute spendRoute = (SpendRoute) o;
-        return isAfl == spendRoute.isAfl &&
-                Objects.equals(origin, spendRoute.origin) &&
-                Objects.equals(destination, spendRoute.destination) &&
-                Objects.equals(via, spendRoute.via) &&
-                Objects.equals(airlines, spendRoute.airlines) &&
-                Objects.equals(mileCosts, spendRoute.mileCosts);
+        SpendRoute that = (SpendRoute) o;
+        return isAfl == that.isAfl &&
+                single == that.single &&
+                Objects.equals(origin, that.origin) &&
+                Objects.equals(destination, that.destination) &&
+                Objects.equals(via, that.via) &&
+                Objects.equals(airlines, that.airlines) &&
+                Objects.equals(mileCosts, that.mileCosts);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(origin, destination, via, isAfl, airlines, mileCosts);
+        return Objects.hash(origin, destination, via, isAfl, single, airlines, mileCosts);
     }
 
     @Override
