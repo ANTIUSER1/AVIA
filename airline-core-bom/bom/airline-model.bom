@@ -224,7 +224,6 @@ public class PassengerCharge
     public readonly ru.integrotech.airline.core.airline.SubTariff subTariff;
     public readonly ru.integrotech.airline.core.airline.Tariff tariff;
     public PassengerCharge(ru.integrotech.airline.core.location.Airport arg1, ru.integrotech.airline.core.location.Airport arg2, ru.integrotech.airline.core.airline.Airline arg3, ru.integrotech.airline.core.airline.ServiceClass arg4, ru.integrotech.airline.core.airline.Tariff arg5, ru.integrotech.airline.core.airline.SubTariff arg6, int arg7, int arg8);
-    public static java.util.List listOf(ru.integrotech.airline.core.flight.Flight arg1, int arg2, boolean arg3, ru.integrotech.airline.core.airline.Airline arg4) domain 0,* class ru.integrotech.airline.core.flight.PassengerCharge;
     public string toString();
 }
 
@@ -239,6 +238,7 @@ public class Route
     public readonly java.util.Set airlines domain 0,* class ru.integrotech.airline.core.airline.Airline;
     public readonly java.util.List airportCodes domain 0,* class string;
     public readonly java.util.List airports domain 0,* class ru.integrotech.airline.core.location.Airport;
+    public boolean bonusSummation;
     public readonly java.util.List cities domain 0,* class ru.integrotech.airline.core.location.City;
     public readonly string cityCodes;
     public readonly string code;
@@ -247,21 +247,23 @@ public class Route
     public readonly int distance;
     public readonly java.util.List flights domain 0,* class ru.integrotech.airline.core.flight.Flight;
     public readonly ru.integrotech.airline.core.location.Airport origin;
+    public readonly string reverseCityCodes;
     public java.util.Set scyteamBonuses domain 0,* class ru.integrotech.airline.core.bonus.Bonus;
     public readonly string scyteamReverseZones;
     public readonly string scyteamZones;
     public int compareTo(ru.integrotech.airline.core.flight.Route arg);
     public static string createCode(java.util.List arg domain 0,* class ru.integrotech.airline.core.flight.Flight);
     public boolean equals(object arg);
+    public java.util.Set getAllowedClasses(ru.integrotech.airline.core.airline.Airline arg) domain 0,* class ru.integrotech.airline.core.airline.ServiceClass.SERVICE_CLASS_TYPE;
     public java.util.List getFlights(ru.integrotech.airline.core.airline.Airline arg) domain 0,* class ru.integrotech.airline.core.flight.Flight;
     public int hashCode();
     public boolean isOperatesBy(ru.integrotech.airline.core.airline.Airline arg);
     public boolean isOperatesBy(string arg);
-    public boolean isOperatesWithout(ru.integrotech.airline.core.airline.Airline arg);
-    public boolean isOperatesWithout(string arg);
     public static ru.integrotech.airline.core.flight.Route of(java.util.Collection arg domain 0,* class ru.integrotech.airline.core.flight.Flight);
     public static ru.integrotech.airline.core.flight.Route of(string arg1, 
         java.util.List arg2 domain 0,* class ru.integrotech.airline.core.flight.Flight);
+    public boolean otherAirlinesIsPresent(ru.integrotech.airline.core.airline.Airline arg);
+    public boolean otherAirlinesIsPresent(string arg);
     public string toString();
 }
 
