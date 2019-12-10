@@ -54,7 +54,7 @@ public class SpendLkBuilder {
     /*method for use in TESTS*/
     public List<SpendLkRoute> getSpendLkRoutes(SpendInput spendInput, String airlineCode) {
 
-        spendInput.setOnlyAfl(true);
+        spendInput.setIsOnlyAfl(true);
 
         List<Route> routes = this.getRoutes(spendInput);
         this.spendBuilder.executeFilters(routes, spendInput);
@@ -119,7 +119,7 @@ public class SpendLkBuilder {
         Map<String, RequiredAward> result = new HashMap<>();
         for (MileCost mileCost : spendRoute.getMileCosts()) {
             Map<String, RequiredAward> transitionalResult = new HashMap<>();
-            for (RequiredAward award : mileCost.getRequiredAwards()) {
+            for (RequiredAward award : mileCost.getRequiredAward()) {
                 String key = award.awardKey();
                 if (transitionalResult.containsKey(key)) {
                     RequiredAward savedAward = transitionalResult.get(key);

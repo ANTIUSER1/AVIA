@@ -99,9 +99,9 @@ public class UnifySpendTest extends UnifyBaseTest {
         //other values block
         builder.append("|------------------------------------|\n");
         builder.append(String.format("|  %-20s %-10s   |\n",
-                "Is only afl:", spendInput.isOnlyAfl()));
+                "Is only afl:", spendInput.getIsOnlyAfl()));
         builder.append(String.format("|  %-20s %-10s   |\n",
-                "Is round trip:", spendInput.isRoundTrip()));
+                "Is round trip:", spendInput.getIsRoundTrip()));
         String classOfServiceName = "null";
         if (spendInput.getClassOfService() != null) {
             classOfServiceName = spendInput.getClassOfService().getClassOfServiceName();
@@ -204,7 +204,7 @@ public class UnifySpendTest extends UnifyBaseTest {
             builder.append(String.format("%s  ", "   "));
         }
         builder.append(String.format("%s ", route.getDestination().getAirport().getAirportCode()));
-        builder.append(String.format("  %s", route.isAfl() ? "  afl" : "scyteam"));
+        builder.append(String.format("  %s", route.getIsAfl() ? "  afl" : "scyteam"));
         return builder.toString();
     }
 
@@ -222,7 +222,7 @@ public class UnifySpendTest extends UnifyBaseTest {
 
     private boolean isShallowEquals(SpendRoute expected, SpendRoute actual) {
         if (expected == actual) return true;
-        return  expected.isAfl() == actual.isAfl() &&
+        return  expected.getIsAfl() == actual.getIsAfl() &&
                 expected.isSingle() == actual.isSingle() &&
                 Objects.equals(expected.getOrigin(), actual.getOrigin()) &&
                 Objects.equals(expected.getDestination(), actual.getDestination()) &&

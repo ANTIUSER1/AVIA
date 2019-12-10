@@ -87,7 +87,7 @@ public class SpendBuilder {
         List<Route> routes = this.routesBuilder.getRoutes(routesInput);
 
         for (Route route : routes) {
-            this.bonusSearcher.findBonuses(route, spendInput.isOnlyAfl());
+            this.bonusSearcher.findBonuses(route, spendInput.getIsOnlyAfl());
         }
 
         return routes;
@@ -95,7 +95,7 @@ public class SpendBuilder {
 
     List<SpendRoute> buildSpendRoutes(List<Route> routes, SpendInput spendInput) {
 
-        boolean aflOnly = spendInput.isOnlyAfl();
+        boolean aflOnly = spendInput.getIsOnlyAfl();
         List<SpendRoute> result = new ArrayList<>();
 
         for (Route route : routes) {
@@ -127,8 +127,8 @@ public class SpendBuilder {
 
         int milesMin = spendInput.getMilesInterval().getMilesMin();
         int milesMax = spendInput.getMilesInterval().getMilesMax();
-        boolean aflOnly = spendInput.isOnlyAfl();
-        boolean isRoundTrip = spendInput.isRoundTrip();
+        boolean aflOnly = spendInput.getIsOnlyAfl();
+        boolean isRoundTrip = spendInput.getIsRoundTrip();
         ServiceClass.SERVICE_CLASS_TYPE serviceClassType = this.getServiceClassType(this.getClassOfServiceName(spendInput));
         String award = spendInput.getAwardType();
 

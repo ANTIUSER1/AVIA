@@ -100,9 +100,9 @@ public class UnifySpendLkTest extends UnifyBaseTest {
         //other values block
         builder.append("|------------------------------------|\n");
         builder.append(String.format("|  %-20s %-10s   |\n",
-                "Is only afl:", spendInput.isOnlyAfl()));
+                "Is only afl:", spendInput.getIsOnlyAfl()));
         builder.append(String.format("|  %-20s %-10s   |\n",
-                "Is round trip:", spendInput.isRoundTrip()));
+                "Is round trip:", spendInput.getIsRoundTrip()));
         String classOfServiceName = "null";
         if (spendInput.getClassOfService() != null) {
             classOfServiceName = spendInput.getClassOfService().getClassOfServiceName();

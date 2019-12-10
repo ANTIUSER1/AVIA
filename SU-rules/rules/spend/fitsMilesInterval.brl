@@ -3,8 +3,8 @@
   <name>fitsMilesInterval</name>
   <uuid>48be87a4-5547-495a-bb5c-340bc7e06590</uuid>
   <locale>en_US</locale>
-  <definition><![CDATA[if   the value of the bonus is between the miles min of the miles interval of 'spend input'   
-	and the miles max of the miles interval of 'spend input'    
+  <definition><![CDATA[if   the value of the bonus is between the miles min of the miles interval of inputParams    
+	and the miles max of the miles interval of inputParams     
 
 then make it true that the bonus is fits miles interval ; 
 

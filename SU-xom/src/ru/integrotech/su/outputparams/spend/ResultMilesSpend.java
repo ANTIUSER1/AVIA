@@ -8,20 +8,20 @@ public class ResultMilesSpend {
         return new ResultMilesSpend(routes);
     }
 
-    private List<SpendRoute> routes;
+    private List<SpendRoute> awardRoutes;
 
     private ResultMilesSpend(List<SpendRoute> routes) {
-        this.routes = routes;
+        this.awardRoutes = routes;
     }
 
     private ResultMilesSpend() {
     }
 
-    public List<SpendRoute> getRoutes() {
-        return routes;
+    public List<SpendRoute> getAwardRoutes() {
+        return awardRoutes;
     }
 
-    public void setRoutes(List<SpendRoute> routes) {
-        this.routes = routes;
+    public void setAwardRoutes(List<SpendRoute> routes) {
+        this.awardRoutes = routes;
     }
 }

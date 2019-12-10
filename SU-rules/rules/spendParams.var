@@ -3,6 +3,6 @@
   <name>spendParams</name>
   <uuid>1c96f13f-362c-4612-921c-0d576ed89cfc</uuid>
   <variables name="spendBuilder" type="ru.integrotech.su.outputparams.spend.SpendBuilder" initialValue="" verbalization="spend builder"/>
-  <variables name="resultMilesSpend" type="ru.integrotech.su.outputparams.spend.ResultMilesSpend" initialValue="" verbalization="result miles spend"/>
-  <variables name="spendInput" type="ru.integrotech.su.inputparams.spend.SpendInput" initialValue="" verbalization="spend input"/>
+  <variables name="inputParams" type="ru.integrotech.su.inputparams.spend.SpendInput" initialValue="" verbalization="inputParams"/>
+  <variables name="outputParams" type="ru.integrotech.su.outputparams.spend.ResultMilesSpend" initialValue="" verbalization="outputParams"/>
 </ilog.rules.studio.model.base:VariableSet>

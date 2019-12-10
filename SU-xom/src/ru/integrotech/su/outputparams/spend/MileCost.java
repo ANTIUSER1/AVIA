@@ -39,16 +39,16 @@ class MileCost {
 
     private int distance;
 
-    private List<RequiredAward> requiredAwards;
+    private List<RequiredAward> requiredAward;
 
     private MileCost(Airport origin, Airport destination, int distance, Set<Bonus> bonuses, boolean isAfl) {
         if (bonuses.size() != 0) {
             this.airportFrom = AirportWithZone.of(origin, isAfl);
             this.airportTo = AirportWithZone.of(destination, isAfl);
             this.distance = distance;
-            this.requiredAwards = new ArrayList<>();
+            this.requiredAward = new ArrayList<>();
             for (Bonus bonus : bonuses) {
-                this.requiredAwards.add(RequiredAward.of(bonus));
+                this.requiredAward.add(RequiredAward.of(bonus));
             }
         }
     }
@@ -80,12 +80,12 @@ class MileCost {
 		this.distance = distance;
 	}
 
-	public List<RequiredAward> getRequiredAwards() {
-        return requiredAwards;
+	public List<RequiredAward> getRequiredAward() {
+        return requiredAward;
     }
 
-    public void setRequiredAwards(List<RequiredAward> requiredAwards) {
-        this.requiredAwards = requiredAwards;
+    public void setRequiredAward(List<RequiredAward> requiredAwards) {
+        this.requiredAward = requiredAwards;
     }
 
     @Override
@@ -95,12 +95,12 @@ class MileCost {
         MileCost mileCost = (MileCost) o;
         return Objects.equals(airportFrom, mileCost.airportFrom) &&
                 Objects.equals(airportTo, mileCost.airportTo) &&
-                Objects.equals(requiredAwards, mileCost.requiredAwards);
+                Objects.equals(requiredAward, mileCost.requiredAward);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(airportFrom, airportTo, requiredAwards);
+        return Objects.hash(airportFrom, airportTo, requiredAward);
     }
 
 }
