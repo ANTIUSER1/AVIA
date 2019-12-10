@@ -9,6 +9,14 @@ ru.integrotech.su.inputparams.charge.ChargeInput#concept.label = charge input
 ru.integrotech.su.inputparams.charge.ChargeInput.roundTrip#phrase.action = make it {round trip} that {this} is round trip
 ru.integrotech.su.inputparams.charge.ChargeInput.roundTrip#phrase.navigation = {this} is round trip
 
+# ru.integrotech.su.inputparams.spend.LocationInput
+ru.integrotech.su.inputparams.spend.LocationInput#concept.label = location input
+ru.integrotech.su.inputparams.spend.LocationInput.locationCode#phrase.action = set the location code of {this} to {location code}
+ru.integrotech.su.inputparams.spend.LocationInput.locationCode#phrase.navigation = {location code} of {this}
+ru.integrotech.su.inputparams.spend.LocationInput.locationType#phrase.action = set the location type of {this} to {location type}
+ru.integrotech.su.inputparams.spend.LocationInput.locationType#phrase.navigation = {location type} of {this}
+ru.integrotech.su.inputparams.spend.LocationInput.of(java.lang.String,java.lang.String)#phrase.navigation = location input.of({0}, {1})
+
 # ru.integrotech.su.inputparams.spend.MilesInterval
 ru.integrotech.su.inputparams.spend.MilesInterval#concept.label = miles interval
 ru.integrotech.su.inputparams.spend.MilesInterval.milesMax#phrase.action = set the miles max of {this} to {miles max}
@@ -20,14 +28,17 @@ ru.integrotech.su.inputparams.spend.MilesInterval.milesMin#phrase.navigation = {
 ru.integrotech.su.inputparams.spend.SpendInput#concept.label = spend input
 ru.integrotech.su.inputparams.spend.SpendInput.awardType#phrase.action = set the award type of {this} to {award type}
 ru.integrotech.su.inputparams.spend.SpendInput.awardType#phrase.navigation = {award type} of {this}
+ru.integrotech.su.inputparams.spend.SpendInput.destination#phrase.action = set the destination of {this} to {destination}
+ru.integrotech.su.inputparams.spend.SpendInput.destination#phrase.clearer = clear the destination of {this}
+ru.integrotech.su.inputparams.spend.SpendInput.destination#phrase.navigation = {destination} of {this}
+ru.integrotech.su.inputparams.spend.SpendInput.isOnlyAfl#phrase.action = make it {only afl} that {this} is only afl
+ru.integrotech.su.inputparams.spend.SpendInput.isOnlyAfl#phrase.navigation = {this} is only afl
+ru.integrotech.su.inputparams.spend.SpendInput.isRoundTrip#phrase.action = make it {round trip} that {this} is round trip
+ru.integrotech.su.inputparams.spend.SpendInput.isRoundTrip#phrase.navigation = {this} is round trip
 ru.integrotech.su.inputparams.spend.SpendInput.lang#phrase.action = set the lang of {this} to {lang}
 ru.integrotech.su.inputparams.spend.SpendInput.lang#phrase.navigation = {lang} of {this}
 ru.integrotech.su.inputparams.spend.SpendInput.milesInterval#phrase.action = set the miles interval of {this} to {miles interval}
 ru.integrotech.su.inputparams.spend.SpendInput.milesInterval#phrase.navigation = {miles interval} of {this}
-ru.integrotech.su.inputparams.spend.SpendInput.onlyAfl#phrase.action = make it {only afl} that {this} is only afl
-ru.integrotech.su.inputparams.spend.SpendInput.onlyAfl#phrase.navigation = {this} is only afl
-ru.integrotech.su.inputparams.spend.SpendInput.roundTrip#phrase.action = make it {round trip} that {this} is round trip
-ru.integrotech.su.inputparams.spend.SpendInput.roundTrip#phrase.navigation = {this} is round trip
 
 # ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable
 ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable#concept.label = check online registration available
@@ -64,8 +75,8 @@ ru.integrotech.su.outputparams.charge.ResultMilesCharge.routes#phrase.navigation
 
 # ru.integrotech.su.outputparams.spend.ResultMilesSpend
 ru.integrotech.su.outputparams.spend.ResultMilesSpend#concept.label = result miles spend
-ru.integrotech.su.outputparams.spend.ResultMilesSpend.routes#phrase.action = set the routes of {this} to {route}
-ru.integrotech.su.outputparams.spend.ResultMilesSpend.routes#phrase.navigation = {route} of {this}
+ru.integrotech.su.outputparams.spend.ResultMilesSpend.awardRoutes#phrase.action = set the routes of {this} to {route}
+ru.integrotech.su.outputparams.spend.ResultMilesSpend.awardRoutes#phrase.navigation = {route} of {this}
 
 # ru.integrotech.su.outputparams.spend.ResultMilesSpendLk
 ru.integrotech.su.outputparams.spend.ResultMilesSpendLk#concept.label = result miles spend lk

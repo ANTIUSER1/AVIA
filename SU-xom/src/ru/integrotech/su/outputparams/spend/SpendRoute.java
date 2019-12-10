@@ -123,12 +123,12 @@ public class SpendRoute implements Comparable<SpendRoute> {
         this.via = via;
     }
 
-    public boolean isAfl() {
-        return isAfl;
+    public boolean getIsAfl() {
+        return this.isAfl;
     }
 
-    public void setAfl(boolean afl) {
-        isAfl = afl;
+    public void setIsAfl(boolean isAfl) {
+        this.isAfl = isAfl;
     }
 
     public List<Airline> getAirlines() {
@@ -164,7 +164,7 @@ public class SpendRoute implements Comparable<SpendRoute> {
             Collections.sort(this.airlines);
         }
         for (MileCost mileCost : this.mileCosts) {
-            Collections.sort(mileCost.getRequiredAwards());
+            Collections.sort(mileCost.getRequiredAward());
         }
     }
 
@@ -172,7 +172,7 @@ public class SpendRoute implements Comparable<SpendRoute> {
     boolean isInvalid() {
         if (this.mileCosts == null || this.mileCosts.isEmpty()) return true;
         for (MileCost mileCost : this.mileCosts) {
-            if (mileCost.getRequiredAwards() == null || mileCost.getRequiredAwards().isEmpty()) {
+            if (mileCost.getRequiredAward() == null || mileCost.getRequiredAward().isEmpty()) {
                 return true;
             }
         }

@@ -5,7 +5,7 @@
   <referencedVariables variableName="resultMilesSpendLk" variableSetName="spendLkParams" direction="OUT">
     <variableSet href="../../rules/spendLkParams.var#472431b7-b337-4afb-a48a-e77d976c5180"/>
   </referencedVariables>
-  <referencedVariables variableName="spendInput" variableSetName="spendParams">
+  <referencedVariables variableName="inputParams" variableSetName="spendParams">
     <variableSet href="../../rules/spendParams.var#1c96f13f-362c-4612-921c-0d576ed89cfc"/>
   </referencedVariables>
   <ruleflow href="../../rules/spendLkRulesFlow.rfl#60e800f6-fe66-499b-89e2-0578d70b1b78"/>

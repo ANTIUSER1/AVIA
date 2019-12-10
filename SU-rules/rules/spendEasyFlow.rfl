@@ -24,7 +24,7 @@ try {]]>&#13;<![CDATA[
       </StartTask>
       <ActionTask Identifier="build_charge">
         <Actions Language="irl"><![CDATA[try {]]>&#13;<![CDATA[
-	resultMilesSpend = spendBuilder.buildResult(spendInput);]]>&#13;<![CDATA[
+	outputParams = spendBuilder.buildResult(inputParams);]]>&#13;<![CDATA[
 } catch (Exception e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
 	loader.release();]]>&#13;<![CDATA[
@@ -77,6 +77,10 @@ use SpendBuilder;
 import ru.integrotech.airline.register.RegisterLoader;
 use loader;
 import ru.integrotech.airline.register.RegisterCache;
+use inputParams;
+use outputParams;
+import ru.integrotech.su.inputparams.spend.LocationInput;
+import ru.integrotech.su.inputparams.spend.MilesInterval;
 ]]></imports>
   </Properties>
 </Ruleflow></rfModel>

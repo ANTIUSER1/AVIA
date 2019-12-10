@@ -2,7 +2,7 @@ package ru.integrotech.su.inputparams.spend;
 
 public class LocationInput {
 
-    static LocationInput of(String locationType, String locationCode) {
+    public static LocationInput of(String locationType, String locationCode) {
         LocationInput result = new LocationInput();
         result.locationType = locationType;
         result.locationCode = locationCode;

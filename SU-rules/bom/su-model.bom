@@ -26,6 +26,13 @@ public class ChargeInput
 package ru.integrotech.su.inputparams.spend;
 
 
+public class LocationInput
+{
+    public string locationCode;
+    public string locationType;
+    public static ru.integrotech.su.inputparams.spend.LocationInput of(string arg1, string arg2);
+}
+
 public class MilesInterval
 {
     public int milesMax;
@@ -37,11 +44,11 @@ public class SpendInput
     public string awardType;
     public ru.integrotech.su.common.spend.ClassOfService classOfService;
     public ru.integrotech.su.inputparams.spend.LocationInput destination;
+    public boolean isOnlyAfl;
+    public boolean isRoundTrip;
     public string lang;
     public ru.integrotech.su.inputparams.spend.MilesInterval milesInterval;
-    public boolean onlyAfl;
     public ru.integrotech.su.inputparams.spend.LocationInput origin;
-    public boolean roundTrip;
     public static ru.integrotech.su.inputparams.spend.SpendInput of(string arg1, string arg2, string arg3, string arg4, int arg5, int arg6, string arg7, string arg8, boolean arg9, boolean arg10);
     public static ru.integrotech.su.inputparams.spend.SpendInput of();
 }
@@ -101,7 +108,7 @@ package ru.integrotech.su.outputparams.spend;
 
 public class ResultMilesSpend
 {
-    public java.util.List routes domain 0,* class ru.integrotech.su.outputparams.spend.SpendRoute;
+    public java.util.List awardRoutes domain 0,* class ru.integrotech.su.outputparams.spend.SpendRoute;
     public static ru.integrotech.su.outputparams.spend.ResultMilesSpend of(java.util.List arg domain 0,* class ru.integrotech.su.outputparams.spend.SpendRoute);
 }
 
