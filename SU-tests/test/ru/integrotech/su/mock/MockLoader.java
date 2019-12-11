@@ -73,7 +73,7 @@ public class MockLoader{
             this.testsCache.update(LOYALTY,              loadJson(props.getLoyaltyApi()));
             this.testsCache.update(FLIGHTS,              loadJson(props.getFlightsApi()));
             this.testsCache.update(SERVICE_CLASS_LIMITS, loadJson(props.getServiceClassLimitApi()));
-            this.testsCache.update(CHARGE_RULES, 		 loadJson(props.getChargeRulesApi()));
+            this.testsCache.update(MILES_RULES, 		 loadJson(props.getChargeRulesApi()));
             this.testsCache.update(TICKET_DESIGNATORS, 	 loadJson(props.getTicketDesignatorApi()));
 
         } catch (IOException e) {

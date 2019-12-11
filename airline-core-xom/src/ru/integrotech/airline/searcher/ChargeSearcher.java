@@ -7,6 +7,8 @@ import java.util.regex.Pattern;
 import ru.integrotech.airline.core.bonus.ChargeRule;
 import ru.integrotech.airline.register.RegisterCache;
 
+import static ru.integrotech.airline.core.bonus.ChargeRule.TARIFF_CONDITION.*;
+
 /**
  * algorithm about:
  * https://confluence.ramax.ru/pages/viewpage.action?pageId=54108215
@@ -28,7 +30,7 @@ public class ChargeSearcher {
 		
 		for (ChargeRule rule : this.rulesRegister) {
 			if (!this.isEmpty(rule.getFlightCode())
-				&& rule.getFlightCode().equals(flightCode)
+				&& rule.getFlightCode().contains(flightCode)
 				&& !this.isEmpty(rule.getBookingClass())
 				&& rule.getBookingClass().equals(bookingClassCode)
 				&& this.isFitsByMasks(fareBasicCode, rule.getTariffMasks())) {
@@ -44,7 +46,7 @@ public class ChargeSearcher {
 
 		for (ChargeRule rule : this.rulesRegister) {
 			if (!this.isEmpty(rule.getFlightCode())
-				&& rule.getFlightCode().equals(flightCode)
+				&& rule.getFlightCode().contains(flightCode)
 				&& rule.isAnyBookingClass()
 				&& this.isFitsByMasks(fareBasicCode, rule.getTariffMasks())) {
 
@@ -59,10 +61,10 @@ public class ChargeSearcher {
 
 		for (ChargeRule rule : this.rulesRegister) {
 			if (!this.isEmpty(rule.getFlightCode())
-				&& rule.getFlightCode().equals(flightCode)
+				&& rule.getFlightCode().contains(flightCode)
 				&& !this.isEmpty(rule.getBookingClass())
 				&& rule.getBookingClass().equals(bookingClassCode)
-				&& rule.getTariffCondition().equals("anyOne")) {
+				&& rule.getTariffCondition() == A) {
 
 				return rule;
 			}
@@ -75,9 +77,9 @@ public class ChargeSearcher {
 
 		for (ChargeRule rule : this.rulesRegister) {
 			if (!this.isEmpty(rule.getFlightCode())
-				&& rule.getFlightCode().equals(flightCode)
+				&& rule.getFlightCode().contains(flightCode)
 				&& rule.isAnyBookingClass()
-				&& rule.getTariffCondition().equals("anyOne")) {
+				&& rule.getTariffCondition() == A) {
 
 				return rule;
 			}
@@ -121,7 +123,7 @@ public class ChargeSearcher {
 			if (this.isEmpty(rule.getFlightCode())
 				&& !this.isEmpty(rule.getBookingClass())
 				&& rule.getBookingClass().equals(bookingClassCode)
-				&& rule.getTariffCondition().equals("anyOne")) {
+				&& rule.getTariffCondition() == A) {
 
 				return rule;
 			}
@@ -161,17 +163,20 @@ public class ChargeSearcher {
 
 
 	private boolean isFitsByMasks(String value, List<String> masks) {
-		
+
 		boolean result = false;
-		
-		for (String mask : masks) {
-			 Pattern p = Pattern.compile(mask);  
-		     Matcher m = p.matcher(value);  
-		     if (m.matches()) {
-		    	 result = true;
-		    	 break;
-		     }
-		}
+
+        if (!this.isEmpty(masks)) {
+
+            for (String mask : masks) {
+                Pattern p = Pattern.compile(mask);
+                Matcher m = p.matcher(value);
+                if (m.matches()) {
+                    result = true;
+                    break;
+                }
+            }
+        }
 		
 		return result;
 	}
@@ -179,6 +184,10 @@ public class ChargeSearcher {
 
 	private boolean isEmpty(String string) {
 		return  string == null || string.isEmpty();
+	}
+
+	private boolean isEmpty(List<String> string) {
+		return  string == null || string.size() == 0;
 	}
 	 
 	 

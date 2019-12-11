@@ -24,17 +24,17 @@ public class ChargeRule {
 	 
 	 private String bookingClass;
 	 
-	 private String flightCode;
+	 private List<String> flightCode;
 	 
-	 private String tariffCondition;
+	 private TARIFF_CONDITION tariffCondition;
 	 
 	 private List<String> tariffMasks;
 	 
-	 private String chargeCondition;
+	 private CHARGE_CONDITION chargeCondition;
 	 
-	 private int chargeCoeff;
+	 private Integer chargeCoeff;
 	 
-	 private int distanceCoeff;
+	 private Integer distanceCoeff;
 
 	 private ChargeRule() {
 		
@@ -64,11 +64,11 @@ public class ChargeRule {
 		this.bookingClass = bookingClass;
 	}
 
-	public String getTariffCondition() {
+	public TARIFF_CONDITION getTariffCondition() {
 		return tariffCondition;
 	}
 
-	public void setTariffCondition(String classCondition) {
+	public void setTariffCondition(TARIFF_CONDITION classCondition) {
 		this.tariffCondition = classCondition;
 	}
 
@@ -80,35 +80,36 @@ public class ChargeRule {
 		this.tariffMasks = tariffMask;
 	}
 
-	public String getChargeCondition() {
+	public CHARGE_CONDITION getChargeCondition() {
 		return chargeCondition;
 	}
 
-	public void setChargeCondition(String chargeCoeffCondition) {
+	public void setChargeCondition(CHARGE_CONDITION chargeCoeffCondition) {
 		this.chargeCondition = chargeCoeffCondition;
 	}
 
-	public int getChargeCoeff() {
-		return chargeCoeff;
+	public Integer getChargeCoeff() {
+		return this.chargeCoeff == null ? 0 : this.chargeCoeff;
 	}
 
-	public void setChargeCoeff(int chargeCoeff) {
+	public void setChargeCoeff(Integer chargeCoeff) {
 		this.chargeCoeff = chargeCoeff;
 	}
 	
-	public String getFlightCode() {
+	public List<String> getFlightCode() {
 		return flightCode;
 	}
 
-	public void setFlightCode(String flightCode) {
+	public void setFlightCode(List<String> flightCode) {
 		this.flightCode = flightCode;
 	}
 
-	public int getDistanceCoeff() {
-		return distanceCoeff;
+	public Integer getDistanceCoeff() {
+
+		return this.distanceCoeff == null ? 0 : this.distanceCoeff ;
 	}
 
-	public void setDistanceCoeff(int distanceCoeff) {
+	public void setDistanceCoeff(Integer distanceCoeff) {
 		this.distanceCoeff = distanceCoeff;
 	}
 
@@ -126,6 +127,11 @@ public class ChargeRule {
 				", distanceCoeff=" + distanceCoeff +
 				'}';
 	}
+
+	public enum TARIFF_CONDITION { A, M }
+
+	public enum CHARGE_CONDITION { P, C }
+
 
 
 }

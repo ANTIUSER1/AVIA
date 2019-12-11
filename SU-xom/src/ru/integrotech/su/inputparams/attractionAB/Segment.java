@@ -2,7 +2,7 @@ package ru.integrotech.su.inputparams.attractionAB;
 
 class Segment {
 	
-	 private String orignIATA;
+	 private String originIATA;
 	 
 	 private String destinationIATA;
 	 
@@ -16,12 +16,12 @@ class Segment {
 		
 	 }
 
-	public String getOrignIATA() {
-		return orignIATA;
+	public String getOriginIATA() {
+		return originIATA;
 	}
 
-	public void setOrignIATA(String orignIATA) {
-		this.orignIATA = orignIATA;
+	public void setOriginIATA(String originIATA) {
+		this.originIATA = originIATA;
 	}
 
 	public String getDestinationIATA() {

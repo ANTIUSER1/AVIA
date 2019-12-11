@@ -160,7 +160,7 @@ public class RegisterCache {
             case LOYALTY:
                 this.initLoyalty(jsonElement);
                 break;
-            case CHARGE_RULES:
+            case MILES_RULES:
                 this.initChargeRules(jsonElement);
                 break;
             case TICKET_DESIGNATORS:
@@ -396,11 +396,29 @@ public class RegisterCache {
     
     private void initChargeRules(JsonElement jsonElement) {
         ChargeRule[] chargeRules = parseJsonElement(ChargeRule[].class, jsonElement);
+        for (ChargeRule rule : chargeRules) {
+            List<String> newMasks = new ArrayList<>();
+            if (rule.getTariffMasks() != null) {
+                for (String mask : rule.getTariffMasks()) {
+                    String newMask = mask.replaceAll("\\*", ".*")
+                            .replaceAll("#{3}", "\\\\d{3}")
+                            .replaceAll("#{2}", "\\\\d{2}")
+                            .replaceAll("#{1}", "\\\\d");
+                    newMasks.add(newMask);
+                }
+                rule.setTariffMasks(newMasks);
+            }
+        }
+
         this.chargeRules = new ArrayList<ChargeRule>(Arrays.asList(chargeRules));
     }
 
     private void initTicketDesignators(JsonElement jsonElement) {
         TicketDesignator[] ticketDesignators = parseJsonElement(TicketDesignator[].class, jsonElement);
+        for (TicketDesignator designator : ticketDesignators) {
+            String newMask = designator.getMask().replaceAll("\\*", ".*").replaceAll("#", "\\\\d");
+            designator.setMask(newMask);
+        }
         this.ticketDesignators = new ArrayList<TicketDesignator>(Arrays.asList(ticketDesignators));
     }
 
@@ -421,6 +439,6 @@ public class RegisterCache {
                         WRONG_ROUTES,
                         SERVICE_CLASS_LIMITS,
                         LOYALTY,
-                        CHARGE_RULES,
+                        MILES_RULES,
                         TICKET_DESIGNATORS}
 }

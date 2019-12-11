@@ -1,74 +1,82 @@
 [
 	{
-		"mask": "AD6\\d$",
-		"toZeroMiles":	true
+		"mask": "DP8#*",
+		"toZeroMiles": true
 	},
 	{
-		"mask": "AD7\\d$",
-		"toZeroMiles":	true
+		"mask": "DP9#*",
+		"toZeroMiles": true
 	},
 	{
-		"mask": "AD8\\d$",
-		"toZeroMiles":	true
+		"mask": "YW*",
+		"toZeroMiles": true
 	},
 	{
-		"mask": "AD9\\d$",
-		"toZeroMiles":	true
+		"mask": "YA*",
+		"toZeroMiles": true
 	},
 	{
-		"mask": "DP6\\d*",
-		"toZeroMiles":	true
+		"mask": "AD11#",
+		"toZeroMiles": true
 	},
 	{
-		"mask": "DP7\\d*",
-		"toZeroMiles":	true
+		"mask": "AD6#",
+		"toZeroMiles": true
 	},
 	{
-		"mask": "DP8\\d*",
-		"toZeroMiles":	true
+		"mask": "AD7#",
+		"toZeroMiles": true
 	},
 	{
-		"mask": "DP9\\d*",
-		"toZeroMiles":	true
+		"mask": "XW*",
+		"toZeroMiles": true
 	},
 	{
-		"mask": "FA*",
-		"toZeroMiles":	true
+		"mask": "XA*",
+		"toZeroMiles": true
 	},
 	{
 		"mask": "FW*",
-		"toZeroMiles":	true
-	},	
+		"toZeroMiles": true
+	},
+	{
+		"mask": "FA*",
+		"toZeroMiles": true
+	},
+	{
+		"mask": "AD8#",
+		"toZeroMiles": true
+	},
+	{
+		"mask": "DP7#*",
+		"toZeroMiles": true
+	},
+	{
+		"mask": "OW*",
+		"toZeroMiles": true
+	},
 	{
 		"mask": "JA*",
-		"toZeroMiles":	true
+		"toZeroMiles": true
 	},
 	{
 		"mask": "JW*",
-		"toZeroMiles":	true
-	},	
+		"toZeroMiles": true
+	},
 	{
 		"mask": "OA*",
-		"toZeroMiles":	true
-	},	
+		"toZeroMiles": true
+	},
 	{
-		"mask": "OW*",
-		"toZeroMiles":	true
-	},	
+		"mask": "*KO*",
+		"toZeroMiles": false
+	},
 	{
-		"mask": "XA*",
-		"toZeroMiles":	true
-	},	
+		"mask": "AD9#",
+		"toZeroMiles": true
+	},
 	{
-		"mask": "XW*",
-		"toZeroMiles":	true
-	},	
-	{
-		"mask": "YA*",
-		"toZeroMiles":	true
-	},	
-	{
-		"mask": "YW*",
-		"toZeroMiles":	true
+		"mask": "DP6#*",
+		"toZeroMiles": true
 	}
 ]

@@ -198,7 +198,7 @@ public class RegisterLoader{
             this.registers.update(LOYALTY,              loadJson(props.getLoyaltyApi()));
             this.registers.update(FLIGHTS,              loadJson(props.getFlightsApi()));
             this.registers.update(SERVICE_CLASS_LIMITS, loadJson(props.getServiceClassLimitApi()));
-            this.registers.update(CHARGE_RULES, 		loadJson(props.getChargeRulesApi()));
+            this.registers.update(MILES_RULES, 		loadJson(props.getChargeRulesApi()));
             this.registers.update(TICKET_DESIGNATORS, 	loadJson(props.getTicketDesignatorApi()));
 
 
