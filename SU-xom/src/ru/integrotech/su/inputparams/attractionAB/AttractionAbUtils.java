@@ -14,6 +14,9 @@ import ru.integrotech.airline.core.location.Airport;
 import ru.integrotech.airline.register.RegisterCache;
 import ru.integrotech.airline.searcher.ChargeSearcher;
 
+import static ru.integrotech.airline.core.bonus.ChargeRule.*;
+import static ru.integrotech.airline.core.bonus.ChargeRule.CHARGE_CONDITION.*;
+
 public class AttractionAbUtils {
 	
 	public static AttractionAbUtils of(RegisterCache registers) {
@@ -41,7 +44,7 @@ public class AttractionAbUtils {
 		
 		for (Segment segment : input.getData().getSegments()) {
 			
-			Airport origin = this.registers.getAirport(segment.getOrignIATA());
+			Airport origin = this.registers.getAirport(segment.getOriginIATA());
 			Airport destination = this.registers.getAirport(segment.getDestinationIATA());
 			Flight flight = origin.getOutcomeFlight(destination, airline);
 			int distance = 0;
@@ -64,10 +67,10 @@ public class AttractionAbUtils {
 			} else if (!this.isEmpty(segment.getBookingClassCode())
 					|| !this.isEmpty(segment.getFareBasisCode())) {
 
-						rule = this.findRule(segment, flight.getCode());
+						rule = this.findRule(segment, flight.getCode().replace(" ", ""));
 
 						if (rule != null) {
-							rule = this.findRuleForApply(segment, rule, flight.getCode());
+							rule = this.findRuleForApply(segment, rule, flight.getCode().replace(" ", ""));
 
 							chargeCoeff = rule.getChargeCoeff();
 							distanceCoeff = rule.getDistanceCoeff();
@@ -150,9 +153,9 @@ public class AttractionAbUtils {
 		ChargeRule result = null;
 		ChargeSearcher searcher = ChargeSearcher.of(this.registers);
 		
-		if (rule.getChargeCondition().equals("other")) {
+		if (rule.getChargeCondition() == P) {
 			result = rule;
-		} else if (rule.getChargeCondition().equals("byBookingClass")) {
+		} else if (rule.getChargeCondition() == C) {
 
 			result = searcher.findCase08(flightCode, segment.getBookingClassCode());
 
@@ -173,7 +176,7 @@ public class AttractionAbUtils {
 		ChargeRule result = baseRule;
 
 		if (rule.getChargeCoeff() != 0) {
-			result = ChargeRule.copy(baseRule);
+			result = copy(baseRule);
 			result.setDistanceCoeff(rule.getChargeCoeff() * result.getChargeCoeff() / 100);
 		}
 

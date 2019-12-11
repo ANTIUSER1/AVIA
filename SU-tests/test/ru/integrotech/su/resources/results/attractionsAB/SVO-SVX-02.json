@@ -1,0 +1,13 @@
+{
+	"data": {
+		"segments": [
+			{
+				"originIATA": "SVO",
+				"destinationIATA": "SVX",
+				"bookingClassCode": "R",
+				"fareBasisCode": "RSX",
+				"ticketDesignator": ""
+			}
+		]
+	}
+}
