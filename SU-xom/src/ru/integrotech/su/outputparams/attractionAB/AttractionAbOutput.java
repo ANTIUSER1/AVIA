@@ -1,8 +1,10 @@
 package ru.integrotech.su.outputparams.attractionAB;
 
+import ru.integrotech.airline.core.flight.PassengerChargeInfo;
+
 public class AttractionAbOutput {
 	
-	private String status;
+	private PassengerChargeInfo.Status status;
 	
 	private int miles;
 
@@ -10,11 +12,11 @@ public class AttractionAbOutput {
 		
 	}
 
-	public String getStatus() {
+	public PassengerChargeInfo.Status getStatus() {
 		return status;
 	}
 
-	public void setStatus(String status) {
+	public void setStatus(PassengerChargeInfo.Status status) {
 		this.status = status;
 	}
 
@@ -25,7 +27,6 @@ public class AttractionAbOutput {
 	public void setMiles(int miles) {
 		this.miles = miles;
 	}
-	
 	
 
 }

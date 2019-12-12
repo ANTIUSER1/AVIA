@@ -33,7 +33,7 @@ public class AttractionAbBuilder {
 		
 		if (charges != null) {
 			
-			Set<String> statuses = new HashSet<>();
+			Set<PassengerChargeInfo.Status> statuses = new HashSet<>();
 			int tierLevelFactor = utils.getTierLevelFactor(input);
 			
 			for (PassengerChargeInfo charge : charges) {
@@ -49,15 +49,15 @@ public class AttractionAbBuilder {
 			
 		} else {
 			result.setMiles(0);
-			result.setStatus("nodata");
+			result.setStatus(PassengerChargeInfo.Status.nodata);
 		}
 		
 		return result;
 	}
 
-	private String getStatus(Set<String> statuses) {
+	private PassengerChargeInfo.Status getStatus(Set<PassengerChargeInfo.Status> statuses) {
 		
-		String result = "distance";
+		PassengerChargeInfo.Status result = PassengerChargeInfo.Status.distance;
 		
 		if (statuses.size() == 1) {
 			result = statuses.iterator().next();
@@ -110,7 +110,5 @@ public class AttractionAbBuilder {
 	
 	
 	
-	
-	 
-	
+
 }

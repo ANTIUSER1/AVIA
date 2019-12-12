@@ -1,21 +1,12 @@
 {
-   "data": {
-        "segments": [
-             {
-                "orignIATA": "SVO",
-                "destinationIATA": "VVO",
-                "bookingClassCode": "O",
-                "fareBasisCode": "QVO",
-                "ticketDesignator": "XATEST"
-            },
-            {
-                "orignIATA": "SVO",
-                "destinationIATA": "PRG",
-                "bookingClassCode": "L",
-                "fareBasisCode": "LFM",
-                "ticketDesignator": "AD95"
-            }
-        ],
-        "tierCode": "basic"
-    }
+
+  "data": {
+    "tierCode": null,
+    "segments": [
+      {
+        "originIATA": "SVO",
+        "destinationIATA": "LED"
+      }
+    ]
+  }
 }
