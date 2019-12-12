@@ -79,7 +79,7 @@ public class AttractionAbBuilder
 public class AttractionAbOutput
 {
     public int miles;
-    public string status;
+    public ru.integrotech.airline.core.flight.PassengerChargeInfo.Status status;
 }
 
 package ru.integrotech.su.outputparams.charge;

@@ -18,6 +18,8 @@ import static ru.integrotech.airline.core.bonus.ChargeRule.*;
 import static ru.integrotech.airline.core.bonus.ChargeRule.CHARGE_CONDITION.*;
 
 public class AttractionAbUtils {
+
+	private static String DEFAULT_TIER_LEVEL = "basic";
 	
 	public static AttractionAbUtils of(RegisterCache registers) {
 		return new AttractionAbUtils(registers);
@@ -32,7 +34,7 @@ public class AttractionAbUtils {
 	public int getTierLevelFactor(AttractionAbInput input) {
 		String passengerTierLevel = input.getData().getTierCode();
 		if (this.isEmpty(passengerTierLevel)) {
-			passengerTierLevel = "basic";
+			passengerTierLevel = DEFAULT_TIER_LEVEL;
 		}
 		return registers.getLoyaltyMap().get(passengerTierLevel).getFactor() + 100;
 	}
@@ -50,7 +52,7 @@ public class AttractionAbUtils {
 			int distance = 0;
 			int chargeCoeff = 100;
 			int distanceCoeff = 100;
-			String chargeStatus = "distance";
+			PassengerChargeInfo.Status chargeStatus = PassengerChargeInfo.Status.distance;
 			ChargeRule rule = null;
 						
 			if (flight == null) {
@@ -74,7 +76,7 @@ public class AttractionAbUtils {
 
 							chargeCoeff = rule.getChargeCoeff();
 							distanceCoeff = rule.getDistanceCoeff();
-							chargeStatus = "full";
+							chargeStatus = PassengerChargeInfo.Status.full;
 
 						}
 					}
@@ -112,39 +114,25 @@ public class AttractionAbUtils {
 
 
 	private ChargeRule findRule(Segment segment, String flightCode) {
-		
+
+		ChargeRule result = null;
 		ChargeSearcher searcher = ChargeSearcher.of(this.registers);
 
-		ChargeRule rule = searcher.findCase01(flightCode,
-											  segment.getBookingClassCode(),
-											  segment.getFareBasisCode());
+		ChargeRule ruleWithFlightCode = searcher.findRuleWithFlightCode(flightCode);
 
-		if (rule == null) {
-			rule = searcher.findCase02(flightCode, segment.getFareBasisCode());
-		}
-		
-		if (rule == null) {
-			rule = searcher.findCase03(flightCode, segment.getBookingClassCode());
-		}
-		
-		if (rule == null) {
-			rule = searcher.findCase04(flightCode);
-		}
-		
-		if (rule == null) {
-			rule = searcher.findCase05(segment.getBookingClassCode(),
-						     			segment.getFareBasisCode());
-		}
-		
-		if (rule == null) {
-			rule = searcher.findCase06(segment.getFareBasisCode());
+		if (ruleWithFlightCode != null) {
+
+			result = searcher.findCases01_04(ruleWithFlightCode,
+                                         segment.getBookingClassCode(),
+                                         segment.getFareBasisCode());
+		} else {
+
+		    result = searcher.findCases05_07(segment.getBookingClassCode(),
+                                            segment.getFareBasisCode());
 		}
 
-		if (rule == null) {
-			rule = searcher.findCase07(segment.getBookingClassCode());
-		}
-		
-		return rule;
+
+		return result;
 	}
 
 
@@ -154,18 +142,13 @@ public class AttractionAbUtils {
 		ChargeSearcher searcher = ChargeSearcher.of(this.registers);
 		
 		if (rule.getChargeCondition() == P) {
+
 			result = rule;
+
 		} else if (rule.getChargeCondition() == C) {
 
-			result = searcher.findCase08(flightCode, segment.getBookingClassCode());
+		    result = searcher.findCases08_09(flightCode, segment.getBookingClassCode());
 
-			if (result == null) {
-				result = searcher.findCase09(segment.getBookingClassCode());
-			}
-
-			if (result != null) {
-				result = this.compareAndCopy(rule, result);
-			}
 		}
 
 		return result;

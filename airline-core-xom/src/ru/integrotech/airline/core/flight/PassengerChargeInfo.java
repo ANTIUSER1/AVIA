@@ -6,7 +6,7 @@ import ru.integrotech.airline.core.location.Airport;
 public class PassengerChargeInfo {
 	
 	public static PassengerChargeInfo of (boolean isPrivate, Airline airline, Airport origin, Airport destination, 
-										int distance, int chargeCoeff, int distanceCoeff, String chargeStatus) {
+										int distance, int chargeCoeff, int distanceCoeff, Status chargeStatus) {
 		PassengerChargeInfo result = new PassengerChargeInfo();
 		result.setBasic(isPrivate);
 		result.setAirline(airline);
@@ -33,7 +33,7 @@ public class PassengerChargeInfo {
 
 	private int distanceCoeff;
 
-	private String chargeStatus;
+	private Status chargeStatus;
 
 	private PassengerChargeInfo() {
 		
@@ -79,11 +79,11 @@ public class PassengerChargeInfo {
 		this.chargeCoeff = chargeCoeff;
 	}
 
-	public String getChargeStatus() {
+	public Status getChargeStatus() {
 		return chargeStatus;
 	}
 
-	public void setChargeStatus(String chargeStatus) {
+	public void setChargeStatus(Status chargeStatus) {
 		this.chargeStatus = chargeStatus;
 	}
 
@@ -106,5 +106,8 @@ public class PassengerChargeInfo {
 	public String getFlightCode() {
 		return String.format("%s%s", this.origin.getCode(), this.destination.getCode());
 	}
+
+	public enum Status {distance, full, nodata}
+
 
 }
