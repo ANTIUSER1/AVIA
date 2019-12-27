@@ -114,7 +114,7 @@ public class ResultMilesSpend
 
 public class ResultMilesSpendLk
 {
-    public java.util.List routes domain 0,* class ru.integrotech.su.outputparams.spend.SpendLkRoute;
+    public java.util.List awardRoutes domain 0,* class ru.integrotech.su.outputparams.spend.SpendLkRoute;
     public static ru.integrotech.su.outputparams.spend.ResultMilesSpendLk of(java.util.List arg domain 0,* class ru.integrotech.su.outputparams.spend.SpendLkRoute);
 }
 

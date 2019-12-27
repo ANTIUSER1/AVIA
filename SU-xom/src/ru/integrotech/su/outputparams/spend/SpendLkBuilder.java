@@ -76,8 +76,8 @@ public class SpendLkBuilder {
         Map<String, Map<String, RequiredAward>> routeMap = this.createRouteMap(spendRoutes);
 
         for (SpendRoute spendRoute : spendRoutes) {
-            if (!resultMap.containsKey(spendRoute.getKey())) {
-                resultMap.put(spendRoute.getKey(), SpendLkRoute.of(spendRoute));
+            if (!resultMap.containsKey(spendRoute.getCityKey())) {
+                resultMap.put(spendRoute.getCityKey(), SpendLkRoute.of(spendRoute));
             }
         }
 
@@ -104,12 +104,12 @@ public class SpendLkBuilder {
     private Map<String, Map<String, RequiredAward>> createRouteMap(List<SpendRoute> spendRoutes) {
         Map<String, Map<String, RequiredAward>> result = new HashMap<>();
         for (SpendRoute spendRoute : spendRoutes) {
-            if (result.containsKey(spendRoute.getKey())) {
-                Map<String, RequiredAward> awardMap = result.get(spendRoute.getKey());
+            if (result.containsKey(spendRoute.getCityKey())) {
+                Map<String, RequiredAward> awardMap = result.get(spendRoute.getCityKey());
                 Map<String, RequiredAward> updateMap = this.createAwardMap(spendRoute);
                 this.updateAwardMap(awardMap, updateMap);
             } else {
-                result.put(spendRoute.getKey(), this.createAwardMap(spendRoute));
+                result.put(spendRoute.getCityKey(), this.createAwardMap(spendRoute));
             }
         }
         return result;

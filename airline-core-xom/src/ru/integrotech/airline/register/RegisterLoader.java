@@ -166,8 +166,7 @@ public class RegisterLoader{
             request.disconnect();
             String serverCacheDateStr = root.getAsJsonObject().get("updated")
                     .getAsString();
-            SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
-            df.setTimeZone(TimeZone.getTimeZone("UTC"));
+            SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
             lastServerCacheInfoQueryDate = now;
             lastKnownServerCacheDate = df.parse(serverCacheDateStr);
             log.fine("Got server cahe date from update info. Return "
@@ -200,7 +199,6 @@ public class RegisterLoader{
             this.registers.update(SERVICE_CLASS_LIMITS, loadJson(props.getServiceClassLimitApi()));
             this.registers.update(MILES_RULES, 		loadJson(props.getChargeRulesApi()));
             this.registers.update(TICKET_DESIGNATORS, 	loadJson(props.getTicketDesignatorApi()));
-
 
         } catch ( IOException
                 | NoSuchAlgorithmException
