@@ -99,11 +99,11 @@ class RequiredAward implements Comparable<RequiredAward> {
         this.value = value;
     }
 
-    public boolean isLightAward() {
+    public boolean getIsLightAward() {
         return isLightAward;
     }
 
-    public void setLightAward(boolean lightAward) {
+    public void setIsLightAward(boolean lightAward) {
         isLightAward = lightAward;
     }
 

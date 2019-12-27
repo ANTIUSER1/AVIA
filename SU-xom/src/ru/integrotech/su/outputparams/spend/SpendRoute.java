@@ -155,8 +155,8 @@ public class SpendRoute implements Comparable<SpendRoute> {
         this.single = single;
     }
 
-    String getKey() {
-        return String.format("%s%s", this.origin, this.destination);
+    String getCityKey() {
+        return String.format("%s%s", this.origin.getCity().getCityCode(), this.destination.getCity().getCityCode());
     }
 
     public void sort() {
@@ -170,6 +170,7 @@ public class SpendRoute implements Comparable<SpendRoute> {
 
     /*the absence listOf bonuses at least in one segment means that route is incorrect*/
     boolean isInvalid() {
+        if (this.origin.getCity().equals(this.destination.getCity())) return true;
         if (this.mileCosts == null || this.mileCosts.isEmpty()) return true;
         for (MileCost mileCost : this.mileCosts) {
             if (mileCost.getRequiredAward() == null || mileCost.getRequiredAward().isEmpty()) {

@@ -80,8 +80,8 @@ ru.integrotech.su.outputparams.spend.ResultMilesSpend.awardRoutes#phrase.navigat
 
 # ru.integrotech.su.outputparams.spend.ResultMilesSpendLk
 ru.integrotech.su.outputparams.spend.ResultMilesSpendLk#concept.label = result miles spend lk
-ru.integrotech.su.outputparams.spend.ResultMilesSpendLk.routes#phrase.action = set the routes of {this} to {route}
-ru.integrotech.su.outputparams.spend.ResultMilesSpendLk.routes#phrase.navigation = {route} of {this}
+ru.integrotech.su.outputparams.spend.ResultMilesSpendLk.awardRoutes#phrase.action = set the routes of {this} to {route}
+ru.integrotech.su.outputparams.spend.ResultMilesSpendLk.awardRoutes#phrase.navigation = {route} of {this}
 
 # ru.integrotech.su.outputparams.spend.SpendBuilder
 ru.integrotech.su.outputparams.spend.SpendBuilder#concept.label = spend builder
