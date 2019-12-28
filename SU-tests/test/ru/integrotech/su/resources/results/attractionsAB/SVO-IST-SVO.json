@@ -1,0 +1,22 @@
+{
+  "lang": "ru",
+  "data": {
+    "tierCode": null,
+    "segments": [
+      {
+        "originIATA": "SVO",
+        "destinationIATA": "IST",
+        "bookingClassCode": "O",
+        "fareBasisCode": "OAR1E1",
+        "ticketDesignator": null
+      },
+      {
+        "originIATA": "IST",
+        "destinationIATA": "SVO",
+        "bookingClassCode": "X",
+        "fareBasisCode": "XAR1E1",
+        "ticketDesignator": null
+      }
+    ]
+  }
+}

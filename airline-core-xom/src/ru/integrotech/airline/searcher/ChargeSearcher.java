@@ -61,20 +61,14 @@ public class ChargeSearcher {
 
     public ChargeRule findCases05_07(String bookingClassCode, String fareBasicCode) {
 
-	    ChargeRule result = null;
+	    ChargeRule result = this.findCase05(bookingClassCode, fareBasicCode);
 
-        for (ChargeRule rule : this.rulesRegister) {
-            result = this.findCase05(rule, bookingClassCode, fareBasicCode);
+        if (result == null) {
+            result = this.findCase06(fareBasicCode);
+        }
 
-            if (result == null) {
-                result = this.findCase06(rule, fareBasicCode);
-            }
-
-            if (result == null) {
-                result = this.findCase07(rule, bookingClassCode);
-            }
-
-            if (result != null) break;
+        if (result == null) {
+            result = this.findCase07(bookingClassCode);
         }
 
         return result;
@@ -82,15 +76,10 @@ public class ChargeSearcher {
 
     public ChargeRule findCases08_09(String flightCode, String bookingClassCode) {
 
-        ChargeRule result = null;
+		ChargeRule result = this.findCase08(flightCode, bookingClassCode);
 
-        for (ChargeRule rule : this.rulesRegister) {
-
-            result = this.findCase08(rule, flightCode, bookingClassCode);
-
-            if (result == null) {
-                result = this.findCase09(rule, bookingClassCode);
-            }
+        if (result == null) {
+            result = this.findCase09(bookingClassCode);
         }
 
         return result;
@@ -98,7 +87,7 @@ public class ChargeSearcher {
 
     private ChargeRule findCase01(ChargeRule rule, String bookingClassCode, String fareBasicCode) {
 
-		if (this.isEmpty(rule.getBookingClass())
+		if (!this.isEmpty(rule.getBookingClass())
 			&& rule.getBookingClass().equals(bookingClassCode)
 			&& this.isFitsByMasks(fareBasicCode, rule.getTariffMasks())) {
 
@@ -121,7 +110,7 @@ public class ChargeSearcher {
 	
 	private ChargeRule findCase03(ChargeRule rule, String bookingClassCode) {
 
-			if (this.isEmpty(rule.getBookingClass())
+			if (!this.isEmpty(rule.getBookingClass())
 				&& rule.getBookingClass().equals(bookingClassCode)
 				&& rule.getTariffCondition() == A) {
 
@@ -142,65 +131,75 @@ public class ChargeSearcher {
 		return null;
 	}
 
-	private ChargeRule findCase05(ChargeRule rule, String bookingClassCode, String fareBasicCode) {
+	private ChargeRule findCase05(String bookingClassCode, String fareBasicCode) {
 
+		for (ChargeRule rule : this.rulesRegister) {
 			if (this.isEmpty(rule.getFlightCode())
-				&& this.isEmpty(rule.getBookingClass())
-				&& rule.getBookingClass().equals(bookingClassCode)
-				&& this.isFitsByMasks(fareBasicCode, rule.getTariffMasks())) {
+					&& !this.isEmpty(rule.getBookingClass())
+					&& rule.getBookingClass().equals(bookingClassCode)
+					&& this.isFitsByMasks(fareBasicCode, rule.getTariffMasks())) {
 
 				return rule;
 			}
+		}
 
 		return null;
 	}
 	
-	private ChargeRule findCase06(ChargeRule rule, String fareBasicCode) {
+	private ChargeRule findCase06(String fareBasicCode) {
 
+		for (ChargeRule rule : this.rulesRegister) {
 			if (this.isEmpty(rule.getFlightCode())
-				&& rule.isAnyBookingClass()
-				&& this.isFitsByMasks(fareBasicCode, rule.getTariffMasks())) {
+					&& rule.isAnyBookingClass()
+					&& this.isFitsByMasks(fareBasicCode, rule.getTariffMasks())) {
 
 				return rule;
 			}
+		}
 
 		return null;
 	}
 
-	private ChargeRule findCase07(ChargeRule rule, String bookingClassCode) {
+	private ChargeRule findCase07(String bookingClassCode) {
 
+		for (ChargeRule rule : this.rulesRegister) {
 			if (this.isEmpty(rule.getFlightCode())
-				&& this.isEmpty(rule.getBookingClass())
-				&& rule.getBookingClass().equals(bookingClassCode)
-				&& rule.getTariffCondition() == A) {
+					&& !this.isEmpty(rule.getBookingClass())
+					&& rule.getBookingClass().equals(bookingClassCode)
+					&& rule.getTariffCondition() == A) {
 
 				return rule;
 			}
+		}
 
 		return null;
 	}
 
-	private ChargeRule findCase08(ChargeRule rule, String flightCode, String bookingClassCode) {
-		
+	private ChargeRule findCase08(String flightCode, String bookingClassCode) {
+
+		for (ChargeRule rule : this.rulesRegister) {
 			if (!this.isEmpty(rule.getFlightCode())
-				&& rule.getFlightCode().contains(flightCode)
-				&& this.isEmpty(rule.getBookingClass())
-				&& rule.getBookingClass().equals(bookingClassCode)) {
+					&& rule.getFlightCode().contains(flightCode)
+					&& !this.isEmpty(rule.getBookingClass())
+					&& rule.getBookingClass().equals(bookingClassCode)) {
 
 				return rule;
 			}
+		}
 
 		return null;
 	}
 
-	private ChargeRule findCase09(ChargeRule rule, String bookingClassCode) {
+	private ChargeRule findCase09(String bookingClassCode) {
 
+		for (ChargeRule rule : this.rulesRegister) {
 			if (this.isEmpty(rule.getFlightCode())
-				&& this.isEmpty(rule.getBookingClass())
-				&& rule.getBookingClass().equals(bookingClassCode)) {
+					&& !this.isEmpty(rule.getBookingClass())
+					&& rule.getBookingClass().equals(bookingClassCode)) {
 
 				return rule;
 			}
+		}
 
 		return null;
 	}

@@ -17,7 +17,7 @@ public class AttractionAbTest {
 	 private final CommonTest common;
 
 	 public AttractionAbTest() {
-		this.common = CommonTest.of(MockLoader.ofMockRegisters());
+		this.common = CommonTest.of(MockLoader.ofRealRegisters());
 	 }
 	 
 	 private AttractionAbInput getInput(String jsonName) {
@@ -123,6 +123,27 @@ public class AttractionAbTest {
             String jsonResult = gson.toJson(output);
             System.out.println(jsonResult);
         }
+
+    @Test
+    public void PRINT_SVO_IST_SVO() {
+        AttractionAbInput input = this.getInput("SVO-IST-SVO.json");
+        AttractionAbOutput output = null;
+        output = this.common.getAttractionAbBuilder().buildResult(input);
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        String jsonResult = gson.toJson(output);
+        System.out.println(jsonResult);
+    }
+
+    @Test
+    public void PRINT_SVO_IST_01() {
+        AttractionAbInput input = this.getInput("SVO-IST-01.json");
+        AttractionAbOutput output = null;
+        output = this.common.getAttractionAbBuilder().buildResult(input);
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        String jsonResult = gson.toJson(output);
+        System.out.println(jsonResult);
+    }
+
 
 
     @Test

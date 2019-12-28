@@ -84,6 +84,11 @@ public class ToStringTest{
     }
 
     @Test
+    public void printAirport() {
+        System.out.println(this.common.getTestsCache().getRegisters().getAirport("IST").toString());
+    }
+
+    @Test
     public void printAirports() {
         for (Airport airport : this.common.getTestsCache().getAirports()) {
             System.out.println(airport.toString());

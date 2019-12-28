@@ -53,7 +53,7 @@ public class RegisterLoader{
         Properties props = new Properties();
         try {
             Path propertiesFilePath = Paths.get(
-                    System.getProperty("user.home"), ".fmc", "fmc.properties");
+                    System.getProperty("user.home"), ".ikm", "ikm.properties");
             File propertiesFile = new File(propertiesFilePath.toUri());
             InputStream is = null;
             if (propertiesFile.exists()) {
