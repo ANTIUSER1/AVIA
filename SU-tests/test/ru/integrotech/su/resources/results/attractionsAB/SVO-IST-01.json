@@ -1,0 +1,13 @@
+{
+  "data": {
+    "segments": [
+      {
+        "originIATA": "SVO",
+        "destinationIATA": "IST",
+        "bookingClassCode": "Q",
+        "fareBasisCode": "DISAPSKY",
+        "ticketDesignator": ""
+      }
+    ]
+  }
+}
