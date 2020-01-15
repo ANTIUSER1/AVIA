@@ -14,7 +14,9 @@ import ru.integrotech.su.inputparams.spend.SpendInput;
 import ru.integrotech.su.outputparams.route.RoutesBuilder;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /* this class takes input params (SpendInput) and returns back output params (ResultMilesSpend)
  * logic is:
@@ -58,6 +60,7 @@ public class SpendBuilder {
     /*method for use in ODM*/
     public ResultMilesSpend buildResult(List<Route> routes, SpendInput spendInput) {
         this.executeFilters(routes, spendInput);
+        this.bonusSummation(routes);
         List<SpendRoute> spendRoutes = this.buildSpendRoutes(routes, spendInput);
         return ResultMilesSpend.of(spendRoutes);
     }
@@ -72,6 +75,7 @@ public class SpendBuilder {
 
         List<Route> routes = this.getRoutes(spendInput, airlineCode);
         this.executeFilters(routes, spendInput);
+        this.bonusSummation(routes);
         this.updateFitsMilesIntervals(routes, spendInput);
         return this.buildSpendRoutes(routes, spendInput);
     }
@@ -203,6 +207,41 @@ public class SpendBuilder {
             result = spendInput.getClassOfService().getClassOfServiceName();
         }
         return result;
+    }
+
+    public void bonusSummation(List<Route> routes) {
+        for (Route route : routes) {
+            this.aflBonusSummation(route);
+        }
+    }
+
+    private void aflBonusSummation(Route route) {
+        if (route.getFlights().size() < 2) return;
+        Set<Bonus> bonuses1 = route.getFlights().get(0).getAflBonuses();
+        Set<Bonus> bonuses2 = route.getFlights().get(1).getAflBonuses();
+        Set<Bonus> newBonuses = new HashSet<>();
+        if (bonuses1.size() == bonuses2.size()) {
+            for (Bonus bonus1 : bonuses1) {
+                for (Bonus bonus2 : bonuses2) {
+                    if (bonus1.equalsIgnoreValue(bonus2)) {
+                        Bonus newBonus = Bonus.of(bonus1.getType().name(),
+                                bonus1.getServiceClass(),
+                                bonus1.getUpgradeServiceClass(),
+                                bonus1.getValue() + bonus2.getValue(),
+                                bonus1.isLight(),
+                                bonus1.getValidFrom(),
+                                bonus1.getValidTo());
+                        newBonuses.add(newBonus);
+                    }
+                }
+            }
+        }
+        if (newBonuses.size() == bonuses1.size()) {
+            route.setAflBonuses(newBonuses);
+            bonuses1.clear();
+            bonuses2.clear();
+            route.setBonusSummation(true);
+        }
     }
 
 }

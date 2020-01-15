@@ -68,7 +68,6 @@ public class BonusSearcher {
             for (Flight flight : route.getFlights()) {
                 this.findAflBonuses(flight, allowedClasses);
             }
-            this.bonusSummation(route);
         } else {
             BonusFilters.byAllowedClasses(bonuses, allowedClasses);
             BonusFilters.byExpiredDate(bonuses, new Date());
@@ -108,33 +107,7 @@ public class BonusSearcher {
         return result;
     }
 
-    private void bonusSummation(Route route) {
-        Set<Bonus> bonuses1 = route.getFlights().get(0).getAflBonuses();
-        Set<Bonus> bonuses2 = route.getFlights().get(1).getAflBonuses();
-        Set<Bonus> newBonuses = new HashSet<>();
-        if (bonuses1.size() == bonuses2.size()) {
-            for (Bonus bonus1 : bonuses1) {
-                for (Bonus bonus2 : bonuses2) {
-                    if (bonus1.equalsIgnoreValue(bonus2)) {
-                        Bonus newBonus = Bonus.of(bonus1.getType().name(),
-                                bonus1.getServiceClass(),
-                                bonus1.getUpgradeServiceClass(),
-                                bonus1.getValue() + bonus2.getValue(),
-                                bonus1.isLight(),
-                                bonus1.getValidFrom(),
-                                bonus1.getValidTo());
-                        newBonuses.add(newBonus);
-                    }
-                }
-            }
-        }
-        if (newBonuses.size() == bonuses1.size()) {
-            route.setAflBonuses(newBonuses);
-            bonuses1.clear();
-            bonuses2.clear();
-            route.setBonusSummation(true);
-        }
-    }
+
 
 
 
