@@ -41,6 +41,7 @@ public class SpendLkBuilder {
     /*method for use in ODM*/
     public ResultMilesSpendLk buildResult(List<Route> routes, SpendInput spendInput) {
         this.spendBuilder.executeFilters(routes, spendInput);
+        this.spendBuilder.bonusSummation(routes);
         List<SpendRoute> spendRoutes = this.spendBuilder.buildSpendRoutes(routes, spendInput);
         List<SpendLkRoute> spendLkRoutes = this.buildSpendLkRoutes(spendRoutes, spendInput);
         return ResultMilesSpendLk.of(spendLkRoutes);
@@ -58,6 +59,7 @@ public class SpendLkBuilder {
 
         List<Route> routes = this.getRoutes(spendInput);
         this.spendBuilder.executeFilters(routes, spendInput);
+        this.spendBuilder.bonusSummation(routes);
         this.spendBuilder.updateFitsMilesIntervals(routes, spendInput);
         this.replaceUO(routes);
 
