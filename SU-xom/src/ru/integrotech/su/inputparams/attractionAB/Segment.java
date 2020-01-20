@@ -21,6 +21,11 @@ class Segment {
 	}
 
 	public void setOriginIATA(String originIATA) {
+
+	 	if (originIATA != null) {
+	 		originIATA = originIATA.toUpperCase();
+		}
+
 		this.originIATA = originIATA;
 	}
 
@@ -29,6 +34,11 @@ class Segment {
 	}
 
 	public void setDestinationIATA(String destinationIATA) {
+
+		if (destinationIATA != null) {
+			destinationIATA = destinationIATA.toUpperCase();
+		}
+
 		this.destinationIATA = destinationIATA;
 	}
 

@@ -4,24 +4,16 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
-
 import ru.integrotech.airline.utils.PropertyHolder;
-
-import javax.net.ssl.*;
 
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.security.KeyManagementException;
-import java.security.NoSuchAlgorithmException;
-import java.security.SecureRandom;
-import java.security.cert.X509Certificate;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
-import java.util.TimeZone;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 import java.util.logging.Logger;
@@ -61,7 +53,7 @@ public class RegisterLoader{
                 log.fine("Using properties from user home dir");
             } else {
                 is = RegisterLoader.class.getClassLoader().getResourceAsStream(
-                        "airline-core-xom.properties");
+                        "ikm.properties");
                 log.fine("using properties from resources");
             }
 
@@ -153,11 +145,6 @@ public class RegisterLoader{
             return lastKnownServerCacheDate;
         }
         log.fine("Querying server cache info.");
-        try {
-            createSSLContext();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
 
         try {
             HttpURLConnection request = this.createRequest(this.props.getRegistryServiceBase() + "updateCache/info");
@@ -184,7 +171,6 @@ public class RegisterLoader{
         log.info("Updating cache ...");
 
         try {
-            createSSLContext();
             this.registers.update(AIRLINES,             loadJson(props.getAirlinesApi()));
             this.registers.update(WORLD_REGIONS,        loadJson(props.getWorldRegionsApi()));
             this.registers.update(COUNTRIES,            loadJson(props.getCountriesApi()));
@@ -201,44 +187,12 @@ public class RegisterLoader{
             this.registers.update(TICKET_DESIGNATORS, 	loadJson(props.getTicketDesignatorApi()));
 
         } catch ( IOException
-                | NoSuchAlgorithmException
-                | KeyManagementException e) {
+                | NullPointerException e) {
             e.printStackTrace();
         }
 
         cacheDate = lastKnownServerCacheDate;
         log.info("Registry cache updated. Cache buildResult date = " + cacheDate);
-    }
-
-    private void createSSLContext() throws NoSuchAlgorithmException, KeyManagementException {
-        TrustManager[] trustAllCerts = new TrustManager[] { new X509TrustManager() {
-            public X509Certificate[] getAcceptedIssuers() {
-                X509Certificate[] myTrustedAnchors = new X509Certificate[0];
-                return myTrustedAnchors;
-            }
-
-            @Override
-            public void checkClientTrusted(X509Certificate[] certs,
-                                           String authType) {
-            }
-
-            @Override
-            public void checkServerTrusted(X509Certificate[] certs,
-                                           String authType) {
-            }
-        } };
-
-        SSLContext sc = SSLContext.getInstance(this.props.getSslContext());
-        sc.init(null, trustAllCerts, new SecureRandom());
-        HttpsURLConnection
-                .setDefaultSSLSocketFactory(sc.getSocketFactory());
-        HttpsURLConnection
-                .setDefaultHostnameVerifier(new HostnameVerifier() {
-                    @Override
-                    public boolean verify(String arg0, SSLSession arg1) {
-                        return true;
-                    }
-                });
     }
 
 
@@ -262,10 +216,7 @@ public class RegisterLoader{
 
     private HttpURLConnection createRequest(String stringURL) throws IOException {
         URL url = new URL(stringURL);
-        HttpURLConnection request = (HttpURLConnection) url.openConnection();
-        request.setRequestProperty( this.props.getRegistryServiceKey(),
-                                    this.props.getRegistryServiceValue());
-        return request;
+        return (HttpURLConnection) url.openConnection();
     }
 
 

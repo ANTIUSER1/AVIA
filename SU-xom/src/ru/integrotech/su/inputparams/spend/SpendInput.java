@@ -105,6 +105,11 @@ public class SpendInput {
     }
 
     public void setAwardType(String awardType) {
+
+        if (awardType != null) {
+            awardType = awardType.toLowerCase();
+        }
+
         this.awardType = awardType;
     }
 

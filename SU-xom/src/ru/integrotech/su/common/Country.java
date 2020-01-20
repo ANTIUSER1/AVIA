@@ -5,7 +5,9 @@ import java.util.Objects;
 public class Country {
 
     public static Country of(String countryCode) {
-        return new Country(countryCode);
+        Country result = new Country();
+        result.setCountryCode(countryCode);
+        return result;
     }
 
     private String countryCode;
@@ -22,6 +24,11 @@ public class Country {
     }
 
     public void setCountryCode(String countryCode) {
+
+        if (countryCode != null) {
+            countryCode = countryCode.toUpperCase();
+        }
+
         this.countryCode = countryCode;
     }
 

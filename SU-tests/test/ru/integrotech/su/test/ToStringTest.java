@@ -173,12 +173,12 @@ public class ToStringTest{
 
     @Test
     public void printCharge() {
-        ChargeInput chargeInput = ChargeInput.of("city", //from
-                                                 "MOW", // from type
-                                                 "city", // to
-                                                 "PRG", // to type
-                                                 "SU", // airline code
-                                                 "basic", //loyalty
+        ChargeInput chargeInput = ChargeInput.of("City", //from
+                                                 "Mow", // from type
+                                                 "cIty", // to
+                                                 "pRG", // to type
+                                                 "sU", // airline code
+                                                 "Basic", //loyalty
                                                  false); //is round
         List<ChargeRoute> result = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
@@ -189,18 +189,21 @@ public class ToStringTest{
     @Test
     public void printSpend() {
         SpendInput spendInput = SpendInput.of(
-                                    "airport",// from
-                                    "SVO", // from type
-                                    "airport", // to
-                                    "LAX", // to type
+                                    "Airport",// from
+                                    "svo", // from type
+                                    "Airport", // to
+                                    "vvo", // to type
                                     -1, // miles min
                                     100000, // miles max
-                                    "economy", // class listOf service name
-                                    "all", // award type
+                                    "Economy", // class listOf service name
+                                    "All", // award type
                                     false, // afl only
                                     false // is round trip
                                     );
-        String airlineCode = "SU";
+        String airlineCode = "su";
+        if (airlineCode != null) {
+            airlineCode = airlineCode.toUpperCase();
+        }
         List<SpendRoute> result = this.common.getSpendBuilder().getSpendRoutes(spendInput, airlineCode);
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String jsonResult = gson.toJson(result);
@@ -210,18 +213,21 @@ public class ToStringTest{
     @Test
     public void printSpendLk() {
         SpendInput spendInput = SpendInput.of(
-                "airport",// from
-                "SVO", // from type
-                "airport", // to
-                "VVO", // to type
+                "airporT",// from
+                "svO", // from type
+                "aiRport", // to
+                "VVo", // to type
                 -1, // miles min
                 100000, // miles max
-                "economy", // class listOf service name
-                "all", // award type
+                "econoMY", // class listOf service name
+                "alL", // award type
                 false, // afl only
                 false // is round trip
         );
-        String airlineCode = "SU";
+        String airlineCode = "Su";
+        if (airlineCode != null) {
+            airlineCode = airlineCode.toUpperCase();
+        }
         List<SpendLkRoute> result = this.common.getSpendLkBuilder().getSpendLkRoutes(spendInput, airlineCode);
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String jsonResult = gson.toJson(result);
@@ -232,10 +238,10 @@ public class ToStringTest{
     public void printRoutes() {
 
         RoutesInput routesInput = RoutesInput.of(
-                "airport", //destination type
-                "SVO", // origin
-                "airport", //destination type
-                "TYD", //destination
+                "Airport", //destination type
+                "Svo", // origin
+                "Airport", //destination type
+                "JFk", //destination
                 null //airline code
         );
 
@@ -250,11 +256,11 @@ public class ToStringTest{
     public void printRoutesWithDetails() {
 
         RoutesInput routesInput = RoutesInput.of(
-        		  "airport", //destination type
-                  "SVO", // origin
-                  "airport", //destination type
-                  "TYD", //destination
-                  null //airline code
+        		  "Airport", //destination type
+                  "Svo", // origin
+                  "aIrport", //destination type
+                  "vvo", //destination
+                  "su" //airline code
         );
 
         List<Route> routes = this.common.getRoutesBuilder().getRoutes(routesInput);

@@ -25,6 +25,11 @@ class Data {
 	}
 
 	public void setTierCode(String tierCode) {
+
+		if (tierCode != null) {
+			tierCode = tierCode.toLowerCase();
+		}
+
 		this.tierCode = tierCode;
 	}
 	

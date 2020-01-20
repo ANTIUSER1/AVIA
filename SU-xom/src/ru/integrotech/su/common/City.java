@@ -30,6 +30,11 @@ public class City {
     }
 
     public void setCityCode(String cityCode) {
+
+        if (cityCode != null) {
+            cityCode = cityCode.toUpperCase();
+        }
+
         this.cityCode = cityCode;
     }
 

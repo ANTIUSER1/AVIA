@@ -33,6 +33,8 @@ public class ChargeInput {
 
         if (destType == null) {
             return result;
+        } else {
+            destType = destType.toLowerCase();
         }
 
         if (valueOf(destType) == airport) {

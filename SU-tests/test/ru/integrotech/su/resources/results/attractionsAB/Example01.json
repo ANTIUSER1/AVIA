@@ -1,7 +1,6 @@
 {
-
   "data": {
-    "tierCode": null,
+    "tierCode": "basic",
     "segments": [
       {
         "originIATA": "SVO",

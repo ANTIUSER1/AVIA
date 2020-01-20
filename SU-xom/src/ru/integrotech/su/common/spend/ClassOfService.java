@@ -8,7 +8,9 @@ import java.util.Objects;
 public class ClassOfService implements Comparable<ClassOfService> {
 
     public static ClassOfService of(String classOfServiceName) {
-        return new ClassOfService(classOfServiceName);
+        ClassOfService result = new ClassOfService();
+        result.setClassOfServiceName(classOfServiceName);
+        return result;
     }
 
     public static ClassOfService of(ServiceClass serviceClass) {
@@ -37,6 +39,11 @@ public class ClassOfService implements Comparable<ClassOfService> {
     }
 
     public void setClassOfServiceName(String classOfServiceName) {
+
+        if (classOfServiceName != null) {
+            classOfServiceName = classOfServiceName.toLowerCase();
+        }
+
         this.classOfServiceName = classOfServiceName;
     }
 

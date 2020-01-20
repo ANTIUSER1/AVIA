@@ -1,10 +1,39 @@
 package ru.integrotech.airline.utils;
 
+import ru.integrotech.airline.register.RegisterLoader;
+
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
+import java.util.logging.Logger;
 
 /*class for hold any values that could be loaded from .properties file
 * use in any classes that works with property values*/
 public class PropertyHolder {
+
+    private static final Logger log = Logger.getLogger(RegisterLoader.class.getName());
+
+
+
+    private static Properties getInnerProperties() {
+        Properties props = new Properties();
+
+        try {
+            InputStream is = PropertyHolder.class.getClassLoader().getResourceAsStream(
+                    "inner.properties");
+            log.fine("using properties from resources");
+
+            if (is != null) {
+                props.load(is);
+                is.close();
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return props;
+    }
 
     private final String encoding;
 
@@ -34,43 +63,61 @@ public class PropertyHolder {
 
     private final String registryServiceBase;
 
-    private final String registryServiceKey;
-
-    private final String registryServiceValue;
-
-    private final String sslContext;
-
     private final int cacheRecheckMinutes;
     
     private final String chargeRulesApi;
 
     private final String ticketDesignatorApi;
 
-
     public PropertyHolder(Properties properties) {
-        this.encoding = properties.getProperty("REGISTRY.SERVICE.ENCODING");
-        this.airlinesApi = properties.getProperty("API.AIRLINES");
-        this.worldRegionsApi = properties.getProperty("API.WORLD_REGIONS");
-        this.countriesApi = properties.getProperty("API.COUNTRIES");
-        this.citiesApi = properties.getProperty("API.CITIES");
-        this.airportApi = properties.getProperty("API.AIRPORTS");
-        this.flightsApi = properties.getProperty("API.FLIGHTS");
-        this.serviceClassLimitApi = properties.getProperty("API.SERVICE_CLASS_LIMITS");
-        this.tariffApi = properties.getProperty("API.TARIFF");
-        this.bonusRoutesApi = properties.getProperty("API.BONUS_ROUTES");
-        this.bonusesApi = properties.getProperty("API.BONUSES");
-        this.wrongRoutesApi = properties.getProperty("API.WRONG_ROUTES");
-        this.loyaltyApi = properties.getProperty("API.LOYALTY");
+
         this.registryServiceBase = properties.getProperty("REGISTRY.SERVICE.URL");
-        this.registryServiceKey = properties.getProperty("REGISTRY.SERVICE.KEY");
-        this.registryServiceValue = properties.getProperty("REGISTRY.SERVICE.VALUE");
-        this.sslContext = properties.getProperty("SSL.CONTEXT");
+        this.encoding = properties.getProperty("REGISTRY.SERVICE.ENCODING");
         String recheckTime = properties.getProperty("CACHE_RECHECK_MINUTES");
         this.cacheRecheckMinutes = recheckTime == null ? 0 : Integer
                 .valueOf(recheckTime);
-        this.chargeRulesApi = properties.getProperty("API.CHARGE_RULES");
-        this.ticketDesignatorApi = properties.getProperty("API.TICKET_DESIGNATORS");
+
+        Properties innerProperties = getInnerProperties();
+        this.airlinesApi = innerProperties.getProperty("API.AIRLINES");
+        this.worldRegionsApi = innerProperties.getProperty("API.WORLD_REGIONS");
+        this.countriesApi = innerProperties.getProperty("API.COUNTRIES");
+        this.citiesApi = innerProperties.getProperty("API.CITIES");
+        this.airportApi = innerProperties.getProperty("API.AIRPORTS");
+        this.flightsApi = innerProperties.getProperty("API.FLIGHTS");
+        this.serviceClassLimitApi = innerProperties.getProperty("API.SERVICE_CLASS_LIMITS");
+        this.tariffApi = innerProperties.getProperty("API.TARIFF");
+        this.bonusRoutesApi = innerProperties.getProperty("API.BONUS_ROUTES");
+        this.bonusesApi = innerProperties.getProperty("API.BONUSES");
+        this.wrongRoutesApi = innerProperties.getProperty("API.WRONG_ROUTES");
+        this.loyaltyApi = innerProperties.getProperty("API.LOYALTY");
+        this.chargeRulesApi = innerProperties.getProperty("API.CHARGE_RULES");
+        this.ticketDesignatorApi = innerProperties.getProperty("API.TICKET_DESIGNATORS");
     }
+
+    public PropertyHolder(Properties properties, Properties innerProperties) {
+
+        this.registryServiceBase = properties.getProperty("REGISTRY.SERVICE.URL");
+        this.encoding = properties.getProperty("REGISTRY.SERVICE.ENCODING");
+        String recheckTime = properties.getProperty("CACHE_RECHECK_MINUTES");
+        this.cacheRecheckMinutes = recheckTime == null ? 0 : Integer
+                .valueOf(recheckTime);
+
+        this.airlinesApi = innerProperties.getProperty("API.AIRLINES");
+        this.worldRegionsApi = innerProperties.getProperty("API.WORLD_REGIONS");
+        this.countriesApi = innerProperties.getProperty("API.COUNTRIES");
+        this.citiesApi = innerProperties.getProperty("API.CITIES");
+        this.airportApi = innerProperties.getProperty("API.AIRPORTS");
+        this.flightsApi = innerProperties.getProperty("API.FLIGHTS");
+        this.serviceClassLimitApi = innerProperties.getProperty("API.SERVICE_CLASS_LIMITS");
+        this.tariffApi = innerProperties.getProperty("API.TARIFF");
+        this.bonusRoutesApi = innerProperties.getProperty("API.BONUS_ROUTES");
+        this.bonusesApi = innerProperties.getProperty("API.BONUSES");
+        this.wrongRoutesApi = innerProperties.getProperty("API.WRONG_ROUTES");
+        this.loyaltyApi = innerProperties.getProperty("API.LOYALTY");
+        this.chargeRulesApi = innerProperties.getProperty("API.CHARGE_RULES");
+        this.ticketDesignatorApi = innerProperties.getProperty("API.TICKET_DESIGNATORS");
+    }
+
 
     public String getEncoding() {
         return encoding;
@@ -126,18 +173,6 @@ public class PropertyHolder {
 
     public String getRegistryServiceBase() {
         return registryServiceBase;
-    }
-
-    public String getRegistryServiceKey() {
-        return registryServiceKey;
-    }
-
-    public String getRegistryServiceValue() {
-        return registryServiceValue;
-    }
-
-    public String getSslContext() {
-        return sslContext;
     }
 
     public int getCacheRecheckMinutes() {
