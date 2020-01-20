@@ -4,8 +4,8 @@ public class LocationInput {
 
     public static LocationInput of(String locationType, String locationCode) {
         LocationInput result = new LocationInput();
-        result.locationType = locationType;
-        result.locationCode = locationCode;
+        result.setLocationType(locationType);
+        result.setLocationCode(locationCode);
         return result;
     }
 
@@ -21,6 +21,11 @@ public class LocationInput {
     }
 
     public void setLocationType(String locationType) {
+
+        if (locationType != null) {
+            locationType = locationType.toLowerCase();
+        }
+
         this.locationType = locationType;
     }
 
@@ -29,6 +34,11 @@ public class LocationInput {
     }
 
     public void setLocationCode(String locationCode) {
+
+        if (locationCode != null) {
+            locationCode = locationCode.toUpperCase();
+        }
+
         this.locationCode = locationCode;
     }
 }

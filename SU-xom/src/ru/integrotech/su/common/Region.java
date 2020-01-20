@@ -5,7 +5,9 @@ import java.util.Objects;
 public class Region {
 
     public static Region of(String regionCode) {
-        return new Region(regionCode);
+        Region result = new Region();
+        result.setRegionCode(regionCode);
+        return result;
     }
 
     private String regionCode;
@@ -22,6 +24,11 @@ public class Region {
     }
 
     public void setRegionCode(String regionCode) {
+
+        if (regionCode != null) {
+            regionCode = regionCode.toUpperCase();
+        }
+
         this.regionCode = regionCode;
     }
 

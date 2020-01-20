@@ -19,7 +19,7 @@ import static ru.integrotech.airline.register.RegisterCache.Type.*;
 
 
 /*class is used in tests instead listOf RegisterLoader. Combines loading JSONs from local
-  files and outside for use in tests. Paths to JSONs saved in test.properties*/
+  files and outside for use in tests. Paths to JSONs saved in ikm-mock.properties*/
 public class MockLoader{
 
     private PropertyHolder props;
@@ -45,10 +45,10 @@ public class MockLoader{
         return testsCache;
     }
 
-    private static Properties getProperties() {
+    private static Properties getProperties(String filePath) {
         Properties props = new Properties();
         try {
-            InputStream is = new FileInputStream("test/ru/integrotech/su/resources/test.properties");
+            InputStream is = new FileInputStream(filePath);
             props.load(is);
             is.close();
         } catch (Exception e) {
@@ -58,7 +58,8 @@ public class MockLoader{
     }
 
     private MockLoader() {
-        this.props = new PropertyHolder(getProperties());
+        this.props = new PropertyHolder(getProperties("test/ru/integrotech/su/resources/ikm-mock.properties"),
+                                        getProperties("test/ru/integrotech/su/resources/inner-mock.properties"));
         this.testsCache = new TestsCache();
         try {
             this.testsCache.update(AIRLINES,             loadJson(props.getAirlinesApi()));
@@ -82,7 +83,8 @@ public class MockLoader{
     }
 
     private MockLoader(RegisterCache registerCache) {
-        this.props = new PropertyHolder(getProperties());
+        this.props = new PropertyHolder(getProperties("test/ru/integrotech/su/resources/ikm-mock.properties"),
+                                        getProperties("test/ru/integrotech/su/resources/inner-mock.properties"));
         this.testsCache = new TestsCache(registerCache);
     }
 

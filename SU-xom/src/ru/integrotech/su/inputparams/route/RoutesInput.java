@@ -19,6 +19,9 @@ public class RoutesInput {
     }
 
     public static RoutesInput of(SpendInput spendInput, String airlineCode) {
+        if (airlineCode != null) {
+            airlineCode = airlineCode.toUpperCase();
+        }
         RoutesInput routesInput = new RoutesInput();
         routesInput.setOriginType(spendInput.getOrigin().getLocationType());
         routesInput.setOriginCode(spendInput.getOrigin().getLocationCode());
@@ -35,6 +38,27 @@ public class RoutesInput {
                                  String airlineCode) {
 
         RoutesInput routesInput = new RoutesInput();
+
+        if (originType != null) {
+            originType = originType.toLowerCase();
+        }
+
+        if (originCode != null) {
+            originCode = originCode.toUpperCase();
+        }
+
+        if (destinationType != null) {
+            destinationType = destinationType.toLowerCase();
+        }
+
+        if (destinationCode != null) {
+            destinationCode = destinationCode.toUpperCase();
+        }
+
+        if (airlineCode != null) {
+            airlineCode = airlineCode.toUpperCase();
+        }
+
         routesInput.setOriginType(originType);
         routesInput.setOriginCode(originCode);
         routesInput.setDestinationType(destinationType);

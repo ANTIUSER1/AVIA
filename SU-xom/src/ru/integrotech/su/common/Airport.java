@@ -5,7 +5,9 @@ import java.util.Objects;
 public class Airport implements Comparable<Airport> {
 
     public static Airport of(String airportCode) {
-        return new Airport(airportCode);
+        Airport result = new Airport();
+        result.setAirportCode(airportCode);
+        return result;
     }
 
     private String airportCode;
@@ -22,6 +24,11 @@ public class Airport implements Comparable<Airport> {
     }
 
     public void setAirportCode(String airportCode) {
+
+        if (airportCode != null) {
+            airportCode = airportCode.toUpperCase();
+        }
+
         this.airportCode = airportCode;
     }
 

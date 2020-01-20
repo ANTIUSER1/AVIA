@@ -18,6 +18,11 @@ public class TierLevel {
     }
 
     public void setTierLevelCode(String tierLevelCode) {
+
+        if (tierLevelCode != null) {
+            tierLevelCode = tierLevelCode.toLowerCase();
+        }
+
         this.tierLevelCode = tierLevelCode;
     }
 }

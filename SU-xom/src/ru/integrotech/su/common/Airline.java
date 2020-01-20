@@ -5,7 +5,9 @@ import java.util.Objects;
 public class Airline implements Comparable<Airline>{
 
     public static Airline of(String airlineCode) {
-        return new Airline(airlineCode);
+       Airline result = new Airline();
+       result.setAirlineCode(airlineCode);
+       return result;
     }
 
     private String airlineCode;
@@ -22,6 +24,11 @@ public class Airline implements Comparable<Airline>{
     }
 
     public void setAirlineCode(String airlineCode) {
+
+        if (airlineCode != null) {
+            airlineCode = airlineCode.toUpperCase();
+        }
+
         this.airlineCode = airlineCode;
     }
 

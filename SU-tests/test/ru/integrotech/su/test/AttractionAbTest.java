@@ -17,7 +17,7 @@ public class AttractionAbTest {
 	 private final CommonTest common;
 
 	 public AttractionAbTest() {
-		this.common = CommonTest.of(MockLoader.ofRealRegisters());
+		this.common = CommonTest.of(MockLoader.ofMockRegisters());
 	 }
 	 
 	 private AttractionAbInput getInput(String jsonName) {
