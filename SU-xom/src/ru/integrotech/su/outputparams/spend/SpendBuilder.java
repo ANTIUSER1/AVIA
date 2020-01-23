@@ -15,6 +15,7 @@ import ru.integrotech.su.outputparams.route.RoutesBuilder;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -126,6 +127,32 @@ public class SpendBuilder {
             this.executeFilters(route, spendInput);
         }
     }
+    
+    public void removeMarkedBonuses(List<Route> routes) {
+    	 
+    	for (Route route : routes) {
+     		this.removeMarkedBonuses(route.getAflBonuses());
+    		this.removeMarkedBonuses(route.getScyteamBonuses());
+    		
+    		for (Flight flight : route.getFlights()) {
+     			this.removeMarkedBonuses(flight.getAflBonuses());
+        		this.removeMarkedBonuses(flight.getScyteamBonuses());
+    			
+    		}
+        }
+    }
+    
+    private void removeMarkedBonuses(Set<Bonus> bonusSet) {
+    	Iterator<Bonus> iterator = bonusSet.iterator();
+		while (iterator.hasNext()) {
+			Bonus bonus = iterator.next();
+			if (bonus.isNeedsToBeRemoved()) {
+				iterator.remove();
+			}
+		}
+    }
+    
+   
 
     private void executeFilters(Route route, SpendInput spendInput) {
 
@@ -137,25 +164,29 @@ public class SpendBuilder {
         String award = spendInput.getAwardType();
 
         if (route.isOperatesBy(this.afl)) {
-            BonusFilters.byInputParams(route.getAflBonuses(), serviceClassType, route.getOrigin(), award, isRoundTrip, route.isDirect());
+        //    BonusFilters.byInputParams(route.getAflBonuses(), serviceClassType, route.getOrigin(), award, isRoundTrip, route.isDirect());
             BonusFilters.byMilesInterval(route.getAflBonuses(), milesMin, milesMax);
             for (Flight flight : route.getFlights()) {
-                BonusFilters.byInputParams(flight.getAflBonuses(), serviceClassType, flight.getOrigin(), award, isRoundTrip, false);
+            //    BonusFilters.byInputParams(flight.getAflBonuses(), serviceClassType, flight.getOrigin(), award, isRoundTrip, false);
                 BonusFilters.byMilesInterval(flight.getAflBonuses(), milesMin, milesMax);
             }
         }
 
         if (!aflOnly && route.otherAirlinesIsPresent(this.afl)) {
-            BonusFilters.byInputParams(route.getScyteamBonuses(), serviceClassType, route.getOrigin(), award, isRoundTrip, route.isDirect());
+        //    BonusFilters.byInputParams(route.getScyteamBonuses(), serviceClassType, route.getOrigin(), award, isRoundTrip, route.isDirect());
             BonusFilters.byMilesInterval(route.getScyteamBonuses(), milesMin, milesMax);
             for (Flight flight : route.getFlights()) {
-                BonusFilters.byInputParams(flight.getScyteamBonuses(), serviceClassType, flight.getOrigin(), award, isRoundTrip, false);
+            //    BonusFilters.byInputParams(flight.getScyteamBonuses(), serviceClassType, flight.getOrigin(), award, isRoundTrip, false);
                 BonusFilters.byMilesInterval(flight.getScyteamBonuses(), milesMin, milesMax);
             }
         }
 
+        
         BonusFilters.byCommonTypes(route);
     }
+    
+    
+    
 
     private ServiceClass.SERVICE_CLASS_TYPE getServiceClassType(String serviceClassName) {
         ServiceClass.SERVICE_CLASS_TYPE serviceClassType = null;

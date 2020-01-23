@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>filterByUCAvailiableFlightScyteam</name>
+  <uuid>42f5f852-7790-4f2a-893c-4176f79d191b</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions 
+	set 'flight' to a flight in the flights of the route ; 
+	set 'aflBonus'  to a bonus in the afl bonuses of flight ; 
+if the type of aflBonus is UC and the origin of flight is uc available is not true 
+then make it true  that aflBonus is needs to be removed ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

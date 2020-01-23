@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="spendRules" usingRuleflow="true" ruleflowName="spendRulesFlow" targetRuleProjectName="SU-rules">
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="spendRules" usingRuleflow="true" ruleflowName="spendFlow" targetRuleProjectName="SU-rules">
   <name>spendRules</name>
   <uuid>d1fea039-24c8-4576-a75c-bae6f1aeb508</uuid>
   <referencedVariables variableName="inputParams" variableSetName="spendParams">
@@ -8,7 +8,7 @@
   <referencedVariables variableName="outputParams" variableSetName="spendParams" direction="OUT">
     <variableSet href="../../rules/spendParams.var#1c96f13f-362c-4612-921c-0d576ed89cfc"/>
   </referencedVariables>
-  <ruleflow href="../../rules/spendRulesFlow.rfl#7a24925b-94ee-443f-bd93-e4d1ec23a258"/>
+  <ruleflow href="../../rules/spendFlow.rfl#b05e0a3e-abb8-4cd3-b04a-15c2b1a5d11d"/>
   <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="spendRules_extractor" validator="Default Validator"/>
   <targetRuleProject href="../../../SU-rules#acc26832-2255-4fd6-8c0a-3dbd27f5596b"/>
 </com.ibm.rules.studio.model.decisionservice:Operation>

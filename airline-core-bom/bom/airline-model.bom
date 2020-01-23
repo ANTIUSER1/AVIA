@@ -124,6 +124,7 @@ public class Bonus
     public readonly string description;
     public boolean fitsMilesInterval;
     public readonly boolean light;
+    public boolean needsToBeRemoved;
     public readonly ru.integrotech.airline.core.airline.ServiceClass.SERVICE_CLASS_TYPE serviceClass;
     public ru.integrotech.airline.core.bonus.Bonus.BONUS_TYPE type;
     public readonly ru.integrotech.airline.core.airline.ServiceClass.SERVICE_CLASS_TYPE upgradeServiceClass;
@@ -229,6 +230,7 @@ public class PassengerCharge
 
 public class Route
         extends java.lang.Comparable
+        property automaticVariable "true"
 {
     public static final readonly int MAX_SEGMENTS_SIZE;
     public java.util.Set aflBonuses domain 0,* class ru.integrotech.airline.core.bonus.Bonus;
