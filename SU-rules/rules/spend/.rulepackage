@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
-  <name>spend</name>
-  <uuid>2a0b45e8-5288-434b-8a19-1b13a0d2042e</uuid>
-</ilog.rules.studio.model.base:RulePackage>

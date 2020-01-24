@@ -124,8 +124,17 @@ public class SpendBuilder
     public ru.integrotech.su.outputparams.spend.ResultMilesSpend buildResult(ru.integrotech.su.inputparams.spend.SpendInput arg);
     public ru.integrotech.su.outputparams.spend.ResultMilesSpend buildResult(java.util.List arg1 domain 0,* class ru.integrotech.airline.core.flight.Route, 
         ru.integrotech.su.inputparams.spend.SpendInput arg2);
+    public void executeAllFilters(java.util.List arg1 domain 0,* class ru.integrotech.airline.core.flight.Route, 
+        ru.integrotech.su.inputparams.spend.SpendInput arg2);
+    public void executeFiltersByCommonTypes(java.util.List arg1 domain 0,* class ru.integrotech.airline.core.flight.Route, 
+        ru.integrotech.su.inputparams.spend.SpendInput arg2);
+    public void executeFiltersByInputParams(java.util.List arg1 domain 0,* class ru.integrotech.airline.core.flight.Route, 
+        ru.integrotech.su.inputparams.spend.SpendInput arg2);
+    public void executeFiltersByMilesInterval(java.util.List arg1 domain 0,* class ru.integrotech.airline.core.flight.Route, 
+        ru.integrotech.su.inputparams.spend.SpendInput arg2);
     public java.util.List getRoutes(ru.integrotech.su.inputparams.spend.SpendInput arg) domain 0,* class ru.integrotech.airline.core.flight.Route;
     public java.util.List getRoutes(ru.integrotech.su.inputparams.spend.SpendInput arg1, string arg2) domain 0,* class ru.integrotech.airline.core.flight.Route;
+    public ru.integrotech.airline.core.airline.ServiceClass.SERVICE_CLASS_TYPE getServiceClassType(ru.integrotech.su.inputparams.spend.SpendInput arg);
     public java.util.List getSpendRoutes(ru.integrotech.su.inputparams.spend.SpendInput arg) domain 0,* class ru.integrotech.su.outputparams.spend.SpendRoute;
     public java.util.List getSpendRoutes(ru.integrotech.su.inputparams.spend.SpendInput arg1, string arg2) domain 0,* class ru.integrotech.su.outputparams.spend.SpendRoute;
     public static ru.integrotech.su.outputparams.spend.SpendBuilder of(ru.integrotech.airline.register.RegisterCache arg);

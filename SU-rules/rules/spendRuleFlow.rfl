@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
-  <name>spendFlow</name>
+  <name>spendRuleFlow</name>
   <uuid>b05e0a3e-abb8-4cd3-b04a-15c2b1a5d11d</uuid>
   <locale>en_US</locale>
   <categories>any</categories>
@@ -72,15 +72,38 @@ try {]]>&#13;<![CDATA[
 	loader.release();]]>&#13;<![CDATA[
 }]]></Actions>
       </ActionTask>
-      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="SpendRuleSet" Ordering="Default">
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="FiltersByInputParams" Ordering="Default">
         <FinalActions Language="irl"><![CDATA[spendBuilder.removeMarkedBonuses(routes);]]></FinalActions>
         <RuleList>
           <Package Name="filtersByInputParams"/>
         </RuleList>
       </RuleTask>
-      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="task_2" Ordering="Default">
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="UpdateMilesInterval" Ordering="Default">
         <RuleList>
-          <Package Name="spend"/>
+          <Rule Uuid="48be87a4-5547-495a-bb5c-340bc7e06590"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="FiltersByMilesInterval" Ordering="Default">
+        <FinalActions Language="irl"><![CDATA[spendBuilder.removeMarkedBonuses(routes);]]></FinalActions>
+        <RuleList>
+          <Rule Uuid="0addf350-fcb3-47ae-849e-3c552c9d2a73"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="FiltersByCommonType" Ordering="Default">
+        <FinalActions Language="irl"><![CDATA[spendBuilder.removeMarkedBonuses(routes);]]></FinalActions>
+        <RuleList>
+          <Rule Uuid="5dd462de-941c-4fc8-9f15-1765475a6bf4"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="BonusSummation" Ordering="Default">
+        <FinalActions Language="irl"><![CDATA[foreach (Route route in routes) {]]>&#13;<![CDATA[
+		]]>&#13;<![CDATA[
+		foreach (Bonus bonus in route.aflBonuses) {]]>&#13;<![CDATA[
+			insert bonus;]]>&#13;<![CDATA[
+		}]]>&#13;<![CDATA[
+}]]></FinalActions>
+        <RuleList>
+          <Rule Uuid="3d925b2b-5e5f-49a2-86d5-9855de48ed47"/>
         </RuleList>
       </RuleTask>
       <StopTask Identifier="task_1">
@@ -92,52 +115,76 @@ try {]]>&#13;<![CDATA[
       <TaskNode Identifier="node_1" Task="task_1"/>
       <TaskNode Identifier="node_2" Task="findRoutes"/>
       <TaskNode Identifier="node_3" Task="buildResult"/>
-      <TaskNode Identifier="node_4" Task="SpendRuleSet"/>
-      <TaskNode Identifier="node_5" Task="task_2"/>
+      <TaskNode Identifier="node_4" Task="FiltersByInputParams"/>
+      <TaskNode Identifier="node_5" Task="UpdateMilesInterval"/>
+      <TaskNode Identifier="node_6" Task="FiltersByMilesInterval"/>
+      <TaskNode Identifier="node_8" Task="FiltersByCommonType"/>
+      <TaskNode Identifier="node_7" Task="BonusSummation"/>
     </NodeList>
     <TransitionList>
       <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
       <Transition Identifier="transition_3" Source="node_3" Target="node_1"/>
       <Transition Identifier="transition_4" Source="node_2" Target="node_4"/>
-      <Transition Identifier="transition_5" Source="node_4" Target="node_5"/>
+      <Transition Identifier="transition_5" Source="node_4" Target="node_6"/>
       <Transition Identifier="transition_1" Source="node_5" Target="node_3"/>
+      <Transition Identifier="transition_2" Source="node_6" Target="node_8"/>
+      <Transition Identifier="transition_6" Source="node_8" Target="node_7"/>
+      <Transition Identifier="transition_7" Source="node_7" Target="node_5"/>
     </TransitionList>
   </Body>
   <Resources>
     <ResourceSet Locale="en_US">
       <Data Name="node_2#height">53.402344</Data>
-      <Data Name="node_4#width">102.0</Data>
+      <Data Name="node_4#width">147.98778</Data>
       <Data Name="node_1#height">23.0</Data>
       <Data Name="node_3#height">53.402344</Data>
       <Data Name="node_0#height">21.0</Data>
-      <Data Name="node_4#height">68.103516</Data>
-      <Data Name="node_5#name">node_1</Data>
+      <Data Name="node_4#height">53.402344</Data>
+      <Data Name="node_7#y">150.18460083007812</Data>
       <Data Name="node_2#name">node_3</Data>
-      <Data Name="node_5#height">68.103516</Data>
+      <Data Name="node_5#height">53.402344</Data>
+      <Data Name="node_6#height">53.402344</Data>
+      <Data Name="node_7#height">53.402344</Data>
+      <Data Name="node_6#label">Apply filters by miles interval</Data>
+      <Data Name="node_7#width">151.98705</Data>
       <Data Name="node_3#label">Build result</Data>
-      <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_8#height">53.402344</Data>
       <Data Name="node_0#width">21.0</Data>
-      <Data Name="node_3#y">83.0</Data>
-      <Data Name="node_4#x">-4.0</Data>
-      <Data Name="node_4#y">-227.0</Data>
-      <Data Name="node_5#x">-3.9279251098632812</Data>
-      <Data Name="node_5#y">-15.298065185546875</Data>
-      <Data Name="node_5#width">102.0</Data>
-      <Data Name="node_0#x">-4.0</Data>
-      <Data Name="node_0#y">-406.0</Data>
-      <Data Name="node_1#x">-4.0</Data>
-      <Data Name="node_1#y">167.0</Data>
-      <Data Name="node_2#x">-4.0</Data>
-      <Data Name="node_2#y">-333.0</Data>
-      <Data Name="node_3#x">-4.0</Data>
+      <Data Name="node_3#y">354.0</Data>
+      <Data Name="node_5#x">-10.006393</Data>
+      <Data Name="node_5#y">253.35135</Data>
+      <Data Name="node_7#x">-10.026412963867188</Data>
+      <Data Name="node_1#x">-11.0</Data>
+      <Data Name="node_8#name">node_1</Data>
+      <Data Name="node_1#y">438.0</Data>
+      <Data Name="node_3#x">-11.0</Data>
       <Data Name="node_1#name">node_2</Data>
       <Data Name="node_2#label">Find routes</Data>
-      <Data Name="node_5#label">Execute spend rules</Data>
+      <Data Name="node_5#label">Update miles interval</Data>
       <Data Name="node_3#width">102.0</Data>
       <Data Name="node_4#name">node_1</Data>
+      <Data Name="node_7#name">node_1</Data>
+      <Data Name="node_6#width">147.98778</Data>
+      <Data Name="node_8#x">-10.513168334960938</Data>
+      <Data Name="node_8#y">47.64898681640625</Data>
+      <Data Name="node_5#name">node_1</Data>
+      <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_4#x">-10.006111</Data>
+      <Data Name="node_8#label">Aply filters by common types</Data>
+      <Data Name="node_4#y">-161.70117</Data>
+      <Data Name="node_6#x">-10.742881774902344</Data>
+      <Data Name="node_5#width">151.98705</Data>
+      <Data Name="node_6#y">-55.154693603515625</Data>
+      <Data Name="node_0#x">-11.0</Data>
+      <Data Name="node_0#y">-339.0</Data>
+      <Data Name="node_2#x">-11.0</Data>
+      <Data Name="node_2#y">-258.0</Data>
+      <Data Name="node_7#label">Bonus summation</Data>
+      <Data Name="node_8#width">147.98778</Data>
       <Data Name="node_1#width">23.0</Data>
+      <Data Name="node_6#name">node_1</Data>
       <Data Name="node_0#name">node_0</Data>
-      <Data Name="node_4#label">Execute filters</Data>
+      <Data Name="node_4#label">Apply filters by input params</Data>
       <Data Name="node_3#name">node_3</Data>
     </ResourceSet>
   </Resources>
