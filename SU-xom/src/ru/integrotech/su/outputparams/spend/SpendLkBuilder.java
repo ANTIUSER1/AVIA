@@ -72,7 +72,7 @@ public class SpendLkBuilder {
         return this.spendBuilder.getRoutes(spendInput, null);
     }
 
-    private List<SpendLkRoute> buildSpendLkRoutes(List<SpendRoute> spendRoutes, SpendInput spendInput) {
+    public List<SpendLkRoute> buildSpendLkRoutes(List<SpendRoute> spendRoutes, SpendInput spendInput) {
 
         Map<String, SpendLkRoute> resultMap = new HashMap<>();
         Map<String, Map<String, RequiredAward>> routeMap = this.createRouteMap(spendRoutes);
@@ -160,7 +160,7 @@ public class SpendLkBuilder {
         }
     }
 
-    private void replaceUO(List<Route> routes) {
+    public void replaceUO(List<Route> routes) {
         for (Route route : routes) {
             this.replaceUO(route.getAflBonuses());
             this.replaceUO(route.getScyteamBonuses());

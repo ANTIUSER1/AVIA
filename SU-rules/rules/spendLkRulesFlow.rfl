@@ -8,144 +8,81 @@
 <Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
   <Body>
     <TaskList>
-      <StartTask Identifier="task_0">
-        <Actions Language="irl"><![CDATA[loader = RegisterLoader.getInstance();]]>&#13;<![CDATA[
-loader.lock();]]>&#13;<![CDATA[
-try {]]>&#13;<![CDATA[
-	RegisterCache cache = loader.registerCache;]]>&#13;<![CDATA[
-	SpendBuilder spendBuilder = SpendBuilder.of(cache);]]>&#13;<![CDATA[
-	spendLkBuilder = SpendLkBuilder.of(spendBuilder);]]>&#13;<![CDATA[
-} catch (Exception e) {]]>&#13;<![CDATA[
-	e.printStackTrace();]]>&#13;<![CDATA[
-	loader.release();]]>&#13;<![CDATA[
-} catch (RuntimeException e) {]]>&#13;<![CDATA[
-	e.printStackTrace();]]>&#13;<![CDATA[
-	loader.release();]]>&#13;<![CDATA[
-}]]></Actions>
-      </StartTask>
-      <ActionTask Identifier="findRoutes">
-        <Actions Language="irl"><![CDATA[try {]]>&#13;<![CDATA[
-	routes = spendLkBuilder.getRoutes(inputParamsLk);]]>&#13;<![CDATA[
-	foreach (Route roune in routes) {]]>&#13;<![CDATA[
-		foreach (Bonus bonus in roune.aflBonuses) {]]>&#13;<![CDATA[
-			insert bonus;]]>&#13;<![CDATA[
-		}]]>&#13;<![CDATA[
-		foreach (Bonus bonus in roune.scyteamBonuses) {]]>&#13;<![CDATA[
-			insert bonus;]]>&#13;<![CDATA[
-		}]]>&#13;<![CDATA[
-		foreach (Flight flight in roune.flights) {]]>&#13;<![CDATA[
-			foreach (Bonus bonus in flight.aflBonuses) {]]>&#13;<![CDATA[
-				insert bonus;]]>&#13;<![CDATA[
-			}]]>&#13;<![CDATA[
-			foreach (Bonus bonus in flight.scyteamBonuses) {]]>&#13;<![CDATA[
-				insert bonus;]]>&#13;<![CDATA[
-			}]]>&#13;<![CDATA[
-		}]]>&#13;<![CDATA[
-	}]]>&#13;<![CDATA[
-} catch (Exception e) {]]>&#13;<![CDATA[
-	e.printStackTrace();]]>&#13;<![CDATA[
-	loader.release();]]>&#13;<![CDATA[
-} catch (RuntimeException e) {]]>&#13;<![CDATA[
-	e.printStackTrace();]]>&#13;<![CDATA[
-	loader.release();]]>&#13;<![CDATA[
-}]]></Actions>
-      </ActionTask>
+      <StartTask Identifier="task_0"/>
       <ActionTask Identifier="buildResult">
-        <Actions Language="irl"><![CDATA[try {]]>&#13;<![CDATA[
-	outputParamsLk=spendLkBuilder.buildResult(routes, inputParams);]]>&#13;<![CDATA[
-} catch (Exception e) {]]>&#13;<![CDATA[
-	e.printStackTrace();]]>&#13;<![CDATA[
-	loader.release();]]>&#13;<![CDATA[
-} catch (RuntimeException e) {]]>&#13;<![CDATA[
-	e.printStackTrace();]]>&#13;<![CDATA[
-	loader.release();]]>&#13;<![CDATA[
-}]]></Actions>
+        <Actions Language="irl"><![CDATA[	List spendRoutes = spendBuilder.buildSpendRoutes(routes, inputParams);]]>&#13;<![CDATA[
+	List spendLkRoutes = spendLkBuilder.buildSpendLkRoutes(spendRoutes, inputParams);]]>&#13;<![CDATA[
+	outputParamsLk=ResultMilesSpendLk.of(spendLkRoutes);]]></Actions>
       </ActionTask>
-      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="SpendRuleSet" Ordering="Default">
+      <SubflowTask Identifier="spendBaseFlow" Uuid="f9d8a44a-4297-4533-be08-aa9dfdfb4872">
+        <InitialActions Language="irl"><![CDATA[inputParams = inputParamsLk;]]></InitialActions>
+      </SubflowTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="RemoveUO" Ordering="Default">
+        <InitialActions Language="irl"><![CDATA[spendLkBuilder = SpendLkBuilder.of(spendBuilder);]]></InitialActions>
         <RuleList>
-          <Rule Uuid="48be87a4-5547-495a-bb5c-340bc7e06590"/>
+          <Rule Uuid="ac34cd8f-10e4-4a52-9520-b8c80fdc0dc7"/>
         </RuleList>
       </RuleTask>
-      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="SpendLkTuleTest" Ordering="Default">
-        <RuleList>
-          <Rule Uuid="33b57195-424e-4008-a975-9868cb683645"/>
-        </RuleList>
-      </RuleTask>
-      <StopTask Identifier="task_1">
-        <Actions Language="irl"><![CDATA[loader.release();]]></Actions>
-      </StopTask>
+      <StopTask Identifier="task_1"/>
     </TaskList>
     <NodeList>
       <TaskNode Identifier="node_0" Task="task_0"/>
       <TaskNode Identifier="node_1" Task="task_1"/>
-      <TaskNode Identifier="node_2" Task="findRoutes"/>
       <TaskNode Identifier="node_3" Task="buildResult"/>
-      <TaskNode Identifier="node_4" Task="SpendRuleSet"/>
-      <TaskNode Identifier="node_5" Task="SpendLkTuleTest"/>
+      <TaskNode Identifier="node_2" Task="spendBaseFlow"/>
+      <TaskNode Identifier="node_5" Task="RemoveUO"/>
     </NodeList>
     <TransitionList>
-      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
       <Transition Identifier="transition_3" Source="node_3" Target="node_1"/>
-      <Transition Identifier="transition_4" Source="node_2" Target="node_4"/>
-      <Transition Identifier="transition_1" Source="node_4" Target="node_5"/>
-      <Transition Identifier="transition_2" Source="node_5" Target="node_3"/>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
+      <Transition Identifier="transition_4" Source="node_2" Target="node_5"/>
+      <Transition Identifier="transition_5" Source="node_5" Target="node_3"/>
     </TransitionList>
   </Body>
   <Resources>
     <ResourceSet Locale="en_US">
-      <Data Name="node_2#height">53.402344</Data>
-      <Data Name="node_4#width">102.0</Data>
+      <Data Name="node_2#height">48.99652</Data>
       <Data Name="node_1#height">23.0</Data>
-      <Data Name="node_3#height">53.402344</Data>
+      <Data Name="node_3#height">52.732224</Data>
       <Data Name="node_0#height">21.0</Data>
-      <Data Name="node_4#height">68.103516</Data>
       <Data Name="node_5#name">node_1</Data>
-      <Data Name="node_2#name">node_3</Data>
-      <Data Name="node_5#height">68.103516</Data>
+      <Data Name="node_2#name">node_5</Data>
+      <Data Name="node_5#height">52.732227</Data>
       <Data Name="node_3#label">Build result</Data>
-      <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_2#width">127.38282</Data>
       <Data Name="node_0#width">21.0</Data>
-      <Data Name="node_3#y">65.0</Data>
-      <Data Name="node_4#x">-4.0</Data>
-      <Data Name="node_4#y">-121.0</Data>
-      <Data Name="node_5#x">-3.3366317749023438</Data>
-      <Data Name="node_5#y">-26.02703857421875</Data>
-      <Data Name="node_5#width">102.0</Data>
+      <Data Name="node_3#y">24.664963</Data>
+      <Data Name="node_5#x">-3.1741982</Data>
+      <Data Name="node_5#y">-80.33505</Data>
+      <Data Name="node_5#width">126.33523</Data>
       <Data Name="node_0#x">-4.0</Data>
       <Data Name="node_0#y">-274.0</Data>
       <Data Name="node_1#x">-4.0</Data>
-      <Data Name="node_1#y">141.0</Data>
-      <Data Name="node_2#x">-4.0</Data>
-      <Data Name="node_2#y">-205.0</Data>
-      <Data Name="node_3#x">-4.0</Data>
+      <Data Name="node_1#y">122.0</Data>
+      <Data Name="node_2#x">-3.9999962</Data>
+      <Data Name="node_3#x">-3.5002136</Data>
+      <Data Name="node_2#y">-181.50174</Data>
       <Data Name="node_1#name">node_2</Data>
-      <Data Name="node_2#label">Find routes</Data>
-      <Data Name="node_5#label">Execute spendLk rules</Data>
-      <Data Name="node_3#width">102.0</Data>
-      <Data Name="node_4#name">node_1</Data>
+      <Data Name="node_2#label">Build routes</Data>
+      <Data Name="node_5#label">Remove UO</Data>
+      <Data Name="node_3#width">128.99948</Data>
       <Data Name="node_1#width">23.0</Data>
       <Data Name="node_0#name">node_0</Data>
-      <Data Name="node_4#label">Execute spend rules</Data>
       <Data Name="node_3#name">node_3</Data>
     </ResourceSet>
   </Resources>
   <Properties>
     <imports><![CDATA[import ru.integrotech.su.outputparams.spend.SpendLkBuilder;
-use spendInput;
 use routes;
 use spendLkBuilder;
 use resultMilesSpendLk;
-import ru.integrotech.airline.core.flight.Route;
-import ru.integrotech.airline.core.bonus.Bonus;
-import ru.integrotech.airline.core.flight.Flight;
-import ru.integrotech.airline.register.RegisterLoader;
-use loader;
 import ru.integrotech.airline.register.RegisterCache;
-import ru.integrotech.su.outputparams.spend.SpendBuilder;
 use spendBuilder;
 use inputParams;
-use inputParamsLk;
 use outputParamsLk;
+import java.util.List;
+import ru.integrotech.su.outputparams.spend.ResultMilesSpendLk;
+use inputParamsLk;
 ]]></imports>
   </Properties>
 </Ruleflow></rfModel>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
-  <name>spendLkEasyFlow</name>
+  <name>spendLkJavaFlow</name>
   <uuid>4460811d-5f40-4d05-806f-05c16479f87a</uuid>
   <locale>ru_RU</locale>
   <categories>any</categories>

@@ -43,8 +43,8 @@ public class SpendBuilder {
     private BonusSearcher bonusSearcher;
 
     private final Airline afl;
-
-
+    
+   
     private SpendBuilder(RegisterCache cache) {
         this.cache = cache;
         this.routesBuilder = RoutesBuilder.of(cache);
@@ -87,7 +87,6 @@ public class SpendBuilder {
     }
 
     public List<Route> getRoutes(SpendInput spendInput, String airlineCode) {
-
         RoutesInput routesInput = RoutesInput.of(spendInput, airlineCode);
         List<Route> routes = this.routesBuilder.getRoutes(routesInput);
 
@@ -98,7 +97,7 @@ public class SpendBuilder {
         return routes;
     }
 
-    List<SpendRoute> buildSpendRoutes(List<Route> routes, SpendInput spendInput) {
+    public List<SpendRoute> buildSpendRoutes(List<Route> routes, SpendInput spendInput) {
 
         boolean aflOnly = spendInput.getIsOnlyAfl();
         List<SpendRoute> result = new ArrayList<>();
@@ -156,7 +155,7 @@ public class SpendBuilder {
     }
     
     public void removeMarkedBonuses(List<Route> routes) {
-    	 
+   
     	for (Route route : routes) {
      		this.removeMarkedBonuses(route.getAflBonuses());
     		this.removeMarkedBonuses(route.getScyteamBonuses());
@@ -164,20 +163,23 @@ public class SpendBuilder {
     		for (Flight flight : route.getFlights()) {
      			this.removeMarkedBonuses(flight.getAflBonuses());
         		this.removeMarkedBonuses(flight.getScyteamBonuses());
-    			
-    		}
+     		}
         }
     }
     
     private void removeMarkedBonuses(Set<Bonus> bonusSet) {
     	Iterator<Bonus> iterator = bonusSet.iterator();
-		while (iterator.hasNext()) {
+		
+    	while (iterator.hasNext()) {
 			Bonus bonus = iterator.next();
+			System.out.println("### BONUS: " + bonus.getType() + " " + bonus.isNeedsToBeRemoved());
 			if (bonus.isNeedsToBeRemoved()) {
+				bonus.setNeedsToBeRemoved(false); //recover object for next use 
 				iterator.remove();
 			}
 		}
     }
+    
     
    
     /* this is a business logic, it should works by ODM rules 
@@ -313,14 +315,6 @@ public class SpendBuilder {
         for (Bonus bonus : flight.getScyteamBonuses()) {
             bonus.setFitsMilesInterval(milesMin, milesMax);
         }
-    }
-
-    private String getClassOfServiceName(SpendInput spendInput) {
-        String result = null;
-        if (spendInput.getClassOfService() != null) {
-            result = spendInput.getClassOfService().getClassOfServiceName();
-        }
-        return result;
     }
 
     /* this is a business logic, it should works by ODM rules 

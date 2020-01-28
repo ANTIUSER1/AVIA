@@ -110,97 +110,17 @@
             </Condition>
           </Partition>
         </Condition>
-        <Condition>
-          <Expression/>
-          <ActionSet>
-            <Action DefId="A0">
-              <Expression/>
-            </Action>
-          </ActionSet>
-        </Condition>
-        <Condition>
-          <Expression/>
-          <ActionSet>
-            <Action DefId="A0">
-              <Expression/>
-            </Action>
-          </ActionSet>
-        </Condition>
-        <Condition>
-          <Expression/>
-          <ActionSet>
-            <Action DefId="A0">
-              <Expression/>
-            </Action>
-          </ActionSet>
-        </Condition>
-        <Condition>
-          <Expression/>
-          <ActionSet>
-            <Action DefId="A0">
-              <Expression/>
-            </Action>
-          </ActionSet>
-        </Condition>
-        <Condition>
-          <Expression/>
-          <ActionSet>
-            <Action DefId="A0">
-              <Expression/>
-            </Action>
-          </ActionSet>
-        </Condition>
-        <Condition>
-          <Expression/>
-          <ActionSet>
-            <Action DefId="A0">
-              <Expression/>
-            </Action>
-          </ActionSet>
-        </Condition>
-        <Condition>
-          <Expression/>
-          <ActionSet>
-            <Action DefId="A0">
-              <Expression/>
-            </Action>
-          </ActionSet>
-        </Condition>
-        <Condition>
-          <Expression/>
-          <ActionSet>
-            <Action DefId="A0">
-              <Expression/>
-            </Action>
-          </ActionSet>
-        </Condition>
-        <Condition>
-          <Expression/>
-          <ActionSet>
-            <Action DefId="A0">
-              <Expression/>
-            </Action>
-          </ActionSet>
-        </Condition>
-        <Condition>
-          <Expression/>
-          <ActionSet>
-            <Action DefId="A0">
-              <Expression/>
-            </Action>
-          </ActionSet>
-        </Condition>
       </Partition>
     </Contents>
   </Body>
   <Resources DefaultLocale="en_US">
     <ResourceSet Locale="en_US">
       <Data Name="Definitions(A0)#HeaderText"><![CDATA[Delete bonus]]></Data>
-      <Data Name="Definitions(A0)#Width"><![CDATA[483]]></Data>
+      <Data Name="Definitions(A0)#Width"><![CDATA[511]]></Data>
       <Data Name="Definitions(C0)#HeaderText"><![CDATA[is round trip]]></Data>
-      <Data Name="Definitions(C0)#Width"><![CDATA[628]]></Data>
+      <Data Name="Definitions(C0)#Width"><![CDATA[617]]></Data>
       <Data Name="Definitions(C1)#HeaderText"><![CDATA[Bonus type]]></Data>
-      <Data Name="Definitions(C1)#Width"><![CDATA[627]]></Data>
+      <Data Name="Definitions(C1)#Width"><![CDATA[610]]></Data>
     </ResourceSet>
   </Resources>
 </DT></definition>

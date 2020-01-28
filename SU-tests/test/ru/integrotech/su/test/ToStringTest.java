@@ -218,8 +218,8 @@ public class ToStringTest{
                 "aiRport", // to
                 "VVo", // to type
                 -1, // miles min
-                100000, // miles max
-                "econoMY", // class listOf service name
+                30000, // miles max
+                null, // class listOf service name
                 "alL", // award type
                 false, // afl only
                 false // is round trip

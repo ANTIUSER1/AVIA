@@ -86,9 +86,12 @@ ru.integrotech.su.outputparams.spend.ResultMilesSpendLk.awardRoutes#phrase.navig
 # ru.integrotech.su.outputparams.spend.SpendBuilder
 ru.integrotech.su.outputparams.spend.SpendBuilder#concept.label = spend builder
 ru.integrotech.su.outputparams.spend.SpendBuilder.bonusSummation(java.util.List)#phrase.action = {this}.bonusSummation({0})
+ru.integrotech.su.outputparams.spend.SpendBuilder.buildSpendRoutes(java.util.List,ru.integrotech.su.inputparams.spend.SpendInput)#phrase.navigation = {this}.buildSpendRoutes({0}, {1})
 ru.integrotech.su.outputparams.spend.SpendBuilder.executeFiltersByCommonTypes(java.util.List,ru.integrotech.su.inputparams.spend.SpendInput)#phrase.action = {this}.executeFiltersByCommonTypes({0}, {1})
 ru.integrotech.su.outputparams.spend.SpendBuilder.executeFiltersByMilesInterval(java.util.List,ru.integrotech.su.inputparams.spend.SpendInput)#phrase.action = {this}.executeFiltersByMilesInterval({0}, {1})
 ru.integrotech.su.outputparams.spend.SpendBuilder.getServiceClassType(ru.integrotech.su.inputparams.spend.SpendInput)#phrase.navigation = {this}.getServiceClassType({0})
 
 # ru.integrotech.su.outputparams.spend.SpendLkBuilder
 ru.integrotech.su.outputparams.spend.SpendLkBuilder#concept.label = spend lk builder
+ru.integrotech.su.outputparams.spend.SpendLkBuilder.buildSpendLkRoutes(java.util.List,ru.integrotech.su.inputparams.spend.SpendInput)#phrase.navigation = {this}.buildSpendLkRoutes({0}, {1})
+ru.integrotech.su.outputparams.spend.SpendLkBuilder.replaceUO(java.util.List)#phrase.action = {this}.replaceUO({0})
