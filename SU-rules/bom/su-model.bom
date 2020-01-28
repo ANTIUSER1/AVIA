@@ -140,7 +140,6 @@ public class SpendBuilder
     public java.util.List getSpendRoutes(ru.integrotech.su.inputparams.spend.SpendInput arg) domain 0,* class ru.integrotech.su.outputparams.spend.SpendRoute;
     public java.util.List getSpendRoutes(ru.integrotech.su.inputparams.spend.SpendInput arg1, string arg2) domain 0,* class ru.integrotech.su.outputparams.spend.SpendRoute;
     public static ru.integrotech.su.outputparams.spend.SpendBuilder of(ru.integrotech.airline.register.RegisterCache arg);
-    public void removeMarkedBonuses(java.util.List arg domain 0,* class ru.integrotech.airline.core.flight.Route);
     public void updateFitsMilesIntervals(java.util.List arg1 domain 0,* class ru.integrotech.airline.core.flight.Route, 
         ru.integrotech.su.inputparams.spend.SpendInput arg2);
 }

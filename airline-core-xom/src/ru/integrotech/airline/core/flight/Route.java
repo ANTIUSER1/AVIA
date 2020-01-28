@@ -290,6 +290,14 @@ public class Route implements Comparable<Route> {
         }
         return commonTypes;
     }
+    
+    public void removeAflBonus(Bonus bonus) {
+    	this.aflBonuses.remove(bonus);
+    }
+    
+    public void removeScyteamBonus(Bonus bonus) {
+    	this.scyteamBonuses.remove(bonus);
+    }
 
     @Override
     public boolean equals(Object o) {

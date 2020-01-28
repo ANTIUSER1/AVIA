@@ -27,28 +27,7 @@ try {]]>&#13;<![CDATA[
         <Actions Language="irl"><![CDATA[try {]]>&#13;<![CDATA[
 	routes = spendBuilder.getRoutes(inputParams);]]>&#13;<![CDATA[
 	foreach (Route route in routes) {]]>&#13;<![CDATA[
-		]]>&#13;<![CDATA[
 		insert route;]]>&#13;<![CDATA[
-		]]>&#13;<![CDATA[
-		foreach (Bonus bonus in route.aflBonuses) {]]>&#13;<![CDATA[
-			insert bonus;]]>&#13;<![CDATA[
-		}]]>&#13;<![CDATA[
-		]]>&#13;<![CDATA[
-		foreach (Bonus bonus in route.scyteamBonuses) {]]>&#13;<![CDATA[
-			insert bonus;]]>&#13;<![CDATA[
-		}]]>&#13;<![CDATA[
-		]]>&#13;<![CDATA[
-		foreach (Flight flight in route.flights) {]]>&#13;<![CDATA[
-			]]>&#13;<![CDATA[
-			foreach (Bonus bonus in flight.aflBonuses) {]]>&#13;<![CDATA[
-				insert bonus;]]>&#13;<![CDATA[
-			}]]>&#13;<![CDATA[
-			]]>&#13;<![CDATA[
-			foreach (Bonus bonus in flight.scyteamBonuses) {]]>&#13;<![CDATA[
-				insert bonus;]]>&#13;<![CDATA[
-			}]]>&#13;<![CDATA[
-		]]>&#13;<![CDATA[
-		}]]>&#13;<![CDATA[
 	}]]>&#13;<![CDATA[
 ]]>&#13;<![CDATA[
 } catch (Exception e) {]]>&#13;<![CDATA[
@@ -62,35 +41,27 @@ try {]]>&#13;<![CDATA[
 ]]></Actions>
       </ActionTask>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="FiltersByInputParams" Ordering="Default">
-        <FinalActions Language="irl"><![CDATA[spendBuilder.removeMarkedBonuses(routes);]]></FinalActions>
         <RuleList>
-          <Package Name="filtersByInputParams"/>
+          <Package Name="spend.filters.byInputParams"/>
         </RuleList>
       </RuleTask>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="UpdateMilesInterval" Ordering="Default">
         <RuleList>
-          <Rule Uuid="48be87a4-5547-495a-bb5c-340bc7e06590"/>
+          <Package Name="spend.fitsMilesInterval"/>
         </RuleList>
       </RuleTask>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="FiltersByMilesInterval" Ordering="Default">
-        <FinalActions Language="irl"><![CDATA[spendBuilder.removeMarkedBonuses(routes);]]></FinalActions>
         <RuleList>
           <Rule Uuid="0addf350-fcb3-47ae-849e-3c552c9d2a73"/>
         </RuleList>
       </RuleTask>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="FiltersByCommonType" Ordering="Default">
-        <FinalActions Language="irl"><![CDATA[spendBuilder.removeMarkedBonuses(routes);]]></FinalActions>
         <RuleList>
           <Rule Uuid="5dd462de-941c-4fc8-9f15-1765475a6bf4"/>
         </RuleList>
       </RuleTask>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="BonusSummation" Ordering="Default">
-        <FinalActions Language="irl"><![CDATA[foreach (Route route in routes) {]]>&#13;<![CDATA[
-		]]>&#13;<![CDATA[
-		foreach (Bonus bonus in route.aflBonuses) {]]>&#13;<![CDATA[
-			insert bonus;]]>&#13;<![CDATA[
-		}]]>&#13;<![CDATA[
-}]]></FinalActions>
+        <FinalActions/>
         <RuleList>
           <Rule Uuid="3d925b2b-5e5f-49a2-86d5-9855de48ed47"/>
         </RuleList>
@@ -126,9 +97,9 @@ try {]]>&#13;<![CDATA[
       <Data Name="node_1#height">23.0</Data>
       <Data Name="node_0#height">21.0</Data>
       <Data Name="node_4#height">53.402344</Data>
-      <Data Name="node_8#x">-10.513168334960938</Data>
-      <Data Name="node_7#y">150.18460083007812</Data>
-      <Data Name="node_8#y">47.64898681640625</Data>
+      <Data Name="node_8#x">-10.513168</Data>
+      <Data Name="node_7#y">150.1846</Data>
+      <Data Name="node_8#y">47.648987</Data>
       <Data Name="node_5#name">node_1</Data>
       <Data Name="node_2#name">node_3</Data>
       <Data Name="node_5#height">53.402344</Data>
@@ -144,10 +115,10 @@ try {]]>&#13;<![CDATA[
       <Data Name="node_4#y">-161.70117</Data>
       <Data Name="node_5#x">-10.006393</Data>
       <Data Name="node_5#y">253.35135</Data>
-      <Data Name="node_6#x">-10.742881774902344</Data>
+      <Data Name="node_6#x">-10.742882</Data>
       <Data Name="node_5#width">151.98705</Data>
-      <Data Name="node_6#y">-55.154693603515625</Data>
-      <Data Name="node_7#x">-10.026412963867188</Data>
+      <Data Name="node_6#y">-55.154694</Data>
+      <Data Name="node_7#x">-10.026413</Data>
       <Data Name="node_0#x">-11.0</Data>
       <Data Name="node_0#y">-339.0</Data>
       <Data Name="node_1#x">-11.0</Data>

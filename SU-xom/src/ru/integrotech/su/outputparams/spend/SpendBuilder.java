@@ -154,33 +154,6 @@ public class SpendBuilder {
         }
     }
     
-    public void removeMarkedBonuses(List<Route> routes) {
-   
-    	for (Route route : routes) {
-     		this.removeMarkedBonuses(route.getAflBonuses());
-    		this.removeMarkedBonuses(route.getScyteamBonuses());
-    		
-    		for (Flight flight : route.getFlights()) {
-     			this.removeMarkedBonuses(flight.getAflBonuses());
-        		this.removeMarkedBonuses(flight.getScyteamBonuses());
-     		}
-        }
-    }
-    
-    private void removeMarkedBonuses(Set<Bonus> bonusSet) {
-    	Iterator<Bonus> iterator = bonusSet.iterator();
-		
-    	while (iterator.hasNext()) {
-			Bonus bonus = iterator.next();
-			System.out.println("### BONUS: " + bonus.getType() + " " + bonus.isNeedsToBeRemoved());
-			if (bonus.isNeedsToBeRemoved()) {
-				bonus.setNeedsToBeRemoved(false); //recover object for next use 
-				iterator.remove();
-			}
-		}
-    }
-    
-    
    
     /* this is a business logic, it should works by ODM rules 
      * or calls from ODM rules */

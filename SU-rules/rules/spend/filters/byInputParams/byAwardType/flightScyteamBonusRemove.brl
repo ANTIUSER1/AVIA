@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>flightScyteamBonusRemove</name>
+  <uuid>86a5a804-b0c7-4d06-a282-000db651e8bc</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions 
+
+set 'flight' to a flight in the flights of the route ;  
+set 'bonus' to a bonus in the scyteam bonuses of flight ; 
+
+if (the award type of inputParams is "ticket"  
+	and (the type of bonus is U  or  the type of bonus is UO or the type of bonus is UC))
+or (the award type of inputParams is "upgrade"    
+	and (the type of bonus is RT  or  the type of bonus is OW ))
+
+then remove bonus from the scyteam bonuses of flight ; 
+
+
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

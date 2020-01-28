@@ -95,7 +95,6 @@ package ru.integrotech.airline.core.bonus;
 
 public class Bonus
         extends java.lang.Comparable
-        property automaticVariable "true"
 {
 
     static public final class AWARD_TYPE
@@ -124,7 +123,6 @@ public class Bonus
     public readonly string description;
     public boolean fitsMilesInterval;
     public readonly boolean light;
-    public boolean needsToBeRemoved;
     public readonly ru.integrotech.airline.core.airline.ServiceClass.SERVICE_CLASS_TYPE serviceClass;
     public ru.integrotech.airline.core.bonus.Bonus.BONUS_TYPE type;
     public readonly ru.integrotech.airline.core.airline.ServiceClass.SERVICE_CLASS_TYPE upgradeServiceClass;
@@ -193,6 +191,8 @@ public class Flight
         ru.integrotech.airline.core.location.Airport arg2, 
         int arg3, 
         java.util.List arg4 domain 0,* class ru.integrotech.airline.core.flight.FlightCarrier);
+    public void removeAflBonus(ru.integrotech.airline.core.bonus.Bonus arg);
+    public void removeScyteamBonus(ru.integrotech.airline.core.bonus.Bonus arg);
     public string toString();
 }
 
@@ -266,6 +266,8 @@ public class Route
         java.util.List arg2 domain 0,* class ru.integrotech.airline.core.flight.Flight);
     public boolean otherAirlinesIsPresent(ru.integrotech.airline.core.airline.Airline arg);
     public boolean otherAirlinesIsPresent(string arg);
+    public void removeAflBonus(ru.integrotech.airline.core.bonus.Bonus arg);
+    public void removeScyteamBonus(ru.integrotech.airline.core.bonus.Bonus arg);
     public string toString();
 }
 

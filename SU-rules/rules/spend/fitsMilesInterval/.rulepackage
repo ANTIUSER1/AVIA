@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
-  <name>filtersByInputParams</name>
-  <uuid>4109610b-251b-4647-9e64-882e95df9a47</uuid>
+  <name>fitsMilesInterval</name>
+  <uuid>78c86a5a-de1d-4710-aaf8-ba7e7a467b64</uuid>
 </ilog.rules.studio.model.base:RulePackage>

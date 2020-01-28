@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
-  <name>filterByUCAvailiableRouteAfl</name>
+  <name>routeAflBonusRemove</name>
   <uuid>2ff28a75-aaf6-4f10-a25d-6315c1b9132a</uuid>
   <locale>en_US</locale>
   <definition><![CDATA[definitions 
-	set 'aflBonus'  to a bonus in the afl bonuses of the route ; 
+	set 'bonus'  to a bonus in the afl bonuses of the route ; 
 if 
-	 (the type of aflBonus is UC and the route is direct is not true) 
-   	    or (the type of aflBonus is UC and the origin of the route is uc available is not true ) 	
-then make it true  that aflBonus is needs to be removed ;]]></definition>
+	 (the type of bonus is UC and the route is direct is not true) 
+   	    or (the type of bonus  is UC and the origin of the route is uc available is not true ) 	
+   	    
+then make it true  that bonus is fits miles interval ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>
