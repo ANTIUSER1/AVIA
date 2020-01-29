@@ -214,17 +214,17 @@ public class ToStringTest{
     public void printSpendLk() {
         SpendInput spendInput = SpendInput.of(
                 "airporT",// from
-                "svO", // from type
+                "LED", // from type
                 "aiRport", // to
-                "VVo", // to type
+                "NUE", // to type
                 -1, // miles min
                 30000, // miles max
                 null, // class listOf service name
                 "alL", // award type
                 false, // afl only
-                false // is round trip
+                true // is round trip
         );
-        String airlineCode = "Su";
+        String airlineCode = null;
         if (airlineCode != null) {
             airlineCode = airlineCode.toUpperCase();
         }
@@ -239,9 +239,9 @@ public class ToStringTest{
 
         RoutesInput routesInput = RoutesInput.of(
                 "Airport", //destination type
-                "Svo", // origin
+                "LED", // origin
                 "Airport", //destination type
-                "JFk", //destination
+                "NUE", //destination
                 null //airline code
         );
 
@@ -257,10 +257,10 @@ public class ToStringTest{
 
         RoutesInput routesInput = RoutesInput.of(
         		  "Airport", //destination type
-                  "Svo", // origin
+                  "LED", // origin
                   "aIrport", //destination type
-                  "vvo", //destination
-                  "su" //airline code
+                  "NUE", //destination
+                  null //airline code
         );
 
         List<Route> routes = this.common.getRoutesBuilder().getRoutes(routesInput);
@@ -341,14 +341,14 @@ public class ToStringTest{
     public void ODM_SPEND_LK_TEST_00() {
         SpendInput spendInput = SpendInput.of(
                 "airport", // from type
-                "SVO",// from
+                "MMK",// from
                 "airport", // to type
-                "VVO", // to
+                "AER", // to
                 -1, // miles min
                 100000, // miles max
-                "economy", // class listOf service name
+                null, // class listOf service name
                 "all", // award type
-                true, // afl only
+                false, // afl only
                 false // is round trip
         );
         SpendLkBuilder builder = this.common.getSpendLkBuilder();

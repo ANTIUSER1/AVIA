@@ -8,5 +8,5 @@
 if 
 	 (the type of bonus   is UC and the route is direct is not true) 
    	    or (the type of bonus is UC and the origin of the route is uc available is not true ) 	
-then make it true  that bonus is fits miles interval ;]]></definition>
+then remove bonus from the scyteam bonuses of the route ; ]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

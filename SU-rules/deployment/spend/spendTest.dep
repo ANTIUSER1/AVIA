@@ -10,6 +10,12 @@
       <value><![CDATA[1.0]]></value>
     </properties>
   </operations>
+  <operations operationName="spendEasy">
+    <operation href="spendEasy.dop#cef8abfa-8306-48af-affc-7d1e576e2269"/>
+    <properties key="ruleset.version">
+      <value><![CDATA[1.0]]></value>
+    </properties>
+  </operations>
   <versionPolicies label="Increment minor version numbers" ruleset="INCREMENT_MINOR" default="true" recurrent="true">
     <description><![CDATA[Updates the minor version for each ruleset. Makes the new version available but retains previous versions.]]></description>
   </versionPolicies>

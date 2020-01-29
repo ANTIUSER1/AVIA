@@ -299,7 +299,7 @@ public class SpendBuilder {
     }
 
     private void aflBonusSummation(Route route) {
-        if (route.getFlights().size() < 2) return;
+        if (route.getAflBonuses().size() > 0 || route.getFlights().size() < 2) return;
         Set<Bonus> bonuses1 = route.getFlights().get(0).getAflBonuses();
         Set<Bonus> bonuses2 = route.getFlights().get(1).getAflBonuses();
         Set<Bonus> newBonuses = new HashSet<>();
