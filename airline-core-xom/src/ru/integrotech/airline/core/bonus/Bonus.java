@@ -161,7 +161,4 @@ public class Bonus implements Comparable<Bonus> {
     /*bonus must have determined type*/
     public enum BONUS_TYPE {OW, RT, U, UC, UO}
 
-    /*use for filter collections listOf <bonus> by type*/
-    public enum AWARD_TYPE {TICKET, UPGRADE, ALL}
-
 }
