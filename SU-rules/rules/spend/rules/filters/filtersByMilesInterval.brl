@@ -3,5 +3,6 @@
   <name>filtersByMilesInterval</name>
   <uuid>0addf350-fcb3-47ae-849e-3c552c9d2a73</uuid>
   <locale>en_US</locale>
-  <definition><![CDATA[then 'spend builder' .executeFiltersByMilesInterval ( { the route  } , inputParams  ) ;]]></definition>
+  <definition><![CDATA[then 'spend builder' .executeFiltersByMilesInterval ( { the route  } , inputParams  ) ;
+]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
-  <name>attractionABEasyFlow</name>
-  <uuid>01ea0ca8-7d1e-4efd-bb14-dea3a4ff5e3b</uuid>
+  <name>spendLkJavaFlow</name>
+  <uuid>4460811d-5f40-4d05-806f-05c16479f87a</uuid>
   <locale>ru_RU</locale>
   <categories>any</categories>
   <rfModel>
@@ -13,18 +13,20 @@
 loader.lock();]]>&#13;<![CDATA[
 try {]]>&#13;<![CDATA[
 	RegisterCache cache = loader.registerCache;]]>&#13;<![CDATA[
-	attractionABBuilder = AttractionAbBuilder.of(cache);]]>&#13;<![CDATA[
+	SpendBuilder spendBuilder = SpendBuilder.of(cache);]]>&#13;<![CDATA[
+	spendLkBuilder = SpendLkBuilder.of(spendBuilder);]]>&#13;<![CDATA[
 } catch (Exception e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
 	loader.release();]]>&#13;<![CDATA[
 } catch (RuntimeException e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
 	loader.release();]]>&#13;<![CDATA[
-}]]></Actions>
+}]]>&#13;<![CDATA[
+]]></Actions>
       </StartTask>
-      <ActionTask Identifier="build_attractionAB">
+      <ActionTask Identifier="build_charge">
         <Actions Language="irl"><![CDATA[try {]]>&#13;<![CDATA[
-	attractionABOutput = attractionABBuilder.buildResult(attractionABInput);]]>&#13;<![CDATA[
+	outputParamsLk = spendLkBuilder.buildResult(inputParamsLk);]]>&#13;<![CDATA[
 } catch (Exception e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
 	loader.release();]]>&#13;<![CDATA[
@@ -40,7 +42,7 @@ try {]]>&#13;<![CDATA[
     <NodeList>
       <TaskNode Identifier="node_0" Task="task_0"/>
       <TaskNode Identifier="node_2" Task="task_2"/>
-      <TaskNode Identifier="node_3" Task="build_attractionAB"/>
+      <TaskNode Identifier="node_3" Task="build_charge"/>
     </NodeList>
     <TransitionList>
       <Transition Identifier="transition_2" Source="node_0" Target="node_3"/>
@@ -59,7 +61,7 @@ try {]]>&#13;<![CDATA[
       <Data Name="node_0#name">node_0</Data>
       <Data Name="node_2#width">23.0</Data>
       <Data Name="node_0#width">21.0</Data>
-      <Data Name="node_3#y">-69.0</Data>
+      <Data Name="node_3#y">-68.0</Data>
       <Data Name="node_0#x">-39.0</Data>
       <Data Name="node_0#y">-168.0</Data>
       <Data Name="node_2#x">-39.0</Data>
@@ -69,14 +71,16 @@ try {]]>&#13;<![CDATA[
     </ResourceSet>
   </Resources>
   <Properties>
-    <imports><![CDATA[import ru.integrotech.airline.register.RegisterLoader;
-import ru.integrotech.airline.register.RegisterCache;
-import ru.integrotech.su.outputparams.attractionAB.AttractionAbBuilder;
-import ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput;
-use attractionABBuilder;
-use attractionABInput;
-use attractionABOutput;
+    <imports><![CDATA[import ru.integrotech.su.outputparams.spend.SpendLkBuilder;]]>&#13;<![CDATA[
+import ru.integrotech.airline.register.RegisterLoader;
 use loader;
+import ru.integrotech.airline.register.RegisterCache;
+import ru.integrotech.su.outputparams.spend.SpendBuilder;
+use spendBuilder;
+use inputParams;
+use inputParamsLk;
+use outputParamsLk;
+use spendLkBuilder;
 ]]></imports>
   </Properties>
 </Ruleflow></rfModel>

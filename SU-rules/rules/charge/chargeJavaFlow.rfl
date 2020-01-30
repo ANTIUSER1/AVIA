@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
-  <name>spendJavaFlow</name>
-  <uuid>b338dec0-d4ae-4c0c-998e-1289af3e0af7</uuid>
+  <name>chargeJavaFlow</name>
+  <uuid>da140715-4c7c-4b02-a227-6aa41287773b</uuid>
   <locale>ru_RU</locale>
   <categories>any</categories>
   <rfModel>
@@ -12,8 +12,8 @@
         <Actions Language="irl"><![CDATA[loader = RegisterLoader.getInstance();]]>&#13;<![CDATA[
 loader.lock();]]>&#13;<![CDATA[
 try {]]>&#13;<![CDATA[
-	RegisterCache cache = loader.registerCache;]]>&#13;<![CDATA[
-	spendBuilder = SpendBuilder.of(cache);]]>&#13;<![CDATA[
+    RegisterCache cache = loader.registerCache;]]>&#13;<![CDATA[
+	chargeBuilder = ChargeBuilder.of(cache);]]>&#13;<![CDATA[
 } catch (Exception e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
 	loader.release();]]>&#13;<![CDATA[
@@ -22,17 +22,16 @@ try {]]>&#13;<![CDATA[
 	loader.release();]]>&#13;<![CDATA[
 }]]></Actions>
       </StartTask>
-      <ActionTask Identifier="build_charge">
+      <ActionTask Identifier="build_result">
         <Actions Language="irl"><![CDATA[try {]]>&#13;<![CDATA[
-	outputParams = spendBuilder.buildResult(inputParams);]]>&#13;<![CDATA[
+	resultMilesCharge = chargeBuilder.buildResult(chargeInput);]]>&#13;<![CDATA[
 } catch (Exception e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
 	loader.release();]]>&#13;<![CDATA[
 } catch (RuntimeException e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
 	loader.release();]]>&#13;<![CDATA[
-}]]>&#13;<![CDATA[
-]]></Actions>
+}]]></Actions>
       </ActionTask>
       <StopTask Identifier="task_2">
         <Actions Language="irl"><![CDATA[loader.release();]]></Actions>
@@ -41,7 +40,7 @@ try {]]>&#13;<![CDATA[
     <NodeList>
       <TaskNode Identifier="node_0" Task="task_0"/>
       <TaskNode Identifier="node_2" Task="task_2"/>
-      <TaskNode Identifier="node_3" Task="build_charge"/>
+      <TaskNode Identifier="node_3" Task="build_result"/>
     </NodeList>
     <TransitionList>
       <Transition Identifier="transition_2" Source="node_0" Target="node_3"/>
@@ -60,9 +59,9 @@ try {]]>&#13;<![CDATA[
       <Data Name="node_0#name">node_0</Data>
       <Data Name="node_2#width">23.0</Data>
       <Data Name="node_0#width">21.0</Data>
-      <Data Name="node_3#y">-68.0</Data>
+      <Data Name="node_3#y">-67.0</Data>
       <Data Name="node_0#x">-39.0</Data>
-      <Data Name="node_0#y">-170.0</Data>
+      <Data Name="node_0#y">-168.0</Data>
       <Data Name="node_2#x">-39.0</Data>
       <Data Name="node_3#name">node_3</Data>
       <Data Name="node_2#y">38.0</Data>
@@ -70,17 +69,13 @@ try {]]>&#13;<![CDATA[
     </ResourceSet>
   </Resources>
   <Properties>
-    <imports><![CDATA[import ru.integrotech.su.outputparams.spend.SpendBuilder;]]>&#13;<![CDATA[
-use spendInput;]]>&#13;<![CDATA[
-use resultMilesSpend;]]>&#13;<![CDATA[
-use SpendBuilder;
-import ru.integrotech.airline.register.RegisterLoader;
+    <imports><![CDATA[import ru.integrotech.su.outputparams.charge.ChargeBuilder;]]>&#13;<![CDATA[
+use chargeInput;]]>&#13;<![CDATA[
+use resultMilesCharge;]]>&#13;<![CDATA[
+use chargeBuilder;]]>&#13;<![CDATA[
 use loader;
+import ru.integrotech.airline.register.RegisterLoader;
 import ru.integrotech.airline.register.RegisterCache;
-use inputParams;
-use outputParams;
-import ru.integrotech.su.inputparams.spend.LocationInput;
-import ru.integrotech.su.inputparams.spend.MilesInterval;
 ]]></imports>
   </Properties>
 </Ruleflow></rfModel>

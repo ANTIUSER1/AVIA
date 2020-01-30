@@ -13,19 +13,10 @@
 	]]></Actions>
       </StartTask>
       <ActionTask Identifier="buildResult">
-        <Actions Language="irl"><![CDATA[try {]]>&#13;<![CDATA[
-	outputParams=spendBuilder.buildResult(routes, inputParams);]]>&#13;<![CDATA[
-} catch (Exception e) {]]>&#13;<![CDATA[
-	e.printStackTrace();]]>&#13;<![CDATA[
-	loader.release();]]>&#13;<![CDATA[
-} catch (RuntimeException e) {]]>&#13;<![CDATA[
-	e.printStackTrace();]]>&#13;<![CDATA[
-	loader.release();]]>&#13;<![CDATA[
-}]]></Actions>
+        <Actions Language="irl"><![CDATA[outputParams=spendBuilder.buildResult(routes, inputParams);]]>&#13;<![CDATA[
+]]></Actions>
       </ActionTask>
-      <SubflowTask Identifier="spendBaseFlow" Uuid="f9d8a44a-4297-4533-be08-aa9dfdfb4872">
-        <InitialActions/>
-      </SubflowTask>
+      <SubflowTask Identifier="spendBaseFlow" Uuid="f9d8a44a-4297-4533-be08-aa9dfdfb4872"/>
       <StopTask Identifier="task_1"/>
     </TaskList>
     <NodeList>
@@ -67,19 +58,11 @@
     </ResourceSet>
   </Resources>
   <Properties>
-    <imports><![CDATA[import ru.integrotech.su.outputparams.spend.SpendBuilder;
-use spendBuilder;
-use spendInput;
-use resultMilesSpend;
+    <imports><![CDATA[use loader;
 use routes;
-import ru.integrotech.airline.core.flight.Route;
-import ru.integrotech.airline.core.bonus.Bonus;
-import ru.integrotech.airline.core.flight.Flight;
-import ru.integrotech.airline.register.RegisterLoader;
-use loader;
-import ru.integrotech.airline.register.RegisterCache;
-use inputParams;
 use outputParams;
+use inputParams;
+use spendBuilder;
 ]]></imports>
   </Properties>
 </Ruleflow></rfModel>

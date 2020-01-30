@@ -123,7 +123,7 @@ try {]]>&#13;<![CDATA[
       <Data Name="node_1#x">-43.16745</Data>
       <Data Name="node_2#x">-44.0</Data>
       <Data Name="node_1#y">39.80783</Data>
-      <Data Name="node_2#y">120.0</Data>
+      <Data Name="node_2#y">121.0</Data>
       <Data Name="node_3#x">-44.0</Data>
       <Data Name="node_1#name">node_3</Data>
       <Data Name="node_5#label">Execute charge rules step 2</Data>
@@ -136,19 +136,21 @@ try {]]>&#13;<![CDATA[
     </ResourceSet>
   </Resources>
   <Properties>
-    <imports><![CDATA[import ru.integrotech.su.outputparams.charge.ChargeBuilder;]]>&#13;<![CDATA[
+    <imports><![CDATA[use chargeInput;]]>&#13;<![CDATA[
+use chargeBuilder;]]>&#13;<![CDATA[
+use loyaltyFactor;]]>&#13;<![CDATA[
+use loader;]]>&#13;<![CDATA[
+use resultMilesCharge;]]>&#13;<![CDATA[
+use routes;]]>&#13;<![CDATA[
+import java.util.List;]]>&#13;<![CDATA[
+import java.util.Collection;]]>&#13;<![CDATA[
+import java.util.ArrayList;]]>&#13;<![CDATA[
+import ru.integrotech.su.outputparams.charge.ChargeBuilder;]]>&#13;<![CDATA[
 import ru.integrotech.airline.core.flight.Route;]]>&#13;<![CDATA[
 import ru.integrotech.airline.core.flight.Flight;]]>&#13;<![CDATA[
 import ru.integrotech.airline.core.flight.FlightCarrier;]]>&#13;<![CDATA[
 import ru.integrotech.airline.core.flight.PassengerCharge;]]>&#13;<![CDATA[
-import java.util.List;]]>&#13;<![CDATA[
-import java.util.Collection;]]>&#13;<![CDATA[
-use chargeInput;]]>&#13;<![CDATA[
-use resultMilesCharge;]]>&#13;<![CDATA[
-use chargeBuilder;]]>&#13;<![CDATA[
-import java.util.ArrayList;]]>&#13;<![CDATA[
-import ru.integrotech.airline.register.RegisterLoader;
-use loader;
+import ru.integrotech.airline.register.RegisterLoader;]]>&#13;<![CDATA[
 import ru.integrotech.airline.register.RegisterCache;
 ]]></imports>
   </Properties>

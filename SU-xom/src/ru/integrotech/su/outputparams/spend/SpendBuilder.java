@@ -142,7 +142,7 @@ public class SpendBuilder {
      * or calls from ODM rules */
     public void executeFiltersByMilesInterval(List<Route> routes, SpendInput spendInput) {
         for (Route route : routes) {
-            this.executeFiltersByMilesInterval(route, spendInput);
+             this.executeFiltersByMilesInterval(route, spendInput);
         }
     }
     

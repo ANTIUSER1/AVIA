@@ -5,4 +5,5 @@
   <variables name="chargeBuilder" type="ru.integrotech.su.outputparams.charge.ChargeBuilder" initialValue="" verbalization="Charge builder"/>
   <variables name="chargeInput" type="ru.integrotech.su.inputparams.charge.ChargeInput" initialValue="" verbalization="Charge input"/>
   <variables name="resultMilesCharge" type="ru.integrotech.su.outputparams.charge.ResultMilesCharge" initialValue="" verbalization="Result miles charge"/>
+  <variables name="loyaltyFactor" type="int" initialValue="" verbalization="loyaltyFactor"/>
 </ilog.rules.studio.model.base:VariableSet>

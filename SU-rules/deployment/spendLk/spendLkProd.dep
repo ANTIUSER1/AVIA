@@ -6,8 +6,8 @@
   <targets label="odm-kzn-prod-2"/>
   <targets label="odm-msk-prod-1"/>
   <targets label="odm-msk-prod-2"/>
-  <operations operationName="spendLkEasy.dop">
-    <operation href="spendLkEasy.dop#eb56c21e-62c9-4183-a367-e9aa75f9c1a0"/>
+  <operations operationName="spendLkJava.dop">
+    <operation href="spendLkJava.dop#eb56c21e-62c9-4183-a367-e9aa75f9c1a0"/>
     <properties key="ruleset.version">
       <value><![CDATA[1.0]]></value>
     </properties>

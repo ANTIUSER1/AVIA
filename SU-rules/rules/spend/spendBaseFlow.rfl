@@ -42,15 +42,17 @@ try {]]>&#13;<![CDATA[
       </ActionTask>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="FiltersByInputParams" Ordering="Default">
         <RuleList>
-          <Package Name="spend.filters.byInputParams"/>
+          <Package Name="spend.rules.filters.byInputParams"/>
         </RuleList>
       </RuleTask>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="UpdateMilesInterval" Ordering="Default">
         <RuleList>
-          <Package Name="spend.fitsMilesInterval"/>
+          <Package Name="spend.rules.fitsMilesInterval"/>
         </RuleList>
       </RuleTask>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="FiltersByMilesInterval" Ordering="Default">
+        <InitialActions/>
+        <Select Dynamic="false"/>
         <RuleList>
           <Rule Uuid="0addf350-fcb3-47ae-849e-3c552c9d2a73"/>
         </RuleList>
@@ -61,7 +63,6 @@ try {]]>&#13;<![CDATA[
         </RuleList>
       </RuleTask>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="BonusSummation" Ordering="Default">
-        <FinalActions/>
         <RuleList>
           <Rule Uuid="3d925b2b-5e5f-49a2-86d5-9855de48ed47"/>
         </RuleList>
@@ -142,18 +143,16 @@ try {]]>&#13;<![CDATA[
   </Resources>
   <Properties>
     <imports><![CDATA[import ru.integrotech.su.outputparams.spend.SpendBuilder;
-use spendBuilder;
-use spendInput;
-use resultMilesSpend;
-use routes;
 import ru.integrotech.airline.core.flight.Route;
 import ru.integrotech.airline.core.bonus.Bonus;
 import ru.integrotech.airline.core.flight.Flight;
 import ru.integrotech.airline.register.RegisterLoader;
-use loader;
 import ru.integrotech.airline.register.RegisterCache;
+use routes;
+use loader;
+use spendBuilder;
 use inputParams;
-use outputParams;
+
 ]]></imports>
   </Properties>
 </Ruleflow></rfModel>

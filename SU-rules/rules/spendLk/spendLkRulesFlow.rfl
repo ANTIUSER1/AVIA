@@ -20,7 +20,6 @@ inputParams = inputParamsLk;]]></InitialActions>
       </SubflowTask>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="RemoveUO" Ordering="Default">
         <InitialActions Language="irl"><![CDATA[spendLkBuilder = SpendLkBuilder.of(spendBuilder);]]></InitialActions>
-        <FinalActions/>
         <RuleList>
           <Rule Uuid="ac34cd8f-10e4-4a52-9520-b8c80fdc0dc7"/>
         </RuleList>
@@ -79,8 +78,6 @@ use routes;
 use spendLkBuilder;
 use resultMilesSpendLk;
 import ru.integrotech.airline.register.RegisterCache;
-use spendBuilder;
-use inputParams;
 use outputParamsLk;
 import java.util.List;
 import ru.integrotech.su.outputparams.spend.ResultMilesSpendLk;
@@ -88,6 +85,8 @@ use inputParamsLk;
 import ru.integrotech.airline.core.flight.Route;
 import ru.integrotech.airline.core.flight.Flight;
 import ru.integrotech.airline.core.bonus.Bonus;
+use inputParams;
+use spendBuilder;
 ]]></imports>
   </Properties>
 </Ruleflow></rfModel>

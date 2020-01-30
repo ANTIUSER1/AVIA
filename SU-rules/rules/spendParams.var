@@ -5,5 +5,4 @@
   <variables name="spendBuilder" type="ru.integrotech.su.outputparams.spend.SpendBuilder" initialValue="" verbalization="spend builder"/>
   <variables name="outputParams" type="ru.integrotech.su.outputparams.spend.ResultMilesSpend" initialValue="" verbalization="outputParams"/>
   <variables name="inputParams" type="ru.integrotech.su.inputparams.spend.SpendInput" initialValue="" verbalization="inputParams"/>
-  <variables name="inputParamsLk" type="ru.integrotech.su.inputparams.spend.SpendInput" initialValue="" verbalization="inputParamsLk"/>
 </ilog.rules.studio.model.base:VariableSet>

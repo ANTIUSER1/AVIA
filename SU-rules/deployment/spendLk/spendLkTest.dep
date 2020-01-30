@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="spend_lk" managingXom="true">
+<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="spend_lk_new" managingXom="true">
   <name>spendLkTest</name>
   <uuid>edc01e37-0b90-4cf0-a26b-e353b3485779</uuid>
   <targets label="Local Server"/>
   <targets label="Test Server"/>
   <operations operationName="spendLkRules">
     <operation href="spendLkRules.dop#6f9f27d7-ea75-4345-b50e-4a2f7839575e"/>
+    <properties key="ruleset.version">
+      <value><![CDATA[1.0]]></value>
+    </properties>
+  </operations>
+  <operations operationName="spendLkJava">
+    <operation href="spendLkJava.dop#eb56c21e-62c9-4183-a367-e9aa75f9c1a0"/>
     <properties key="ruleset.version">
       <value><![CDATA[1.0]]></value>
     </properties>

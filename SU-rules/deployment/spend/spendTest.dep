@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="spend" managingXom="true">
+<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="spend_new" managingXom="true">
   <name>spendTest</name>
   <uuid>abc23e58-0da4-4402-9fec-3b4ea0925b66</uuid>
   <targets label="Local Server"/>
@@ -10,8 +10,8 @@
       <value><![CDATA[1.0]]></value>
     </properties>
   </operations>
-  <operations operationName="spendEasy">
-    <operation href="spendEasy.dop#cef8abfa-8306-48af-affc-7d1e576e2269"/>
+  <operations operationName="spendJava">
+    <operation href="spendJava.dop#cef8abfa-8306-48af-affc-7d1e576e2269"/>
     <properties key="ruleset.version">
       <value><![CDATA[1.0]]></value>
     </properties>
