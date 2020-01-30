@@ -97,17 +97,6 @@ public class Bonus
         extends java.lang.Comparable
 {
 
-    static public final class AWARD_TYPE
-            extends java.lang.Enum
-    {
-        domain {static TICKET, static UPGRADE, static ALL}
-        public static final readonly ru.integrotech.airline.core.bonus.Bonus.AWARD_TYPE ALL;
-        public static final readonly ru.integrotech.airline.core.bonus.Bonus.AWARD_TYPE TICKET;
-        public static final readonly ru.integrotech.airline.core.bonus.Bonus.AWARD_TYPE UPGRADE;
-        public static ru.integrotech.airline.core.bonus.Bonus.AWARD_TYPE valueOf(string arg);
-        public static ru.integrotech.airline.core.bonus.Bonus.AWARD_TYPE[] values();
-    }
-
     static public final class BONUS_TYPE
             extends java.lang.Enum
     {

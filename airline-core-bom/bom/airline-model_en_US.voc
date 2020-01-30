@@ -55,12 +55,6 @@ ru.integrotech.airline.core.airline.Tariff.weight#phrase.navigation = {weight} o
 # ru.integrotech.airline.core.bonus.Bonus
 ru.integrotech.airline.core.bonus.Bonus#concept.label = bonus
 
-# ru.integrotech.airline.core.bonus.Bonus.AWARD_TYPE
-ru.integrotech.airline.core.bonus.Bonus.AWARD_TYPE#concept.label = AWARD TYPE
-ru.integrotech.airline.core.bonus.Bonus.AWARD_TYPE.ALL#instance.label = ALL
-ru.integrotech.airline.core.bonus.Bonus.AWARD_TYPE.TICKET#instance.label = TICKET
-ru.integrotech.airline.core.bonus.Bonus.AWARD_TYPE.UPGRADE#instance.label = UPGRADE
-
 # ru.integrotech.airline.core.bonus.Bonus.BONUS_TYPE
 ru.integrotech.airline.core.bonus.Bonus.BONUS_TYPE#concept.label = BONUS TYPE
 ru.integrotech.airline.core.bonus.Bonus.BONUS_TYPE.OW#instance.label = OW
