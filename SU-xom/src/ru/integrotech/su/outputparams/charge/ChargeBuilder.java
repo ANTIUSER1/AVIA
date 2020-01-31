@@ -122,7 +122,7 @@ public class ChargeBuilder {
 
     private void buildPassengerCharges(Flight flight, List<ServiceClass> allowedClasses, ChargeInput chargeInput, Airline airline, boolean initFields) {
 
-        boolean isRound = chargeInput.isRoundTrip();
+        boolean isRound = chargeInput.getIsRoundTrip();
         int factor;
         if (initFields) {
             factor = this.getFactor(chargeInput);
@@ -135,7 +135,7 @@ public class ChargeBuilder {
 
     private void buildPassengerCharges(Flight flight, List<ServiceClass> allowedClasses, ChargeInput chargeInput, boolean initFields) {
 
-        boolean isRound = chargeInput.isRoundTrip();
+        boolean isRound = chargeInput.getIsRoundTrip();
         int factor;
         if (initFields) {
             factor = this.getFactor(chargeInput);

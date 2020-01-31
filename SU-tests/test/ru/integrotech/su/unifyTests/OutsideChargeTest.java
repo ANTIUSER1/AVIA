@@ -3,45 +3,46 @@ package ru.integrotech.su.unifyTests;
 import com.google.gson.JsonElement;
 import org.junit.Assert;
 import org.junit.Test;
-import ru.integrotech.su.inputparams.spend.SpendInput;
+import ru.integrotech.su.common.Location;
+import ru.integrotech.su.inputparams.charge.ChargeInput;
 import ru.integrotech.su.mock.MockLoader;
-import ru.integrotech.su.outputparams.spend.SpendRoute;
+import ru.integrotech.su.outputparams.charge.ChargeRoute;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.*;
 
-public class OutsideSpendTest extends UnifyBaseTest {
+public class OutsideChargeTest extends UnifyBaseTest {
 
-    private static final String ROOT_TEST_DIRECTORY_PATH = "outSpendTestDirectory";
+    private static final String ROOT_TEST_DIRECTORY_PATH = "outChargeTestDirectory";
     private static final String SUCCESS = "OK\n";
     private static final String INCORRECT = "INCORRECT\n";
     private static final String NOT_FOUND = "not found\n";
     private static final String EXTRA = "extra\n";
 
-    public OutsideSpendTest() {
-        super(MockLoader.ofMockRegisters(), SpendRoute.class);
+    public OutsideChargeTest() {
+        super(MockLoader.ofMockRegisters(), ChargeRoute.class);
     }
 
     @Override
     protected boolean isCorrectCase(String pathToCaseFolder) throws IOException {
         JsonElement jsonElement = this.common.getLoader().loadJson(pathToCaseFolder, REQUEST_FILE_NAME);
-        SpendInput spendInput = this.common.getTestsCache().loadSpendInputParams(jsonElement);
+        ChargeInput chargeInput = this.common.getTestsCache().loadChargeInputParams(jsonElement);
 
         jsonElement = this.common.getLoader().loadJson(pathToCaseFolder, ACTUAL_RESPONSE_FILE_NAME);
-        List<SpendRoute> actualSpendRoutes = this.common.getTestsCache().loadSpendRoutes(jsonElement);
+        List<ChargeRoute> actualChargeRoutes = this.common.getTestsCache().loadChargeRoutes(jsonElement);
 
         jsonElement = this.common.getLoader().loadJson(pathToCaseFolder, EXPECTED_RESPONSE_FILE_NAME);
-        List<SpendRoute> expectedSpendRoutes = this.common.getTestsCache().loadSpendRoutes(jsonElement);
+        List<ChargeRoute> expectedChargeRoutes = this.common.getTestsCache().loadChargeRoutes(jsonElement);
 
-        String testHeader = this.buildReportHeader(spendInput);
-        String testBody = this.compareSpendRoute(expectedSpendRoutes, actualSpendRoutes);
+        String testHeader = this.buildReportHeader(chargeInput);
+        String testBody = this.compareChargeRoute(expectedChargeRoutes, actualChargeRoutes);
         boolean result = testBody.contains(SUCCESS)
-                    && ( !testBody.contains(INCORRECT)
-                         &&!testBody.contains(NOT_FOUND)
-                         &&!testBody.contains(EXTRA));
-        printTestResults(result, actualSpendRoutes, pathToCaseFolder);
+                && ( !testBody.contains(INCORRECT)
+                &&!testBody.contains(NOT_FOUND)
+                &&!testBody.contains(EXTRA));
+        printTestResults(result, actualChargeRoutes, pathToCaseFolder);
         String testReport = String.format("%s%s", testHeader, testBody);
         printReport(testReport, pathToCaseFolder);
         return result;
@@ -61,55 +62,64 @@ public class OutsideSpendTest extends UnifyBaseTest {
         }
     }
 
-    private String buildReportHeader(SpendInput spendInput) {
+    private String printLocation(Location location) {
         StringBuilder builder = new StringBuilder();
-        builder.append(" ------------ SPEND TEST ------------\n");
+        if (location == null) {
+            builder.append(String.format("|  %-20s %-10s   |\n",
+                    "location type:", "null"));
+            builder.append(String.format("|  %-20s %-10s   |\n",
+                    "location code:", "null"));
+        } else if (location.getAirport() != null) {
+            builder.append(String.format("|  %-20s %-10s   |\n",
+                    "location type:", "airport"));
+            builder.append(String.format("|  %-20s %-10s   |\n",
+                    "location code:", location.getAirport().getAirportCode()));
+        } else  if (location.getCity() != null) {
+            builder.append(String.format("|  %-20s %-10s   |\n",
+                    "location type:", "city"));
+            builder.append(String.format("|  %-20s %-10s   |\n",
+                    "location code:", location.getCity().getCityCode()));
+        } else  if (location.getCountry() != null) {
+            builder.append(String.format("|  %-20s %-10s   |\n",
+                    "location type:", "country"));
+            builder.append(String.format("|  %-20s %-10s   |\n",
+                    "location code:", location.getCountry().getCountryCode()));
+        } else  if (location.getRegion() != null) {
+            builder.append(String.format("|  %-20s %-10s   |\n",
+                    "location type:", "region"));
+            builder.append(String.format("|  %-20s %-10s   |\n",
+                    "location code:", location.getRegion().getRegionCode()));
+        }
+
+        return builder.toString();
+    }
+
+    private String buildReportHeader(ChargeInput chargeInput) {
+        StringBuilder builder = new StringBuilder();
+        builder.append("----------- CHARGE TEST -------------\n");
         builder.append("|  Parameters:                       |\n");
+
+        //airline block
+        builder.append("|------------------------------------|\n");
+        builder.append(String.format("|  %-20s %-10s   |\n",
+                "airline:", chargeInput.getAirline().getAirlineCode()));
 
         //origin block
         builder.append("|------------------------------------|\n");
         builder.append("|  Origin:                           |\n");
-        builder.append(String.format("|  %-20s %-10s   |\n",
-                "location type:",
-                spendInput.getOrigin().getLocationType()));
-        builder.append(String.format("|  %-20s %-10s   |\n",
-                "location code:",
-                spendInput.getOrigin().getLocationCode()));
+        builder.append(this.printLocation(chargeInput.getOrigin()));
 
         //destination block
         builder.append("|------------------------------------|\n");
         builder.append("|  Destination:                      |\n");
-        builder.append(String.format("|  %-20s %-10s   |\n",
-                "location type:",
-                spendInput.getDestination().getLocationType()));
-        builder.append(String.format("|  %-20s %-10s   |\n",
-                "location code:",
-                spendInput.getDestination().getLocationCode()));
-
-        //miles interval block
-        builder.append("|------------------------------------|\n");
-        builder.append("|  Miles interval:                   |\n");
-        builder.append(String.format("|  %-20s %,-10d   |\n",
-                "miles min:",
-                spendInput.getMilesInterval().getMilesMin()));
-        builder.append(String.format("|  %-20s %,-10d   |\n",
-                "miles max:",
-                spendInput.getMilesInterval().getMilesMax()));
+        builder.append(this.printLocation(chargeInput.getDestination()));
 
         //other values block
         builder.append("|------------------------------------|\n");
         builder.append(String.format("|  %-20s %-10s   |\n",
-                "Is only afl:", spendInput.getIsOnlyAfl()));
+                "tier level code:", chargeInput.getTierLevel().getTierLevelCode()));
         builder.append(String.format("|  %-20s %-10s   |\n",
-                "Is round trip:", spendInput.getIsRoundTrip()));
-        String classOfServiceName = "null";
-        if (spendInput.getClassOfService() != null) {
-            classOfServiceName = spendInput.getClassOfService().getClassOfServiceName();
-        }
-        builder.append(String.format("|  %-20s %-10s   |\n",
-                "Class of service:", classOfServiceName));
-        builder.append(String.format("|  %-20s %-10s   |\n",
-                "Award type:", spendInput.getAwardType()));
+                "is round trip:", chargeInput.getIsRoundTrip()));
         builder.append(" ------------------------------------\n");
         builder.append("\n");
 
@@ -117,23 +127,22 @@ public class OutsideSpendTest extends UnifyBaseTest {
     }
 
 
-
-    private String compareSpendRoute(List<SpendRoute> expected, List<SpendRoute> actual) {
+    private String compareChargeRoute(List<ChargeRoute> expected, List<ChargeRoute> actual) {
         StringBuilder builder = new StringBuilder();
-        builder.append(String.format("   %-23s     %s\n", " --- R O U T E ---", "RESULT"));
+        builder.append(String.format("%-26s     %s\n", " --- R O U T E ---", "RESULT"));
         builder.append("\n");
-        this.sort(expected);
         this.sort(actual);
-        ArrayList<SpendRoute> actualArr = new ArrayList<>(actual);
-        ArrayList<SpendRoute> expectedlArr = new ArrayList<>(expected);
+        this.sort(expected);
+        ArrayList<ChargeRoute> actualArr = new ArrayList<>(actual);
+        ArrayList<ChargeRoute> expectedlArr = new ArrayList<>(expected);
         int successCounter = 0;
         int incorrectCounter = 0;
-        Iterator<SpendRoute> expectedIterator = expectedlArr.iterator();
+        Iterator<ChargeRoute> expectedIterator = expectedlArr.iterator();
         expected: while (expectedIterator.hasNext()) {
-            SpendRoute expectedRoute = expectedIterator.next();
-            Iterator<SpendRoute> actualIterator = actualArr.iterator();
+            ChargeRoute expectedRoute = expectedIterator.next();
+            Iterator<ChargeRoute> actualIterator = actualArr.iterator();
             while (actualIterator.hasNext()) {
-                SpendRoute actualRoute = actualIterator.next();
+                ChargeRoute actualRoute = actualIterator.next();
                 if (this.isShallowEquals(expectedRoute, actualRoute)) {
                     if (this.isDeepEquals(expectedRoute, actualRoute)) {
                         builder.append(String.format("   %-25s     %s",
@@ -153,13 +162,13 @@ public class OutsideSpendTest extends UnifyBaseTest {
             }
         }
 
-        for (SpendRoute route : expectedlArr) {
+        for (ChargeRoute route : expectedlArr) {
             builder.append(String.format("   %-22s     %s",
                     this.getRoteCode(route),
                     NOT_FOUND));
         }
 
-        for (SpendRoute route : actualArr) {
+        for (ChargeRoute route : actualArr) {
             builder.append(String.format("   %-23s     %s",
                     this.getRoteCode(route),
                     EXTRA));
@@ -194,8 +203,7 @@ public class OutsideSpendTest extends UnifyBaseTest {
         return builder.toString();
     }
 
-
-    private String getRoteCode(SpendRoute route) {
+    private String getRoteCode(ChargeRoute route) {
         StringBuilder builder = new StringBuilder();
         builder.append(String.format("%s  ", route.getOrigin().getAirport().getAirportCode()));
         if (route.getVia() != null) {
@@ -204,34 +212,30 @@ public class OutsideSpendTest extends UnifyBaseTest {
             builder.append(String.format("%s  ", "   "));
         }
         builder.append(String.format("%s ", route.getDestination().getAirport().getAirportCode()));
-        builder.append(String.format("  %s", route.getIsAfl() ? "  afl" : "scyteam"));
         return builder.toString();
     }
 
-    private void sort(List<SpendRoute> list) {
+    private void sort(List<ChargeRoute> list) {
         Collections.sort(list);
         this.sortInnerElements(list);
     }
 
 
-    private void sortInnerElements(List<SpendRoute> spendRoutes) {
-        for (SpendRoute spendRoute : spendRoutes) {
-            spendRoute.sort();
+    private void sortInnerElements(List<ChargeRoute> spendRoutes) {
+        for (ChargeRoute chargeRoute : spendRoutes) {
+            chargeRoute.sort();
         }
     }
 
-    private boolean isShallowEquals(SpendRoute expected, SpendRoute actual) {
+    private boolean isShallowEquals(ChargeRoute expected, ChargeRoute actual) {
         if (expected == actual) return true;
-        return  expected.getIsAfl() == actual.getIsAfl() &&
-                expected.isSingle() == actual.isSingle() &&
-                Objects.equals(expected.getOrigin(), actual.getOrigin()) &&
+        return Objects.equals(expected.getOrigin(), actual.getOrigin()) &&
                 Objects.equals(expected.getDestination(), actual.getDestination()) &&
                 Objects.equals(expected.getVia(), actual.getVia());
     }
 
-    private boolean isDeepEquals(SpendRoute expected, SpendRoute actual) {
-        return  Objects.equals(expected.getAirlines(), actual.getAirlines()) &&
-                Objects.equals(expected.getMileCosts(), actual.getMileCosts());
+    private boolean isDeepEquals(ChargeRoute expected, ChargeRoute actual) {
+        return   Objects.equals(expected.getSegments(), actual.getSegments());
     }
 
 

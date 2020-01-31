@@ -5,23 +5,23 @@ import org.junit.Assert;
 import org.junit.Test;
 import ru.integrotech.su.inputparams.spend.SpendInput;
 import ru.integrotech.su.mock.MockLoader;
-import ru.integrotech.su.outputparams.spend.SpendRoute;
+import ru.integrotech.su.outputparams.spend.SpendLkRoute;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.*;
 
-public class OutsideSpendTest extends UnifyBaseTest {
+public class OutsideSpendLkTest extends UnifyBaseTest {
 
-    private static final String ROOT_TEST_DIRECTORY_PATH = "outSpendTestDirectory";
+    private static final String ROOT_TEST_DIRECTORY_PATH = "outSpendLkTestDirectory";
     private static final String SUCCESS = "OK\n";
     private static final String INCORRECT = "INCORRECT\n";
     private static final String NOT_FOUND = "not found\n";
     private static final String EXTRA = "extra\n";
 
-    public OutsideSpendTest() {
-        super(MockLoader.ofMockRegisters(), SpendRoute.class);
+    public OutsideSpendLkTest() {
+        super(MockLoader.ofMockRegisters(), SpendLkRoute.class);
     }
 
     @Override
@@ -30,18 +30,18 @@ public class OutsideSpendTest extends UnifyBaseTest {
         SpendInput spendInput = this.common.getTestsCache().loadSpendInputParams(jsonElement);
 
         jsonElement = this.common.getLoader().loadJson(pathToCaseFolder, ACTUAL_RESPONSE_FILE_NAME);
-        List<SpendRoute> actualSpendRoutes = this.common.getTestsCache().loadSpendRoutes(jsonElement);
+        List<SpendLkRoute> actualSpendLkRoutes = this.common.getTestsCache().loadSpendLkRoutes(jsonElement);
 
         jsonElement = this.common.getLoader().loadJson(pathToCaseFolder, EXPECTED_RESPONSE_FILE_NAME);
-        List<SpendRoute> expectedSpendRoutes = this.common.getTestsCache().loadSpendRoutes(jsonElement);
+        List<SpendLkRoute> expectedSpendLkRoutes = this.common.getTestsCache().loadSpendLkRoutes(jsonElement);
 
         String testHeader = this.buildReportHeader(spendInput);
-        String testBody = this.compareSpendRoute(expectedSpendRoutes, actualSpendRoutes);
+        String testBody = this.compareSpendRoute(expectedSpendLkRoutes, actualSpendLkRoutes);
         boolean result = testBody.contains(SUCCESS)
-                    && ( !testBody.contains(INCORRECT)
-                         &&!testBody.contains(NOT_FOUND)
-                         &&!testBody.contains(EXTRA));
-        printTestResults(result, actualSpendRoutes, pathToCaseFolder);
+                && ( !testBody.contains(INCORRECT)
+                &&!testBody.contains(NOT_FOUND)
+                &&!testBody.contains(EXTRA));
+        printTestResults(result, actualSpendLkRoutes, pathToCaseFolder);
         String testReport = String.format("%s%s", testHeader, testBody);
         printReport(testReport, pathToCaseFolder);
         return result;
@@ -61,9 +61,10 @@ public class OutsideSpendTest extends UnifyBaseTest {
         }
     }
 
+
     private String buildReportHeader(SpendInput spendInput) {
         StringBuilder builder = new StringBuilder();
-        builder.append(" ------------ SPEND TEST ------------\n");
+        builder.append(" ---------- SPEND LK TEST -----------\n");
         builder.append("|  Parameters:                       |\n");
 
         //origin block
@@ -116,24 +117,22 @@ public class OutsideSpendTest extends UnifyBaseTest {
         return builder.toString();
     }
 
-
-
-    private String compareSpendRoute(List<SpendRoute> expected, List<SpendRoute> actual) {
+    private String compareSpendRoute(List<SpendLkRoute> expected, List<SpendLkRoute> actual) {
         StringBuilder builder = new StringBuilder();
-        builder.append(String.format("   %-23s     %s\n", " --- R O U T E ---", "RESULT"));
+        builder.append(String.format("%-26s     %s\n", " - R O U T E -", "RESULT"));
         builder.append("\n");
-        this.sort(expected);
         this.sort(actual);
-        ArrayList<SpendRoute> actualArr = new ArrayList<>(actual);
-        ArrayList<SpendRoute> expectedlArr = new ArrayList<>(expected);
+        this.sort(expected);
+        ArrayList<SpendLkRoute> actualArr = new ArrayList<>(actual);
+        ArrayList<SpendLkRoute> expectedlArr = new ArrayList<>(expected);
         int successCounter = 0;
         int incorrectCounter = 0;
-        Iterator<SpendRoute> expectedIterator = expectedlArr.iterator();
+        Iterator<SpendLkRoute> expectedIterator = expectedlArr.iterator();
         expected: while (expectedIterator.hasNext()) {
-            SpendRoute expectedRoute = expectedIterator.next();
-            Iterator<SpendRoute> actualIterator = actualArr.iterator();
+            SpendLkRoute expectedRoute = expectedIterator.next();
+            Iterator<SpendLkRoute> actualIterator = actualArr.iterator();
             while (actualIterator.hasNext()) {
-                SpendRoute actualRoute = actualIterator.next();
+                SpendLkRoute actualRoute = actualIterator.next();
                 if (this.isShallowEquals(expectedRoute, actualRoute)) {
                     if (this.isDeepEquals(expectedRoute, actualRoute)) {
                         builder.append(String.format("   %-25s     %s",
@@ -153,13 +152,13 @@ public class OutsideSpendTest extends UnifyBaseTest {
             }
         }
 
-        for (SpendRoute route : expectedlArr) {
+        for (SpendLkRoute route : expectedlArr) {
             builder.append(String.format("   %-22s     %s",
                     this.getRoteCode(route),
                     NOT_FOUND));
         }
 
-        for (SpendRoute route : actualArr) {
+        for (SpendLkRoute route : actualArr) {
             builder.append(String.format("   %-23s     %s",
                     this.getRoteCode(route),
                     EXTRA));
@@ -194,45 +193,34 @@ public class OutsideSpendTest extends UnifyBaseTest {
         return builder.toString();
     }
 
-
-    private String getRoteCode(SpendRoute route) {
-        StringBuilder builder = new StringBuilder();
-        builder.append(String.format("%s  ", route.getOrigin().getAirport().getAirportCode()));
-        if (route.getVia() != null) {
-            builder.append(String.format("%s  ", route.getVia().getAirport().getAirportCode()));
-        } else {
-            builder.append(String.format("%s  ", "   "));
-        }
-        builder.append(String.format("%s ", route.getDestination().getAirport().getAirportCode()));
-        builder.append(String.format("  %s", route.getIsAfl() ? "  afl" : "scyteam"));
-        return builder.toString();
+    private String getRoteCode(SpendLkRoute route) {
+        String builder = String.format("%s  ", route.getOrigin().getAirport().getAirportCode()) +
+                String.format("%s ", route.getDestination().getAirport().getAirportCode());
+        return builder;
     }
 
-    private void sort(List<SpendRoute> list) {
+    private void sort(List<SpendLkRoute> list) {
         Collections.sort(list);
         this.sortInnerElements(list);
     }
 
 
-    private void sortInnerElements(List<SpendRoute> spendRoutes) {
-        for (SpendRoute spendRoute : spendRoutes) {
-            spendRoute.sort();
+    private void sortInnerElements(List<SpendLkRoute> spendRoutes) {
+        for (SpendLkRoute spendLkRoute : spendRoutes) {
+            spendLkRoute.sort();
         }
     }
 
-    private boolean isShallowEquals(SpendRoute expected, SpendRoute actual) {
+    private boolean isShallowEquals(SpendLkRoute expected, SpendLkRoute actual) {
         if (expected == actual) return true;
-        return  expected.getIsAfl() == actual.getIsAfl() &&
-                expected.isSingle() == actual.isSingle() &&
-                Objects.equals(expected.getOrigin(), actual.getOrigin()) &&
-                Objects.equals(expected.getDestination(), actual.getDestination()) &&
-                Objects.equals(expected.getVia(), actual.getVia());
+        return  Objects.equals(expected.getOrigin(), actual.getOrigin()) &&
+                Objects.equals(expected.getDestination(), actual.getDestination());
     }
 
-    private boolean isDeepEquals(SpendRoute expected, SpendRoute actual) {
-        return  Objects.equals(expected.getAirlines(), actual.getAirlines()) &&
-                Objects.equals(expected.getMileCosts(), actual.getMileCosts());
+    private boolean isDeepEquals(SpendLkRoute expected, SpendLkRoute actual) {
+        return  Objects.equals(expected.getRequiredAwards(), actual.getRequiredAwards());
     }
+
 
 
 }

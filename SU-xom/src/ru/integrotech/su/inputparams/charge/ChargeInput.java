@@ -22,7 +22,7 @@ public class ChargeInput {
         chargeInput.setOrigin(createLocation(originType, originCode));
         chargeInput.setDestination(createLocation(destType, destCode));
         chargeInput.setTierLevel(TierLevel.of(tierLevelCode));
-        chargeInput.setRoundTrip(isRoundTrip);
+        chargeInput.setIsRoundTrip(isRoundTrip);
 
         return chargeInput;
     }
@@ -95,11 +95,11 @@ public class ChargeInput {
         this.tierLevel = tierLevel;
     }
 
-    public boolean isRoundTrip() {
+    public boolean getIsRoundTrip() {
         return isRoundTrip;
     }
 
-    public void setRoundTrip(boolean roundTrip) {
+    public void setIsRoundTrip(boolean roundTrip) {
         isRoundTrip = roundTrip;
     }
 

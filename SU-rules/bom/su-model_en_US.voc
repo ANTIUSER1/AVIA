@@ -6,8 +6,8 @@ ru.integrotech.su.inputparams.attractionAB.AttractionAbInput#concept.label = att
 
 # ru.integrotech.su.inputparams.charge.ChargeInput
 ru.integrotech.su.inputparams.charge.ChargeInput#concept.label = charge input
-ru.integrotech.su.inputparams.charge.ChargeInput.roundTrip#phrase.action = make it {round trip} that {this} is round trip
-ru.integrotech.su.inputparams.charge.ChargeInput.roundTrip#phrase.navigation = {this} is round trip
+ru.integrotech.su.inputparams.charge.ChargeInput.isRoundTrip#phrase.action = make it {round trip} that {this} is round trip
+ru.integrotech.su.inputparams.charge.ChargeInput.isRoundTrip#phrase.navigation = {this} is round trip
 
 # ru.integrotech.su.inputparams.spend.LocationInput
 ru.integrotech.su.inputparams.spend.LocationInput#concept.label = location input

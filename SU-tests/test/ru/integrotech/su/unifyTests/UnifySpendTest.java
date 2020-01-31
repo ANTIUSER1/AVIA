@@ -26,17 +26,13 @@ import java.util.*;
 public class UnifySpendTest extends UnifyBaseTest {
 
     private static final String ROOT_TEST_DIRECTORY_PATH = "uniSpendTestDirectory";
-    protected static final String SUCCESS = "OK\n";
-    protected static final String INCORRECT = "INCORRECT\n";
-    protected static final String NOT_FOUND = "not found\n";
-    protected static final String EXTRA = "extra\n";
+    private static final String SUCCESS = "OK\n";
+    private static final String INCORRECT = "INCORRECT\n";
+    private static final String NOT_FOUND = "not found\n";
+    private static final String EXTRA = "extra\n";
 
     public UnifySpendTest() {
         super(MockLoader.ofRealRegisters(), SpendRoute.class);
-    }
-
-    public UnifySpendTest(MockLoader loader) {
-        super(loader, SpendRoute.class);
     }
 
     @Override
@@ -65,7 +61,7 @@ public class UnifySpendTest extends UnifyBaseTest {
         Assert.assertTrue(executeTest(ROOT_TEST_DIRECTORY_PATH));
     }
 
-    protected String buildReportHeader(SpendInput spendInput) {
+    private String buildReportHeader(SpendInput spendInput) {
         StringBuilder builder = new StringBuilder();
         builder.append(" ------------ SPEND TEST ------------\n");
         builder.append("|  Parameters:                       |\n");
@@ -122,7 +118,7 @@ public class UnifySpendTest extends UnifyBaseTest {
 
 
 
-    protected String compareSpendRoute(List<SpendRoute> expected, List<SpendRoute> actual) {
+    private String compareSpendRoute(List<SpendRoute> expected, List<SpendRoute> actual) {
         StringBuilder builder = new StringBuilder();
         builder.append(String.format("   %-23s     %s\n", " --- R O U T E ---", "RESULT"));
         builder.append("\n");

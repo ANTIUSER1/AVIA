@@ -116,7 +116,7 @@ public class UnifyChargeTest extends UnifyBaseTest {
         builder.append(String.format("|  %-20s %-10s   |\n",
                 "tier level code:", chargeInput.getTierLevel().getTierLevelCode()));
         builder.append(String.format("|  %-20s %-10s   |\n",
-                "is round trip:", chargeInput.isRoundTrip()));
+                "is round trip:", chargeInput.getIsRoundTrip()));
         builder.append(" ------------------------------------\n");
         builder.append("\n");
 
