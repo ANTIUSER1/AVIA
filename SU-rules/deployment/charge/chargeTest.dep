@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="charge_new" managingXom="true">
+<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="aflBonus" managingXom="true">
   <name>chargeTest</name>
   <uuid>81786321-2ac8-4dee-9b6a-2c686dbff71a</uuid>
   <targets label="Local Server"/>
-  <operations operationName="chargeRules">
-    <operation href="chargeRules.dop#f8781f54-0c1b-4fa1-b532-f7f9542efa12"/>
-    <properties key="ruleset.version">
-      <value><![CDATA[1.0]]></value>
-    </properties>
-  </operations>
+  <targets label="Test Server"/>
   <operations operationName="chargeJava.dop">
     <operation href="chargeJava.dop#b98f545f-10fa-48f0-8fe1-e04f22732c71"/>
     <properties key="ruleset.version">

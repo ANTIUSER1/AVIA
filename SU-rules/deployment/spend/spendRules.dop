@@ -3,10 +3,10 @@
   <name>spendRules</name>
   <uuid>d1fea039-24c8-4576-a75c-bae6f1aeb508</uuid>
   <referencedVariables variableName="outputParams" variableSetName="spendParams" direction="OUT">
-    <variableSet href="../../rules/spend/spendParams.var#1c96f13f-362c-4612-921c-0d576ed89cfc"/>
+    <variableSet href="../../rules/spendParams.var#1c96f13f-362c-4612-921c-0d576ed89cfc"/>
   </referencedVariables>
   <referencedVariables variableName="inputParams" variableSetName="spendParams">
-    <variableSet href="../../rules/spend/spendParams.var#1c96f13f-362c-4612-921c-0d576ed89cfc"/>
+    <variableSet href="../../rules/spendParams.var#1c96f13f-362c-4612-921c-0d576ed89cfc"/>
   </referencedVariables>
   <ruleflow href="../../rules/spend/spendRuleFlow.rfl#b05e0a3e-abb8-4cd3-b04a-15c2b1a5d11d"/>
   <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="spendRules_extractor" validator="Default Validator"/>
