@@ -15,6 +15,7 @@ import ru.integrotech.su.outputparams.route.RoutesBuilder;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -31,6 +32,22 @@ import java.util.Set;
  */
 public class SpendBuilder {
 
+    public static String[] getRegisterNames() {
+        return REGISTER_NAMES;
+    }
+
+    private static final String[] REGISTER_NAMES = new String[]
+                                    {"airline",
+                                    "region",
+                                    "country",
+                                    "city",
+                                    "airport",
+                                    "pair",
+                                    "serviceClassLimit",
+                                    "bonusRoute",
+                                    "award",
+                                    "wrongRoute"};
+
     public static SpendBuilder of(RegisterCache cache) {
         return new SpendBuilder(cache);
     }
@@ -42,8 +59,8 @@ public class SpendBuilder {
     private BonusSearcher bonusSearcher;
 
     private final Airline afl;
-
-
+    
+   
     private SpendBuilder(RegisterCache cache) {
         this.cache = cache;
         this.routesBuilder = RoutesBuilder.of(cache);
@@ -51,17 +68,17 @@ public class SpendBuilder {
         this.afl = this.cache.getAirline(Airline.AFL_CODE);
     }
 
-    /*method for use in ODM*/
+    /* method for use in ODM in spendRuleFlow
+     * contains program and business logic */
     public ResultMilesSpend buildResult(SpendInput spendInput) {
         List<SpendRoute> routes = this.getSpendRoutes(spendInput);
         return ResultMilesSpend.of(routes);
     }
 
-    /*method for use in ODM*/
+    /* method for use in ODM in spendJavaFlow
+     * contains program logic only*/
     public ResultMilesSpend buildResult(List<Route> routes, SpendInput spendInput) {
-        this.executeFilters(routes, spendInput);
-        this.bonusSummation(routes);
-        List<SpendRoute> spendRoutes = this.buildSpendRoutes(routes, spendInput);
+         List<SpendRoute> spendRoutes = this.buildSpendRoutes(routes, spendInput);
         return ResultMilesSpend.of(spendRoutes);
     }
 
@@ -74,7 +91,7 @@ public class SpendBuilder {
     public List<SpendRoute> getSpendRoutes(SpendInput spendInput, String airlineCode) {
 
         List<Route> routes = this.getRoutes(spendInput, airlineCode);
-        this.executeFilters(routes, spendInput);
+        this.executeAllFilters(routes, spendInput);
         this.bonusSummation(routes);
         this.updateFitsMilesIntervals(routes, spendInput);
         return this.buildSpendRoutes(routes, spendInput);
@@ -86,7 +103,6 @@ public class SpendBuilder {
     }
 
     public List<Route> getRoutes(SpendInput spendInput, String airlineCode) {
-
         RoutesInput routesInput = RoutesInput.of(spendInput, airlineCode);
         List<Route> routes = this.routesBuilder.getRoutes(routesInput);
 
@@ -97,7 +113,7 @@ public class SpendBuilder {
         return routes;
     }
 
-    List<SpendRoute> buildSpendRoutes(List<Route> routes, SpendInput spendInput) {
+    public List<SpendRoute> buildSpendRoutes(List<Route> routes, SpendInput spendInput) {
 
         boolean aflOnly = spendInput.getIsOnlyAfl();
         List<SpendRoute> result = new ArrayList<>();
@@ -120,20 +136,50 @@ public class SpendBuilder {
 
         return result;
     }
+    
 
-    void executeFilters(List<Route> routes, SpendInput spendInput) {
+    /* this is a business logic, it should works by ODM rules 
+     * or calls from ODM rules */
+    public void executeAllFilters(List<Route> routes, SpendInput spendInput) {
         for (Route route : routes) {
-            this.executeFilters(route, spendInput);
+            this.executeAllFilters(route, spendInput);
         }
     }
-
-    private void executeFilters(Route route, SpendInput spendInput) {
+    
+    /* this is a business logic, it should works by ODM rules 
+     * or calls from ODM rules */
+    public void executeFiltersByInputParams(List<Route> routes, SpendInput spendInput) {
+        for (Route route : routes) {
+            this.executeFiltersByInputParams(route, spendInput);
+        }
+    }
+    
+    /* this is a business logic, it should works by ODM rules 
+     * or calls from ODM rules */
+    public void executeFiltersByMilesInterval(List<Route> routes, SpendInput spendInput) {
+        for (Route route : routes) {
+             this.executeFiltersByMilesInterval(route, spendInput);
+        }
+    }
+    
+    /* this is a business logic, it should works by ODM rules 
+     * or calls from ODM rules */
+    public void executeFiltersByCommonTypes(List<Route> routes, SpendInput spendInput) {
+        for (Route route : routes) {
+        	BonusFilters.byCommonTypes(route);
+        }
+    }
+    
+   
+    /* this is a business logic, it should works by ODM rules 
+     * or calls from ODM rules */
+    private void executeAllFilters(Route route, SpendInput spendInput) {
 
         int milesMin = spendInput.getMilesInterval().getMilesMin();
         int milesMax = spendInput.getMilesInterval().getMilesMax();
         boolean aflOnly = spendInput.getIsOnlyAfl();
         boolean isRoundTrip = spendInput.getIsRoundTrip();
-        ServiceClass.SERVICE_CLASS_TYPE serviceClassType = this.getServiceClassType(this.getClassOfServiceName(spendInput));
+        ServiceClass.SERVICE_CLASS_TYPE serviceClassType = this.getServiceClassType(spendInput);
         String award = spendInput.getAwardType();
 
         if (route.isOperatesBy(this.afl)) {
@@ -156,17 +202,72 @@ public class SpendBuilder {
 
         BonusFilters.byCommonTypes(route);
     }
+    
+    /* this is a business logic, it should works by ODM rules 
+     * or calls from ODM rules */
+    private void executeFiltersByInputParams(Route route, SpendInput spendInput) {
 
-    private ServiceClass.SERVICE_CLASS_TYPE getServiceClassType(String serviceClassName) {
-        ServiceClass.SERVICE_CLASS_TYPE serviceClassType = null;
+        boolean aflOnly = spendInput.getIsOnlyAfl();
+        boolean isRoundTrip = spendInput.getIsRoundTrip();
+        ServiceClass.SERVICE_CLASS_TYPE serviceClassType = this.getServiceClassType(spendInput);
+        String award = spendInput.getAwardType();
 
-        if (serviceClassName != null) {
-            serviceClassType = ServiceClass.SERVICE_CLASS_TYPE.valueOf(serviceClassName);
+        if (route.isOperatesBy(this.afl)) {
+            BonusFilters.byInputParams(route.getAflBonuses(), serviceClassType, route.getOrigin(), award, isRoundTrip, route.isDirect());
+             for (Flight flight : route.getFlights()) {
+                  BonusFilters.byInputParams(flight.getAflBonuses(), serviceClassType, flight.getOrigin(), award, isRoundTrip, false);
+            }
+        }
+
+        if (!aflOnly && route.otherAirlinesIsPresent(this.afl)) {
+            BonusFilters.byInputParams(route.getScyteamBonuses(), serviceClassType, route.getOrigin(), award, isRoundTrip, route.isDirect());
+            for (Flight flight : route.getFlights()) {
+                BonusFilters.byInputParams(flight.getScyteamBonuses(), serviceClassType, flight.getOrigin(), award, isRoundTrip, false);
+            }
+        }
+   }
+    
+    /* this is a business logic, it should works by ODM rules 
+     * or calls from ODM rules */
+    private void executeFiltersByMilesInterval(Route route, SpendInput spendInput) {
+
+        int milesMin = spendInput.getMilesInterval().getMilesMin();
+        int milesMax = spendInput.getMilesInterval().getMilesMax();
+        boolean aflOnly = spendInput.getIsOnlyAfl();
+        if (route.isOperatesBy(this.afl)) {
+             BonusFilters.byMilesInterval(route.getAflBonuses(), milesMin, milesMax);
+            for (Flight flight : route.getFlights()) {
+                BonusFilters.byMilesInterval(flight.getAflBonuses(), milesMin, milesMax);
+            }
+        }
+
+        if (!aflOnly && route.otherAirlinesIsPresent(this.afl)) {
+            BonusFilters.byMilesInterval(route.getScyteamBonuses(), milesMin, milesMax);
+            for (Flight flight : route.getFlights()) {
+               BonusFilters.byMilesInterval(flight.getScyteamBonuses(), milesMin, milesMax);
+            }
+        }
+    }
+    
+     
+    public ServiceClass.SERVICE_CLASS_TYPE getServiceClassType(SpendInput spendInput) {
+    	
+    	String classOfServiceName = null;
+    	ServiceClass.SERVICE_CLASS_TYPE serviceClassType = null;
+    	
+        if (spendInput.getClassOfService() != null) {
+        	classOfServiceName = spendInput.getClassOfService().getClassOfServiceName();
+        }
+        
+        if (classOfServiceName != null) {
+            serviceClassType = ServiceClass.SERVICE_CLASS_TYPE.valueOf(classOfServiceName);
         }
 
         return serviceClassType;
     }
 
+    /* this is a business logic, it should works by ODM rules 
+     * or calls from ODM rules */
     public void updateFitsMilesIntervals(List<Route> routes, SpendInput spendInput) {
 
         int milesMin = spendInput.getMilesInterval().getMilesMin();
@@ -177,6 +278,8 @@ public class SpendBuilder {
         }
     }
 
+    /* this is a business logic, it should works by ODM rules 
+     * or calls from ODM rules */
     private void updateFitsMilesInterval(Route route, int milesMin, int milesMax) {
         for (Bonus bonus : route.getAflBonuses()) {
             bonus.setFitsMilesInterval(milesMin, milesMax);
@@ -191,6 +294,8 @@ public class SpendBuilder {
         }
     }
 
+    /* this is a business logic, it should works by ODM rules 
+     * or calls from ODM rules */
     private void updateFitsMilesInterval(Flight flight, int milesMin, int milesMax) {
         for (Bonus bonus : flight.getAflBonuses()) {
             bonus.setFitsMilesInterval(milesMin, milesMax);
@@ -201,14 +306,8 @@ public class SpendBuilder {
         }
     }
 
-    private String getClassOfServiceName(SpendInput spendInput) {
-        String result = null;
-        if (spendInput.getClassOfService() != null) {
-            result = spendInput.getClassOfService().getClassOfServiceName();
-        }
-        return result;
-    }
-
+    /* this is a business logic, it should works by ODM rules 
+     * or calls from ODM rules */
     public void bonusSummation(List<Route> routes) {
         for (Route route : routes) {
             this.aflBonusSummation(route);
@@ -216,7 +315,7 @@ public class SpendBuilder {
     }
 
     private void aflBonusSummation(Route route) {
-        if (route.getFlights().size() < 2) return;
+        if (route.getAflBonuses().size() > 0 || route.getFlights().size() < 2) return;
         Set<Bonus> bonuses1 = route.getFlights().get(0).getAflBonuses();
         Set<Bonus> bonuses2 = route.getFlights().get(1).getAflBonuses();
         Set<Bonus> newBonuses = new HashSet<>();

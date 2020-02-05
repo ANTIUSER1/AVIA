@@ -8,6 +8,7 @@ import org.junit.Test;
 
 import ru.integrotech.airline.core.flight.Route;
 import ru.integrotech.su.inputparams.route.RoutesInput;
+import ru.integrotech.su.outputparams.route.RoutesBuilder;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -16,12 +17,12 @@ import java.util.List;
 /*test for searcher.RouteSearcher*/
 public class RouteSearcherTest {
 
-    private static final String RESULTS_FOLDER = "/results/routes/";
+    private static final String RESULTS_FOLDER = "test/ru/integrotech/su/resources/results/routes/";
 
     private final CommonTest common;
 
     public RouteSearcherTest() {
-        this.common = CommonTest.of(Route.class);
+        this.common = CommonTest.of(Route.class, RoutesBuilder.getRegisterNames());
     }
 
     private List<Route> getExpected(String jsonName) {

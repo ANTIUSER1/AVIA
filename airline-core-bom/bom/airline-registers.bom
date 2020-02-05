@@ -16,6 +16,7 @@ public class RegisterCache
     public readonly java.util.Collection loyalties domain 0,* class ru.integrotech.airline.core.bonus.Loyalty;
     public readonly java.util.Map loyaltyMap;
     public readonly java.util.Collection regions domain 0,* class ru.integrotech.airline.core.location.WorldRegion;
+    public readonly java.util.List ticketDesignators domain 0,* class ru.integrotech.airline.core.bonus.TicketDesignator;
     public readonly java.util.Map wrongRouteMap;
     public RegisterCache();
     public ru.integrotech.airline.core.airline.Airline getAirline(string arg);
@@ -27,14 +28,13 @@ public class RegisterCache
     public boolean isWrongRoute(string arg);
     public object parseJsonElement(java.lang.Class arg1, com.google.gson.JsonElement arg2)
                 throws com.google.gson.JsonIOException, com.google.gson.JsonSyntaxException;
-    public void update(ru.integrotech.airline.register.RegisterCache.Type arg1, com.google.gson.JsonElement arg2);
+    public void update(string arg1, com.google.gson.JsonElement arg2);
 }
 
 public class RegisterLoader
 {
-    public readonly java.util.Date cacheDate;
     public readonly ru.integrotech.airline.register.RegisterCache registerCache;
-    public static synchronized ru.integrotech.airline.register.RegisterLoader getInstance();
+    public static synchronized ru.integrotech.airline.register.RegisterLoader getInstance(java.lang.String[] arg);
     public com.google.gson.JsonElement loadLocalJson(string arg)
                 throws com.google.gson.JsonIOException, com.google.gson.JsonSyntaxException, java.io.IOException;
     public void lock();

@@ -3,6 +3,7 @@
   <name>chargeParams</name>
   <uuid>f97ae5f7-6349-43e6-8cc4-897648578d98</uuid>
   <variables name="chargeBuilder" type="ru.integrotech.su.outputparams.charge.ChargeBuilder" initialValue="" verbalization="Charge builder"/>
-  <variables name="chargeInput" type="ru.integrotech.su.inputparams.charge.ChargeInput" initialValue="" verbalization="Charge input"/>
+  <variables name="loyaltyFactor" type="int" initialValue="" verbalization="loyaltyFactor"/>
+  <variables name="inputParamsCharge" type="ru.integrotech.su.inputparams.charge.ChargeInput" initialValue="" verbalization="inputParamsCharge"/>
   <variables name="resultMilesCharge" type="ru.integrotech.su.outputparams.charge.ResultMilesCharge" initialValue="" verbalization="Result miles charge"/>
 </ilog.rules.studio.model.base:VariableSet>

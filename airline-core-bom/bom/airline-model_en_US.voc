@@ -55,12 +55,6 @@ ru.integrotech.airline.core.airline.Tariff.weight#phrase.navigation = {weight} o
 # ru.integrotech.airline.core.bonus.Bonus
 ru.integrotech.airline.core.bonus.Bonus#concept.label = bonus
 
-# ru.integrotech.airline.core.bonus.Bonus.AWARD_TYPE
-ru.integrotech.airline.core.bonus.Bonus.AWARD_TYPE#concept.label = AWARD TYPE
-ru.integrotech.airline.core.bonus.Bonus.AWARD_TYPE.ALL#instance.label = ALL
-ru.integrotech.airline.core.bonus.Bonus.AWARD_TYPE.TICKET#instance.label = TICKET
-ru.integrotech.airline.core.bonus.Bonus.AWARD_TYPE.UPGRADE#instance.label = UPGRADE
-
 # ru.integrotech.airline.core.bonus.Bonus.BONUS_TYPE
 ru.integrotech.airline.core.bonus.Bonus.BONUS_TYPE#concept.label = BONUS TYPE
 ru.integrotech.airline.core.bonus.Bonus.BONUS_TYPE.OW#instance.label = OW
@@ -107,6 +101,8 @@ ru.integrotech.airline.core.flight.Flight.destination#phrase.navigation = {desti
 ru.integrotech.airline.core.flight.Flight.distance#phrase.navigation = {distance} of {this}
 ru.integrotech.airline.core.flight.Flight.listCarriers#phrase.navigation = {list carrier} of {this}
 ru.integrotech.airline.core.flight.Flight.origin#phrase.navigation = {origin} of {this}
+ru.integrotech.airline.core.flight.Flight.removeAflBonus(ru.integrotech.airline.core.bonus.Bonus)#phrase.action = remove {0} from the afl bonuses of {this}
+ru.integrotech.airline.core.flight.Flight.removeScyteamBonus(ru.integrotech.airline.core.bonus.Bonus)#phrase.action = remove {0} from the scyteam bonuses of {this}
 ru.integrotech.airline.core.flight.Flight.scyteamBonuses#phrase.action = set the scyteam bonuses of {this} to {scyteam bonuse}
 ru.integrotech.airline.core.flight.Flight.scyteamBonuses#phrase.navigation = {scyteam bonuse} of {this}
 ru.integrotech.airline.core.flight.Flight.scyteamReverseZones#phrase.navigation = {scyteam reverse zones} of {this}
@@ -161,6 +157,8 @@ ru.integrotech.airline.core.flight.Route.direct#phrase.navigation = {this} is di
 ru.integrotech.airline.core.flight.Route.distance#phrase.navigation = {distance} of {this}
 ru.integrotech.airline.core.flight.Route.flights#phrase.navigation = {flight} of {this}
 ru.integrotech.airline.core.flight.Route.origin#phrase.navigation = {origin} of {this}
+ru.integrotech.airline.core.flight.Route.removeAflBonus(ru.integrotech.airline.core.bonus.Bonus)#phrase.action = remove {0} from the afl bonuses of {this}
+ru.integrotech.airline.core.flight.Route.removeScyteamBonus(ru.integrotech.airline.core.bonus.Bonus)#phrase.action = remove {0} from the scyteam bonuses of {this}
 ru.integrotech.airline.core.flight.Route.scyteamBonuses#phrase.action = set the scyteam bonuses of {this} to {scyteam bonuse}
 ru.integrotech.airline.core.flight.Route.scyteamBonuses#phrase.navigation = {scyteam bonuse} of {this}
 ru.integrotech.airline.core.flight.Route.scyteamReverseZones#phrase.navigation = {scyteam reverse zones} of {this}

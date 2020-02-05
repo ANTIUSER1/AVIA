@@ -41,7 +41,7 @@ public class Bonus implements Comparable<Bonus> {
     private final Date validTo;
 
     private boolean fitsMilesInterval;
-
+    
     private Bonus(BONUS_TYPE bonusType, ServiceClass.SERVICE_CLASS_TYPE serviceClass, ServiceClass.SERVICE_CLASS_TYPE upgradeServiceClass, int value, boolean isLight, Date validFrom, Date validTo) {
         this.type = bonusType;
         this.serviceClass = serviceClass;
@@ -160,8 +160,5 @@ public class Bonus implements Comparable<Bonus> {
 
     /*bonus must have determined type*/
     public enum BONUS_TYPE {OW, RT, U, UC, UO}
-
-    /*use for filter collections listOf <bonus> by type*/
-    public enum AWARD_TYPE {TICKET, UPGRADE, ALL}
 
 }

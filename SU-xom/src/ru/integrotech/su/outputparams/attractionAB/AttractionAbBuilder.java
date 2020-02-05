@@ -11,6 +11,22 @@ import ru.integrotech.su.inputparams.attractionAB.AttractionAbInput;
 import ru.integrotech.su.inputparams.attractionAB.AttractionAbUtils;
 
 public class AttractionAbBuilder {
+
+	public static String[] getRegisterNames() {
+		return REGISTER_NAMES;
+	}
+
+	private static final String[] REGISTER_NAMES = new String[]
+			        {"airline",
+					"region",
+					"country",
+					"city",
+					"airport",
+					"pair",
+					"serviceClassLimit",
+					"tierLevel",
+					"milesRule",
+					"ticketDesignators"};
 	
 	public static AttractionAbBuilder of(RegisterCache registerCache) {
 		AttractionAbBuilder result = new AttractionAbBuilder();

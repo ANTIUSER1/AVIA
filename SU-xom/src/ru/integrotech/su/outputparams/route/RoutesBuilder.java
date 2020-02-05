@@ -14,6 +14,20 @@ import java.util.Set;
 
 public class RoutesBuilder {
 
+    public static String[] getRegisterNames() {
+        return REGISTER_NAMES;
+    }
+
+    private static final String[] REGISTER_NAMES = new String[]
+                    {"airline",
+                    "region",
+                    "country",
+                    "city",
+                    "airport",
+                    "pair",
+                    "serviceClassLimit",
+                    "bonusRoute"};
+
     public static RoutesBuilder of(RegisterCache cache) {
         return new RoutesBuilder(cache);
     }

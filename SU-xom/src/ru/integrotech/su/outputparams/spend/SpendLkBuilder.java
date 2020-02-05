@@ -40,7 +40,7 @@ public class SpendLkBuilder {
 
     /*method for use in ODM*/
     public ResultMilesSpendLk buildResult(List<Route> routes, SpendInput spendInput) {
-        this.spendBuilder.executeFilters(routes, spendInput);
+        this.spendBuilder.executeAllFilters(routes, spendInput);
         this.spendBuilder.bonusSummation(routes);
         List<SpendRoute> spendRoutes = this.spendBuilder.buildSpendRoutes(routes, spendInput);
         List<SpendLkRoute> spendLkRoutes = this.buildSpendLkRoutes(spendRoutes, spendInput);
@@ -58,7 +58,7 @@ public class SpendLkBuilder {
         spendInput.setIsOnlyAfl(true);
 
         List<Route> routes = this.getRoutes(spendInput);
-        this.spendBuilder.executeFilters(routes, spendInput);
+        this.spendBuilder.executeAllFilters(routes, spendInput);
         this.spendBuilder.bonusSummation(routes);
         this.spendBuilder.updateFitsMilesIntervals(routes, spendInput);
         this.replaceUO(routes);
@@ -72,7 +72,7 @@ public class SpendLkBuilder {
         return this.spendBuilder.getRoutes(spendInput, null);
     }
 
-    private List<SpendLkRoute> buildSpendLkRoutes(List<SpendRoute> spendRoutes, SpendInput spendInput) {
+    public List<SpendLkRoute> buildSpendLkRoutes(List<SpendRoute> spendRoutes, SpendInput spendInput) {
 
         Map<String, SpendLkRoute> resultMap = new HashMap<>();
         Map<String, Map<String, RequiredAward>> routeMap = this.createRouteMap(spendRoutes);
@@ -160,7 +160,7 @@ public class SpendLkBuilder {
         }
     }
 
-    private void replaceUO(List<Route> routes) {
+    public void replaceUO(List<Route> routes) {
         for (Route route : routes) {
             this.replaceUO(route.getAflBonuses());
             this.replaceUO(route.getScyteamBonuses());

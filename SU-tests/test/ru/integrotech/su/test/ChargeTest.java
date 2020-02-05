@@ -9,6 +9,7 @@ import ru.integrotech.airline.core.airline.Airline;
 import ru.integrotech.airline.core.airline.ServiceClass;
 import ru.integrotech.airline.core.airline.Tariff;
 import ru.integrotech.su.inputparams.charge.ChargeInput;
+import ru.integrotech.su.outputparams.charge.ChargeBuilder;
 import ru.integrotech.su.outputparams.charge.ChargeRoute;
 import ru.integrotech.su.outputparams.charge.ChargeUtil;
 
@@ -18,12 +19,12 @@ import java.util.*;
 /*test for io.ChargeRoute*/
 public class ChargeTest{
 
-    private static final String RESULTS_FOLDER = "/results/chargeRoutes/";
+    private static final String RESULTS_FOLDER = "test/ru/integrotech/su/resources/results/chargeRoutes/";
 
     private final CommonTest common;
 
     public ChargeTest() {
-        this.common = CommonTest.of(ChargeRoute.class);
+        this.common = CommonTest.of(ChargeRoute.class, ChargeBuilder.getRegisterNames());
     }
 
     private List<ChargeRoute> getExpected(String jsonName) {

@@ -20,11 +20,11 @@ public class BonusFilters {
                                       boolean isRoundTrip,
                                       boolean routeIsDirect) {
 
-        if (award.equalsIgnoreCase(Bonus.AWARD_TYPE.TICKET.name())) {
+        if (award.equalsIgnoreCase(AWARD_TYPE.TICKET.name())) {
             bonuses.removeIf(ar -> ar.getType().equals(Bonus.BONUS_TYPE.U)
                             || ar.getType().equals(Bonus.BONUS_TYPE.UC)
                             || ar.getType().equals(Bonus.BONUS_TYPE.UO));
-        } else if (award.equalsIgnoreCase(Bonus.AWARD_TYPE.UPGRADE.name())) {
+        } else if (award.equalsIgnoreCase(AWARD_TYPE.UPGRADE.name())) {
             bonuses.removeIf(ar -> ar.getType().equals(Bonus.BONUS_TYPE.OW)
                             || ar.getType().equals(Bonus.BONUS_TYPE.RT));
         }

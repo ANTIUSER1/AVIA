@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>flightAflBonusRemove</name>
+  <uuid>15c68fcd-3e68-416d-9da6-770ac05a04bb</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions 
+	set 'flight' to a flight in the flights of the route ; 
+	set 'bonus'   to a bonus in the afl bonuses of flight ; 
+if 
+	 (the type of bonus is UC and (the route is direct is not true))
+   	    or (the type of bonus  is UC and (the origin of flight is uc available is not true ))	
+
+then remove bonus from the afl bonuses of flight ; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

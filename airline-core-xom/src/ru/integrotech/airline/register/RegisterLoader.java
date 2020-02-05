@@ -18,8 +18,6 @@ import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 import java.util.logging.Logger;
 
-import static ru.integrotech.airline.register.RegisterCache.Type.*;
-
 
 /*class for load data listOf registers holds in RegisterCache*/
 public class RegisterLoader{
@@ -32,12 +30,15 @@ public class RegisterLoader{
     private static final int MILLIS_IN_MINUTE = 60000;
     private static final Logger log = Logger.getLogger(RegisterLoader.class.getName());
 
+    private String[] registerNames;
+
     private PropertyHolder props;
 
     private RegisterCache registers;
 
-    private RegisterLoader(Properties properties) {
+    private RegisterLoader(Properties properties, String[] registerNames) {
         this.props = new PropertyHolder(properties);
+        this.registerNames = registerNames;
         this.registers = new RegisterCache();
     }
 
@@ -79,12 +80,23 @@ public class RegisterLoader{
         return registers;
     }
 
-    public static synchronized RegisterLoader getInstance() {
+    public static synchronized RegisterLoader getInstance(String...registerNames) {
         if (instance == null) {
             Properties properties = getProperties();
-            instance = new RegisterLoader(properties);
+            instance = new RegisterLoader(properties, registerNames);
         }
 
+        return instance;
+    }
+
+    /*method for tests only*/
+    public static synchronized RegisterLoader updateInstance(String...registerNames) {
+        instance = getInstance(registerNames);
+        lock.writeLock().lock();
+        instance.registerNames = registerNames;
+        instance.cleanCache();
+        instance.updateCache();
+        lock.writeLock().unlock();
         return instance;
     }
 
@@ -112,10 +124,6 @@ public class RegisterLoader{
         log.fine("Releasing read lock ... ");
         lock.readLock().unlock();
         log.fine("Read lock released");
-    }
-
-    public Date getCacheDate() {
-        return cacheDate;
     }
 
     private boolean cacheValid() {
@@ -171,21 +179,10 @@ public class RegisterLoader{
         log.info("Updating cache ...");
 
         try {
-            this.registers.update(AIRLINES,             loadJson(props.getAirlinesApi()));
-            this.registers.update(WORLD_REGIONS,        loadJson(props.getWorldRegionsApi()));
-            this.registers.update(COUNTRIES,            loadJson(props.getCountriesApi()));
-            this.registers.update(CITIES,               loadJson(props.getCitiesApi()));
-            this.registers.update(AIRPORTS,             loadJson(props.getAirportApi()));
-            this.registers.update(TARIFFS,              loadJson(props.getTariffApi()));
-            this.registers.update(BONUS_ROUTES,         loadJson(props.getBonusRoutesApi()));
-            this.registers.update(BONUSES,              loadJson(props.getBonusesApi()));
-            this.registers.update(WRONG_ROUTES,         loadJson(props.getWrongRoutesApi()));
-            this.registers.update(LOYALTY,              loadJson(props.getLoyaltyApi()));
-            this.registers.update(FLIGHTS,              loadJson(props.getFlightsApi()));
-            this.registers.update(SERVICE_CLASS_LIMITS, loadJson(props.getServiceClassLimitApi()));
-            this.registers.update(MILES_RULES, 		loadJson(props.getChargeRulesApi()));
-            this.registers.update(TICKET_DESIGNATORS, 	loadJson(props.getTicketDesignatorApi()));
-
+            for (String registerName : this.registerNames) {
+                log.info("Loading " + registerName);
+                this.registers.update(registerName, loadJson(registerName));
+            }
         } catch ( IOException
                 | NullPointerException e) {
             e.printStackTrace();
@@ -193,6 +190,11 @@ public class RegisterLoader{
 
         cacheDate = lastKnownServerCacheDate;
         log.info("Registry cache updated. Cache buildResult date = " + cacheDate);
+    }
+
+    private void cleanCache() {
+        log.info("Cleaning cache ...");
+        this.registers.clean();
     }
 
 

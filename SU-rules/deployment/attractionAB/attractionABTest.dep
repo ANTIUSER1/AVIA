@@ -4,8 +4,8 @@
   <uuid>544bf9a6-20c4-4a8c-a22f-d9af45cc95c5</uuid>
   <targets label="Local Server"/>
   <targets label="Test Server"/>
-  <operations operationName="attractionABEasy">
-    <operation href="attractionABEasy.dop#1b831f76-a9f8-4645-8caf-fd713b7d871f"/>
+  <operations operationName="attractionABJava.dop">
+    <operation href="attractionABJava.dop#1b831f76-a9f8-4645-8caf-fd713b7d871f"/>
     <properties key="ruleset.version">
       <value><![CDATA[1.0]]></value>
     </properties>

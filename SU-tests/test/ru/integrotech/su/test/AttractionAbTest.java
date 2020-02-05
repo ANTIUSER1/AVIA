@@ -6,18 +6,19 @@ import ru.integrotech.airline.core.bonus.ChargeRule;
 import ru.integrotech.airline.core.bonus.TicketDesignator;
 import ru.integrotech.su.inputparams.attractionAB.AttractionAbInput;
 import ru.integrotech.su.mock.MockLoader;
+import ru.integrotech.su.outputparams.attractionAB.AttractionAbBuilder;
 import ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput;
 
 import java.io.IOException;
 
 public class AttractionAbTest {
 	
-	 private static final String RESULTS_FOLDER = "/results/attractionsAB/";
+	 private static final String RESULTS_FOLDER = "test/ru/integrotech/su/resources/results/attractionsAB/";
 
 	 private final CommonTest common;
 
 	 public AttractionAbTest() {
-		this.common = CommonTest.of(MockLoader.ofMockRegisters());
+		this.common = CommonTest.of(MockLoader.ofMockRegisters(AttractionAbBuilder.getRegisterNames()));
 	 }
 	 
 	 private AttractionAbInput getInput(String jsonName) {

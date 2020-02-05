@@ -95,19 +95,7 @@ package ru.integrotech.airline.core.bonus;
 
 public class Bonus
         extends java.lang.Comparable
-        property automaticVariable "true"
 {
-
-    static public final class AWARD_TYPE
-            extends java.lang.Enum
-    {
-        domain {static TICKET, static UPGRADE, static ALL}
-        public static final readonly ru.integrotech.airline.core.bonus.Bonus.AWARD_TYPE ALL;
-        public static final readonly ru.integrotech.airline.core.bonus.Bonus.AWARD_TYPE TICKET;
-        public static final readonly ru.integrotech.airline.core.bonus.Bonus.AWARD_TYPE UPGRADE;
-        public static ru.integrotech.airline.core.bonus.Bonus.AWARD_TYPE valueOf(string arg);
-        public static ru.integrotech.airline.core.bonus.Bonus.AWARD_TYPE[] values();
-    }
 
     static public final class BONUS_TYPE
             extends java.lang.Enum
@@ -192,6 +180,8 @@ public class Flight
         ru.integrotech.airline.core.location.Airport arg2, 
         int arg3, 
         java.util.List arg4 domain 0,* class ru.integrotech.airline.core.flight.FlightCarrier);
+    public void removeAflBonus(ru.integrotech.airline.core.bonus.Bonus arg);
+    public void removeScyteamBonus(ru.integrotech.airline.core.bonus.Bonus arg);
     public string toString();
 }
 
@@ -229,6 +219,7 @@ public class PassengerCharge
 
 public class Route
         extends java.lang.Comparable
+        property automaticVariable "true"
 {
     public static final readonly int MAX_SEGMENTS_SIZE;
     public java.util.Set aflBonuses domain 0,* class ru.integrotech.airline.core.bonus.Bonus;
@@ -264,6 +255,8 @@ public class Route
         java.util.List arg2 domain 0,* class ru.integrotech.airline.core.flight.Flight);
     public boolean otherAirlinesIsPresent(ru.integrotech.airline.core.airline.Airline arg);
     public boolean otherAirlinesIsPresent(string arg);
+    public void removeAflBonus(ru.integrotech.airline.core.bonus.Bonus arg);
+    public void removeScyteamBonus(ru.integrotech.airline.core.bonus.Bonus arg);
     public string toString();
 }
 

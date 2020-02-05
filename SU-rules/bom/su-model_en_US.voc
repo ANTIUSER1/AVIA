@@ -6,8 +6,8 @@ ru.integrotech.su.inputparams.attractionAB.AttractionAbInput#concept.label = att
 
 # ru.integrotech.su.inputparams.charge.ChargeInput
 ru.integrotech.su.inputparams.charge.ChargeInput#concept.label = charge input
-ru.integrotech.su.inputparams.charge.ChargeInput.roundTrip#phrase.action = make it {round trip} that {this} is round trip
-ru.integrotech.su.inputparams.charge.ChargeInput.roundTrip#phrase.navigation = {this} is round trip
+ru.integrotech.su.inputparams.charge.ChargeInput.isRoundTrip#phrase.action = make it {round trip} that {this} is round trip
+ru.integrotech.su.inputparams.charge.ChargeInput.isRoundTrip#phrase.navigation = {this} is round trip
 
 # ru.integrotech.su.inputparams.spend.LocationInput
 ru.integrotech.su.inputparams.spend.LocationInput#concept.label = location input
@@ -57,6 +57,7 @@ ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.ssrCodes#phrase.navi
 
 # ru.integrotech.su.outputparams.attractionAB.AttractionAbBuilder
 ru.integrotech.su.outputparams.attractionAB.AttractionAbBuilder#concept.label = attraction ab builder
+ru.integrotech.su.outputparams.attractionAB.AttractionAbBuilder.getRegisterNames()#phrase.navigation = the register name
 
 # ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput
 ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput#concept.label = attraction ab output
@@ -67,6 +68,7 @@ ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput.status#phrase.nav
 
 # ru.integrotech.su.outputparams.charge.ChargeBuilder
 ru.integrotech.su.outputparams.charge.ChargeBuilder#concept.label = charge builder
+ru.integrotech.su.outputparams.charge.ChargeBuilder.getRegisterNames()#phrase.navigation = the register name
 
 # ru.integrotech.su.outputparams.charge.ResultMilesCharge
 ru.integrotech.su.outputparams.charge.ResultMilesCharge#concept.label = result miles charge
@@ -85,6 +87,14 @@ ru.integrotech.su.outputparams.spend.ResultMilesSpendLk.awardRoutes#phrase.navig
 
 # ru.integrotech.su.outputparams.spend.SpendBuilder
 ru.integrotech.su.outputparams.spend.SpendBuilder#concept.label = spend builder
+ru.integrotech.su.outputparams.spend.SpendBuilder.bonusSummation(java.util.List)#phrase.action = {this}.bonusSummation({0})
+ru.integrotech.su.outputparams.spend.SpendBuilder.buildSpendRoutes(java.util.List,ru.integrotech.su.inputparams.spend.SpendInput)#phrase.navigation = {this}.buildSpendRoutes({0}, {1})
+ru.integrotech.su.outputparams.spend.SpendBuilder.executeFiltersByCommonTypes(java.util.List,ru.integrotech.su.inputparams.spend.SpendInput)#phrase.action = {this}.executeFiltersByCommonTypes({0}, {1})
+ru.integrotech.su.outputparams.spend.SpendBuilder.executeFiltersByMilesInterval(java.util.List,ru.integrotech.su.inputparams.spend.SpendInput)#phrase.action = {this}.executeFiltersByMilesInterval({0}, {1})
+ru.integrotech.su.outputparams.spend.SpendBuilder.getRegisterNames()#phrase.navigation = the register name
+ru.integrotech.su.outputparams.spend.SpendBuilder.getServiceClassType(ru.integrotech.su.inputparams.spend.SpendInput)#phrase.navigation = {this}.getServiceClassType({0})
 
 # ru.integrotech.su.outputparams.spend.SpendLkBuilder
 ru.integrotech.su.outputparams.spend.SpendLkBuilder#concept.label = spend lk builder
+ru.integrotech.su.outputparams.spend.SpendLkBuilder.buildSpendLkRoutes(java.util.List,ru.integrotech.su.inputparams.spend.SpendInput)#phrase.navigation = {this}.buildSpendLkRoutes({0}, {1})
+ru.integrotech.su.outputparams.spend.SpendLkBuilder.replaceUO(java.util.List)#phrase.action = {this}.replaceUO({0})

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>spendBaseFlow</name>
+  <uuid>f9d8a44a-4297-4533-be08-aa9dfdfb4872</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0">
+        <Actions Language="irl"><![CDATA[String[] registerNames = SpendBuilder.getRegisterNames();]]>&#13;<![CDATA[
+loader = RegisterLoader.getInstance(registerNames);]]>&#13;<![CDATA[
+loader.lock();]]>&#13;<![CDATA[
+try {]]>&#13;<![CDATA[
+	RegisterCache cache = loader.registerCache;]]>&#13;<![CDATA[
+	spendBuilder = SpendBuilder.of(cache);]]>&#13;<![CDATA[
+} catch (Exception e) {]]>&#13;<![CDATA[
+	e.printStackTrace();]]>&#13;<![CDATA[
+	loader.release();]]>&#13;<![CDATA[
+} catch (RuntimeException e) {]]>&#13;<![CDATA[
+	e.printStackTrace();]]>&#13;<![CDATA[
+	loader.release();]]>&#13;<![CDATA[
+}]]>&#13;<![CDATA[
+	]]></Actions>
+      </StartTask>
+      <ActionTask Identifier="findRoutes">
+        <Actions Language="irl"><![CDATA[try {]]>&#13;<![CDATA[
+	routes = spendBuilder.getRoutes(inputParams);]]>&#13;<![CDATA[
+	foreach (Route route in routes) {]]>&#13;<![CDATA[
+		insert route;]]>&#13;<![CDATA[
+	}]]>&#13;<![CDATA[
+]]>&#13;<![CDATA[
+} catch (Exception e) {]]>&#13;<![CDATA[
+	e.printStackTrace();]]>&#13;<![CDATA[
+	loader.release();]]>&#13;<![CDATA[
+]]>&#13;<![CDATA[
+} catch (RuntimeException e) {]]>&#13;<![CDATA[
+	e.printStackTrace();]]>&#13;<![CDATA[
+	loader.release();]]>&#13;<![CDATA[
+}]]>&#13;<![CDATA[
+]]></Actions>
+      </ActionTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="FiltersByInputParams" Ordering="Default">
+        <RuleList>
+          <Package Name="spend.rules.filters.byInputParams"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="UpdateMilesInterval" Ordering="Default">
+        <RuleList>
+          <Package Name="spend.rules.fitsMilesInterval"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="FiltersByMilesInterval" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="0addf350-fcb3-47ae-849e-3c552c9d2a73"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="FiltersByCommonType" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="5dd462de-941c-4fc8-9f15-1765475a6bf4"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="BonusSummation" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="3d925b2b-5e5f-49a2-86d5-9855de48ed47"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1">
+        <Actions Language="irl"><![CDATA[loader.release();]]></Actions>
+      </StopTask>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_2" Task="findRoutes"/>
+      <TaskNode Identifier="node_4" Task="FiltersByInputParams"/>
+      <TaskNode Identifier="node_5" Task="UpdateMilesInterval"/>
+      <TaskNode Identifier="node_6" Task="FiltersByMilesInterval"/>
+      <TaskNode Identifier="node_8" Task="FiltersByCommonType"/>
+      <TaskNode Identifier="node_7" Task="BonusSummation"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
+      <Transition Identifier="transition_4" Source="node_2" Target="node_4"/>
+      <Transition Identifier="transition_5" Source="node_4" Target="node_6"/>
+      <Transition Identifier="transition_2" Source="node_6" Target="node_8"/>
+      <Transition Identifier="transition_6" Source="node_8" Target="node_7"/>
+      <Transition Identifier="transition_7" Source="node_7" Target="node_5"/>
+      <Transition Identifier="transition_1" Source="node_5" Target="node_1"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_2#height">53.402344</Data>
+      <Data Name="node_4#width">147.98778</Data>
+      <Data Name="node_1#height">23.0</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_4#height">53.402344</Data>
+      <Data Name="node_8#x">-10.513168</Data>
+      <Data Name="node_7#y">150.1846</Data>
+      <Data Name="node_8#y">47.648987</Data>
+      <Data Name="node_5#name">node_1</Data>
+      <Data Name="node_2#name">node_3</Data>
+      <Data Name="node_5#height">53.402344</Data>
+      <Data Name="node_6#height">53.402344</Data>
+      <Data Name="node_7#height">53.402344</Data>
+      <Data Name="node_6#label">Apply filters by miles interval</Data>
+      <Data Name="node_7#width">151.98705</Data>
+      <Data Name="node_8#height">53.402344</Data>
+      <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_4#x">-10.006111</Data>
+      <Data Name="node_8#label">Aply filters by common types</Data>
+      <Data Name="node_4#y">-161.70117</Data>
+      <Data Name="node_5#x">-10.006393</Data>
+      <Data Name="node_5#y">253.35135</Data>
+      <Data Name="node_6#x">-10.742882</Data>
+      <Data Name="node_5#width">151.98705</Data>
+      <Data Name="node_6#y">-55.154694</Data>
+      <Data Name="node_7#x">-10.026413</Data>
+      <Data Name="node_0#x">-11.0</Data>
+      <Data Name="node_0#y">-339.0</Data>
+      <Data Name="node_1#x">-11.0</Data>
+      <Data Name="node_8#name">node_1</Data>
+      <Data Name="node_1#y">340.0</Data>
+      <Data Name="node_2#x">-11.0</Data>
+      <Data Name="node_2#y">-258.0</Data>
+      <Data Name="node_7#label">Bonus summation</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_2#label">Find routes</Data>
+      <Data Name="node_5#label">Update miles interval</Data>
+      <Data Name="node_4#name">node_1</Data>
+      <Data Name="node_8#width">147.98778</Data>
+      <Data Name="node_7#name">node_1</Data>
+      <Data Name="node_1#width">23.0</Data>
+      <Data Name="node_6#name">node_1</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_4#label">Apply filters by input params</Data>
+      <Data Name="node_6#width">147.98778</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties>
+    <imports><![CDATA[import ru.integrotech.su.outputparams.spend.SpendBuilder;
+import ru.integrotech.airline.core.flight.Route;
+import ru.integrotech.airline.core.bonus.Bonus;
+import ru.integrotech.airline.core.flight.Flight;
+import ru.integrotech.airline.register.RegisterLoader;
+import ru.integrotech.airline.register.RegisterCache;
+use routes;
+use loader;
+use spendBuilder;
+use inputParams;
+
+]]></imports>
+  </Properties>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

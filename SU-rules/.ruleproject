@@ -9,7 +9,7 @@
     <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="airline-core-rules" url="platform:/airline-core-rules" kind="RULE_PROJECT" exported="true"/>
     <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="SU-xom" url="platform:/SU-xom" kind="JAVA_PROJECT" exported="true"/>
   </paths>
-  <paths xsi:type="ilog.rules.studio.model.bom:BOMPath" pathID="BOM" pathEntriesModified="true">
+  <paths xsi:type="ilog.rules.studio.model.bom:BOMPath" pathID="BOM">
     <entries xsi:type="ilog.rules.studio.model.bom:ProjectBOMEntry" name="airline-core-rules" url="platform:/airline-core-rules" kind="RULE_PROJECT">
       <ruleProject href="airline-core-rules#7697c986-66ca-49ab-b9d0-000cf5809f41"/>
     </entries>
@@ -33,4 +33,18 @@
   <modelFolders xsi:type="com.ibm.rules.studio.model.decisionservice:OperationFolder">
     <name>deployment</name>
   </modelFolders>
+  <orderedMembers>attractionABEasyFlow</orderedMembers>
+  <orderedMembers>attractionABParams</orderedMembers>
+  <orderedMembers>spendRuleFlow</orderedMembers>
+  <orderedMembers>chargeEasyFlow</orderedMembers>
+  <orderedMembers>chargeParams</orderedMembers>
+  <orderedMembers>chargeRulesFlow</orderedMembers>
+  <orderedMembers>checkOnlineRegAvail</orderedMembers>
+  <orderedMembers>checkOnlineRegAvailParams</orderedMembers>
+  <orderedMembers>flowVariables</orderedMembers>
+  <orderedMembers>spendJavaFlow</orderedMembers>
+  <orderedMembers>spendLkJavaFlow</orderedMembers>
+  <orderedMembers>spendLkParams</orderedMembers>
+  <orderedMembers>spendLkRulesFlow</orderedMembers>
+  <orderedMembers>spendParams</orderedMembers>
 </ilog.rules.studio.model.base:RuleProject>

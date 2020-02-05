@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="spend" managingXom="true" production="true">
+<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="aflBonus" managingXom="true" production="true">
   <name>spendLkProd</name>
   <uuid>8696512d-4692-4a43-8593-add26749ccf9</uuid>
   <targets label="odm-kzn-prod-1"/>
   <targets label="odm-kzn-prod-2"/>
   <targets label="odm-msk-prod-1"/>
   <targets label="odm-msk-prod-2"/>
-  <operations operationName="spendLkEasy.dop">
-    <operation href="spendLkEasy.dop#eb56c21e-62c9-4183-a367-e9aa75f9c1a0"/>
+  <operations operationName="spendLkRules">
+    <operation href="spendLkRules.dop#6f9f27d7-ea75-4345-b50e-4a2f7839575e"/>
     <properties key="ruleset.version">
       <value><![CDATA[1.0]]></value>
     </properties>
