@@ -6,6 +6,7 @@ import org.junit.Test;
 import ru.integrotech.su.common.Location;
 import ru.integrotech.su.inputparams.charge.ChargeInput;
 import ru.integrotech.su.mock.MockLoader;
+import ru.integrotech.su.outputparams.charge.ChargeBuilder;
 import ru.integrotech.su.outputparams.charge.ChargeRoute;
 
 import java.io.FileNotFoundException;
@@ -22,18 +23,18 @@ public class OutsideChargeTest extends UnifyBaseTest {
     private static final String EXTRA = "extra\n";
 
     public OutsideChargeTest() {
-        super(MockLoader.ofMockRegisters(), ChargeRoute.class);
+        super(MockLoader.ofMockRegisters(ChargeBuilder.getRegisterNames()), ChargeRoute.class);
     }
 
     @Override
     protected boolean isCorrectCase(String pathToCaseFolder) throws IOException {
-        JsonElement jsonElement = this.common.getLoader().loadJson(pathToCaseFolder, REQUEST_FILE_NAME);
+        JsonElement jsonElement = this.common.getLoader().loadJson(pathToCaseFolder + REQUEST_FILE_NAME);
         ChargeInput chargeInput = this.common.getTestsCache().loadChargeInputParams(jsonElement);
 
-        jsonElement = this.common.getLoader().loadJson(pathToCaseFolder, ACTUAL_RESPONSE_FILE_NAME);
+        jsonElement = this.common.getLoader().loadJson(pathToCaseFolder + ACTUAL_RESPONSE_FILE_NAME);
         List<ChargeRoute> actualChargeRoutes = this.common.getTestsCache().loadChargeRoutes(jsonElement);
 
-        jsonElement = this.common.getLoader().loadJson(pathToCaseFolder, EXPECTED_RESPONSE_FILE_NAME);
+        jsonElement = this.common.getLoader().loadJson(pathToCaseFolder + EXPECTED_RESPONSE_FILE_NAME);
         List<ChargeRoute> expectedChargeRoutes = this.common.getTestsCache().loadChargeRoutes(jsonElement);
 
         String testHeader = this.buildReportHeader(chargeInput);

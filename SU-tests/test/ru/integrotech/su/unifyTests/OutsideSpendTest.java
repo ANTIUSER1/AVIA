@@ -5,6 +5,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import ru.integrotech.su.inputparams.spend.SpendInput;
 import ru.integrotech.su.mock.MockLoader;
+import ru.integrotech.su.outputparams.spend.SpendBuilder;
 import ru.integrotech.su.outputparams.spend.SpendRoute;
 
 import java.io.FileNotFoundException;
@@ -21,18 +22,18 @@ public class OutsideSpendTest extends UnifyBaseTest {
     private static final String EXTRA = "extra\n";
 
     public OutsideSpendTest() {
-        super(MockLoader.ofMockRegisters(), SpendRoute.class);
+        super(MockLoader.ofMockRegisters(SpendBuilder.getRegisterNames()), SpendRoute.class);
     }
 
     @Override
     protected boolean isCorrectCase(String pathToCaseFolder) throws IOException {
-        JsonElement jsonElement = this.common.getLoader().loadJson(pathToCaseFolder, REQUEST_FILE_NAME);
+        JsonElement jsonElement = this.common.getLoader().loadJson(pathToCaseFolder + REQUEST_FILE_NAME);
         SpendInput spendInput = this.common.getTestsCache().loadSpendInputParams(jsonElement);
 
-        jsonElement = this.common.getLoader().loadJson(pathToCaseFolder, ACTUAL_RESPONSE_FILE_NAME);
+        jsonElement = this.common.getLoader().loadJson(pathToCaseFolder + ACTUAL_RESPONSE_FILE_NAME);
         List<SpendRoute> actualSpendRoutes = this.common.getTestsCache().loadSpendRoutes(jsonElement);
 
-        jsonElement = this.common.getLoader().loadJson(pathToCaseFolder, EXPECTED_RESPONSE_FILE_NAME);
+        jsonElement = this.common.getLoader().loadJson(pathToCaseFolder + EXPECTED_RESPONSE_FILE_NAME);
         List<SpendRoute> expectedSpendRoutes = this.common.getTestsCache().loadSpendRoutes(jsonElement);
 
         String testHeader = this.buildReportHeader(spendInput);

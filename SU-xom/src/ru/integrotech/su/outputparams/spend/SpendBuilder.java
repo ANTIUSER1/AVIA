@@ -32,6 +32,22 @@ import java.util.Set;
  */
 public class SpendBuilder {
 
+    public static String[] getRegisterNames() {
+        return REGISTER_NAMES;
+    }
+
+    private static final String[] REGISTER_NAMES = new String[]
+                                    {"airline",
+                                    "region",
+                                    "country",
+                                    "city",
+                                    "airport",
+                                    "pair",
+                                    "serviceClassLimit",
+                                    "bonusRoute",
+                                    "award",
+                                    "wrongRoute"};
+
     public static SpendBuilder of(RegisterCache cache) {
         return new SpendBuilder(cache);
     }

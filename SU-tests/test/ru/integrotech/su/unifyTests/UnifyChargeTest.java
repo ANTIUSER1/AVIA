@@ -3,11 +3,14 @@ package ru.integrotech.su.unifyTests;
 import com.google.gson.JsonElement;
 
 import org.junit.Assert;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
+import ru.integrotech.airline.register.RegisterLoader;
 import ru.integrotech.su.common.Location;
 import ru.integrotech.su.inputparams.charge.ChargeInput;
 import ru.integrotech.su.mock.MockLoader;
+import ru.integrotech.su.outputparams.charge.ChargeBuilder;
 import ru.integrotech.su.outputparams.charge.ChargeRoute;
 
 import java.io.IOException;
@@ -38,13 +41,18 @@ public class UnifyChargeTest extends UnifyBaseTest {
         super(MockLoader.ofRealRegisters(), ChargeRoute.class);
     }
 
+    @BeforeClass
+    public static void updateRegisters() {
+        RegisterLoader.updateInstance(ChargeBuilder.getRegisterNames());
+    }
+
     @Override
     protected boolean isCorrectCase(String pathToCaseFolder) throws IOException {
-        JsonElement jsonElement = this.common.getLoader().loadJson(pathToCaseFolder, REQUEST_FILE_NAME);
+        JsonElement jsonElement = this.common.getLoader().loadJson(pathToCaseFolder + REQUEST_FILE_NAME);
         ChargeInput chargeInput = this.common.getTestsCache().loadChargeInputParams(jsonElement);
         List<ChargeRoute> actualChargeRoutes = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
 
-        jsonElement = this.common.getLoader().loadJson(pathToCaseFolder, EXPECTED_RESPONSE_FILE_NAME);
+        jsonElement = this.common.getLoader().loadJson(pathToCaseFolder + EXPECTED_RESPONSE_FILE_NAME);
         List<ChargeRoute> expectedChargeRoutes = this.common.getTestsCache().loadChargeRoutes(jsonElement);
 
         String testHeader = this.buildReportHeader(chargeInput);

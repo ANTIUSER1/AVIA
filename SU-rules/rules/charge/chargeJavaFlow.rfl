@@ -9,7 +9,8 @@
   <Body>
     <TaskList>
       <StartTask Identifier="task_0">
-        <Actions Language="irl"><![CDATA[loader = RegisterLoader.getInstance();]]>&#13;<![CDATA[
+        <Actions Language="irl"><![CDATA[String[] registerNames = ChargeBuilder.getRegisterNames();]]>&#13;<![CDATA[
+loader = RegisterLoader.getInstance(registerNames);]]>&#13;<![CDATA[
 loader.lock();]]>&#13;<![CDATA[
 try {]]>&#13;<![CDATA[
     RegisterCache cache = loader.registerCache;]]>&#13;<![CDATA[

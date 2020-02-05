@@ -9,7 +9,8 @@
   <Body>
     <TaskList>
       <StartTask Identifier="task_0">
-        <Actions Language="irl"><![CDATA[loader = RegisterLoader.getInstance();]]>&#13;<![CDATA[
+        <Actions Language="irl"><![CDATA[String[] registerNames = SpendBuilder.getRegisterNames();]]>&#13;<![CDATA[
+loader = RegisterLoader.getInstance(registerNames);]]>&#13;<![CDATA[
 loader.lock();]]>&#13;<![CDATA[
 try {]]>&#13;<![CDATA[
 	RegisterCache cache = loader.registerCache;]]>&#13;<![CDATA[
@@ -51,8 +52,6 @@ try {]]>&#13;<![CDATA[
         </RuleList>
       </RuleTask>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="FiltersByMilesInterval" Ordering="Default">
-        <InitialActions/>
-        <Select Dynamic="false"/>
         <RuleList>
           <Rule Uuid="0addf350-fcb3-47ae-849e-3c552c9d2a73"/>
         </RuleList>

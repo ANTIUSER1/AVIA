@@ -6,6 +6,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import ru.integrotech.su.inputparams.spend.SpendInput;
+import ru.integrotech.su.outputparams.spend.SpendBuilder;
 import ru.integrotech.su.outputparams.spend.SpendLkRoute;
 
 import java.io.IOException;
@@ -14,12 +15,12 @@ import java.util.List;
 /*test for io.spend.SpendLkRoute*/
 public class SpendLkTest {
 
-    private static final String RESULTS_FOLDER = "/results/spendLkRoutes/";
+    private static final String RESULTS_FOLDER = "test/ru/integrotech/su/resources/results/spendLkRoutes/";
 
     private final CommonTest common;
 
     public SpendLkTest() {
-        this.common = CommonTest.of(SpendLkRoute.class);
+        this.common = CommonTest.of(SpendLkRoute.class, SpendBuilder.getRegisterNames());
     }
 
     private List<SpendLkRoute> getExpected(String jsonName) {

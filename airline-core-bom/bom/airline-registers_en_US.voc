@@ -16,6 +16,5 @@ ru.integrotech.airline.register.RegisterCache.wrongRouteMap#phrase.navigation = 
 
 # ru.integrotech.airline.register.RegisterLoader
 ru.integrotech.airline.register.RegisterLoader#concept.label = register loader
-ru.integrotech.airline.register.RegisterLoader.cacheDate#phrase.navigation = {cache date} of {this}
-ru.integrotech.airline.register.RegisterLoader.getInstance()#phrase.navigation = the instance
+ru.integrotech.airline.register.RegisterLoader.getInstance(java.lang.String[])#phrase.navigation = register loader.getInstance({0})
 ru.integrotech.airline.register.RegisterLoader.registerCache#phrase.navigation = {register cache} of {this}

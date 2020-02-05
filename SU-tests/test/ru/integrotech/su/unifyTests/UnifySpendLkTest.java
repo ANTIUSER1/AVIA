@@ -3,10 +3,13 @@ package ru.integrotech.su.unifyTests;
 import com.google.gson.JsonElement;
 
 import org.junit.Assert;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
+import ru.integrotech.airline.register.RegisterLoader;
 import ru.integrotech.su.inputparams.spend.SpendInput;
 import ru.integrotech.su.mock.MockLoader;
+import ru.integrotech.su.outputparams.spend.SpendBuilder;
 import ru.integrotech.su.outputparams.spend.SpendLkRoute;
 
 import java.io.IOException;
@@ -36,13 +39,18 @@ public class UnifySpendLkTest extends UnifyBaseTest {
         super(MockLoader.ofRealRegisters(), SpendLkRoute.class);
     }
 
+    @BeforeClass
+    public static void updateRegisters() {
+        RegisterLoader.updateInstance(SpendBuilder.getRegisterNames());
+    }
+
     @Override
     protected boolean isCorrectCase(String pathToCaseFolder) throws IOException {
-        JsonElement jsonElement = this.common.getLoader().loadJson(pathToCaseFolder, REQUEST_FILE_NAME);
+        JsonElement jsonElement = this.common.getLoader().loadJson(pathToCaseFolder + REQUEST_FILE_NAME);
         SpendInput spendInput = this.common.getTestsCache().loadSpendInputParams(jsonElement);
         List<SpendLkRoute> actualSpendLkRoutes = this.common.getSpendLkBuilder().getSpendLkRoutes(spendInput);
 
-        jsonElement = this.common.getLoader().loadJson(pathToCaseFolder, EXPECTED_RESPONSE_FILE_NAME);
+        jsonElement = this.common.getLoader().loadJson(pathToCaseFolder + EXPECTED_RESPONSE_FILE_NAME);
         List<SpendLkRoute> expectedSpendLkRoutes = this.common.getTestsCache().loadSpendLkRoutes(jsonElement);
 
         String testHeader = this.buildReportHeader(spendInput);

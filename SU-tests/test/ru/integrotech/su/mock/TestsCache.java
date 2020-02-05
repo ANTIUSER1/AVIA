@@ -120,7 +120,7 @@ public class TestsCache{
         return this.registerCache.getAirlines();
     }
 
-    public void update(RegisterCache.Type type, JsonElement jsonElement) {
-        this.registerCache.update(type, jsonElement);
+    public void update(String registerName, JsonElement jsonElement) {
+        this.registerCache.update(registerName, jsonElement);
     }
 }

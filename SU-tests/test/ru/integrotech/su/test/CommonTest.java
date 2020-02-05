@@ -21,8 +21,8 @@ import java.util.List;
  * from minimize mock registers inside resources/registers json's*/
 public class CommonTest {
 
-    public static CommonTest of(Class type) {
-        CommonTest result =  new CommonTest();
+    public static CommonTest of(Class type, String... registerNames) {
+        CommonTest result =  new CommonTest(registerNames);
         result.typeOfTestingClass = type;
         return result;
     }
@@ -38,6 +38,11 @@ public class CommonTest {
         return result;
     }
 
+    public static CommonTest of(MockLoader loader, String... registerNames) {
+        CommonTest result =  new CommonTest(loader);
+        return result;
+    }
+
     private Class<?> typeOfTestingClass;
     private TestsCache testsCache;
     private BonusSearcher bonusSearcher;
@@ -48,8 +53,8 @@ public class CommonTest {
     private SpendLkBuilder spendLkBuilder;
     private AttractionAbBuilder attractionAbBuilder;
 
-    private CommonTest() {
-        this.loader =  MockLoader.ofMockRegisters();;
+    private CommonTest(String... registerNames) {
+        this.loader =  MockLoader.ofMockRegisters(registerNames);;
         this.testsCache = loader.getTestsCache();
         this.bonusSearcher = BonusSearcher.of(this.testsCache.getRegisters());
         this.routesBuilder = RoutesBuilder.of(this.testsCache.getRegisters());

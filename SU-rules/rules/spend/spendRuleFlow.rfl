@@ -63,6 +63,8 @@ use routes;
 use outputParams;
 use inputParams;
 use spendBuilder;
+use inputParamsLk;
+import ru.integrotech.airline.core.flight.Route;
 ]]></imports>
   </Properties>
 </Ruleflow></rfModel>

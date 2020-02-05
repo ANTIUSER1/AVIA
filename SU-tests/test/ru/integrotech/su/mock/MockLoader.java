@@ -4,7 +4,6 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
-
 import ru.integrotech.airline.register.RegisterCache;
 import ru.integrotech.airline.register.RegisterLoader;
 import ru.integrotech.airline.utils.PropertyHolder;
@@ -14,8 +13,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Properties;
-
-import static ru.integrotech.airline.register.RegisterCache.Type.*;
 
 
 /*class is used in tests instead listOf RegisterLoader. Combines loading JSONs from local
@@ -27,18 +24,38 @@ public class MockLoader{
     private final TestsCache testsCache;
 
     /*use restrict mock registers from /resources/registers*/
-    public static MockLoader ofMockRegisters() {
-        return new MockLoader();
+    public static MockLoader ofMockRegisters(String... registerNames) {
+        return new MockLoader(registerNames);
     }
 
     /*use restrict real registers*/
-    public static MockLoader ofRealRegisters() {
+    public static MockLoader ofRealRegisters(String... registerNames) {
         MockLoader result = null;
-        RegisterLoader registerLoader = RegisterLoader.getInstance();
+        RegisterLoader registerLoader = RegisterLoader.getInstance(registerNames);
         registerLoader.lock();
         result = new MockLoader(registerLoader.getRegisterCache());
         registerLoader.release();
         return result;
+    }
+
+    private MockLoader(String... registerNames) {
+        this.props = new PropertyHolder(getProperties("test/ru/integrotech/su/resources/ikm-mock.properties"));
+        this.testsCache = new TestsCache();
+        String registryDir = props.getRegistryServiceBase();
+
+        try {
+            for (String registerName : registerNames) {
+                String filePath = String.format("%s%s%s", registryDir, registerName, ".json");
+                this.testsCache.update(registerName, loadJson(filePath));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private MockLoader(RegisterCache registerCache) {
+        this.props = new PropertyHolder(getProperties("test/ru/integrotech/su/resources/ikm-mock.properties"));
+        this.testsCache = new TestsCache(registerCache);
     }
 
     public TestsCache getTestsCache() {
@@ -57,46 +74,8 @@ public class MockLoader{
         return props;
     }
 
-    private MockLoader() {
-        this.props = new PropertyHolder(getProperties("test/ru/integrotech/su/resources/ikm-mock.properties"),
-                                        getProperties("test/ru/integrotech/su/resources/inner-mock.properties"));
-        this.testsCache = new TestsCache();
-        try {
-            this.testsCache.update(AIRLINES,             loadJson(props.getAirlinesApi()));
-            this.testsCache.update(WORLD_REGIONS,        loadJson(props.getWorldRegionsApi()));
-            this.testsCache.update(COUNTRIES,            loadJson(props.getCountriesApi()));
-            this.testsCache.update(CITIES,               loadJson(props.getCitiesApi()));
-            this.testsCache.update(AIRPORTS,             loadJson(props.getAirportApi()));
-            this.testsCache.update(TARIFFS,              loadJson(props.getTariffApi()));
-            this.testsCache.update(BONUS_ROUTES,         loadJson(props.getBonusRoutesApi()));
-            this.testsCache.update(BONUSES,              loadJson(props.getBonusesApi()));
-            this.testsCache.update(WRONG_ROUTES,         loadJson(props.getWrongRoutesApi()));
-            this.testsCache.update(LOYALTY,              loadJson(props.getLoyaltyApi()));
-            this.testsCache.update(FLIGHTS,              loadJson(props.getFlightsApi()));
-            this.testsCache.update(SERVICE_CLASS_LIMITS, loadJson(props.getServiceClassLimitApi()));
-            this.testsCache.update(MILES_RULES, 		 loadJson(props.getChargeRulesApi()));
-            this.testsCache.update(TICKET_DESIGNATORS, 	 loadJson(props.getTicketDesignatorApi()));
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private MockLoader(RegisterCache registerCache) {
-        this.props = new PropertyHolder(getProperties("test/ru/integrotech/su/resources/ikm-mock.properties"),
-                                        getProperties("test/ru/integrotech/su/resources/inner-mock.properties"));
-        this.testsCache = new TestsCache(registerCache);
-    }
-
-    public JsonElement loadJson(String apiName) throws JsonIOException, JsonSyntaxException, IOException {
-        String localPath = this.props.getRegistryServiceBase() + apiName;
-        InputStream is = new FileInputStream(localPath);
-        return this.parseJson(is);
-    }
-
-    public JsonElement loadJson(String pathToFolder, String fileName) throws JsonIOException, JsonSyntaxException, IOException {
-        String localPath = pathToFolder + fileName;
-        InputStream is = new FileInputStream(localPath);
+    public JsonElement loadJson(String filePath) throws JsonIOException, JsonSyntaxException, IOException {
+        InputStream is = new FileInputStream(filePath);
         return this.parseJson(is);
     }
 

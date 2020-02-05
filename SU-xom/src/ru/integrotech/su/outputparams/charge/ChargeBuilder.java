@@ -31,6 +31,23 @@ import java.util.List;
  */
 public class ChargeBuilder {
 
+    public static String[] getRegisterNames() {
+        return REGISTER_NAMES;
+    }
+
+    private static final String[] REGISTER_NAMES = new String[]
+                    {"airline",
+                    "region",
+                    "country",
+                    "city",
+                    "airport",
+                    "pair",
+                    "serviceClassLimit",
+                    "tariff",
+                    "bonusRoute",
+                    "award",
+                    "tierLevel"};
+
     public static ChargeBuilder of(RegisterCache cache) {
         return new ChargeBuilder(cache);
     }

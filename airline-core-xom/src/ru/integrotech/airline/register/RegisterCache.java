@@ -122,51 +122,65 @@ public class RegisterCache {
         return ticketDesignators;
     }
 
-    public void update(Type registerType, JsonElement jsonElement) {
-        switch (registerType) {
-            case AIRLINES:
+    public void update(String registerName, JsonElement jsonElement) {
+        switch (registerName) {
+            case "airline":
                 this.initAirlineMap(jsonElement);
                 break;
-            case CITIES:
+            case "city":
                 this.initCityMap(jsonElement);
                 break;
-            case BONUSES:
+            case "award":
                 this.initBonuses(jsonElement);
                 break;
-            case FLIGHTS:
+            case "pair":
                 this.initFlights(jsonElement);
                 break;
-            case TARIFFS:
+            case "tariff":
                 this.initTariff(jsonElement);
                 break;
-            case AIRPORTS:
+            case "airport":
                 this.initAirportMaps(jsonElement);
                 break;
-            case COUNTRIES:
+            case "country":
                 this.initCountryMap(jsonElement);
                 break;
-            case BONUS_ROUTES:
+            case "bonusRoute":
                 this.initBonusRouteMap(jsonElement);
                 break;
-            case WORLD_REGIONS:
+            case "region":
                 this.initWorldRegionMap(jsonElement);
                 break;
-            case WRONG_ROUTES:
+            case "wrongRoute":
                 this.initWrongRoute(jsonElement);
                 break;
-            case SERVICE_CLASS_LIMITS:
+            case "serviceClassLimit":
                 this.initClassLimit(jsonElement);
                 break;
-            case LOYALTY:
+            case "tierLevel":
                 this.initLoyalty(jsonElement);
                 break;
-            case MILES_RULES:
+            case "milesRule":
                 this.initChargeRules(jsonElement);
                 break;
-            case TICKET_DESIGNATORS:
+            case "ticketDesignators":
                 this.initTicketDesignators(jsonElement);
                 break;
         }
+    }
+
+    public void clean() {
+        this.airlineMap = null;
+        this.bonusRouteMap = null;
+        this.airportMap = null;
+        this.cityMap = null;
+        this.countryMap = null;
+        this.worldRegionMap = null;
+        this.wrongRouteMap = null;
+        this.loyaltyMap = null;
+        this.invalidAirportCodes = null;
+        this.chargeRules = null;
+        this.ticketDesignators = null;
     }
 
 
@@ -427,18 +441,4 @@ public class RegisterCache {
         return gson.fromJson(jsonElement, toClass);
     }
 
-    public enum Type {  AIRLINES,
-                        WORLD_REGIONS,
-                        COUNTRIES,
-                        CITIES,
-                        AIRPORTS,
-                        FLIGHTS,
-                        TARIFFS,
-                        BONUS_ROUTES,
-                        BONUSES,
-                        WRONG_ROUTES,
-                        SERVICE_CLASS_LIMITS,
-                        LOYALTY,
-                        MILES_RULES,
-                        TICKET_DESIGNATORS}
 }

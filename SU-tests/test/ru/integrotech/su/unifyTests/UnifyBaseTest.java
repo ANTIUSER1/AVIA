@@ -28,11 +28,6 @@ public abstract class UnifyBaseTest {
         this.common = CommonTest.of(loader, type);
     }
 
-    public <T extends Comparable> UnifyBaseTest(Class<T> type) {
-        this.common = CommonTest.of(type);
-
-    }
-
     protected boolean executeTest(String rootTestDirectoryPath) {
         InputStream is = RegisterLoader.class.getClassLoader().getResourceAsStream(PROPERTIES);
         int testCaseCounter = 0;
