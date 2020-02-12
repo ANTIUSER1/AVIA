@@ -5,46 +5,43 @@ import ru.integrotech.airline.core.location.Airport;
 
 public class PassengerChargeInfo {
 	
-	public static PassengerChargeInfo of (boolean isPrivate, Airline airline, Airport origin, Airport destination, 
-										int distance, int chargeCoeff, int distanceCoeff, Status chargeStatus) {
+	public static PassengerChargeInfo of(Airline airline, Airport origin, Airport destination, String fareCode,
+										String bookingClassCode, int distance, String tickedDesignator, Status status) {
 		PassengerChargeInfo result = new PassengerChargeInfo();
-		result.setBasic(isPrivate);
 		result.setAirline(airline);
 		result.setOrigin(origin);
 		result.setDestination(destination);
+		result.setFareCode(fareCode);
+		result.setBookingClassCode(bookingClassCode);
 		result.setDistance(distance);
-		result.setChargeCoeff(chargeCoeff);
-		result.setDistanceCoeff(distanceCoeff);
-		result.setChargeStatus(chargeStatus);
+		result.setTickedDesignator(tickedDesignator);
+		result.setStatus(status);
 		return result;
 	}
 	
-	private boolean isBasic;
-	
+
 	private Airline airline;
 	
 	private Airport origin;
 	
 	private Airport destination;
-	
+
+	private String fareCode;
+
+	private String bookingClassCode;
+
 	private int distance;
-	
-	private int chargeCoeff;
 
-	private int distanceCoeff;
+	private String tickedDesignator;
 
-	private Status chargeStatus;
+    private double distanceCoeff;
+
+	private int totalBonusMiles;
+
+	private Status status;
 
 	private PassengerChargeInfo() {
 		
-	}
-
-	public boolean isBasic() {
-		return isBasic;
-	}
-
-	public void setBasic(boolean isPrivate) {
-		this.isBasic = isPrivate;
 	}
 
 	public Airport getOrigin() {
@@ -71,20 +68,12 @@ public class PassengerChargeInfo {
 		this.distance = distance;
 	}
 
-	public int getChargeCoeff() {
-		return chargeCoeff;
+	public Status getStatus() {
+		return status;
 	}
 
-	public void setChargeCoeff(int chargeCoeff) {
-		this.chargeCoeff = chargeCoeff;
-	}
-
-	public Status getChargeStatus() {
-		return chargeStatus;
-	}
-
-	public void setChargeStatus(Status chargeStatus) {
-		this.chargeStatus = chargeStatus;
+	public void setStatus(Status status) {
+		this.status = status;
 	}
 
 	public Airline getAirline() {
@@ -95,11 +84,11 @@ public class PassengerChargeInfo {
 		this.airline = airline;
 	}
 
-	public int getDistanceCoeff() {
+	public double getDistanceCoeff() {
 		return distanceCoeff;
 	}
 
-	public void setDistanceCoeff(int distanceCoeff) {
+	public void setDistanceCoeff(double distanceCoeff) {
 		this.distanceCoeff = distanceCoeff;
 	}
 
@@ -107,7 +96,61 @@ public class PassengerChargeInfo {
 		return String.format("%s%s", this.origin.getCode(), this.destination.getCode());
 	}
 
-	public enum Status {distance, full, nodata}
+	public String getTickedDesignator() {
+		return tickedDesignator;
+	}
+
+	public void setTickedDesignator(String tickedDesignator) {
+		this.tickedDesignator = tickedDesignator;
+	}
+
+    public String getFareCode() {
+        return fareCode;
+    }
+
+    public void setFareCode(String fareCode) {
+        this.fareCode = fareCode;
+    }
+
+    public String getBookingClassCode() {
+        return bookingClassCode;
+    }
+
+    public void setBookingClassCode(String bookingClassCode) {
+        this.bookingClassCode = bookingClassCode;
+    }
+
+	public int getTotalBonusMiles() {
+		return totalBonusMiles;
+	}
+
+	public void setTotalBonusMiles(int totalBonusMiles) {
+		this.totalBonusMiles = totalBonusMiles;
+	}
+
+	public int getFlightDistance() {
+		return this.origin.getOutcomeFlight(this.destination, this.airline).getDistance();
+	}
+
+	public int getMinBonusMiles() {
+		int result = 0;
+		int minBonus = this.airline.getMinMilesCharge();
+		String milesLimitation = this.airline.getMinMilesLimit();
+		boolean isInternational = this.isInternational();
+		if (minBonus > 0
+				&& (milesLimitation.equals("A")
+				|| (milesLimitation.equals("I") && isInternational))) {
+
+			result = minBonus;
+		}
+		return result;
+	}
+
+	private boolean isInternational() {
+		return !this.origin.getCity().getCountry().equals(this.destination.getCity().getCountry());
+	}
+
+    public enum Status {full, partial, nodata}
 
 
 }

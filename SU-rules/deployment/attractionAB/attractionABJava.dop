@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="attractionABEasy" usingRuleflow="true" ruleflowName="attractionABJavaFlow" targetRuleProjectName="SU-rules">
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="calcSegmentsCharge" usingRuleflow="true" ruleflowName="attractionABJavaFlow" targetRuleProjectName="SU-rules">
   <name>attractionABJava</name>
   <uuid>1b831f76-a9f8-4645-8caf-fd713b7d871f</uuid>
   <referencedVariables variableName="attractionABInput" variableSetName="attractionABParams">
-    <variableSet href="../../rules/attractionAB/attractionABParams.var#52016b5c-554d-475a-a777-d75ece4894ff"/>
+    <variableSet href="../../rules/attractionABParams.var#52016b5c-554d-475a-a777-d75ece4894ff"/>
   </referencedVariables>
   <referencedVariables variableName="attractionABOutput" variableSetName="attractionABParams" direction="OUT">
-    <variableSet href="../../rules/attractionAB/attractionABParams.var#52016b5c-554d-475a-a777-d75ece4894ff"/>
+    <variableSet href="../../rules/attractionABParams.var#52016b5c-554d-475a-a777-d75ece4894ff"/>
   </referencedVariables>
   <ruleflow href="../../rules/attractionAB/attractionABJavaFlow.rfl#01ea0ca8-7d1e-4efd-bb14-dea3a4ff5e3b"/>
   <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="attractionABspendEasy_extractor" validator="Default Validator"/>

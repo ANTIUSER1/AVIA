@@ -187,7 +187,7 @@ public class SpendTest {
                 false // is round trip
         );
         List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
-        List<SpendRoute> expectedSpend = this.getExpected("SVO-ROV-01.json");
+        List<SpendRoute> expectedSpend = this.getExpected("SVO-ROV-00.json");
         this.common.testIsPresent(expectedSpend, actualSpend);
     }
 

@@ -1,5 +1,8 @@
 package ru.integrotech.su.inputparams.attractionAB;
 
+import javax.xml.bind.annotation.XmlType;
+
+@XmlType(name = "InputSegment")
 class Segment {
 	
 	 private String originIATA;

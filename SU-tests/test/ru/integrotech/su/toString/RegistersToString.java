@@ -1,15 +1,11 @@
 package ru.integrotech.su.toString;
 
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import ru.integrotech.airline.core.airline.Airline;
 import ru.integrotech.airline.core.airline.ServiceClass;
 import ru.integrotech.airline.core.airline.Tariff;
-import ru.integrotech.airline.core.bonus.Bonus;
-import ru.integrotech.airline.core.bonus.ChargeRule;
-import ru.integrotech.airline.core.bonus.Loyalty;
-import ru.integrotech.airline.core.bonus.TicketDesignator;
+import ru.integrotech.airline.core.bonus.*;
 import ru.integrotech.airline.core.flight.Flight;
 import ru.integrotech.airline.core.location.Airport;
 import ru.integrotech.airline.core.location.City;
@@ -158,8 +154,8 @@ public class RegistersToString {
 
     @Test
     public void printChargeRules() {
-        for (ChargeRule chargeRule : this.common.getTestsCache().getRegisters().getChargeRules()) {
-            System.out.println(chargeRule);
+        for (MilesRule milesRule : this.common.getTestsCache().getRegisters().getMilesRules()) {
+            System.out.println(milesRule);
         }
     }
 
