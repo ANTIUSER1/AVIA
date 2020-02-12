@@ -1,11 +1,15 @@
 {
   "data": {
-    "tierCode": "basic",
     "segments": [
       {
         "originIATA": "SVO",
-        "destinationIATA": "LED"
+        "destinationIATA": "AER",
+        "bookingClassCode": "W",
+        "fareBasisCode": "KID50hgr",
+        "ticketDesignator": ""
       }
-    ]
-  }
+    ],
+    "tierCode": "basic"
+  },
+  "lang": "ru"
 }

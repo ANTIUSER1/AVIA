@@ -1,12 +1,10 @@
 package ru.integrotech.su.outputparams.attractionAB;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 import ru.integrotech.airline.core.flight.PassengerChargeInfo;
-import ru.integrotech.airline.core.location.Airport;
 import ru.integrotech.airline.register.RegisterCache;
+import ru.integrotech.airline.searcher.MileRuleSearcher;
 import ru.integrotech.su.inputparams.attractionAB.AttractionAbInput;
 import ru.integrotech.su.inputparams.attractionAB.AttractionAbUtils;
 
@@ -23,10 +21,8 @@ public class AttractionAbBuilder {
 					"city",
 					"airport",
 					"pair",
-					"serviceClassLimit",
 					"tierLevel",
-					"milesRule",
-					"ticketDesignators"};
+					"mileAccrualRule"};
 	
 	public static AttractionAbBuilder of(RegisterCache registerCache) {
 		AttractionAbBuilder result = new AttractionAbBuilder();
@@ -37,94 +33,70 @@ public class AttractionAbBuilder {
 	private RegisterCache cache;
 
 	private AttractionAbBuilder() {
-		
 	}
 	 
 	public AttractionAbOutput buildResult(AttractionAbInput input) {
 		
 		AttractionAbUtils utils = AttractionAbUtils.of(this.cache);
-		List<PassengerChargeInfo> charges = utils.toPassengerCharge(input);
-		AttractionAbOutput result = new AttractionAbOutput();
-		int miles = 0;
-		
-		if (charges != null) {
-			
-			Set<PassengerChargeInfo.Status> statuses = new HashSet<>();
-			int tierLevelFactor = utils.getTierLevelFactor(input);
-			
-			for (PassengerChargeInfo charge : charges) {
-				if (charge.getDistance() != 0) {
-					this.update(charge, tierLevelFactor);
-				}
-				miles = miles + charge.getDistance();
-				statuses.add(charge.getChargeStatus());
-			}
-			
-			result.setMiles(miles);
-			result.setStatus(this.getStatus(statuses));
-			
-		} else {
-			result.setMiles(0);
-			result.setStatus(PassengerChargeInfo.Status.nodata);
-		}
-		
-		return result;
+		List<PassengerChargeInfo> infos = utils.toPassengerChargeInfo(input);
+        MileRuleSearcher searcher = MileRuleSearcher.of(this.cache);
+        searcher.findMileRules(infos);
+        double tierPassengerFactor = utils.getTierLevelFactor(input);
+        List<Segment> segments = new ArrayList<>();
+        int totalBonusMiles = 0;
+        Map<PassengerChargeInfo.Status, Integer> statusMap = new HashMap<>();
+        for (PassengerChargeInfo info : infos) {
+            this.calculateMiles(info, tierPassengerFactor);
+            segments.add(Segment.of(info));
+            totalBonusMiles = totalBonusMiles + info.getTotalBonusMiles();
+            if (statusMap.containsKey(info.getStatus())) {
+                int counter = statusMap.get(info.getStatus()) + 1;
+                statusMap.put(info.getStatus(), counter);
+            } else {
+                statusMap.put(info.getStatus(), 1);
+            }
+        }
+
+        return AttractionAbOutput.of(statusMap, totalBonusMiles, segments);
 	}
 
-	private PassengerChargeInfo.Status getStatus(Set<PassengerChargeInfo.Status> statuses) {
-		
-		PassengerChargeInfo.Status result = PassengerChargeInfo.Status.distance;
-		
-		if (statuses.size() == 1) {
-			result = statuses.iterator().next();
-		}
-		
-		return result;
-	}
-	
-	private boolean isInternational(PassengerChargeInfo charge) {
-		Airport origin = charge.getOrigin();
-		Airport destination = charge.getDestination();
-		return !origin.getCity().getCountry().equals(destination.getCity().getCountry());
-	}
+	private void calculateMiles(PassengerChargeInfo info, double tierPassengerFactor) {
 
-	private void update(PassengerChargeInfo charge, int tierLevelFactor) {
+		if (info.getStatus() == PassengerChargeInfo.Status.nodata) return;
 
-		int multiplier = 0;
+	    double coeff = info.getDistanceCoeff();
 
-		if (charge.getDistanceCoeff() == 0 ) {
-			multiplier = charge.getChargeCoeff();
-		} else {
-			multiplier = charge.getChargeCoeff() * charge.getDistanceCoeff() / 100;
-		}
+	    if (coeff == 0) {
+	        info.setTotalBonusMiles(0);
 
-		int minBonusMiles = charge.getAirline().getMinMilesCharge();
-		String milesLimitation = charge.getAirline().getMinMilesLimit();
-		boolean isInternational = this.isInternational(charge);
-		int bonusMiles = 0;
-		int qualifyingMiles = 0;
-		int promoMiles = 0; // current value
-	
-		if (multiplier <= 100) {
+	    } else if (coeff > 0 && coeff <= 1) {
 
-			qualifyingMiles = charge.getDistance() * multiplier / 100;
+	        int newDistance = (int) (info.getFlightDistance() * coeff);
+            int additionalMiles = 0;
 
-			if (qualifyingMiles != 0
-					&& qualifyingMiles < minBonusMiles
-					&& (milesLimitation.equals("A")
-						|| (milesLimitation.equals("I") && isInternational))) {
+	        if (newDistance < info.getMinBonusMiles()) {
+	            newDistance = info.getMinBonusMiles();
+            }
 
-				qualifyingMiles = minBonusMiles;
-			}
-			bonusMiles = qualifyingMiles * tierLevelFactor / 100;
-		}
-		else {
-			bonusMiles = charge.getDistance() * multiplier / 100;
-		}
-		charge.setDistance(bonusMiles + promoMiles);
-	}
-	
-	
-	
+            additionalMiles = (int) (tierPassengerFactor * newDistance);
+            info.setTotalBonusMiles(newDistance + additionalMiles);
+
+	    } else if (coeff > 1) {
+
+	        int newDistance = (int) (info.getFlightDistance() * coeff);
+            int additionalMiles = 0;
+
+            if (newDistance < info.getMinBonusMiles()) {
+                newDistance = info.getMinBonusMiles();
+                additionalMiles = (int) (tierPassengerFactor * newDistance);
+
+            } else {
+                additionalMiles = (int) (tierPassengerFactor * info.getFlightDistance());
+            }
+
+            info.setTotalBonusMiles(newDistance + additionalMiles);
+        }
+    }
+
 
 }

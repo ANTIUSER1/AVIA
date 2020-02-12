@@ -10,7 +10,6 @@ public class RegisterCache
     public readonly java.util.Collection airlines domain 0,* class ru.integrotech.airline.core.airline.Airline;
     public readonly java.util.Collection airports domain 0,* class ru.integrotech.airline.core.location.Airport;
     public readonly java.util.Map bonusRouteMap;
-    public readonly java.util.List chargeRules domain 0,* class ru.integrotech.airline.core.bonus.ChargeRule;
     public readonly java.util.Collection cities domain 0,* class ru.integrotech.airline.core.location.City;
     public readonly java.util.Collection countries domain 0,* class ru.integrotech.airline.core.location.Country;
     public readonly java.util.Collection loyalties domain 0,* class ru.integrotech.airline.core.bonus.Loyalty;

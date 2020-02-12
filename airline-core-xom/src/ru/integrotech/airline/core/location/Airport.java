@@ -98,9 +98,11 @@ public class Airport implements Comparable<Airport> {
 
     public Flight getOutcomeFlight(Airport destination, Airline airline) {
         Flight result = null;
-        Flight flight = this.outcomeFlights.get(destination);
-        if (flight!= null && flight.getCarriers().containsKey(airline)) {
-            result = flight;
+        if (this.outcomeFlights != null && destination != null) {
+            Flight flight = this.outcomeFlights.get(destination);
+            if (flight != null && flight.getCarriers().containsKey(airline)) {
+                result = flight;
+            }
         }
         return result;
     }

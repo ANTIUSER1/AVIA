@@ -1,0 +1,1106 @@
+// 20200205183224
+// http://172.20.207.81:3004/api/mileAccrualRule
+
+[
+  {
+    "ruleOrder": 3,
+    "ruleType": "SF",
+    "fareCodeMasks": [
+      "CID50*",
+      "DID50*",
+      "JID50*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 125,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 3,
+    "ruleType": "SF",
+    "fareCodeMasks": [
+      "EID50*",
+      "NID50*",
+      "QID50*",
+      "TID50*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 75,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 3,
+    "ruleType": "SF",
+    "fareCodeMasks": [
+      "ACPS*",
+      "BEPS*",
+      "HEPS*",
+      "IBPS*",
+      "KEPS*",
+      "LEPS*",
+      "MEPS*",
+      "SCPS*",
+      "UEPS*",
+      "WCPS*",
+      "YEPS*",
+      "ZBPS*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 150,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 3,
+    "ruleType": "SF",
+    "fareCodeMasks": [
+      "*ID00*",
+      "*ID75*",
+      "*ID90*",
+      "*IDM*",
+      "*IDZ*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 0,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 4,
+    "ruleType": "BC",
+    "fareCodeMasks": null,
+    "bookingClassCode": "Y",
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 200,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 3,
+    "ruleType": "SF",
+    "fareCodeMasks": [
+      "JPASS*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 200,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 3,
+    "ruleType": "SF",
+    "fareCodeMasks": [
+      "AID50*",
+      "BID50*",
+      "HID50*",
+      "IID50*",
+      "KID50*",
+      "LID50*",
+      "MID50*",
+      "SID50*",
+      "UID50*",
+      "WID50*",
+      "YID50*",
+      "ZID50*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 100,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 4,
+    "ruleType": "BC",
+    "fareCodeMasks": null,
+    "bookingClassCode": "A",
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 200,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 3,
+    "ruleType": "SF",
+    "fareCodeMasks": [
+      "*MED*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 0,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 3,
+    "ruleType": "SF",
+    "fareCodeMasks": [
+      "*BRR*",
+      "*BRV*",
+      "*CERT*",
+      "*CHRT*",
+      "*FX*",
+      "*GA*",
+      "*GC*",
+      "*GF*",
+      "*GOV*",
+      "*GV*",
+      "*ID*",
+      "*KT*",
+      "*MFRF*",
+      "*OCN*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 0,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 3,
+    "ruleType": "SF",
+    "fareCodeMasks": [
+      "YPASS*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 150,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 3,
+    "ruleType": "SF",
+    "fareCodeMasks": [
+      "*SOC*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 25,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 1,
+    "ruleType": "TD",
+    "fareCodeMasks": null,
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": [
+      "*ID*"
+    ],
+    "bonusPercent": 0,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 3,
+    "ruleType": "SF",
+    "fareCodeMasks": [
+      "EEPS*",
+      "NEPS*",
+      "QEPS*",
+      "TEPS*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 100,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 2,
+    "ruleType": "PF",
+    "fareCodeMasks": [
+      "BF*",
+      "YF*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 200,
+    "ikmRule": "IN",
+    "airportPairs": [
+      "KHVUUS",
+      "KZNSVO",
+      "ROVSVO",
+      "SVOKZN",
+      "SVOROV",
+      "UUSKHV"
+    ]
+  },
+  {
+    "ruleOrder": 2,
+    "ruleType": "PF",
+    "fareCodeMasks": [
+      "BF*",
+      "HF*",
+      "KF*",
+      "LF*",
+      "MF*",
+      "UF*",
+      "YF*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 200,
+    "ikmRule": "EX",
+    "airportPairs": [
+      "KGDSVO",
+      "KHVUUS",
+      "KZNSVO",
+      "ROVSVO",
+      "SIPSVO",
+      "SVOKGD",
+      "SVOKZN",
+      "SVOROV",
+      "SVOSIP",
+      "SVOVVO",
+      "UUSKHV",
+      "VVOSVO"
+    ]
+  },
+  {
+    "ruleOrder": 4,
+    "ruleType": "BC",
+    "fareCodeMasks": null,
+    "bookingClassCode": "M",
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 150,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 4,
+    "ruleType": "BC",
+    "fareCodeMasks": null,
+    "bookingClassCode": "T",
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 75,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 3,
+    "ruleType": "SF",
+    "fareCodeMasks": [
+      "FA*",
+      "FW*",
+      "JA*",
+      "JW*",
+      "OA*",
+      "OW*",
+      "XA*",
+      "XW*",
+      "YA*",
+      "YW*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 0,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 3,
+    "ruleType": "SF",
+    "fareCodeMasks": [
+      "*AD00*",
+      "*AD6*",
+      "*AD7*",
+      "*AD8*",
+      "*AD9*",
+      "*AG00*",
+      "*AG51*",
+      "*AG52*",
+      "*AG53*",
+      "*AG54*",
+      "*AG55*",
+      "*AG56*",
+      "*AG57*",
+      "*AG58*",
+      "*AG59*",
+      "*AG6*",
+      "*AG7*",
+      "*AG8*",
+      "*AG9*",
+      "*DP00*",
+      "*DP6*",
+      "*DP7*",
+      "*DP8*",
+      "*DP9*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 0,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 3,
+    "ruleType": "SF",
+    "fareCodeMasks": [
+      "*SA1*",
+      "*SA2*",
+      "*SAF*",
+      "*SAO*",
+      "*SE1*",
+      "*SE2*",
+      "*SE3*",
+      "*SE4*",
+      "*SLA*",
+      "*SMA*",
+      "*SME*",
+      "*SNA*",
+      "*SR1*",
+      "*SR2*",
+      "*SR3*",
+      "*SR4*",
+      "*SSA*",
+      "CSM*",
+      "FSM*",
+      "YSM*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 0,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 1,
+    "ruleType": "TD",
+    "fareCodeMasks": null,
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": [
+      "*SA1*",
+      "*SA2*",
+      "*SAF*",
+      "*SAO*",
+      "*SE1*",
+      "*SE2*",
+      "*SE3*",
+      "*SE4*",
+      "*SLA*",
+      "*SMA*",
+      "*SME*",
+      "*SNA*",
+      "*SR1*",
+      "*SR2*",
+      "*SR3*",
+      "*SR4*",
+      "*SSA*"
+    ],
+    "bonusPercent": 0,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 4,
+    "ruleType": "BC",
+    "fareCodeMasks": null,
+    "bookingClassCode": "K",
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 150,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 4,
+    "ruleType": "BC",
+    "fareCodeMasks": null,
+    "bookingClassCode": "U",
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 150,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 4,
+    "ruleType": "BC",
+    "fareCodeMasks": null,
+    "bookingClassCode": "B",
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 200,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 4,
+    "ruleType": "BC",
+    "fareCodeMasks": null,
+    "bookingClassCode": "H",
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 150,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 2,
+    "ruleType": "PF",
+    "fareCodeMasks": [
+      "EV*",
+      "NV*",
+      "QV*",
+      "RV*",
+      "TV*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 75,
+    "ikmRule": "EX",
+    "airportPairs": [
+      "KHVUUS",
+      "KZNSVO",
+      "ROVSVO",
+      "SVOGDX",
+      "SVOKGD",
+      "SVOKHV",
+      "SVOPKC",
+      "SVOSIP",
+      "SVOUUS",
+      "SVOVVO"
+    ]
+  },
+  {
+    "ruleOrder": 2,
+    "ruleType": "PF",
+    "fareCodeMasks": [
+      "EV*",
+      "NV*",
+      "QV*",
+      "TV*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 75,
+    "ikmRule": "IN",
+    "airportPairs": [
+      "SVOGDX",
+      "SVOKGD",
+      "SVOKHV",
+      "SVOPKC",
+      "SVOSIP",
+      "SVOUUS",
+      "SVOVVO"
+    ]
+  },
+  {
+    "ruleOrder": 2,
+    "ruleType": "PF",
+    "fareCodeMasks": [
+      "BN*",
+      "HN*",
+      "KN*",
+      "LN*",
+      "MN*",
+      "UN*",
+      "YN*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 125,
+    "ikmRule": "EX",
+    "airportPairs": [
+      "KHVUUS",
+      "KZNSVO",
+      "ROVSVO",
+      "SVOGDX",
+      "SVOKGD",
+      "SVOKHV",
+      "SVOPKC",
+      "SVOSIP",
+      "SVOUUS",
+      "SVOVVO"
+    ]
+  },
+  {
+    "ruleOrder": 2,
+    "ruleType": "PF",
+    "fareCodeMasks": [
+      "EN*",
+      "NN*",
+      "QN*",
+      "RN*",
+      "TN*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 75,
+    "ikmRule": "EX",
+    "airportPairs": [
+      "KHVUUS",
+      "KZNSVO",
+      "ROVSVO",
+      "SVOGDX",
+      "SVOKGD",
+      "SVOKHV",
+      "SVOPKC",
+      "SVOSIP",
+      "SVOUUS",
+      "SVOVVO"
+    ]
+  },
+  {
+    "ruleOrder": 2,
+    "ruleType": "PF",
+    "fareCodeMasks": [
+      "EV*",
+      "NV*",
+      "QV*",
+      "RV*",
+      "TV*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 75,
+    "ikmRule": "IN",
+    "airportPairs": [
+      "KHVUUS",
+      "KZNSVO",
+      "ROVSVO"
+    ]
+  },
+  {
+    "ruleOrder": 2,
+    "ruleType": "PF",
+    "fareCodeMasks": [
+      "BC*",
+      "HC*",
+      "KC*",
+      "LC*",
+      "MC*",
+      "UC*",
+      "YC*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 150,
+    "ikmRule": "EX",
+    "airportPairs": [
+      "KHVUUS",
+      "KZNSVO",
+      "ROVSVO",
+      "SVOGDX",
+      "SVOKGD",
+      "SVOKHV",
+      "SVOPKC",
+      "SVOSIP",
+      "SVOVVO"
+    ]
+  },
+  {
+    "ruleOrder": 2,
+    "ruleType": "PF",
+    "fareCodeMasks": [
+      "BV*",
+      "HV*",
+      "KV*",
+      "LV*",
+      "MV*",
+      "UV*",
+      "YV*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 125,
+    "ikmRule": "EX",
+    "airportPairs": [
+      "KHVUUS",
+      "KZNSVO",
+      "ROVSVO",
+      "SVOGDX",
+      "SVOKGD",
+      "SVOKHV",
+      "SVOPKC",
+      "SVOSIP",
+      "SVOUUS",
+      "SVOVVO"
+    ]
+  },
+  {
+    "ruleOrder": 2,
+    "ruleType": "PF",
+    "fareCodeMasks": [
+      "RS*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 25,
+    "ikmRule": "EX",
+    "airportPairs": [
+      "SVOGDX",
+      "SVOKGD",
+      "SVOKHV",
+      "SVOPKC",
+      "SVOSIP",
+      "SVOUUS",
+      "SVOVVO"
+    ]
+  },
+  {
+    "ruleOrder": 2,
+    "ruleType": "PF",
+    "fareCodeMasks": [
+      "BPX*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 25,
+    "ikmRule": "IN",
+    "airportPairs": [
+      "SVOGDX",
+      "SVOKGD",
+      "SVOKHV",
+      "SVOPKC",
+      "SVOSIP",
+      "SVOUUS",
+      "SVOVVO"
+    ]
+  },
+  {
+    "ruleOrder": 4,
+    "ruleType": "BC",
+    "fareCodeMasks": null,
+    "bookingClassCode": "S",
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 200,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 4,
+    "ruleType": "BC",
+    "fareCodeMasks": null,
+    "bookingClassCode": "R",
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 25,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 4,
+    "ruleType": "BC",
+    "fareCodeMasks": null,
+    "bookingClassCode": "O",
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 0,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 4,
+    "ruleType": "BC",
+    "fareCodeMasks": null,
+    "bookingClassCode": "E",
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 75,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 4,
+    "ruleType": "BC",
+    "fareCodeMasks": null,
+    "bookingClassCode": "N",
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 75,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 4,
+    "ruleType": "BC",
+    "fareCodeMasks": null,
+    "bookingClassCode": "C",
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 250,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 4,
+    "ruleType": "BC",
+    "fareCodeMasks": null,
+    "bookingClassCode": "D",
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 250,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 4,
+    "ruleType": "BC",
+    "fareCodeMasks": null,
+    "bookingClassCode": "F",
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 0,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 4,
+    "ruleType": "BC",
+    "fareCodeMasks": null,
+    "bookingClassCode": "J",
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 250,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 3,
+    "ruleType": "SF",
+    "fareCodeMasks": [
+      "CBPS*",
+      "DBPS*",
+      "JBPS*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 200,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 4,
+    "ruleType": "BC",
+    "fareCodeMasks": null,
+    "bookingClassCode": "I",
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 150,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 4,
+    "ruleType": "BC",
+    "fareCodeMasks": null,
+    "bookingClassCode": "Z",
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 150,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 1,
+    "ruleType": "TD",
+    "fareCodeMasks": null,
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": [
+      "*AD00*",
+      "*AD6*",
+      "*AD7*",
+      "*AD8*",
+      "*AD9*",
+      "*DP00*",
+      "*DP6*",
+      "*DP7*",
+      "*DP8*",
+      "*DP9*"
+    ],
+    "bonusPercent": 0,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 1,
+    "ruleType": "TD",
+    "fareCodeMasks": null,
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": [
+      "AG00*",
+      "AG51*",
+      "AG52*",
+      "AG53*",
+      "AG54*",
+      "AG55*",
+      "AG56*",
+      "AG57*",
+      "AG58*",
+      "AG59*",
+      "AG6*",
+      "AG7*",
+      "AG8*",
+      "AG9*"
+    ],
+    "bonusPercent": 0,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 2,
+    "ruleType": "PF",
+    "fareCodeMasks": [
+      "AC*",
+      "SC*",
+      "WC*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 150,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 2,
+    "ruleType": "PF",
+    "fareCodeMasks": [
+      "CC*",
+      "DC*",
+      "JC*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 200,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 2,
+    "ruleType": "PF",
+    "fareCodeMasks": [
+      "IF*",
+      "ZF*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 200,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 2,
+    "ruleType": "PF",
+    "fareCodeMasks": [
+      "AF*",
+      "SF*",
+      "WF*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 200,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 2,
+    "ruleType": "PF",
+    "fareCodeMasks": [
+      "IC*",
+      "ZC*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 150,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 4,
+    "ruleType": "BC",
+    "fareCodeMasks": null,
+    "bookingClassCode": "W",
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 200,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 1,
+    "ruleType": "TD",
+    "fareCodeMasks": null,
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": [
+      "FA*",
+      "FW*",
+      "JA*",
+      "JW*",
+      "OA*",
+      "OW*",
+      "XA*",
+      "XW*",
+      "YA*",
+      "YW*"
+    ],
+    "bonusPercent": 0,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 2,
+    "ruleType": "PF",
+    "fareCodeMasks": [
+      "CF*",
+      "DF*",
+      "JF*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 250,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 2,
+    "ruleType": "PF",
+    "fareCodeMasks": [
+      "RP*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 25,
+    "ikmRule": "EX",
+    "airportPairs": [
+      "KHVUUS",
+      "KZNSVO",
+      "ROVSVO",
+      "SVOGDX",
+      "SVOKGD",
+      "SVOKHV",
+      "SVOPKC",
+      "SVOSIP",
+      "SVOUUS",
+      "SVOVVO"
+    ]
+  },
+  {
+    "ruleOrder": 4,
+    "ruleType": "BC",
+    "fareCodeMasks": null,
+    "bookingClassCode": "V",
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 0,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 4,
+    "ruleType": "BC",
+    "fareCodeMasks": null,
+    "bookingClassCode": "X",
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 0,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 4,
+    "ruleType": "BC",
+    "fareCodeMasks": null,
+    "bookingClassCode": "L",
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 150,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 4,
+    "ruleType": "BC",
+    "fareCodeMasks": null,
+    "bookingClassCode": "Q",
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 75,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 4,
+    "ruleType": "BC",
+    "fareCodeMasks": null,
+    "bookingClassCode": "P",
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 25,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 4,
+    "ruleType": "BC",
+    "fareCodeMasks": null,
+    "bookingClassCode": "G",
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 0,
+    "ikmRule": null,
+    "airportPairs": null
+  },
+  {
+    "ruleOrder": 2,
+    "ruleType": "PF",
+    "fareCodeMasks": [
+      "EF*",
+      "NF*",
+      "QF*",
+      "RF*",
+      "TF*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 150,
+    "ikmRule": "EX",
+    "airportPairs": [
+      "KHVUUS",
+      "KZNSVO",
+      "ROVSVO",
+      "SVOKGD",
+      "SVOKHV",
+      "SVOPKC",
+      "SVOSIP",
+      "SVOUUS",
+      "SVOVVO"
+    ]
+  },
+  {
+    "ruleOrder": 2,
+    "ruleType": "PF",
+    "fareCodeMasks": [
+      "EC*",
+      "NC*",
+      "QC*",
+      "RC*",
+      "TC*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 100,
+    "ikmRule": "EX",
+    "airportPairs": [
+      "KGDSVO",
+      "KHVUUS",
+      "KZNSVO",
+      "ROVSVO",
+      "SIPSVO",
+      "SVOKGD",
+      "SVOKZN",
+      "SVOROV",
+      "SVOSIP",
+      "SVOVVO",
+      "UUSKHV",
+      "VVOSVO"
+    ]
+  },
+  {
+    "ruleOrder": 2,
+    "ruleType": "PF",
+    "fareCodeMasks": [
+      "HF*",
+      "KF*",
+      "LF*",
+      "MF*",
+      "UF*"
+    ],
+    "bookingClassCode": null,
+    "tickedDesignatorMasks": null,
+    "bonusPercent": 150,
+    "ikmRule": "IN",
+    "airportPairs": [
+      "KHVUUS",
+      "KZNSVO",
+      "ROVSVO"
+    ]
+  }
+]

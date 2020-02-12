@@ -6,7 +6,6 @@ ru.integrotech.airline.register.RegisterCache#concept.label = register cache
 ru.integrotech.airline.register.RegisterCache.airlines#phrase.navigation = {airline} of {this}
 ru.integrotech.airline.register.RegisterCache.airports#phrase.navigation = {airport} of {this}
 ru.integrotech.airline.register.RegisterCache.bonusRouteMap#phrase.navigation = {bonus route map} of {this}
-ru.integrotech.airline.register.RegisterCache.chargeRules#phrase.navigation = {charge rule} of {this}
 ru.integrotech.airline.register.RegisterCache.cities#phrase.navigation = {city} of {this}
 ru.integrotech.airline.register.RegisterCache.countries#phrase.navigation = {country} of {this}
 ru.integrotech.airline.register.RegisterCache.loyalties#phrase.navigation = {loyalty} of {this}

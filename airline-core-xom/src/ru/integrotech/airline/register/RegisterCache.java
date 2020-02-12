@@ -9,15 +9,13 @@ import ru.integrotech.airline.core.airline.Airline;
 import ru.integrotech.airline.core.airline.ServiceClass;
 import ru.integrotech.airline.core.airline.SubTariff;
 import ru.integrotech.airline.core.airline.Tariff;
-import ru.integrotech.airline.core.bonus.Bonus;
-import ru.integrotech.airline.core.bonus.ChargeRule;
-import ru.integrotech.airline.core.bonus.Loyalty;
-import ru.integrotech.airline.core.bonus.TicketDesignator;
+import ru.integrotech.airline.core.bonus.*;
 import ru.integrotech.airline.core.flight.Flight;
 import ru.integrotech.airline.core.location.Airport;
 import ru.integrotech.airline.core.location.City;
 import ru.integrotech.airline.core.location.Country;
 import ru.integrotech.airline.core.location.WorldRegion;
+import ru.integrotech.airline.utils.StringMethods;
 
 import java.util.*;
 import java.util.logging.Level;
@@ -46,7 +44,7 @@ public class RegisterCache {
 
     private Set<String> invalidAirportCodes;
     
-    private List<ChargeRule> chargeRules;
+    private List<MilesRule> milesRules;
 
     private List<TicketDesignator> ticketDesignators;
 
@@ -114,8 +112,8 @@ public class RegisterCache {
         return loyaltyMap;
     }
     
-    public List<ChargeRule> getChargeRules() {
-		return chargeRules;
+    public List<MilesRule> getMilesRules() {
+		return milesRules;
 	}
 
     public List<TicketDesignator> getTicketDesignators() {
@@ -160,8 +158,8 @@ public class RegisterCache {
             case "tierLevel":
                 this.initLoyalty(jsonElement);
                 break;
-            case "milesRule":
-                this.initChargeRules(jsonElement);
+            case "mileAccrualRule":
+                this.initMilesRules(jsonElement);
                 break;
             case "ticketDesignators":
                 this.initTicketDesignators(jsonElement);
@@ -179,7 +177,7 @@ public class RegisterCache {
         this.wrongRouteMap = null;
         this.loyaltyMap = null;
         this.invalidAirportCodes = null;
-        this.chargeRules = null;
+        this.milesRules = null;
         this.ticketDesignators = null;
     }
 
@@ -408,23 +406,31 @@ public class RegisterCache {
         }
     }
     
-    private void initChargeRules(JsonElement jsonElement) {
-        ChargeRule[] chargeRules = parseJsonElement(ChargeRule[].class, jsonElement);
-        for (ChargeRule rule : chargeRules) {
-            List<String> newMasks = new ArrayList<>();
-            if (rule.getTariffMasks() != null) {
-                for (String mask : rule.getTariffMasks()) {
-                    String newMask = mask.replaceAll("\\*", ".*")
-                            .replaceAll("#{3}", "\\\\d{3}")
-                            .replaceAll("#{2}", "\\\\d{2}")
-                            .replaceAll("#{1}", "\\\\d");
-                    newMasks.add(newMask);
+    private void initMilesRules(JsonElement jsonElement) {
+        MilesRule[] milesRules = parseJsonElement(MilesRule[].class, jsonElement);
+
+        for (MilesRule milesRule : milesRules) {
+
+            List<String> newFareCodeMasks = new ArrayList<>();
+            if (milesRule.getFareCodeMasks() != null) {
+                for (String mask : milesRule.getFareCodeMasks()) {
+                    newFareCodeMasks.add(StringMethods.milesRuleToRegexTransform(mask));
                 }
-                rule.setTariffMasks(newMasks);
+
+                milesRule.setFareCodeMasks(newFareCodeMasks);
+            }
+
+            List<String> newTickedDesignatorMasks = new ArrayList<>();
+            if (milesRule.getTickedDesignatorMasks() != null) {
+                for (String mask : milesRule.getTickedDesignatorMasks()) {
+                    newTickedDesignatorMasks.add(StringMethods.milesRuleToRegexTransform(mask));
+                }
+
+                milesRule.setTickedDesignatorMasks(newTickedDesignatorMasks);
             }
         }
 
-        this.chargeRules = new ArrayList<ChargeRule>(Arrays.asList(chargeRules));
+        this.milesRules = new ArrayList<>(Arrays.asList(milesRules));
     }
 
     private void initTicketDesignators(JsonElement jsonElement) {

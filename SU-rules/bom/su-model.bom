@@ -79,8 +79,12 @@ public class AttractionAbBuilder
 
 public class AttractionAbOutput
 {
-    public int miles;
-    public ru.integrotech.airline.core.flight.PassengerChargeInfo.Status status;
+    public java.util.List segments domain 0,* class ru.integrotech.su.outputparams.attractionAB.Segment;
+    public int totalMiles;
+    public ru.integrotech.airline.core.flight.PassengerChargeInfo.Status totalStatus;
+    public static ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput of(java.util.Map arg1, 
+        int arg2, 
+        java.util.List arg3 domain 0,* class ru.integrotech.su.outputparams.attractionAB.Segment);
 }
 
 package ru.integrotech.su.outputparams.charge;

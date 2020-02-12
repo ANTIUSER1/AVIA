@@ -61,10 +61,8 @@ ru.integrotech.su.outputparams.attractionAB.AttractionAbBuilder.getRegisterNames
 
 # ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput
 ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput#concept.label = attraction ab output
-ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput.miles#phrase.action = set the miles of {this} to {miles}
-ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput.miles#phrase.navigation = {miles} of {this}
-ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput.status#phrase.action = set the status of {this} to {status}
-ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput.status#phrase.navigation = {status} of {this}
+ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput.segments#phrase.action = set the segments of {this} to {segment}
+ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput.segments#phrase.navigation = {segment} of {this}
 
 # ru.integrotech.su.outputparams.charge.ChargeBuilder
 ru.integrotech.su.outputparams.charge.ChargeBuilder#concept.label = charge builder

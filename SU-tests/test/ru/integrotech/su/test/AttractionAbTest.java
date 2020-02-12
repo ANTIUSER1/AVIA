@@ -2,14 +2,16 @@ package ru.integrotech.su.test;
 
 import com.google.gson.*;
 import org.junit.Test;
-import ru.integrotech.airline.core.bonus.ChargeRule;
-import ru.integrotech.airline.core.bonus.TicketDesignator;
+import ru.integrotech.airline.core.bonus.MilesRule;
+import ru.integrotech.airline.utils.StringMethods;
 import ru.integrotech.su.inputparams.attractionAB.AttractionAbInput;
 import ru.integrotech.su.mock.MockLoader;
 import ru.integrotech.su.outputparams.attractionAB.AttractionAbBuilder;
 import ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AttractionAbTest {
 	
@@ -18,7 +20,7 @@ public class AttractionAbTest {
 	 private final CommonTest common;
 
 	 public AttractionAbTest() {
-		this.common = CommonTest.of(MockLoader.ofMockRegisters(AttractionAbBuilder.getRegisterNames()));
+		this.common = CommonTest.of(MockLoader.ofRealRegisters(AttractionAbBuilder.getRegisterNames()));
 	 }
 	 
 	 private AttractionAbInput getInput(String jsonName) {
@@ -35,22 +37,14 @@ public class AttractionAbTest {
 	  }
 	 
 	 @Test
-	  public void printChargeRules() {
-	      for (ChargeRule chargeRule : this.common.getTestsCache().getRegisters().getChargeRules()) {
-	           System.out.println(chargeRule);
+	  public void printMilesRules() {
+	      for (MilesRule milesRule : this.common.getTestsCache().getRegisters().getMilesRules()) {
+	           System.out.println(milesRule);
 	      }
 	  }
 
-	  @Test
-	  public void printTicketDesignators() {
-			for (TicketDesignator designator : this.common.getTestsCache().getRegisters().getTicketDesignators()) {
-				System.out.println(designator);
-			}
-	  }
-	 
-	 
 	 @Test
-	  public void PRINT_SVO_PRG_00() {
+	  public void PRINT_Example01() {
 	        AttractionAbInput input = this.getInput("Example01.json");
 	        AttractionAbOutput output = null;
 			output = this.common.getAttractionAbBuilder().buildResult(input);
@@ -114,16 +108,37 @@ public class AttractionAbTest {
             System.out.println(jsonResult);
         }
 
-        /* expected "miles": 557*/
-        @Test
-        public void PRINT_SVO_KZN_00() {
-            AttractionAbInput input = this.getInput("SVO-KZN-00.json");
-            AttractionAbOutput output = null;
-            output = this.common.getAttractionAbBuilder().buildResult(input);
-            Gson gson = new GsonBuilder().setPrettyPrinting().create();
-            String jsonResult = gson.toJson(output);
-            System.out.println(jsonResult);
-        }
+    /* expected "miles": 557*/
+    @Test
+    public void PRINT_SVO_KZN_00() {
+         AttractionAbInput input = this.getInput("SVO-KZN-00.json");
+         AttractionAbOutput output = null;
+         output = this.common.getAttractionAbBuilder().buildResult(input);
+         Gson gson = new GsonBuilder().setPrettyPrinting().create();
+         String jsonResult = gson.toJson(output);
+         System.out.println(jsonResult);
+    }
+
+    /* expected "miles": 557*/
+    @Test
+    public void PRINT_SVO_KZN_01() {
+        AttractionAbInput input = this.getInput("SVO-KZN-01.json");
+        AttractionAbOutput output = null;
+        output = this.common.getAttractionAbBuilder().buildResult(input);
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        String jsonResult = gson.toJson(output);
+        System.out.println(jsonResult);
+    }
+
+    @Test
+    public void PRINT_SVO_ROV_00() {
+        AttractionAbInput input = this.getInput("SVO-ROV-00.json");
+        AttractionAbOutput output = null;
+        output = this.common.getAttractionAbBuilder().buildResult(input);
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        String jsonResult = gson.toJson(output);
+        System.out.println(jsonResult);
+    }
 
     @Test
     public void PRINT_SVO_IST_SVO() {
@@ -145,16 +160,26 @@ public class AttractionAbTest {
         System.out.println(jsonResult);
     }
 
-
-
     @Test
-	  public void TestRegex() {
-            String example = "DP8#*";
-            example = example.replaceAll("\\*", ".*").replaceAll("#", "\\\\d");
-            System.out.println(example);
-	  }
+	public void TestRegexList() {
+        List<String> masks = new ArrayList<>();
+        masks.add("CID50*");
+        masks.add("*CID50*");
+        masks.add("*CID*50*");
+        masks.add("?CID*50?");
+        masks.add("?CID*50#");
+        masks.add("??CID#50##");
+        masks.add("??###CI*D#50##");
+        masks.add("#####CI*D#50?????");
+        masks.add("##???CI*D#50?????");
 
-  
+        for (String mask : masks) {
+            String newMask = StringMethods.milesRuleToRegexTransform(mask);
+            System.out.printf("%-17.17s -> %-15s\n", mask, newMask);
+        }
+	}
+
+
 
 
 }
