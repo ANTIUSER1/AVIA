@@ -5,6 +5,7 @@ import ru.integrotech.airline.core.flight.PassengerChargeInfo;
 import ru.integrotech.airline.register.RegisterCache;
 import ru.integrotech.airline.utils.StringMethods;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static ru.integrotech.airline.core.flight.PassengerChargeInfo.*;
@@ -59,7 +60,7 @@ public class MileRuleSearcher {
 
     private MilesRule findByTicketDesignator(PassengerChargeInfo info) {
 
-        MilesRule result = null;
+        List<MilesRule> result = new ArrayList<>();
         String designator = info.getTickedDesignator();
 
         if (!StringMethods.isEmpty(designator)) {
@@ -68,19 +69,19 @@ public class MileRuleSearcher {
                 if (rule.getRuleType() == MilesRule.RULE_TYPE.TD) {
                     if (StringMethods.isFitsByRegexMasks(designator, rule.getTickedDesignatorMasks())) {
                         if (this.fitsByIkmRule(rule, info)) {
-                            result = rule;
-                            break;
+                            result.add(rule);
                         }
                     }
                 }
             }
         }
 
-        return result;
+        return this.findRuleWithMinMiles(result);
     }
 
     private MilesRule findByFare(PassengerChargeInfo info) {
-        MilesRule result = null;
+
+        List<MilesRule> result = new ArrayList<>();
         String fareCode = info.getFareCode();
 
         if (!StringMethods.isEmpty(fareCode)) {
@@ -89,19 +90,19 @@ public class MileRuleSearcher {
                 if (rule.getRuleType() == MilesRule.RULE_TYPE.PF || rule.getRuleType() == MilesRule.RULE_TYPE.SF) {
                     if (StringMethods.isFitsByRegexMasks(fareCode, rule.getFareCodeMasks())) {
                         if (this.fitsByIkmRule(rule, info)) {
-                            result = rule;
-                            break;
+                            result.add(rule);
                         }
                     }
                 }
             }
         }
 
-        return result;
+        return this.findRuleWithMinMiles(result);
     }
 
     private MilesRule findByBookingClass(PassengerChargeInfo info) {
-        MilesRule result = null;
+
+        List<MilesRule> result = new ArrayList<>();
         String bookingClassCode = info.getBookingClassCode();
 
         if (!StringMethods.isEmpty(bookingClassCode)) {
@@ -109,14 +110,13 @@ public class MileRuleSearcher {
             for (MilesRule rule : this.rulesRegister) {
                  if (bookingClassCode.equals(rule.getBookingClassCode())) {
                      if (this.fitsByIkmRule(rule, info)) {
-                         result = rule;
-                         break;
+                         result.add(rule);
                      }
                  }
             }
         }
 
-        return result;
+        return this.findRuleWithMinMiles(result);
     }
 
     private boolean fitsByIkmRule(MilesRule rule, PassengerChargeInfo info) {
@@ -140,6 +140,26 @@ public class MileRuleSearcher {
 
         return result;
 
+    }
+
+    private MilesRule findRuleWithMinMiles(List<MilesRule> milesRules) {
+        MilesRule result = null;
+        if (milesRules != null && milesRules.size() != 0) {
+
+            if (milesRules.size() == 1) {
+                result = milesRules.get(0);
+
+            } else {
+                int minMiles = Integer.MAX_VALUE;
+                for (MilesRule rule : milesRules) {
+                    if (rule.getBonusPercent() < minMiles) {
+                        minMiles = rule.getBonusPercent();
+                        result = rule;
+                    }
+                }
+            }
+        }
+        return result;
     }
 
 
