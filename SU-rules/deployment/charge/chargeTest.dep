@@ -4,8 +4,8 @@
   <uuid>81786321-2ac8-4dee-9b6a-2c686dbff71a</uuid>
   <targets label="Local Server"/>
   <targets label="Test Server"/>
-  <operations operationName="chargeJava.dop">
-    <operation href="chargeJava.dop#b98f545f-10fa-48f0-8fe1-e04f22732c71"/>
+  <operations operationName="chargeRules">
+    <operation href="chargeRules.dop#f8781f54-0c1b-4fa1-b532-f7f9542efa12"/>
     <properties key="ruleset.version">
       <value><![CDATA[1.0]]></value>
     </properties>
