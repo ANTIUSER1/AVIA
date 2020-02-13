@@ -66,6 +66,7 @@ ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput.segments#phrase.n
 
 # ru.integrotech.su.outputparams.charge.ChargeBuilder
 ru.integrotech.su.outputparams.charge.ChargeBuilder#concept.label = charge builder
+ru.integrotech.su.outputparams.charge.ChargeBuilder.getPercent(int,int)#phrase.navigation = {this}.getPercent({0}, {1})
 ru.integrotech.su.outputparams.charge.ChargeBuilder.getRegisterNames()#phrase.navigation = the register name
 
 # ru.integrotech.su.outputparams.charge.ResultMilesCharge

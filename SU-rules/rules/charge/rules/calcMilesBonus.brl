@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
-  <name>05_calcMilesBonus</name>
+  <name>calcMilesBonus</name>
   <uuid>369b3b42-bd46-4f3d-916e-7ccfa5bc0e2a</uuid>
   <locale>en_US</locale>
   <definition><![CDATA[if the charge coeff of the passenger charge  is less than 100 
 
-then set the miles bonus of the passenger charge  to the miles qualifying of the passenger charge  * loyaltyFactor / 100.00;
+then set the miles bonus of the passenger charge  to 'Charge builder' .getPercent ( the miles qualifying of the passenger charge , loyaltyFactor ) ; 
 
-else set the miles bonus of the passenger charge  to the miles of the passenger charge  * loyaltyFactor  / 100.00;]]></definition>
+else set the miles bonus of the passenger charge  to 'Charge builder' .getPercent ( the miles of the passenger charge,  loyaltyFactor ); ]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

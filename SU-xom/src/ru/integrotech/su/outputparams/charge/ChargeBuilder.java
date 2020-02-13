@@ -9,6 +9,7 @@ import ru.integrotech.airline.core.flight.PassengerCharge;
 import ru.integrotech.airline.core.flight.Route;
 import ru.integrotech.airline.register.RegisterCache;
 import ru.integrotech.airline.register.RegisterLoader;
+import ru.integrotech.airline.utils.NumberMethods;
 import ru.integrotech.su.inputparams.charge.ChargeInput;
 import ru.integrotech.su.inputparams.route.RoutesInput;
 import ru.integrotech.su.outputparams.route.RoutesBuilder;
@@ -96,6 +97,10 @@ public class ChargeBuilder {
         }
 
         return this.cache.getLoyaltyMap().get(tierLevelCode).getFactor();
+    }
+    
+    public int getPercent(int value, int percent) {
+    	return NumberMethods.getPercent(value, percent);
     }
 
     private List<ChargeRoute> buildChargeRoutes(List<Route> routes, ChargeInput chargeInput) {

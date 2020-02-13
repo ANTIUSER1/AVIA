@@ -97,6 +97,7 @@ public class ChargeBuilder
         ru.integrotech.su.inputparams.charge.ChargeInput arg2);
     public java.util.List getChargeRoutes(ru.integrotech.su.inputparams.charge.ChargeInput arg) domain 0,* class ru.integrotech.su.outputparams.charge.ChargeRoute;
     public int getFactor(ru.integrotech.su.inputparams.charge.ChargeInput arg);
+    public int getPercent(int arg1, int arg2);
     public static java.lang.String[] getRegisterNames();
     public java.util.List getRoutes(ru.integrotech.su.inputparams.charge.ChargeInput arg) domain 0,* class ru.integrotech.airline.core.flight.Route;
     public static ru.integrotech.su.outputparams.charge.ChargeBuilder of(ru.integrotech.airline.register.RegisterCache arg);

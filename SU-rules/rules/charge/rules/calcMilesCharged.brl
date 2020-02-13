@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
-  <name>07_calcMilesCharged</name>
+  <name>calcMilesCharged</name>
   <uuid>68e2da3c-2d54-49af-a641-2febb796e903</uuid>
   <locale>en_US</locale>
   <definition><![CDATA[then set the miles charged of the passenger charge  to the miles bonus of the passenger charge  + the miles qualifying of the passenger charge  ;]]></definition>
