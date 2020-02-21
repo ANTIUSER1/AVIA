@@ -136,6 +136,40 @@ ru.integrotech.airline.core.flight.PassengerCharge.serviceClass#phrase.navigatio
 ru.integrotech.airline.core.flight.PassengerCharge.subTariff#phrase.navigation = {sub tariff} of {this}
 ru.integrotech.airline.core.flight.PassengerCharge.tariff#phrase.navigation = {tariff} of {this}
 
+# ru.integrotech.airline.core.flight.PassengerChargeInfo
+ru.integrotech.airline.core.flight.PassengerChargeInfo#concept.label = passenger charge info
+
+# ru.integrotech.airline.core.flight.PassengerChargeInfo.Status
+ru.integrotech.airline.core.flight.PassengerChargeInfo.Status#concept.label = status
+ru.integrotech.airline.core.flight.PassengerChargeInfo.Status.full#instance.label = full
+ru.integrotech.airline.core.flight.PassengerChargeInfo.Status.nodata#instance.label = nodata
+ru.integrotech.airline.core.flight.PassengerChargeInfo.Status.partial#instance.label = partial
+ru.integrotech.airline.core.flight.PassengerChargeInfo.additionalDistance#phrase.action = set the additional distance of {this} to {additional distance}
+ru.integrotech.airline.core.flight.PassengerChargeInfo.additionalDistance#phrase.navigation = {additional distance} of {this}
+ru.integrotech.airline.core.flight.PassengerChargeInfo.airline#phrase.action = set the airline of {this} to {airline}
+ru.integrotech.airline.core.flight.PassengerChargeInfo.airline#phrase.navigation = {airline} of {this}
+ru.integrotech.airline.core.flight.PassengerChargeInfo.bonuseDistance#phrase.action = set the bonus distance of {this} to {bonuse distance}
+ru.integrotech.airline.core.flight.PassengerChargeInfo.bonuseDistance#phrase.navigation = {bonus distance} of {this}
+ru.integrotech.airline.core.flight.PassengerChargeInfo.bookingClassCode#phrase.action = set the booking class code of {this} to {booking class code}
+ru.integrotech.airline.core.flight.PassengerChargeInfo.bookingClassCode#phrase.navigation = {booking class code} of {this}
+ru.integrotech.airline.core.flight.PassengerChargeInfo.destination#phrase.action = set the destination of {this} to {destination}
+ru.integrotech.airline.core.flight.PassengerChargeInfo.destination#phrase.navigation = {destination} of {this}
+ru.integrotech.airline.core.flight.PassengerChargeInfo.distance#phrase.action = set the distance of {this} to {distance}
+ru.integrotech.airline.core.flight.PassengerChargeInfo.distance#phrase.navigation = {distance} of {this}
+ru.integrotech.airline.core.flight.PassengerChargeInfo.distanceCoeff#phrase.action = set the distance coeff of {this} to {distance coeff}
+ru.integrotech.airline.core.flight.PassengerChargeInfo.distanceCoeff#phrase.navigation = {distance coeff} of {this}
+ru.integrotech.airline.core.flight.PassengerChargeInfo.fareCode#phrase.action = set the fare code of {this} to {fare code}
+ru.integrotech.airline.core.flight.PassengerChargeInfo.fareCode#phrase.navigation = {fare code} of {this}
+ru.integrotech.airline.core.flight.PassengerChargeInfo.flightCode#phrase.navigation = {flight code} of {this}
+ru.integrotech.airline.core.flight.PassengerChargeInfo.flightDistance#phrase.navigation = {flight distance} of {this}
+ru.integrotech.airline.core.flight.PassengerChargeInfo.minBonusMiles#phrase.navigation = {min bonus miles} of {this}
+ru.integrotech.airline.core.flight.PassengerChargeInfo.origin#phrase.action = set the origin of {this} to {origin}
+ru.integrotech.airline.core.flight.PassengerChargeInfo.origin#phrase.navigation = {origin} of {this}
+ru.integrotech.airline.core.flight.PassengerChargeInfo.tickedDesignator#phrase.action = set the ticked designator of {this} to {ticked designator}
+ru.integrotech.airline.core.flight.PassengerChargeInfo.tickedDesignator#phrase.navigation = {ticked designator} of {this}
+ru.integrotech.airline.core.flight.PassengerChargeInfo.totalBonusMiles#phrase.action = set the total bonus miles of {this} to {total bonus miles}
+ru.integrotech.airline.core.flight.PassengerChargeInfo.totalBonusMiles#phrase.navigation = {total bonus miles} of {this}
+
 # ru.integrotech.airline.core.flight.Route
 ru.integrotech.airline.core.flight.Route#concept.label = route
 ru.integrotech.airline.core.flight.Route.MAX_SEGMENTS_SIZE#phrase.navigation = the MAX SEGMENTS SIZE

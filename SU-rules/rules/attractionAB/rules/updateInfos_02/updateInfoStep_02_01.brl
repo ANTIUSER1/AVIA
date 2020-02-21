@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>updateInfoStep_02_01</name>
+  <uuid>051aba6b-9969-4f8f-852c-9a848914b88e</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if 
+	 the distance coeff of the passenger charge info is more than 1  
+	 	and the bonus distance of the passenger charge info is less than the min bonus miles of the passenger charge info 
+then 
+	 set the bonus distance of the passenger charge info to the min bonus miles of the passenger charge info ;  
+	 set the additional distance of the passenger charge info to 
+	 	attractionABBuilder .getMultiplication( { attractionABBuilder.getTierLevelFactor( attractionABInput ) ,
+	 											  the bonus distance of the passenger charge info } ) ;   ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

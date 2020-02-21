@@ -57,7 +57,11 @@ ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.ssrCodes#phrase.navi
 
 # ru.integrotech.su.outputparams.attractionAB.AttractionAbBuilder
 ru.integrotech.su.outputparams.attractionAB.AttractionAbBuilder#concept.label = attraction ab builder
+ru.integrotech.su.outputparams.attractionAB.AttractionAbBuilder.buildResult(java.util.List,ru.integrotech.su.inputparams.attractionAB.AttractionAbInput)#phrase.navigation = {this}.buildResult({0}, {1})
+ru.integrotech.su.outputparams.attractionAB.AttractionAbBuilder.buildResult(ru.integrotech.su.inputparams.attractionAB.AttractionAbInput)#phrase.navigation = {this}.buildResult({0})
+ru.integrotech.su.outputparams.attractionAB.AttractionAbBuilder.getMultiplication(double[])#phrase.navigation = {this}.getMultiplication({0})
 ru.integrotech.su.outputparams.attractionAB.AttractionAbBuilder.getRegisterNames()#phrase.navigation = the register name
+ru.integrotech.su.outputparams.attractionAB.AttractionAbBuilder.getTierLevelFactor(ru.integrotech.su.inputparams.attractionAB.AttractionAbInput)#phrase.navigation = {this}.getTierLevelFactor({0})
 
 # ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput
 ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput#concept.label = attraction ab output

@@ -73,7 +73,12 @@ package ru.integrotech.su.outputparams.attractionAB;
 public class AttractionAbBuilder
 {
     public ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput buildResult(ru.integrotech.su.inputparams.attractionAB.AttractionAbInput arg);
+    public ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput buildResult(java.util.List arg1 domain 0,* class ru.integrotech.airline.core.flight.PassengerChargeInfo, 
+        ru.integrotech.su.inputparams.attractionAB.AttractionAbInput arg2);
+    public java.util.List getInfos(ru.integrotech.su.inputparams.attractionAB.AttractionAbInput arg) domain 0,* class ru.integrotech.airline.core.flight.PassengerChargeInfo;
+    public int getMultiplication(double[] arg);
     public static java.lang.String[] getRegisterNames();
+    public double getTierLevelFactor(ru.integrotech.su.inputparams.attractionAB.AttractionAbInput arg);
     public static ru.integrotech.su.outputparams.attractionAB.AttractionAbBuilder of(ru.integrotech.airline.register.RegisterCache arg);
 }
 

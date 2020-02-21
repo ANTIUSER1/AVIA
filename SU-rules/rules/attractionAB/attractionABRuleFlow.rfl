@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>attractionABRuleFlow</name>
+  <uuid>93af701c-012b-48f9-93d7-335a6e4575f4</uuid>
+  <locale>ru_RU</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0">
+        <Actions Language="irl"><![CDATA[String[] registerNames = AttractionAbBuilder.getRegisterNames();]]>&#13;<![CDATA[
+loader = RegisterLoader.getInstance(registerNames);]]>&#13;<![CDATA[
+loader.lock();]]>&#13;<![CDATA[
+try {]]>&#13;<![CDATA[
+	RegisterCache cache = loader.registerCache;]]>&#13;<![CDATA[
+	attractionABBuilder = AttractionAbBuilder.of(cache);]]>&#13;<![CDATA[
+} catch (Exception e) {]]>&#13;<![CDATA[
+	e.printStackTrace();]]>&#13;<![CDATA[
+	loader.release();]]>&#13;<![CDATA[
+} catch (RuntimeException e) {]]>&#13;<![CDATA[
+	e.printStackTrace();]]>&#13;<![CDATA[
+	loader.release();]]>&#13;<![CDATA[
+}]]></Actions>
+      </StartTask>
+      <ActionTask Identifier="Find_infos">
+        <Actions Language="irl"><![CDATA[try {]]>&#13;<![CDATA[
+	infos = attractionABBuilder.getInfos(attractionABInput);]]>&#13;<![CDATA[
+	foreach (PassengerChargeInfo info in infos) {]]>&#13;<![CDATA[
+		if (info.status != Status.nodata) {]]>&#13;<![CDATA[
+			insert info;]]>&#13;<![CDATA[
+		}]]>&#13;<![CDATA[
+	}]]>&#13;<![CDATA[
+} catch (Exception e) {]]>&#13;<![CDATA[
+	e.printStackTrace();]]>&#13;<![CDATA[
+	loader.release();]]>&#13;<![CDATA[
+} catch (RuntimeException e) {]]>&#13;<![CDATA[
+	e.printStackTrace();]]>&#13;<![CDATA[
+	loader.release();]]>&#13;<![CDATA[
+}]]></Actions>
+      </ActionTask>
+      <ActionTask Identifier="task_1">
+        <Actions Language="irl"><![CDATA[try {]]>&#13;<![CDATA[
+	attractionABOutput = attractionABBuilder.buildResult(infos, attractionABInput);]]>&#13;<![CDATA[
+} catch (Exception e) {]]>&#13;<![CDATA[
+	e.printStackTrace();]]>&#13;<![CDATA[
+	loader.release();]]>&#13;<![CDATA[
+} catch (RuntimeException e) {]]>&#13;<![CDATA[
+	e.printStackTrace();]]>&#13;<![CDATA[
+	loader.release();]]>&#13;<![CDATA[
+}]]></Actions>
+      </ActionTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="task_3" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="60662759-4cac-4dbf-9ecc-471eba68249d"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="task_4" Ordering="Default">
+        <RuleList>
+          <Package Name="attractionAB.rules.updateInfos_01"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="task_5" Ordering="Default">
+        <RuleList>
+          <Package Name="attractionAB.rules.updateInfos_02"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="task_6" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="d9a0f499-d738-400c-a68c-f334f3f99551"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_2">
+        <Actions Language="irl"><![CDATA[loader.release();]]></Actions>
+      </StopTask>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_2" Task="task_2"/>
+      <TaskNode Identifier="node_3" Task="Find_infos"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_4" Task="task_3"/>
+      <TaskNode Identifier="node_5" Task="task_4"/>
+      <TaskNode Identifier="node_6" Task="task_5"/>
+      <TaskNode Identifier="node_7" Task="task_6"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_2" Source="node_0" Target="node_3"/>
+      <Transition Identifier="transition_0" Source="node_1" Target="node_2"/>
+      <Transition Identifier="transition_1" Source="node_3" Target="node_4"/>
+      <Transition Identifier="transition_3" Source="node_4" Target="node_5"/>
+      <Transition Identifier="transition_4" Source="node_5" Target="node_6"/>
+      <Transition Identifier="transition_5" Source="node_6" Target="node_7"/>
+      <Transition Identifier="transition_6" Source="node_7" Target="node_1"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="ru_RU">
+      <Data Name="node_2#height">23.0</Data>
+      <Data Name="node_4#width">102.0</Data>
+      <Data Name="node_3#height">53.402344</Data>
+      <Data Name="node_1#height">53.402344</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_4#height">68.103516</Data>
+      <Data Name="node_7#y">-91.0</Data>
+      <Data Name="node_5#name">node_1</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_0#documentation">import </Data>
+      <Data Name="node_5#height">53.402344</Data>
+      <Data Name="node_6#height">53.402344</Data>
+      <Data Name="node_7#height">68.103516</Data>
+      <Data Name="node_1#label">Build result</Data>
+      <Data Name="node_6#label">Update info 2</Data>
+      <Data Name="node_7#width">102.0</Data>
+      <Data Name="node_3#label">Find infos</Data>
+      <Data Name="node_2#width">23.0</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_3#y">-198.0</Data>
+      <Data Name="node_4#x">203.0</Data>
+      <Data Name="node_4#y">-91.0</Data>
+      <Data Name="node_5#x">51.0</Data>
+      <Data Name="node_5#y">-92.0</Data>
+      <Data Name="node_6#x">-128.0</Data>
+      <Data Name="node_5#width">102.0</Data>
+      <Data Name="node_6#y">-92.0</Data>
+      <Data Name="node_7#x">-289.0</Data>
+      <Data Name="node_0#x">-39.0</Data>
+      <Data Name="node_0#y">-278.0</Data>
+      <Data Name="node_1#x">-38.3746337890625</Data>
+      <Data Name="node_2#x">-39.0</Data>
+      <Data Name="node_1#y">2.588165283203125</Data>
+      <Data Name="node_2#y">101.0</Data>
+      <Data Name="node_3#x">-39.0</Data>
+      <Data Name="node_7#label">Set total bonus miles</Data>
+      <Data Name="node_1#name">node_3</Data>
+      <Data Name="node_5#label">Update info 1</Data>
+      <Data Name="node_3#width">102.0</Data>
+      <Data Name="node_4#name">node_1</Data>
+      <Data Name="node_7#name">node_1</Data>
+      <Data Name="node_1#width">102.0</Data>
+      <Data Name="node_6#name">node_1</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_4#label">Get bonus distanse</Data>
+      <Data Name="node_6#width">102.0</Data>
+      <Data Name="node_3#name">node_3</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties>
+    <imports><![CDATA[import ru.integrotech.airline.register.RegisterLoader;
+import ru.integrotech.airline.register.RegisterCache;
+import ru.integrotech.su.outputparams.attractionAB.AttractionAbBuilder;
+import ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput;
+use attractionABBuilder;
+use attractionABInput;
+use attractionABOutput;
+use loader;
+use infos;
+import ru.integrotech.airline.core.PassengerFlightInfo;
+import ru.integrotech.airline.core.flight.PassengerChargeInfo;
+import ru.integrotech.airline.core.flight.PassengerChargeInfo.Status;
+]]></imports>
+  </Properties>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>
