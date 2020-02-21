@@ -217,6 +217,38 @@ public class PassengerCharge
     public string toString();
 }
 
+public class PassengerChargeInfo
+        property automaticVariable "true"
+{
+
+    static public final class Status
+            extends java.lang.Enum
+    {
+        domain {static full, static partial, static nodata}
+        public static final readonly ru.integrotech.airline.core.flight.PassengerChargeInfo.Status full;
+        public static final readonly ru.integrotech.airline.core.flight.PassengerChargeInfo.Status nodata;
+        public static final readonly ru.integrotech.airline.core.flight.PassengerChargeInfo.Status partial;
+        public static ru.integrotech.airline.core.flight.PassengerChargeInfo.Status valueOf(string arg);
+        public static ru.integrotech.airline.core.flight.PassengerChargeInfo.Status[] values();
+    }
+    public int additionalDistance;
+    public ru.integrotech.airline.core.airline.Airline airline;
+    public int bonuseDistance;
+    public string bookingClassCode;
+    public ru.integrotech.airline.core.location.Airport destination;
+    public int distance;
+    public double distanceCoeff;
+    public string fareCode;
+    public readonly string flightCode;
+    public readonly int flightDistance;
+    public readonly int minBonusMiles;
+    public ru.integrotech.airline.core.location.Airport origin;
+    public ru.integrotech.airline.core.flight.PassengerChargeInfo.Status status;
+    public string tickedDesignator;
+    public int totalBonusMiles;
+    public static ru.integrotech.airline.core.flight.PassengerChargeInfo of(ru.integrotech.airline.core.airline.Airline arg1, ru.integrotech.airline.core.location.Airport arg2, ru.integrotech.airline.core.location.Airport arg3, string arg4, string arg5, int arg6, string arg7, ru.integrotech.airline.core.flight.PassengerChargeInfo.Status arg8);
+}
+
 public class Route
         extends java.lang.Comparable
         property automaticVariable "true"

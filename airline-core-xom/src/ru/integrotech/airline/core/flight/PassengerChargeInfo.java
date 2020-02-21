@@ -31,6 +31,10 @@ public class PassengerChargeInfo {
 	private String bookingClassCode;
 
 	private int distance;
+	
+	private int bonuseDistance;
+	
+	private int additionalDistance;
 
 	private String tickedDesignator;
 
@@ -131,6 +135,24 @@ public class PassengerChargeInfo {
 	public int getFlightDistance() {
 		return this.origin.getOutcomeFlight(this.destination, this.airline).getDistance();
 	}
+	
+	
+
+	public int getBonuseDistance() {
+		return bonuseDistance;
+	}
+
+	public void setBonuseDistance(int bonuseDistance) {
+		this.bonuseDistance = bonuseDistance;
+	}
+
+	public int getAdditionalDistance() {
+		return additionalDistance;
+	}
+
+	public void setAdditionalDistance(int additionalDistance) {
+		this.additionalDistance = additionalDistance;
+	}
 
 	public int getMinBonusMiles() {
 		int result = 0;
@@ -150,7 +172,25 @@ public class PassengerChargeInfo {
 		return !this.origin.getCity().getCountry().equals(this.destination.getCity().getCountry());
 	}
 
-    public enum Status {full, partial, nodata}
+	@Override
+	public String toString() {
+		return "PassengerChargeInfo{" +
+				"airline=" + airline +
+				", origin=" + origin +
+				", destination=" + destination +
+				", fareCode='" + fareCode + '\'' +
+				", bookingClassCode='" + bookingClassCode + '\'' +
+				", distance=" + distance +
+				", bonuseDistance=" + bonuseDistance +
+				", additionalDistance=" + additionalDistance +
+				", tickedDesignator='" + tickedDesignator + '\'' +
+				", distanceCoeff=" + distanceCoeff +
+				", totalBonusMiles=" + totalBonusMiles +
+				", status=" + status +
+				'}';
+	}
+
+	public enum Status {full, partial, nodata}
 
 
 }

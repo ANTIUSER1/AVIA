@@ -6,4 +6,12 @@ public class NumberMethods {
 		return (int) Math.round((double) value * percent / 100);
 	}
 
+	public static int getMultiplication(double...args) {
+	    double result = 1;
+	    for (double arg : args) {
+	        result = result * arg;
+        }
+        return (int) result;
+    }
+
 }

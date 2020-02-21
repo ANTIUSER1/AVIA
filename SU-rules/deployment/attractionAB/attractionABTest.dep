@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="aflBonus" ruleAppVersion="3.0" managingXom="true">
+<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="aflBonusTEST" ruleAppVersion="3.0" managingXom="true">
   <name>attractionABTest</name>
   <uuid>544bf9a6-20c4-4a8c-a22f-d9af45cc95c5</uuid>
   <targets label="Local Server"/>
   <targets label="Test Server"/>
-  <operations operationName="attractionABJava.dop">
-    <operation href="attractionABJava.dop#1b831f76-a9f8-4645-8caf-fd713b7d871f"/>
+  <operations operationName="attractionABRule">
+    <operation href="attractionABRule.dop#755609de-270f-4bf6-a7e5-4230c5379553"/>
     <properties key="ruleset.version">
       <value><![CDATA[1.0]]></value>
     </properties>
