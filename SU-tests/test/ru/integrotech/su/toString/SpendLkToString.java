@@ -35,15 +35,15 @@ public class SpendLkToString {
     public void printSpendLk() {
         SpendInput spendInput = SpendInput.of(
                 "airporT",// from
-                "LED", // from type
+                "SVO", // from type
                 "aiRport", // to
-                "NUE", // to type
+                "LED", // to type
                 -1, // miles min
                 30000, // miles max
                 null, // class listOf service name
                 "alL", // award type
                 false, // afl only
-                true // is round trip
+                null // is round trip
         );
         String airlineCode = null;
         if (airlineCode != null) {

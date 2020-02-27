@@ -3,7 +3,7 @@
   <name>ifIsRound</name>
   <uuid>a2698f6d-cdca-4743-b607-8623edc3a311</uuid>
   <locale>en_US</locale>
-  <definition><![CDATA[if  inputParamsCharge is round trip 
+  <definition><![CDATA[if  chargeRequest is round trip 
 
 then
 set the miles qualifying of the passenger charge  to the miles qualifying of the passenger charge  * 2;

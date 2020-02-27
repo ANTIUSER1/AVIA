@@ -178,7 +178,7 @@ public class SpendBuilder {
         int milesMin = spendInput.getMilesInterval().getMilesMin();
         int milesMax = spendInput.getMilesInterval().getMilesMax();
         boolean aflOnly = spendInput.getIsOnlyAfl();
-        boolean isRoundTrip = spendInput.getIsRoundTrip();
+        Boolean isRoundTrip = spendInput.getIsRoundTrip();
         ServiceClass.SERVICE_CLASS_TYPE serviceClassType = this.getServiceClassType(spendInput);
         String award = spendInput.getAwardType();
 

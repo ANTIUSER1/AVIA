@@ -18,7 +18,7 @@ public class SpendInput {
                                 String classOfServiceName,
                                 String awardType,
                                 boolean isOnlyAfl,
-                                boolean isRoundTrip) {
+                                Boolean isRoundTrip) {
         SpendInput spendInput = new SpendInput();
         spendInput.setOrigin(LocationInput.of(originType, originCode));
         spendInput.setDestination(LocationInput.of(destType, destCode));
@@ -40,7 +40,7 @@ public class SpendInput {
 
     private boolean isOnlyAfl;
 
-    private boolean isRoundTrip;
+    private Boolean isRoundTrip;
 
     private ClassOfService classOfService;
 
@@ -49,14 +49,14 @@ public class SpendInput {
     private String lang;
 
     private SpendInput() {
-    	this.initDafaultParameters();
+    	this.initDefaultParameters();
     }
 
     public boolean getIsOnlyAfl() {
         return isOnlyAfl;
     }
 
-    public boolean getIsRoundTrip() {
+    public Boolean getIsRoundTrip() {
         return isRoundTrip;
     }
 
@@ -92,7 +92,7 @@ public class SpendInput {
         this.isOnlyAfl = isOnlyAfl;
     }
 
-    public void setIsRoundTrip(boolean isRoundTrip) {
+    public void setIsRoundTrip(Boolean isRoundTrip) {
         this.isRoundTrip = isRoundTrip;
     }
 
@@ -121,14 +121,14 @@ public class SpendInput {
         this.lang = lang;
     }
     
-    private void initDafaultParameters() {
+    private void initDefaultParameters() {
     	
     	if (this.destination == null) {
     		this.destination = LocationInput.of(null, null);
      	}
     	
     	if (this.milesInterval == null) {
-    		this.milesInterval = MilesInterval.of(10000, 250000);
+    		this.milesInterval = MilesInterval.of(0, 250000);
      	}
     	
     	if (this.classOfService == null) {

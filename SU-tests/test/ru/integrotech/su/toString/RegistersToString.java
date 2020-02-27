@@ -34,8 +34,7 @@ public class RegistersToString {
                     "award",
                     "wrongRoute",
                     "tierLevel",
-                    "milesRule",
-                    "ticketDesignators"};
+                    "mileAccrualRule"};
 
     private CommonTest common;
 

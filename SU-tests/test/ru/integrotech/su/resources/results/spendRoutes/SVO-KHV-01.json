@@ -35,12 +35,15 @@
     "mileCosts": [
       {
         "airportFrom": {
-          "airportCode": "SVO"
+          "airportCode": "SVO",
+          "zoneCode": "R1"
         },
         "airportTo": {
-          "airportCode": "KHV"
+          "airportCode": "KHV",
+          "zoneCode": "R4"
         },
-        "requiredAwards": [
+        "distance": 3820,
+        "requiredAward": [
           {
             "awardType": "OW",
             "classOfService1": {
@@ -198,12 +201,15 @@
     "mileCosts": [
       {
         "airportFrom": {
-          "airportCode": "SVO"
+          "airportCode": "SVO",
+          "zoneCode": "R1"
         },
         "airportTo": {
-          "airportCode": "KHV"
+          "airportCode": "KHV",
+          "zoneCode": "R4"
         },
-        "requiredAwards": [
+        "distance": 4970,
+        "requiredAward": [
           {
             "awardType": "OW",
             "classOfService1": {
@@ -291,12 +297,15 @@
     "mileCosts": [
       {
         "airportFrom": {
-          "airportCode": "SVO"
+          "airportCode": "SVO",
+          "zoneCode": "R1"
         },
         "airportTo": {
-          "airportCode": "KHV"
+          "airportCode": "KHV",
+          "zoneCode": "R4"
         },
-        "requiredAwards": [
+        "distance": 3913,
+        "requiredAward": [
           {
             "awardType": "OW",
             "classOfService1": {
@@ -384,12 +393,15 @@
     "mileCosts": [
       {
         "airportFrom": {
-          "airportCode": "SVO"
+          "airportCode": "SVO",
+          "zoneCode": "R1"
         },
         "airportTo": {
-          "airportCode": "KHV"
+          "airportCode": "KHV",
+          "zoneCode": "R4"
         },
-        "requiredAwards": [
+        "distance": 4684,
+        "requiredAward": [
           {
             "awardType": "OW",
             "classOfService1": {
@@ -477,12 +489,15 @@
     "mileCosts": [
       {
         "airportFrom": {
-          "airportCode": "SVO"
+          "airportCode": "SVO",
+          "zoneCode": "R1"
         },
         "airportTo": {
-          "airportCode": "KHV"
+          "airportCode": "KHV",
+          "zoneCode": "R4"
         },
-        "requiredAwards": [
+        "distance": 4970,
+        "requiredAward": [
           {
             "awardType": "OW",
             "classOfService1": {

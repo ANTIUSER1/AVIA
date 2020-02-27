@@ -35,12 +35,15 @@
     "mileCosts": [
       {
         "airportFrom": {
-          "airportCode": "SVO"
+          "airportCode": "SVO",
+          "zoneCode": "R1"
         },
         "airportTo": {
-          "airportCode": "LED"
+          "airportCode": "LED",
+          "zoneCode": "R1"
         },
-        "requiredAwards": [
+        "distance": 396,
+        "requiredAward": [
           {
             "awardType": "OW",
             "classOfService1": {

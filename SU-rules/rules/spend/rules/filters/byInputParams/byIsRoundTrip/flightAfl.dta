@@ -9,13 +9,15 @@
     <Preconditions>
       <Text><![CDATA[definitions ]]>&#13;<![CDATA[
 	set 'flight' to a flight in the flights of the route ;  ]]>&#13;<![CDATA[
-	set 'bonus' to a bonus in the afl bonuses of flight ; ]]></Text>
+	set 'bonus' to a bonus in the afl bonuses of flight ; ]]>&#13;<![CDATA[
+if 
+	 inputParams is round trip is not null ]]></Text>
     </Preconditions>
     <Structure>
       <ConditionDefinitions>
         <ConditionDefinition Id="C0">
           <ExpressionDefinition>
-            <Text><![CDATA[inputParams is round trip is <a boolean>]]></Text>
+            <Text><![CDATA[inputParams is round trip is <an object>]]></Text>
           </ExpressionDefinition>
         </ConditionDefinition>
         <ConditionDefinition Id="C1">
@@ -104,11 +106,11 @@
   <Resources DefaultLocale="en_US">
     <ResourceSet Locale="en_US">
       <Data Name="Definitions(A0)#HeaderText"><![CDATA[Remove bonus]]></Data>
-      <Data Name="Definitions(A0)#Width"><![CDATA[461]]></Data>
+      <Data Name="Definitions(A0)#Width"><![CDATA[460]]></Data>
       <Data Name="Definitions(C0)#HeaderText"><![CDATA[Input params is round trip]]></Data>
-      <Data Name="Definitions(C0)#Width"><![CDATA[461]]></Data>
+      <Data Name="Definitions(C0)#Width"><![CDATA[460]]></Data>
       <Data Name="Definitions(C1)#HeaderText"><![CDATA[Bonus type]]></Data>
-      <Data Name="Definitions(C1)#Width"><![CDATA[462]]></Data>
+      <Data Name="Definitions(C1)#Width"><![CDATA[460]]></Data>
     </ResourceSet>
   </Resources>
 </DT></definition>

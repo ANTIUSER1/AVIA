@@ -49,7 +49,7 @@ public class SpendToString {
                                     "Economy", // class listOf service name
                                     "All", // award type
                                     false, // afl only
-                                    false // is round trip
+                                    null // is round trip
                                     );
         String airlineCode = "su";
         if (airlineCode != null) {

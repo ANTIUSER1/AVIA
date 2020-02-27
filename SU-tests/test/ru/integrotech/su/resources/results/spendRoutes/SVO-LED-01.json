@@ -35,12 +35,15 @@
     "mileCosts": [
       {
         "airportFrom": {
-          "airportCode": "SVO"
+          "airportCode": "SVO",
+          "zoneCode": "R1"
         },
         "airportTo": {
-          "airportCode": "LED"
+          "airportCode": "LED",
+          "zoneCode": "R1"
         },
-        "requiredAwards": [
+        "distance": 396,
+        "requiredAward": [
           {
             "awardType": "OW",
             "classOfService1": {
@@ -140,12 +143,15 @@
     "mileCosts": [
       {
         "airportFrom": {
-          "airportCode": "SVO"
+          "airportCode": "SVO",
+          "zoneCode": "R1"
         },
         "airportTo": {
-          "airportCode": "LED"
+          "airportCode": "LED",
+          "zoneCode": "R1"
         },
-        "requiredAwards": [
+        "distance": 2054,
+        "requiredAward": [
           {
             "awardType": "OW",
             "classOfService1": {
@@ -221,12 +227,15 @@
     "mileCosts": [
       {
         "airportFrom": {
-          "airportCode": "SVO"
+          "airportCode": "SVO",
+          "zoneCode": "R1"
         },
         "airportTo": {
-          "airportCode": "LED"
+          "airportCode": "LED",
+          "zoneCode": "R1"
         },
-        "requiredAwards": [
+        "distance": 2942,
+        "requiredAward": [
           {
             "awardType": "OW",
             "classOfService1": {
@@ -314,12 +323,15 @@
     "mileCosts": [
       {
         "airportFrom": {
-          "airportCode": "SVO"
+          "airportCode": "SVO",
+          "zoneCode": "R1"
         },
         "airportTo": {
-          "airportCode": "LED"
+          "airportCode": "LED",
+          "zoneCode": "R1"
         },
-        "requiredAwards": [
+        "distance": 4276,
+        "requiredAward": [
           {
             "awardType": "OW",
             "classOfService1": {
@@ -407,12 +419,15 @@
     "mileCosts": [
       {
         "airportFrom": {
-          "airportCode": "SVO"
+          "airportCode": "SVO",
+          "zoneCode": "R1"
         },
         "airportTo": {
-          "airportCode": "LED"
+          "airportCode": "LED",
+          "zoneCode": "R1"
         },
-        "requiredAwards": [
+        "distance": 1953,
+        "requiredAward": [
           {
             "awardType": "OW",
             "classOfService1": {
@@ -500,12 +515,15 @@
     "mileCosts": [
       {
         "airportFrom": {
-          "airportCode": "SVO"
+          "airportCode": "SVO",
+          "zoneCode": "R1"
         },
         "airportTo": {
-          "airportCode": "LED"
+          "airportCode": "LED",
+          "zoneCode": "R1"
         },
-        "requiredAwards": [
+        "distance": 1538,
+        "requiredAward": [
           {
             "awardType": "OW",
             "classOfService1": {
@@ -581,12 +599,15 @@
     "mileCosts": [
       {
         "airportFrom": {
-          "airportCode": "SVO"
+          "airportCode": "SVO",
+          "zoneCode": "R1"
         },
         "airportTo": {
-          "airportCode": "LED"
+          "airportCode": "LED",
+          "zoneCode": "R1"
         },
-        "requiredAwards": [
+        "distance": 2008,
+        "requiredAward": [
           {
             "awardType": "OW",
             "classOfService1": {
@@ -662,12 +683,15 @@
     "mileCosts": [
       {
         "airportFrom": {
-          "airportCode": "SVO"
+          "airportCode": "SVO",
+          "zoneCode": "R1"
         },
         "airportTo": {
-          "airportCode": "LED"
+          "airportCode": "LED",
+          "zoneCode": "R1"
         },
-        "requiredAwards": [
+        "distance": 3565,
+        "requiredAward": [
           {
             "awardType": "OW",
             "classOfService1": {
@@ -755,12 +779,15 @@
     "mileCosts": [
       {
         "airportFrom": {
-          "airportCode": "SVO"
+          "airportCode": "SVO",
+          "zoneCode": "R1"
         },
         "airportTo": {
-          "airportCode": "LED"
+          "airportCode": "LED",
+          "zoneCode": "R1"
         },
-        "requiredAwards": [
+        "distance": 1735,
+        "requiredAward": [
           {
             "awardType": "OW",
             "classOfService1": {
