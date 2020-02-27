@@ -45,11 +45,11 @@ public class SpendInput
     public ru.integrotech.su.common.spend.ClassOfService classOfService;
     public ru.integrotech.su.inputparams.spend.LocationInput destination;
     public boolean isOnlyAfl;
-    public boolean isRoundTrip;
+    public object isRoundTrip;
     public string lang;
     public ru.integrotech.su.inputparams.spend.MilesInterval milesInterval;
     public ru.integrotech.su.inputparams.spend.LocationInput origin;
-    public static ru.integrotech.su.inputparams.spend.SpendInput of(string arg1, string arg2, string arg3, string arg4, int arg5, int arg6, string arg7, string arg8, boolean arg9, boolean arg10);
+    public static ru.integrotech.su.inputparams.spend.SpendInput of(string arg1, string arg2, string arg3, string arg4, int arg5, int arg6, string arg7, string arg8, boolean arg9, java.lang.Boolean arg10);
     public static ru.integrotech.su.inputparams.spend.SpendInput of();
 }
 

@@ -11,7 +11,7 @@ public class NumberMethods {
 	    for (double arg : args) {
 	        result = result * arg;
         }
-        return (int) result;
+        return (int) Math.round(result);
     }
 
 }

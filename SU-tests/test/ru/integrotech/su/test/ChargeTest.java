@@ -111,7 +111,6 @@ public class ChargeTest{
         return false;
     }
 
-    /*
     ////////////////////////////////////////////
     //use this method for visualization actual//
     ////////////////////////////////////////////
@@ -119,11 +118,11 @@ public class ChargeTest{
     public void PRINT_ACTUAL() {
         ChargeInput chargeInput = ChargeInput.of(
                 "airport", // from type
-                "SVO", // from
-                null, // to type
-                null, // to
-                "SU", // airline
-                "basic", // tierLevelCode
+                "LED", // from
+                "airport", // to type
+                "UFA", // to
+                null, // airline
+                "gold", // tierLevelCode
                 false //isRound
                 );
         List<ChargeRoute> actualCharge = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
@@ -145,7 +144,6 @@ public class ChargeTest{
         String jsonResult = gson.toJson(expectedCharge);
         System.out.println(jsonResult);
     }
-    */
 
     @Test
     public void SVO_LED_00() {
@@ -177,6 +175,22 @@ public class ChargeTest{
         List<ChargeRoute> actualCharge = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
         List<ChargeRoute> expectedCharge = this.getExpected("LED-UFA-00.json");
         this.common.testIsPresent(actualCharge, expectedCharge.get(0));
+    }
+
+    @Test
+    public void LED__UFA_01() {
+        ChargeInput chargeInput = ChargeInput.of(
+                "airport", // from type
+                "LED", // from
+                "airport", // to type
+                "UFA", // to
+                null, // airline
+                "gold", // tierLevelCode
+                false //isRound
+        );
+        List<ChargeRoute> actualCharge = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
+        List<ChargeRoute> expectedCharge = this.getExpected("LED-UFA-01.json");
+        this.common.testIsEquals(actualCharge, expectedCharge);
     }
 
     // http://support.integrotechnologies.ru/issues/20896

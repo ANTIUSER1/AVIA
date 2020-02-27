@@ -17,11 +17,11 @@
     },
     "destination": {
       "airport": {
-        "airportCode": "ROV"
+        "airportCode": "AER"
       },
       "city": {
-        "cityCode": "ROV",
-        "weight": 30
+        "cityCode": "AER",
+        "weight": 5
       },
       "country": {
         "countryCode": "RU"
@@ -39,10 +39,10 @@
           "zoneCode": "R1"
         },
         "airportTo": {
-          "airportCode": "ROV",
+          "airportCode": "AER",
           "zoneCode": "R1"
         },
-        "distance": 588,
+        "distance": 851,
         "requiredAward": [
           {
             "awardType": "OW",
@@ -61,6 +61,38 @@
             },
             "classOfService2": {},
             "value": 10000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "RT",
+            "classOfService1": {
+              "classOfServiceName": "business"
+            },
+            "classOfService2": {},
+            "value": 30000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "RT",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {},
+            "value": 20000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "U",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {
+              "classOfServiceName": "business"
+            },
+            "value": 20000,
             "isLightAward": false,
             "fitsMilesInterval": true
           },
@@ -110,11 +142,11 @@
     },
     "destination": {
       "airport": {
-        "airportCode": "ROV"
+        "airportCode": "AER"
       },
       "city": {
-        "cityCode": "ROV",
-        "weight": 30
+        "cityCode": "AER",
+        "weight": 5
       },
       "country": {
         "countryCode": "RU"
@@ -147,10 +179,10 @@
           "zoneCode": "R1"
         },
         "airportTo": {
-          "airportCode": "ROV",
+          "airportCode": "AER",
           "zoneCode": "R1"
         },
-        "distance": 1346,
+        "distance": 1599,
         "requiredAward": [
           {
             "awardType": "OW",
@@ -171,184 +203,36 @@
             "value": 10000,
             "isLightAward": false,
             "fitsMilesInterval": true
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "origin": {
-      "airport": {
-        "airportCode": "SVO"
-      },
-      "city": {
-        "cityCode": "MOW",
-        "weight": 1
-      },
-      "country": {
-        "countryCode": "RU"
-      },
-      "region": {
-        "regionCode": "CIS"
-      }
-    },
-    "destination": {
-      "airport": {
-        "airportCode": "ROV"
-      },
-      "city": {
-        "cityCode": "ROV",
-        "weight": 30
-      },
-      "country": {
-        "countryCode": "RU"
-      },
-      "region": {
-        "regionCode": "CIS"
-      }
-    },
-    "via": {
-      "airport": {
-        "airportCode": "SVX"
-      },
-      "city": {
-        "cityCode": "SVX",
-        "weight": 7
-      },
-      "country": {
-        "countryCode": "RU"
-      },
-      "region": {
-        "regionCode": "CIS"
-      }
-    },
-    "isAfl": true,
-    "single": true,
-    "mileCosts": [
-      {
-        "airportFrom": {
-          "airportCode": "SVO",
-          "zoneCode": "R1"
-        },
-        "airportTo": {
-          "airportCode": "ROV",
-          "zoneCode": "R1"
-        },
-        "distance": 1990,
-        "requiredAward": [
+          },
           {
-            "awardType": "OW",
+            "awardType": "RT",
             "classOfService1": {
               "classOfServiceName": "business"
             },
             "classOfService2": {},
-            "value": 15000,
+            "value": 30000,
             "isLightAward": false,
             "fitsMilesInterval": true
           },
           {
-            "awardType": "OW",
+            "awardType": "RT",
             "classOfService1": {
               "classOfServiceName": "economy"
             },
             "classOfService2": {},
-            "value": 10000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "origin": {
-      "airport": {
-        "airportCode": "SVO"
-      },
-      "city": {
-        "cityCode": "MOW",
-        "weight": 1
-      },
-      "country": {
-        "countryCode": "RU"
-      },
-      "region": {
-        "regionCode": "CIS"
-      }
-    },
-    "destination": {
-      "airport": {
-        "airportCode": "ROV"
-      },
-      "city": {
-        "cityCode": "ROV",
-        "weight": 30
-      },
-      "country": {
-        "countryCode": "RU"
-      },
-      "region": {
-        "regionCode": "CIS"
-      }
-    },
-    "via": {
-      "airport": {
-        "airportCode": "TLV"
-      },
-      "city": {
-        "cityCode": "TLV",
-        "weight": 25
-      },
-      "country": {
-        "countryCode": "IL"
-      },
-      "region": {
-        "regionCode": "ME"
-      }
-    },
-    "isAfl": true,
-    "single": false,
-    "mileCosts": [
-      {
-        "airportFrom": {
-          "airportCode": "SVO",
-          "zoneCode": "R1"
-        },
-        "airportTo": {
-          "airportCode": "ROV",
-          "zoneCode": "R1"
-        },
-        "distance": 2718,
-        "requiredAward": [
-          {
-            "awardType": "OW",
-            "classOfService1": {
-              "classOfServiceName": "business"
-            },
-            "classOfService2": {},
-            "value": 60000,
+            "value": 20000,
             "isLightAward": false,
             "fitsMilesInterval": true
           },
           {
-            "awardType": "OW",
-            "classOfService1": {
-              "classOfServiceName": "economy"
-            },
-            "classOfService2": {},
-            "value": 40000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          },
-          {
-            "awardType": "UO",
+            "awardType": "U",
             "classOfService1": {
               "classOfServiceName": "economy"
             },
             "classOfService2": {
               "classOfServiceName": "business"
             },
-            "value": 40000,
+            "value": 20000,
             "isLightAward": false,
             "fitsMilesInterval": true
           }

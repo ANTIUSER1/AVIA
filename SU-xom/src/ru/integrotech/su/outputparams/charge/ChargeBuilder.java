@@ -120,25 +120,26 @@ public class ChargeBuilder {
 
     private void buildPassengerCharges(List<Route> routes, ChargeInput chargeInput, boolean initFields) {
 
-        for (Route route : routes) {
-            this.buildPassengerCharges(route, chargeInput, initFields);
+        String airlineCode = this.getAirlineCode(chargeInput);
+        Airline airline = this.cache.getAirline(airlineCode);
+        if (airline != null) {
+            for (Route route : routes) {
+                this.buildPassengerCharges(route, chargeInput, airline, initFields);
+            }
+        } else {
+            for (Route route : routes) {
+                for (Airline carrier : route.getAirlines()) {
+                    this.buildPassengerCharges(route, chargeInput, carrier, initFields);
+                }
+            }
         }
     }
 
-    private void buildPassengerCharges(Route route, ChargeInput chargeInput, boolean initFields) {
+    private void buildPassengerCharges(Route route, ChargeInput chargeInput, Airline airline, boolean initFields) {
 
-        String airlineCode = this.getAirlineCode(chargeInput);
-        Airline airline = this.cache.getAirline(airlineCode);
         List<ServiceClass> allowedClasses = this.getServiceClasses(route, airline);
-
-        if (airline != null) {
-            for (Flight flight : route.getFlights(airline)) {
-                this.buildPassengerCharges(flight, allowedClasses, chargeInput, airline, initFields);
-            }
-        } else {
-            for (Flight flight : route.getFlights()) {
-                this.buildPassengerCharges(flight, allowedClasses, chargeInput, initFields);
-            }
+        for (Flight flight : route.getFlights(airline)) {
+             this.buildPassengerCharges(flight, allowedClasses, chargeInput, airline, initFields);
         }
     }
 

@@ -17,7 +17,7 @@ public class BonusFilters {
                                       ServiceClass.SERVICE_CLASS_TYPE serviceClassType,
                                       Airport airport,
                                       String award,
-                                      boolean isRoundTrip,
+                                      Boolean isRoundTrip,
                                       boolean routeIsDirect) {
 
         if (award.equalsIgnoreCase(AWARD_TYPE.TICKET.name())) {
@@ -32,13 +32,15 @@ public class BonusFilters {
         bonuses.removeIf(ar -> (ar.getType().equals(Bonus.BONUS_TYPE.UC) && !routeIsDirect)
                 || (ar.getType().equals(Bonus.BONUS_TYPE.UC) && !airport.isUcAvailable()));
 
-        if (isRoundTrip) {
-            bonuses.removeIf(ar -> ar.getType().equals(Bonus.BONUS_TYPE.OW)
-                            || ar.getType().equals(Bonus.BONUS_TYPE.UO)
-                            || ar.getType().equals(Bonus.BONUS_TYPE.UC));
-        } else {
-            bonuses.removeIf(ar -> ar.getType().equals(Bonus.BONUS_TYPE.RT)
-                            || ar.getType().equals(Bonus.BONUS_TYPE.U));
+        if (isRoundTrip != null) {
+            if (isRoundTrip) {
+                bonuses.removeIf(ar -> ar.getType().equals(Bonus.BONUS_TYPE.OW)
+                        || ar.getType().equals(Bonus.BONUS_TYPE.UO)
+                        || ar.getType().equals(Bonus.BONUS_TYPE.UC));
+            } else {
+                bonuses.removeIf(ar -> ar.getType().equals(Bonus.BONUS_TYPE.RT)
+                        || ar.getType().equals(Bonus.BONUS_TYPE.U));
+            }
         }
 
         if (serviceClassType != null) {

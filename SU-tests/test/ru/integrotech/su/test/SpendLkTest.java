@@ -45,14 +45,14 @@ public class SpendLkTest {
         SpendInput spendInput = SpendInput.of(
                 "airport", // from type
                 "SVO",// from
-                null, // to type
-                null, // to
+                "airport", // to type
+                "VVO", // to
                 -1, // miles min
-                100000, // miles max
+                50000, // miles max
                 null, // class listOf service name
                 "all", // award type
                 true, // afl only
-                false // is round trip
+                null // is round trip
         );
         List<SpendLkRoute> actualSpendLk = this.common.getSpendLkBuilder().getSpendLkRoutes(spendInput);
         this.common.sort(actualSpendLk);
@@ -247,6 +247,25 @@ public class SpendLkTest {
         );
         List<SpendLkRoute> actualSpendLk = this.common.getSpendLkBuilder().getSpendLkRoutes(spendInput);
         List<SpendLkRoute> expectedSpendLk = this.getExpected("SVO-VVO-01.json");
+        this.common.testIsEquals(expectedSpendLk, actualSpendLk);
+    }
+
+    @Test
+    public void SVO_VVO_02() {
+        SpendInput spendInput = SpendInput.of(
+                "airport", // from type
+                "SVO",// from
+                "airport", // to type
+                "VVO", // to
+                -1, // miles min
+                50000, // miles max
+                null, // class listOf service name
+                "all", // award type
+                true, // afl only
+                null // is round trip
+        );
+        List<SpendLkRoute> actualSpendLk = this.common.getSpendLkBuilder().getSpendLkRoutes(spendInput);
+        List<SpendLkRoute> expectedSpendLk = this.getExpected("SVO-VVO-02.json");
         this.common.testIsEquals(expectedSpendLk, actualSpendLk);
     }
 

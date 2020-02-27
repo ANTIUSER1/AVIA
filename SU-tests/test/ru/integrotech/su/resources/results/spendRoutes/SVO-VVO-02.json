@@ -35,12 +35,15 @@
     "mileCosts": [
       {
         "airportFrom": {
-          "airportCode": "SVO"
+          "airportCode": "SVO",
+          "zoneCode": "R1"
         },
         "airportTo": {
-          "airportCode": "VVO"
+          "airportCode": "VVO",
+          "zoneCode": "R4"
         },
-        "requiredAwards": [
+        "distance": 3989,
+        "requiredAward": [
           {
             "awardType": "OW",
             "classOfService1": {
@@ -198,12 +201,15 @@
     "mileCosts": [
       {
         "airportFrom": {
-          "airportCode": "SVO"
+          "airportCode": "SVO",
+          "zoneCode": "R1"
         },
         "airportTo": {
-          "airportCode": "VVO"
+          "airportCode": "VVO",
+          "zoneCode": "R4"
         },
-        "requiredAwards": [
+        "distance": 4572,
+        "requiredAward": [
           {
             "awardType": "OW",
             "classOfService1": {
@@ -291,12 +297,15 @@
     "mileCosts": [
       {
         "airportFrom": {
-          "airportCode": "SVO"
+          "airportCode": "SVO",
+          "zoneCode": "R1"
         },
         "airportTo": {
-          "airportCode": "VVO"
+          "airportCode": "VVO",
+          "zoneCode": "R4"
         },
-        "requiredAwards": [
+        "distance": 4014,
+        "requiredAward": [
           {
             "awardType": "OW",
             "classOfService1": {
@@ -384,12 +393,15 @@
     "mileCosts": [
       {
         "airportFrom": {
-          "airportCode": "SVO"
+          "airportCode": "SVO",
+          "zoneCode": "R1"
         },
         "airportTo": {
-          "airportCode": "VVO"
+          "airportCode": "VVO",
+          "zoneCode": "R4"
         },
-        "requiredAwards": [
+        "distance": 4416,
+        "requiredAward": [
           {
             "awardType": "OW",
             "classOfService1": {

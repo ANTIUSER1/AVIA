@@ -35,12 +35,15 @@
     "mileCosts": [
       {
         "airportFrom": {
-          "airportCode": "SVO"
+          "airportCode": "SVO",
+          "zoneCode": "R1"
         },
         "airportTo": {
-          "airportCode": "UFA"
+          "airportCode": "UFA",
+          "zoneCode": "R1"
         },
-        "requiredAwards": [
+        "distance": 722,
+        "requiredAward": [
           {
             "awardType": "OW",
             "classOfService1": {
@@ -140,12 +143,15 @@
     "mileCosts": [
       {
         "airportFrom": {
-          "airportCode": "SVO"
+          "airportCode": "SVO",
+          "zoneCode": "R1"
         },
         "airportTo": {
-          "airportCode": "UFA"
+          "airportCode": "UFA",
+          "zoneCode": "R1"
         },
-        "requiredAwards": [
+        "distance": 1409,
+        "requiredAward": [
           {
             "awardType": "OW",
             "classOfService1": {

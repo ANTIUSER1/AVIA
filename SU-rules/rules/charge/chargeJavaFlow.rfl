@@ -25,7 +25,7 @@ try {]]>&#13;<![CDATA[
       </StartTask>
       <ActionTask Identifier="build_result">
         <Actions Language="irl"><![CDATA[try {]]>&#13;<![CDATA[
-	resultMilesCharge = chargeBuilder.buildResult(inputParamsCharge);]]>&#13;<![CDATA[
+	chargeResponse = chargeBuilder.buildResult(chargeRequest);]]>&#13;<![CDATA[
 } catch (Exception e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
 	loader.release();]]>&#13;<![CDATA[
@@ -71,12 +71,12 @@ try {]]>&#13;<![CDATA[
   </Resources>
   <Properties>
     <imports><![CDATA[import ru.integrotech.su.outputparams.charge.ChargeBuilder;]]>&#13;<![CDATA[
-use resultMilesCharge;]]>&#13;<![CDATA[
 use chargeBuilder;]]>&#13;<![CDATA[
 use loader;
 import ru.integrotech.airline.register.RegisterLoader;
 import ru.integrotech.airline.register.RegisterCache;
-use inputParamsCharge;
+use chargeResponse;
+use chargeRequest;
 ]]></imports>
   </Properties>
 </Ruleflow></rfModel>
