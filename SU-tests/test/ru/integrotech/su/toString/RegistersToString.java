@@ -1,19 +1,21 @@
 package ru.integrotech.su.toString;
 
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import ru.integrotech.airline.core.airline.Airline;
 import ru.integrotech.airline.core.airline.ServiceClass;
 import ru.integrotech.airline.core.airline.Tariff;
-import ru.integrotech.airline.core.bonus.*;
+import ru.integrotech.airline.core.bonus.Bonus;
+import ru.integrotech.airline.core.bonus.Loyalty;
+import ru.integrotech.airline.core.bonus.MilesRule;
 import ru.integrotech.airline.core.flight.Flight;
 import ru.integrotech.airline.core.location.Airport;
 import ru.integrotech.airline.core.location.City;
 import ru.integrotech.airline.core.location.Country;
 import ru.integrotech.airline.core.location.WorldRegion;
-import ru.integrotech.airline.register.RegisterLoader;
+import ru.integrotech.airline.register.RegisterCache;
 import ru.integrotech.su.mock.MockLoader;
-import ru.integrotech.su.test.CommonTest;
 
 import java.util.*;
 
@@ -34,27 +36,33 @@ public class RegistersToString {
                     "award",
                     "wrongRoute",
                     "tierLevel",
-                    "mileAccrualRule"};
+                    "mileAccrualRule",
+                    "localLoyaltyLevelCode"};
 
-    private CommonTest common;
 
     @BeforeClass
     public static void updateRegisters() {
-        RegisterLoader.updateInstance(ALL_REGISTER_NAMES);
+        MockLoader.getInstance().updateRegisters(
+                                    MockLoader.REGISTERS_TYPE.REAL,
+                                    ALL_REGISTER_NAMES);
     }
 
-    public RegistersToString() {
-        this.common = CommonTest.of(MockLoader.ofRealRegisters());
+    private RegisterCache registers;
+
+    @Before
+    public void init() {
+        this.registers = MockLoader.getInstance().getRegisterCache();
     }
 
     @Test
     public void printStartLogs() {
-        this.common.getTestsCache();
+        MockLoader.getInstance().getRegisterCache();
     }
 
     @Test
     public void printWrongRoutes() {
-        for (Map.Entry<String, List<City>> wrongRoute : this.common.getTestsCache().getWrongRouteMap().entrySet()) {
+
+        for (Map.Entry<String, List<City>> wrongRoute : this.registers.getWrongRouteMap().entrySet()) {
             StringBuilder sb = new StringBuilder();
             sb.append("WrongRoute:   ");
             int counter = wrongRoute.getValue().size();
@@ -72,40 +80,40 @@ public class RegistersToString {
 
     @Test
     public void printRegions() {
-        for (WorldRegion region : this.common.getTestsCache().getRegions()) {
+        for (WorldRegion region : this.registers.getRegions()) {
             System.out.println(region.toString());
         }
     }
 
     @Test
     public void printCountries() {
-        for (Country country : this.common.getTestsCache().getCountries()) {
+        for (Country country : this.registers.getCountries()) {
             System.out.println(country.toString());
         }
     }
 
     @Test
     public void printCities() {
-        for (City city : this.common.getTestsCache().getCities()) {
+        for (City city : this.registers.getCities()) {
             System.out.println(city.toString());
         }
     }
 
     @Test
     public void printAirport() {
-        System.out.println(this.common.getTestsCache().getRegisters().getAirport("IST").toString());
+        System.out.println(this.registers.getAirport("IST").toString());
     }
 
     @Test
     public void printAirports() {
-        for (Airport airport : this.common.getTestsCache().getAirports()) {
+        for (Airport airport : this.registers.getAirports()) {
             System.out.println(airport.toString());
         }
     }
 
     @Test
     public void printLoyalty() {
-        List<Loyalty> loyalties = new ArrayList<>(this.common.getTestsCache().getLoyalties());
+        List<Loyalty> loyalties = new ArrayList<>(this.registers.getLoyalties());
         loyalties.sort(new Comparator<Loyalty>() {
             @Override
             public int compare(Loyalty o1, Loyalty o2) {
@@ -119,7 +127,7 @@ public class RegistersToString {
 
     @Test
     public void printBonusRoute() {
-        for (Map.Entry<String, Set<Bonus>> bonusRoute : this.common.getTestsCache().getBonusRouteMap().entrySet()) {
+        for (Map.Entry<String, Set<Bonus>> bonusRoute : this.registers.getBonusRouteMap().entrySet()) {
             System.out.printf("Bonus route: %-8s\n", bonusRoute.getKey());
             for (Bonus bonus : bonusRoute.getValue()) {
                 System.out.printf("  %s\n", bonus.toString());
@@ -130,7 +138,7 @@ public class RegistersToString {
 
     @Test
     public void printAirlines() {
-        for (Airline airline : this.common.getTestsCache().getAirlines()) {
+        for (Airline airline : this.registers.getAirlines()) {
             System.out.println(airline);
             List<ServiceClass> serviceClasses = new ArrayList<>(airline.getServiceClassMap().values());
 
@@ -152,23 +160,16 @@ public class RegistersToString {
     }
 
     @Test
-    public void printChargeRules() {
-        for (MilesRule milesRule : this.common.getTestsCache().getRegisters().getMilesRules()) {
+    public void printMilesRules() {
+        for (MilesRule milesRule : this.registers.getMilesRules()) {
             System.out.println(milesRule);
-        }
-    }
-
-    @Test
-    public void printTicketDesignators() {
-        for (TicketDesignator designator : this.common.getTestsCache().getRegisters().getTicketDesignators()) {
-            System.out.println(designator);
         }
     }
 
     @Test
     public void printFlightPairs() {
         StringBuilder sb = new StringBuilder();
-        for (Airport origin : this.common.getTestsCache().getRegisters().getAirports()) {
+        for (Airport origin : this.registers.getAirports()) {
             sb.append(String.format("Origin: %s, %s\n", origin.getCode(), origin.getName()));
             for (Map.Entry<Airport, Flight> destination : origin.getOutcomeFlights().entrySet()) {
                 sb.append(String.format("Destination: %s, %s\n", destination.getKey().getCode(), destination.getKey().getName()));
@@ -177,6 +178,14 @@ public class RegistersToString {
             sb.append("\n");
         }
         System.out.println(sb.toString());
+    }
+
+    @Test
+    public void printLoyaltyLevelCode() {
+        Map<String, Integer> register = this.registers.getLoyaltyLevelCodeMap();
+        for (Map.Entry<String, Integer> entry : register.entrySet()) {
+            System.out.printf("%-10.10s  %s\n", entry.getKey(), entry.getValue());
+        }
     }
 
 }

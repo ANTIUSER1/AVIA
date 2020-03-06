@@ -2,17 +2,16 @@ package ru.integrotech.su.toString;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import ru.integrotech.airline.core.flight.Route;
-import ru.integrotech.airline.register.RegisterLoader;
 import ru.integrotech.su.inputparams.spend.SpendInput;
 import ru.integrotech.su.mock.MockLoader;
 import ru.integrotech.su.outputparams.spend.ResultMilesSpendLk;
 import ru.integrotech.su.outputparams.spend.SpendBuilder;
 import ru.integrotech.su.outputparams.spend.SpendLkBuilder;
 import ru.integrotech.su.outputparams.spend.SpendLkRoute;
-import ru.integrotech.su.test.CommonTest;
 
 import java.util.List;
 
@@ -20,15 +19,19 @@ import java.util.List;
 *  use to check proper performance listOf toString methods*/
 public class SpendLkToString {
 
-    private CommonTest common;
-
-    public SpendLkToString() {
-        this.common = CommonTest.of(MockLoader.ofRealRegisters());
-    }
-
     @BeforeClass
     public static void updateRegisters() {
-        RegisterLoader.updateInstance(SpendBuilder.getRegisterNames());
+        MockLoader.getInstance().updateRegisters(
+                                        MockLoader.REGISTERS_TYPE.REAL,
+                                        SpendBuilder.getRegisterNames());
+    }
+
+    private SpendLkBuilder spendLkBuilder;
+
+    @Before
+    public void init() {
+        SpendBuilder spendBuilder = SpendBuilder.of(MockLoader.getInstance().getRegisterCache());
+        this.spendLkBuilder = SpendLkBuilder.of(spendBuilder);
     }
 
     @Test
@@ -49,7 +52,7 @@ public class SpendLkToString {
         if (airlineCode != null) {
             airlineCode = airlineCode.toUpperCase();
         }
-        List<SpendLkRoute> result = this.common.getSpendLkBuilder().getSpendLkRoutes(spendInput, airlineCode);
+        List<SpendLkRoute> result = this.spendLkBuilder.getSpendLkRoutes(spendInput, airlineCode);
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String jsonResult = gson.toJson(result);
         System.out.println(jsonResult);
@@ -69,10 +72,9 @@ public class SpendLkToString {
                 false, // afl only
                 false // is round trip
         );
-        SpendLkBuilder builder = this.common.getSpendLkBuilder();
-        List<Route> routes = builder.getRoutes(spendInput);
+        List<Route> routes = this.spendLkBuilder.getRoutes(spendInput);
         /* ODM rules works here*/
-        ResultMilesSpendLk result = builder.buildResult(routes, spendInput);
+        ResultMilesSpendLk result = this.spendLkBuilder.buildResult(routes, spendInput);
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String jsonResult = gson.toJson(result);
         System.out.println(jsonResult);

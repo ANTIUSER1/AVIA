@@ -1,14 +1,6 @@
 package ru.integrotech.su.mock;
 
 import com.google.gson.JsonElement;
-
-import ru.integrotech.airline.core.airline.Airline;
-import ru.integrotech.airline.core.bonus.Bonus;
-import ru.integrotech.airline.core.bonus.Loyalty;
-import ru.integrotech.airline.core.location.Airport;
-import ru.integrotech.airline.core.location.City;
-import ru.integrotech.airline.core.location.Country;
-import ru.integrotech.airline.core.location.WorldRegion;
 import ru.integrotech.airline.register.RegisterCache;
 import ru.integrotech.su.inputparams.attractionAB.AttractionAbInput;
 import ru.integrotech.su.inputparams.charge.ChargeInput;
@@ -18,13 +10,9 @@ import ru.integrotech.su.outputparams.spend.SpendLkRoute;
 import ru.integrotech.su.outputparams.spend.SpendRoute;
 import ru.integrotech.su.records.RouteRecord;
 
-
-
-
-
-
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /*class is used in tests for load some classes from JSONs that
 uses only in tests and so cant be load by RegisterCache */
@@ -40,7 +28,7 @@ public class TestsCache{
         this.registerCache = new RegisterCache();
     }
 
-    public RegisterCache getRegisters() {
+    RegisterCache getRegisterCache() {
         return registerCache;
     }
 
@@ -78,46 +66,6 @@ public class TestsCache{
     
     public AttractionAbInput loadAttractionAbInputParams(JsonElement jsonElement) {
         return this.registerCache.parseJsonElement(AttractionAbInput.class, jsonElement);
-    }
-
-    public Airline getAirline(String airlineCode) {
-        return this.registerCache.getAirline(airlineCode);
-    }
-
-    public <E> Map<String, Loyalty> getLoyaltyMap() {
-        return this.registerCache.getLoyaltyMap();
-    }
-
-    public Map<String, List<City>> getWrongRouteMap() {
-        return this.registerCache.getWrongRouteMap();
-    }
-
-    public Collection<WorldRegion> getRegions() {
-        return this.registerCache.getRegions();
-    }
-
-    public Collection<Country> getCountries() {
-        return this.registerCache.getCountries();
-    }
-
-    public Collection<City> getCities() {
-        return this.registerCache.getCities();
-    }
-
-    public Collection<Airport> getAirports() {
-        return this.registerCache.getAirports();
-    }
-
-    public Collection<Loyalty> getLoyalties() {
-        return this.registerCache.getLoyalties();
-    }
-
-    public Map<String, Set<Bonus>> getBonusRouteMap() {
-        return this.registerCache.getBonusRouteMap();
-    }
-
-    public Collection<Airline> getAirlines() {
-        return this.registerCache.getAirlines();
     }
 
     public void update(String registerName, JsonElement jsonElement) {

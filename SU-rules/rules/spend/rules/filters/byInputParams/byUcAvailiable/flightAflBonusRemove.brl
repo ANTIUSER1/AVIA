@@ -7,7 +7,7 @@
 	set 'flight' to a flight in the flights of the route ; 
 	set 'bonus'   to a bonus in the afl bonuses of flight ; 
 if 
-	 (the type of bonus is UC and (the route is direct is not true))
+	 (the type of bonus is UC and (the route is direct is not true) and (the route is wrong is not true))
    	    or (the type of bonus  is UC and (the origin of flight is uc available is not true ))	
 
 then remove bonus from the afl bonuses of flight ; ]]></definition>

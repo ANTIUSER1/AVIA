@@ -3,12 +3,15 @@ package ru.integrotech.su.test;
 import com.google.gson.*;
 
 import org.junit.Assert;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import ru.integrotech.airline.core.airline.Airline;
 import ru.integrotech.airline.core.airline.ServiceClass;
 import ru.integrotech.airline.core.airline.Tariff;
 import ru.integrotech.su.inputparams.charge.ChargeInput;
+import ru.integrotech.su.mock.MockLoader;
 import ru.integrotech.su.outputparams.charge.ChargeBuilder;
 import ru.integrotech.su.outputparams.charge.ChargeRoute;
 import ru.integrotech.su.outputparams.charge.ChargeUtil;
@@ -21,17 +24,29 @@ public class ChargeTest{
 
     private static final String RESULTS_FOLDER = "test/ru/integrotech/su/resources/results/chargeRoutes/";
 
-    private final CommonTest common;
+    @BeforeClass
+    public static void updateRegisters() {
+        MockLoader.getInstance().updateRegisters(
+                                    MockLoader.REGISTERS_TYPE.MOCK,
+                                    ChargeBuilder.getRegisterNames());
+    }
 
-    public ChargeTest() {
-        this.common = CommonTest.of(ChargeRoute.class, ChargeBuilder.getRegisterNames());
+    private ChargeBuilder chargeBuilder;
+
+    private Comparator comparator;
+
+    @Before
+    public void init() {
+        this.comparator = Comparator.of(ChargeRoute.class);
+        this.chargeBuilder = ChargeBuilder.of(MockLoader.getInstance().getRegisterCache());
     }
 
     private List<ChargeRoute> getExpected(String jsonName) {
+        MockLoader loader = MockLoader.getInstance();
         List<ChargeRoute> result = null;
         try {
-            JsonElement jsonElement = this.common.getLoader().loadJson(RESULTS_FOLDER + jsonName);
-            result = this.common.getTestsCache().loadChargeRoutes(jsonElement);
+            JsonElement jsonElement = loader.loadJson(RESULTS_FOLDER + jsonName);
+            result = loader.getTestsCache().loadChargeRoutes(jsonElement);
         } catch (JsonIOException
                 | JsonSyntaxException
                 | IOException e) {
@@ -57,7 +72,7 @@ public class ChargeTest{
             Map<String, List<String>> actual = ChargeUtil.getTariffMap(chargeRoute);
 
             Map<String, Tariff> tariffMap = new HashMap<>();
-            Airline airline = this.common.getTestsCache().getAirline(airlineCode);
+            Airline airline = MockLoader.getInstance().getRegisterCache().getAirline(airlineCode);
             for (Map.Entry<ServiceClass.SERVICE_CLASS_TYPE, ServiceClass> serviceClassEntry : airline.getServiceClassMap().entrySet()) {
                 tariffMap.putAll(serviceClassEntry.getValue().getTariffMap());
             }
@@ -77,7 +92,7 @@ public class ChargeTest{
 
         for (ChargeRoute chargeRoute : chargeRoutes) {
 
-            Airline airline = this.common.getTestsCache().getAirline(airlineCode);
+            Airline airline = MockLoader.getInstance().getRegisterCache().getAirline(airlineCode);
             Map<ServiceClass.SERVICE_CLASS_TYPE, ServiceClass> serviceMap = airline.getServiceClassMap();
             List<String> actual = new ArrayList<>(ChargeUtil.getClassOfServiceCodes(chargeRoute));
 
@@ -125,8 +140,8 @@ public class ChargeTest{
                 "gold", // tierLevelCode
                 false //isRound
                 );
-        List<ChargeRoute> actualCharge = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
-        this.common.sort(actualCharge);
+        List<ChargeRoute> actualCharge = this.chargeBuilder.getChargeRoutes(chargeInput);
+        this.comparator.sort(actualCharge);
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String jsonResult = gson.toJson(actualCharge);
         System.out.println(jsonResult);
@@ -139,7 +154,7 @@ public class ChargeTest{
     @Test
     public void PRINT_EXPECTED() {
         List<ChargeRoute> expectedCharge = getExpected("SVO-WORLD-00.json");
-        this.common.sort(expectedCharge);
+        this.comparator.sort(expectedCharge);
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String jsonResult = gson.toJson(expectedCharge);
         System.out.println(jsonResult);
@@ -156,9 +171,9 @@ public class ChargeTest{
                 "gold", // tierLevelCode
                 false //isRound
                 );
-        List<ChargeRoute> actualCharge = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
+        List<ChargeRoute> actualCharge = this.chargeBuilder.getChargeRoutes(chargeInput);
         List<ChargeRoute> expectedCharge = this.getExpected("SVO-LED-00.json");
-        this.common.testIsPresent(actualCharge, expectedCharge.get(0));
+        this.comparator.testIsPresent(actualCharge, expectedCharge.get(0));
     }
 
     @Test
@@ -172,9 +187,9 @@ public class ChargeTest{
                 "gold", // tierLevelCode
                 false //isRound
                 );
-        List<ChargeRoute> actualCharge = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
+        List<ChargeRoute> actualCharge = this.chargeBuilder.getChargeRoutes(chargeInput);
         List<ChargeRoute> expectedCharge = this.getExpected("LED-UFA-00.json");
-        this.common.testIsPresent(actualCharge, expectedCharge.get(0));
+        this.comparator.testIsPresent(actualCharge, expectedCharge.get(0));
     }
 
     @Test
@@ -188,9 +203,9 @@ public class ChargeTest{
                 "gold", // tierLevelCode
                 false //isRound
         );
-        List<ChargeRoute> actualCharge = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
+        List<ChargeRoute> actualCharge = this.chargeBuilder.getChargeRoutes(chargeInput);
         List<ChargeRoute> expectedCharge = this.getExpected("LED-UFA-01.json");
-        this.common.testIsEquals(actualCharge, expectedCharge);
+        this.comparator.testIsEquals(actualCharge, expectedCharge);
     }
 
     // http://support.integrotechnologies.ru/issues/20896
@@ -209,7 +224,7 @@ public class ChargeTest{
                 "basic", // tierLevelCode
                 false //isRound
         );
-        actualCharge = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
+        actualCharge = this.chargeBuilder.getChargeRoutes(chargeInput);
         Assert.assertTrue(!classOfServiceIsPresent(actualCharge, ServiceClass.SERVICE_CLASS_TYPE.comfort.name()));
 
         chargeInput = ChargeInput.of(
@@ -221,7 +236,7 @@ public class ChargeTest{
                 "basic", // tierLevelCode
                 false //isRound
         );
-        actualCharge = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
+        actualCharge = this.chargeBuilder.getChargeRoutes(chargeInput);
         Assert.assertTrue(!classOfServiceIsPresent(actualCharge, ServiceClass.SERVICE_CLASS_TYPE.comfort.name()));
 
         chargeInput = ChargeInput.of(
@@ -233,7 +248,7 @@ public class ChargeTest{
                 "basic", // tierLevelCode
                 false //isRound
         );
-        actualCharge = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
+        actualCharge = this.chargeBuilder.getChargeRoutes(chargeInput);
         Assert.assertTrue(!classOfServiceIsPresent(actualCharge, ServiceClass.SERVICE_CLASS_TYPE.comfort.name()));
 
         chargeInput = ChargeInput.of(
@@ -245,7 +260,7 @@ public class ChargeTest{
                 "basic", // tierLevelCode
                 false //isRound
         );
-        actualCharge = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
+        actualCharge = this.chargeBuilder.getChargeRoutes(chargeInput);
         Assert.assertTrue(classOfServiceIsPresent(actualCharge, ServiceClass.SERVICE_CLASS_TYPE.comfort.name()));
 
         chargeInput = ChargeInput.of(
@@ -257,7 +272,7 @@ public class ChargeTest{
                 "basic", // tierLevelCode
                 false //isRound
         );
-        actualCharge = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
+        actualCharge = this.chargeBuilder.getChargeRoutes(chargeInput);
         Assert.assertTrue(classOfServiceIsPresent(actualCharge, ServiceClass.SERVICE_CLASS_TYPE.comfort.name()));
 
         chargeInput = ChargeInput.of(
@@ -269,7 +284,7 @@ public class ChargeTest{
                 "basic", // tierLevelCode
                 false //isRound
         );
-        actualCharge = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
+        actualCharge = this.chargeBuilder.getChargeRoutes(chargeInput);
         Assert.assertTrue(classOfServiceIsPresent(actualCharge, ServiceClass.SERVICE_CLASS_TYPE.comfort.name()));
     }
 
@@ -288,7 +303,7 @@ public class ChargeTest{
                 "basic", // tierLevelCode
                 false //isRound
         );
-        actualCharge = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
+        actualCharge = this.chargeBuilder.getChargeRoutes(chargeInput);
         Assert.assertEquals(500, getMinMilesCharge(actualCharge));
 
         chargeInput = ChargeInput.of(
@@ -300,7 +315,7 @@ public class ChargeTest{
                 "basic", // tierLevelCode
                 false //isRound
         );
-        actualCharge = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
+        actualCharge = this.chargeBuilder.getChargeRoutes(chargeInput);
         Assert.assertEquals(500, getMinMilesCharge(actualCharge));
 
         chargeInput = ChargeInput.of(
@@ -312,7 +327,7 @@ public class ChargeTest{
                 "basic", // tierLevelCode
                 false //isRound
         );
-        actualCharge = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
+        actualCharge = this.chargeBuilder.getChargeRoutes(chargeInput);
         Assert.assertTrue(getMinMilesCharge(actualCharge) < 500);
 
         chargeInput = ChargeInput.of(
@@ -324,7 +339,7 @@ public class ChargeTest{
                 "basic", // tierLevelCode
                 false //isRound
         );
-        actualCharge = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
+        actualCharge = this.chargeBuilder.getChargeRoutes(chargeInput);
         Assert.assertEquals(500, getMinMilesCharge(actualCharge));
 
         chargeInput = ChargeInput.of(
@@ -336,7 +351,7 @@ public class ChargeTest{
                 "basic", // tierLevelCode
                 false //isRound
         );
-        actualCharge = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
+        actualCharge = this.chargeBuilder.getChargeRoutes(chargeInput);
         Assert.assertTrue(getMinMilesCharge(actualCharge) < 500);
 
         chargeInput = ChargeInput.of(
@@ -348,7 +363,7 @@ public class ChargeTest{
                 "basic", // tierLevelCode
                 false //isRound
         );
-        actualCharge = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
+        actualCharge = this.chargeBuilder.getChargeRoutes(chargeInput);
         Assert.assertTrue(getMinMilesCharge(actualCharge) < 500);
     }
 
@@ -366,8 +381,8 @@ public class ChargeTest{
                 "basic", // tierLevelCode
                 false //isRound
         );
-        actualCharge = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
-        testReverseOrderServiceClasses(actualCharge, "SU");
+        actualCharge = this.chargeBuilder.getChargeRoutes(chargeInput);
+        this.testReverseOrderServiceClasses(actualCharge, "SU");
 
         chargeInput = ChargeInput.of(
                 "airport", // from type
@@ -378,8 +393,8 @@ public class ChargeTest{
                 "basic", // tierLevelCode
                 false //isRound
         );
-        actualCharge = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
-        testReverseOrderServiceClasses(actualCharge, "OK");
+        actualCharge = this.chargeBuilder.getChargeRoutes(chargeInput);
+        this.testReverseOrderServiceClasses(actualCharge, "OK");
 
         chargeInput = ChargeInput.of(
                 "airport", // from type
@@ -390,8 +405,8 @@ public class ChargeTest{
                 "basic", // tierLevelCode
                 false //isRound
         );
-        actualCharge = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
-        testReverseOrderServiceClasses(actualCharge, "VN");
+        actualCharge = this.chargeBuilder.getChargeRoutes(chargeInput);
+        this.testReverseOrderServiceClasses(actualCharge, "VN");
     }
 
     // http://support.integrotechnologies.ru/issues/21578
@@ -411,8 +426,8 @@ public class ChargeTest{
                 "basic", // tierLevelCode
                 false //isRound
         );
-        actualCharge = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
-        testReverseOrderTariffs(actualCharge, "SU");
+        actualCharge = this.chargeBuilder.getChargeRoutes(chargeInput);
+        this.testReverseOrderTariffs(actualCharge, "SU");
 
         chargeInput = ChargeInput.of(
                 "airport", // from type
@@ -423,8 +438,8 @@ public class ChargeTest{
                 "basic", // tierLevelCode
                 false //isRound
         );
-        actualCharge = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
-        testReverseOrderTariffs(actualCharge, "OK");
+        actualCharge = this.chargeBuilder.getChargeRoutes(chargeInput);
+        this.testReverseOrderTariffs(actualCharge, "OK");
 
         chargeInput = ChargeInput.of(
                 "airport", // from type
@@ -435,8 +450,8 @@ public class ChargeTest{
                 "basic", // tierLevelCode
                 false //isRound
         );
-        actualCharge = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
-        testReverseOrderTariffs(actualCharge, "VN");
+        actualCharge = this.chargeBuilder.getChargeRoutes(chargeInput);
+        this.testReverseOrderTariffs(actualCharge, "VN");
     }
 
 
@@ -456,8 +471,8 @@ public class ChargeTest{
                 "basic", // tierLevelCode
                 false //isRound
         );
-        actualCharge = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
-        testNaturalOrderFarePrefixes(actualCharge);
+        actualCharge = this.chargeBuilder.getChargeRoutes(chargeInput);
+        this.testNaturalOrderFarePrefixes(actualCharge);
 
         chargeInput = ChargeInput.of(
                 "airport", // from type
@@ -468,8 +483,8 @@ public class ChargeTest{
                 "basic", // tierLevelCode
                 false //isRound
         );
-        actualCharge = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
-        testNaturalOrderFarePrefixes(actualCharge);
+        actualCharge = this.chargeBuilder.getChargeRoutes(chargeInput);
+        this.testNaturalOrderFarePrefixes(actualCharge);
 
         chargeInput = ChargeInput.of(
                 "airport", // from type
@@ -480,8 +495,8 @@ public class ChargeTest{
                 "basic", // tierLevelCode
                 false //isRound
         );
-        actualCharge = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
-        testNaturalOrderFarePrefixes(actualCharge);
+        actualCharge = this.chargeBuilder.getChargeRoutes(chargeInput);
+        this.testNaturalOrderFarePrefixes(actualCharge);
     }
 
     @Test
@@ -495,9 +510,9 @@ public class ChargeTest{
                 "basic", // tierLevelCode
                 false //isRound
         );
-        List<ChargeRoute> actualCharge = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
+        List<ChargeRoute> actualCharge = this.chargeBuilder.getChargeRoutes(chargeInput);
         List<ChargeRoute> expectedChargeRoutes = this.getExpected("SVO-WORLD-00.json");
-        this.common.testIsEquals(actualCharge, expectedChargeRoutes);
+        this.comparator.testIsEquals(actualCharge, expectedChargeRoutes);
     }
 
 }

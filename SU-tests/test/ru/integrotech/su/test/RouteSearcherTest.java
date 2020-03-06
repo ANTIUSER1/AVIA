@@ -1,14 +1,17 @@
 package ru.integrotech.su.test;
 
-import com.google.gson.JsonElement;
-import com.google.gson.JsonIOException;
-import com.google.gson.JsonSyntaxException;
+import com.google.gson.*;
 
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import ru.integrotech.airline.core.flight.Route;
 import ru.integrotech.su.inputparams.route.RoutesInput;
+import ru.integrotech.su.mock.MockLoader;
 import ru.integrotech.su.outputparams.route.RoutesBuilder;
+import ru.integrotech.su.outputparams.spend.SpendBuilder;
+import ru.integrotech.su.records.RouteRecord;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -19,17 +22,29 @@ public class RouteSearcherTest {
 
     private static final String RESULTS_FOLDER = "test/ru/integrotech/su/resources/results/routes/";
 
-    private final CommonTest common;
+    @BeforeClass
+    public static void updateRegisters() {
+        MockLoader.getInstance().updateRegisters(
+                                        MockLoader.REGISTERS_TYPE.MOCK,
+                                        SpendBuilder.getRegisterNames());
+    }
 
-    public RouteSearcherTest() {
-        this.common = CommonTest.of(Route.class, RoutesBuilder.getRegisterNames());
+    private Comparator comparator;
+
+    private RoutesBuilder routesBuilder;
+
+    @Before
+    public void init() {
+        this.comparator = Comparator.of(Route.class);
+        this.routesBuilder = RoutesBuilder.of(MockLoader.getInstance().getRegisterCache());
     }
 
     private List<Route> getExpected(String jsonName) {
+        MockLoader loader = MockLoader.getInstance();
         List<Route> result = null;
         try {
-            JsonElement jsonElement = this.common.getLoader().loadJson(RESULTS_FOLDER + jsonName);
-            result = this.common.getTestsCache().loadRoutes(jsonElement, this.common.getTestsCache().getRegisters());
+            JsonElement jsonElement = loader.loadJson(RESULTS_FOLDER + jsonName);
+            result = loader.getTestsCache().loadRoutes(jsonElement, MockLoader.getInstance().getRegisterCache());
         } catch (JsonIOException
                 | JsonSyntaxException
                 | IOException e) {
@@ -38,7 +53,6 @@ public class RouteSearcherTest {
         return result;
     }
 
-    /*
     ////////////////////////////////////////////
     //use this method for visualization actual//
     ////////////////////////////////////////////
@@ -51,8 +65,8 @@ public class RouteSearcherTest {
                 null, // to
                 null // airline
         );
-        List<Route> actualRoutes = this.common.getRoutesBuilder().getRoutes(routesInput);
-        this.common.sort(actualRoutes);
+        List<Route> actualRoutes = this.routesBuilder.getRoutes(routesInput);
+        this.comparator.sort(actualRoutes);
         List<RouteRecord> records = new ArrayList<>();
         for (Route route : actualRoutes) {
             records.add(RouteRecord.of(route));
@@ -68,7 +82,7 @@ public class RouteSearcherTest {
     @Test
     public void PRINT_EXPECTED() {
         List<Route> expectedRoutes = this.getExpected("LED-WORLD.json");
-        this.common.sort(expectedRoutes);
+        this.comparator.sort(expectedRoutes);
         List<RouteRecord> records = new ArrayList<>();
         for (Route route : expectedRoutes) {
             records.add(RouteRecord.of(route));
@@ -77,7 +91,6 @@ public class RouteSearcherTest {
         String jsonResult = gson.toJson(records);
         System.out.println(jsonResult);
     }
-    */
 
     // http://support.integrotechnologies.ru/issues/21958
     @Test
@@ -90,9 +103,9 @@ public class RouteSearcherTest {
                 "SU" // airline
 
         );
-        List<Route> actualRoutes = this.common.getRoutesBuilder().getRoutes(routesInput);
+        List<Route> actualRoutes = this.routesBuilder.getRoutes(routesInput);
         List<Route> expectedRoutes = this.getExpected("MOW-VVO.json");
-        this.common.testIsEquals(expectedRoutes, actualRoutes);
+        this.comparator.testIsEquals(expectedRoutes, actualRoutes);
     }
 
 
@@ -106,13 +119,13 @@ public class RouteSearcherTest {
                 "CIS", // to
                 "SU" // airline
         );
-        List<Route> actualRoutes = this.common.getRoutesBuilder().getRoutes(routesInput);
+        List<Route> actualRoutes = this.routesBuilder.getRoutes(routesInput);
 
         List<Route> expectedRoutes = this.getExpected("MOW-CIS.json");
-        this.common.testIsPresent(expectedRoutes, actualRoutes);
+        this.comparator.testIsPresent(expectedRoutes, actualRoutes);
 
         List<Route> notExpectedRoutes = this.getExpected("MOW-EU.json");
-        this.common.testIsNotPresent(notExpectedRoutes, actualRoutes);
+        this.comparator.testIsNotPresent(notExpectedRoutes, actualRoutes);
     }
 
     @Test
@@ -124,13 +137,13 @@ public class RouteSearcherTest {
                 "EU", // to
                 "SU" // airline
         );
-        List<Route> actualRoutes = this.common.getRoutesBuilder().getRoutes(routesInput);
+        List<Route> actualRoutes = this.routesBuilder.getRoutes(routesInput);
 
         List<Route> expectedRoutes = this.getExpected("MOW-EU.json");
-        this.common.testIsPresent(expectedRoutes, actualRoutes);
+        this.comparator.testIsPresent(expectedRoutes, actualRoutes);
 
         List<Route> notExpectedRoutes = this.getExpected("MOW-CIS.json");
-        this.common.testIsNotPresent(notExpectedRoutes, actualRoutes);
+        this.comparator.testIsNotPresent(notExpectedRoutes, actualRoutes);
     }
 
     @Test
@@ -143,9 +156,9 @@ public class RouteSearcherTest {
                 "SU" // airline
 
         );
-        List<Route> actualRoutes = this.common.getRoutesBuilder().getRoutes(routesInput);
+        List<Route> actualRoutes = this.routesBuilder.getRoutes(routesInput);
         List<Route> notExpectedRoutes = new ArrayList<>();
-        this.common.testIsNotPresent(notExpectedRoutes, actualRoutes);
+        this.comparator.testIsNotPresent(notExpectedRoutes, actualRoutes);
     }
 
     @Test
@@ -158,13 +171,13 @@ public class RouteSearcherTest {
                 "SU" // airline
 
         );
-        List<Route> actualRoutes = this.common.getRoutesBuilder().getRoutes(routesInput);
+        List<Route> actualRoutes = this.routesBuilder.getRoutes(routesInput);
 
         List<Route> expectedRoutes = this.getExpected("SVO-NRT.json");
-        this.common.testIsEquals(expectedRoutes, actualRoutes);
+        this.comparator.testIsEquals(expectedRoutes, actualRoutes);
 
         List<Route> notExpectedRoutes = this.getExpected("MOW-VVO.json");
-        this.common.testIsNotPresent(notExpectedRoutes, actualRoutes);
+        this.comparator.testIsNotPresent(notExpectedRoutes, actualRoutes);
     }
 
     @Test
@@ -176,13 +189,13 @@ public class RouteSearcherTest {
                 "PRG", // to
                 null // airline
         );
-        List<Route> actualRoutes = this.common.getRoutesBuilder().getRoutes(routesInput);
+        List<Route> actualRoutes = this.routesBuilder.getRoutes(routesInput);
 
         List<Route> expectedRoutes = this.getExpected("SVO-PRG.json");
-        this.common.testIsEquals(expectedRoutes, actualRoutes);
+        this.comparator.testIsEquals(expectedRoutes, actualRoutes);
 
         List<Route> notExpectedRoutes = this.getExpected("SVO-FRA.json");
-        this.common.testIsNotPresent(notExpectedRoutes, actualRoutes);
+        this.comparator.testIsNotPresent(notExpectedRoutes, actualRoutes);
     }
 
     @Test
@@ -194,13 +207,13 @@ public class RouteSearcherTest {
                 "FRA", // to
                 null // airline
         );
-        List<Route> actualRoutes = this.common.getRoutesBuilder().getRoutes(routesInput);
+        List<Route> actualRoutes = this.routesBuilder.getRoutes(routesInput);
 
         List<Route> expectedRoutes = this.getExpected("SVO-FRA.json");
-        this.common.testIsEquals(expectedRoutes, actualRoutes);
+        this.comparator.testIsEquals(expectedRoutes, actualRoutes);
 
         List<Route> notExpectedRoutes = this.getExpected("SVO-PRG.json");
-        this.common.testIsNotPresent(notExpectedRoutes, actualRoutes);
+        this.comparator.testIsNotPresent(notExpectedRoutes, actualRoutes);
     }
 
     @Test
@@ -212,9 +225,9 @@ public class RouteSearcherTest {
                 "AER", // to
                 "SU" // airline
         );
-        List<Route> actualRoutes = this.common.getRoutesBuilder().getRoutes(routesInput);
+        List<Route> actualRoutes = this.routesBuilder.getRoutes(routesInput);
         List<Route> expectedRoutes = this.getExpected("LED-AER.json");
-        this.common.testIsEquals(expectedRoutes, actualRoutes);
+        this.comparator.testIsEquals(expectedRoutes, actualRoutes);
     }
 
     @Test
@@ -226,9 +239,9 @@ public class RouteSearcherTest {
                 "CIS", // to
                 "SU" // airline
         );
-        List<Route> actualRoutes = this.common.getRoutesBuilder().getRoutes(routesInput);
+        List<Route> actualRoutes = this.routesBuilder.getRoutes(routesInput);
         List<Route> expectedRoutes = this.getExpected("LED-CIS.json");
-        this.common.testIsPresent(expectedRoutes, actualRoutes);
+        this.comparator.testIsPresent(expectedRoutes, actualRoutes);
     }
 
     @Test
@@ -240,12 +253,12 @@ public class RouteSearcherTest {
                 null, // to
                 null // airline
         );
-        List<Route> actualRoutes = this.common.getRoutesBuilder().getRoutes(routesInput);
+        List<Route> actualRoutes = this.routesBuilder.getRoutes(routesInput);
 
         List<Route> expectedRoutes = this.getExpected("MOW-WORLD.json");
-        this.common.testIsEquals(expectedRoutes, actualRoutes);
+        this.comparator.testIsEquals(expectedRoutes, actualRoutes);
 
         expectedRoutes = this.getExpected("LED-WORLD.json");
-        this.common.testIsNotPresent(expectedRoutes, actualRoutes);
+        this.comparator.testIsNotPresent(expectedRoutes, actualRoutes);
     }
 }

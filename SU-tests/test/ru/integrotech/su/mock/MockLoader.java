@@ -19,47 +19,54 @@ import java.util.Properties;
   files and outside for use in tests. Paths to JSONs saved in ikm-mock.properties*/
 public class MockLoader{
 
+    private static final String PROPS_PATH = "test/ru/integrotech/su/resources/ikm-mock.properties";
+
+    private static MockLoader instance;
+
     private PropertyHolder props;
 
-    private final TestsCache testsCache;
+    private TestsCache testsCache;
 
-    /*use restrict mock registers from /resources/registers*/
-    public static MockLoader ofMockRegisters(String... registerNames) {
-        return new MockLoader(registerNames);
+    public static MockLoader getInstance() {
+        if (instance == null) {
+            instance = new MockLoader();
+        }
+
+        return instance;
     }
 
-    /*use restrict real registers*/
-    public static MockLoader ofRealRegisters(String... registerNames) {
-        MockLoader result = null;
-        RegisterLoader registerLoader = RegisterLoader.getInstance(registerNames);
-        registerLoader.lock();
-        result = new MockLoader(registerLoader.getRegisterCache());
-        registerLoader.release();
-        return result;
-    }
-
-    private MockLoader(String... registerNames) {
-        this.props = new PropertyHolder(getProperties("test/ru/integrotech/su/resources/ikm-mock.properties"));
-        this.testsCache = new TestsCache();
-        String registryDir = props.getRegistryServiceBase();
-
-        try {
-            for (String registerName : registerNames) {
-                String filePath = String.format("%s%s%s", registryDir, registerName, ".json");
-                this.testsCache.update(registerName, loadJson(filePath));
+    public void updateRegisters(REGISTERS_TYPE type, String...registerNames) {
+        if (type == REGISTERS_TYPE.MOCK) {
+            this.props = new PropertyHolder(getProperties(PROPS_PATH));
+            this.testsCache = new TestsCache();
+            String registryDir = props.getRegistryServiceBase();
+            try {
+                for (String registerName : registerNames) {
+                    String filePath = String.format("%s%s%s", registryDir, registerName, ".json");
+                    this.testsCache.update(registerName, loadJson(filePath));
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-        } catch (IOException e) {
-            e.printStackTrace();
+        } else if (type == REGISTERS_TYPE.REAL) {
+            RegisterLoader registerLoader = RegisterLoader.updateInstance(registerNames);
+            registerLoader.lock();
+            this.props = new PropertyHolder(getProperties(PROPS_PATH));
+            this.testsCache = new TestsCache(registerLoader.getRegisterCache());
+            registerLoader.release();
         }
     }
 
-    private MockLoader(RegisterCache registerCache) {
-        this.props = new PropertyHolder(getProperties("test/ru/integrotech/su/resources/ikm-mock.properties"));
-        this.testsCache = new TestsCache(registerCache);
+
+    private MockLoader() {
     }
 
     public TestsCache getTestsCache() {
         return testsCache;
+    }
+
+    public RegisterCache getRegisterCache() {
+        return testsCache.getRegisterCache();
     }
 
     private static Properties getProperties(String filePath) {
@@ -82,5 +89,10 @@ public class MockLoader{
     private JsonElement parseJson(InputStream is) throws JsonIOException, JsonSyntaxException, IOException {
         JsonParser jp = new JsonParser();
         return jp.parse(new InputStreamReader(is, this.props.getEncoding()));
+    }
+
+    public enum REGISTERS_TYPE {
+        REAL,
+        MOCK
     }
 }

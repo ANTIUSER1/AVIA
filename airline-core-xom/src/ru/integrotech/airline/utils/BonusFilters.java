@@ -18,7 +18,8 @@ public class BonusFilters {
                                       Airport airport,
                                       String award,
                                       Boolean isRoundTrip,
-                                      boolean routeIsDirect) {
+                                      boolean routeIsDirect,
+                                      boolean routeIsWrong) {
 
         if (award.equalsIgnoreCase(AWARD_TYPE.TICKET.name())) {
             bonuses.removeIf(ar -> ar.getType().equals(Bonus.BONUS_TYPE.U)
@@ -29,7 +30,7 @@ public class BonusFilters {
                             || ar.getType().equals(Bonus.BONUS_TYPE.RT));
         }
 
-        bonuses.removeIf(ar -> (ar.getType().equals(Bonus.BONUS_TYPE.UC) && !routeIsDirect)
+        bonuses.removeIf(ar -> (ar.getType().equals(Bonus.BONUS_TYPE.UC) && !routeIsDirect && !routeIsWrong)
                 || (ar.getType().equals(Bonus.BONUS_TYPE.UC) && !airport.isUcAvailable()));
 
         if (isRoundTrip != null) {
@@ -48,16 +49,16 @@ public class BonusFilters {
         }
     }
 
-    public static void byAllowedClasses(Set<Bonus> bonuses, Set<ServiceClass.SERVICE_CLASS_TYPE> allowedClasses) {
-        if (!allowedClasses.isEmpty()) {
-            bonuses.removeIf(bonus -> !allowedClasses.contains(bonus.getServiceClass()));
-            bonuses.removeIf(bonus -> bonus.getUpgradeServiceClass() != null && !allowedClasses.contains(bonus.getUpgradeServiceClass()));
+    public static void byCommonRouteClasses(Set<Bonus> bonuses, Set<ServiceClass.SERVICE_CLASS_TYPE> commonRouteClasses) {
+        if (!commonRouteClasses.isEmpty()) {
+            bonuses.removeIf(bonus -> bonus.getUpgradeServiceClass() != null && !commonRouteClasses.contains(bonus.getUpgradeServiceClass()));
+            bonuses.removeIf(bonus -> bonus.getUpgradeServiceClass() != null && !commonRouteClasses.contains(bonus.getServiceClass()));
         }
     }
 
     public static void byCommonTypes(Route route) {
-        byCommonAflTypes(route.getFlights());
-        byCommonScyteamTypes(route.getFlights());
+          byCommonAflTypes(route.getFlights());
+   //     byCommonScyteamTypes(route.getFlights()); there no bonuses in flights now
     }
 
     private static void byCommonAflTypes(List<Flight> flights) {

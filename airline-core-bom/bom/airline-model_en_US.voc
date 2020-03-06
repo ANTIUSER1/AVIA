@@ -148,7 +148,7 @@ ru.integrotech.airline.core.flight.PassengerChargeInfo.additionalDistance#phrase
 ru.integrotech.airline.core.flight.PassengerChargeInfo.additionalDistance#phrase.navigation = {additional distance} of {this}
 ru.integrotech.airline.core.flight.PassengerChargeInfo.airline#phrase.action = set the airline of {this} to {airline}
 ru.integrotech.airline.core.flight.PassengerChargeInfo.airline#phrase.navigation = {airline} of {this}
-ru.integrotech.airline.core.flight.PassengerChargeInfo.bonuseDistance#phrase.action = set the bonus distance of {this} to {bonuse distance}
+ru.integrotech.airline.core.flight.PassengerChargeInfo.bonuseDistance#phrase.action = set the bonus distance of {this} to {bonus distance}
 ru.integrotech.airline.core.flight.PassengerChargeInfo.bonuseDistance#phrase.navigation = {bonus distance} of {this}
 ru.integrotech.airline.core.flight.PassengerChargeInfo.bookingClassCode#phrase.action = set the booking class code of {this} to {booking class code}
 ru.integrotech.airline.core.flight.PassengerChargeInfo.bookingClassCode#phrase.navigation = {booking class code} of {this}
@@ -197,6 +197,33 @@ ru.integrotech.airline.core.flight.Route.scyteamBonuses#phrase.action = set the 
 ru.integrotech.airline.core.flight.Route.scyteamBonuses#phrase.navigation = {scyteam bonuse} of {this}
 ru.integrotech.airline.core.flight.Route.scyteamReverseZones#phrase.navigation = {scyteam reverse zones} of {this}
 ru.integrotech.airline.core.flight.Route.scyteamZones#phrase.navigation = {scyteam zones} of {this}
+ru.integrotech.airline.core.flight.Route.wrong#phrase.action = make it {wrong} that {this} is wrong
+ru.integrotech.airline.core.flight.Route.wrong#phrase.navigation = {this} is wrong
+
+# ru.integrotech.airline.core.info.PassengerLoyaltyInfo
+ru.integrotech.airline.core.info.PassengerLoyaltyInfo#concept.label = passenger loyalty info
+
+# ru.integrotech.airline.core.info.PassengerLoyaltyInfo.PAYMENT_TYPE
+ru.integrotech.airline.core.info.PassengerLoyaltyInfo.PAYMENT_TYPE#concept.label = PAYMENT TYPE
+ru.integrotech.airline.core.info.PassengerLoyaltyInfo.PAYMENT_TYPE.cash#instance.label = cash
+ru.integrotech.airline.core.info.PassengerLoyaltyInfo.PAYMENT_TYPE.points#instance.label = points
+
+# ru.integrotech.airline.core.info.PassengerLoyaltyInfo.STATUS
+ru.integrotech.airline.core.info.PassengerLoyaltyInfo.STATUS#concept.label = STATUS
+ru.integrotech.airline.core.info.PassengerLoyaltyInfo.STATUS.illegal#instance.label = illegal
+ru.integrotech.airline.core.info.PassengerLoyaltyInfo.STATUS.legal#instance.label = legal
+ru.integrotech.airline.core.info.PassengerLoyaltyInfo.accountingCode#phrase.action = set the accounting code of {this} to {accounting code}
+ru.integrotech.airline.core.info.PassengerLoyaltyInfo.accountingCode#phrase.navigation = {accounting code} of {this}
+ru.integrotech.airline.core.info.PassengerLoyaltyInfo.paymentType#phrase.action = set the payment type of {this} to {payment type}
+ru.integrotech.airline.core.info.PassengerLoyaltyInfo.paymentType#phrase.clearer = clear the payment type of {this}
+ru.integrotech.airline.core.info.PassengerLoyaltyInfo.paymentType#phrase.navigation = {payment type} of {this}
+ru.integrotech.airline.core.info.PassengerLoyaltyInfo.points#phrase.action = set the points of {this} to {points}
+ru.integrotech.airline.core.info.PassengerLoyaltyInfo.points#phrase.navigation = {points} of {this}
+ru.integrotech.airline.core.info.PassengerLoyaltyInfo.status#phrase.action = set the status of {this} to {status}
+ru.integrotech.airline.core.info.PassengerLoyaltyInfo.status#phrase.clearer = clear the status of {this}
+ru.integrotech.airline.core.info.PassengerLoyaltyInfo.status#phrase.navigation = {status} of {this}
+ru.integrotech.airline.core.info.PassengerLoyaltyInfo.tariffSum#phrase.action = set the tariff sum of {this} to {tariff sum}
+ru.integrotech.airline.core.info.PassengerLoyaltyInfo.tariffSum#phrase.navigation = {tariff sum} of {this}
 
 # ru.integrotech.airline.core.location.Airport
 ru.integrotech.airline.core.location.Airport#concept.label = airport

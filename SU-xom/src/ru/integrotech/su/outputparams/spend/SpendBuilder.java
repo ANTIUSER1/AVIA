@@ -166,7 +166,9 @@ public class SpendBuilder {
      * or calls from ODM rules */
     public void executeFiltersByCommonTypes(List<Route> routes, SpendInput spendInput) {
         for (Route route : routes) {
-        	BonusFilters.byCommonTypes(route);
+            if (!route.isWrong()) {
+                BonusFilters.byCommonTypes(route);
+            }
         }
     }
     
@@ -183,24 +185,26 @@ public class SpendBuilder {
         String award = spendInput.getAwardType();
 
         if (route.isOperatesBy(this.afl)) {
-            BonusFilters.byInputParams(route.getAflBonuses(), serviceClassType, route.getOrigin(), award, isRoundTrip, route.isDirect());
+            BonusFilters.byInputParams(route.getAflBonuses(), serviceClassType, route.getOrigin(), award, isRoundTrip, route.isDirect(), route.isWrong());
             BonusFilters.byMilesInterval(route.getAflBonuses(), milesMin, milesMax);
             for (Flight flight : route.getFlights()) {
-                BonusFilters.byInputParams(flight.getAflBonuses(), serviceClassType, flight.getOrigin(), award, isRoundTrip, false);
+                BonusFilters.byInputParams(flight.getAflBonuses(), serviceClassType, flight.getOrigin(), award, isRoundTrip, false, route.isWrong());
                 BonusFilters.byMilesInterval(flight.getAflBonuses(), milesMin, milesMax);
             }
         }
 
         if (!aflOnly && route.otherAirlinesIsPresent(this.afl)) {
-            BonusFilters.byInputParams(route.getScyteamBonuses(), serviceClassType, route.getOrigin(), award, isRoundTrip, route.isDirect());
+            BonusFilters.byInputParams(route.getScyteamBonuses(), serviceClassType, route.getOrigin(), award, isRoundTrip, route.isDirect(), route.isWrong());
             BonusFilters.byMilesInterval(route.getScyteamBonuses(), milesMin, milesMax);
             for (Flight flight : route.getFlights()) {
-                BonusFilters.byInputParams(flight.getScyteamBonuses(), serviceClassType, flight.getOrigin(), award, isRoundTrip, false);
+                BonusFilters.byInputParams(flight.getScyteamBonuses(), serviceClassType, flight.getOrigin(), award, isRoundTrip, false, route.isWrong());
                 BonusFilters.byMilesInterval(flight.getScyteamBonuses(), milesMin, milesMax);
             }
         }
 
-        BonusFilters.byCommonTypes(route);
+        if (!route.isWrong()) {
+            BonusFilters.byCommonTypes(route);
+        }
     }
     
     /* this is a business logic, it should works by ODM rules 
@@ -213,16 +217,16 @@ public class SpendBuilder {
         String award = spendInput.getAwardType();
 
         if (route.isOperatesBy(this.afl)) {
-            BonusFilters.byInputParams(route.getAflBonuses(), serviceClassType, route.getOrigin(), award, isRoundTrip, route.isDirect());
+            BonusFilters.byInputParams(route.getAflBonuses(), serviceClassType, route.getOrigin(), award, isRoundTrip, route.isDirect(), route.isWrong());
              for (Flight flight : route.getFlights()) {
-                  BonusFilters.byInputParams(flight.getAflBonuses(), serviceClassType, flight.getOrigin(), award, isRoundTrip, false);
+                  BonusFilters.byInputParams(flight.getAflBonuses(), serviceClassType, flight.getOrigin(), award, isRoundTrip, false, route.isWrong());
             }
         }
 
         if (!aflOnly && route.otherAirlinesIsPresent(this.afl)) {
-            BonusFilters.byInputParams(route.getScyteamBonuses(), serviceClassType, route.getOrigin(), award, isRoundTrip, route.isDirect());
+            BonusFilters.byInputParams(route.getScyteamBonuses(), serviceClassType, route.getOrigin(), award, isRoundTrip, route.isDirect(), route.isWrong());
             for (Flight flight : route.getFlights()) {
-                BonusFilters.byInputParams(flight.getScyteamBonuses(), serviceClassType, flight.getOrigin(), award, isRoundTrip, false);
+                BonusFilters.byInputParams(flight.getScyteamBonuses(), serviceClassType, flight.getOrigin(), award, isRoundTrip, false, route.isWrong());
             }
         }
    }

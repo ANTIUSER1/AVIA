@@ -1,7 +1,9 @@
-package ru.integrotech.su.unifyTests;
+package ru.integrotech.su.unifyTest;
 
 import com.google.gson.JsonElement;
 import org.junit.Assert;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import ru.integrotech.su.common.Location;
 import ru.integrotech.su.inputparams.charge.ChargeInput;
@@ -9,33 +11,53 @@ import ru.integrotech.su.mock.MockLoader;
 import ru.integrotech.su.outputparams.charge.ChargeBuilder;
 import ru.integrotech.su.outputparams.charge.ChargeRoute;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.util.*;
 
-public class OutsideChargeTest extends UnifyBaseTest {
+/*Unify test for ru.aeroflot.fmc.io.charge
+* to create new tests, follow next steps
+* 1. Create root path for ChargeRoute unify tests in your local machine
+* 2. Define path to this directory in test.ru.aeroflot.fmc.resources.unifyTest.properties in uniChargeTestDirectory property,
+*    for example " uniChargeTestDirectory=D:/fpm_tests/charge/ "
+* 3. Create test case directory inside root directory, for example "SVO-LED-00"
+* 4. Put file "request.json" inside SVO-LED-00 directory
+* 5. Put file "expectedResponse.json" inside SVO-LED-00 directory
+* 6. Create another test directory, for example "LED-UFA-00" and repeat steps 4 and 5 for this new directory.
+* 7. Run public void test(). Program test each folder, test is OK if actual response is equals to your expectedResponse.json
+*    Program will say OK if test is ok or write right answer in exact directory as "actualResponse.json".
+ */
 
-    private static final String ROOT_TEST_DIRECTORY_PATH = "outChargeTestDirectory";
+public class UnifyChargeTest extends UnifyBaseTest {
+
+    private static final String ROOT_TEST_DIRECTORY_PATH = "uniChargeTestDirectory";
     private static final String SUCCESS = "OK\n";
     private static final String INCORRECT = "INCORRECT\n";
     private static final String NOT_FOUND = "not found\n";
     private static final String EXTRA = "extra\n";
 
-    public OutsideChargeTest() {
-        super(MockLoader.ofMockRegisters(ChargeBuilder.getRegisterNames()), ChargeRoute.class);
+    @BeforeClass
+    public static void updateRegisters() {
+        MockLoader.getInstance().updateRegisters(
+                                    MockLoader.REGISTERS_TYPE.REAL,
+                                    ChargeBuilder.getRegisterNames());
+    }
+
+    private ChargeBuilder chargeBuilder;
+
+    @Before
+    public void init() {
+        this.chargeBuilder = ChargeBuilder.of(MockLoader.getInstance().getRegisterCache());
     }
 
     @Override
     protected boolean isCorrectCase(String pathToCaseFolder) throws IOException {
-        JsonElement jsonElement = this.common.getLoader().loadJson(pathToCaseFolder + REQUEST_FILE_NAME);
-        ChargeInput chargeInput = this.common.getTestsCache().loadChargeInputParams(jsonElement);
+        MockLoader loader = MockLoader.getInstance();
+        JsonElement jsonElement = loader.loadJson(pathToCaseFolder + REQUEST_FILE_NAME);
+        ChargeInput chargeInput = loader.getTestsCache().loadChargeInputParams(jsonElement);
+        List<ChargeRoute> actualChargeRoutes = this.chargeBuilder.getChargeRoutes(chargeInput);
 
-        jsonElement = this.common.getLoader().loadJson(pathToCaseFolder + ACTUAL_RESPONSE_FILE_NAME);
-        List<ChargeRoute> actualChargeRoutes = this.common.getTestsCache().loadChargeRoutes(jsonElement);
-
-        jsonElement = this.common.getLoader().loadJson(pathToCaseFolder + EXPECTED_RESPONSE_FILE_NAME);
-        List<ChargeRoute> expectedChargeRoutes = this.common.getTestsCache().loadChargeRoutes(jsonElement);
+        jsonElement = loader.loadJson(pathToCaseFolder + EXPECTED_RESPONSE_FILE_NAME);
+        List<ChargeRoute> expectedChargeRoutes = loader.getTestsCache().loadChargeRoutes(jsonElement);
 
         String testHeader = this.buildReportHeader(chargeInput);
         String testBody = this.compareChargeRoute(expectedChargeRoutes, actualChargeRoutes);
@@ -54,16 +76,7 @@ public class OutsideChargeTest extends UnifyBaseTest {
         Assert.assertTrue(executeTest(ROOT_TEST_DIRECTORY_PATH));
     }
 
-    @Override
-    protected <T> void printTestResults(boolean testIsOK, List<T> actualRoutes, String pathToCaseFolder) throws FileNotFoundException, UnsupportedEncodingException {
-        if (testIsOK) {
-            System.out.printf("Case in directory %s is OK\n", pathToCaseFolder);
-        } else {
-            System.out.printf("Case in directory %s is INCORRECT\n", pathToCaseFolder);
-        }
-    }
-
-    private String printLocation(Location location) {
+    protected String printLocation(Location location) {
         StringBuilder builder = new StringBuilder();
         if (location == null) {
             builder.append(String.format("|  %-20s %-10s   |\n",
@@ -95,7 +108,7 @@ public class OutsideChargeTest extends UnifyBaseTest {
         return builder.toString();
     }
 
-    private String buildReportHeader(ChargeInput chargeInput) {
+    protected String buildReportHeader(ChargeInput chargeInput) {
         StringBuilder builder = new StringBuilder();
         builder.append("----------- CHARGE TEST -------------\n");
         builder.append("|  Parameters:                       |\n");
@@ -128,7 +141,7 @@ public class OutsideChargeTest extends UnifyBaseTest {
     }
 
 
-    private String compareChargeRoute(List<ChargeRoute> expected, List<ChargeRoute> actual) {
+    protected String compareChargeRoute(List<ChargeRoute> expected, List<ChargeRoute> actual) {
         StringBuilder builder = new StringBuilder();
         builder.append(String.format("%-26s     %s\n", " --- R O U T E ---", "RESULT"));
         builder.append("\n");

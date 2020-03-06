@@ -1,10 +1,8 @@
-package ru.integrotech.su.unifyTests;
+package ru.integrotech.su.unifyTest;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import ru.integrotech.airline.register.RegisterLoader;
-import ru.integrotech.su.mock.MockLoader;
-import ru.integrotech.su.test.CommonTest;
 
 import java.io.*;
 import java.util.List;
@@ -21,12 +19,6 @@ public abstract class UnifyBaseTest {
     protected static final String ACTUAL_RESPONSE_FILE_NAME = "actualResponse.json";
     protected static final String REPORT_FILE_NAME = "report.txt";
 
-    final CommonTest common;
-
-
-    public <T extends Comparable> UnifyBaseTest(MockLoader loader, Class<T> type) {
-        this.common = CommonTest.of(loader, type);
-    }
 
     protected boolean executeTest(String rootTestDirectoryPath) {
         InputStream is = RegisterLoader.class.getClassLoader().getResourceAsStream(PROPERTIES);

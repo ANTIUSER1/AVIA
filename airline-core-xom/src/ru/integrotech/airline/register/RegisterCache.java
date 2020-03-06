@@ -46,7 +46,7 @@ public class RegisterCache {
     
     private List<MilesRule> milesRules;
 
-    private List<TicketDesignator> ticketDesignators;
+    private Map<String, Integer> loyaltyLevelCodeMap;
 
     public Collection<Airline> getAirlines() {
         return this.airlineMap.values();
@@ -116,8 +116,8 @@ public class RegisterCache {
 		return milesRules;
 	}
 
-    public List<TicketDesignator> getTicketDesignators() {
-        return ticketDesignators;
+    public Map<String, Integer> getLoyaltyLevelCodeMap() {
+        return loyaltyLevelCodeMap;
     }
 
     public void update(String registerName, JsonElement jsonElement) {
@@ -161,8 +161,8 @@ public class RegisterCache {
             case "mileAccrualRule":
                 this.initMilesRules(jsonElement);
                 break;
-            case "ticketDesignators":
-                this.initTicketDesignators(jsonElement);
+            case "localLoyaltyLevelCode":
+                this.initLoyaltyLevelCodes(jsonElement);
                 break;
         }
     }
@@ -178,7 +178,7 @@ public class RegisterCache {
         this.loyaltyMap = null;
         this.invalidAirportCodes = null;
         this.milesRules = null;
-        this.ticketDesignators = null;
+        this.loyaltyLevelCodeMap = null;
     }
 
 
@@ -433,13 +433,12 @@ public class RegisterCache {
         this.milesRules = new ArrayList<>(Arrays.asList(milesRules));
     }
 
-    private void initTicketDesignators(JsonElement jsonElement) {
-        TicketDesignator[] ticketDesignators = parseJsonElement(TicketDesignator[].class, jsonElement);
-        for (TicketDesignator designator : ticketDesignators) {
-            String newMask = designator.getMask().replaceAll("\\*", ".*").replaceAll("#", "\\\\d");
-            designator.setMask(newMask);
+    private void initLoyaltyLevelCodes(JsonElement jsonElement) {
+        LoyaltyLevelCodeRecord[] records = parseJsonElement(LoyaltyLevelCodeRecord[].class, jsonElement);
+        this.loyaltyLevelCodeMap = new HashMap<>();
+        for (LoyaltyLevelCodeRecord record : records) {
+            this.loyaltyLevelCodeMap.put(record.getLevel(), record.getPercent());
         }
-        this.ticketDesignators = new ArrayList<TicketDesignator>(Arrays.asList(ticketDesignators));
     }
 
     public   <T> T parseJsonElement(Class<T> toClass, JsonElement jsonElement) throws JsonIOException, JsonSyntaxException {

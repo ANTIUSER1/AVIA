@@ -2,16 +2,15 @@ package ru.integrotech.su.toString;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import ru.integrotech.airline.core.flight.Route;
-import ru.integrotech.airline.register.RegisterLoader;
 import ru.integrotech.su.inputparams.charge.ChargeInput;
 import ru.integrotech.su.mock.MockLoader;
 import ru.integrotech.su.outputparams.charge.ChargeBuilder;
 import ru.integrotech.su.outputparams.charge.ChargeRoute;
 import ru.integrotech.su.outputparams.charge.ResultMilesCharge;
-import ru.integrotech.su.test.CommonTest;
 
 import java.util.List;
 
@@ -19,15 +18,18 @@ import java.util.List;
 *  use to check proper performance listOf toString methods*/
 public class ChargeToString {
 
-    private CommonTest common;
-
-    public ChargeToString() {
-        this.common = CommonTest.of(MockLoader.ofRealRegisters());
-    }
-
     @BeforeClass
     public static void updateRegisters() {
-        RegisterLoader.updateInstance(ChargeBuilder.getRegisterNames());
+        MockLoader.getInstance().updateRegisters(
+                                    MockLoader.REGISTERS_TYPE.REAL,
+                                    ChargeBuilder.getRegisterNames());
+    }
+
+    private ChargeBuilder chargeBuilder;
+
+    @Before
+    public void init() {
+        this.chargeBuilder = ChargeBuilder.of(MockLoader.getInstance().getRegisterCache());
     }
 
     @Test
@@ -39,7 +41,7 @@ public class ChargeToString {
                                                  "sU", // airline code
                                                  "Basic", //loyalty
                                                  false); //is round
-        List<ChargeRoute> result = this.common.getChargeBuilder().getChargeRoutes(chargeInput);
+        List<ChargeRoute> result = this.chargeBuilder.getChargeRoutes(chargeInput);
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String jsonResult = gson.toJson(result);
         System.out.println(jsonResult);
@@ -56,11 +58,10 @@ public class ChargeToString {
                 "basic", // tierLevelCode
                 false //isRound
         );
-        ChargeBuilder builder = this.common.getChargeBuilder();
-        List<Route> routes = builder.getRoutes(chargeInput);
-        builder.getFactor(chargeInput);
+        List<Route> routes = this.chargeBuilder.getRoutes(chargeInput);
+        this.chargeBuilder.getFactor(chargeInput);
         /* ODM rules works here*/
-        ResultMilesCharge result = builder.buildResult(routes, chargeInput);
+        ResultMilesCharge result = this.chargeBuilder.buildResult(routes, chargeInput);
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String jsonResult = gson.toJson(result);
         System.out.println(jsonResult);

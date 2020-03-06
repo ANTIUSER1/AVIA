@@ -274,10 +274,10 @@ public class Route
     public java.util.Set scyteamBonuses domain 0,* class ru.integrotech.airline.core.bonus.Bonus;
     public readonly string scyteamReverseZones;
     public readonly string scyteamZones;
+    public boolean wrong;
     public int compareTo(ru.integrotech.airline.core.flight.Route arg);
     public static string createCode(java.util.List arg domain 0,* class ru.integrotech.airline.core.flight.Flight);
     public boolean equals(object arg);
-    public java.util.Set getAllowedClasses(ru.integrotech.airline.core.airline.Airline arg) domain 0,* class ru.integrotech.airline.core.airline.ServiceClass.SERVICE_CLASS_TYPE;
     public java.util.List getFlights(ru.integrotech.airline.core.airline.Airline arg) domain 0,* class ru.integrotech.airline.core.flight.Flight;
     public int hashCode();
     public boolean isOperatesBy(ru.integrotech.airline.core.airline.Airline arg);
@@ -290,6 +290,39 @@ public class Route
     public void removeAflBonus(ru.integrotech.airline.core.bonus.Bonus arg);
     public void removeScyteamBonus(ru.integrotech.airline.core.bonus.Bonus arg);
     public string toString();
+}
+
+package ru.integrotech.airline.core.info;
+
+
+public class PassengerLoyaltyInfo
+{
+
+    static public final class PAYMENT_TYPE
+            extends java.lang.Enum
+    {
+        domain {static cash, static points}
+        public static final readonly ru.integrotech.airline.core.info.PassengerLoyaltyInfo.PAYMENT_TYPE cash;
+        public static final readonly ru.integrotech.airline.core.info.PassengerLoyaltyInfo.PAYMENT_TYPE points;
+        public static ru.integrotech.airline.core.info.PassengerLoyaltyInfo.PAYMENT_TYPE valueOf(string arg);
+        public static ru.integrotech.airline.core.info.PassengerLoyaltyInfo.PAYMENT_TYPE[] values();
+    }
+
+    static public final class STATUS
+            extends java.lang.Enum
+    {
+        domain {static legal, static illegal}
+        public static final readonly ru.integrotech.airline.core.info.PassengerLoyaltyInfo.STATUS illegal;
+        public static final readonly ru.integrotech.airline.core.info.PassengerLoyaltyInfo.STATUS legal;
+        public static ru.integrotech.airline.core.info.PassengerLoyaltyInfo.STATUS valueOf(string arg);
+        public static ru.integrotech.airline.core.info.PassengerLoyaltyInfo.STATUS[] values();
+    }
+    public string accountingCode;
+    public ru.integrotech.airline.core.info.PassengerLoyaltyInfo.PAYMENT_TYPE paymentType;
+    public int points;
+    public ru.integrotech.airline.core.info.PassengerLoyaltyInfo.STATUS status;
+    public int tariffSum;
+    public static ru.integrotech.airline.core.info.PassengerLoyaltyInfo of(string arg1, int arg2, string arg3);
 }
 
 package ru.integrotech.airline.core.location;
