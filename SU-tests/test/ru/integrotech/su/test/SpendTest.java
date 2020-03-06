@@ -1,11 +1,12 @@
 package ru.integrotech.su.test;
 
 import com.google.gson.*;
-
 import org.junit.Assert;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
-
 import ru.integrotech.su.inputparams.spend.SpendInput;
+import ru.integrotech.su.mock.MockLoader;
 import ru.integrotech.su.outputparams.spend.SpendBuilder;
 import ru.integrotech.su.outputparams.spend.SpendRoute;
 
@@ -18,17 +19,29 @@ public class SpendTest {
 
     private static final String RESULTS_FOLDER = "test/ru/integrotech/su/resources/results/spendRoutes/";
 
-    private final CommonTest common;
+    @BeforeClass
+    public static void updateRegisters() {
+        MockLoader.getInstance().updateRegisters(
+                                    MockLoader.REGISTERS_TYPE.MOCK,
+                                    SpendBuilder.getRegisterNames());
+    }
 
-    public SpendTest() {
-        this.common = CommonTest.of(SpendRoute.class, SpendBuilder.getRegisterNames());
+    private Comparator comparator;
+
+    private SpendBuilder spendBuilder;
+
+    @Before
+    public void init(){
+        this.comparator = Comparator.of(SpendRoute.class);
+        this.spendBuilder = SpendBuilder.of(MockLoader.getInstance().getRegisterCache());
     }
 
     private List<SpendRoute> getExpected(String jsonName) {
+        MockLoader loader = MockLoader.getInstance();
         List<SpendRoute> expectedSpendRoutes = null;
         try {
-            JsonElement jsonElement = this.common.getLoader().loadJson(RESULTS_FOLDER + jsonName);
-            expectedSpendRoutes = this.common.getTestsCache().loadSpendRoutes(jsonElement);
+            JsonElement jsonElement = loader.loadJson(RESULTS_FOLDER + jsonName);
+            expectedSpendRoutes = loader.getTestsCache().loadSpendRoutes(jsonElement);
         } catch (JsonIOException
                 | JsonSyntaxException
                 | IOException e) {
@@ -37,7 +50,6 @@ public class SpendTest {
         return expectedSpendRoutes;
     }
 
-    /*
     ////////////////////////////////////////////
     //use this method for visualization actual//
     ////////////////////////////////////////////
@@ -55,8 +67,8 @@ public class SpendTest {
                 false, // afl only
                 false // is round trip
         );
-        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
-        this.common.sort(actualSpend);
+        List<SpendRoute> actualSpend = this.spendBuilder.getSpendRoutes(spendInput);
+        this.comparator.sort(actualSpend);
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String jsonResult = gson.toJson(actualSpend);
         System.out.println(jsonResult);
@@ -69,12 +81,11 @@ public class SpendTest {
     @Test
     public void PRINT_SAVED() {
         List<SpendRoute> actualSpend = getExpected("FITS-MILES-INTERVAL.json");
-        this.common.sort(actualSpend);
+        this.comparator.sort(actualSpend);
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String jsonResult = gson.toJson(actualSpend);
         System.out.println(jsonResult);
     }
-    */
 
 
     @Test
@@ -91,9 +102,9 @@ public class SpendTest {
                 true, // afl only
                 false // is round trip
                 );
-        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> actualSpend = this.spendBuilder.getSpendRoutes(spendInput);
         List<SpendRoute> expectedSpend = this.getExpected("SVO-VVO-01.json");
-        this.common.testIsEquals(expectedSpend, actualSpend);
+        this.comparator.testIsEquals(expectedSpend, actualSpend);
     }
 
     @Test
@@ -110,9 +121,9 @@ public class SpendTest {
                 true, // afl only
                 false // is round trip
         );
-        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> actualSpend = this.spendBuilder.getSpendRoutes(spendInput);
         List<SpendRoute> expectedSpend = this.getExpected("SVO-VVO-02.json");
-        this.common.testIsPresent(expectedSpend, actualSpend);
+        this.comparator.testIsPresent(expectedSpend, actualSpend);
     }
 
     @Test
@@ -129,9 +140,9 @@ public class SpendTest {
                 false, // afl only
                 false // is round trip
         );
-        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> actualSpend = this.spendBuilder.getSpendRoutes(spendInput);
         List<SpendRoute> expectedSpend = this.getExpected("SVO-AER-01.json");
-        this.common.testIsPresent(expectedSpend, actualSpend);
+        this.comparator.testIsPresent(expectedSpend, actualSpend);
     }
 
     /*
@@ -151,9 +162,9 @@ public class SpendTest {
                 false, // afl only
                 null // is round trip
         );
-        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> actualSpend = this.spendBuilder.getSpendRoutes(spendInput);
         List<SpendRoute> expectedSpend = this.getExpected("SVO-AER-02.json");
-        this.common.testIsPresent(expectedSpend, actualSpend);
+        this.comparator.testIsPresent(expectedSpend, actualSpend);
     }
 
     @Test
@@ -170,9 +181,9 @@ public class SpendTest {
                 false, // afl only
                 false // is round trip
         );
-        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> actualSpend = this.spendBuilder.getSpendRoutes(spendInput);
         List<SpendRoute> expectedSpend = this.getExpected("SVO-KHV-01.json");
-        this.common.testIsPresent(expectedSpend, actualSpend);
+        this.comparator.testIsPresent(expectedSpend, actualSpend);
     }
 
     @Test
@@ -189,9 +200,9 @@ public class SpendTest {
                 false, // afl only
                 false // is round trip
         );
-        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> actualSpend = this.spendBuilder.getSpendRoutes(spendInput);
         List<SpendRoute> expectedSpend = this.getExpected("SVO-KJA-01.json");
-        this.common.testIsPresent(expectedSpend, actualSpend);
+        this.comparator.testIsPresent(expectedSpend, actualSpend);
     }
 
     @Test
@@ -208,9 +219,9 @@ public class SpendTest {
                 false, // afl only
                 false // is round trip
         );
-        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> actualSpend = this.spendBuilder.getSpendRoutes(spendInput);
         List<SpendRoute> expectedSpend = this.getExpected("SVO-ROV-01.json");
-        this.common.testIsPresent(expectedSpend, actualSpend);
+        this.comparator.testIsPresent(expectedSpend, actualSpend);
     }
 
     @Test
@@ -227,9 +238,9 @@ public class SpendTest {
                 false, // afl only
                 false // is round trip
         );
-        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> actualSpend = this.spendBuilder.getSpendRoutes(spendInput);
         List<SpendRoute> expectedSpend = this.getExpected("SVO-SVX-01.json");
-        this.common.testIsPresent(expectedSpend, actualSpend);
+        this.comparator.testIsPresent(expectedSpend, actualSpend);
     }
 
     @Test
@@ -246,9 +257,9 @@ public class SpendTest {
                 false, // afl only
                 false // is round trip
         );
-        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> actualSpend = this.spendBuilder.getSpendRoutes(spendInput);
         List<SpendRoute> expectedSpend = this.getExpected("SVO-UFA-01.json");
-        this.common.testIsPresent(expectedSpend, actualSpend);
+        this.comparator.testIsPresent(expectedSpend, actualSpend);
     }
 
     // http://support.integrotechnologies.ru/issues/20890
@@ -266,9 +277,9 @@ public class SpendTest {
                 false, // afl only
                 false // is round trip
         );
-        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> actualSpend = this.spendBuilder.getSpendRoutes(spendInput);
         List<SpendRoute> expectedSpend = this.getExpected("FITS-MILES-INTERVAL.json");
-        this.common.testIsPresent(expectedSpend, actualSpend);
+        this.comparator.testIsPresent(expectedSpend, actualSpend);
     }
 
     // http://support.integrotechnologies.ru/issues/20888
@@ -287,9 +298,9 @@ public class SpendTest {
                 false, // afl only
                 false // is round trip
         );
-        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> actualSpend = this.spendBuilder.getSpendRoutes(spendInput);
         List<SpendRoute> expectedSpend = this.getExpected("SVO-LED-01.json");
-        this.common.testIsEquals(expectedSpend, actualSpend);
+        this.comparator.testIsEquals(expectedSpend, actualSpend);
     }
 
     // http://support.integrotechnologies.ru/issues/20890
@@ -307,9 +318,9 @@ public class SpendTest {
                 false, // afl only
                 false // is round trip
         );
-        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> actualSpend = this.spendBuilder.getSpendRoutes(spendInput);
         List<SpendRoute> expectedSpend = this.getExpected("SVO-LED-direct-01.json");
-        this.common.testIsPresent(expectedSpend, actualSpend);
+        this.comparator.testIsPresent(expectedSpend, actualSpend);
     }
 
     // http://support.integrotechnologies.ru/issues/20890
@@ -327,9 +338,9 @@ public class SpendTest {
                 false, // afl only
                 false // is round trip
         );
-        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> actualSpend = this.spendBuilder.getSpendRoutes(spendInput);
         List<SpendRoute> expectedSpend = this.getExpected("SVO-LED-direct-02.json");
-        this.common.testIsPresent(expectedSpend, actualSpend);
+        this.comparator.testIsPresent(expectedSpend, actualSpend);
     }
 
     // http://support.integrotechnologies.ru/issues/20890
@@ -347,9 +358,9 @@ public class SpendTest {
                 false, // afl only
                 false // is round trip
         );
-        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> actualSpend = this.spendBuilder.getSpendRoutes(spendInput);
         List<SpendRoute> expectedSpend = this.getExpected("SVO-LED-direct-01.json");
-        this.common.testIsNotPresent(expectedSpend, actualSpend);
+        this.comparator.testIsNotPresent(expectedSpend, actualSpend);
     }
 
     // http://support.integrotechnologies.ru/issues/20890
@@ -367,9 +378,9 @@ public class SpendTest {
                 false, // afl only
                 false // is round trip
         );
-        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> actualSpend = this.spendBuilder.getSpendRoutes(spendInput);
         List<SpendRoute> expectedSpend = this.getExpected("SVO-LED-01.json");
-        this.common.testIsNotPresent(expectedSpend, actualSpend);
+        this.comparator.testIsNotPresent(expectedSpend, actualSpend);
     }
 
     // http://support.integrotechnologies.ru/issues/20894
@@ -388,9 +399,9 @@ public class SpendTest {
                 true, // afl only
                 false // is round trip
         );
-        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> actualSpend = this.spendBuilder.getSpendRoutes(spendInput);
         List<SpendRoute> expectedSpend = this.getExpected("SVO-ROV-SVX.json");
-        this.common.testIsPresent(expectedSpend, actualSpend);
+        this.comparator.testIsPresent(expectedSpend, actualSpend);
     }
 
     // http://support.integrotechnologies.ru/issues/20894
@@ -409,9 +420,9 @@ public class SpendTest {
                 true, // afl only
                 false // is round trip
         );
-        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> actualSpend = this.spendBuilder.getSpendRoutes(spendInput);
         List<SpendRoute> expectedSpend = this.getExpected("KJA-SVO-VVO.json");
-        this.common.testIsPresent(expectedSpend, actualSpend);
+        this.comparator.testIsPresent(expectedSpend, actualSpend);
     }
 
     // http://support.integrotechnologies.ru/issues/21198
@@ -430,7 +441,7 @@ public class SpendTest {
                 false, // afl only
                 false // is round trip
         );
-        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> actualSpend = this.spendBuilder.getSpendRoutes(spendInput);
         Collections.sort(actualSpend);
 
         for (int i = 0; i < actualSpend.size() - 1; i++) {
@@ -453,9 +464,9 @@ public class SpendTest {
                 false, // afl only
                 false // is round trip
         );
-        List<SpendRoute> actualSpend = this.common.getSpendBuilder().getSpendRoutes(spendInput);
+        List<SpendRoute> actualSpend = this.spendBuilder.getSpendRoutes(spendInput);
         List<SpendRoute> expectedSpend = this.getExpected("SVO-WORLD.json");
-        this.common.testIsEquals(expectedSpend, actualSpend);
+        this.comparator.testIsEquals(expectedSpend, actualSpend);
 
     }
 }

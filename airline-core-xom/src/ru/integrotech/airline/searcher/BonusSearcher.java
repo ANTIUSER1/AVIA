@@ -43,47 +43,49 @@ public class BonusSearcher {
     private void findAflBonuses(Route route) {
         Airport.ZONE zoneFrom = route.getOrigin().getAflZone();
         Airport.ZONE zoneTo = route.getDestination().getAflZone();
+        Set<ServiceClass.SERVICE_CLASS_TYPE> commonRouteClasses = route.getCommonRouteClasses(afl);
         Set<Bonus> bonuses = new HashSet<>();
-        if (!route.isDirect()) {
-            if (!this.isWrong(route)) {
 
+        if (route.isDirect()) {
+            bonuses.addAll(this.findBonuses(String.format("%s%s%s", zoneFrom, zoneTo, "A")));
+            bonuses.addAll(this.findBonuses(String.format("%s%s%s", zoneTo, zoneFrom, "A")));
+
+        } else {
+            if (route.isWrong()) {
+                for (Flight flight : route.getFlights()) {
+                    this.findAflBonuses(flight);
+                }
+
+            } else {
                 Airport.ZONE zoneVia = route.getFlights().get(0).getDestination().getAflZone();
                 bonuses.addAll(this.findBonuses(String.format("%s%s%s%s", zoneFrom, zoneVia, zoneTo, "A")));
                 bonuses.addAll(this.findBonuses(String.format("%s%s%s%s", zoneTo, zoneVia, zoneFrom, "A")));
 
-                if (bonuses.isEmpty()
-                        && (zoneFrom != zoneTo)) {
-
+                if (bonuses.isEmpty() && (zoneFrom != zoneTo)) {
                     bonuses.addAll(this.findBonuses(String.format("%s%s%s", zoneFrom, zoneTo, "A")));
                     bonuses.addAll(this.findBonuses(String.format("%s%s%s", zoneTo, zoneFrom, "A")));
                 }
+
+                if (bonuses.isEmpty()) {
+                    for (Flight flight : route.getFlights()) {
+                        this.findAflBonuses(flight);
+                        BonusFilters.byCommonRouteClasses(flight.getAflBonuses(), commonRouteClasses);
+                    }
+                }
             }
-        } else {
-            bonuses.addAll(this.findBonuses(String.format("%s%s%s", zoneFrom, zoneTo, "A")));
-            bonuses.addAll(this.findBonuses(String.format("%s%s%s", zoneTo, zoneFrom, "A")));
         }
 
-        Set<ServiceClass.SERVICE_CLASS_TYPE> allowedClasses = route.getAllowedClasses(afl);
-        if (bonuses.isEmpty() && !route.isDirect()) {
-            for (Flight flight : route.getFlights()) {
-                this.findAflBonuses(flight, allowedClasses);
-            }
-        } else {
-            BonusFilters.byAllowedClasses(bonuses, allowedClasses);
+        if (!bonuses.isEmpty()) {
+            BonusFilters.byCommonRouteClasses(bonuses, commonRouteClasses);
             BonusFilters.byExpiredDate(bonuses, new Date());
             route.getAflBonuses().addAll(bonuses);
         }
     }
 
-    private boolean isWrong (Route route) {
-        return this.registerCache.isWrongRoute(route.getCityCodes());
-    }
-
-    private void findAflBonuses(Flight flight, Set<ServiceClass.SERVICE_CLASS_TYPE> allowedClasses) {
+    private void findAflBonuses(Flight flight) {
         Set<Bonus> bonuses = new HashSet<>();
         bonuses.addAll(findBonuses(flight.getAflZones()));
         bonuses.addAll(findBonuses(flight.getAflReverseZones()));
-        BonusFilters.byAllowedClasses(bonuses, allowedClasses);
         BonusFilters.byExpiredDate(bonuses, new Date());
         flight.setAflBonuses(bonuses);
     }

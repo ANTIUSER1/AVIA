@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>chargeLoyalty</name>
+  <uuid>dbaa2225-a47f-47e9-abbd-86c91907ee67</uuid>
+</ilog.rules.studio.model.base:RulePackage>

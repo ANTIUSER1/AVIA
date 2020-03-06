@@ -1,16 +1,17 @@
 package ru.integrotech.su.toString;
 
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import ru.integrotech.airline.core.bonus.Bonus;
 import ru.integrotech.airline.core.flight.Flight;
 import ru.integrotech.airline.core.flight.Route;
-import ru.integrotech.airline.register.RegisterLoader;
+import ru.integrotech.airline.searcher.BonusSearcher;
 import ru.integrotech.su.inputparams.route.RoutesInput;
 import ru.integrotech.su.mock.MockLoader;
+import ru.integrotech.su.mock.MockLoader.REGISTERS_TYPE;
 import ru.integrotech.su.outputparams.route.RoutesBuilder;
 import ru.integrotech.su.outputparams.spend.SpendBuilder;
-import ru.integrotech.su.test.CommonTest;
 
 import java.util.Collections;
 import java.util.List;
@@ -19,31 +20,21 @@ import java.util.List;
 *  use to check proper performance listOf toString methods*/
 public class RoutesToString {
 
-    private static final String[] ALL_REGISTER_NAMES = new String[]
-                    {"airline",
-                    "region",
-                    "country",
-                    "city",
-                    "airport",
-                    "pair",
-                    "serviceClassLimit",
-                    "tariff",
-                    "bonusRoute",
-                    "award",
-                    "wrongRoute",
-                    "tierLevel",
-                    "milesRule",
-                    "ticketDesignators"};
-
-    private CommonTest common;
-
     @BeforeClass
     public static void updateRegisters() {
-        RegisterLoader.updateInstance(SpendBuilder.getRegisterNames());
+        MockLoader.getInstance().updateRegisters(
+                                    REGISTERS_TYPE.REAL,
+                                    SpendBuilder.getRegisterNames());
     }
 
-    public RoutesToString() {
-        this.common = CommonTest.of(MockLoader.ofRealRegisters());
+    private RoutesBuilder routesBuilder;
+
+    private BonusSearcher bonusSearcher;
+
+    @Before
+    public void init() {
+        this.routesBuilder = RoutesBuilder.of(MockLoader.getInstance().getRegisterCache());
+        this.bonusSearcher = BonusSearcher.of(MockLoader.getInstance().getRegisterCache());
     }
 
     @Test
@@ -53,11 +44,11 @@ public class RoutesToString {
                 "Airport", //destination type
                 "LED", // origin
                 "Airport", //destination type
-                "NUE", //destination
+                "AER", //destination
                 null //airline code
         );
 
-        List<Route> routes = this.common.getRoutesBuilder().getRoutes(routesInput);
+        List<Route> routes = this.routesBuilder.getRoutes(routesInput);
         Collections.sort(routes);
         for (Route route : routes) {
             System.out.println(route);
@@ -69,18 +60,17 @@ public class RoutesToString {
 
         RoutesInput routesInput = RoutesInput.of(
         		  "Airport", //destination type
-                  "LED", // origin
+                  "SVO", // origin
                   "aIrport", //destination type
-                  "NUE", //destination
+                  "VVO", //destination
                   null //airline code
         );
 
-        List<Route> routes = this.common.getRoutesBuilder().getRoutes(routesInput);
+        List<Route> routes = this.routesBuilder.getRoutes(routesInput);
         Collections.sort(routes);
 
         for (Route route : routes) {
-            this.common.getBonusSearcher().findBonuses( route,
-                                                false); //is Afl only
+            this.bonusSearcher.findBonuses( route,false); //is Afl only
         }
 
         for (Route route : routes) {

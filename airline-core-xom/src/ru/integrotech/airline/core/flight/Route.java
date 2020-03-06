@@ -43,6 +43,8 @@ public class Route implements Comparable<Route> {
 
     private boolean isBonusSummation;
 
+    private boolean isWrong;
+
     private Route(List<Flight> flights) {
         this.code = Route.createCode(flights);
         this.flights = new ArrayList<>();
@@ -91,6 +93,14 @@ public class Route implements Comparable<Route> {
 
     public void setBonusSummation(boolean bonusSummation) {
         isBonusSummation = bonusSummation;
+    }
+
+    public boolean isWrong() {
+        return isWrong;
+    }
+
+    public void setWrong(boolean wrong) {
+        isWrong = wrong;
     }
 
     public List<Flight> getFlights(Airline airline) {
@@ -281,7 +291,7 @@ public class Route implements Comparable<Route> {
         return this.flights.size() == 1;
     }
 
-    public Set<ServiceClass.SERVICE_CLASS_TYPE> getAllowedClasses(Airline airline) {
+    public Set<ServiceClass.SERVICE_CLASS_TYPE> getCommonRouteClasses(Airline airline) {
         List<Flight> flights = this.getFlights(airline);
         Set<ServiceClass.SERVICE_CLASS_TYPE> commonTypes = new HashSet<>(flights.get(0).getAllowedClasses(airline));
         for (int i = 1; i < flights.size(); i++) {

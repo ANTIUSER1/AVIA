@@ -40,6 +40,7 @@ public class RegisterLoader{
         this.props = new PropertyHolder(properties);
         this.registerNames = registerNames;
         this.registers = new RegisterCache();
+        this.loadLocalRegisters();
     }
 
     private static Properties getProperties() {
@@ -96,6 +97,7 @@ public class RegisterLoader{
         instance.registerNames = registerNames;
         instance.cleanCache();
         instance.updateCache();
+        instance.loadLocalRegisters();
         lock.writeLock().unlock();
         return instance;
     }
@@ -180,8 +182,10 @@ public class RegisterLoader{
 
         try {
             for (String registerName : this.registerNames) {
-                log.info("Loading " + registerName);
-                this.registers.update(registerName, loadJson(registerName));
+                if (!registerName.startsWith("local")) {
+                    log.info("Loading remote " + registerName);
+                    this.registers.update(registerName, loadJson(registerName));
+                }
             }
         } catch ( IOException
                 | NullPointerException e) {
@@ -196,6 +200,20 @@ public class RegisterLoader{
         log.info("Cleaning cache ...");
         this.registers.clean();
     }
+    
+    public void loadLocalRegisters() {
+    	try {
+            for (String registerName : this.registerNames) {
+                if (registerName.startsWith("local")) {
+                    log.info("Loading local " + registerName);
+                    this.registers.update(registerName, loadLocalJson(registerName));
+                }
+            }
+        } catch ( IOException
+                | NullPointerException e) {
+            e.printStackTrace();
+        }
+    }
 
 
     private JsonElement loadJson(String apiName) throws   JsonIOException, JsonSyntaxException, IOException {
@@ -206,8 +224,8 @@ public class RegisterLoader{
         return result;
     }
     
-    public JsonElement loadLocalJson(String localPath) throws JsonIOException, JsonSyntaxException, IOException {
-            InputStream is = new FileInputStream(localPath);
+    private JsonElement loadLocalJson(String apiName) throws JsonIOException, JsonSyntaxException, IOException {
+        InputStream is = RegisterCache.class.getClassLoader().getResourceAsStream(String.format("%s%s", apiName, ".json"));
             return this.parseJson(is);
     }
 

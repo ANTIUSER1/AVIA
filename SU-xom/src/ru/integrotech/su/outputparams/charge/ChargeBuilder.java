@@ -8,7 +8,6 @@ import ru.integrotech.airline.core.flight.FlightCarrier;
 import ru.integrotech.airline.core.flight.PassengerCharge;
 import ru.integrotech.airline.core.flight.Route;
 import ru.integrotech.airline.register.RegisterCache;
-import ru.integrotech.airline.register.RegisterLoader;
 import ru.integrotech.airline.utils.NumberMethods;
 import ru.integrotech.su.inputparams.charge.ChargeInput;
 import ru.integrotech.su.inputparams.route.RoutesInput;
@@ -185,7 +184,7 @@ public class ChargeBuilder {
 
     private List<ServiceClass> getServiceClasses(Route route, Airline airline) {
 
-        List<ServiceClass.SERVICE_CLASS_TYPE> serviceClassTypes = new ArrayList<>(route.getAllowedClasses(airline));
+        List<ServiceClass.SERVICE_CLASS_TYPE> serviceClassTypes = new ArrayList<>(route.getCommonRouteClasses(airline));
 
         if (serviceClassTypes.isEmpty()) {
             serviceClassTypes.addAll(airline.getServiceClassMap().keySet());

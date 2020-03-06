@@ -3,10 +3,14 @@ package ru.integrotech.su.test;
 import com.google.gson.*;
 
 import org.junit.Assert;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import ru.integrotech.su.inputparams.spend.SpendInput;
+import ru.integrotech.su.mock.MockLoader;
 import ru.integrotech.su.outputparams.spend.SpendBuilder;
+import ru.integrotech.su.outputparams.spend.SpendLkBuilder;
 import ru.integrotech.su.outputparams.spend.SpendLkRoute;
 
 import java.io.IOException;
@@ -17,17 +21,30 @@ public class SpendLkTest {
 
     private static final String RESULTS_FOLDER = "test/ru/integrotech/su/resources/results/spendLkRoutes/";
 
-    private final CommonTest common;
+    @BeforeClass
+    public static void updateRegisters() {
+        MockLoader.getInstance().updateRegisters(
+                                    MockLoader.REGISTERS_TYPE.MOCK,
+                                    SpendBuilder.getRegisterNames());
+    }
 
-    public SpendLkTest() {
-        this.common = CommonTest.of(SpendLkRoute.class, SpendBuilder.getRegisterNames());
+    private Comparator comparator;
+
+    private SpendLkBuilder spendLkBuilder;
+
+    @Before
+    public void init() {
+        this.comparator = Comparator.of(SpendLkRoute.class);
+        SpendBuilder spendBuilder = SpendBuilder.of(MockLoader.getInstance().getRegisterCache());
+        this.spendLkBuilder = SpendLkBuilder.of(spendBuilder);
     }
 
     private List<SpendLkRoute> getExpected(String jsonName) {
+        MockLoader loader = MockLoader.getInstance();
         List<SpendLkRoute> expectedSpendLkRoutes = null;
         try {
-            JsonElement jsonElement = this.common.getLoader().loadJson(RESULTS_FOLDER + jsonName);
-            expectedSpendLkRoutes = this.common.getTestsCache().loadSpendLkRoutes(jsonElement);
+            JsonElement jsonElement = loader.loadJson(RESULTS_FOLDER + jsonName);
+            expectedSpendLkRoutes = loader.getTestsCache().loadSpendLkRoutes(jsonElement);
         } catch (JsonIOException
                 | JsonSyntaxException
                 | IOException e) {
@@ -36,7 +53,6 @@ public class SpendLkTest {
         return expectedSpendLkRoutes;
     }
 
-    /*
     ////////////////////////////////////////////
     //use this method for visualization actual//
     ////////////////////////////////////////////
@@ -54,8 +70,8 @@ public class SpendLkTest {
                 true, // afl only
                 null // is round trip
         );
-        List<SpendLkRoute> actualSpendLk = this.common.getSpendLkBuilder().getSpendLkRoutes(spendInput);
-        this.common.sort(actualSpendLk);
+        List<SpendLkRoute> actualSpendLk = this.spendLkBuilder.getSpendLkRoutes(spendInput);
+        this.comparator.sort(actualSpendLk);
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String jsonResult = gson.toJson(actualSpendLk);
         System.out.println(jsonResult);
@@ -68,12 +84,11 @@ public class SpendLkTest {
     @Test
     public void PRINT_SAVED() {
         List<SpendLkRoute> expectedSpendLk = getExpected("LAX-NRT-00.json");
-        this.common.sort(expectedSpendLk);
+        this.comparator.sort(expectedSpendLk);
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String jsonResult = gson.toJson(expectedSpendLk);
         System.out.println(jsonResult);
     }
-    */
 
     @Test
     public void MOW_LED_00() {
@@ -90,9 +105,9 @@ public class SpendLkTest {
                 false // is round trip
         );
         String airlineCode = "SU";
-        List<SpendLkRoute> actualSpendLk = this.common.getSpendLkBuilder().getSpendLkRoutes(spendInput, airlineCode);
+        List<SpendLkRoute> actualSpendLk = this.spendLkBuilder.getSpendLkRoutes(spendInput, airlineCode);
         List<SpendLkRoute> expectedSpendLk = this.getExpected("MOW-LED-00.json");
-        this.common.testIsEquals(expectedSpendLk, actualSpendLk);
+        this.comparator.testIsEquals(expectedSpendLk, actualSpendLk);
     }
 
 
@@ -111,9 +126,9 @@ public class SpendLkTest {
                 false // is round trip
         );
         String airlineCode = "SU";
-        List<SpendLkRoute> actualSpendLk = this.common.getSpendLkBuilder().getSpendLkRoutes(spendInput, airlineCode);
+        List<SpendLkRoute> actualSpendLk = this.spendLkBuilder.getSpendLkRoutes(spendInput, airlineCode);
         List<SpendLkRoute> expectedSpendLk = this.getExpected("SVO-LED-01.json");
-        this.common.testIsEquals(expectedSpendLk, actualSpendLk);
+        this.comparator.testIsEquals(expectedSpendLk, actualSpendLk);
     }
 
 
@@ -131,9 +146,9 @@ public class SpendLkTest {
                 true, // afl only
                 false // is round trip
         );
-        List<SpendLkRoute> actualSpendLk = this.common.getSpendLkBuilder().getSpendLkRoutes(spendInput);
+        List<SpendLkRoute> actualSpendLk = this.spendLkBuilder.getSpendLkRoutes(spendInput);
         List<SpendLkRoute> expectedSpendLk = this.getExpected("SVO-LED-02.json");
-        this.common.testIsEquals(expectedSpendLk, actualSpendLk);
+        this.comparator.testIsEquals(expectedSpendLk, actualSpendLk);
     }
 
     @Test
@@ -150,9 +165,9 @@ public class SpendLkTest {
                 true, // afl only
                 true // is round trip
         );
-        List<SpendLkRoute> actualSpendLk = this.common.getSpendLkBuilder().getSpendLkRoutes(spendInput);
+        List<SpendLkRoute> actualSpendLk = this.spendLkBuilder.getSpendLkRoutes(spendInput);
         List<SpendLkRoute> expectedSpendLk = this.getExpected("SVO-LED-03.json");
-        this.common.testIsEquals(expectedSpendLk, actualSpendLk);
+        this.comparator.testIsEquals(expectedSpendLk, actualSpendLk);
     }
 
     @Test
@@ -169,9 +184,9 @@ public class SpendLkTest {
                 true, // afl only
                 false // is round trip
         );
-        List<SpendLkRoute> actualSpendLk = this.common.getSpendLkBuilder().getSpendLkRoutes(spendInput);
+        List<SpendLkRoute> actualSpendLk = this.spendLkBuilder.getSpendLkRoutes(spendInput);
         List<SpendLkRoute> expectedSpendLk = this.getExpected("SVO-LED-04.json");
-        this.common.testIsEquals(expectedSpendLk, actualSpendLk);
+        this.comparator.testIsEquals(expectedSpendLk, actualSpendLk);
     }
 
     @Test
@@ -188,9 +203,9 @@ public class SpendLkTest {
                 true, // afl only
                 false // is round trip
         );
-        List<SpendLkRoute> actualSpendLk = this.common.getSpendLkBuilder().getSpendLkRoutes(spendInput);
+        List<SpendLkRoute> actualSpendLk = this.spendLkBuilder.getSpendLkRoutes(spendInput);
         List<SpendLkRoute> expectedSpendLk = this.getExpected("SVO-LED-05.json");
-        this.common.testIsEquals(expectedSpendLk, actualSpendLk);
+        this.comparator.testIsEquals(expectedSpendLk, actualSpendLk);
     }
 
     @Test
@@ -207,9 +222,9 @@ public class SpendLkTest {
                 true, // afl only
                 false // is round trip
         );
-        List<SpendLkRoute> actualSpendLk = this.common.getSpendLkBuilder().getSpendLkRoutes(spendInput);
+        List<SpendLkRoute> actualSpendLk = this.spendLkBuilder.getSpendLkRoutes(spendInput);
         List<SpendLkRoute> expectedSpendLk = this.getExpected("SVO-LED-06.json");
-        this.common.testIsEquals(expectedSpendLk, actualSpendLk);
+        this.comparator.testIsEquals(expectedSpendLk, actualSpendLk);
     }
 
     @Test
@@ -226,9 +241,9 @@ public class SpendLkTest {
                 true, // afl only
                 false // is round trip
         );
-        List<SpendLkRoute> actualSpendLk = this.common.getSpendLkBuilder().getSpendLkRoutes(spendInput);
+        List<SpendLkRoute> actualSpendLk = this.spendLkBuilder.getSpendLkRoutes(spendInput);
         List<SpendLkRoute> expectedSpendLk = this.getExpected("SVO-LED-07.json");
-        this.common.testIsEquals(expectedSpendLk, actualSpendLk);
+        this.comparator.testIsEquals(expectedSpendLk, actualSpendLk);
     }
 
     @Test
@@ -245,9 +260,9 @@ public class SpendLkTest {
                 true, // afl only
                 false // is round trip
         );
-        List<SpendLkRoute> actualSpendLk = this.common.getSpendLkBuilder().getSpendLkRoutes(spendInput);
+        List<SpendLkRoute> actualSpendLk = this.spendLkBuilder.getSpendLkRoutes(spendInput);
         List<SpendLkRoute> expectedSpendLk = this.getExpected("SVO-VVO-01.json");
-        this.common.testIsEquals(expectedSpendLk, actualSpendLk);
+        this.comparator.testIsEquals(expectedSpendLk, actualSpendLk);
     }
 
     @Test
@@ -264,9 +279,9 @@ public class SpendLkTest {
                 true, // afl only
                 null // is round trip
         );
-        List<SpendLkRoute> actualSpendLk = this.common.getSpendLkBuilder().getSpendLkRoutes(spendInput);
+        List<SpendLkRoute> actualSpendLk = this.spendLkBuilder.getSpendLkRoutes(spendInput);
         List<SpendLkRoute> expectedSpendLk = this.getExpected("SVO-VVO-02.json");
-        this.common.testIsEquals(expectedSpendLk, actualSpendLk);
+        this.comparator.testIsEquals(expectedSpendLk, actualSpendLk);
     }
 
     @Test
@@ -283,9 +298,9 @@ public class SpendLkTest {
                 true, // afl only
                 false // is round trip
         );
-        List<SpendLkRoute> actualSpendLk = this.common.getSpendLkBuilder().getSpendLkRoutes(spendInput);
+        List<SpendLkRoute> actualSpendLk = this.spendLkBuilder.getSpendLkRoutes(spendInput);
         List<SpendLkRoute> expectedSpendLk = this.getExpected("SVO-CDG-00.json");
-        this.common.testIsEquals(expectedSpendLk, actualSpendLk);
+        this.comparator.testIsEquals(expectedSpendLk, actualSpendLk);
     }
 
     @Test
@@ -302,9 +317,9 @@ public class SpendLkTest {
                 true, // afl only
                 false // is round trip
         );
-        List<SpendLkRoute> actualSpendLk = this.common.getSpendLkBuilder().getSpendLkRoutes(spendInput);
+        List<SpendLkRoute> actualSpendLk = this.spendLkBuilder.getSpendLkRoutes(spendInput);
         List<SpendLkRoute> expectedSpendLk = this.getExpected("SVO-CDG-01.json");
-        this.common.testIsEquals(expectedSpendLk, actualSpendLk);
+        this.comparator.testIsEquals(expectedSpendLk, actualSpendLk);
     }
 
     @Test
@@ -321,9 +336,9 @@ public class SpendLkTest {
                 true, // afl only
                 false // is round trip
         );
-        List<SpendLkRoute> actualSpendLk = this.common.getSpendLkBuilder().getSpendLkRoutes(spendInput);
+        List<SpendLkRoute> actualSpendLk = this.spendLkBuilder.getSpendLkRoutes(spendInput);
         List<SpendLkRoute> expectedSpendLk = this.getExpected("SVO-CDG-02.json");
-        this.common.testIsEquals(expectedSpendLk, actualSpendLk);
+        this.comparator.testIsEquals(expectedSpendLk, actualSpendLk);
     }
 
     @Test
@@ -340,7 +355,7 @@ public class SpendLkTest {
                 true, // afl only
                 false // is round trip
         );
-        List<SpendLkRoute> actualSpendLk = this.common.getSpendLkBuilder().getSpendLkRoutes(spendInput);
+        List<SpendLkRoute> actualSpendLk = this.spendLkBuilder.getSpendLkRoutes(spendInput);
         Assert.assertTrue(actualSpendLk.isEmpty());
     }
 
@@ -358,9 +373,9 @@ public class SpendLkTest {
                 true, // afl only
                 false // is round trip
         );
-        List<SpendLkRoute> actualSpendLk = this.common.getSpendLkBuilder().getSpendLkRoutes(spendInput);
+        List<SpendLkRoute> actualSpendLk = this.spendLkBuilder.getSpendLkRoutes(spendInput);
         List<SpendLkRoute> expectedSpendLk = this.getExpected("SVO-JFK-00.json");
-        this.common.testIsEquals(expectedSpendLk, actualSpendLk);
+        this.comparator.testIsEquals(expectedSpendLk, actualSpendLk);
     }
 
     @Test
@@ -377,9 +392,9 @@ public class SpendLkTest {
                 true, // afl only
                 false // is round trip
         );
-        List<SpendLkRoute> actualSpendLk = this.common.getSpendLkBuilder().getSpendLkRoutes(spendInput);
+        List<SpendLkRoute> actualSpendLk = this.spendLkBuilder.getSpendLkRoutes(spendInput);
         List<SpendLkRoute> expectedSpendLk = this.getExpected("LAX-NRT-00.json");
-        this.common.testIsEquals(expectedSpendLk, actualSpendLk);
+        this.comparator.testIsEquals(expectedSpendLk, actualSpendLk);
     }
 
 
@@ -397,9 +412,9 @@ public class SpendLkTest {
                 true, // afl only
                 false // is round trip
         );
-        List<SpendLkRoute> actualSpendLk = this.common.getSpendLkBuilder().getSpendLkRoutes(spendInput);
+        List<SpendLkRoute> actualSpendLk = this.spendLkBuilder.getSpendLkRoutes(spendInput);
         List<SpendLkRoute> expectedSpendLk = this.getExpected("SVO-WORLD-00.json");
-        this.common.testIsPresent(expectedSpendLk, actualSpendLk);
+        this.comparator.testIsPresent(expectedSpendLk, actualSpendLk);
     }
 
     @Test
@@ -416,9 +431,9 @@ public class SpendLkTest {
                 true, // afl only
                 false // is round trip
         );
-        List<SpendLkRoute> actualSpendLk = this.common.getSpendLkBuilder().getSpendLkRoutes(spendInput);
+        List<SpendLkRoute> actualSpendLk = this.spendLkBuilder.getSpendLkRoutes(spendInput);
         List<SpendLkRoute> expectedSpendLk = this.getExpected("SVO-WORLD-01.json");
-        this.common.testIsEquals(expectedSpendLk, actualSpendLk);
+        this.comparator.testIsEquals(expectedSpendLk, actualSpendLk);
     }
 
 
@@ -436,18 +451,18 @@ public class SpendLkTest {
                 true, // afl only
                 false // is round trip
         );
-        List<SpendLkRoute> actualSpendLk = this.common.getSpendLkBuilder().getSpendLkRoutes(spendInput);
+        List<SpendLkRoute> actualSpendLk = this.spendLkBuilder.getSpendLkRoutes(spendInput);
         List<SpendLkRoute> expectedSpendLk = this.getExpected("SVO-RU-00.json");
-        this.common.testIsPresent(expectedSpendLk, actualSpendLk);
+        this.comparator.testIsPresent(expectedSpendLk, actualSpendLk);
 
         expectedSpendLk = this.getExpected("SVO-CDG-00.json");
-        this.common.testIsNotPresent(expectedSpendLk, actualSpendLk);
+        this.comparator.testIsNotPresent(expectedSpendLk, actualSpendLk);
 
         expectedSpendLk = this.getExpected("SVO-JFK-00.json");
-        this.common.testIsNotPresent(expectedSpendLk, actualSpendLk);
+        this.comparator.testIsNotPresent(expectedSpendLk, actualSpendLk);
 
         expectedSpendLk = this.getExpected("LAX-NRT-00.json");
-        this.common.testIsNotPresent(expectedSpendLk, actualSpendLk);
+        this.comparator.testIsNotPresent(expectedSpendLk, actualSpendLk);
     }
 
     @Test
@@ -464,18 +479,18 @@ public class SpendLkTest {
                 true, // afl only
                 false // is round trip
         );
-        List<SpendLkRoute> actualSpendLk = this.common.getSpendLkBuilder().getSpendLkRoutes(spendInput);
+        List<SpendLkRoute> actualSpendLk = this.spendLkBuilder.getSpendLkRoutes(spendInput);
         List<SpendLkRoute> expeSpendLkcted = this.getExpected("SVO-RU-00.json");
-        this.common.testIsPresent(expeSpendLkcted, actualSpendLk);
+        this.comparator.testIsPresent(expeSpendLkcted, actualSpendLk);
 
         expeSpendLkcted = this.getExpected("SVO-CDG-00.json");
-        this.common.testIsNotPresent(expeSpendLkcted, actualSpendLk);
+        this.comparator.testIsNotPresent(expeSpendLkcted, actualSpendLk);
 
         expeSpendLkcted = this.getExpected("SVO-JFK-00.json");
-        this.common.testIsNotPresent(expeSpendLkcted, actualSpendLk);
+        this.comparator.testIsNotPresent(expeSpendLkcted, actualSpendLk);
 
         expeSpendLkcted = this.getExpected("LAX-NRT-00.json");
-        this.common.testIsNotPresent(expeSpendLkcted, actualSpendLk);
+        this.comparator.testIsNotPresent(expeSpendLkcted, actualSpendLk);
     }
 
 }

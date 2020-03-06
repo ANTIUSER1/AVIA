@@ -49,6 +49,12 @@ public class RoutesBuilder {
         Set<Airport> destinations = this.paramsTransformer.getDestinations(routesInput);
         boolean exactLocation = this.paramsTransformer.exactLocation(routesInput);
         Airline airline = this.paramsTransformer.getAirline(routesInput);
-        return this.routeSearcher.searchRoutes(origins, destinations, airline, exactLocation);
+        List<Route> result = this.routeSearcher.searchRoutes(origins, destinations, airline, exactLocation);
+        for (Route route : result) {
+            if (!route.isDirect()) {
+                route.setWrong(this.cache.getWrongRouteMap().containsKey(route.getCityCodes()));
+            }
+        }
+        return result;
     }
 }
