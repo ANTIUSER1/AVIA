@@ -10,9 +10,17 @@
     <TaskList>
       <StartTask Identifier="task_0"/>
       <ActionTask Identifier="buildResult">
-        <Actions Language="irl"><![CDATA[List spendRoutes = spendBuilder.buildSpendRoutes(routes, inputParams);]]>&#13;<![CDATA[
-List spendLkRoutes = spendLkBuilder.buildSpendLkRoutes(spendRoutes, inputParams);]]>&#13;<![CDATA[
-outputParamsLk=ResultMilesSpendLk.of(spendLkRoutes);]]></Actions>
+        <Actions Language="irl"><![CDATA[try {]]>&#13;<![CDATA[
+	List spendRoutes = spendBuilder.buildSpendRoutes(routes, inputParams);]]>&#13;<![CDATA[
+	List spendLkRoutes = spendLkBuilder.buildSpendLkRoutes(spendRoutes, inputParams);]]>&#13;<![CDATA[
+	outputParamsLk=ResultMilesSpendLk.of(spendLkRoutes);]]>&#13;<![CDATA[
+}  catch (Exception e) {]]>&#13;<![CDATA[
+	e.printStackTrace();]]>&#13;<![CDATA[
+	throw e;]]>&#13;<![CDATA[
+} catch (RuntimeException e) {]]>&#13;<![CDATA[
+	e.printStackTrace();]]>&#13;<![CDATA[
+	throw e;]]>&#13;<![CDATA[
+}]]></Actions>
       </ActionTask>
       <SubflowTask Identifier="spendBaseFlow" Uuid="f9d8a44a-4297-4533-be08-aa9dfdfb4872">
         <InitialActions Language="irl"><![CDATA[inputParamsLk.isOnlyAfl = true;]]>&#13;<![CDATA[
@@ -62,7 +70,7 @@ inputParams = inputParamsLk;]]></InitialActions>
       <Data Name="node_1#y">122.0</Data>
       <Data Name="node_2#x">-3.9999962</Data>
       <Data Name="node_3#x">-3.5002136</Data>
-      <Data Name="node_2#y">-181.50174</Data>
+      <Data Name="node_2#y">-184.50174</Data>
       <Data Name="node_1#name">node_2</Data>
       <Data Name="node_2#label">Build routes</Data>
       <Data Name="node_5#label">Remove UO</Data>

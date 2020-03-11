@@ -60,9 +60,9 @@ public class RoutesToString {
 
         RoutesInput routesInput = RoutesInput.of(
         		  "Airport", //destination type
-                  "SVO", // origin
+                  "KGD", // origin
                   "aIrport", //destination type
-                  "VVO", //destination
+                  "STR", //destination
                   null //airline code
         );
 
