@@ -16,14 +16,22 @@ try {]]>&#13;<![CDATA[
 	chargeLoyaltyBuilder = ChargeLoyaltyBuilder.of(cache);]]>&#13;<![CDATA[
 } catch (Exception e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
-	loader.release();]]>&#13;<![CDATA[
+	throw e;]]>&#13;<![CDATA[
 } catch (RuntimeException e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
-	loader.release();]]>&#13;<![CDATA[
+	throw e;]]>&#13;<![CDATA[
 }]]></Actions>
       </StartTask>
       <ActionTask Identifier="build_result">
-        <Actions Language="irl"><![CDATA[chargeLoyaltyResponse = chargeLoyaltyBuilder.buildResponse(chargeLoyaltyRequest);]]>&#13;<![CDATA[
+        <Actions Language="irl"><![CDATA[try {]]>&#13;<![CDATA[
+	chargeLoyaltyResponse = chargeLoyaltyBuilder.buildResponse(chargeLoyaltyRequest);]]>&#13;<![CDATA[
+} catch (Exception e) {]]>&#13;<![CDATA[
+	e.printStackTrace();]]>&#13;<![CDATA[
+	throw e;]]>&#13;<![CDATA[
+} catch (RuntimeException e) {]]>&#13;<![CDATA[
+	e.printStackTrace();]]>&#13;<![CDATA[
+	throw e;]]>&#13;<![CDATA[
+}]]>&#13;<![CDATA[
 ]]></Actions>
       </ActionTask>
       <StopTask Identifier="task_2"/>

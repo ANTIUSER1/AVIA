@@ -16,21 +16,32 @@ try {]]>&#13;<![CDATA[
 	chargeLoyaltyBuilder = ChargeLoyaltyBuilder.of(cache);]]>&#13;<![CDATA[
 } catch (Exception e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
+	throw e;]]>&#13;<![CDATA[
 } catch (RuntimeException e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
+	throw e;]]>&#13;<![CDATA[
 }]]></Actions>
       </StartTask>
       <ActionTask Identifier="build_result">
-        <Actions Language="irl"><![CDATA[passengerLoyaltyInfo = chargeLoyaltyBuilder.createInfo(chargeLoyaltyRequest);]]>&#13;<![CDATA[
-]]></Actions>
+        <Actions Language="irl"><![CDATA[try {]]>&#13;<![CDATA[
+passengerLoyaltyInfo = chargeLoyaltyBuilder.createInfo(chargeLoyaltyRequest);]]>&#13;<![CDATA[
+}  catch (Exception e) {]]>&#13;<![CDATA[
+	e.printStackTrace();]]>&#13;<![CDATA[
+	throw e;]]>&#13;<![CDATA[
+} catch (RuntimeException e) {]]>&#13;<![CDATA[
+	e.printStackTrace();]]>&#13;<![CDATA[
+	throw e;]]>&#13;<![CDATA[
+}]]></Actions>
       </ActionTask>
       <ActionTask Identifier="task_1">
         <Actions Language="irl"><![CDATA[try {]]>&#13;<![CDATA[
 	chargeLoyaltyResponse = ChargeLoyaltyResponse.of(passengerLoyaltyInfo);]]>&#13;<![CDATA[
 } catch (Exception e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
+	throw e;]]>&#13;<![CDATA[
 } catch (RuntimeException e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
+	throw e;]]>&#13;<![CDATA[
 }]]></Actions>
       </ActionTask>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="task_3" Ordering="Default">
@@ -73,9 +84,9 @@ try {]]>&#13;<![CDATA[
       <Data Name="node_4#y">-106.0</Data>
       <Data Name="node_0#x">-39.0</Data>
       <Data Name="node_0#y">-290.0</Data>
-      <Data Name="node_1#x">-38.29424285888672</Data>
+      <Data Name="node_1#x">-38.294243</Data>
       <Data Name="node_2#x">-39.0</Data>
-      <Data Name="node_1#y">2.194000244140625</Data>
+      <Data Name="node_1#y">2.1940002</Data>
       <Data Name="node_2#y">93.0</Data>
       <Data Name="node_3#x">-39.0</Data>
       <Data Name="node_1#name">node_3</Data>

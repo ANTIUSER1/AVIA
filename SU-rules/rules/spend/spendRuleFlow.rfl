@@ -13,7 +13,15 @@
 	]]></Actions>
       </StartTask>
       <ActionTask Identifier="buildResult">
-        <Actions Language="irl"><![CDATA[outputParams=spendBuilder.buildResult(routes, inputParams);]]>&#13;<![CDATA[
+        <Actions Language="irl"><![CDATA[try{]]>&#13;<![CDATA[
+	outputParams=spendBuilder.buildResult(routes, inputParams);]]>&#13;<![CDATA[
+}  catch (Exception e) {]]>&#13;<![CDATA[
+	e.printStackTrace();]]>&#13;<![CDATA[
+	throw e;]]>&#13;<![CDATA[
+} catch (RuntimeException e) {]]>&#13;<![CDATA[
+	e.printStackTrace();]]>&#13;<![CDATA[
+	throw e;]]>&#13;<![CDATA[
+}]]>&#13;<![CDATA[
 ]]></Actions>
       </ActionTask>
       <SubflowTask Identifier="spendBaseFlow" Uuid="f9d8a44a-4297-4533-be08-aa9dfdfb4872"/>
@@ -47,8 +55,8 @@
       <Data Name="node_2#width">102.0</Data>
       <Data Name="node_0#width">21.0</Data>
       <Data Name="node_3#y">-43.0</Data>
-      <Data Name="node_0#x">-25.0</Data>
-      <Data Name="node_0#y">-231.0</Data>
+      <Data Name="node_0#x">-24.0</Data>
+      <Data Name="node_0#y">-230.0</Data>
       <Data Name="node_1#x">-24.0</Data>
       <Data Name="node_1#y">41.000004</Data>
       <Data Name="node_3#name">node_3</Data>

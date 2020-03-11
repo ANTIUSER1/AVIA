@@ -18,9 +18,11 @@ try {]]>&#13;<![CDATA[
 } catch (Exception e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
 	loader.release();]]>&#13;<![CDATA[
+	throw e;]]>&#13;<![CDATA[
 } catch (RuntimeException e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
 	loader.release();]]>&#13;<![CDATA[
+	throw e;]]>&#13;<![CDATA[
 }]]></Actions>
       </StartTask>
       <ActionTask Identifier="Find_infos">
@@ -34,9 +36,11 @@ try {]]>&#13;<![CDATA[
 } catch (Exception e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
 	loader.release();]]>&#13;<![CDATA[
+	throw e;]]>&#13;<![CDATA[
 } catch (RuntimeException e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
 	loader.release();]]>&#13;<![CDATA[
+	throw e;]]>&#13;<![CDATA[
 }]]></Actions>
       </ActionTask>
       <ActionTask Identifier="task_1">
@@ -45,9 +49,11 @@ try {]]>&#13;<![CDATA[
 } catch (Exception e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
 	loader.release();]]>&#13;<![CDATA[
+	throw e;]]>&#13;<![CDATA[
 } catch (RuntimeException e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
 	loader.release();]]>&#13;<![CDATA[
+	throw e;]]>&#13;<![CDATA[
 }]]></Actions>
       </ActionTask>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="task_3" Ordering="Default">

@@ -126,7 +126,7 @@ public class ChargeLoyaltyTest {
         Assert.assertEquals(response.getPoints(), 0);
     }
 
-    @Test()
+    @Test(expected = UnsupportedParamException.class)
     public void test_tariff_sum_below_zero() throws UnsupportedParamException {
         ChargeLoyaltyRequest request = ChargeLoyaltyRequest.of("points",
                 -1,

@@ -18,9 +18,11 @@ try {]]>&#13;<![CDATA[
 } catch (Exception e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
 	loader.release();]]>&#13;<![CDATA[
+	throw e;]]>&#13;<![CDATA[
 } catch (RuntimeException e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
 	loader.release();]]>&#13;<![CDATA[
+	throw e;]]>&#13;<![CDATA[
 }]]></Actions>
       </StartTask>
       <ActionTask Identifier="buildResult">
@@ -29,9 +31,11 @@ try {]]>&#13;<![CDATA[
 } catch (Exception e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
 	loader.release();]]>&#13;<![CDATA[
+	throw e;]]>&#13;<![CDATA[
 } catch (RuntimeException e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
 	loader.release();]]>&#13;<![CDATA[
+	throw e;]]>&#13;<![CDATA[
 }]]></Actions>
       </ActionTask>
       <ActionTask Identifier="findRoutes">
@@ -57,9 +61,12 @@ try {]]>&#13;<![CDATA[
 } catch (Exception e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
 	loader.release();]]>&#13;<![CDATA[
+	throw e;]]>&#13;<![CDATA[
+	]]>&#13;<![CDATA[
 } catch (RuntimeException e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
 	loader.release();]]>&#13;<![CDATA[
+	throw e;]]>&#13;<![CDATA[
 }]]>&#13;<![CDATA[
 ]]></Actions>
       </ActionTask>

@@ -93,12 +93,10 @@ public class RegisterLoader{
     /*method for tests only*/
     public static synchronized RegisterLoader updateInstance(String...registerNames) {
         instance = getInstance(registerNames);
-        lock.writeLock().lock();
         instance.registerNames = registerNames;
         instance.cleanCache();
         instance.updateCache();
         instance.loadLocalRegisters();
-        lock.writeLock().unlock();
         return instance;
     }
 
