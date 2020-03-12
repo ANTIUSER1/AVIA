@@ -13,9 +13,6 @@ class Data {
 
     private String accountingCode;
 
-    private Data() {
-    }
-
     public int getTariffSum() {
         return tariffSum;
     }

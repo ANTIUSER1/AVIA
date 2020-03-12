@@ -36,8 +36,9 @@ public class MockLoader{
     }
 
     public void updateRegisters(REGISTERS_TYPE type, String...registerNames) {
+        this.props = new PropertyHolder(getProperties(PROPS_PATH));
+
         if (type == REGISTERS_TYPE.MOCK) {
-            this.props = new PropertyHolder(getProperties(PROPS_PATH));
             this.testsCache = new TestsCache();
             String registryDir = props.getRegistryServiceBase();
             try {
@@ -50,10 +51,7 @@ public class MockLoader{
             }
         } else if (type == REGISTERS_TYPE.REAL) {
             RegisterLoader registerLoader = RegisterLoader.updateInstance(registerNames);
-            registerLoader.lock();
-            this.props = new PropertyHolder(getProperties(PROPS_PATH));
             this.testsCache = new TestsCache(registerLoader.getRegisterCache());
-            registerLoader.release();
         }
     }
 

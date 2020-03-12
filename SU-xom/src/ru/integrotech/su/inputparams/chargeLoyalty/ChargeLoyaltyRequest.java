@@ -15,9 +15,6 @@ public class ChargeLoyaltyRequest {
 
     private Data data;
 
-    private ChargeLoyaltyRequest() {
-    }
-
     public String getPaymentType() {
         return paymentType;
     }

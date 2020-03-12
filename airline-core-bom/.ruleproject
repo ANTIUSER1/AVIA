@@ -8,9 +8,10 @@
     <entries xsi:type="ilog.rules.studio.model.xom:LibraryXOMPathEntry" name="org.eclipse.jdt.launching.JRE_CONTAINER" url="file:org.eclipse.jdt.launching.JRE_CONTAINER" kind="LIBRARY" exported="false"/>
     <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="airline-core-xom" url="platform:/airline-core-xom" kind="JAVA_PROJECT" exported="true"/>
   </paths>
-  <paths xsi:type="ilog.rules.studio.model.bom:BOMPath" pathID="BOM" pathEntriesModified="true">
+  <paths xsi:type="ilog.rules.studio.model.bom:BOMPath" pathID="BOM">
     <entries xsi:type="ilog.rules.studio.model.bom:BOMEntry" name="airline-model" url="platform:/airline-core-bom/bom/airline-model.bom" origin="xom:/airline-core-bom//airline-core-xom"/>
     <entries xsi:type="ilog.rules.studio.model.bom:BOMEntry" name="airline-registers" url="platform:/airline-core-bom/bom/airline-registers.bom" origin="xom:/airline-core-bom//airline-core-xom"/>
+    <entries xsi:type="ilog.rules.studio.model.bom:BOMEntry" name="airline-methods" url="platform:/airline-core-bom/bom/airline-methods.bom" origin="xom:/airline-core-bom//airline-core-xom"/>
   </paths>
   <modelFolders xsi:type="ilog.rules.studio.model.base:SourceFolder">
     <name>rules</name>

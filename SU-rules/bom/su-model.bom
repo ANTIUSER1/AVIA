@@ -28,8 +28,11 @@ package ru.integrotech.su.inputparams.chargeLoyalty;
 
 public class ChargeLoyaltyRequest
 {
+    public readonly string accountingCode;
     public readonly ru.integrotech.su.inputparams.chargeLoyalty.Data data;
     public string paymentType;
+    public readonly int tariffSum;
+    public ChargeLoyaltyRequest();
     public static ru.integrotech.su.inputparams.chargeLoyalty.ChargeLoyaltyRequest of(string arg1, int arg2, string arg3);
 }
 
@@ -128,21 +131,14 @@ public class ResultMilesCharge
 package ru.integrotech.su.outputparams.chargeLoyalty;
 
 
-public class ChargeLoyaltyBuilder
-{
-    public ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyResponse buildResponse(ru.integrotech.su.inputparams.chargeLoyalty.ChargeLoyaltyRequest arg);
-    public ru.integrotech.airline.core.info.PassengerLoyaltyInfo createInfo(ru.integrotech.su.inputparams.chargeLoyalty.ChargeLoyaltyRequest arg);
-    public int getPercent(int arg1, int arg2);
-    public int getPercentVal(ru.integrotech.airline.core.info.PassengerLoyaltyInfo arg);
-    public static java.lang.String[] getRegisterNames();
-    public static ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyBuilder of(ru.integrotech.airline.register.RegisterCache arg);
-}
-
 public class ChargeLoyaltyResponse
 {
-    public int points;
-    public string status;
+    public ru.integrotech.su.outputparams.chargeLoyalty.Data data;
+    public string errCode;
+    public string errMessage;
+    public ChargeLoyaltyResponse();
     public static ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyResponse of(ru.integrotech.airline.core.info.PassengerLoyaltyInfo arg);
+    public static ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyResponse of(string arg1, string arg2);
 }
 
 package ru.integrotech.su.outputparams.spend;

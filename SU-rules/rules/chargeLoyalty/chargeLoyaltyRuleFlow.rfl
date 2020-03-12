@@ -9,22 +9,13 @@
   <Body>
     <TaskList>
       <StartTask Identifier="task_0">
-        <Actions Language="irl"><![CDATA[String[] registerNames = ChargeLoyaltyBuilder.getRegisterNames();]]>&#13;<![CDATA[
-loader = RegisterLoader.getInstance(registerNames);]]>&#13;<![CDATA[
-try {]]>&#13;<![CDATA[
-    RegisterCache cache = loader.registerCache;]]>&#13;<![CDATA[
-	chargeLoyaltyBuilder = ChargeLoyaltyBuilder.of(cache);]]>&#13;<![CDATA[
-} catch (Exception e) {]]>&#13;<![CDATA[
-	e.printStackTrace();]]>&#13;<![CDATA[
-	throw e;]]>&#13;<![CDATA[
-} catch (RuntimeException e) {]]>&#13;<![CDATA[
-	e.printStackTrace();]]>&#13;<![CDATA[
-	throw e;]]>&#13;<![CDATA[
-}]]></Actions>
+        <Actions/>
       </StartTask>
-      <ActionTask Identifier="build_result">
+      <ActionTask Identifier="Create_info">
         <Actions Language="irl"><![CDATA[try {]]>&#13;<![CDATA[
-passengerLoyaltyInfo = chargeLoyaltyBuilder.createInfo(chargeLoyaltyRequest);]]>&#13;<![CDATA[
+passengerLoyaltyInfo = PassengerLoyaltyInfo.of(chargeLoyaltyRequest.paymentType, ]]>&#13;<![CDATA[
+																				chargeLoyaltyRequest.tariffSum,]]>&#13;<![CDATA[
+																				chargeLoyaltyRequest.accountingCode);]]>&#13;<![CDATA[
 }  catch (Exception e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
 	throw e;]]>&#13;<![CDATA[
@@ -46,7 +37,23 @@ passengerLoyaltyInfo = chargeLoyaltyBuilder.createInfo(chargeLoyaltyRequest);]]>
       </ActionTask>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="task_3" Ordering="Default">
         <RuleList>
-          <Package Name="chargeLoyalty.rules"/>
+          <Rule Uuid="ea3849ec-efcc-4c1e-bff5-6cc8c0d8fe1d"/>
+          <Rule Uuid="603be50e-0a00-4baf-979c-4bd02e85e130"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Validate_tariff_sum" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="928af27a-1c4d-44ff-af53-328854024d7c"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Get_Percent" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="36589c06-08d2-4593-a528-b0b2edcffacb"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Validate_Percent" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="bed936f8-5b02-484f-a3e6-133b9f10baac"/>
         </RuleList>
       </RuleTask>
       <StopTask Identifier="task_2"/>
@@ -54,57 +61,85 @@ passengerLoyaltyInfo = chargeLoyaltyBuilder.createInfo(chargeLoyaltyRequest);]]>
     <NodeList>
       <TaskNode Identifier="node_0" Task="task_0"/>
       <TaskNode Identifier="node_2" Task="task_2"/>
-      <TaskNode Identifier="node_3" Task="build_result"/>
+      <TaskNode Identifier="node_3" Task="Create_info"/>
       <TaskNode Identifier="node_1" Task="task_1"/>
       <TaskNode Identifier="node_4" Task="task_3"/>
+      <TaskNode Identifier="node_5" Task="Validate_tariff_sum"/>
+      <TaskNode Identifier="node_6" Task="Get_Percent"/>
+      <TaskNode Identifier="node_7" Task="Validate_Percent"/>
     </NodeList>
     <TransitionList>
       <Transition Identifier="transition_2" Source="node_0" Target="node_3"/>
       <Transition Identifier="transition_0" Source="node_1" Target="node_2"/>
-      <Transition Identifier="transition_1" Source="node_3" Target="node_4"/>
+      <Transition Identifier="transition_1" Source="node_3" Target="node_5"/>
       <Transition Identifier="transition_3" Source="node_4" Target="node_1"/>
+      <Transition Identifier="transition_4" Source="node_5" Target="node_6"/>
+      <Transition Identifier="transition_5" Source="node_5" Target="node_1">
+        <Conditions Language="irl"><![CDATA[passengerLoyaltyInfo.errCode != null]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_6" Source="node_3" Target="node_1">
+        <Conditions Language="irl"><![CDATA[passengerLoyaltyInfo.errCode != null]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_7" Source="node_6" Target="node_7"/>
+      <Transition Identifier="transition_8" Source="node_7" Target="node_4"/>
+      <Transition Identifier="transition_9" Source="node_7" Target="node_1">
+        <Conditions Language="irl"><![CDATA[passengerLoyaltyInfo.errCode != null]]></Conditions>
+      </Transition>
     </TransitionList>
   </Body>
   <Resources>
     <ResourceSet Locale="ru_RU">
-      <Data Name="node_2#height">22.999992</Data>
+      <Data Name="node_2#height">26.0</Data>
       <Data Name="node_4#width">102.0</Data>
       <Data Name="node_3#height">53.402344</Data>
       <Data Name="node_1#height">53.402344</Data>
       <Data Name="node_0#height">21.0</Data>
       <Data Name="node_4#height">53.402344</Data>
+      <Data Name="node_7#y">-221.0</Data>
+      <Data Name="node_5#name">node_1</Data>
       <Data Name="node_2#name">node_2</Data>
       <Data Name="node_0#documentation">import </Data>
+      <Data Name="node_5#height">68.103516</Data>
+      <Data Name="node_6#height">53.402344</Data>
+      <Data Name="node_7#height">53.402344</Data>
       <Data Name="node_1#label">Build result</Data>
-      <Data Name="node_3#label">Build result</Data>
-      <Data Name="node_2#width">23.0</Data>
+      <Data Name="node_6#label">Get percent</Data>
+      <Data Name="node_7#width">102.0</Data>
+      <Data Name="node_3#label">Create info</Data>
+      <Data Name="node_2#width">26.0</Data>
       <Data Name="node_0#width">21.0</Data>
-      <Data Name="node_3#y">-205.0</Data>
-      <Data Name="node_4#x">-39.0</Data>
-      <Data Name="node_4#y">-106.0</Data>
-      <Data Name="node_0#x">-39.0</Data>
-      <Data Name="node_0#y">-290.0</Data>
-      <Data Name="node_1#x">-38.294243</Data>
-      <Data Name="node_2#x">-39.0</Data>
-      <Data Name="node_1#y">2.1940002</Data>
-      <Data Name="node_2#y">93.0</Data>
-      <Data Name="node_3#x">-39.0</Data>
+      <Data Name="node_3#y">-225.0</Data>
+      <Data Name="node_4#x">134.0</Data>
+      <Data Name="node_4#y">-221.0</Data>
+      <Data Name="node_5#x">-431.0</Data>
+      <Data Name="node_5#y">-221.0</Data>
+      <Data Name="node_6#x">-236.0</Data>
+      <Data Name="node_5#width">102.0</Data>
+      <Data Name="node_6#y">-221.0</Data>
+      <Data Name="node_7#x">-50.0</Data>
+      <Data Name="node_0#x">-602.0</Data>
+      <Data Name="node_0#y">-324.0</Data>
+      <Data Name="node_1#x">-601.29425</Data>
+      <Data Name="node_2#x">-602.0</Data>
+      <Data Name="node_1#y">51.194</Data>
+      <Data Name="node_2#y">142.0</Data>
+      <Data Name="node_3#x">-602.0</Data>
+      <Data Name="node_7#label">Validate percent</Data>
       <Data Name="node_1#name">node_3</Data>
+      <Data Name="node_5#label">Validate tariff sum</Data>
       <Data Name="node_3#width">102.0</Data>
       <Data Name="node_4#name">node_1</Data>
+      <Data Name="node_7#name">node_1</Data>
       <Data Name="node_1#width">102.0</Data>
+      <Data Name="node_6#name">node_1</Data>
       <Data Name="node_0#name">node_0</Data>
       <Data Name="node_4#label">Update Info</Data>
+      <Data Name="node_6#width">102.0</Data>
       <Data Name="node_3#name">node_3</Data>
     </ResourceSet>
   </Resources>
   <Properties>
-    <imports><![CDATA[use loader;
-import ru.integrotech.airline.register.RegisterLoader;
-import ru.integrotech.airline.register.RegisterCache;
-import ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyBuilder;
-use chargeLoyaltyResponse;
-use chargeLoyaltyBuilder;
+    <imports><![CDATA[use chargeLoyaltyResponse;
 use chargeLoyaltyRequest;
 use passengerLoyaltyInfo;
 import ru.integrotech.airline.core.info.PassengerLoyaltyInfo;
