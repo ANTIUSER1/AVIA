@@ -11,8 +11,10 @@ ru.integrotech.su.inputparams.charge.ChargeInput.isRoundTrip#phrase.navigation =
 
 # ru.integrotech.su.inputparams.chargeLoyalty.ChargeLoyaltyRequest
 ru.integrotech.su.inputparams.chargeLoyalty.ChargeLoyaltyRequest#concept.label = charge loyalty request
+ru.integrotech.su.inputparams.chargeLoyalty.ChargeLoyaltyRequest.accountingCode#phrase.navigation = {accounting code} of {this}
 ru.integrotech.su.inputparams.chargeLoyalty.ChargeLoyaltyRequest.paymentType#phrase.action = set the payment type of {this} to {payment type}
 ru.integrotech.su.inputparams.chargeLoyalty.ChargeLoyaltyRequest.paymentType#phrase.navigation = {payment type} of {this}
+ru.integrotech.su.inputparams.chargeLoyalty.ChargeLoyaltyRequest.tariffSum#phrase.navigation = {tariff sum} of {this}
 
 # ru.integrotech.su.inputparams.spend.LocationInput
 ru.integrotech.su.inputparams.spend.LocationInput#concept.label = location input
@@ -83,19 +85,8 @@ ru.integrotech.su.outputparams.charge.ResultMilesCharge#concept.label = result m
 ru.integrotech.su.outputparams.charge.ResultMilesCharge.routes#phrase.action = set the routes of {this} to {route}
 ru.integrotech.su.outputparams.charge.ResultMilesCharge.routes#phrase.navigation = {route} of {this}
 
-# ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyBuilder
-ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyBuilder#concept.label = charge loyalty builder
-ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyBuilder.createInfo(ru.integrotech.su.inputparams.chargeLoyalty.ChargeLoyaltyRequest)#phrase.navigation = {this}.createInfo({0})
-ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyBuilder.getPercent(int,int)#phrase.navigation = {this}.getPercent({0}, {1})
-ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyBuilder.getPercentVal(ru.integrotech.airline.core.info.PassengerLoyaltyInfo)#phrase.navigation = {this}.getPercentVal({0})
-ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyBuilder.getRegisterNames()#phrase.navigation = the register name
-
 # ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyResponse
 ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyResponse#concept.label = charge loyalty response
-ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyResponse.points#phrase.action = set the points of {this} to {points}
-ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyResponse.points#phrase.navigation = {points} of {this}
-ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyResponse.status#phrase.action = set the status of {this} to {status}
-ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyResponse.status#phrase.navigation = {status} of {this}
 
 # ru.integrotech.su.outputparams.spend.ResultMilesSpend
 ru.integrotech.su.outputparams.spend.ResultMilesSpend#concept.label = result miles spend

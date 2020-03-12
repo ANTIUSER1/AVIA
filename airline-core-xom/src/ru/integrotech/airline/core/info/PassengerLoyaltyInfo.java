@@ -4,10 +4,16 @@ public class PassengerLoyaltyInfo {
 
     public static PassengerLoyaltyInfo of(String paymentType, int tariffSum, String accountingCode) {
         PassengerLoyaltyInfo result = new PassengerLoyaltyInfo();
-        PAYMENT_TYPE payment_type = PAYMENT_TYPE.valueOf(paymentType);
-        result.setPaymentType(payment_type);
-        result.setTariffSum(tariffSum);
-        result.setAccountingCode(accountingCode);
+        try {
+            PAYMENT_TYPE payment_type = PAYMENT_TYPE.valueOf(paymentType);
+            result.setPaymentType(payment_type);
+            result.setTariffSum(tariffSum);
+            result.setAccountingCode(accountingCode);
+        } catch (IllegalArgumentException e) {
+            result.setErrCode("[payment type] parameter is incorrect");
+            result.setErrMessage(e.getMessage());
+        }
+
         return result;
     }
 
@@ -20,10 +26,14 @@ public class PassengerLoyaltyInfo {
     private STATUS status;
 
     private int points;
+    
+    private String errCode;
 
-    private PassengerLoyaltyInfo() {
-    }
+    private String errMessage;
 
+    private int percent;
+
+    
     public PAYMENT_TYPE getPaymentType() {
         return paymentType;
     }
@@ -62,6 +72,30 @@ public class PassengerLoyaltyInfo {
 
     public void setPoints(int points) {
         this.points = points;
+    }
+
+    public String getErrCode() {
+		return errCode;
+	}
+
+	public void setErrCode(String errCode) {
+		this.errCode = errCode;
+	}
+
+	public String getErrMessage() {
+		return errMessage;
+	}
+
+	public void setErrMessage(String errMessage) {
+		this.errMessage = errMessage;
+	}
+
+    public int getPercent() {
+        return percent;
+    }
+
+    public void setPercent(int percent) {
+        this.percent = percent;
     }
 
     public enum PAYMENT_TYPE {

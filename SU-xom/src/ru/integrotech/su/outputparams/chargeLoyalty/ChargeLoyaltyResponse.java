@@ -6,31 +6,49 @@ public class ChargeLoyaltyResponse {
 
     public static ChargeLoyaltyResponse of(PassengerLoyaltyInfo info) {
         ChargeLoyaltyResponse result = new ChargeLoyaltyResponse();
-        result.status = info.getStatus().name();
-        result.points = info.getPoints();
+        if (info.getErrCode() != null || info.getErrMessage() != null) {
+            result.setErrCode(info.getErrCode());
+            result.setErrMessage(info.getErrMessage());
+        } else {
+            result.setData(Data.of(info));
+        }
         return result;
     }
 
-    private String status;
-
-    private int points;
-
-    ChargeLoyaltyResponse() {
+    public static ChargeLoyaltyResponse of(String errCode, String errMessage) {
+        ChargeLoyaltyResponse result = new ChargeLoyaltyResponse();
+        result.setErrCode(errCode);
+        result.setErrMessage(errMessage);
+        return result;
     }
 
-    public String getStatus() {
-        return status;
+    private String errCode;
+
+    private String errMessage;
+
+    private Data data;
+
+    public String getErrCode() {
+        return errCode;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setErrCode(String errCode) {
+        this.errCode = errCode;
     }
 
-    public int getPoints() {
-        return points;
+    public String getErrMessage() {
+        return errMessage;
     }
 
-    public void setPoints(int points) {
-        this.points = points;
+    public void setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
+    }
+
+    public Data getData() {
+        return data;
+    }
+
+    public void setData(Data data) {
+        this.data = data;
     }
 }

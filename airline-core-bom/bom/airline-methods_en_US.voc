@@ -1,0 +1,9 @@
+# Vocabulary Properties
+uuid = 7ffcba73-be41-4141-9988-93ae467f8352
+
+# ru.integrotech.airline.utils.NumberMethods
+ru.integrotech.airline.utils.NumberMethods#concept.label = number methods
+ru.integrotech.airline.utils.NumberMethods.getPercent(int,int)#phrase.navigation = number methods.getPercent({0}, {1})
+
+# ru.integrotech.airline.utils.StringMethods
+ru.integrotech.airline.utils.StringMethods#concept.label = string methods

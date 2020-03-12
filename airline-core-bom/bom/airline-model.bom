@@ -318,10 +318,14 @@ public class PassengerLoyaltyInfo
         public static ru.integrotech.airline.core.info.PassengerLoyaltyInfo.STATUS[] values();
     }
     public string accountingCode;
+    public string errCode;
+    public string errMessage;
     public ru.integrotech.airline.core.info.PassengerLoyaltyInfo.PAYMENT_TYPE paymentType;
+    public int percent;
     public int points;
     public ru.integrotech.airline.core.info.PassengerLoyaltyInfo.STATUS status;
     public int tariffSum;
+    public PassengerLoyaltyInfo();
     public static ru.integrotech.airline.core.info.PassengerLoyaltyInfo of(string arg1, int arg2, string arg3);
 }
 

@@ -6,6 +6,5 @@
   <definition><![CDATA[if 
 	 the payment type of passengerLoyaltyInfo is cash   
 then set the status of passengerLoyaltyInfo to legal; 
-	 set the points of passengerLoyaltyInfo to chargeLoyaltyBuilder.getPercent (the tariff sum of passengerLoyaltyInfo , 
-	 																		    chargeLoyaltyBuilder .getPercentVal( passengerLoyaltyInfo ));]]></definition>
+	 set the points of passengerLoyaltyInfo to number methods.getPercent (the tariff sum of passengerLoyaltyInfo , the percent of passengerLoyaltyInfo);]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

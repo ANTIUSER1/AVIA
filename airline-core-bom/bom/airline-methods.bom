@@ -1,0 +1,24 @@
+
+property loadGetterSetterAsProperties "true"
+property origin "xom:/airline-core-bom//airline-core-xom"
+property uuid "1d399646-a06b-4a42-8974-737c4784abaf"
+package ru.integrotech.airline.utils;
+
+
+public class NumberMethods
+{
+    public NumberMethods();
+    public static int getMultiplication(double[] arg);
+    public static int getPercent(int arg1, int arg2);
+}
+
+public class StringMethods
+{
+    public StringMethods();
+    public static boolean isEmpty(java.util.List arg domain 0,* class string);
+    public static boolean isEmpty(string arg);
+    public static boolean isFitsByRegexMasks(string arg1, 
+        java.util.List arg2 domain 0,* class string);
+    public static string milesRuleToRegexTransform(string arg);
+}
+

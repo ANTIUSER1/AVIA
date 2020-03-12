@@ -214,9 +214,16 @@ ru.integrotech.airline.core.info.PassengerLoyaltyInfo.STATUS.illegal#instance.la
 ru.integrotech.airline.core.info.PassengerLoyaltyInfo.STATUS.legal#instance.label = legal
 ru.integrotech.airline.core.info.PassengerLoyaltyInfo.accountingCode#phrase.action = set the accounting code of {this} to {accounting code}
 ru.integrotech.airline.core.info.PassengerLoyaltyInfo.accountingCode#phrase.navigation = {accounting code} of {this}
+ru.integrotech.airline.core.info.PassengerLoyaltyInfo.errCode#phrase.action = set the err code of {this} to {err code}
+ru.integrotech.airline.core.info.PassengerLoyaltyInfo.errCode#phrase.navigation = {err code} of {this}
+ru.integrotech.airline.core.info.PassengerLoyaltyInfo.errMessage#phrase.action = set the err message of {this} to {err message}
+ru.integrotech.airline.core.info.PassengerLoyaltyInfo.errMessage#phrase.navigation = {err message} of {this}
+ru.integrotech.airline.core.info.PassengerLoyaltyInfo.of(java.lang.String,int,java.lang.String)#phrase.navigation = passenger loyalty info.of({0}, {1}, {2})
 ru.integrotech.airline.core.info.PassengerLoyaltyInfo.paymentType#phrase.action = set the payment type of {this} to {payment type}
 ru.integrotech.airline.core.info.PassengerLoyaltyInfo.paymentType#phrase.clearer = clear the payment type of {this}
 ru.integrotech.airline.core.info.PassengerLoyaltyInfo.paymentType#phrase.navigation = {payment type} of {this}
+ru.integrotech.airline.core.info.PassengerLoyaltyInfo.percent#phrase.action = set the percent of {this} to {percent}
+ru.integrotech.airline.core.info.PassengerLoyaltyInfo.percent#phrase.navigation = {percent} of {this}
 ru.integrotech.airline.core.info.PassengerLoyaltyInfo.points#phrase.action = set the points of {this} to {points}
 ru.integrotech.airline.core.info.PassengerLoyaltyInfo.points#phrase.navigation = {points} of {this}
 ru.integrotech.airline.core.info.PassengerLoyaltyInfo.status#phrase.action = set the status of {this} to {status}
