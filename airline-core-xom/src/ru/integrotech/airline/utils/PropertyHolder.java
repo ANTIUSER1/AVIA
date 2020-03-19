@@ -5,29 +5,27 @@ import ru.integrotech.airline.register.RegisterLoader;
 import java.util.Properties;
 import java.util.logging.Logger;
 
-/*class for hold any values that could be loaded from .properties file
-* use in any classes that works with property values*/
+/**
+ * class for hold any values that could be loaded from .properties files use in
+ * any classes that works with property values
+ *
+ *
+ * Used in {@link ru.integrotech.airline.register.RegisterLoader} in field prop
+ * and constructor
+ *
+ */
+
 public class PropertyHolder {
 
     private static final Logger log = Logger.getLogger(RegisterLoader.class.getName());
 
-    private final String encoding;
+    private String encoding;
 
-    private final String registryServiceBase;
+    private String registryServiceBase;
 
-    private final int cacheRecheckMinutes;
+    private int cacheRecheckMinutes;
 
     public PropertyHolder(Properties properties) {
-
-        this.registryServiceBase = properties.getProperty("REGISTRY.SERVICE.URL");
-        this.encoding = properties.getProperty("REGISTRY.SERVICE.ENCODING");
-        String recheckTime = properties.getProperty("CACHE_RECHECK_MINUTES");
-        this.cacheRecheckMinutes = recheckTime == null ? 0 : Integer
-                .valueOf(recheckTime);
-
-    }
-
-    public PropertyHolder(Properties properties, Properties innerProperties) {
 
         this.registryServiceBase = properties.getProperty("REGISTRY.SERVICE.URL");
         this.encoding = properties.getProperty("REGISTRY.SERVICE.ENCODING");
@@ -50,4 +48,15 @@ public class PropertyHolder {
         return cacheRecheckMinutes;
     }
 
+    public void setEncoding(String encoding) {
+        this.encoding = encoding;
+    }
+
+    public void setRegistryServiceBase(String registryServiceBase) {
+        this.registryServiceBase = registryServiceBase;
+    }
+
+    public void setCacheRecheckMinutes(int cacheRecheckMinutes) {
+        this.cacheRecheckMinutes = cacheRecheckMinutes;
+    }
 }

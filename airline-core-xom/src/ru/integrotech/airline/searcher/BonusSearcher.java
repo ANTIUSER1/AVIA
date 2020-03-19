@@ -1,6 +1,5 @@
 package ru.integrotech.airline.searcher;
 
-
 import ru.integrotech.airline.core.airline.Airline;
 import ru.integrotech.airline.core.airline.ServiceClass;
 import ru.integrotech.airline.core.bonus.Bonus;
@@ -12,20 +11,40 @@ import ru.integrotech.airline.utils.BonusFilters;
 
 import java.util.*;
 
-/* class contains logic for search bonuses by given parameters*/
+/**
+ * Class contains logic for search bonuses by given parameters <br>
+ *
+ * Used inSpend project
+ *
+ */
+
 public class BonusSearcher {
 
     public static BonusSearcher of(RegisterCache registerCache) {
-        return new BonusSearcher(registerCache);
+        BonusSearcher result = new BonusSearcher();
+        result.setRegisterCache(registerCache);
+        result.setAfl(registerCache.getAirline(Airline.AFL_CODE));
+        return result;
     }
 
-    private final Airline afl;
+    private Airline afl;
 
-    private final RegisterCache registerCache;
+    private RegisterCache registerCache;
 
-    private BonusSearcher(RegisterCache registerCache) {
+    public Airline getAfl() {
+        return afl;
+    }
+
+    public void setAfl(Airline afl) {
+        this.afl = afl;
+    }
+
+    public RegisterCache getRegisterCache() {
+        return registerCache;
+    }
+
+    public void setRegisterCache(RegisterCache registerCache) {
         this.registerCache = registerCache;
-        this.afl = registerCache.getAirline(Airline.AFL_CODE);
     }
 
     public void findBonuses(Route route, boolean isAflOnly) {

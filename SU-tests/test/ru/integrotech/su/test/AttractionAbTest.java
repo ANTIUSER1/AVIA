@@ -15,6 +15,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Tests for AttractionAb project, used remote registers
+ */
+
 public class AttractionAbTest {
 	
 	private static final String RESULTS_FOLDER = "test/ru/integrotech/su/resources/results/attractionsAB/";

@@ -48,7 +48,7 @@ insert checkOnlineRegistrationAvailable.passengerFlightInfo;]]></InitialActions>
     </ResourceSet>
   </Resources>
   <Properties>
-    <imports><![CDATA[import ru.integrotech.airline.core.PassengerFlightInfo;
+    <imports><![CDATA[import ru.integrotech.airline.core.info.PassengerFlightInfo;
 use checkOnlineRegistrationAvailable;
 use passengerFlightInfo;
 ]]></imports>

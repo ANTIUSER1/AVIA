@@ -2,26 +2,33 @@ package ru.integrotech.su.outputparams.spend;
 
 import java.util.List;
 
+/**
+ * container for ResultMilesSpend
+ *
+ * data( private List<SpendRoute> routes; )
+ */
 public class ResultMilesSpend {
 
-    public static ResultMilesSpend of(List<SpendRoute> routes) {
-        return new ResultMilesSpend(routes);
-    }
+	/**
+	 * Static constructor <br />
+	 * constructs, then sets up the instance's fields value
+	 *
+	 * @param routes
+	 * @return
+	 */
+	public static ResultMilesSpend of(List<SpendRoute> routes) {
+		ResultMilesSpend res = new ResultMilesSpend();
+		res.setAwardRoutes(routes);
+		return res;
+	}
 
-    private List<SpendRoute> awardRoutes;
+	private List<SpendRoute> awardRoutes;
 
-    private ResultMilesSpend(List<SpendRoute> routes) {
-        this.awardRoutes = routes;
-    }
+	public List<SpendRoute> getAwardRoutes() {
+		return awardRoutes;
+	}
 
-    private ResultMilesSpend() {
-    }
-
-    public List<SpendRoute> getAwardRoutes() {
-        return awardRoutes;
-    }
-
-    public void setAwardRoutes(List<SpendRoute> routes) {
-        this.awardRoutes = routes;
-    }
+	public void setAwardRoutes(List<SpendRoute> routes) {
+		this.awardRoutes = routes;
+	}
 }

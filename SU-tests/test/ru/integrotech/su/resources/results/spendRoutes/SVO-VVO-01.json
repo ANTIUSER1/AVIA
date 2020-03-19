@@ -263,6 +263,18 @@
             "fitsMilesInterval": true
           },
           {
+            "awardType": "UC",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {
+              "classOfServiceName": "business"
+            },
+            "value": 27500,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
             "awardType": "UO",
             "classOfService1": {
               "classOfServiceName": "economy"

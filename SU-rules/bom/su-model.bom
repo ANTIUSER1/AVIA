@@ -75,7 +75,7 @@ public class CheckOnlineRegistrationAvailable
     public string departureAirportCode;
     public int flightNumber;
     public boolean onlineRegistrationAvailable;
-    public ru.integrotech.airline.core.PassengerFlightInfo passengerFlightInfo;
+    public ru.integrotech.airline.core.info.PassengerFlightInfo passengerFlightInfo;
     public java.util.List ssrCodes domain 0,* class string;
     public CheckOnlineRegistrationAvailable();
 }
@@ -86,9 +86,9 @@ package ru.integrotech.su.outputparams.attractionAB;
 public class AttractionAbBuilder
 {
     public ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput buildResult(ru.integrotech.su.inputparams.attractionAB.AttractionAbInput arg);
-    public ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput buildResult(java.util.List arg1 domain 0,* class ru.integrotech.airline.core.flight.PassengerChargeInfo, 
+    public ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput buildResult(java.util.List arg1 domain 0,* class ru.integrotech.airline.core.info.PassengerMilesInfo, 
         ru.integrotech.su.inputparams.attractionAB.AttractionAbInput arg2);
-    public java.util.List getInfos(ru.integrotech.su.inputparams.attractionAB.AttractionAbInput arg) domain 0,* class ru.integrotech.airline.core.flight.PassengerChargeInfo;
+    public java.util.List getInfos(ru.integrotech.su.inputparams.attractionAB.AttractionAbInput arg) domain 0,* class ru.integrotech.airline.core.info.PassengerMilesInfo;
     public int getMultiplication(double[] arg);
     public static java.lang.String[] getRegisterNames();
     public double getTierLevelFactor(ru.integrotech.su.inputparams.attractionAB.AttractionAbInput arg);
@@ -99,7 +99,7 @@ public class AttractionAbOutput
 {
     public java.util.List segments domain 0,* class ru.integrotech.su.outputparams.attractionAB.Segment;
     public int totalMiles;
-    public ru.integrotech.airline.core.flight.PassengerChargeInfo.Status totalStatus;
+    public ru.integrotech.airline.core.info.PassengerMilesInfo.Status totalStatus;
     public static ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput of(java.util.Map arg1, 
         int arg2, 
         java.util.List arg3 domain 0,* class ru.integrotech.su.outputparams.attractionAB.Segment);

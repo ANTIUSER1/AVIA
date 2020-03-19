@@ -2,15 +2,17 @@ package ru.integrotech.su.inputparams.attractionAB;
 
 import java.util.List;
 
-class Data {
-	
-	private List<Segment> segments;
-	
-	private String tierCode;
+/**
+ * container for Data for AttractionABInput
+ *
+ * data ( private List<Segment> segments; private String tierCode; )
+ */
 
-	private Data() {
-		
-	}
+class Data {
+
+	private List<Segment> segments;
+
+	private String tierCode;
 
 	public List<Segment> getSegments() {
 		return segments;
@@ -32,9 +34,5 @@ class Data {
 
 		this.tierCode = tierCode;
 	}
-	
-	
-	
-	
 
 }

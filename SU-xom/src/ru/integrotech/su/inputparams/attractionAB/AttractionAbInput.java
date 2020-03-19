@@ -1,14 +1,17 @@
 package ru.integrotech.su.inputparams.attractionAB;
 
-public class AttractionAbInput {
-	
-	private Data data;
-	
-	private String lang;
+/**
+ *
+ * container for attractionABRequest (request body for attractionAB project)
+ *
+ * data ( private Data data; private String lang; )
+ */
 
-	private AttractionAbInput() {
-		
-	}
+public class AttractionAbInput {
+
+	private Data data;
+
+	private String lang;
 
 	public Data getData() {
 		return data;
@@ -25,10 +28,5 @@ public class AttractionAbInput {
 	public void setLang(String lang) {
 		this.lang = lang;
 	}
-	
-	
-	
-	
-	
 
 }

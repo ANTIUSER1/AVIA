@@ -1,31 +1,41 @@
 package ru.integrotech.su.inputparams.chargeLoyalty;
 
-class Data {
+import javax.xml.bind.annotation.XmlType;
 
-    static Data of(int tariffSum, String accountingCode) {
-        Data result = new Data();
-        result.setTariffSum(tariffSum);
-        result.setAccountingCode(accountingCode);
-        return result;
-    }
+/**
+ * <br />
+ *
+ * Used in BOM
+ *
+ *
+ */
+@XmlType(name = "InputData")
+public class Data {
 
-    private int tariffSum;
+	static Data of(int tariffSum, String accountingCode) {
+		Data result = new Data();
+		result.setTariffSum(tariffSum);
+		result.setAccountingCode(accountingCode);
+		return result;
+	}
 
-    private String accountingCode;
+	private int tariffSum;
 
-    public int getTariffSum() {
-        return tariffSum;
-    }
+	private String accountingCode;
 
-    public void setTariffSum(int tariffSum) {
-        this.tariffSum = tariffSum;
-    }
+	public int getTariffSum() {
+		return tariffSum;
+	}
 
-    public String getAccountingCode() {
-        return accountingCode;
-    }
+	public void setTariffSum(int tariffSum) {
+		this.tariffSum = tariffSum;
+	}
 
-    public void setAccountingCode(String accountingCode) {
-        this.accountingCode = accountingCode.toUpperCase();
-    }
+	public String getAccountingCode() {
+		return accountingCode;
+	}
+
+	public void setAccountingCode(String accountingCode) {
+		this.accountingCode = accountingCode.toUpperCase();
+	}
 }

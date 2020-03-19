@@ -4,6 +4,13 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * class contains static methods for works with strings
+ *
+ * May be used in all projects
+ *
+ */
+
 public class StringMethods {
 
     public static String milesRuleToRegexTransform(String mask) {

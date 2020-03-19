@@ -9,7 +9,10 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Properties;
 
-/*Base class for unify tests*/
+/**
+ * Base class for unify tests
+ */
+
 public abstract class UnifyBaseTest {
 
     protected static final String ENCODING_FORMAT = "UTF-8";

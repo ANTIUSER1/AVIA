@@ -3,11 +3,11 @@
   <name>calcMilesQualifying</name>
   <uuid>f81feed0-c781-4f79-b4bb-446a1327157f</uuid>
   <locale>en_US</locale>
-  <definition><![CDATA[if the min miles limit of the airline of the passenger charge  is "A"  
-or (the min miles limit of the airline of the passenger charge   is "I"
-	and the country of the city of the origin of the passenger charge  is the country of the city of the destination of the passenger charge  )
+  <definition><![CDATA[if the min miles limit of the airline of the passenger charge  info is "A"  
+or (the min miles limit of the airline of the passenger charge  info  is "I"
+	and the country of the city of the origin of the passenger charge info  is the country of the city of the destination of the passenger charge  info )
 
-then set the miles qualifying of the passenger charge  to 'Charge builder' .getPercent ( the miles of the passenger charge , the charge coeff of the passenger charge) ; 
+then set the miles qualifying of the passenger charge  info to 'Charge builder' .getPercent ( the miles of the passenger charge  info, the charge coeff of the passenger charge info) ; 
 
-else set the miles qualifying of the passenger charge  to 'Charge builder' .getPercent ( the distance of the passenger charge  , the charge coeff of the passenger charge) ; ]]></definition>
+else set the miles qualifying of the passenger charge  info to 'Charge builder' .getPercent ( the distance of the passenger charge info  , the charge coeff of the passenger charge info) ; ]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

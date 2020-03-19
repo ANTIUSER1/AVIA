@@ -4,39 +4,43 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-/* class represents city
-* the weight field used for comparison in reverse order*/
+/**
+ *
+ * Represents the City
+ *
+ *  Сan be used in all projects
+ *
+ */
+
 public class City implements Comparable<City>{
 
-    public static City of(String code, String name, Country country,  int weight, double longitude, double latitude) {
-        return new City(code, name, country, GeoLocation.of(longitude, latitude), weight);
+    public static City of(String code,
+                          String name,
+                          Country country,
+                          int weight,
+                          double longitude,
+                          double latitude) {
+        City result = new City();
+        result.setCode(code);
+        result.setName(name);
+        result.setCountry(country);
+        result.setGeoLocation(GeoLocation.of(longitude, latitude));
+        result.setWeight(weight);
+        result.setAirportMap(new HashMap<>());
+        return result;
     }
 
-    private final String code;
+    private String code;
 
-    private final String name;
+    private String name;
 
-    private final Country country;
+    private Country country;
 
-    private final GeoLocation geoLocation;
+    private GeoLocation geoLocation;
 
-    private final int weight;
+    private int weight;
 
-    private final Map<String, Airport> airportMap;
-
-    private City(String code, String name, Country country, GeoLocation geoLocation, int weight) {
-        this.code = code;
-        this.name = name;
-        this.country = country;
-        this.geoLocation = geoLocation;
-        if (weight == 0) weight = Integer.MAX_VALUE;
-        this.weight = weight;
-        this.airportMap = new HashMap<>();
-    }
-
-    public City(String code, String name, Country country, int weight) {
-        this(code, name, country, null, weight);
-    }
+    private Map<String, Airport> airportMap;
 
     public String getCode() {
         return code;
@@ -60,6 +64,30 @@ public class City implements Comparable<City>{
 
     public Map<String, Airport> getAirportMap() {
         return airportMap;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setCountry(Country country) {
+        this.country = country;
+    }
+
+    public void setGeoLocation(GeoLocation geoLocation) {
+        this.geoLocation = geoLocation;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public void setAirportMap(Map<String, Airport> airportMap) {
+        this.airportMap = airportMap;
     }
 
     @Override

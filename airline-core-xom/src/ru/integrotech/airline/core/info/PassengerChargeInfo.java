@@ -1,36 +1,48 @@
-package ru.integrotech.airline.core.flight;
-
-
+package ru.integrotech.airline.core.info;
 
 import ru.integrotech.airline.core.airline.Airline;
 import ru.integrotech.airline.core.airline.ServiceClass;
 import ru.integrotech.airline.core.airline.SubTariff;
 import ru.integrotech.airline.core.airline.Tariff;
+import ru.integrotech.airline.core.flight.Flight;
 import ru.integrotech.airline.core.location.Airport;
 
 import java.util.*;
 
-public class PassengerCharge {
+/**
+ * Describes the flight of exact passenger in exact flight
+ *
+ * Used in Charge project
+ *
+ */
 
-    public static List<PassengerCharge> listOf(Flight flight, List<ServiceClass> allowedClasses, int factor, boolean isRound, Airline airline) {
-        List<PassengerCharge> result = new ArrayList<>();
+public class PassengerChargeInfo {
+
+    public static List<PassengerChargeInfo> listOf(Flight flight,
+                                                   List<ServiceClass> allowedClasses,
+                                                   int factor,
+                                                   boolean isRound,
+                                                   Airline airline) {
+
+        List<PassengerChargeInfo> result = new ArrayList<>();
         boolean isAfl = airline.getCode().equals("SU");
 
         for (ServiceClass serviceClass : allowedClasses) {
-            for (Tariff tariff : PassengerCharge.getTariffs(serviceClass)) {
-                for (Map.Entry<Integer, List<SubTariff>> subTarifEntry : PassengerCharge.getSubTariffs(tariff).entrySet()) {
+            for (Tariff tariff : PassengerChargeInfo.getTariffs(serviceClass)) {
+                for (Map.Entry<Integer, List<SubTariff>> subTarifEntry : PassengerChargeInfo.getSubTariffs(tariff).entrySet()) {
                     Integer chargeCoff = subTarifEntry.getKey();
                     for (SubTariff subTariff : subTarifEntry.getValue()) {
-                        PassengerCharge passengerCharge = new PassengerCharge(flight.getOrigin(),
-                                flight.getDestination(),
-                                airline,
-                                serviceClass,
-                                tariff,
-                                SubTariff.of(subTariff, isAfl),
-                                flight.getDistance(),
-                                chargeCoff);
-                        passengerCharge.initFields(factor, isRound);
-                        result.add(passengerCharge);
+                        PassengerChargeInfo passengerChargeInfo = new PassengerChargeInfo();
+                        passengerChargeInfo.setOrigin(flight.getOrigin());
+                        passengerChargeInfo.setDestination(flight.getDestination());
+                        passengerChargeInfo.setAirline(airline);
+                        passengerChargeInfo.setServiceClass(serviceClass);
+                        passengerChargeInfo.setTariff(tariff);
+                        passengerChargeInfo.setSubTariff(SubTariff.of(subTariff, isAfl));
+                        passengerChargeInfo.setDistance(flight.getDistance());
+                        passengerChargeInfo.setChargeCoeff(chargeCoff);
+                        passengerChargeInfo.initFields(factor, isRound);
+                        result.add(passengerChargeInfo);
                     }
                 }
             }
@@ -38,10 +50,25 @@ public class PassengerCharge {
         return result;
     }
 
-    public static PassengerCharge of(Airport origin, Airport destination,
-			Airline airline, ServiceClass serviceClass, Tariff tariff,
-			SubTariff subTariff, int distance, int chargeCoeff) {
- 		return new PassengerCharge(origin, destination, airline, serviceClass, tariff, subTariff, distance, chargeCoeff);
+    public static PassengerChargeInfo of(Airport origin,
+                                         Airport destination,
+                                         Airline airline,
+                                         ServiceClass serviceClass,
+                                         Tariff tariff,
+                                         SubTariff subTariff,
+                                         int distance,
+                                         int chargeCoeff) {
+
+        PassengerChargeInfo result = new PassengerChargeInfo();
+        result.setOrigin(origin);
+        result.setDestination(destination);
+        result.setAirline(airline);
+        result.setServiceClass(serviceClass);
+        result.setTariff(tariff);
+        result.setSubTariff(subTariff);
+        result.setDistance(distance);
+        result.setChargeCoeff(chargeCoeff);
+ 		return result;
 		
 	}
 
@@ -64,19 +91,19 @@ public class PassengerCharge {
         return result;
     }
 
-    private final Airport origin;
+    private Airport origin;
 
-    private final Airport destination;
+    private Airport destination;
 
-    private final Airline airline;
+    private Airline airline;
 
-    private final ServiceClass serviceClass;
+    private ServiceClass serviceClass;
 
-    private final Tariff tariff;
+    private Tariff tariff;
 
-    private final SubTariff subTariff;
+    private SubTariff subTariff;
 
-    private final int chargeCoeff;
+    private int chargeCoeff;
 
     private int distance;
 
@@ -88,18 +115,6 @@ public class PassengerCharge {
 
     private int miles;
 
-    private PassengerCharge(Airport origin, Airport destination, Airline airline, ServiceClass serviceClass, Tariff tariff, SubTariff subTariff, int distance, int chargeCoeff) {
-        this.origin = origin;
-        this.destination = destination;
-        this.airline = airline;
-        this.serviceClass = serviceClass;
-        this.tariff = tariff;
-        this.subTariff = subTariff;
-        this.distance = distance;
-        this.chargeCoeff = chargeCoeff;
-    }
-
-   
 	public Airport getOrigin() {
         return origin;
     }
@@ -166,6 +181,34 @@ public class PassengerCharge {
 
     public void setMiles(int miles) {
         this.miles = miles;
+    }
+
+    public void setOrigin(Airport origin) {
+        this.origin = origin;
+    }
+
+    public void setDestination(Airport destination) {
+        this.destination = destination;
+    }
+
+    public void setAirline(Airline airline) {
+        this.airline = airline;
+    }
+
+    public void setServiceClass(ServiceClass serviceClass) {
+        this.serviceClass = serviceClass;
+    }
+
+    public void setTariff(Tariff tariff) {
+        this.tariff = tariff;
+    }
+
+    public void setSubTariff(SubTariff subTariff) {
+        this.subTariff = subTariff;
+    }
+
+    public void setChargeCoeff(int chargeCoeff) {
+        this.chargeCoeff = chargeCoeff;
     }
 
     private void initFields(int factor, boolean isRound) {

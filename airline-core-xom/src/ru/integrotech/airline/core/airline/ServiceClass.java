@@ -4,7 +4,14 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-/* class represents class listOf service listOf airline*/
+/**
+ * class represents class of service provided by airline
+ * <b>ru.integrotech.airline.core.airline.</b>ServiceClass
+ *
+ * Used in Charge project
+ *
+ */
+
 public class ServiceClass implements Comparable<ServiceClass> {
 
     public static ServiceClass of(String code,
@@ -14,23 +21,25 @@ public class ServiceClass implements Comparable<ServiceClass> {
                                   String subTariffCode,
                                   String bookingClass,
                                   int chargeCoeff) {
-        ServiceClass result = new ServiceClass(SERVICE_CLASS_TYPE.valueOf(code), weight);
+
+        ServiceClass result = new ServiceClass();
+
+        Map<String, Tariff> tariffMap = new HashMap<>();
         Tariff tariff = Tariff.of(tariffCode, tariffWeight, subTariffCode, bookingClass, chargeCoeff);
-        result.tariffMap.put(tariffCode, tariff);
+        tariffMap.put(tariffCode, tariff);
+
+        result.setType(SERVICE_CLASS_TYPE.valueOf(code));
+        result.setWeight(weight);
+        result.setTariffMap(tariffMap);
+
         return result;
     }
 
-    private final SERVICE_CLASS_TYPE type;
+    private SERVICE_CLASS_TYPE type;
 
-    private final int weight;
+    private int weight;
 
-    private final Map<String, Tariff> tariffMap;
-
-    private ServiceClass(SERVICE_CLASS_TYPE type, int weight) {
-        this.type = type;
-        this.weight = weight;
-        this.tariffMap = new HashMap<>();
-    }
+    private Map<String, Tariff> tariffMap;
 
     public SERVICE_CLASS_TYPE getType() {
         return type;
@@ -42,6 +51,18 @@ public class ServiceClass implements Comparable<ServiceClass> {
 
     public Map<String, Tariff> getTariffMap() {
         return tariffMap;
+    }
+
+    public void setType(SERVICE_CLASS_TYPE type) {
+        this.type = type;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public void setTariffMap(Map<String, Tariff> tariffMap) {
+        this.tariffMap = tariffMap;
     }
 
     @Override

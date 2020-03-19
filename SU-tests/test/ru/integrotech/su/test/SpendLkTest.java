@@ -16,7 +16,10 @@ import ru.integrotech.su.outputparams.spend.SpendLkRoute;
 import java.io.IOException;
 import java.util.List;
 
-/*test for io.spend.SpendLkRoute*/
+/**
+ * Tests for SpendLK project, used inner registers
+ */
+
 public class SpendLkTest {
 
     private static final String RESULTS_FOLDER = "test/ru/integrotech/su/resources/results/spendLkRoutes/";
@@ -61,14 +64,14 @@ public class SpendLkTest {
         SpendInput spendInput = SpendInput.of(
                 "airport", // from type
                 "SVO",// from
-                "airport", // to type
-                "VVO", // to
+                null, // to type
+                null, // to
                 -1, // miles min
-                50000, // miles max
+                100000, // miles max
                 null, // class listOf service name
                 "all", // award type
                 true, // afl only
-                null // is round trip
+                false // is round trip
         );
         List<SpendLkRoute> actualSpendLk = this.spendLkBuilder.getSpendLkRoutes(spendInput);
         this.comparator.sort(actualSpendLk);

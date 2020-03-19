@@ -48,9 +48,9 @@ try {]]>&#13;<![CDATA[
 		foreach (Flight flight in flights ) {]]>&#13;<![CDATA[
 			List carriers = new ArrayList(flight.listCarriers);]]>&#13;<![CDATA[
 			foreach (FlightCarrier carrier in carriers) {]]>&#13;<![CDATA[
-			List passengerCharges = carrier.passengerCharges;]]>&#13;<![CDATA[
+			List passengerCharges = carrier.passengerChargeInfos;]]>&#13;<![CDATA[
 				if (passengerCharges != null) {]]>&#13;<![CDATA[
-					foreach (PassengerCharge passengerCharge  in passengerCharges) {]]>&#13;<![CDATA[
+					foreach (PassengerChargeInfo passengerCharge  in passengerCharges) {]]>&#13;<![CDATA[
 					insert passengerCharge;]]>&#13;<![CDATA[
 					}]]>&#13;<![CDATA[
 				}]]>&#13;<![CDATA[
@@ -203,11 +203,11 @@ import ru.integrotech.su.outputparams.charge.ChargeBuilder;]]>&#13;<![CDATA[
 import ru.integrotech.airline.core.flight.Route;]]>&#13;<![CDATA[
 import ru.integrotech.airline.core.flight.Flight;]]>&#13;<![CDATA[
 import ru.integrotech.airline.core.flight.FlightCarrier;]]>&#13;<![CDATA[
-import ru.integrotech.airline.core.flight.PassengerCharge;]]>&#13;<![CDATA[
 import ru.integrotech.airline.register.RegisterLoader;]]>&#13;<![CDATA[
 import ru.integrotech.airline.register.RegisterCache;
 use chargeRequest;
 use chargeResponse;
+import ru.integrotech.airline.core.info.PassengerChargeInfo;
 ]]></imports>
   </Properties>
 </Ruleflow></rfModel>

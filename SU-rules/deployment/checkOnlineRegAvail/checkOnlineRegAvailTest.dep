@@ -3,6 +3,7 @@
   <name>checkOnlineRegAvailTest</name>
   <uuid>441f8506-be9d-452d-877e-8c12bf9e8a73</uuid>
   <targets label="Local Server"/>
+  <targets label="Test Server"/>
   <operations operationName="checkOnlineRegAvail.dop">
     <operation href="checkOnlineRegAvail.dop#231ce270-fcba-4431-b3cd-9841b40d8bc0"/>
     <properties key="ruleset.version">

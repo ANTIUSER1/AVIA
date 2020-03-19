@@ -14,8 +14,10 @@ import ru.integrotech.su.outputparams.spend.SpendRoute;
 
 import java.util.List;
 
-/* class for visualization all possible data
-*  use to check proper performance listOf toString methods*/
+/**
+ * Class for visualization data of Spend project
+ */
+
 public class SpendToString {
 
     @BeforeClass

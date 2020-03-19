@@ -15,8 +15,10 @@ import java.io.InputStreamReader;
 import java.util.Properties;
 
 
-/*class is used in tests instead listOf RegisterLoader. Combines loading JSONs from local
-  files and outside for use in tests. Paths to JSONs saved in ikm-mock.properties*/
+/**
+ * Class is used in tests instead listOf RegisterLoader. Combines loading JSONs from local
+ * files and outside for use in tests. Paths to JSONs saved in ikm-mock.properties
+ */
 public class MockLoader{
 
     private static final String PROPS_PATH = "test/ru/integrotech/su/resources/ikm-mock.properties";

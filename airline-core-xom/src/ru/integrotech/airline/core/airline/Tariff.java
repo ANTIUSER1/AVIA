@@ -2,28 +2,36 @@ package ru.integrotech.airline.core.airline;
 
 import java.util.*;
 
-/* class represents tariff listOf class listOf service */
+/**
+ * class represents tariff of service class  of airline
+ *
+ * Used in Charge project
+ *
+ */
+
 public class Tariff implements Comparable<Tariff> {
 
     public static Tariff of(String code,  int weight, String subTariffCode, String bookingClass, int chargeCoeff) {
-        Tariff tariff = new Tariff(code, weight);
+
+        Tariff result = new Tariff();
+
         Set<SubTariff> subTariffs = new HashSet<>();
         subTariffs.add(SubTariff.of(subTariffCode, bookingClass, chargeCoeff));
-        tariff.subTariffsMap.put(chargeCoeff,subTariffs);
-        return tariff;
+        HashMap<Integer, Set<SubTariff>> subTariffsMap = new HashMap<>();
+        subTariffsMap.put(chargeCoeff,subTariffs);
+
+        result.setCode(code);
+        result.setWeight(weight);
+        result.setSubTariffsMap(subTariffsMap);
+
+        return result;
     }
 
-    private final String code;
+    private String code;
 
-    private final int weight;
+    private int weight;
 
-    private final HashMap<Integer, Set<SubTariff>> subTariffsMap;
-
-    private Tariff(String code, int weight) {
-        this.code = code;
-        this.weight = weight;
-        this.subTariffsMap = new HashMap<>();
-    }
+    private HashMap<Integer, Set<SubTariff>> subTariffsMap;
 
     public String getCode() {
         return code;
@@ -35,6 +43,18 @@ public class Tariff implements Comparable<Tariff> {
 
     public HashMap<Integer, Set<SubTariff>> getSubTariffsMap() {
         return subTariffsMap;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public void setSubTariffsMap(HashMap<Integer, Set<SubTariff>> subTariffsMap) {
+        this.subTariffsMap = subTariffsMap;
     }
 
     @Override

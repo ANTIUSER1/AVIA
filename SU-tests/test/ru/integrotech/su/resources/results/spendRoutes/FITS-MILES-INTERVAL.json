@@ -705,6 +705,16 @@
           {
             "awardType": "OW",
             "classOfService1": {
+              "classOfServiceName": "comfort"
+            },
+            "classOfService2": {},
+            "value": 50000,
+            "isLightAward": false,
+            "fitsMilesInterval": false
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
               "classOfServiceName": "economy"
             },
             "classOfService2": {},
@@ -1247,6 +1257,18 @@
             "fitsMilesInterval": true
           },
           {
+            "awardType": "UC",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {
+              "classOfServiceName": "business"
+            },
+            "value": 20000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
             "awardType": "UO",
             "classOfService1": {
               "classOfServiceName": "economy"
@@ -1494,6 +1516,18 @@
             "fitsMilesInterval": false
           },
           {
+            "awardType": "UC",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {
+              "classOfServiceName": "business"
+            },
+            "value": 27500,
+            "isLightAward": false,
+            "fitsMilesInterval": false
+          },
+          {
             "awardType": "UO",
             "classOfService1": {
               "classOfServiceName": "economy"
@@ -1736,6 +1770,18 @@
               "classOfServiceName": "economy"
             },
             "classOfService2": {},
+            "value": 27500,
+            "isLightAward": false,
+            "fitsMilesInterval": false
+          },
+          {
+            "awardType": "UC",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {
+              "classOfServiceName": "business"
+            },
             "value": 27500,
             "isLightAward": false,
             "fitsMilesInterval": false
@@ -2453,6 +2499,16 @@
             },
             "classOfService2": {},
             "value": 60000,
+            "isLightAward": false,
+            "fitsMilesInterval": false
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "comfort"
+            },
+            "classOfService2": {},
+            "value": 50000,
             "isLightAward": false,
             "fitsMilesInterval": false
           },

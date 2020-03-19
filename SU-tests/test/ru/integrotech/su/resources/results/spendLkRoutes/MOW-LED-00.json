@@ -1,70 +1,78 @@
 [
-	{
-	"origin": {
-				"airport": {
-							"airportCode": "SVO"
-						   }, 
-				"city": {
-						"cityCode": "MOW", 
-						"weight": 1 
-						}, 
-				"country": { 
-							"countryCode": "RU"
-						   },
-				"region": { "regionCode": "CIS"
-						  } 
-			  },
-	"destination": {
-				"airport": {
-							"airportCode": "LED"
-						   }, 
-				"city": {
-						"cityCode": "LED", 
-						"weight": 2 
-						}, 
-				"country": { 
-							"countryCode": "RU"
-						   },
-				"region": { "regionCode": "CIS"
-						  } 
-				   },
-	"requiredAwards": [
-							{ 
-								"awardType": "OW", 
-								"classOfService1": {
-													"classOfServiceName": "business"
-												   }, 
-								"classOfService2": {
-													"classOfServiceName": null
-												   }, 
-								"value": 15000, 
-								"isLightAward": false, 
-								"fitsMilesInterval": true
-							}, 
-							{ 
-								"awardType": "OW", 
-								"classOfService1": {
-													"classOfServiceName": "economy"
-												   }, 
-								"classOfService2": {
-													"classOfServiceName": null
-												   }, 
-								"value": 10000, 
-								"isLightAward": false, 
-								"fitsMilesInterval": true
-							}, 
-							{ 
-								"awardType": "UC", 
-								"classOfService1": {
-													"classOfServiceName": "economy"
-												   }, 
-								"classOfService2": {
-													"classOfServiceName": "business"
-												   }, 
-								"value": 10000, 
-								"isLightAward": false, 
-								"fitsMilesInterval": true
-							} 
-					  ]
-	}
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "LED"
+      },
+      "city": {
+        "cityCode": "LED",
+        "weight": 2
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "requiredAwards": [
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "business"
+        },
+        "classOfService2": {},
+        "value": 15000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "comfort"
+        },
+        "classOfService2": {},
+        "value": 50000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "OW",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {},
+        "value": 10000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      },
+      {
+        "awardType": "UC",
+        "classOfService1": {
+          "classOfServiceName": "economy"
+        },
+        "classOfService2": {
+          "classOfServiceName": "business"
+        },
+        "value": 10000,
+        "isLightAward": false,
+        "fitsMilesInterval": true
+      }
+    ]
+  }
 ]

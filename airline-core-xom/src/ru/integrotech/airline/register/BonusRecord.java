@@ -1,10 +1,16 @@
 package ru.integrotech.airline.register;
 
-
 import ru.integrotech.airline.core.airline.ServiceClass;
 import ru.integrotech.airline.core.bonus.Bonus;
 
 import java.util.Date;
+
+/**
+ * class for read data in JSON format from remote register
+ *
+ *  Used in Spend project
+ *
+ */
 
 class BonusRecord {
 

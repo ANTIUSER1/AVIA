@@ -1,144 +1,171 @@
 package ru.integrotech.su.inputparams.spend;
 
-
 import ru.integrotech.su.common.spend.ClassOfService;
 
+/**
+ *
+ * container for spendRequest (request body for Spend project)
+ *
+ * data (private LocationInput origin; private LocationInput destination;
+ * private MilesInterval milesInterval; private boolean isOnlyAfl; private
+ * boolean isRoundTrip; private ClassOfService classOfService; private String
+ * awardType; private String lang;)
+ */
 public class SpendInput {
+	/**
+	 * 
+	 * Static constructor <br />
+	 * constructs, then sets up the instance's fields value
+	 *
+	 * @return
+	 */
+	public static SpendInput of() {
+		SpendInput res = new SpendInput();
+		res.initDefaultParameters();
+		return res;
+	}
 
-    public static SpendInput of() {
-        return new SpendInput();
-    }
+	/**
+	 * Static constructor <br />
+	 * constructs, then sets up the instance's fields value
+	 *
+	 * @param originType
+	 * @param originCode
+	 * @param destType
+	 * @param destCode
+	 * @param milesMin
+	 * @param milesMax
+	 * @param classOfServiceName
+	 * @param awardType
+	 * @param isOnlyAfl
+	 * @param isRoundTrip
+	 * @return
+	 */
+	public static SpendInput of(String originType, String originCode,
+			String destType, String destCode, int milesMin, int milesMax,
+			String classOfServiceName, String awardType, boolean isOnlyAfl,
+			Boolean isRoundTrip) {
+		SpendInput spendInput = new SpendInput();
+		spendInput.setOrigin(LocationInput.of(originType, originCode));
+		spendInput.setDestination(LocationInput.of(destType, destCode));
+		spendInput.setMilesInterval(MilesInterval.of(milesMin, milesMax));
+		spendInput.setClassOfService(ClassOfService.of(classOfServiceName));
+		spendInput.setAwardType(awardType);
+		spendInput.setIsOnlyAfl(isOnlyAfl);
+		spendInput.setIsRoundTrip(isRoundTrip);
+		return spendInput;
+	}
 
-    public static SpendInput of(String originType,
-                                String originCode,
-                                String destType,
-                                String destCode,
-                                int milesMin,
-                                int milesMax,
-                                String classOfServiceName,
-                                String awardType,
-                                boolean isOnlyAfl,
-                                Boolean isRoundTrip) {
-        SpendInput spendInput = new SpendInput();
-        spendInput.setOrigin(LocationInput.of(originType, originCode));
-        spendInput.setDestination(LocationInput.of(destType, destCode));
-        spendInput.setMilesInterval(MilesInterval.of(milesMin, milesMax));
-        spendInput.setClassOfService(ClassOfService.of(classOfServiceName));
-        spendInput.setAwardType(awardType);
-        spendInput.setIsOnlyAfl(isOnlyAfl);
-        spendInput.setIsRoundTrip(isRoundTrip);
-        return spendInput;
-    }
-    
-   
+	private LocationInput origin;
 
-    private LocationInput origin;
+	private LocationInput destination;
 
-    private LocationInput destination;
+	private MilesInterval milesInterval;
 
-    private MilesInterval milesInterval;
+	private boolean isOnlyAfl;
 
-    private boolean isOnlyAfl;
+	private Boolean isRoundTrip;
 
-    private Boolean isRoundTrip;
+	private ClassOfService classOfService;
 
-    private ClassOfService classOfService;
+	private String awardType;
 
-    private String awardType;
+	private String lang;
 
-    private String lang;
+	public boolean getIsOnlyAfl() {
+		return isOnlyAfl;
+	}
 
-    private SpendInput() {
-    	this.initDefaultParameters();
-    }
+	public Boolean getIsRoundTrip() {
+		return isRoundTrip;
+	}
 
-    public boolean getIsOnlyAfl() {
-        return isOnlyAfl;
-    }
+	public String getAwardType() {
+		return awardType;
+	}
 
-    public Boolean getIsRoundTrip() {
-        return isRoundTrip;
-    }
+	public LocationInput getOrigin() {
+		return origin;
+	}
 
-    public String getAwardType() {
-        return awardType;
-    }
+	public void setOrigin(LocationInput origin) {
+		this.origin = origin;
+	}
 
-    public LocationInput getOrigin() {
-        return origin;
-    }
+	public LocationInput getDestination() {
+		return destination;
+	}
 
-    public void setOrigin(LocationInput origin) {
-        this.origin = origin;
-    }
+	public void setDestination(LocationInput destination) {
+		this.destination = destination;
+	}
 
-    public LocationInput getDestination() {
-        return destination;
-    }
+	public MilesInterval getMilesInterval() {
+		return milesInterval;
+	}
 
-    public void setDestination(LocationInput destination) {
-        this.destination = destination;
-    }
+	public void setMilesInterval(MilesInterval milesInterval) {
+		this.milesInterval = milesInterval;
+	}
 
-    public MilesInterval getMilesInterval() {
-        return milesInterval;
-    }
+	public void setIsOnlyAfl(boolean isOnlyAfl) {
+		this.isOnlyAfl = isOnlyAfl;
+	}
 
-    public void setMilesInterval(MilesInterval milesInterval) {
-        this.milesInterval = milesInterval;
-    }
+	public void setIsRoundTrip(Boolean isRoundTrip) {
+		this.isRoundTrip = isRoundTrip;
+	}
 
-    public void setIsOnlyAfl(boolean isOnlyAfl) {
-        this.isOnlyAfl = isOnlyAfl;
-    }
+	public ClassOfService getClassOfService() {
+		return classOfService;
+	}
 
-    public void setIsRoundTrip(Boolean isRoundTrip) {
-        this.isRoundTrip = isRoundTrip;
-    }
+	public void setClassOfService(ClassOfService classOfService) {
+		this.classOfService = classOfService;
+	}
 
-    public ClassOfService getClassOfService() {
-        return classOfService;
-    }
+	public void setAwardType(String awardType) {
 
-    public void setClassOfService(ClassOfService classOfService) {
-        this.classOfService = classOfService;
-    }
+		if (awardType != null) {
+			awardType = awardType.toLowerCase();
+		}
 
-    public void setAwardType(String awardType) {
+		this.awardType = awardType;
+	}
 
-        if (awardType != null) {
-            awardType = awardType.toLowerCase();
-        }
+	public String getLang() {
+		return lang;
+	}
 
-        this.awardType = awardType;
-    }
+	public void setLang(String lang) {
+		this.lang = lang;
+	}
 
-    public String getLang() {
-        return lang;
-    }
+	/**
+	 * Default field values Initialization <br />
+	 * destination = null;<br />
+	 * milesInterval = [0--250000] ;<br />
+	 * classOfService = ClassOfService.of();<br />
+	 * awardType = all;<br />
+	 */
+	private void initDefaultParameters() {
 
-    public void setLang(String lang) {
-        this.lang = lang;
-    }
-    
-    private void initDefaultParameters() {
-    	
-    	if (this.destination == null) {
-    		this.destination = LocationInput.of(null, null);
-     	}
-    	
-    	if (this.milesInterval == null) {
-    		this.milesInterval = MilesInterval.of(0, 250000);
-     	}
-    	
-    	if (this.classOfService == null) {
-    		this.classOfService = ClassOfService.of();
-     	}
-    	
-    	if (this.awardType == null) {
-    		this.awardType = "all";
-     	}
-    	
-    }
+		if (this.destination == null) {
+			this.destination = LocationInput.of(null, null);
+		}
+
+		if (this.milesInterval == null) {
+			this.milesInterval = MilesInterval.of(0, 250000);
+		}
+
+		if (this.classOfService == null) {
+			this.classOfService = ClassOfService.of();
+		}
+
+		if (this.awardType == null) {
+			this.awardType = "all";
+		}
+
+	}
 
 }

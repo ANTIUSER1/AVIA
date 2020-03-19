@@ -14,7 +14,10 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 
-/*test for io.SpendRoute*/
+/**
+ * Tests for Spend project, used inner registers
+ */
+
 public class SpendTest {
 
     private static final String RESULTS_FOLDER = "test/ru/integrotech/su/resources/results/spendRoutes/";
@@ -58,13 +61,13 @@ public class SpendTest {
         SpendInput spendInput = SpendInput.of(
                 "airport", // from type
                 "SVO",// from
-                null, // to type
-                null, // to
+                "airport", // to type
+                "VVO", // to
                 -1, // miles min
                 100000, // miles max
                 null, // class listOf service name
                 "all", // award type
-                false, // afl only
+                true, // afl only
                 false // is round trip
         );
         List<SpendRoute> actualSpend = this.spendBuilder.getSpendRoutes(spendInput);
@@ -407,7 +410,7 @@ public class SpendTest {
     // http://support.integrotechnologies.ru/issues/20894
     // task not closed yet
     @Test
-    public void KJA_VVO_01() {
+    public void KJA_SVO_VVO_01() {
         SpendInput spendInput = SpendInput.of(
                 "airport", // from type
                 "KJA",// from

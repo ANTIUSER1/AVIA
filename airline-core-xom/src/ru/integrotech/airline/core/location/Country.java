@@ -4,40 +4,55 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-/* class represents country*/
+/**
+ * class represents country
+ *
+ *  Сan be used in all projects
+ *
+ */
+
 public class Country implements Comparable<Country> {
 
-    public static Country of(String code, String name, WorldRegion worldRegion, String capitalCode, double longitude, double latitude) {
-        return new Country(code, name, GeoLocation.of(longitude, latitude), worldRegion, capitalCode);
+    public static Country of(String code,
+                             String name,
+                             WorldRegion worldRegion,
+                             String capitalCode,
+                             double longitude,
+                             double latitude) {
+
+        Country result = new Country();
+        result.setCode(code);
+        result.setName(name);
+        result.setGeoLocation(GeoLocation.of(longitude, latitude));
+        result.setWorldRegion(worldRegion);
+        result.setCapitalCode(capitalCode);
+        result.setAirportMap(new HashMap<>());
+        return result;
     }
 
     public static Country of(String code, String name, WorldRegion worldRegion, String capitalCode) {
-        return new Country(code, name, null, worldRegion, capitalCode);
+        Country result = new Country();
+        result.setCode(code);
+        result.setName(name);
+        result.setWorldRegion(worldRegion);
+        result.setCapitalCode(capitalCode);
+        result.setAirportMap(new HashMap<>());
+        return result;
     }
 
-    private final String code;
+    private String code;
 
-    private final String name;
+    private String name;
 
-    private final GeoLocation geoLocation;
+    private GeoLocation geoLocation;
 
-    private final WorldRegion worldRegion;
+    private WorldRegion worldRegion;
 
     private City capital;
 
-    private final String capitalCode;
+    private String capitalCode;
 
-    private final Map<String, Airport> airportMap;
-
-    private Country(String code, String name, GeoLocation geoLocation, WorldRegion worldRegion, String capitalCode) {
-        this.code = code;
-        this.name = name;
-        this.geoLocation = geoLocation;
-        this.worldRegion = worldRegion;
-        this.capitalCode = capitalCode;
-        airportMap = new HashMap<>();
-    }
-
+    private Map<String, Airport> airportMap;
 
     public String getCode() {
         return code;
@@ -69,6 +84,30 @@ public class Country implements Comparable<Country> {
 
     public Map<String, Airport> getAirportMap() {
         return airportMap;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setGeoLocation(GeoLocation geoLocation) {
+        this.geoLocation = geoLocation;
+    }
+
+    public void setWorldRegion(WorldRegion worldRegion) {
+        this.worldRegion = worldRegion;
+    }
+
+    public void setCapitalCode(String capitalCode) {
+        this.capitalCode = capitalCode;
+    }
+
+    public void setAirportMap(Map<String, Airport> airportMap) {
+        this.airportMap = airportMap;
     }
 
     @Override

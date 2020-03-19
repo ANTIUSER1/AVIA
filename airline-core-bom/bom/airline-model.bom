@@ -1,21 +1,7 @@
 
 property loadGetterSetterAsProperties "true"
 property origin "xom:/airline-core-bom//airline-core-xom"
-property uuid "70cb13e8-be02-475c-bada-5ea6136c6655"
-package ru.integrotech.airline.core;
-
-
-public class PassengerFlightInfo
-        property automaticVariable "true"
-{
-    public string airlineCode;
-    public string departureAirportCode;
-    public int flightNumber;
-    public boolean onlineRegistrationAvailable;
-    public java.util.List ssrCodes domain 0,* class string;
-    public PassengerFlightInfo();
-}
-
+property uuid "ef08d0aa-0fbd-4cb6-b887-9988045f17c4"
 package ru.integrotech.airline.core.airline;
 
 
@@ -23,12 +9,13 @@ public class Airline
         extends java.lang.Comparable
 {
     public static final readonly string AFL_CODE;
-    public readonly string code;
+    public string code;
     public java.util.Set defaultServiceClasses domain 0,* class ru.integrotech.airline.core.airline.ServiceClass.SERVICE_CLASS_TYPE;
-    public readonly int minMilesCharge;
-    public readonly string minMilesLimit;
-    public readonly string name;
-    public readonly java.util.Map serviceClassMap;
+    public int minMilesCharge;
+    public string minMilesLimit;
+    public string name;
+    public java.util.Map serviceClassMap;
+    public Airline();
     public int compareTo(ru.integrotech.airline.core.airline.Airline arg);
     public boolean equals(object arg);
     public int hashCode();
@@ -53,9 +40,10 @@ public class ServiceClass
         public static ru.integrotech.airline.core.airline.ServiceClass.SERVICE_CLASS_TYPE valueOf(string arg);
         public static ru.integrotech.airline.core.airline.ServiceClass.SERVICE_CLASS_TYPE[] values();
     }
-    public readonly java.util.Map tariffMap;
-    public readonly ru.integrotech.airline.core.airline.ServiceClass.SERVICE_CLASS_TYPE type;
-    public readonly int weight;
+    public java.util.Map tariffMap;
+    public ru.integrotech.airline.core.airline.ServiceClass.SERVICE_CLASS_TYPE type;
+    public int weight;
+    public ServiceClass();
     public int compareTo(ru.integrotech.airline.core.airline.ServiceClass arg);
     public boolean equals(object arg);
     public int hashCode();
@@ -66,9 +54,10 @@ public class ServiceClass
 public class SubTariff
         extends java.lang.Comparable
 {
-    public readonly string bookingClass;
-    public readonly int chargeCoeff;
-    public readonly string fareCode;
+    public string bookingClass;
+    public int chargeCoeff;
+    public string fareCode;
+    public SubTariff();
     public int compareTo(ru.integrotech.airline.core.airline.SubTariff arg);
     public boolean equals(object arg);
     public int hashCode();
@@ -80,9 +69,10 @@ public class SubTariff
 public class Tariff
         extends java.lang.Comparable
 {
-    public readonly string code;
-    public readonly java.util.HashMap subTariffsMap;
-    public readonly int weight;
+    public string code;
+    public java.util.HashMap subTariffsMap;
+    public int weight;
+    public Tariff();
     public int compareTo(ru.integrotech.airline.core.airline.Tariff arg);
     public boolean equals(object arg);
     public int hashCode();
@@ -111,16 +101,16 @@ public class Bonus
     }
     public readonly string description;
     public boolean fitsMilesInterval;
-    public readonly boolean light;
-    public readonly ru.integrotech.airline.core.airline.ServiceClass.SERVICE_CLASS_TYPE serviceClass;
+    public boolean light;
+    public ru.integrotech.airline.core.airline.ServiceClass.SERVICE_CLASS_TYPE serviceClass;
     public ru.integrotech.airline.core.bonus.Bonus.BONUS_TYPE type;
-    public readonly ru.integrotech.airline.core.airline.ServiceClass.SERVICE_CLASS_TYPE upgradeServiceClass;
-    public readonly java.util.Date validFrom;
-    public readonly java.util.Date validTo;
-    public readonly int value;
+    public ru.integrotech.airline.core.airline.ServiceClass.SERVICE_CLASS_TYPE upgradeServiceClass;
+    public java.util.Date validFrom;
+    public java.util.Date validTo;
+    public int value;
+    public Bonus();
     public int compareTo(ru.integrotech.airline.core.bonus.Bonus arg);
     public boolean equals(object arg);
-    public boolean equalsIgnoreValue(object arg);
     public int hashCode();
     public static ru.integrotech.airline.core.bonus.Bonus of(string arg1, ru.integrotech.airline.core.airline.ServiceClass.SERVICE_CLASS_TYPE arg2, ru.integrotech.airline.core.airline.ServiceClass.SERVICE_CLASS_TYPE arg3, int arg4, boolean arg5, java.util.Date arg6, java.util.Date arg7);
     public void setFitsMilesInterval(int arg1, int arg2);
@@ -142,15 +132,52 @@ public class Loyalty
         public static ru.integrotech.airline.core.bonus.Loyalty.LOYALTY_TYPE valueOf(string arg);
         public static ru.integrotech.airline.core.bonus.Loyalty.LOYALTY_TYPE[] values();
     }
-    public readonly int businessSegments;
-    public readonly int factor;
-    public readonly int miles;
-    public readonly int segments;
-    public readonly ru.integrotech.airline.core.bonus.Loyalty.LOYALTY_TYPE type;
+    public int businessSegments;
+    public int factor;
+    public int miles;
+    public int segments;
+    public ru.integrotech.airline.core.bonus.Loyalty.LOYALTY_TYPE type;
+    public Loyalty();
     public int compareTo(ru.integrotech.airline.core.bonus.Loyalty arg);
     public boolean equals(object arg);
     public int hashCode();
     public static ru.integrotech.airline.core.bonus.Loyalty of(ru.integrotech.airline.core.bonus.Loyalty.LOYALTY_TYPE arg1, int arg2, int arg3, int arg4, int arg5);
+    public string toString();
+}
+
+public class MilesRule
+{
+
+    static public final class IKM_RULE
+            extends java.lang.Enum
+    {
+        domain {static IN, static EX}
+        public static final readonly ru.integrotech.airline.core.bonus.MilesRule.IKM_RULE EX;
+        public static final readonly ru.integrotech.airline.core.bonus.MilesRule.IKM_RULE IN;
+        public static ru.integrotech.airline.core.bonus.MilesRule.IKM_RULE valueOf(string arg);
+        public static ru.integrotech.airline.core.bonus.MilesRule.IKM_RULE[] values();
+    }
+
+    static public final class RULE_TYPE
+            extends java.lang.Enum
+    {
+        domain {static TD, static PF, static SF, static BC}
+        public static final readonly ru.integrotech.airline.core.bonus.MilesRule.RULE_TYPE BC;
+        public static final readonly ru.integrotech.airline.core.bonus.MilesRule.RULE_TYPE PF;
+        public static final readonly ru.integrotech.airline.core.bonus.MilesRule.RULE_TYPE SF;
+        public static final readonly ru.integrotech.airline.core.bonus.MilesRule.RULE_TYPE TD;
+        public static ru.integrotech.airline.core.bonus.MilesRule.RULE_TYPE valueOf(string arg);
+        public static ru.integrotech.airline.core.bonus.MilesRule.RULE_TYPE[] values();
+    }
+    public java.util.List airportPairs domain 0,* class string;
+    public int bonusPercent;
+    public string bookingClassCode;
+    public java.util.List fareCodeMasks domain 0,* class string;
+    public ru.integrotech.airline.core.bonus.MilesRule.IKM_RULE ikmRule;
+    public int ruleOrder;
+    public ru.integrotech.airline.core.bonus.MilesRule.RULE_TYPE ruleType;
+    public java.util.List tickedDesignatorMasks domain 0,* class string;
+    public MilesRule();
     public string toString();
 }
 
@@ -162,19 +189,20 @@ public class Flight
     public java.util.Set aflBonuses domain 0,* class ru.integrotech.airline.core.bonus.Bonus;
     public readonly string aflReverseZones;
     public readonly string aflZones;
-    public readonly java.util.Map carriers;
-    public readonly string code;
-    public readonly ru.integrotech.airline.core.location.Airport destination;
-    public readonly int distance;
+    public java.util.Map carriers;
+    public string code;
+    public ru.integrotech.airline.core.location.Airport destination;
+    public int distance;
     public readonly java.util.Collection listCarriers domain 0,* class ru.integrotech.airline.core.flight.FlightCarrier;
-    public readonly ru.integrotech.airline.core.location.Airport origin;
+    public ru.integrotech.airline.core.location.Airport origin;
     public java.util.Set scyteamBonuses domain 0,* class ru.integrotech.airline.core.bonus.Bonus;
     public readonly string scyteamReverseZones;
     public readonly string scyteamZones;
+    public Flight();
+    public static ru.integrotech.airline.core.flight.Flight copy(ru.integrotech.airline.core.flight.Flight arg);
     public boolean equals(object arg);
     public java.util.Set getAllowedClasses(ru.integrotech.airline.core.airline.Airline arg) domain 0,* class ru.integrotech.airline.core.airline.ServiceClass.SERVICE_CLASS_TYPE;
     public int hashCode();
-    public static ru.integrotech.airline.core.flight.Flight of(ru.integrotech.airline.core.flight.Flight arg);
     public static ru.integrotech.airline.core.flight.Flight of(ru.integrotech.airline.core.location.Airport arg1, ru.integrotech.airline.core.location.Airport arg2, int arg3, ru.integrotech.airline.core.airline.Airline arg4);
     public static ru.integrotech.airline.core.flight.Flight of(ru.integrotech.airline.core.location.Airport arg1, 
         ru.integrotech.airline.core.location.Airport arg2, 
@@ -188,65 +216,15 @@ public class Flight
 public class FlightCarrier
 {
     public readonly java.util.Set allowedClasses domain 0,* class ru.integrotech.airline.core.airline.ServiceClass.SERVICE_CLASS_TYPE;
-    public readonly ru.integrotech.airline.core.airline.Airline carrier;
-    public readonly java.util.Set extraClasses domain 0,* class ru.integrotech.airline.core.airline.ServiceClass.SERVICE_CLASS_TYPE;
-    public java.util.List passengerCharges domain 0,* class ru.integrotech.airline.core.flight.PassengerCharge;
+    public ru.integrotech.airline.core.airline.Airline carrier;
+    public java.util.Set extraClasses domain 0,* class ru.integrotech.airline.core.airline.ServiceClass.SERVICE_CLASS_TYPE;
+    public java.util.List passengerChargeInfos domain 0,* class ru.integrotech.airline.core.info.PassengerChargeInfo;
+    public FlightCarrier();
     public void addExtraClasses(java.lang.String[] arg);
     public static ru.integrotech.airline.core.flight.FlightCarrier of(ru.integrotech.airline.core.airline.Airline arg);
     public static ru.integrotech.airline.core.flight.FlightCarrier of(ru.integrotech.airline.core.airline.Airline arg1, 
         java.util.Set arg2 domain 0,* class ru.integrotech.airline.core.airline.ServiceClass.SERVICE_CLASS_TYPE);
     public string toString();
-}
-
-public class PassengerCharge
-        property automaticVariable "true"
-{
-    public readonly ru.integrotech.airline.core.airline.Airline airline;
-    public readonly int chargeCoeff;
-    public readonly ru.integrotech.airline.core.location.Airport destination;
-    public int distance;
-    public int miles;
-    public int milesBonus;
-    public int milesCharged;
-    public int milesQualifying;
-    public readonly ru.integrotech.airline.core.location.Airport origin;
-    public readonly ru.integrotech.airline.core.airline.ServiceClass serviceClass;
-    public readonly ru.integrotech.airline.core.airline.SubTariff subTariff;
-    public readonly ru.integrotech.airline.core.airline.Tariff tariff;
-    public PassengerCharge(ru.integrotech.airline.core.location.Airport arg1, ru.integrotech.airline.core.location.Airport arg2, ru.integrotech.airline.core.airline.Airline arg3, ru.integrotech.airline.core.airline.ServiceClass arg4, ru.integrotech.airline.core.airline.Tariff arg5, ru.integrotech.airline.core.airline.SubTariff arg6, int arg7, int arg8);
-    public string toString();
-}
-
-public class PassengerChargeInfo
-        property automaticVariable "true"
-{
-
-    static public final class Status
-            extends java.lang.Enum
-    {
-        domain {static full, static partial, static nodata}
-        public static final readonly ru.integrotech.airline.core.flight.PassengerChargeInfo.Status full;
-        public static final readonly ru.integrotech.airline.core.flight.PassengerChargeInfo.Status nodata;
-        public static final readonly ru.integrotech.airline.core.flight.PassengerChargeInfo.Status partial;
-        public static ru.integrotech.airline.core.flight.PassengerChargeInfo.Status valueOf(string arg);
-        public static ru.integrotech.airline.core.flight.PassengerChargeInfo.Status[] values();
-    }
-    public int additionalDistance;
-    public ru.integrotech.airline.core.airline.Airline airline;
-    public int bonuseDistance;
-    public string bookingClassCode;
-    public ru.integrotech.airline.core.location.Airport destination;
-    public int distance;
-    public double distanceCoeff;
-    public string fareCode;
-    public readonly string flightCode;
-    public readonly int flightDistance;
-    public readonly int minBonusMiles;
-    public ru.integrotech.airline.core.location.Airport origin;
-    public ru.integrotech.airline.core.flight.PassengerChargeInfo.Status status;
-    public string tickedDesignator;
-    public int totalBonusMiles;
-    public static ru.integrotech.airline.core.flight.PassengerChargeInfo of(ru.integrotech.airline.core.airline.Airline arg1, ru.integrotech.airline.core.location.Airport arg2, ru.integrotech.airline.core.location.Airport arg3, string arg4, string arg5, int arg6, string arg7, ru.integrotech.airline.core.flight.PassengerChargeInfo.Status arg8);
 }
 
 public class Route
@@ -264,20 +242,22 @@ public class Route
     public boolean bonusSummation;
     public readonly java.util.List cities domain 0,* class ru.integrotech.airline.core.location.City;
     public readonly string cityCodes;
-    public readonly string code;
+    public string code;
     public readonly ru.integrotech.airline.core.location.Airport destination;
     public readonly boolean direct;
     public readonly int distance;
-    public readonly java.util.List flights domain 0,* class ru.integrotech.airline.core.flight.Flight;
+    public java.util.List flights domain 0,* class ru.integrotech.airline.core.flight.Flight;
     public readonly ru.integrotech.airline.core.location.Airport origin;
     public readonly string reverseCityCodes;
     public java.util.Set scyteamBonuses domain 0,* class ru.integrotech.airline.core.bonus.Bonus;
     public readonly string scyteamReverseZones;
     public readonly string scyteamZones;
     public boolean wrong;
+    public Route();
     public int compareTo(ru.integrotech.airline.core.flight.Route arg);
     public static string createCode(java.util.List arg domain 0,* class ru.integrotech.airline.core.flight.Flight);
     public boolean equals(object arg);
+    public java.util.Set getCommonRouteClasses(ru.integrotech.airline.core.airline.Airline arg) domain 0,* class ru.integrotech.airline.core.airline.ServiceClass.SERVICE_CLASS_TYPE;
     public java.util.List getFlights(ru.integrotech.airline.core.airline.Airline arg) domain 0,* class ru.integrotech.airline.core.flight.Flight;
     public int hashCode();
     public boolean isOperatesBy(ru.integrotech.airline.core.airline.Airline arg);
@@ -294,6 +274,41 @@ public class Route
 
 package ru.integrotech.airline.core.info;
 
+
+public class PassengerChargeInfo
+        property automaticVariable "true"
+{
+    public ru.integrotech.airline.core.airline.Airline airline;
+    public int chargeCoeff;
+    public ru.integrotech.airline.core.location.Airport destination;
+    public int distance;
+    public int miles;
+    public int milesBonus;
+    public int milesCharged;
+    public int milesQualifying;
+    public ru.integrotech.airline.core.location.Airport origin;
+    public ru.integrotech.airline.core.airline.ServiceClass serviceClass;
+    public ru.integrotech.airline.core.airline.SubTariff subTariff;
+    public ru.integrotech.airline.core.airline.Tariff tariff;
+    public PassengerChargeInfo();
+    public static java.util.List listOf(ru.integrotech.airline.core.flight.Flight arg1, 
+        java.util.List arg2 domain 0,* class ru.integrotech.airline.core.airline.ServiceClass, 
+        int arg3, 
+        boolean arg4, 
+        ru.integrotech.airline.core.airline.Airline arg5) domain 0,* class ru.integrotech.airline.core.info.PassengerChargeInfo;
+    public static ru.integrotech.airline.core.info.PassengerChargeInfo of(ru.integrotech.airline.core.location.Airport arg1, ru.integrotech.airline.core.location.Airport arg2, ru.integrotech.airline.core.airline.Airline arg3, ru.integrotech.airline.core.airline.ServiceClass arg4, ru.integrotech.airline.core.airline.Tariff arg5, ru.integrotech.airline.core.airline.SubTariff arg6, int arg7, int arg8);
+}
+
+public class PassengerFlightInfo
+        property automaticVariable "true"
+{
+    public string airlineCode;
+    public string departureAirportCode;
+    public int flightNumber;
+    public boolean onlineRegistrationAvailable;
+    public java.util.List ssrCodes domain 0,* class string;
+    public PassengerFlightInfo();
+}
 
 public class PassengerLoyaltyInfo
 {
@@ -329,6 +344,40 @@ public class PassengerLoyaltyInfo
     public static ru.integrotech.airline.core.info.PassengerLoyaltyInfo of(string arg1, int arg2, string arg3);
 }
 
+public class PassengerMilesInfo
+        property automaticVariable "true"
+{
+
+    static public final class Status
+            extends java.lang.Enum
+    {
+        domain {static full, static partial, static nodata}
+        public static final readonly ru.integrotech.airline.core.info.PassengerMilesInfo.Status full;
+        public static final readonly ru.integrotech.airline.core.info.PassengerMilesInfo.Status nodata;
+        public static final readonly ru.integrotech.airline.core.info.PassengerMilesInfo.Status partial;
+        public static ru.integrotech.airline.core.info.PassengerMilesInfo.Status valueOf(string arg);
+        public static ru.integrotech.airline.core.info.PassengerMilesInfo.Status[] values();
+    }
+    public int additionalDistance;
+    public ru.integrotech.airline.core.airline.Airline airline;
+    public int bonuseDistance;
+    public string bookingClassCode;
+    public ru.integrotech.airline.core.location.Airport destination;
+    public int distance;
+    public double distanceCoeff;
+    public string fareCode;
+    public readonly string flightCode;
+    public readonly int flightDistance;
+    public readonly int minBonusMiles;
+    public ru.integrotech.airline.core.location.Airport origin;
+    public ru.integrotech.airline.core.info.PassengerMilesInfo.Status status;
+    public string tickedDesignator;
+    public int totalBonusMiles;
+    public PassengerMilesInfo();
+    public static ru.integrotech.airline.core.info.PassengerMilesInfo of(ru.integrotech.airline.core.airline.Airline arg1, ru.integrotech.airline.core.location.Airport arg2, ru.integrotech.airline.core.location.Airport arg3, string arg4, string arg5, int arg6, string arg7, ru.integrotech.airline.core.info.PassengerMilesInfo.Status arg8);
+    public string toString();
+}
+
 package ru.integrotech.airline.core.location;
 
 
@@ -360,15 +409,15 @@ public class Airport
         public static ru.integrotech.airline.core.location.Airport.ZONE valueOf(string arg);
         public static ru.integrotech.airline.core.location.Airport.ZONE[] values();
     }
-    public readonly ru.integrotech.airline.core.location.Airport.ZONE aflZone;
-    public readonly ru.integrotech.airline.core.location.City city;
-    public readonly string code;
-    public readonly ru.integrotech.airline.core.location.GeoLocation geoLocation;
-    public readonly string name;
-    public readonly java.util.Map outcomeFlights;
-    public readonly ru.integrotech.airline.core.location.Airport.ZONE scyteamZone;
-    public readonly boolean ucAvailable;
-    public Airport(string arg1, string arg2, ru.integrotech.airline.core.location.City arg3, ru.integrotech.airline.core.location.Airport.ZONE arg4, ru.integrotech.airline.core.location.Airport.ZONE arg5, boolean arg6);
+    public ru.integrotech.airline.core.location.Airport.ZONE aflZone;
+    public ru.integrotech.airline.core.location.City city;
+    public string code;
+    public ru.integrotech.airline.core.location.GeoLocation geoLocation;
+    public string name;
+    public java.util.Map outcomeFlights;
+    public ru.integrotech.airline.core.location.Airport.ZONE scyteamZone;
+    public boolean ucAvailable;
+    public Airport();
     public void addOutcomeFlight(ru.integrotech.airline.core.location.Airport arg1, ru.integrotech.airline.core.airline.Airline arg2, int arg3);
     public int compareTo(ru.integrotech.airline.core.location.Airport arg);
     public boolean equals(object arg);
@@ -382,13 +431,13 @@ public class Airport
 public class City
         extends java.lang.Comparable
 {
-    public readonly java.util.Map airportMap;
-    public readonly string code;
-    public readonly ru.integrotech.airline.core.location.Country country;
-    public readonly ru.integrotech.airline.core.location.GeoLocation geoLocation;
-    public readonly string name;
-    public readonly int weight;
-    public City(string arg1, string arg2, ru.integrotech.airline.core.location.Country arg3, int arg4);
+    public java.util.Map airportMap;
+    public string code;
+    public ru.integrotech.airline.core.location.Country country;
+    public ru.integrotech.airline.core.location.GeoLocation geoLocation;
+    public string name;
+    public int weight;
+    public City();
     public int compareTo(ru.integrotech.airline.core.location.City arg);
     public boolean equals(object arg);
     public int hashCode();
@@ -399,13 +448,14 @@ public class City
 public class Country
         extends java.lang.Comparable
 {
-    public readonly java.util.Map airportMap;
+    public java.util.Map airportMap;
     public ru.integrotech.airline.core.location.City capital;
-    public readonly string capitalCode;
-    public readonly string code;
-    public readonly ru.integrotech.airline.core.location.GeoLocation geoLocation;
-    public readonly string name;
-    public readonly ru.integrotech.airline.core.location.WorldRegion worldRegion;
+    public string capitalCode;
+    public string code;
+    public ru.integrotech.airline.core.location.GeoLocation geoLocation;
+    public string name;
+    public ru.integrotech.airline.core.location.WorldRegion worldRegion;
+    public Country();
     public int compareTo(ru.integrotech.airline.core.location.Country arg);
     public boolean equals(object arg);
     public int hashCode();
@@ -417,9 +467,10 @@ public class Country
 public class GeoLocation
         extends java.lang.Comparable
 {
-    public readonly double altitude;
-    public readonly double latitude;
-    public readonly double longitude;
+    public double altitude;
+    public double latitude;
+    public double longitude;
+    public GeoLocation();
     public int compareTo(ru.integrotech.airline.core.location.GeoLocation arg);
     public boolean equals(object arg);
     public int hashCode();
@@ -430,10 +481,11 @@ public class GeoLocation
 public class WorldRegion
         extends java.lang.Comparable
 {
-    public readonly java.util.Map airportMap;
-    public readonly string code;
-    public readonly ru.integrotech.airline.core.location.GeoLocation geoLocation;
-    public readonly string name;
+    public java.util.Map airportMap;
+    public string code;
+    public ru.integrotech.airline.core.location.GeoLocation geoLocation;
+    public string name;
+    public WorldRegion();
     public int compareTo(ru.integrotech.airline.core.location.WorldRegion arg);
     public boolean equals(object arg);
     public int hashCode();

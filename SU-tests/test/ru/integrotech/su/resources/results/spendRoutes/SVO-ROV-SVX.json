@@ -30,183 +30,6 @@
         "regionCode": "CIS"
       }
     },
-    "isAfl": true,
-    "single": true,
-    "mileCosts": [
-      {
-        "airportFrom": {
-          "airportCode": "SVO",
-          "zoneCode": "R1"
-        },
-        "airportTo": {
-          "airportCode": "SVX",
-          "zoneCode": "R1"
-        },
-        "distance": 889,
-        "requiredAward": [
-          {
-            "awardType": "OW",
-            "classOfService1": {
-              "classOfServiceName": "business"
-            },
-            "classOfService2": {},
-            "value": 15000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          },
-          {
-            "awardType": "OW",
-            "classOfService1": {
-              "classOfServiceName": "economy"
-            },
-            "classOfService2": {},
-            "value": 10000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          },
-          {
-            "awardType": "UC",
-            "classOfService1": {
-              "classOfServiceName": "economy"
-            },
-            "classOfService2": {
-              "classOfServiceName": "business"
-            },
-            "value": 10000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          },
-          {
-            "awardType": "UO",
-            "classOfService1": {
-              "classOfServiceName": "economy"
-            },
-            "classOfService2": {
-              "classOfServiceName": "business"
-            },
-            "value": 10000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "origin": {
-      "airport": {
-        "airportCode": "SVO"
-      },
-      "city": {
-        "cityCode": "MOW",
-        "weight": 1
-      },
-      "country": {
-        "countryCode": "RU"
-      },
-      "region": {
-        "regionCode": "CIS"
-      }
-    },
-    "destination": {
-      "airport": {
-        "airportCode": "SVX"
-      },
-      "city": {
-        "cityCode": "SVX",
-        "weight": 7
-      },
-      "country": {
-        "countryCode": "RU"
-      },
-      "region": {
-        "regionCode": "CIS"
-      }
-    },
-    "via": {
-      "airport": {
-        "airportCode": "LED"
-      },
-      "city": {
-        "cityCode": "LED",
-        "weight": 2
-      },
-      "country": {
-        "countryCode": "RU"
-      },
-      "region": {
-        "regionCode": "CIS"
-      }
-    },
-    "isAfl": true,
-    "single": true,
-    "mileCosts": [
-      {
-        "airportFrom": {
-          "airportCode": "SVO",
-          "zoneCode": "R1"
-        },
-        "airportTo": {
-          "airportCode": "SVX",
-          "zoneCode": "R1"
-        },
-        "distance": 1515,
-        "requiredAward": [
-          {
-            "awardType": "OW",
-            "classOfService1": {
-              "classOfServiceName": "business"
-            },
-            "classOfService2": {},
-            "value": 15000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          },
-          {
-            "awardType": "OW",
-            "classOfService1": {
-              "classOfServiceName": "economy"
-            },
-            "classOfService2": {},
-            "value": 10000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "origin": {
-      "airport": {
-        "airportCode": "SVO"
-      },
-      "city": {
-        "cityCode": "MOW",
-        "weight": 1
-      },
-      "country": {
-        "countryCode": "RU"
-      },
-      "region": {
-        "regionCode": "CIS"
-      }
-    },
-    "destination": {
-      "airport": {
-        "airportCode": "SVX"
-      },
-      "city": {
-        "cityCode": "SVX",
-        "weight": 7
-      },
-      "country": {
-        "countryCode": "RU"
-      },
-      "region": {
-        "regionCode": "CIS"
-      }
-    },
     "via": {
       "airport": {
         "airportCode": "ROV"
@@ -252,6 +75,18 @@
               "classOfServiceName": "economy"
             },
             "classOfService2": {},
+            "value": 20000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "UC",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {
+              "classOfServiceName": "business"
+            },
             "value": 20000,
             "isLightAward": false,
             "fitsMilesInterval": true

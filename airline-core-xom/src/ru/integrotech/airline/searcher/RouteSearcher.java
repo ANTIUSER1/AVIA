@@ -1,6 +1,5 @@
 package ru.integrotech.airline.searcher;
 
-
 import ru.integrotech.airline.core.airline.Airline;
 import ru.integrotech.airline.core.flight.Flight;
 import ru.integrotech.airline.core.flight.Route;
@@ -8,7 +7,13 @@ import ru.integrotech.airline.core.location.Airport;
 
 import java.util.*;
 
-/* class contains logic for search routes by given parameters*/
+/**
+ * class contains logic for search routes by given parameters
+ *
+ * Can be used in all projects
+ *
+ */
+
 public class RouteSearcher {
 
     public static RouteSearcher of() {
@@ -50,7 +55,7 @@ public class RouteSearcher {
 
         if (destinationReached) {
             String code = Route.createCode(graphReader.currentPath);
-            graphReader.foundRoutes.put(code, Route.of(getClone(graphReader.currentPath)));
+            graphReader.foundRoutes.put(code, Route.of(getFlightsClone(graphReader.currentPath)));
         }
 
         if (!(destinationReached && graphReader.stopAtDestination)
@@ -69,10 +74,10 @@ public class RouteSearcher {
         graphReader.visited.remove(currentAirport);
     }
 
-    private List<Flight> getClone(Collection<Flight> path) {
+    private List<Flight> getFlightsClone(Collection<Flight> path) {
         List<Flight> result = new ArrayList<>();
         for (Flight flight : path) {
-            result.add(Flight.of(flight));
+            result.add(Flight.copy(flight));
         }
         return result;
     }

@@ -1,108 +1,118 @@
 package ru.integrotech.su.outputparams.charge;
 
-
-import ru.integrotech.airline.core.flight.PassengerCharge;
-import ru.integrotech.su.common.Airline;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import ru.integrotech.airline.core.info.PassengerChargeInfo;
+import ru.integrotech.su.common.Airline;
+
+/**
+ * container for MilesAmount
+ *
+ * data(private Airline airline; private ClassOfService classOfService; private
+ * int distance; private List<Fare> fareGroups;)
+ */
 class MilesAmount implements Comparable<MilesAmount> {
 
-    public static MilesAmount of(PassengerCharge charge) {
-        List<Fare> fareGroups = new ArrayList<>();
-        fareGroups.add(Fare.of(charge));
-        return new  MilesAmount(Airline.of(charge.getAirline().getCode()),
-                    ClassOfService.of(charge.getServiceClass()),
-                    charge.getDistance(),
-                    fareGroups);
-    }
+	/**
+	 * Static constructor <br />
+	 * constructs, then sets up the instance's fields value
+	 *
+	 * At first generates the instance , then sets the field value from
+	 * PassengerCharge
+	 *
+	 * @param charge
+	 * @return
+	 */
+	public static MilesAmount of(PassengerChargeInfo charge) {
+		List<Fare> fareGroups = new ArrayList<>();
+		fareGroups.add(Fare.of(charge));
+		MilesAmount res = new MilesAmount();
+		res.setAirline(Airline.of(charge.getAirline().getCode()));
+		res.setClassOfService(ClassOfService.of(charge.getServiceClass()));
+		res.setDistance(charge.getDistance());
+		res.setFareGroups(fareGroups);
+		return res;
+	}
 
-    private Airline airline;
+	private Airline airline;
 
-    private ClassOfService classOfService;
+	private ClassOfService classOfService;
 
-    private int distance;
+	private int distance;
 
-    private List<Fare> fareGroups;
+	private List<Fare> fareGroups;
 
-    private MilesAmount(Airline airline, ClassOfService classOfService, int distance, List<Fare> fareGroups) {
-        this.airline = airline;
-        this.classOfService = classOfService;
-        this.distance = distance;
-        this.fareGroups = fareGroups;
-    }
+	public Airline getAirline() {
+		return airline;
+	}
 
-    private MilesAmount() {
-    }
+	public void setAirline(Airline airline) {
+		this.airline = airline;
+	}
 
-    public Airline getAirline() {
-        return airline;
-    }
+	public ClassOfService getClassOfService() {
+		return classOfService;
+	}
 
-    public void setAirline(Airline airline) {
-        this.airline = airline;
-    }
+	public void setClassOfService(ClassOfService classOfService) {
+		this.classOfService = classOfService;
+	}
 
-    public ClassOfService getClassOfService() {
-        return classOfService;
-    }
+	public int getDistance() {
+		return distance;
+	}
 
-    public void setClassOfService(ClassOfService classOfService) {
-        this.classOfService = classOfService;
-    }
+	public void setDistance(int distance) {
+		this.distance = distance;
+	}
 
-    public int getDistance() {
-        return distance;
-    }
+	public List<Fare> getFareGroups() {
+		return fareGroups;
+	}
 
-    public void setDistance(int distance) {
-        this.distance = distance;
-    }
+	public void setFareGroups(List<Fare> fareGroups) {
+		this.fareGroups = fareGroups;
+	}
 
-    public List<Fare> getFareGroups() {
-        return fareGroups;
-    }
+	void update(PassengerChargeInfo charge) {
+		int i = 0;
 
-    public void setFareGroups(List<Fare> fareGroups) {
-        this.fareGroups = fareGroups;
-    }
+		while (i < this.fareGroups.size()
+				&& !this.fareGroups.get(i).getFareGroup().getFareGroupCode()
+						.equals(charge.getTariff().getCode())) {
+			i++;
+		}
 
-    void update(PassengerCharge charge) {
-        int i = 0;
+		if (i == this.fareGroups.size()) {
+			this.fareGroups.add(Fare.of(charge));
+		} else {
+			this.fareGroups.get(i).update(charge);
+		}
+	}
 
-        while (i < this.fareGroups.size() && !this.fareGroups.get(i).getFareGroup().getFareGroupCode().equals(charge.getTariff().getCode())) {
-            i++;
-        }
+	@Override
+	public boolean equals(Object o) {
+		if (this == o)
+			return true;
+		if (o == null || getClass() != o.getClass())
+			return false;
+		MilesAmount that = (MilesAmount) o;
+		return distance == that.distance
+				&& Objects.equals(airline, that.airline)
+				&& Objects.equals(classOfService, that.classOfService)
+				&& Objects.equals(fareGroups, that.fareGroups);
+	}
 
-        if (i == this.fareGroups.size()) {
-            this.fareGroups.add(Fare.of(charge));
-        } else {
-            this.fareGroups.get(i).update(charge);
-        }
-    }
+	@Override
+	public int hashCode() {
+		return Objects.hash(airline, classOfService, distance, fareGroups);
+	}
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        MilesAmount that = (MilesAmount) o;
-        return distance == that.distance &&
-                Objects.equals(airline, that.airline) &&
-                Objects.equals(classOfService, that.classOfService) &&
-                Objects.equals(fareGroups, that.fareGroups);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(airline, classOfService, distance, fareGroups);
-    }
-
-
-    @Override
-    public int compareTo(MilesAmount o) {
-        return this.classOfService.getClassOfServiceCode().compareTo
-                            (o.getClassOfService().classOfServiceCode);
-    }
+	@Override
+	public int compareTo(MilesAmount o) {
+		return this.classOfService.getClassOfServiceCode().compareTo(
+				o.getClassOfService().classOfServiceCode);
+	}
 }

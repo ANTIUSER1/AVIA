@@ -2,24 +2,28 @@ package ru.integrotech.airline.core.location;
 
 import java.util.Objects;
 
-/* class represents geographical position */
+/**
+ * class represents geographical position
+ *
+ *  Сan be used in all projects
+ *
+ */
+
 public class GeoLocation implements Comparable<GeoLocation> {
 
     public static GeoLocation of(double longitude, double latitude) {
-        return new GeoLocation(longitude, latitude, 0);
+        GeoLocation result = new GeoLocation();
+        result.setLongitude(longitude);
+        result.setLatitude(latitude);
+        result.setAltitude(0);
+        return result;
     }
 
-    private final double longitude;
+    private double longitude;
 
-    private final double latitude;
+    private double latitude;
 
-    private final double altitude;
-
-    private GeoLocation(double longitude, double latitude, double altitude) {
-        this.longitude = longitude;
-        this.latitude = latitude;
-        this.altitude = altitude;
-    }
+    private double altitude;
 
     public double getLatitude() {
         return latitude;
@@ -31,6 +35,18 @@ public class GeoLocation implements Comparable<GeoLocation> {
 
     public double getAltitude() {
         return altitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public void setAltitude(double altitude) {
+        this.altitude = altitude;
     }
 
     @Override

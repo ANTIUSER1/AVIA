@@ -8,7 +8,8 @@ import java.util.Collections;
 import java.util.List;
 
 /**
-* Base class for all tests. Contains unify methods for comparing
+ *  Class for comparing collections
+ *  May be used in all tests
  */
 public class Comparator {
 

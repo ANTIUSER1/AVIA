@@ -16,8 +16,10 @@ import ru.integrotech.su.outputparams.spend.SpendBuilder;
 import java.util.Collections;
 import java.util.List;
 
-/* class for visualization all possible data
-*  use to check proper performance listOf toString methods*/
+/**
+ * Class for visualization routes (may used in all projects)
+ */
+
 public class RoutesToString {
 
     @BeforeClass

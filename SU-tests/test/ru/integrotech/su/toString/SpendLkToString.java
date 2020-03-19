@@ -15,8 +15,10 @@ import ru.integrotech.su.outputparams.spend.SpendLkRoute;
 
 import java.util.List;
 
-/* class for visualization all possible data
-*  use to check proper performance listOf toString methods*/
+/**
+ * Class for visualization data of SpendLk project
+ */
+
 public class SpendLkToString {
 
     @BeforeClass

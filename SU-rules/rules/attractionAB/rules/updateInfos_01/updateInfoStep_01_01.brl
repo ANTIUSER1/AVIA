@@ -4,8 +4,8 @@
   <uuid>4e4e551f-cad8-464f-8fbe-5b56e616e6c7</uuid>
   <locale>en_US</locale>
   <definition><![CDATA[if 
-	 the distance coeff of the passenger charge info is more than 0 and at most 1   
-	 	and the bonus distance of the passenger charge info is less than the min bonus miles of the passenger charge info 
+	 the distance coeff of the passenger miles info is more than 0 and at most 1   
+	 	and the bonuse distance of the passenger miles info  is less than the min bonus miles of the passenger miles info 
 then 
-	 set the bonus distance of the passenger charge info to the min bonus miles of the passenger charge info ;  ]]></definition>
+	 set the bonuse distance of the passenger miles info to the min bonus miles of the passenger miles info ;  ]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

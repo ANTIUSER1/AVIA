@@ -17,7 +17,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/*test for searcher.RouteSearcher*/
+/**
+ * Tests for RouteSearcher, used inner registers
+ */
+
 public class RouteSearcherTest {
 
     private static final String RESULTS_FOLDER = "test/ru/integrotech/su/resources/results/routes/";
