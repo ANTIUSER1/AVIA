@@ -1,6 +1,5 @@
 package ru.integrotech.airline.utils;
 
-
 import ru.integrotech.airline.core.airline.ServiceClass;
 import ru.integrotech.airline.core.bonus.Bonus;
 import ru.integrotech.airline.core.flight.Flight;
@@ -9,8 +8,15 @@ import ru.integrotech.airline.core.location.Airport;
 
 import java.util.*;
 
-/*class contains static methods for change some objects that contains collections listOf Bonus objects
-* all methods are void and change the objects send by parameters*/
+/**
+ * class contains static methods for change some objects that contains
+ * collections listOf Bonus objects
+ * All methods are void and change the objects send by parameters
+ *
+ * Used in Spend project
+ *
+ */
+
 public class BonusFilters {
 
     public static void byInputParams(Set<Bonus> bonuses,

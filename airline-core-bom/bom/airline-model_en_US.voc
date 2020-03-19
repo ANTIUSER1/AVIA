@@ -1,28 +1,20 @@
 # Vocabulary Properties
-uuid = 68d8d220-95a5-44ce-8467-097bb42d878a
-
-# ru.integrotech.airline.core.PassengerFlightInfo
-ru.integrotech.airline.core.PassengerFlightInfo#concept.label = passenger flight info
-ru.integrotech.airline.core.PassengerFlightInfo.airlineCode#phrase.action = set the airline code of {this} to {airline code}
-ru.integrotech.airline.core.PassengerFlightInfo.airlineCode#phrase.navigation = {airline code} of {this}
-ru.integrotech.airline.core.PassengerFlightInfo.departureAirportCode#phrase.action = set the departure airport code of {this} to {departure airport code}
-ru.integrotech.airline.core.PassengerFlightInfo.departureAirportCode#phrase.navigation = {departure airport code} of {this}
-ru.integrotech.airline.core.PassengerFlightInfo.flightNumber#phrase.action = set the flight number of {this} to {flight number}
-ru.integrotech.airline.core.PassengerFlightInfo.flightNumber#phrase.navigation = {flight number} of {this}
-ru.integrotech.airline.core.PassengerFlightInfo.onlineRegistrationAvailable#phrase.action = make it {online registration available} that online registration is available for the passenger flight info
-ru.integrotech.airline.core.PassengerFlightInfo.onlineRegistrationAvailable#phrase.navigation = {this} is online registration available
-ru.integrotech.airline.core.PassengerFlightInfo.ssrCodes#phrase.action = set the ssr codes of {this} to {ssr code}
-ru.integrotech.airline.core.PassengerFlightInfo.ssrCodes#phrase.navigation = {ssr code} of {this}
+uuid = 2127cadd-0374-4190-8df3-b529a33ae3f8
 
 # ru.integrotech.airline.core.airline.Airline
 ru.integrotech.airline.core.airline.Airline#concept.label = airline
 ru.integrotech.airline.core.airline.Airline.AFL_CODE#phrase.navigation = the AFL CODE
+ru.integrotech.airline.core.airline.Airline.code#phrase.action = set the code of {this} to {code}
 ru.integrotech.airline.core.airline.Airline.code#phrase.navigation = {code} of {this}
 ru.integrotech.airline.core.airline.Airline.defaultServiceClasses#phrase.action = set the default service classes of {this} to {default service classe}
 ru.integrotech.airline.core.airline.Airline.defaultServiceClasses#phrase.navigation = {default service classe} of {this}
+ru.integrotech.airline.core.airline.Airline.minMilesCharge#phrase.action = set the min miles charge of {this} to {min miles charge}
 ru.integrotech.airline.core.airline.Airline.minMilesCharge#phrase.navigation = {min miles charge} of {this}
+ru.integrotech.airline.core.airline.Airline.minMilesLimit#phrase.action = set the min miles limit of {this} to {min miles limit}
 ru.integrotech.airline.core.airline.Airline.minMilesLimit#phrase.navigation = {min miles limit} of {this}
+ru.integrotech.airline.core.airline.Airline.name#phrase.action = set the name of {this} to {name}
 ru.integrotech.airline.core.airline.Airline.name#phrase.navigation = {name} of {this}
+ru.integrotech.airline.core.airline.Airline.serviceClassMap#phrase.action = set the service class map of {this} to {service class map}
 ru.integrotech.airline.core.airline.Airline.serviceClassMap#phrase.navigation = {service class map} of {this}
 
 # ru.integrotech.airline.core.airline.ServiceClass
@@ -36,20 +28,29 @@ ru.integrotech.airline.core.airline.ServiceClass.SERVICE_CLASS_TYPE.economy#inst
 ru.integrotech.airline.core.airline.ServiceClass.SERVICE_CLASS_TYPE.first#instance.label = first
 ru.integrotech.airline.core.airline.ServiceClass.SERVICE_CLASS_TYPE.premium#instance.label = premium
 ru.integrotech.airline.core.airline.ServiceClass.SERVICE_CLASS_TYPE.prestige#instance.label = prestige
+ru.integrotech.airline.core.airline.ServiceClass.tariffMap#phrase.action = set the tariff map of {this} to {tariff map}
 ru.integrotech.airline.core.airline.ServiceClass.tariffMap#phrase.navigation = {tariff map} of {this}
+ru.integrotech.airline.core.airline.ServiceClass.type#phrase.action = set the type of {this} to {type}
 ru.integrotech.airline.core.airline.ServiceClass.type#phrase.navigation = {type} of {this}
+ru.integrotech.airline.core.airline.ServiceClass.weight#phrase.action = set the weight of {this} to {weight}
 ru.integrotech.airline.core.airline.ServiceClass.weight#phrase.navigation = {weight} of {this}
 
 # ru.integrotech.airline.core.airline.SubTariff
 ru.integrotech.airline.core.airline.SubTariff#concept.label = sub tariff
+ru.integrotech.airline.core.airline.SubTariff.bookingClass#phrase.action = set the booking class of {this} to {booking class}
 ru.integrotech.airline.core.airline.SubTariff.bookingClass#phrase.navigation = {booking class} of {this}
+ru.integrotech.airline.core.airline.SubTariff.chargeCoeff#phrase.action = set the charge coeff of {this} to {charge coeff}
 ru.integrotech.airline.core.airline.SubTariff.chargeCoeff#phrase.navigation = {charge coeff} of {this}
+ru.integrotech.airline.core.airline.SubTariff.fareCode#phrase.action = set the fare code of {this} to {fare code}
 ru.integrotech.airline.core.airline.SubTariff.fareCode#phrase.navigation = {fare code} of {this}
 
 # ru.integrotech.airline.core.airline.Tariff
 ru.integrotech.airline.core.airline.Tariff#concept.label = tariff
+ru.integrotech.airline.core.airline.Tariff.code#phrase.action = set the code of {this} to {code}
 ru.integrotech.airline.core.airline.Tariff.code#phrase.navigation = {code} of {this}
+ru.integrotech.airline.core.airline.Tariff.subTariffsMap#phrase.action = set the sub tariffs map of {this} to {sub tariffs map}
 ru.integrotech.airline.core.airline.Tariff.subTariffsMap#phrase.navigation = {sub tariffs map} of {this}
+ru.integrotech.airline.core.airline.Tariff.weight#phrase.action = set the weight of {this} to {weight}
 ru.integrotech.airline.core.airline.Tariff.weight#phrase.navigation = {weight} of {this}
 
 # ru.integrotech.airline.core.bonus.Bonus
@@ -65,13 +66,19 @@ ru.integrotech.airline.core.bonus.Bonus.BONUS_TYPE.UO#instance.label = UO
 ru.integrotech.airline.core.bonus.Bonus.description#phrase.navigation = {description} of {this}
 ru.integrotech.airline.core.bonus.Bonus.fitsMilesInterval#phrase.action = make it {fits miles interval} that {this} is fits miles interval
 ru.integrotech.airline.core.bonus.Bonus.fitsMilesInterval#phrase.navigation = {this} is fits miles interval
+ru.integrotech.airline.core.bonus.Bonus.light#phrase.action = make it {light} that {this} is light
 ru.integrotech.airline.core.bonus.Bonus.light#phrase.navigation = {this} is light
+ru.integrotech.airline.core.bonus.Bonus.serviceClass#phrase.action = set the service class of {this} to {service class}
 ru.integrotech.airline.core.bonus.Bonus.serviceClass#phrase.navigation = {service class} of {this}
 ru.integrotech.airline.core.bonus.Bonus.type#phrase.action = set the type of {this} to {type}
 ru.integrotech.airline.core.bonus.Bonus.type#phrase.navigation = {type} of {this}
+ru.integrotech.airline.core.bonus.Bonus.upgradeServiceClass#phrase.action = set the upgrade service class of {this} to {upgrade service class}
 ru.integrotech.airline.core.bonus.Bonus.upgradeServiceClass#phrase.navigation = {upgrade service class} of {this}
+ru.integrotech.airline.core.bonus.Bonus.validFrom#phrase.action = set the valid from of {this} to {valid from}
 ru.integrotech.airline.core.bonus.Bonus.validFrom#phrase.navigation = {valid from} of {this}
+ru.integrotech.airline.core.bonus.Bonus.validTo#phrase.action = set the valid to of {this} to {valid to}
 ru.integrotech.airline.core.bonus.Bonus.validTo#phrase.navigation = {valid to} of {this}
+ru.integrotech.airline.core.bonus.Bonus.value#phrase.action = set the value of {this} to {value}
 ru.integrotech.airline.core.bonus.Bonus.value#phrase.navigation = {value} of {this}
 
 # ru.integrotech.airline.core.bonus.Loyalty
@@ -83,11 +90,47 @@ ru.integrotech.airline.core.bonus.Loyalty.LOYALTY_TYPE.basic#instance.label = ba
 ru.integrotech.airline.core.bonus.Loyalty.LOYALTY_TYPE.gold#instance.label = gold
 ru.integrotech.airline.core.bonus.Loyalty.LOYALTY_TYPE.platinum#instance.label = platinum
 ru.integrotech.airline.core.bonus.Loyalty.LOYALTY_TYPE.silver#instance.label = silver
+ru.integrotech.airline.core.bonus.Loyalty.businessSegments#phrase.action = set the business segments of {this} to {business segments}
 ru.integrotech.airline.core.bonus.Loyalty.businessSegments#phrase.navigation = {business segments} of {this}
+ru.integrotech.airline.core.bonus.Loyalty.factor#phrase.action = set the factor of {this} to {factor}
 ru.integrotech.airline.core.bonus.Loyalty.factor#phrase.navigation = {factor} of {this}
+ru.integrotech.airline.core.bonus.Loyalty.miles#phrase.action = set the miles of {this} to {miles}
 ru.integrotech.airline.core.bonus.Loyalty.miles#phrase.navigation = {miles} of {this}
+ru.integrotech.airline.core.bonus.Loyalty.segments#phrase.action = set the segments of {this} to {segments}
 ru.integrotech.airline.core.bonus.Loyalty.segments#phrase.navigation = {segments} of {this}
+ru.integrotech.airline.core.bonus.Loyalty.type#phrase.action = set the type of {this} to {type}
 ru.integrotech.airline.core.bonus.Loyalty.type#phrase.navigation = {type} of {this}
+
+# ru.integrotech.airline.core.bonus.MilesRule
+ru.integrotech.airline.core.bonus.MilesRule#concept.label = miles rule
+
+# ru.integrotech.airline.core.bonus.MilesRule.IKM_RULE
+ru.integrotech.airline.core.bonus.MilesRule.IKM_RULE#concept.label = IKM RULE
+ru.integrotech.airline.core.bonus.MilesRule.IKM_RULE.EX#instance.label = EX
+ru.integrotech.airline.core.bonus.MilesRule.IKM_RULE.IN#instance.label = IN
+
+# ru.integrotech.airline.core.bonus.MilesRule.RULE_TYPE
+ru.integrotech.airline.core.bonus.MilesRule.RULE_TYPE#concept.label = RULE TYPE
+ru.integrotech.airline.core.bonus.MilesRule.RULE_TYPE.BC#instance.label = BC
+ru.integrotech.airline.core.bonus.MilesRule.RULE_TYPE.PF#instance.label = PF
+ru.integrotech.airline.core.bonus.MilesRule.RULE_TYPE.SF#instance.label = SF
+ru.integrotech.airline.core.bonus.MilesRule.RULE_TYPE.TD#instance.label = TD
+ru.integrotech.airline.core.bonus.MilesRule.airportPairs#phrase.action = set the airport pairs of {this} to {airport pair}
+ru.integrotech.airline.core.bonus.MilesRule.airportPairs#phrase.navigation = {airport pair} of {this}
+ru.integrotech.airline.core.bonus.MilesRule.bonusPercent#phrase.action = set the bonus percent of {this} to {bonus percent}
+ru.integrotech.airline.core.bonus.MilesRule.bonusPercent#phrase.navigation = {bonus percent} of {this}
+ru.integrotech.airline.core.bonus.MilesRule.bookingClassCode#phrase.action = set the booking class code of {this} to {booking class code}
+ru.integrotech.airline.core.bonus.MilesRule.bookingClassCode#phrase.navigation = {booking class code} of {this}
+ru.integrotech.airline.core.bonus.MilesRule.fareCodeMasks#phrase.action = set the fare code masks of {this} to {fare code mask}
+ru.integrotech.airline.core.bonus.MilesRule.fareCodeMasks#phrase.navigation = {fare code mask} of {this}
+ru.integrotech.airline.core.bonus.MilesRule.ikmRule#phrase.action = set the ikm rule of {this} to {ikm rule}
+ru.integrotech.airline.core.bonus.MilesRule.ikmRule#phrase.navigation = {ikm rule} of {this}
+ru.integrotech.airline.core.bonus.MilesRule.ruleOrder#phrase.action = set the rule order of {this} to {rule order}
+ru.integrotech.airline.core.bonus.MilesRule.ruleOrder#phrase.navigation = {rule order} of {this}
+ru.integrotech.airline.core.bonus.MilesRule.ruleType#phrase.action = set the rule type of {this} to {rule type}
+ru.integrotech.airline.core.bonus.MilesRule.ruleType#phrase.navigation = {rule type} of {this}
+ru.integrotech.airline.core.bonus.MilesRule.tickedDesignatorMasks#phrase.action = set the ticked designator masks of {this} to {ticked designator mask}
+ru.integrotech.airline.core.bonus.MilesRule.tickedDesignatorMasks#phrase.navigation = {ticked designator mask} of {this}
 
 # ru.integrotech.airline.core.flight.Flight
 ru.integrotech.airline.core.flight.Flight#concept.label = flight
@@ -95,11 +138,16 @@ ru.integrotech.airline.core.flight.Flight.aflBonuses#phrase.action = set the afl
 ru.integrotech.airline.core.flight.Flight.aflBonuses#phrase.navigation = {afl bonuse} of {this}
 ru.integrotech.airline.core.flight.Flight.aflReverseZones#phrase.navigation = {afl reverse zones} of {this}
 ru.integrotech.airline.core.flight.Flight.aflZones#phrase.navigation = {afl zones} of {this}
+ru.integrotech.airline.core.flight.Flight.carriers#phrase.action = set the carriers of {this} to {carriers}
 ru.integrotech.airline.core.flight.Flight.carriers#phrase.navigation = {carriers} of {this}
+ru.integrotech.airline.core.flight.Flight.code#phrase.action = set the code of {this} to {code}
 ru.integrotech.airline.core.flight.Flight.code#phrase.navigation = {code} of {this}
+ru.integrotech.airline.core.flight.Flight.destination#phrase.action = set the destination of {this} to {destination}
 ru.integrotech.airline.core.flight.Flight.destination#phrase.navigation = {destination} of {this}
+ru.integrotech.airline.core.flight.Flight.distance#phrase.action = set the distance of {this} to {distance}
 ru.integrotech.airline.core.flight.Flight.distance#phrase.navigation = {distance} of {this}
 ru.integrotech.airline.core.flight.Flight.listCarriers#phrase.navigation = {list carrier} of {this}
+ru.integrotech.airline.core.flight.Flight.origin#phrase.action = set the origin of {this} to {origin}
 ru.integrotech.airline.core.flight.Flight.origin#phrase.navigation = {origin} of {this}
 ru.integrotech.airline.core.flight.Flight.removeAflBonus(ru.integrotech.airline.core.bonus.Bonus)#phrase.action = remove {0} from the afl bonuses of {this}
 ru.integrotech.airline.core.flight.Flight.removeScyteamBonus(ru.integrotech.airline.core.bonus.Bonus)#phrase.action = remove {0} from the scyteam bonuses of {this}
@@ -111,64 +159,12 @@ ru.integrotech.airline.core.flight.Flight.scyteamZones#phrase.navigation = {scyt
 # ru.integrotech.airline.core.flight.FlightCarrier
 ru.integrotech.airline.core.flight.FlightCarrier#concept.label = flight carrier
 ru.integrotech.airline.core.flight.FlightCarrier.allowedClasses#phrase.navigation = {allowed classe} of {this}
+ru.integrotech.airline.core.flight.FlightCarrier.carrier#phrase.action = set the carrier of {this} to {carrier}
 ru.integrotech.airline.core.flight.FlightCarrier.carrier#phrase.navigation = {carrier} of {this}
+ru.integrotech.airline.core.flight.FlightCarrier.extraClasses#phrase.action = set the extra classes of {this} to {extra classe}
 ru.integrotech.airline.core.flight.FlightCarrier.extraClasses#phrase.navigation = {extra classe} of {this}
-ru.integrotech.airline.core.flight.FlightCarrier.passengerCharges#phrase.action = set the passenger charges of {this} to {passenger charge}
-ru.integrotech.airline.core.flight.FlightCarrier.passengerCharges#phrase.navigation = {passenger charge} of {this}
-
-# ru.integrotech.airline.core.flight.PassengerCharge
-ru.integrotech.airline.core.flight.PassengerCharge#concept.label = passenger charge
-ru.integrotech.airline.core.flight.PassengerCharge.airline#phrase.navigation = {airline} of {this}
-ru.integrotech.airline.core.flight.PassengerCharge.chargeCoeff#phrase.navigation = {charge coeff} of {this}
-ru.integrotech.airline.core.flight.PassengerCharge.destination#phrase.navigation = {destination} of {this}
-ru.integrotech.airline.core.flight.PassengerCharge.distance#phrase.action = set the distance of {this} to {distance}
-ru.integrotech.airline.core.flight.PassengerCharge.distance#phrase.navigation = {distance} of {this}
-ru.integrotech.airline.core.flight.PassengerCharge.miles#phrase.action = set the miles of {this} to {miles}
-ru.integrotech.airline.core.flight.PassengerCharge.miles#phrase.navigation = {miles} of {this}
-ru.integrotech.airline.core.flight.PassengerCharge.milesBonus#phrase.action = set the miles bonus of {this} to {miles bonus}
-ru.integrotech.airline.core.flight.PassengerCharge.milesBonus#phrase.navigation = {miles bonus} of {this}
-ru.integrotech.airline.core.flight.PassengerCharge.milesCharged#phrase.action = set the miles charged of {this} to {miles charged}
-ru.integrotech.airline.core.flight.PassengerCharge.milesCharged#phrase.navigation = {miles charged} of {this}
-ru.integrotech.airline.core.flight.PassengerCharge.milesQualifying#phrase.action = set the miles qualifying of {this} to {miles qualifying}
-ru.integrotech.airline.core.flight.PassengerCharge.milesQualifying#phrase.navigation = {miles qualifying} of {this}
-ru.integrotech.airline.core.flight.PassengerCharge.origin#phrase.navigation = {origin} of {this}
-ru.integrotech.airline.core.flight.PassengerCharge.serviceClass#phrase.navigation = {service class} of {this}
-ru.integrotech.airline.core.flight.PassengerCharge.subTariff#phrase.navigation = {sub tariff} of {this}
-ru.integrotech.airline.core.flight.PassengerCharge.tariff#phrase.navigation = {tariff} of {this}
-
-# ru.integrotech.airline.core.flight.PassengerChargeInfo
-ru.integrotech.airline.core.flight.PassengerChargeInfo#concept.label = passenger charge info
-
-# ru.integrotech.airline.core.flight.PassengerChargeInfo.Status
-ru.integrotech.airline.core.flight.PassengerChargeInfo.Status#concept.label = status
-ru.integrotech.airline.core.flight.PassengerChargeInfo.Status.full#instance.label = full
-ru.integrotech.airline.core.flight.PassengerChargeInfo.Status.nodata#instance.label = nodata
-ru.integrotech.airline.core.flight.PassengerChargeInfo.Status.partial#instance.label = partial
-ru.integrotech.airline.core.flight.PassengerChargeInfo.additionalDistance#phrase.action = set the additional distance of {this} to {additional distance}
-ru.integrotech.airline.core.flight.PassengerChargeInfo.additionalDistance#phrase.navigation = {additional distance} of {this}
-ru.integrotech.airline.core.flight.PassengerChargeInfo.airline#phrase.action = set the airline of {this} to {airline}
-ru.integrotech.airline.core.flight.PassengerChargeInfo.airline#phrase.navigation = {airline} of {this}
-ru.integrotech.airline.core.flight.PassengerChargeInfo.bonuseDistance#phrase.action = set the bonus distance of {this} to {bonus distance}
-ru.integrotech.airline.core.flight.PassengerChargeInfo.bonuseDistance#phrase.navigation = {bonus distance} of {this}
-ru.integrotech.airline.core.flight.PassengerChargeInfo.bookingClassCode#phrase.action = set the booking class code of {this} to {booking class code}
-ru.integrotech.airline.core.flight.PassengerChargeInfo.bookingClassCode#phrase.navigation = {booking class code} of {this}
-ru.integrotech.airline.core.flight.PassengerChargeInfo.destination#phrase.action = set the destination of {this} to {destination}
-ru.integrotech.airline.core.flight.PassengerChargeInfo.destination#phrase.navigation = {destination} of {this}
-ru.integrotech.airline.core.flight.PassengerChargeInfo.distance#phrase.action = set the distance of {this} to {distance}
-ru.integrotech.airline.core.flight.PassengerChargeInfo.distance#phrase.navigation = {distance} of {this}
-ru.integrotech.airline.core.flight.PassengerChargeInfo.distanceCoeff#phrase.action = set the distance coeff of {this} to {distance coeff}
-ru.integrotech.airline.core.flight.PassengerChargeInfo.distanceCoeff#phrase.navigation = {distance coeff} of {this}
-ru.integrotech.airline.core.flight.PassengerChargeInfo.fareCode#phrase.action = set the fare code of {this} to {fare code}
-ru.integrotech.airline.core.flight.PassengerChargeInfo.fareCode#phrase.navigation = {fare code} of {this}
-ru.integrotech.airline.core.flight.PassengerChargeInfo.flightCode#phrase.navigation = {flight code} of {this}
-ru.integrotech.airline.core.flight.PassengerChargeInfo.flightDistance#phrase.navigation = {flight distance} of {this}
-ru.integrotech.airline.core.flight.PassengerChargeInfo.minBonusMiles#phrase.navigation = {min bonus miles} of {this}
-ru.integrotech.airline.core.flight.PassengerChargeInfo.origin#phrase.action = set the origin of {this} to {origin}
-ru.integrotech.airline.core.flight.PassengerChargeInfo.origin#phrase.navigation = {origin} of {this}
-ru.integrotech.airline.core.flight.PassengerChargeInfo.tickedDesignator#phrase.action = set the ticked designator of {this} to {ticked designator}
-ru.integrotech.airline.core.flight.PassengerChargeInfo.tickedDesignator#phrase.navigation = {ticked designator} of {this}
-ru.integrotech.airline.core.flight.PassengerChargeInfo.totalBonusMiles#phrase.action = set the total bonus miles of {this} to {total bonus miles}
-ru.integrotech.airline.core.flight.PassengerChargeInfo.totalBonusMiles#phrase.navigation = {total bonus miles} of {this}
+ru.integrotech.airline.core.flight.FlightCarrier.passengerChargeInfos#phrase.action = set the passenger charge infos of {this} to {passenger charge info}
+ru.integrotech.airline.core.flight.FlightCarrier.passengerChargeInfos#phrase.navigation = {passenger charge info} of {this}
 
 # ru.integrotech.airline.core.flight.Route
 ru.integrotech.airline.core.flight.Route#concept.label = route
@@ -185,20 +181,63 @@ ru.integrotech.airline.core.flight.Route.bonusSummation#phrase.action = make it 
 ru.integrotech.airline.core.flight.Route.bonusSummation#phrase.navigation = {this} is bonus summation
 ru.integrotech.airline.core.flight.Route.cities#phrase.navigation = {city} of {this}
 ru.integrotech.airline.core.flight.Route.cityCodes#phrase.navigation = {city codes} of {this}
+ru.integrotech.airline.core.flight.Route.code#phrase.action = set the code of {this} to {code}
 ru.integrotech.airline.core.flight.Route.code#phrase.navigation = {code} of {this}
 ru.integrotech.airline.core.flight.Route.destination#phrase.navigation = {destination} of {this}
 ru.integrotech.airline.core.flight.Route.direct#phrase.navigation = {this} is direct
 ru.integrotech.airline.core.flight.Route.distance#phrase.navigation = {distance} of {this}
+ru.integrotech.airline.core.flight.Route.flights#phrase.action = set the flights of {this} to {flight}
 ru.integrotech.airline.core.flight.Route.flights#phrase.navigation = {flight} of {this}
 ru.integrotech.airline.core.flight.Route.origin#phrase.navigation = {origin} of {this}
 ru.integrotech.airline.core.flight.Route.removeAflBonus(ru.integrotech.airline.core.bonus.Bonus)#phrase.action = remove {0} from the afl bonuses of {this}
 ru.integrotech.airline.core.flight.Route.removeScyteamBonus(ru.integrotech.airline.core.bonus.Bonus)#phrase.action = remove {0} from the scyteam bonuses of {this}
+ru.integrotech.airline.core.flight.Route.reverseCityCodes#phrase.navigation = {reverse city codes} of {this}
 ru.integrotech.airline.core.flight.Route.scyteamBonuses#phrase.action = set the scyteam bonuses of {this} to {scyteam bonuse}
 ru.integrotech.airline.core.flight.Route.scyteamBonuses#phrase.navigation = {scyteam bonuse} of {this}
 ru.integrotech.airline.core.flight.Route.scyteamReverseZones#phrase.navigation = {scyteam reverse zones} of {this}
 ru.integrotech.airline.core.flight.Route.scyteamZones#phrase.navigation = {scyteam zones} of {this}
 ru.integrotech.airline.core.flight.Route.wrong#phrase.action = make it {wrong} that {this} is wrong
 ru.integrotech.airline.core.flight.Route.wrong#phrase.navigation = {this} is wrong
+
+# ru.integrotech.airline.core.info.PassengerChargeInfo
+ru.integrotech.airline.core.info.PassengerChargeInfo#concept.label = passenger charge info
+ru.integrotech.airline.core.info.PassengerChargeInfo.airline#phrase.action = set the airline of {this} to {airline}
+ru.integrotech.airline.core.info.PassengerChargeInfo.airline#phrase.navigation = {airline} of {this}
+ru.integrotech.airline.core.info.PassengerChargeInfo.chargeCoeff#phrase.action = set the charge coeff of {this} to {charge coeff}
+ru.integrotech.airline.core.info.PassengerChargeInfo.chargeCoeff#phrase.navigation = {charge coeff} of {this}
+ru.integrotech.airline.core.info.PassengerChargeInfo.destination#phrase.action = set the destination of {this} to {destination}
+ru.integrotech.airline.core.info.PassengerChargeInfo.destination#phrase.navigation = {destination} of {this}
+ru.integrotech.airline.core.info.PassengerChargeInfo.distance#phrase.action = set the distance of {this} to {distance}
+ru.integrotech.airline.core.info.PassengerChargeInfo.distance#phrase.navigation = {distance} of {this}
+ru.integrotech.airline.core.info.PassengerChargeInfo.miles#phrase.action = set the miles of {this} to {miles}
+ru.integrotech.airline.core.info.PassengerChargeInfo.miles#phrase.navigation = {miles} of {this}
+ru.integrotech.airline.core.info.PassengerChargeInfo.milesBonus#phrase.action = set the miles bonus of {this} to {miles bonus}
+ru.integrotech.airline.core.info.PassengerChargeInfo.milesBonus#phrase.navigation = {miles bonus} of {this}
+ru.integrotech.airline.core.info.PassengerChargeInfo.milesCharged#phrase.action = set the miles charged of {this} to {miles charged}
+ru.integrotech.airline.core.info.PassengerChargeInfo.milesCharged#phrase.navigation = {miles charged} of {this}
+ru.integrotech.airline.core.info.PassengerChargeInfo.milesQualifying#phrase.action = set the miles qualifying of {this} to {miles qualifying}
+ru.integrotech.airline.core.info.PassengerChargeInfo.milesQualifying#phrase.navigation = {miles qualifying} of {this}
+ru.integrotech.airline.core.info.PassengerChargeInfo.origin#phrase.action = set the origin of {this} to {origin}
+ru.integrotech.airline.core.info.PassengerChargeInfo.origin#phrase.navigation = {origin} of {this}
+ru.integrotech.airline.core.info.PassengerChargeInfo.serviceClass#phrase.action = set the service class of {this} to {service class}
+ru.integrotech.airline.core.info.PassengerChargeInfo.serviceClass#phrase.navigation = {service class} of {this}
+ru.integrotech.airline.core.info.PassengerChargeInfo.subTariff#phrase.action = set the sub tariff of {this} to {sub tariff}
+ru.integrotech.airline.core.info.PassengerChargeInfo.subTariff#phrase.navigation = {sub tariff} of {this}
+ru.integrotech.airline.core.info.PassengerChargeInfo.tariff#phrase.action = set the tariff of {this} to {tariff}
+ru.integrotech.airline.core.info.PassengerChargeInfo.tariff#phrase.navigation = {tariff} of {this}
+
+# ru.integrotech.airline.core.info.PassengerFlightInfo
+ru.integrotech.airline.core.info.PassengerFlightInfo#concept.label = passenger flight info
+ru.integrotech.airline.core.info.PassengerFlightInfo.airlineCode#phrase.action = set the airline code of {this} to {airline code}
+ru.integrotech.airline.core.info.PassengerFlightInfo.airlineCode#phrase.navigation = {airline code} of {this}
+ru.integrotech.airline.core.info.PassengerFlightInfo.departureAirportCode#phrase.action = set the departure airport code of {this} to {departure airport code}
+ru.integrotech.airline.core.info.PassengerFlightInfo.departureAirportCode#phrase.navigation = {departure airport code} of {this}
+ru.integrotech.airline.core.info.PassengerFlightInfo.flightNumber#phrase.action = set the flight number of {this} to {flight number}
+ru.integrotech.airline.core.info.PassengerFlightInfo.flightNumber#phrase.navigation = {flight number} of {this}
+ru.integrotech.airline.core.info.PassengerFlightInfo.onlineRegistrationAvailable#phrase.action = make it {online registration available} that online registration is available for {this}
+ru.integrotech.airline.core.info.PassengerFlightInfo.onlineRegistrationAvailable#phrase.navigation = {this} is online registration available
+ru.integrotech.airline.core.info.PassengerFlightInfo.ssrCodes#phrase.action = set the ssr codes of {this} to {ssr code}
+ru.integrotech.airline.core.info.PassengerFlightInfo.ssrCodes#phrase.navigation = {ssr code} of {this}
 
 # ru.integrotech.airline.core.info.PassengerLoyaltyInfo
 ru.integrotech.airline.core.info.PassengerLoyaltyInfo#concept.label = passenger loyalty info
@@ -218,19 +257,52 @@ ru.integrotech.airline.core.info.PassengerLoyaltyInfo.errCode#phrase.action = se
 ru.integrotech.airline.core.info.PassengerLoyaltyInfo.errCode#phrase.navigation = {err code} of {this}
 ru.integrotech.airline.core.info.PassengerLoyaltyInfo.errMessage#phrase.action = set the err message of {this} to {err message}
 ru.integrotech.airline.core.info.PassengerLoyaltyInfo.errMessage#phrase.navigation = {err message} of {this}
-ru.integrotech.airline.core.info.PassengerLoyaltyInfo.of(java.lang.String,int,java.lang.String)#phrase.navigation = passenger loyalty info.of({0}, {1}, {2})
 ru.integrotech.airline.core.info.PassengerLoyaltyInfo.paymentType#phrase.action = set the payment type of {this} to {payment type}
-ru.integrotech.airline.core.info.PassengerLoyaltyInfo.paymentType#phrase.clearer = clear the payment type of {this}
 ru.integrotech.airline.core.info.PassengerLoyaltyInfo.paymentType#phrase.navigation = {payment type} of {this}
 ru.integrotech.airline.core.info.PassengerLoyaltyInfo.percent#phrase.action = set the percent of {this} to {percent}
 ru.integrotech.airline.core.info.PassengerLoyaltyInfo.percent#phrase.navigation = {percent} of {this}
 ru.integrotech.airline.core.info.PassengerLoyaltyInfo.points#phrase.action = set the points of {this} to {points}
 ru.integrotech.airline.core.info.PassengerLoyaltyInfo.points#phrase.navigation = {points} of {this}
 ru.integrotech.airline.core.info.PassengerLoyaltyInfo.status#phrase.action = set the status of {this} to {status}
-ru.integrotech.airline.core.info.PassengerLoyaltyInfo.status#phrase.clearer = clear the status of {this}
 ru.integrotech.airline.core.info.PassengerLoyaltyInfo.status#phrase.navigation = {status} of {this}
 ru.integrotech.airline.core.info.PassengerLoyaltyInfo.tariffSum#phrase.action = set the tariff sum of {this} to {tariff sum}
 ru.integrotech.airline.core.info.PassengerLoyaltyInfo.tariffSum#phrase.navigation = {tariff sum} of {this}
+
+# ru.integrotech.airline.core.info.PassengerMilesInfo
+ru.integrotech.airline.core.info.PassengerMilesInfo#concept.label = passenger miles info
+
+# ru.integrotech.airline.core.info.PassengerMilesInfo.Status
+ru.integrotech.airline.core.info.PassengerMilesInfo.Status#concept.label = status
+ru.integrotech.airline.core.info.PassengerMilesInfo.Status.full#instance.label = full
+ru.integrotech.airline.core.info.PassengerMilesInfo.Status.nodata#instance.label = nodata
+ru.integrotech.airline.core.info.PassengerMilesInfo.Status.partial#instance.label = partial
+ru.integrotech.airline.core.info.PassengerMilesInfo.additionalDistance#phrase.action = set the additional distance of {this} to {additional distance}
+ru.integrotech.airline.core.info.PassengerMilesInfo.additionalDistance#phrase.navigation = {additional distance} of {this}
+ru.integrotech.airline.core.info.PassengerMilesInfo.airline#phrase.action = set the airline of {this} to {airline}
+ru.integrotech.airline.core.info.PassengerMilesInfo.airline#phrase.navigation = {airline} of {this}
+ru.integrotech.airline.core.info.PassengerMilesInfo.bonuseDistance#phrase.action = set the bonuse distance of {this} to {bonuse distance}
+ru.integrotech.airline.core.info.PassengerMilesInfo.bonuseDistance#phrase.navigation = {bonuse distance} of {this}
+ru.integrotech.airline.core.info.PassengerMilesInfo.bookingClassCode#phrase.action = set the booking class code of {this} to {booking class code}
+ru.integrotech.airline.core.info.PassengerMilesInfo.bookingClassCode#phrase.navigation = {booking class code} of {this}
+ru.integrotech.airline.core.info.PassengerMilesInfo.destination#phrase.action = set the destination of {this} to {destination}
+ru.integrotech.airline.core.info.PassengerMilesInfo.destination#phrase.navigation = {destination} of {this}
+ru.integrotech.airline.core.info.PassengerMilesInfo.distance#phrase.action = set the distance of {this} to {distance}
+ru.integrotech.airline.core.info.PassengerMilesInfo.distance#phrase.navigation = {distance} of {this}
+ru.integrotech.airline.core.info.PassengerMilesInfo.distanceCoeff#phrase.action = set the distance coeff of {this} to {distance coeff}
+ru.integrotech.airline.core.info.PassengerMilesInfo.distanceCoeff#phrase.navigation = {distance coeff} of {this}
+ru.integrotech.airline.core.info.PassengerMilesInfo.fareCode#phrase.action = set the fare code of {this} to {fare code}
+ru.integrotech.airline.core.info.PassengerMilesInfo.fareCode#phrase.navigation = {fare code} of {this}
+ru.integrotech.airline.core.info.PassengerMilesInfo.flightCode#phrase.navigation = {flight code} of {this}
+ru.integrotech.airline.core.info.PassengerMilesInfo.flightDistance#phrase.navigation = {flight distance} of {this}
+ru.integrotech.airline.core.info.PassengerMilesInfo.minBonusMiles#phrase.navigation = {min bonus miles} of {this}
+ru.integrotech.airline.core.info.PassengerMilesInfo.origin#phrase.action = set the origin of {this} to {origin}
+ru.integrotech.airline.core.info.PassengerMilesInfo.origin#phrase.navigation = {origin} of {this}
+ru.integrotech.airline.core.info.PassengerMilesInfo.status#phrase.action = set the status of {this} to {status}
+ru.integrotech.airline.core.info.PassengerMilesInfo.status#phrase.navigation = {status} of {this}
+ru.integrotech.airline.core.info.PassengerMilesInfo.tickedDesignator#phrase.action = set the ticked designator of {this} to {ticked designator}
+ru.integrotech.airline.core.info.PassengerMilesInfo.tickedDesignator#phrase.navigation = {ticked designator} of {this}
+ru.integrotech.airline.core.info.PassengerMilesInfo.totalBonusMiles#phrase.action = set the total bonus miles of {this} to {total bonus miles}
+ru.integrotech.airline.core.info.PassengerMilesInfo.totalBonusMiles#phrase.navigation = {total bonus miles} of {this}
 
 # ru.integrotech.airline.core.location.Airport
 ru.integrotech.airline.core.location.Airport#concept.label = airport
@@ -254,44 +326,71 @@ ru.integrotech.airline.core.location.Airport.ZONE.R2#instance.label = R2
 ru.integrotech.airline.core.location.Airport.ZONE.R3#instance.label = R3
 ru.integrotech.airline.core.location.Airport.ZONE.R4#instance.label = R4
 ru.integrotech.airline.core.location.Airport.ZONE.SA#instance.label = SA
+ru.integrotech.airline.core.location.Airport.aflZone#phrase.action = set the afl zone of {this} to {afl zone}
 ru.integrotech.airline.core.location.Airport.aflZone#phrase.navigation = {afl zone} of {this}
+ru.integrotech.airline.core.location.Airport.city#phrase.action = set the city of {this} to {city}
 ru.integrotech.airline.core.location.Airport.city#phrase.navigation = {city} of {this}
+ru.integrotech.airline.core.location.Airport.code#phrase.action = set the code of {this} to {code}
 ru.integrotech.airline.core.location.Airport.code#phrase.navigation = {code} of {this}
+ru.integrotech.airline.core.location.Airport.geoLocation#phrase.action = set the geo location of {this} to {geo location}
 ru.integrotech.airline.core.location.Airport.geoLocation#phrase.navigation = {geo location} of {this}
+ru.integrotech.airline.core.location.Airport.name#phrase.action = set the name of {this} to {name}
 ru.integrotech.airline.core.location.Airport.name#phrase.navigation = {name} of {this}
+ru.integrotech.airline.core.location.Airport.outcomeFlights#phrase.action = set the outcome flights of {this} to {outcome flights}
 ru.integrotech.airline.core.location.Airport.outcomeFlights#phrase.navigation = {outcome flights} of {this}
+ru.integrotech.airline.core.location.Airport.scyteamZone#phrase.action = set the scyteam zone of {this} to {scyteam zone}
 ru.integrotech.airline.core.location.Airport.scyteamZone#phrase.navigation = {scyteam zone} of {this}
+ru.integrotech.airline.core.location.Airport.ucAvailable#phrase.action = make it {uc available} that {this} is uc available
 ru.integrotech.airline.core.location.Airport.ucAvailable#phrase.navigation = {this} is uc available
 
 # ru.integrotech.airline.core.location.City
 ru.integrotech.airline.core.location.City#concept.label = city
+ru.integrotech.airline.core.location.City.airportMap#phrase.action = set the airport map of {this} to {airport map}
 ru.integrotech.airline.core.location.City.airportMap#phrase.navigation = {airport map} of {this}
+ru.integrotech.airline.core.location.City.code#phrase.action = set the code of {this} to {code}
 ru.integrotech.airline.core.location.City.code#phrase.navigation = {code} of {this}
+ru.integrotech.airline.core.location.City.country#phrase.action = set the country of {this} to {country}
 ru.integrotech.airline.core.location.City.country#phrase.navigation = {country} of {this}
+ru.integrotech.airline.core.location.City.geoLocation#phrase.action = set the geo location of {this} to {geo location}
 ru.integrotech.airline.core.location.City.geoLocation#phrase.navigation = {geo location} of {this}
+ru.integrotech.airline.core.location.City.name#phrase.action = set the name of {this} to {name}
 ru.integrotech.airline.core.location.City.name#phrase.navigation = {name} of {this}
+ru.integrotech.airline.core.location.City.weight#phrase.action = set the weight of {this} to {weight}
 ru.integrotech.airline.core.location.City.weight#phrase.navigation = {weight} of {this}
 
 # ru.integrotech.airline.core.location.Country
 ru.integrotech.airline.core.location.Country#concept.label = country
+ru.integrotech.airline.core.location.Country.airportMap#phrase.action = set the airport map of {this} to {airport map}
 ru.integrotech.airline.core.location.Country.airportMap#phrase.navigation = {airport map} of {this}
 ru.integrotech.airline.core.location.Country.capital#phrase.action = set the capital of {this} to {capital}
 ru.integrotech.airline.core.location.Country.capital#phrase.navigation = {capital} of {this}
+ru.integrotech.airline.core.location.Country.capitalCode#phrase.action = set the capital code of {this} to {capital code}
 ru.integrotech.airline.core.location.Country.capitalCode#phrase.navigation = {capital code} of {this}
+ru.integrotech.airline.core.location.Country.code#phrase.action = set the code of {this} to {code}
 ru.integrotech.airline.core.location.Country.code#phrase.navigation = {code} of {this}
+ru.integrotech.airline.core.location.Country.geoLocation#phrase.action = set the geo location of {this} to {geo location}
 ru.integrotech.airline.core.location.Country.geoLocation#phrase.navigation = {geo location} of {this}
+ru.integrotech.airline.core.location.Country.name#phrase.action = set the name of {this} to {name}
 ru.integrotech.airline.core.location.Country.name#phrase.navigation = {name} of {this}
+ru.integrotech.airline.core.location.Country.worldRegion#phrase.action = set the world region of {this} to {world region}
 ru.integrotech.airline.core.location.Country.worldRegion#phrase.navigation = {world region} of {this}
 
 # ru.integrotech.airline.core.location.GeoLocation
 ru.integrotech.airline.core.location.GeoLocation#concept.label = geo location
+ru.integrotech.airline.core.location.GeoLocation.altitude#phrase.action = set the altitude of {this} to {altitude}
 ru.integrotech.airline.core.location.GeoLocation.altitude#phrase.navigation = {altitude} of {this}
+ru.integrotech.airline.core.location.GeoLocation.latitude#phrase.action = set the latitude of {this} to {latitude}
 ru.integrotech.airline.core.location.GeoLocation.latitude#phrase.navigation = {latitude} of {this}
+ru.integrotech.airline.core.location.GeoLocation.longitude#phrase.action = set the longitude of {this} to {longitude}
 ru.integrotech.airline.core.location.GeoLocation.longitude#phrase.navigation = {longitude} of {this}
 
 # ru.integrotech.airline.core.location.WorldRegion
 ru.integrotech.airline.core.location.WorldRegion#concept.label = world region
+ru.integrotech.airline.core.location.WorldRegion.airportMap#phrase.action = set the airport map of {this} to {airport map}
 ru.integrotech.airline.core.location.WorldRegion.airportMap#phrase.navigation = {airport map} of {this}
+ru.integrotech.airline.core.location.WorldRegion.code#phrase.action = set the code of {this} to {code}
 ru.integrotech.airline.core.location.WorldRegion.code#phrase.navigation = {code} of {this}
+ru.integrotech.airline.core.location.WorldRegion.geoLocation#phrase.action = set the geo location of {this} to {geo location}
 ru.integrotech.airline.core.location.WorldRegion.geoLocation#phrase.navigation = {geo location} of {this}
+ru.integrotech.airline.core.location.WorldRegion.name#phrase.action = set the name of {this} to {name}
 ru.integrotech.airline.core.location.WorldRegion.name#phrase.navigation = {name} of {this}

@@ -1,5 +1,7 @@
 package ru.integrotech.su.outputparams.route;
 
+import java.util.List;
+import java.util.Set;
 
 import ru.integrotech.airline.core.airline.Airline;
 import ru.integrotech.airline.core.flight.Route;
@@ -9,54 +11,79 @@ import ru.integrotech.airline.searcher.RouteSearcher;
 import ru.integrotech.su.inputparams.InputParamsTransformer;
 import ru.integrotech.su.inputparams.route.RoutesInput;
 
-import java.util.List;
-import java.util.Set;
-
+/**
+ * container for RoutBuilder
+ *
+ * data( private RegisterCache cache; private InputParamsTransformer
+ * paramsTransformer; private RouteSearcher routeSearcher; )
+ */
 public class RoutesBuilder {
 
-    public static String[] getRegisterNames() {
-        return REGISTER_NAMES;
-    }
+	/**
+	 * names of necessary registers
+	 * */
+	public static String[] getRegisterNames() {
+		return REGISTER_NAMES;
+	}
 
-    private static final String[] REGISTER_NAMES = new String[]
-                    {"airline",
-                    "region",
-                    "country",
-                    "city",
-                    "airport",
-                    "pair",
-                    "serviceClassLimit",
-                    "bonusRoute"};
+	/**
+	 * names of necessary registers
+	 * */
+	private static final String[] REGISTER_NAMES = new String[] { "airline",
+			"region", "country", "city", "airport", "pair",
+			"serviceClassLimit", "bonusRoute" };
 
-    public static RoutesBuilder of(RegisterCache cache) {
-        return new RoutesBuilder(cache);
-    }
+	/**
+	 * Static constructor <br />
+	 * constructs, then sets up the instance's fields value
+	 *
+	 * @param cache
+	 * @return
+	 */
+	public static RoutesBuilder of(RegisterCache cache) {
+		RoutesBuilder res = new RoutesBuilder();
+		res.setCache(cache);
+		res.setParamsTransformer(InputParamsTransformer.of(cache));
+		res.setRouteSearcher(RouteSearcher.of());
+		return res;
+	}
 
-    private RegisterCache cache;
+	public void setCache(RegisterCache cache) {
+		this.cache = cache;
+	}
 
-    private InputParamsTransformer paramsTransformer;
+	public void setParamsTransformer(InputParamsTransformer paramsTransformer) {
+		this.paramsTransformer = paramsTransformer;
+	}
 
-    private RouteSearcher routeSearcher;
+	public void setRouteSearcher(RouteSearcher routeSearcher) {
+		this.routeSearcher = routeSearcher;
+	}
 
-    private RoutesBuilder(RegisterCache cache) {
-        this.cache = cache;
-        this.paramsTransformer = InputParamsTransformer.of(cache);
-        this.routeSearcher = RouteSearcher.of();
-    }
+	private RegisterCache cache;
 
-    public List<Route> getRoutes(RoutesInput routesInput) {
-        Set<Airport> origins = this.paramsTransformer.getOrigins(routesInput);
-        Set<Airport> destinations = this.paramsTransformer.getDestinations(routesInput);
-        boolean exactLocation = this.paramsTransformer.exactLocation(routesInput);
-        Airline airline = this.paramsTransformer.getAirline(routesInput);
-        List<Route> result = this.routeSearcher.searchRoutes(origins, destinations, airline, exactLocation);
-        if (this.cache.getWrongRouteMap() != null) { //init wrong routes not in all cases
-            for (Route route : result) {
-                if (!route.isDirect()) {
-                    route.setWrong(this.cache.getWrongRouteMap().containsKey(route.getCityCodes()));
-                }
-            }
-        }
-        return result;
-    }
+	private InputParamsTransformer paramsTransformer;
+
+	private RouteSearcher routeSearcher;
+
+	public List<Route> getRoutes(RoutesInput routesInput) {
+		Set<Airport> origins = this.paramsTransformer.getOrigins(routesInput);
+		Set<Airport> destinations = this.paramsTransformer
+				.getDestinations(routesInput);
+		boolean exactLocation = this.paramsTransformer
+				.exactLocation(routesInput);
+		Airline airline = this.paramsTransformer.getAirline(routesInput);
+		List<Route> result = this.routeSearcher.searchRoutes(origins,
+				destinations, airline, exactLocation);
+		if (this.cache.getWrongRouteMap() != null) { // init wrong routes not in
+														// all cases
+			for (Route route : result) {
+				if (!route.isDirect()) {
+					route.setWrong(this.cache.getWrongRouteMap().containsKey(
+							route.getCityCodes()));
+				}
+			}
+		}
+		return result;
+	}
 }

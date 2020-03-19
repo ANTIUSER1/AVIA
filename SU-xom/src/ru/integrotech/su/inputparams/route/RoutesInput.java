@@ -1,165 +1,201 @@
 package ru.integrotech.su.inputparams.route;
 
-
 import ru.integrotech.su.common.Location;
 import ru.integrotech.su.common.LocationType;
 import ru.integrotech.su.inputparams.charge.ChargeInput;
 import ru.integrotech.su.inputparams.spend.SpendInput;
 
+/**
+ * container for input routes data
+ *
+ * data ( private String originType; private String originCode; private String
+ * destinationType; private String destinationCode; private String airlineCode;)
+ */
+
 public class RoutesInput {
 
-    public static RoutesInput of(ChargeInput chargeInput) {
-        RoutesInput routesInput = new RoutesInput();
-        routesInput.setOriginType(RoutesInput.getType(chargeInput.getOrigin()));
-        routesInput.setOriginCode(RoutesInput.getCode(chargeInput.getOrigin()));
-        routesInput.setDestinationType(RoutesInput.getType(chargeInput.getDestination()));
-        routesInput.setDestinationCode(RoutesInput.getCode(chargeInput.getDestination()));
-        routesInput.setAirlineCode(RoutesInput.getAirlineCode(chargeInput));
-        return routesInput;
-    }
+	/**
+	 * Static constructor <br />
+	 * constructs, then sets up the instance's fields value
+	 *
+	 * @param chargeInput
+	 * @return
+	 */
+	public static RoutesInput of(ChargeInput chargeInput) {
+		RoutesInput routesInput = new RoutesInput();
+		routesInput.setOriginType(RoutesInput.getType(chargeInput.getOrigin()));
+		routesInput.setOriginCode(RoutesInput.getCode(chargeInput.getOrigin()));
+		routesInput.setDestinationType(RoutesInput.getType(chargeInput
+				.getDestination()));
+		routesInput.setDestinationCode(RoutesInput.getCode(chargeInput
+				.getDestination()));
+		routesInput.setAirlineCode(RoutesInput.getAirlineCode(chargeInput));
+		return routesInput;
+	}
 
-    public static RoutesInput of(SpendInput spendInput, String airlineCode) {
-        if (airlineCode != null) {
-            airlineCode = airlineCode.toUpperCase();
-        }
-        RoutesInput routesInput = new RoutesInput();
-        routesInput.setOriginType(spendInput.getOrigin().getLocationType());
-        routesInput.setOriginCode(spendInput.getOrigin().getLocationCode());
-        routesInput.setDestinationType(spendInput.getDestination().getLocationType());
-        routesInput.setDestinationCode(spendInput.getDestination().getLocationCode());
-        routesInput.setAirlineCode(airlineCode);
-        return routesInput;
-    }
+	/**
+	 * Static constructor
+	 *
+	 * At first creates the instance, refering the private free-arguments
+	 * constructor, then sets up the instance's field
+	 *
+	 * @param spendInput
+	 * @param airlineCode
+	 * @return
+	 */
+	public static RoutesInput of(SpendInput spendInput, String airlineCode) {
+		RoutesInput routesInput = new RoutesInput();
 
-    public static RoutesInput of(String originType,
-                                 String originCode,
-                                 String destinationType,
-                                 String destinationCode,
-                                 String airlineCode) {
+		if (airlineCode != null) {
+			airlineCode = airlineCode.toUpperCase();
+		}
+		routesInput.setOriginType(spendInput.getOrigin().getLocationType());
+		routesInput.setOriginCode(spendInput.getOrigin().getLocationCode());
+		routesInput.setDestinationType(spendInput.getDestination()
+				.getLocationType());
+		routesInput.setDestinationCode(spendInput.getDestination()
+				.getLocationCode());
+		routesInput.setAirlineCode(airlineCode);
+		return routesInput;
+	}
 
-        RoutesInput routesInput = new RoutesInput();
+	/**
+	 * Static constructor
+	 *
+	 * At first creates the instance, refering the private free-arguments
+	 * constructor, then sets up the instance's field
+	 *
+	 *
+	 * @param originType
+	 * @param originCode
+	 * @param destinationType
+	 * @param destinationCode
+	 * @param airlineCode
+	 * @return
+	 */
+	public static RoutesInput of(String originType, String originCode,
+			String destinationType, String destinationCode, String airlineCode) {
 
-        if (originType != null) {
-            originType = originType.toLowerCase();
-        }
+		RoutesInput routesInput = new RoutesInput();
 
-        if (originCode != null) {
-            originCode = originCode.toUpperCase();
-        }
+		if (originType != null) {
+			originType = originType.toLowerCase();
+		}
 
-        if (destinationType != null) {
-            destinationType = destinationType.toLowerCase();
-        }
+		if (originCode != null) {
+			originCode = originCode.toUpperCase();
+		}
 
-        if (destinationCode != null) {
-            destinationCode = destinationCode.toUpperCase();
-        }
+		if (destinationType != null) {
+			destinationType = destinationType.toLowerCase();
+		}
 
-        if (airlineCode != null) {
-            airlineCode = airlineCode.toUpperCase();
-        }
+		if (destinationCode != null) {
+			destinationCode = destinationCode.toUpperCase();
+		}
 
-        routesInput.setOriginType(originType);
-        routesInput.setOriginCode(originCode);
-        routesInput.setDestinationType(destinationType);
-        routesInput.setDestinationCode(destinationCode);
-        routesInput.setAirlineCode(airlineCode);
-        return routesInput;
-    }
+		if (airlineCode != null) {
+			airlineCode = airlineCode.toUpperCase();
+		}
 
-    private static String getAirlineCode(ChargeInput chargeInput) {
-        String result = null;
-        if (chargeInput.getAirline() != null) {
-            result = chargeInput.getAirline().getAirlineCode();
-        }
-        return result;
-    }
+		routesInput.setOriginType(originType);
+		routesInput.setOriginCode(originCode);
+		routesInput.setDestinationType(destinationType);
+		routesInput.setDestinationCode(destinationCode);
+		routesInput.setAirlineCode(airlineCode);
+		return routesInput;
+	}
 
-    private static String getCode(Location location) {
-        String result = null;
-        if (location != null) {
-            if (location.getAirport() != null) {
-                result = location.getAirport().getAirportCode();
-            } else if(location.getCity() != null) {
-                result = location.getCity().getCityCode();
-            } else if(location.getCountry() != null) {
-                result = location.getCountry().getCountryCode();
-            } else if(location.getRegion() != null) {
-                result = location.getRegion().getRegionCode();
-            }
-        }
-        return result;
-    }
+	private static String getAirlineCode(ChargeInput chargeInput) {
+		String result = null;
+		if (chargeInput.getAirline() != null) {
+			result = chargeInput.getAirline().getAirlineCode();
+		}
+		return result;
+	}
 
-    private static String getType(Location location) {
+	private static String getCode(Location location) {
+		String result = null;
+		if (location != null) {
+			if (location.getAirport() != null) {
+				result = location.getAirport().getAirportCode();
+			} else if (location.getCity() != null) {
+				result = location.getCity().getCityCode();
+			} else if (location.getCountry() != null) {
+				result = location.getCountry().getCountryCode();
+			} else if (location.getRegion() != null) {
+				result = location.getRegion().getRegionCode();
+			}
+		}
+		return result;
+	}
 
-        String result = null;
+	private static String getType(Location location) {
 
-        if (location != null) {
-            if (location.getAirport() != null) {
-                result = LocationType.airport.name();
-            } else if(location.getCity() != null) {
-                result = LocationType.city.name();
-            } else if(location.getCountry() != null) {
-                result = LocationType.country.name();
-            } else if(location.getRegion() != null) {
-                result = LocationType.region.name();
-            }
-        }
+		String result = null;
 
-        return result;
-    }
+		if (location != null) {
+			if (location.getAirport() != null) {
+				result = LocationType.airport.name();
+			} else if (location.getCity() != null) {
+				result = LocationType.city.name();
+			} else if (location.getCountry() != null) {
+				result = LocationType.country.name();
+			} else if (location.getRegion() != null) {
+				result = LocationType.region.name();
+			}
+		}
 
-    private String originType;
+		return result;
+	}
 
-    private String originCode;
+	private String originType;
 
-    private String destinationType;
+	private String originCode;
 
-    private String destinationCode;
+	private String destinationType;
 
-    private String airlineCode;
+	private String destinationCode;
 
-    private RoutesInput() {
-    }
+	private String airlineCode;
 
-    public String getOriginCode() {
-        return originCode;
-    }
+	public String getOriginCode() {
+		return originCode;
+	}
 
-    public void setOriginCode(String originCode) {
-        this.originCode = originCode;
-    }
+	public void setOriginCode(String originCode) {
+		this.originCode = originCode;
+	}
 
-    public String getOriginType() {
-        return originType;
-    }
+	public String getOriginType() {
+		return originType;
+	}
 
-    public void setOriginType(String originType) {
-        this.originType = originType;
-    }
+	public void setOriginType(String originType) {
+		this.originType = originType;
+	}
 
-    public String getDestinationCode() {
-        return destinationCode;
-    }
+	public String getDestinationCode() {
+		return destinationCode;
+	}
 
-    public void setDestinationCode(String destinationCode) {
-        this.destinationCode = destinationCode;
-    }
+	public void setDestinationCode(String destinationCode) {
+		this.destinationCode = destinationCode;
+	}
 
-    public String getDestinationType() {
-        return destinationType;
-    }
+	public String getDestinationType() {
+		return destinationType;
+	}
 
-    public void setDestinationType(String toType) {
-        this.destinationType = toType;
-    }
+	public void setDestinationType(String toType) {
+		this.destinationType = toType;
+	}
 
-    public String getAirlineCode() {
-        return airlineCode;
-    }
+	public String getAirlineCode() {
+		return airlineCode;
+	}
 
-    public void setAirlineCode(String airlineCode) {
-        this.airlineCode = airlineCode;
-    }
+	public void setAirlineCode(String airlineCode) {
+		this.airlineCode = airlineCode;
+	}
 }

@@ -1,8 +1,14 @@
 package ru.integrotech.airline.register;
 
-
 import ru.integrotech.airline.core.location.Country;
 import ru.integrotech.airline.core.location.WorldRegion;
+
+/**
+ * class for read data in JSON format from remote register
+ *
+ *  Can be used in all projects
+ *
+ */
 
 class CountryRecord {
 

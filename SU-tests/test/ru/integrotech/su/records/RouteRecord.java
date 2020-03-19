@@ -8,7 +8,9 @@ import ru.integrotech.airline.register.RegisterCache;
 
 import java.util.*;
 
-/*class use only in test for transform JSON into model.flight.ChargeRoute*/
+/**
+ * Class use only in test for transform JSON into model.flight.ChargeRoute
+ */
 public class RouteRecord {
 
     public static RouteRecord of(Route route) {

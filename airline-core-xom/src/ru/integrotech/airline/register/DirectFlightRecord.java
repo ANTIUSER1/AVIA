@@ -1,5 +1,12 @@
 package ru.integrotech.airline.register;
 
+/**
+ * class for read data in JSON format from remote register
+ *
+ *  Can be used in all projects
+ *
+ */
+
 class DirectFlightRecord {
 
     private String ap_from_code;

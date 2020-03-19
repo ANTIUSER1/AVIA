@@ -15,6 +15,21 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.*;
 
+/**
+ * Outside test for ru.aeroflot.fmc.io.output.spend.SpendLkRoute
+ * Compares two pre-saved responses of SpendLk service for equality
+ * To create new tests, follow next steps
+ * 1. Create root path for spendLk unify tests in your local machine
+ * 2. Define path to this directory in test.ru.aeroflot.fmc.resources.unifyTest.properties in uniSpendLkTestDirectory property,
+ *    for example " uniSpendTestDirectory=D:/fpm_tests/spend_lk/ "
+ * 3. Create test case directory inside root directory, for example "SVO-JFK-00"
+ * 4. Put file "request.json" inside SVO-JFK-00 directory
+ * 5. Put file "expectedResponse.json" inside SVO-JFK-00 directory
+ * 6. Create another test directory, for example "SVO-NRT-01" and repeat steps 4 and 5 for this new directory.
+ * 7. Run public void test(). Program test each folder, test is OK if actual response is equals to your expectedResponse.json
+ *    Program will say OK if test is ok or write right answer in exact directory as "actualResponse.json".
+ */
+
 public class OutsideSpendLkTest extends UnifySpendLkTest {
 
     private static final String ROOT_TEST_DIRECTORY_PATH = "outSpendLkTestDirectory";

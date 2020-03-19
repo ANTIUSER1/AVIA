@@ -1,7 +1,13 @@
 package ru.integrotech.airline.register;
 
-
 import ru.integrotech.airline.core.bonus.Loyalty;
+
+/**
+ * class for read data in JSON format from remote register
+ *
+ *  Can be used in all projects
+ *
+ */
 
 class LoyaltyRecord {
 

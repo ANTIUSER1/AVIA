@@ -14,8 +14,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/*class is used in tests for load some classes from JSONs that
-uses only in tests and so cant be load by RegisterCache */
+/**
+ * Class is used in tests for load some classes from JSONs that
+ * uses only in tests and so cant be load by RegisterCache
+ */
 public class TestsCache{
 
     private RegisterCache registerCache;

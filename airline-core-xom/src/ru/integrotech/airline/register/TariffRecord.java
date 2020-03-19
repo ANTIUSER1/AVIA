@@ -1,9 +1,15 @@
 package ru.integrotech.airline.register;
 
-
 import ru.integrotech.airline.core.airline.ServiceClass;
 import ru.integrotech.airline.core.airline.SubTariff;
 import ru.integrotech.airline.core.airline.Tariff;
+
+/**
+ * class for read data in JSON format from remote register
+ *
+ *  Can be used in Charge project
+ *
+ */
 
 class TariffRecord {
 

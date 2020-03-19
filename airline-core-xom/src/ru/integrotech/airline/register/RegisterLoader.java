@@ -18,8 +18,11 @@ import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 import java.util.logging.Logger;
 
+/**
+ * class for load data list Of registers holds in RegisterCache it MUST be
+ * singleton
+ */
 
-/*class for load data listOf registers holds in RegisterCache*/
 public class RegisterLoader{
 
     private static RegisterLoader instance;

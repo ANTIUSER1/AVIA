@@ -4,10 +4,10 @@
   <uuid>7600d4cc-20ae-4533-8c37-c93f0297cc1f</uuid>
   <locale>en_US</locale>
   <definition><![CDATA[if 
-	 the distance coeff of the passenger charge info is more than 1  
-	 	and the bonus distance of the passenger charge info is at most the min bonus miles of the passenger charge info  
+	 the distance coeff of the passenger miles info  is more than 1  
+	 	and the bonuse distance of the passenger miles info  is at most the min bonus miles of the passenger miles info   
 then 
-	 set the additional distance of the passenger charge info to 
+	 set the additional distance of the passenger miles info  to 
 	 	attractionABBuilder .getMultiplication( { attractionABBuilder.getTierLevelFactor( attractionABInput ) ,
-	 											  the flight distance of the passenger charge info  } ) ; ]]></definition>
+	 											  the flight distance of the passenger miles info   } ) ; ]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

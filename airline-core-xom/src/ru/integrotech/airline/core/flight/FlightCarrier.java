@@ -1,33 +1,39 @@
 package ru.integrotech.airline.core.flight;
 
-
-
 import ru.integrotech.airline.core.airline.Airline;
 import ru.integrotech.airline.core.airline.ServiceClass;
+import ru.integrotech.airline.core.info.PassengerChargeInfo;
 
 import java.util.*;
 
+/**
+ * Describes airline completing exact flight
+ *
+ * Used in all projects
+ *
+ */
+
 public class FlightCarrier {
 
-    public static FlightCarrier of(Airline carrier) {
-        Set<ServiceClass.SERVICE_CLASS_TYPE> extraClasses = new HashSet<>();
-        return new FlightCarrier(carrier, extraClasses);
+    public static FlightCarrier of(Airline airline) {
+        FlightCarrier result = new FlightCarrier();
+        result.setCarrier(airline);
+        result.setExtraClasses(new HashSet<>());
+        return result;
     }
 
-    public static FlightCarrier of(Airline carrier, Set<ServiceClass.SERVICE_CLASS_TYPE> extraClasses) {
-        return new FlightCarrier(carrier, extraClasses);
+    public static FlightCarrier of(Airline airline, Set<ServiceClass.SERVICE_CLASS_TYPE> extraClasses) {
+        FlightCarrier result = new FlightCarrier();
+        result.setCarrier(airline);
+        result.setExtraClasses(extraClasses);
+        return result;
     }
 
-    private final Airline carrier;
+    private Airline carrier;
 
-    private final Set<ServiceClass.SERVICE_CLASS_TYPE> extraClasses;
+    private Set<ServiceClass.SERVICE_CLASS_TYPE> extraClasses;
 
-    private List<PassengerCharge> passengerCharges;
-
-    private FlightCarrier(Airline carrier, Set<ServiceClass.SERVICE_CLASS_TYPE> extraClasses) {
-        this.carrier = carrier;
-        this.extraClasses = extraClasses;
-    }
+    private List<PassengerChargeInfo> passengerChargeInfos;
 
     public Airline getCarrier() {
         return carrier;
@@ -37,18 +43,26 @@ public class FlightCarrier {
         return extraClasses;
     }
 
-    public List<PassengerCharge> getPassengerCharges() {
-        return passengerCharges;
+    public List<PassengerChargeInfo> getPassengerChargeInfos() {
+        return passengerChargeInfos;
     }
 
-    public void setPassengerCharges(List<PassengerCharge> passengerCharges) {
-        this.passengerCharges = passengerCharges;
+    public void setPassengerChargeInfos(List<PassengerChargeInfo> passengerChargeInfos) {
+        this.passengerChargeInfos = passengerChargeInfos;
     }
 
     public Set<ServiceClass.SERVICE_CLASS_TYPE> getAllowedClasses() {
         Set<ServiceClass.SERVICE_CLASS_TYPE> result = new HashSet<>(this.carrier.getDefaultServiceClasses());
         result.addAll(this.extraClasses);
         return result;
+    }
+
+    public void setCarrier(Airline carrier) {
+        this.carrier = carrier;
+    }
+
+    public void setExtraClasses(Set<ServiceClass.SERVICE_CLASS_TYPE> extraClasses) {
+        this.extraClasses = extraClasses;
     }
 
     public void addExtraClasses(String... classTypes) {

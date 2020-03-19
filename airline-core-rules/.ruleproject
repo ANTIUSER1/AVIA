@@ -22,9 +22,6 @@
   <modelFolders xsi:type="ilog.rules.studio.model.query:QueryFolder">
     <name>queries</name>
   </modelFolders>
-  <modelFolders xsi:type="ilog.rules.studio.model.base:ResourceFolder">
-    <name>resources</name>
-  </modelFolders>
   <modelFolders xsi:type="com.ibm.rules.studio.model.decisionservice:OperationFolder">
     <name>deployment</name>
   </modelFolders>

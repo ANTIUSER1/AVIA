@@ -1,6 +1,13 @@
-package ru.integrotech.airline.core;
+package ru.integrotech.airline.core.info;
 
 import java.util.List;
+
+/**
+ * Describes the flight of exact passenger in exact flight
+ *
+ * Used in CheckOnlineRegistrationAvailable project
+ *
+ */
 
 public class PassengerFlightInfo {
 	
@@ -13,11 +20,6 @@ public class PassengerFlightInfo {
 	private List<String> ssrCodes;
 	
 	private boolean onlineRegistrationAvailable ;
-
-	public PassengerFlightInfo() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
 
 	public String getAirlineCode() {
 		return airlineCode == null ? null : airlineCode.toUpperCase();

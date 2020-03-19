@@ -1,30 +1,43 @@
 package ru.integrotech.airline.searcher;
 
 import ru.integrotech.airline.core.bonus.MilesRule;
-import ru.integrotech.airline.core.flight.PassengerChargeInfo;
+import ru.integrotech.airline.core.info.PassengerMilesInfo;
 import ru.integrotech.airline.register.RegisterCache;
 import ru.integrotech.airline.utils.StringMethods;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static ru.integrotech.airline.core.flight.PassengerChargeInfo.*;
+import static ru.integrotech.airline.core.info.PassengerMilesInfo.*;
+
+/**
+ * class contains logic for search miles rules by given parameters
+ *
+ * Can be used in all projects
+ *
+ */
 
 public class MileRuleSearcher {
 
     public static MileRuleSearcher of(RegisterCache cache) {
-        return new MileRuleSearcher(cache.getMilesRules());
+        MileRuleSearcher result = new MileRuleSearcher();
+        result.setRulesRegister(cache.getMilesRules());
+        return result;
     }
 
-    private final List<MilesRule> rulesRegister;
+    private List<MilesRule> rulesRegister;
 
-    private MileRuleSearcher(List<MilesRule> rulesRegister) {
+    public List<MilesRule> getRulesRegister() {
+        return rulesRegister;
+    }
+
+    public void setRulesRegister(List<MilesRule> rulesRegister) {
         this.rulesRegister = rulesRegister;
     }
 
-    public void findMileRules(List<PassengerChargeInfo> charges) {
+    public void findMileRules(List<PassengerMilesInfo> charges) {
 
-        for (PassengerChargeInfo info : charges) {
+        for (PassengerMilesInfo info : charges) {
 
             if (info.getStatus() == Status.nodata) {
                 info.setTotalBonusMiles(0);
@@ -58,7 +71,7 @@ public class MileRuleSearcher {
         }
     }
 
-    private MilesRule findByTicketDesignator(PassengerChargeInfo info) {
+    private MilesRule findByTicketDesignator(PassengerMilesInfo info) {
 
         List<MilesRule> result = new ArrayList<>();
         String designator = info.getTickedDesignator();
@@ -79,7 +92,7 @@ public class MileRuleSearcher {
         return this.findRuleWithMinMiles(result);
     }
 
-    private MilesRule findByFare(PassengerChargeInfo info) {
+    private MilesRule findByFare(PassengerMilesInfo info) {
 
         List<MilesRule> result = new ArrayList<>();
         String fareCode = info.getFareCode();
@@ -100,7 +113,7 @@ public class MileRuleSearcher {
         return this.findRuleWithMinMiles(result);
     }
 
-    private MilesRule findByBookingClass(PassengerChargeInfo info) {
+    private MilesRule findByBookingClass(PassengerMilesInfo info) {
 
         List<MilesRule> result = new ArrayList<>();
         String bookingClassCode = info.getBookingClassCode();
@@ -119,7 +132,7 @@ public class MileRuleSearcher {
         return this.findRuleWithMinMiles(result);
     }
 
-    private boolean fitsByIkmRule(MilesRule rule, PassengerChargeInfo info) {
+    private boolean fitsByIkmRule(MilesRule rule, PassengerMilesInfo info) {
 
         boolean result = false;
 

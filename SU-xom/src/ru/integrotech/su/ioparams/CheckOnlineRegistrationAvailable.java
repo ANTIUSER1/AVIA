@@ -4,10 +4,17 @@ import java.util.List;
 
 import javax.xml.bind.annotation.XmlTransient;
 
-import ru.integrotech.airline.core.PassengerFlightInfo;
+import ru.integrotech.airline.core.info.PassengerFlightInfo;
 
+/**
+ * container for checkOnlineRegAvailableRequest (request body for
+ * CheckOnlineRegistrationAvailable project)
+ *
+ * data ( private PassengerFlightInfo passengerFlightInfo )
+ */
 public class CheckOnlineRegistrationAvailable {
 
+	// / ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable
 	private PassengerFlightInfo passengerFlightInfo = new PassengerFlightInfo();
 
 	@XmlTransient

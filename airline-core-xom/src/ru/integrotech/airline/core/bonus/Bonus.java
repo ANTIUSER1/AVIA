@@ -6,7 +6,13 @@ import ru.integrotech.airline.core.airline.ServiceClass;
 import java.util.Date;
 import java.util.Objects;
 
-/* class represents bonus is given to passenger for flight */
+/**
+ * class represents bonus has been spent by passenger
+ *
+ * Used in Spend, Spend_LK projects
+ *
+ */
+
 public class Bonus implements Comparable<Bonus> {
 
     public static Bonus of(String typeName,
@@ -17,41 +23,33 @@ public class Bonus implements Comparable<Bonus> {
                            Date validFrom,
                            Date validTo) {
 
-        return new Bonus(BONUS_TYPE.valueOf(typeName),
-                         serviceClass,
-                         serviceUpgradeClass,
-                         value,
-                         isLight,
-                         validFrom ,
-                         validTo);
+        Bonus result = new Bonus();
+        result.setType(BONUS_TYPE.valueOf(typeName));
+        result.setServiceClass(serviceClass);
+        result.setUpgradeServiceClass(serviceUpgradeClass);
+        result.setValue(value);
+        result.setLight(isLight);
+        result.setValidFrom(validFrom);
+        result.setValidTo(validTo);
+        return result;
     }
 
     private BONUS_TYPE type;
 
-    private final ServiceClass.SERVICE_CLASS_TYPE serviceClass;
+    private ServiceClass.SERVICE_CLASS_TYPE serviceClass;
 
-    private final ServiceClass.SERVICE_CLASS_TYPE upgradeServiceClass;
+    private ServiceClass.SERVICE_CLASS_TYPE upgradeServiceClass;
 
-    private final int value;
+    private int value;
 
-    private final boolean isLight;
+    private boolean isLight;
 
-    private final Date validFrom;
+    private Date validFrom;
 
-    private final Date validTo;
+    private Date validTo;
 
     private boolean fitsMilesInterval;
     
-    private Bonus(BONUS_TYPE bonusType, ServiceClass.SERVICE_CLASS_TYPE serviceClass, ServiceClass.SERVICE_CLASS_TYPE upgradeServiceClass, int value, boolean isLight, Date validFrom, Date validTo) {
-        this.type = bonusType;
-        this.serviceClass = serviceClass;
-        this.upgradeServiceClass = upgradeServiceClass;
-        this.value = value;
-        this.isLight = isLight;
-        this.validFrom = validFrom;
-        this.validTo = validTo;
-    }
-
     public BONUS_TYPE getType() {
         return type;
     }
@@ -99,7 +97,34 @@ public class Bonus implements Comparable<Bonus> {
                 && this.value <= milesMax;
     }
 
-    //TODO update. Remove value
+    public void setServiceClass(ServiceClass.SERVICE_CLASS_TYPE serviceClass) {
+        this.serviceClass = serviceClass;
+    }
+
+    public void setUpgradeServiceClass(ServiceClass.SERVICE_CLASS_TYPE upgradeServiceClass) {
+        this.upgradeServiceClass = upgradeServiceClass;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
+
+    public void setLight(boolean light) {
+        isLight = light;
+    }
+
+    public void setValidFrom(Date validFrom) {
+        this.validFrom = validFrom;
+    }
+
+    public void setValidTo(Date validTo) {
+        this.validTo = validTo;
+    }
+
+    public String getDescription() {
+        return String.format("%s%s%s", this.type, this.serviceClass, this.upgradeServiceClass);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -111,21 +136,6 @@ public class Bonus implements Comparable<Bonus> {
                 upgradeServiceClass == bonus.upgradeServiceClass;
     }
 
-    //TODO remove after equals and hashcode update
-    public boolean equalsIgnoreValue(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        Bonus bonus = (Bonus) o;
-        return type == bonus.type &&
-                serviceClass == bonus.serviceClass &&
-                upgradeServiceClass == bonus.upgradeServiceClass;
-    }
-
-    //TODO remove after equals and hashcode update
-    public String getDescription() {
-        return String.format("%s%s%s", this.type, this.serviceClass, this.upgradeServiceClass);
-    }
-
-    //TODO update. Remove value
     @Override
     public int hashCode() {
         return Objects.hash(type, serviceClass, upgradeServiceClass, value);

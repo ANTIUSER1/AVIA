@@ -2,22 +2,25 @@ package ru.integrotech.su.inputparams.attractionAB;
 
 import javax.xml.bind.annotation.XmlType;
 
+/**
+ * container for Segment for Data class
+ *
+ * data ( private String originIATA; private String destinationIATA; private
+ * String bookingClassCode; private String fareBasisCode; private String
+ * ticketDesignator; )
+ */
 @XmlType(name = "InputSegment")
-class Segment {
-	
-	 private String originIATA;
-	 
-	 private String destinationIATA;
-	 
-	 private String bookingClassCode;
-	 
-	 private String fareBasisCode;
-	 
-	 private String ticketDesignator;
+public class Segment {
 
-	 private Segment() {
-		
-	 }
+	private String originIATA;
+
+	private String destinationIATA;
+
+	private String bookingClassCode;
+
+	private String fareBasisCode;
+
+	private String ticketDesignator;
 
 	public String getOriginIATA() {
 		return originIATA;
@@ -25,8 +28,8 @@ class Segment {
 
 	public void setOriginIATA(String originIATA) {
 
-	 	if (originIATA != null) {
-	 		originIATA = originIATA.toUpperCase();
+		if (originIATA != null) {
+			originIATA = originIATA.toUpperCase();
 		}
 
 		this.originIATA = originIATA;
@@ -68,9 +71,5 @@ class Segment {
 	public void setTicketDesignator(String ticketDesignator) {
 		this.ticketDesignator = ticketDesignator;
 	}
-	
-	
-	 
-	 
 
 }

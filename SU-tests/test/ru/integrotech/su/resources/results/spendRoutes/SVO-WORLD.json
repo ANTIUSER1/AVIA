@@ -17,6 +17,365 @@
     },
     "destination": {
       "airport": {
+        "airportCode": "NRT"
+      },
+      "city": {
+        "cityCode": "TYO",
+        "weight": 0
+      },
+      "country": {
+        "countryCode": "JP"
+      },
+      "region": {
+        "regionCode": "AS"
+      }
+    },
+    "isAfl": true,
+    "single": true,
+    "mileCosts": [
+      {
+        "airportFrom": {
+          "airportCode": "SVO",
+          "zoneCode": "R1"
+        },
+        "airportTo": {
+          "airportCode": "NRT",
+          "zoneCode": "A2"
+        },
+        "distance": 4664,
+        "requiredAward": [
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "business"
+            },
+            "classOfService2": {},
+            "value": 60000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "comfort"
+            },
+            "classOfService2": {},
+            "value": 50000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {},
+            "value": 40000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "UC",
+            "classOfService1": {
+              "classOfServiceName": "comfort"
+            },
+            "classOfService2": {
+              "classOfServiceName": "business"
+            },
+            "value": 20000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "UC",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {
+              "classOfServiceName": "business"
+            },
+            "value": 40000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "UC",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {
+              "classOfServiceName": "comfort"
+            },
+            "value": 20000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "UO",
+            "classOfService1": {
+              "classOfServiceName": "comfort"
+            },
+            "classOfService2": {
+              "classOfServiceName": "business"
+            },
+            "value": 20000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "UO",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {
+              "classOfServiceName": "business"
+            },
+            "value": 40000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "UO",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {
+              "classOfServiceName": "comfort"
+            },
+            "value": 20000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "NRT"
+      },
+      "city": {
+        "cityCode": "TYO",
+        "weight": 0
+      },
+      "country": {
+        "countryCode": "JP"
+      },
+      "region": {
+        "regionCode": "AS"
+      }
+    },
+    "via": {
+      "airport": {
+        "airportCode": "JFK"
+      },
+      "city": {
+        "cityCode": "NYC",
+        "weight": 8
+      },
+      "country": {
+        "countryCode": "US"
+      },
+      "region": {
+        "regionCode": "AM"
+      }
+    },
+    "isAfl": false,
+    "single": false,
+    "airlines": [
+      {
+        "airlineCode": "SU"
+      },
+      {
+        "airlineCode": "VN"
+      }
+    ],
+    "mileCosts": [
+      {
+        "airportFrom": {
+          "airportCode": "SVO",
+          "zoneCode": "R1"
+        },
+        "airportTo": {
+          "airportCode": "NRT",
+          "zoneCode": "A2"
+        },
+        "distance": 11385,
+        "requiredAward": [
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "business"
+            },
+            "classOfService2": {},
+            "value": 65000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {},
+            "value": 45000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "UO",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {
+              "classOfServiceName": "business"
+            },
+            "value": 45000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
+        "airportCode": "NRT"
+      },
+      "city": {
+        "cityCode": "TYO",
+        "weight": 0
+      },
+      "country": {
+        "countryCode": "JP"
+      },
+      "region": {
+        "regionCode": "AS"
+      }
+    },
+    "via": {
+      "airport": {
+        "airportCode": "LAX"
+      },
+      "city": {
+        "cityCode": "LAX",
+        "weight": 35
+      },
+      "country": {
+        "countryCode": "US"
+      },
+      "region": {
+        "regionCode": "AM"
+      }
+    },
+    "isAfl": false,
+    "single": false,
+    "airlines": [
+      {
+        "airlineCode": "SU"
+      },
+      {
+        "airlineCode": "VN"
+      }
+    ],
+    "mileCosts": [
+      {
+        "airportFrom": {
+          "airportCode": "SVO",
+          "zoneCode": "R1"
+        },
+        "airportTo": {
+          "airportCode": "NRT",
+          "zoneCode": "A2"
+        },
+        "distance": 11546,
+        "requiredAward": [
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "business"
+            },
+            "classOfService2": {},
+            "value": 65000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {},
+            "value": 45000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "UO",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {
+              "classOfServiceName": "business"
+            },
+            "value": 45000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "origin": {
+      "airport": {
+        "airportCode": "SVO"
+      },
+      "city": {
+        "cityCode": "MOW",
+        "weight": 1
+      },
+      "country": {
+        "countryCode": "RU"
+      },
+      "region": {
+        "regionCode": "CIS"
+      }
+    },
+    "destination": {
+      "airport": {
         "airportCode": "LED"
       },
       "city": {
@@ -699,6 +1058,16 @@
             },
             "classOfService2": {},
             "value": 60000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "comfort"
+            },
+            "classOfService2": {},
+            "value": 50000,
             "isLightAward": false,
             "fitsMilesInterval": true
           },
@@ -1844,6 +2213,18 @@
             "fitsMilesInterval": true
           },
           {
+            "awardType": "UC",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {
+              "classOfServiceName": "business"
+            },
+            "value": 20000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
             "awardType": "UO",
             "classOfService1": {
               "classOfServiceName": "economy"
@@ -2151,7 +2532,7 @@
       },
       "city": {
         "cityCode": "TYO",
-        "weight": 2147483647
+        "weight": 0
       },
       "country": {
         "countryCode": "JP"
@@ -2546,6 +2927,16 @@
           {
             "awardType": "OW",
             "classOfService1": {
+              "classOfServiceName": "comfort"
+            },
+            "classOfService2": {},
+            "value": 37500,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
               "classOfServiceName": "economy"
             },
             "classOfService2": {},
@@ -2650,6 +3041,18 @@
             "fitsMilesInterval": true
           },
           {
+            "awardType": "UC",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {
+              "classOfServiceName": "business"
+            },
+            "value": 27500,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
             "awardType": "UO",
             "classOfService1": {
               "classOfServiceName": "economy"
@@ -2732,6 +3135,16 @@
             },
             "classOfService2": {},
             "value": 45000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "comfort"
+            },
+            "classOfService2": {},
+            "value": 37500,
             "isLightAward": false,
             "fitsMilesInterval": true
           },
@@ -4208,6 +4621,16 @@
           {
             "awardType": "OW",
             "classOfService1": {
+              "classOfServiceName": "comfort"
+            },
+            "classOfService2": {},
+            "value": 37500,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
               "classOfServiceName": "economy"
             },
             "classOfService2": {},
@@ -4312,6 +4735,18 @@
             "fitsMilesInterval": true
           },
           {
+            "awardType": "UC",
+            "classOfService1": {
+              "classOfServiceName": "economy"
+            },
+            "classOfService2": {
+              "classOfServiceName": "business"
+            },
+            "value": 27500,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
             "awardType": "UO",
             "classOfService1": {
               "classOfServiceName": "economy"
@@ -4394,6 +4829,16 @@
             },
             "classOfService2": {},
             "value": 45000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "comfort"
+            },
+            "classOfService2": {},
+            "value": 37500,
             "isLightAward": false,
             "fitsMilesInterval": true
           },
@@ -4490,6 +4935,16 @@
             },
             "classOfService2": {},
             "value": 45000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "comfort"
+            },
+            "classOfService2": {},
+            "value": 37500,
             "isLightAward": false,
             "fitsMilesInterval": true
           },
@@ -5112,6 +5567,16 @@
           {
             "awardType": "OW",
             "classOfService1": {
+              "classOfServiceName": "comfort"
+            },
+            "classOfService2": {},
+            "value": 25000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
               "classOfServiceName": "economy"
             },
             "classOfService2": {},
@@ -5413,6 +5878,16 @@
             },
             "classOfService2": {},
             "value": 30000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "comfort"
+            },
+            "classOfService2": {},
+            "value": 25000,
             "isLightAward": false,
             "fitsMilesInterval": true
           },
@@ -5770,6 +6245,16 @@
             },
             "classOfService2": {},
             "value": 60000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "comfort"
+            },
+            "classOfService2": {},
+            "value": 50000,
             "isLightAward": false,
             "fitsMilesInterval": true
           },
@@ -6164,7 +6649,7 @@
       },
       "city": {
         "cityCode": "TYO",
-        "weight": 2147483647
+        "weight": 0
       },
       "country": {
         "countryCode": "JP"
@@ -7115,6 +7600,16 @@
           {
             "awardType": "OW",
             "classOfService1": {
+              "classOfServiceName": "comfort"
+            },
+            "classOfService2": {},
+            "value": 50000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
               "classOfServiceName": "economy"
             },
             "classOfService2": {},
@@ -7309,6 +7804,16 @@
             },
             "classOfService2": {},
             "value": 60000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "comfort"
+            },
+            "classOfService2": {},
+            "value": 50000,
             "isLightAward": false,
             "fitsMilesInterval": true
           },
@@ -7613,6 +8118,16 @@
             },
             "classOfService2": {},
             "value": 60000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "comfort"
+            },
+            "classOfService2": {},
+            "value": 50000,
             "isLightAward": false,
             "fitsMilesInterval": true
           },
@@ -8482,6 +8997,16 @@
           {
             "awardType": "OW",
             "classOfService1": {
+              "classOfServiceName": "comfort"
+            },
+            "classOfService2": {},
+            "value": 42500,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
               "classOfServiceName": "economy"
             },
             "classOfService2": {},
@@ -8682,6 +9207,16 @@
           {
             "awardType": "OW",
             "classOfService1": {
+              "classOfServiceName": "comfort"
+            },
+            "classOfService2": {},
+            "value": 42500,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
               "classOfServiceName": "economy"
             },
             "classOfService2": {},
@@ -8757,6 +9292,16 @@
             },
             "classOfService2": {},
             "value": 55000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
+              "classOfServiceName": "comfort"
+            },
+            "classOfService2": {},
+            "value": 42500,
             "isLightAward": false,
             "fitsMilesInterval": true
           },
@@ -9243,365 +9788,6 @@
               "classOfServiceName": "business"
             },
             "value": 15000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "origin": {
-      "airport": {
-        "airportCode": "SVO"
-      },
-      "city": {
-        "cityCode": "MOW",
-        "weight": 1
-      },
-      "country": {
-        "countryCode": "RU"
-      },
-      "region": {
-        "regionCode": "CIS"
-      }
-    },
-    "destination": {
-      "airport": {
-        "airportCode": "NRT"
-      },
-      "city": {
-        "cityCode": "TYO",
-        "weight": 2147483647
-      },
-      "country": {
-        "countryCode": "JP"
-      },
-      "region": {
-        "regionCode": "AS"
-      }
-    },
-    "isAfl": true,
-    "single": true,
-    "mileCosts": [
-      {
-        "airportFrom": {
-          "airportCode": "SVO",
-          "zoneCode": "R1"
-        },
-        "airportTo": {
-          "airportCode": "NRT",
-          "zoneCode": "A2"
-        },
-        "distance": 4664,
-        "requiredAward": [
-          {
-            "awardType": "OW",
-            "classOfService1": {
-              "classOfServiceName": "business"
-            },
-            "classOfService2": {},
-            "value": 60000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          },
-          {
-            "awardType": "OW",
-            "classOfService1": {
-              "classOfServiceName": "comfort"
-            },
-            "classOfService2": {},
-            "value": 50000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          },
-          {
-            "awardType": "OW",
-            "classOfService1": {
-              "classOfServiceName": "economy"
-            },
-            "classOfService2": {},
-            "value": 40000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          },
-          {
-            "awardType": "UC",
-            "classOfService1": {
-              "classOfServiceName": "comfort"
-            },
-            "classOfService2": {
-              "classOfServiceName": "business"
-            },
-            "value": 20000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          },
-          {
-            "awardType": "UC",
-            "classOfService1": {
-              "classOfServiceName": "economy"
-            },
-            "classOfService2": {
-              "classOfServiceName": "business"
-            },
-            "value": 40000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          },
-          {
-            "awardType": "UC",
-            "classOfService1": {
-              "classOfServiceName": "economy"
-            },
-            "classOfService2": {
-              "classOfServiceName": "comfort"
-            },
-            "value": 20000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          },
-          {
-            "awardType": "UO",
-            "classOfService1": {
-              "classOfServiceName": "comfort"
-            },
-            "classOfService2": {
-              "classOfServiceName": "business"
-            },
-            "value": 20000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          },
-          {
-            "awardType": "UO",
-            "classOfService1": {
-              "classOfServiceName": "economy"
-            },
-            "classOfService2": {
-              "classOfServiceName": "business"
-            },
-            "value": 40000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          },
-          {
-            "awardType": "UO",
-            "classOfService1": {
-              "classOfServiceName": "economy"
-            },
-            "classOfService2": {
-              "classOfServiceName": "comfort"
-            },
-            "value": 20000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "origin": {
-      "airport": {
-        "airportCode": "SVO"
-      },
-      "city": {
-        "cityCode": "MOW",
-        "weight": 1
-      },
-      "country": {
-        "countryCode": "RU"
-      },
-      "region": {
-        "regionCode": "CIS"
-      }
-    },
-    "destination": {
-      "airport": {
-        "airportCode": "NRT"
-      },
-      "city": {
-        "cityCode": "TYO",
-        "weight": 2147483647
-      },
-      "country": {
-        "countryCode": "JP"
-      },
-      "region": {
-        "regionCode": "AS"
-      }
-    },
-    "via": {
-      "airport": {
-        "airportCode": "JFK"
-      },
-      "city": {
-        "cityCode": "NYC",
-        "weight": 8
-      },
-      "country": {
-        "countryCode": "US"
-      },
-      "region": {
-        "regionCode": "AM"
-      }
-    },
-    "isAfl": false,
-    "single": false,
-    "airlines": [
-      {
-        "airlineCode": "SU"
-      },
-      {
-        "airlineCode": "VN"
-      }
-    ],
-    "mileCosts": [
-      {
-        "airportFrom": {
-          "airportCode": "SVO",
-          "zoneCode": "R1"
-        },
-        "airportTo": {
-          "airportCode": "NRT",
-          "zoneCode": "A2"
-        },
-        "distance": 11385,
-        "requiredAward": [
-          {
-            "awardType": "OW",
-            "classOfService1": {
-              "classOfServiceName": "business"
-            },
-            "classOfService2": {},
-            "value": 65000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          },
-          {
-            "awardType": "OW",
-            "classOfService1": {
-              "classOfServiceName": "economy"
-            },
-            "classOfService2": {},
-            "value": 45000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          },
-          {
-            "awardType": "UO",
-            "classOfService1": {
-              "classOfServiceName": "economy"
-            },
-            "classOfService2": {
-              "classOfServiceName": "business"
-            },
-            "value": 45000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "origin": {
-      "airport": {
-        "airportCode": "SVO"
-      },
-      "city": {
-        "cityCode": "MOW",
-        "weight": 1
-      },
-      "country": {
-        "countryCode": "RU"
-      },
-      "region": {
-        "regionCode": "CIS"
-      }
-    },
-    "destination": {
-      "airport": {
-        "airportCode": "NRT"
-      },
-      "city": {
-        "cityCode": "TYO",
-        "weight": 2147483647
-      },
-      "country": {
-        "countryCode": "JP"
-      },
-      "region": {
-        "regionCode": "AS"
-      }
-    },
-    "via": {
-      "airport": {
-        "airportCode": "LAX"
-      },
-      "city": {
-        "cityCode": "LAX",
-        "weight": 35
-      },
-      "country": {
-        "countryCode": "US"
-      },
-      "region": {
-        "regionCode": "AM"
-      }
-    },
-    "isAfl": false,
-    "single": false,
-    "airlines": [
-      {
-        "airlineCode": "SU"
-      },
-      {
-        "airlineCode": "VN"
-      }
-    ],
-    "mileCosts": [
-      {
-        "airportFrom": {
-          "airportCode": "SVO",
-          "zoneCode": "R1"
-        },
-        "airportTo": {
-          "airportCode": "NRT",
-          "zoneCode": "A2"
-        },
-        "distance": 11546,
-        "requiredAward": [
-          {
-            "awardType": "OW",
-            "classOfService1": {
-              "classOfServiceName": "business"
-            },
-            "classOfService2": {},
-            "value": 65000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          },
-          {
-            "awardType": "OW",
-            "classOfService1": {
-              "classOfServiceName": "economy"
-            },
-            "classOfService2": {},
-            "value": 45000,
-            "isLightAward": false,
-            "fitsMilesInterval": true
-          },
-          {
-            "awardType": "UO",
-            "classOfService1": {
-              "classOfServiceName": "economy"
-            },
-            "classOfService2": {
-              "classOfServiceName": "business"
-            },
-            "value": 45000,
             "isLightAward": false,
             "fitsMilesInterval": true
           }

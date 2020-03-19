@@ -13,8 +13,11 @@ import ru.integrotech.su.outputparams.spend.SpendRoute;
 import java.io.IOException;
 import java.util.*;
 
-/* Unify test for ru.aeroflot.fmc.io.spend
- * to create new tests, follow next steps
+/**
+ * Unify test for ru.aeroflot.fmc.io.spend
+ * Compares response of Spend with pre-saved response
+ * Has possibilities of creation test for any requests.
+ * To create new tests, follow next steps
  * 1. Create root path for spend unify tests in your local machine
  * 2. Define path to this directory in test.ru.aeroflot.fmc.resources.unifyTest.properties in uniSpendTestDirectory property,
  *    for example " uniSpendTestDirectory=D:/fpm_tests/spend/ "
@@ -26,6 +29,7 @@ import java.util.*;
  * 8. Program will say OK if test is ok or write right answer in exact directory as "actualResponse.json".
  * 9. Program will write report about each route in test case and put it in the same directory.
  */
+
 public class UnifySpendTest extends UnifyBaseTest {
 
     private static final String ROOT_TEST_DIRECTORY_PATH = "uniSpendTestDirectory";

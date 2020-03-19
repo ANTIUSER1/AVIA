@@ -14,8 +14,10 @@ import ru.integrotech.su.outputparams.charge.ResultMilesCharge;
 
 import java.util.List;
 
-/* class for visualization all possible data
-*  use to check proper performance listOf toString methods*/
+/**
+ * Class for visualization data of Charge project
+ */
+
 public class ChargeToString {
 
     @BeforeClass

@@ -2,6 +2,13 @@ package ru.integrotech.airline.core.bonus;
 
 import java.util.List;
 
+/**
+ * class represents logic for find passenger's bonus in exact flight.
+ *
+ * Can be used in all projects
+ *
+ */
+
 public class MilesRule {
 
     private int ruleOrder;
@@ -19,9 +26,6 @@ public class MilesRule {
     private IKM_RULE ikmRule;
 
     private List<String> airportPairs;
-
-    private MilesRule() {
-    }
 
     public int getRuleOrder() {
         return ruleOrder;

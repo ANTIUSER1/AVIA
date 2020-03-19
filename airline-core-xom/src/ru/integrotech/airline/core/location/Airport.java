@@ -1,14 +1,18 @@
 package ru.integrotech.airline.core.location;
 
-
-
 import ru.integrotech.airline.core.airline.Airline;
 import ru.integrotech.airline.core.flight.Flight;
 import ru.integrotech.airline.core.flight.FlightCarrier;
 
 import java.util.*;
 
-/*class represents airport*/
+/**
+ * Represents Airport
+ *
+ * Сan be used in all projects
+ *
+ */
+
 public class Airport implements Comparable<Airport> {
 
     public static Airport of(String code,
@@ -17,45 +21,41 @@ public class Airport implements Comparable<Airport> {
                              String aflZone,
                              String scyteamZone,
                              boolean isUcAvailable,
-                             double longitude, double
-                                     latitude) {
+                             double longitude,
+                             double latitude) {
+
         ZONE aflZoneInit = null;
         if (aflZone != null && !aflZone.isEmpty())  aflZoneInit =  ZONE.valueOf(aflZone);
         ZONE scyteamZoneInit = null;
         if (scyteamZone != null && !scyteamZone.isEmpty())  scyteamZoneInit =  ZONE.valueOf(scyteamZone);
-        return new Airport(code, name, city, GeoLocation.of(longitude, latitude),aflZoneInit, scyteamZoneInit, isUcAvailable);
+
+        Airport result = new Airport();
+        result.setCode(code);
+        result.setName(name);
+        result.setCity(city);
+        result.setGeoLocation(GeoLocation.of(longitude, latitude));
+        result.setAflZone(aflZoneInit);
+        result.setScyteamZone(scyteamZoneInit);
+        result.setUcAvailable(isUcAvailable);
+        result.setOutcomeFlights(new HashMap<>());
+        return result;
     }
 
-    private final String code;
+    private String code;
 
-    private final String name;
+    private String name;
 
-    private final City city;
+    private City city;
 
-    private final GeoLocation geoLocation;
+    private GeoLocation geoLocation;
 
-    private final ZONE aflZone;
+    private ZONE aflZone;
 
-    private final ZONE scyteamZone;
+    private ZONE scyteamZone;
 
-    private final boolean isUcAvailable;
+    private boolean isUcAvailable;
 
-    private final Map<Airport, Flight> outcomeFlights;
-
-    private Airport(String code, String name, City city, GeoLocation geoLocation, ZONE aflZone, ZONE scyteamZone, boolean isUcAvailable) {
-        this.code = code;
-        this.name = name;
-        this.city = city;
-        this.geoLocation = geoLocation;
-        this.aflZone = aflZone;
-        this.scyteamZone = scyteamZone;
-        this.isUcAvailable = isUcAvailable;
-        this.outcomeFlights = new HashMap<>();
-    }
-
-    public Airport(String code, String name, City city, ZONE aflZone, ZONE scyteamZone, boolean isUcAvailable) {
-        this(code,  name, city, null, aflZone, scyteamZone, isUcAvailable);
-    }
+    private Map<Airport, Flight> outcomeFlights;
 
     public String getCode() {
         return code;
@@ -87,6 +87,38 @@ public class Airport implements Comparable<Airport> {
 
     public Map<Airport, Flight> getOutcomeFlights() {
         return outcomeFlights;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setCity(City city) {
+        this.city = city;
+    }
+
+    public void setGeoLocation(GeoLocation geoLocation) {
+        this.geoLocation = geoLocation;
+    }
+
+    public void setAflZone(ZONE aflZone) {
+        this.aflZone = aflZone;
+    }
+
+    public void setScyteamZone(ZONE scyteamZone) {
+        this.scyteamZone = scyteamZone;
+    }
+
+    public void setUcAvailable(boolean ucAvailable) {
+        isUcAvailable = ucAvailable;
+    }
+
+    public void setOutcomeFlights(Map<Airport, Flight> outcomeFlights) {
+        this.outcomeFlights = outcomeFlights;
     }
 
     public void addOutcomeFlight(Airport destination, Airline airline, int distance) {

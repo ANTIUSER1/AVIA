@@ -19,8 +19,11 @@ import ru.integrotech.su.mock.MockLoader;
 
 import java.util.*;
 
-/* class for visualization all possible data
-*  use to check proper performance listOf toString methods*/
+
+/**
+ * Class for visualization all register's data
+ */
+
 public class RegistersToString {
 
     private static final String[] ALL_REGISTER_NAMES = new String[]
@@ -36,8 +39,7 @@ public class RegistersToString {
                     "award",
                     "wrongRoute",
                     "tierLevel",
-                    "mileAccrualRule",
-                    "localLoyaltyLevelCode"};
+                    "mileAccrualRule"};
 
 
     @BeforeClass
@@ -180,12 +182,6 @@ public class RegistersToString {
         System.out.println(sb.toString());
     }
 
-    @Test
-    public void printLoyaltyLevelCode() {
-        Map<String, Integer> register = this.registers.getLoyaltyLevelCodeMap();
-        for (Map.Entry<String, Integer> entry : register.entrySet()) {
-            System.out.printf("%-10.10s  %s\n", entry.getKey(), entry.getValue());
-        }
-    }
+
 
 }

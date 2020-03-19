@@ -1,13 +1,20 @@
-package ru.integrotech.airline.core.flight;
+package ru.integrotech.airline.core.info;
 
 import ru.integrotech.airline.core.airline.Airline;
 import ru.integrotech.airline.core.location.Airport;
 
-public class PassengerChargeInfo {
+/**
+ * Describes the flight of exact passenger in exact flight
+ *
+ * Used in AttractionAB project
+ *
+ */
+
+public class PassengerMilesInfo {
 	
-	public static PassengerChargeInfo of(Airline airline, Airport origin, Airport destination, String fareCode,
+	public static PassengerMilesInfo of(Airline airline, Airport origin, Airport destination, String fareCode,
 										String bookingClassCode, int distance, String tickedDesignator, Status status) {
-		PassengerChargeInfo result = new PassengerChargeInfo();
+		PassengerMilesInfo result = new PassengerMilesInfo();
 		result.setAirline(airline);
 		result.setOrigin(origin);
 		result.setDestination(destination);
@@ -43,10 +50,6 @@ public class PassengerChargeInfo {
 	private int totalBonusMiles;
 
 	private Status status;
-
-	private PassengerChargeInfo() {
-		
-	}
 
 	public Airport getOrigin() {
 		return origin;
@@ -136,8 +139,6 @@ public class PassengerChargeInfo {
 		return this.origin.getOutcomeFlight(this.destination, this.airline).getDistance();
 	}
 	
-	
-
 	public int getBonuseDistance() {
 		return bonuseDistance;
 	}
@@ -174,7 +175,7 @@ public class PassengerChargeInfo {
 
 	@Override
 	public String toString() {
-		return "PassengerChargeInfo{" +
+		return "PassengerMilesInfo{" +
 				"airline=" + airline +
 				", origin=" + origin +
 				", destination=" + destination +

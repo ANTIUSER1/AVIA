@@ -1,5 +1,12 @@
 package ru.integrotech.airline.register;
 
+/**
+ * class for read data in JSON format from remote register
+ *
+ *  Can be used in Spend project
+ *
+ */
+
 class BonusRouteRecord {
 
     private String code;

@@ -4,28 +4,35 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-/* class represents the world region (Europe, Asia, America etc. */
+/**
+ * class represents the world region (Europe, Asia, America etc.
+ *
+ * Сan be used in all projects
+ *
+ */
+
 public class WorldRegion implements Comparable<WorldRegion> {
 
-    public static WorldRegion of(String code, String name, double longitude, double latitude) {
-        return new WorldRegion(code, name, GeoLocation.of(longitude, latitude));
+    public static WorldRegion of(String code,
+                                 String name,
+                                 double longitude,
+                                 double latitude) {
+
+        WorldRegion result = new WorldRegion();
+        result.setCode(code);
+        result.setName(name);
+        result.setGeoLocation(GeoLocation.of(longitude, latitude));
+        result.setAirportMap(new HashMap<>());
+        return result;
     }
 
-    private final String code;
+    private String code;
 
-    private final String name;
+    private String name;
 
-    private final GeoLocation geoLocation;
+    private GeoLocation geoLocation;
 
-    private final Map<String, Airport> airportMap;
-
-
-    private WorldRegion(String code, String name, GeoLocation geoLocation) {
-        this.code = code;
-        this.name = name;
-        this.geoLocation = geoLocation;
-        airportMap = new HashMap<>();
-    }
+    private Map<String, Airport> airportMap;
 
     public String getCode() {
         return code;
@@ -41,6 +48,22 @@ public class WorldRegion implements Comparable<WorldRegion> {
 
     public Map<String, Airport> getAirportMap() {
         return airportMap;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setGeoLocation(GeoLocation geoLocation) {
+        this.geoLocation = geoLocation;
+    }
+
+    public void setAirportMap(Map<String, Airport> airportMap) {
+        this.airportMap = airportMap;
     }
 
     @Override

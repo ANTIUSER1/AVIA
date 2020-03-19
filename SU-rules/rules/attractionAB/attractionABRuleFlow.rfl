@@ -28,7 +28,7 @@ try {]]>&#13;<![CDATA[
       <ActionTask Identifier="Find_infos">
         <Actions Language="irl"><![CDATA[try {]]>&#13;<![CDATA[
 	infos = attractionABBuilder.getInfos(attractionABInput);]]>&#13;<![CDATA[
-	foreach (PassengerChargeInfo info in infos) {]]>&#13;<![CDATA[
+	foreach (PassengerMilesInfo info in infos) {]]>&#13;<![CDATA[
 		if (info.status != Status.nodata) {]]>&#13;<![CDATA[
 			insert info;]]>&#13;<![CDATA[
 		}]]>&#13;<![CDATA[
@@ -161,9 +161,8 @@ use attractionABInput;
 use attractionABOutput;
 use loader;
 use infos;
-import ru.integrotech.airline.core.PassengerFlightInfo;
-import ru.integrotech.airline.core.flight.PassengerChargeInfo;
-import ru.integrotech.airline.core.flight.PassengerChargeInfo.Status;
+import ru.integrotech.airline.core.info.PassengerMilesInfo;
+import ru.integrotech.airline.core.info.PassengerMilesInfo.Status;
 ]]></imports>
   </Properties>
 </Ruleflow></rfModel>

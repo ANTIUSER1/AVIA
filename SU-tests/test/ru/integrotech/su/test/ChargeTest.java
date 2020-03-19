@@ -19,7 +19,10 @@ import ru.integrotech.su.outputparams.charge.ChargeUtil;
 import java.io.IOException;
 import java.util.*;
 
-/*test for io.ChargeRoute*/
+/**
+ * Tests for Charge project, used inner registers
+ */
+
 public class ChargeTest{
 
     private static final String RESULTS_FOLDER = "test/ru/integrotech/su/resources/results/chargeRoutes/";

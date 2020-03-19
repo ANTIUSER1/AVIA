@@ -4,7 +4,7 @@
   <uuid>5d4373ca-57d9-4a0c-8ca6-f753f4217134</uuid>
   <locale>en_US</locale>
   <definition>
-<DT Version="7.0" xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable">
+<DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
   <Body>
     <Structure>
       <ConditionDefinitions>
@@ -198,9 +198,9 @@
   <Resources DefaultLocale="en_US">
     <ResourceSet Locale="en_US">
       <Data Name="Definitions(A0)#HeaderText"><![CDATA[Online Registration Available]]></Data>
-      <Data Name="Definitions(A0)#Width"><![CDATA[466]]></Data>
+      <Data Name="Definitions(A0)#Width"><![CDATA[870]]></Data>
       <Data Name="Definitions(C0)#HeaderText"><![CDATA[SSR codes]]></Data>
-      <Data Name="Definitions(C0)#Width"><![CDATA[467]]></Data>
+      <Data Name="Definitions(C0)#Width"><![CDATA[870]]></Data>
     </ResourceSet>
   </Resources>
 </DT></definition>

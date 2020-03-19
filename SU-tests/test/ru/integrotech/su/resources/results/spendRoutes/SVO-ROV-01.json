@@ -333,6 +333,16 @@
           {
             "awardType": "OW",
             "classOfService1": {
+              "classOfServiceName": "comfort"
+            },
+            "classOfService2": {},
+            "value": 50000,
+            "isLightAward": false,
+            "fitsMilesInterval": true
+          },
+          {
+            "awardType": "OW",
+            "classOfService1": {
               "classOfServiceName": "economy"
             },
             "classOfService2": {},

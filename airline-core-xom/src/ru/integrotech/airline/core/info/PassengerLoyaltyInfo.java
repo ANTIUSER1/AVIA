@@ -1,5 +1,12 @@
 package ru.integrotech.airline.core.info;
 
+/**
+ * Describes the flight of exact passenger in exact flight
+ *
+ * Used in ChargeLoyalty (PKL) project
+ *
+ */
+
 public class PassengerLoyaltyInfo {
 
     public static PassengerLoyaltyInfo of(String paymentType, int tariffSum, String accountingCode) {

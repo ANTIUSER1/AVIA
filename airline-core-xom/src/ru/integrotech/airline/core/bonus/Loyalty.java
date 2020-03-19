@@ -2,31 +2,35 @@ package ru.integrotech.airline.core.bonus;
 
 import java.util.Objects;
 
-/* class represents passenger's loyalty. Loyalty is the property
- * that allows multiply value listOf bonuses */
+/**
+ * class represents passenger's Loyalty.
+ * Loyalty is the property bonuses
+ *
+ * Can be used in all projects
+ *
+ */
+
 public class Loyalty implements Comparable<Loyalty> {
 
     public static Loyalty of(LOYALTY_TYPE typeOf, int miles, int segments, int businessSegments, int factor) {
-        return new Loyalty(typeOf, miles, segments, businessSegments, factor);
+        Loyalty result = new Loyalty();
+        result.setType(typeOf);
+        result.setMiles(miles);
+        result.setSegments(segments);
+        result.setBusinessSegments(businessSegments);
+        result.setFactor(factor);
+        return result;
     }
 
-    private final LOYALTY_TYPE type;
+    private LOYALTY_TYPE type;
 
-    private final int miles;
+    private int miles;
 
-    private final int segments;
+    private int segments;
 
-    private final int businessSegments;
+    private int businessSegments;
 
-    private final int factor;
-
-    private Loyalty(LOYALTY_TYPE type, int miles, int segments, int businessSegments, int factor) {
-        this.type = type;
-        this.miles = miles;
-        this.segments = segments;
-        this.businessSegments = businessSegments;
-        this.factor = factor;
-    }
+    private int factor;
 
     public LOYALTY_TYPE getType() {
         return type;
@@ -46,6 +50,26 @@ public class Loyalty implements Comparable<Loyalty> {
 
     public int getFactor() {
         return factor;
+    }
+
+    public void setType(LOYALTY_TYPE type) {
+        this.type = type;
+    }
+
+    public void setMiles(int miles) {
+        this.miles = miles;
+    }
+
+    public void setSegments(int segments) {
+        this.segments = segments;
+    }
+
+    public void setBusinessSegments(int businessSegments) {
+        this.businessSegments = businessSegments;
+    }
+
+    public void setFactor(int factor) {
+        this.factor = factor;
     }
 
     @Override

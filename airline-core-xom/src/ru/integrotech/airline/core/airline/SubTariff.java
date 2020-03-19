@@ -2,11 +2,22 @@ package ru.integrotech.airline.core.airline;
 
 import java.util.Objects;
 
-/* class represents subtariff listOf tariff */
+/**
+ * class represents bonus has been charged for passenger
+ * according of booking class of tariff of service class of airline
+ *
+ * Used in Charge project
+ *
+ */
+
 public class SubTariff implements Comparable<SubTariff> {
 
     public static SubTariff of(String code, String bookingClass, int chargeCoeff) {
-        return new SubTariff(code, bookingClass, chargeCoeff);
+        SubTariff result = new SubTariff();
+        result.setFareCode(code);
+        result.setBookingClass(bookingClass);
+        result.setChargeCoeff(chargeCoeff);
+        return result;
     }
 
     public static SubTariff of(SubTariff subTariff, boolean isAfl) {
@@ -18,20 +29,18 @@ public class SubTariff implements Comparable<SubTariff> {
             newFareCode = subTariff.getBookingClass();
         }
 
-        return new SubTariff(newFareCode, null, subTariff.getChargeCoeff());
+        SubTariff result = new SubTariff();
+        result.setFareCode(newFareCode);
+        result.setBookingClass(null);
+        result.setChargeCoeff(subTariff.getChargeCoeff());
+        return result;
     }
 
-    private final String fareCode;
+    private String fareCode;
 
-    private final String bookingClass;
+    private String bookingClass;
 
-    private final int chargeCoeff;
-
-    private SubTariff(String fareCode, String bookingClass, int chargeCoeff) {
-        this.fareCode = fareCode;
-        this.bookingClass = bookingClass;
-        this.chargeCoeff = chargeCoeff;
-    }
+    private int chargeCoeff;
 
     public String getFareCode() {
         return fareCode;
@@ -43,6 +52,18 @@ public class SubTariff implements Comparable<SubTariff> {
 
     public int getChargeCoeff() {
         return chargeCoeff;
+    }
+
+    public void setFareCode(String fareCode) {
+        this.fareCode = fareCode;
+    }
+
+    public void setBookingClass(String bookingClass) {
+        this.bookingClass = bookingClass;
+    }
+
+    public void setChargeCoeff(int chargeCoeff) {
+        this.chargeCoeff = chargeCoeff;
     }
 
     @Override

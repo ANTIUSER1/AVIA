@@ -21,7 +21,16 @@ import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/* very important class that holds all registers */
+/**
+ *
+ * <b>VERY important class</b> that holds all registers data from directories
+ * and stored them into Collections or Maps <br />
+ * The data holds up by a key method update(Type registerType, JsonElement
+ * jsonElement)
+ *
+ *
+ */
+
 public class RegisterCache {
 
     private static final Logger log = Logger.getLogger(RegisterCache.class.getName());
@@ -328,7 +337,7 @@ public class RegisterCache {
         Iterator<Bonus> iterator = bonuses.iterator();
         while (iterator.hasNext()) {
             Bonus savedBonus = iterator.next();
-            if (savedBonus.equalsIgnoreValue(newBonus)) {
+            if (savedBonus.getDescription().equals(newBonus.getDescription())) {
                 if (newBonus.getValidFrom().after(savedBonus.getValidFrom())) {
                     iterator.remove();
                 } else return;
@@ -433,6 +442,7 @@ public class RegisterCache {
         this.milesRules = new ArrayList<>(Arrays.asList(milesRules));
     }
 
+    //TODO remove after add onlineRegAvail project
     private void initLoyaltyLevelCodes(JsonElement jsonElement) {
         LoyaltyLevelCodeRecord[] records = parseJsonElement(LoyaltyLevelCodeRecord[].class, jsonElement);
         this.loyaltyLevelCodeMap = new HashMap<>();

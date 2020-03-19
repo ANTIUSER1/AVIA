@@ -1,7 +1,13 @@
 package ru.integrotech.airline.register;
 
-
 import ru.integrotech.airline.core.airline.Airline;
+
+/**
+ * class for read data in JSON format from remote register
+ *
+ *  Can be used in all projects
+ *
+ */
 
 class AirlineRecord {
 

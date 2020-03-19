@@ -1,7 +1,5 @@
 package ru.integrotech.airline.core.flight;
 
-
-
 import ru.integrotech.airline.core.airline.Airline;
 import ru.integrotech.airline.core.airline.ServiceClass;
 import ru.integrotech.airline.core.bonus.Bonus;
@@ -10,18 +8,43 @@ import ru.integrotech.airline.core.location.City;
 
 import java.util.*;
 
-/*class represents route - chain listOf airports from origin to
-destination with all acceptable flights listOf all airlines */
+/**
+ *
+ * Describe travel from point origin
+ * to point destination by exact way
+ *
+ * Can be used in all projects
+ *
+ */
+
 public class Route implements Comparable<Route> {
 
     public static final int MAX_SEGMENTS_SIZE = 2; // Current requirement
 
     public static Route of(Collection<Flight> flights) {
-        return new Route(new ArrayList<>(flights));
+        Route result = new Route();
+        result.setCode(Route.createCode(new ArrayList<>(flights)));
+        result.setFlights(new ArrayList<>(flights));
+        result.setAflBonuses(new HashSet<>());
+        result.setScyteamBonuses(new HashSet<>());
+
+
+        return result;
     }
 
     public static Route of(String code, List<Flight> flights) {
-        return new Route(code, flights);
+        Route result = new Route();
+        result.setCode(code);
+        result.setFlights(new ArrayList<>());
+
+        if (!flights.isEmpty()) {
+            result.getFlights().addAll(flights);
+        }
+
+        result.setAflBonuses(new HashSet<>());
+        result.setScyteamBonuses(new HashSet<>());
+
+        return result;
     }
 
     public static String createCode(List<Flight> flights) {
@@ -33,9 +56,9 @@ public class Route implements Comparable<Route> {
         return sb.toString();
     }
 
-    private final String code;
+    private String code;
 
-    private final List<Flight> flights;
+    private List<Flight> flights;
 
     private Set<Bonus> aflBonuses;
 
@@ -44,24 +67,6 @@ public class Route implements Comparable<Route> {
     private boolean isBonusSummation;
 
     private boolean isWrong;
-
-    private Route(List<Flight> flights) {
-        this.code = Route.createCode(flights);
-        this.flights = new ArrayList<>();
-        this.flights.addAll(flights);
-        this.aflBonuses = new HashSet<>();
-        this.scyteamBonuses = new HashSet<>();
-    }
-
-    private Route(String code, List<Flight> flights) {
-        this.code = code;
-        this.flights = new ArrayList<>();
-        if (!flights.isEmpty()) {
-            this.flights.addAll(flights);
-        }
-        this.aflBonuses = new HashSet<>();
-        this.scyteamBonuses = new HashSet<>();
-    }
 
     public String getCode() {
         return code;
@@ -97,6 +102,14 @@ public class Route implements Comparable<Route> {
 
     public boolean isWrong() {
         return isWrong;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public void setFlights(List<Flight> flights) {
+        this.flights = flights;
     }
 
     public void setWrong(boolean wrong) {
