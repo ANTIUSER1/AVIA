@@ -4,7 +4,7 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/SU-xom"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/airline-core-xom"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/com.google.gson"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/junit"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/gson-2.8.5"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Junit4"/>
 	<classpathentry kind="output" path="target/test/SU-tests"/>
 </classpath>

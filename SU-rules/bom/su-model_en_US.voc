@@ -114,3 +114,7 @@ ru.integrotech.su.outputparams.spend.SpendBuilder.getServiceClassType(ru.integro
 ru.integrotech.su.outputparams.spend.SpendLkBuilder#concept.label = spend lk builder
 ru.integrotech.su.outputparams.spend.SpendLkBuilder.buildSpendLkRoutes(java.util.List,ru.integrotech.su.inputparams.spend.SpendInput)#phrase.navigation = {this}.buildSpendLkRoutes({0}, {1})
 ru.integrotech.su.outputparams.spend.SpendLkBuilder.replaceUO(java.util.List)#phrase.action = {this}.replaceUO({0})
+
+# ru.integrotech.su.utils.ValidatorSpend
+ru.integrotech.su.utils.ValidatorSpend#concept.label = validator
+ru.integrotech.su.utils.ValidatorSpend.validateHardDataSpend(ru.integrotech.su.inputparams.spend.SpendInput)#phrase.action = {this}.validateHardDataSpend({0})

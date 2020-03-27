@@ -4,6 +4,8 @@ import javax.xml.bind.annotation.XmlType;
 
 import ru.integrotech.airline.core.info.PassengerMilesInfo;
 
+import java.util.Objects;
+
 /**
  * container for Segment data
  *
@@ -67,5 +69,21 @@ public class Segment {
 
 	public void setMiles(int miles) {
 		this.miles = miles;
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Segment segment = (Segment) o;
+		return miles == segment.miles &&
+				Objects.equals(originIATA, segment.originIATA) &&
+				Objects.equals(destinationIATA, segment.destinationIATA) &&
+				status == segment.status;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(originIATA, destinationIATA, status, miles);
 	}
 }

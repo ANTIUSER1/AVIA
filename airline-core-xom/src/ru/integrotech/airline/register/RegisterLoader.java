@@ -93,7 +93,10 @@ public class RegisterLoader{
         return instance;
     }
 
-    /*method for tests only*/
+    /**
+     * Method for tests only
+     * Use for multiple update registers
+     * */
     public static synchronized RegisterLoader updateInstance(String...registerNames) {
         instance = getInstance(registerNames);
         instance.registerNames = registerNames;
@@ -121,6 +124,15 @@ public class RegisterLoader{
             lock.writeLock().unlock();
             log.fine("Write lock released");
         }
+    }
+
+    /**
+     * Method for tests only
+     * Use for tests of correct
+     * releasing read lock
+     * */
+    public void testReadLock() {
+        lock.readLock().lock();
     }
 
     public void release() {

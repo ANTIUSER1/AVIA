@@ -52,6 +52,6 @@ public class StringMethods {
     }
 
     public static boolean isEmpty(String string) {
-        return  string == null || string.isEmpty();
+        return  string == null || string.trim().isEmpty();
     }
 }

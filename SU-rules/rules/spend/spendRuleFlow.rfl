@@ -9,8 +9,8 @@
   <Body>
     <TaskList>
       <StartTask Identifier="task_0">
-        <Actions Language="irl"><![CDATA[]]>&#13;<![CDATA[
-	]]></Actions>
+        <Actions Language="irl"><![CDATA[validator = new ValidatorSpend();]]>&#13;<![CDATA[
+validator.validateHardDataSpend(inputParams);]]></Actions>
       </StartTask>
       <ActionTask Identifier="buildResult">
         <Actions Language="irl"><![CDATA[try{]]>&#13;<![CDATA[
@@ -25,7 +25,9 @@
 ]]></Actions>
       </ActionTask>
       <SubflowTask Identifier="spendBaseFlow" Uuid="f9d8a44a-4297-4533-be08-aa9dfdfb4872"/>
-      <StopTask Identifier="task_1"/>
+      <StopTask Identifier="task_1">
+        <Actions Language="irl"><![CDATA[ ]]></Actions>
+      </StopTask>
     </TaskList>
     <NodeList>
       <TaskNode Identifier="node_0" Task="task_0"/>
@@ -42,14 +44,14 @@
   <Resources>
     <ResourceSet Locale="en_US">
       <Data Name="node_2#height">53.402344</Data>
-      <Data Name="node_1#height">23.000008</Data>
+      <Data Name="node_1#height">24.000008</Data>
       <Data Name="node_3#height">53.402344</Data>
       <Data Name="node_0#height">21.0</Data>
       <Data Name="node_1#name">node_2</Data>
       <Data Name="node_2#label">Build routes</Data>
       <Data Name="node_2#name">node_5</Data>
       <Data Name="node_3#width">102.0</Data>
-      <Data Name="node_1#width">23.0</Data>
+      <Data Name="node_1#width">24.0</Data>
       <Data Name="node_3#label">Build result</Data>
       <Data Name="node_0#name">node_0</Data>
       <Data Name="node_2#width">102.0</Data>
@@ -58,11 +60,11 @@
       <Data Name="node_0#x">-24.0</Data>
       <Data Name="node_0#y">-230.0</Data>
       <Data Name="node_1#x">-24.0</Data>
-      <Data Name="node_1#y">41.000004</Data>
+      <Data Name="node_1#y">40.000004</Data>
       <Data Name="node_3#name">node_3</Data>
       <Data Name="node_2#x">-24.0</Data>
       <Data Name="node_3#x">-24.0</Data>
-      <Data Name="node_2#y">-142.0</Data>
+      <Data Name="node_2#y">-138.0</Data>
     </ResourceSet>
   </Resources>
   <Properties>
@@ -73,6 +75,8 @@ use inputParams;
 use spendBuilder;
 use inputParamsLk;
 import ru.integrotech.airline.core.flight.Route;
+use validator; 
+import ru.integrotech.su.utils.ValidatorSpend;
 ]]></imports>
   </Properties>
 </Ruleflow></rfModel>

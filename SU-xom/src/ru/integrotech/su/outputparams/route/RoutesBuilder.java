@@ -66,7 +66,7 @@ public class RoutesBuilder {
 
 	private RouteSearcher routeSearcher;
 
-	public List<Route> getRoutes(RoutesInput routesInput) {
+	public List<Route> getRoutes(RoutesInput routesInput) throws Exception {
 		Set<Airport> origins = this.paramsTransformer.getOrigins(routesInput);
 		Set<Airport> destinations = this.paramsTransformer
 				.getDestinations(routesInput);

@@ -8,7 +8,7 @@ import java.util.List;
  * data ( private List<Segment> segments; private String tierCode; )
  */
 
-class Data {
+public class Data {
 
 	private List<Segment> segments;
 

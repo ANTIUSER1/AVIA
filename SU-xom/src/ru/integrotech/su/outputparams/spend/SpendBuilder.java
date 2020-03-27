@@ -99,7 +99,8 @@ public class SpendBuilder {
 	 * method for use in ODM in spendRuleFlow contains program and business
 	 * logic
 	 */
-	public ResultMilesSpend buildResult(SpendInput spendInput) {
+	public ResultMilesSpend buildResult(SpendInput spendInput) throws Exception {
+
 		List<SpendRoute> routes = this.getSpendRoutes(spendInput);
 		return ResultMilesSpend.of(routes);
 	}
@@ -115,13 +116,15 @@ public class SpendBuilder {
 	}
 
 	/* method for use in TESTS */
-	public List<SpendRoute> getSpendRoutes(SpendInput spendInput) {
+	public List<SpendRoute> getSpendRoutes(SpendInput spendInput)
+			throws Exception {
+
 		return this.getSpendRoutes(spendInput, null);
 	}
 
 	/* method for use in TESTS */
 	public List<SpendRoute> getSpendRoutes(SpendInput spendInput,
-			String airlineCode) {
+			String airlineCode) throws Exception {
 
 		List<Route> routes = this.getRoutes(spendInput, airlineCode);
 		this.executeAllFilters(routes, spendInput);
@@ -130,12 +133,12 @@ public class SpendBuilder {
 		return this.buildSpendRoutes(routes, spendInput);
 	}
 
-	public List<Route> getRoutes(SpendInput spendInput) {
-
+	public List<Route> getRoutes(SpendInput spendInput) throws Exception {
 		return this.getRoutes(spendInput, null);
 	}
 
-	public List<Route> getRoutes(SpendInput spendInput, String airlineCode) {
+	public List<Route> getRoutes(SpendInput spendInput, String airlineCode)
+			throws Exception {
 		RoutesInput routesInput = RoutesInput.of(spendInput, airlineCode);
 		List<Route> routes = this.routesBuilder.getRoutes(routesInput);
 

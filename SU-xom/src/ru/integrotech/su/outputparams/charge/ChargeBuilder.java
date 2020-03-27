@@ -12,9 +12,12 @@ import ru.integrotech.airline.core.flight.Route;
 import ru.integrotech.airline.core.info.PassengerChargeInfo;
 import ru.integrotech.airline.register.RegisterCache;
 import ru.integrotech.airline.utils.NumberMethods;
+import ru.integrotech.airline.utils.Releaser;
+import ru.integrotech.su.exceptions.UnsupportedParamException;
 import ru.integrotech.su.inputparams.charge.ChargeInput;
 import ru.integrotech.su.inputparams.route.RoutesInput;
 import ru.integrotech.su.outputparams.route.RoutesBuilder;
+import ru.integrotech.su.utils.ValidatorChargeData;
 
 /**
  * this class takes input params (ChargeInput) and returns back output params
@@ -81,7 +84,8 @@ public class ChargeBuilder {
 	}
 
 	/* method for use in ODM */
-	public ResultMilesCharge buildResult(ChargeInput chargeInput) {
+	public ResultMilesCharge buildResult(ChargeInput chargeInput)
+			throws Exception {
 		List<ChargeRoute> routes = this.getChargeRoutes(chargeInput);
 		return ResultMilesCharge.of(routes);
 	}
@@ -95,20 +99,22 @@ public class ChargeBuilder {
 	}
 
 	/* method for use in TESTS */
-	public List<ChargeRoute> getChargeRoutes(ChargeInput chargeInput) {
+	public List<ChargeRoute> getChargeRoutes(ChargeInput chargeInput)
+			throws Exception {
 		List<Route> routes = this.getRoutes(chargeInput);
 		this.buildPassengerCharges(routes, chargeInput, true);
 		return this.buildChargeRoutes(routes, chargeInput);
 	}
 
-	public List<Route> getRoutes(ChargeInput chargeInput) {
+	public List<Route> getRoutes(ChargeInput chargeInput) throws Exception {
+		ValidatorChargeData.testValidAirline(cache, chargeInput);
 		RoutesInput routesInput = RoutesInput.of(chargeInput);
 		List<Route> routes = this.routesBuilder.getRoutes(routesInput);
 		this.buildPassengerCharges(routes, chargeInput, false);
 		return routes;
 	}
 
-	public int getFactor(ChargeInput chargeInput) {
+	public int getFactor(ChargeInput chargeInput) throws Exception {
 
 		String tierLevelCode = null;
 
@@ -116,6 +122,14 @@ public class ChargeBuilder {
 			tierLevelCode = chargeInput.getTierLevel().getTierLevelCode();
 		}
 
+		if (cache.getLoyaltyMap().get(tierLevelCode) == null) {
+			Releaser.release();
+			throw new UnsupportedParamException(
+					" Given unknown  tierLevelCode  " + tierLevelCode
+							+ "  ; expected one of "
+							+ cache.getLoyaltyMap().keySet() + "");
+
+		}
 		return this.cache.getLoyaltyMap().get(tierLevelCode).getFactor();
 	}
 
@@ -140,7 +154,7 @@ public class ChargeBuilder {
 	}
 
 	private void buildPassengerCharges(List<Route> routes,
-			ChargeInput chargeInput, boolean initFields) {
+			ChargeInput chargeInput, boolean initFields) throws Exception {
 
 		String airlineCode = this.getAirlineCode(chargeInput);
 		Airline airline = this.cache.getAirline(airlineCode);
@@ -150,6 +164,7 @@ public class ChargeBuilder {
 						initFields);
 			}
 		} else {
+
 			for (Route route : routes) {
 				for (Airline carrier : route.getAirlines()) {
 					this.buildPassengerCharges(route, chargeInput, carrier,
@@ -157,10 +172,11 @@ public class ChargeBuilder {
 				}
 			}
 		}
+
 	}
 
 	private void buildPassengerCharges(Route route, ChargeInput chargeInput,
-			Airline airline, boolean initFields) {
+			Airline airline, boolean initFields) throws Exception {
 
 		List<ServiceClass> allowedClasses = this.getServiceClasses(route,
 				airline);
@@ -172,7 +188,7 @@ public class ChargeBuilder {
 
 	private void buildPassengerCharges(Flight flight,
 			List<ServiceClass> allowedClasses, ChargeInput chargeInput,
-			Airline airline, boolean initFields) {
+			Airline airline, boolean initFields) throws Exception {
 
 		boolean isRound = chargeInput.getIsRoundTrip();
 		int factor;
@@ -188,7 +204,7 @@ public class ChargeBuilder {
 
 	private void buildPassengerCharges(Flight flight,
 			List<ServiceClass> allowedClasses, ChargeInput chargeInput,
-			boolean initFields) {
+			boolean initFields) throws Exception {
 
 		boolean isRound = chargeInput.getIsRoundTrip();
 		int factor;

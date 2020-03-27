@@ -197,3 +197,12 @@ public class SpendLkBuilder
     public void replaceUO(java.util.List arg domain 0,* class ru.integrotech.airline.core.flight.Route);
 }
 
+package ru.integrotech.su.utils;
+
+
+public class ValidatorSpend
+{
+    public ValidatorSpend();
+    public void validateHardDataSpend(ru.integrotech.su.inputparams.spend.SpendInput arg);
+}
+

@@ -41,8 +41,10 @@ try {]]>&#13;<![CDATA[
       <ActionTask Identifier="findRoutes">
         <Actions Language="irl"><![CDATA[try {]]>&#13;<![CDATA[
 ]]>&#13;<![CDATA[
-	routes = chargeBuilder.getRoutes(chargeRequest);]]>&#13;<![CDATA[
-	loyaltyFactor = chargeBuilder.getFactor(chargeRequest);]]>&#13;<![CDATA[
+	routes = chargeBuilder.getRoutes(chargeRequest); ]]>&#13;<![CDATA[
+	]]>&#13;<![CDATA[
+	loyaltyFactor = chargeBuilder.getFactor(chargeRequest); ]]>&#13;<![CDATA[
+	]]>&#13;<![CDATA[
 	foreach (Route route in routes) {]]>&#13;<![CDATA[
 		List flights = route.flights;]]>&#13;<![CDATA[
 		foreach (Flight flight in flights ) {]]>&#13;<![CDATA[
@@ -149,14 +151,14 @@ try {]]>&#13;<![CDATA[
       <Data Name="node_8#height">52.145344</Data>
       <Data Name="node_9#height">55.602367</Data>
       <Data Name="node_0#width">21.0</Data>
-      <Data Name="node_3#y">-275.0</Data>
+      <Data Name="node_3#y">-272.0</Data>
       <Data Name="node_5#x">-41.715427</Data>
       <Data Name="node_5#y">-184.52785</Data>
       <Data Name="node_7#x">162.94754</Data>
       <Data Name="node_1#x">-37.16745</Data>
       <Data Name="node_8#name">node_1</Data>
       <Data Name="node_1#y">12.807831</Data>
-      <Data Name="node_3#x">-44.0</Data>
+      <Data Name="node_3#x">-45.0</Data>
       <Data Name="node_1#name">node_3</Data>
       <Data Name="node_5#label">calc miles qualifying</Data>
       <Data Name="node_3#width">102.0</Data>
@@ -177,8 +179,8 @@ try {]]>&#13;<![CDATA[
       <Data Name="node_6#x">162.15027</Data>
       <Data Name="node_5#width">115.42681</Data>
       <Data Name="node_6#y">-184.96214</Data>
-      <Data Name="node_0#x">-44.0</Data>
-      <Data Name="node_0#y">-352.0</Data>
+      <Data Name="node_0#x">-42.0</Data>
+      <Data Name="node_0#y">-351.0</Data>
       <Data Name="node_2#x">-38.0</Data>
       <Data Name="node_2#y">100.0</Data>
       <Data Name="node_7#label">calc bonus</Data>
