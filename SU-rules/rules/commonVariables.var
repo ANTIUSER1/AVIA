@@ -4,4 +4,5 @@
   <uuid>3ea40cc2-b0bb-4392-bf82-e2eddba74370</uuid>
   <variables name="routes" type="java.util.List" initialValue="" verbalization="routes"/>
   <variables name="loader" type="ru.integrotech.airline.register.RegisterLoader" initialValue="" verbalization="loader"/>
+  <variables name="validator" type="ru.integrotech.su.utils.ValidatorSpend" initialValue="" verbalization="validator"/>
 </ilog.rules.studio.model.base:VariableSet>

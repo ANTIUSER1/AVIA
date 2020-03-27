@@ -1,8 +1,11 @@
 package ru.integrotech.su.outputparams.attractionAB;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
+import ru.integrotech.airline.core.info.PassengerMilesInfo;
 import ru.integrotech.airline.core.info.PassengerMilesInfo.Status;
 
 public class AttractionAbOutput {
@@ -24,6 +27,30 @@ public class AttractionAbOutput {
 		result.setSegments(segments);
 		return result;
 	}
+
+	/**
+	 *  Static constructor. Use in tests. Create
+	 *  AttractionAbOutput with single segment
+	 * */
+	public static AttractionAbOutput of(int totalMiles,
+										String totalStatus,
+										String originIATA,
+										String destinationIATA,
+										String status,
+										int miles) {
+		AttractionAbOutput result = new AttractionAbOutput();
+		Segment segment = new Segment();
+		segment.setOriginIATA(originIATA);
+		segment.setDestinationIATA(destinationIATA);
+		segment.setStatus(PassengerMilesInfo.Status.valueOf(status));
+		segment.setMiles(miles);
+		result.setSegments(Collections.singletonList(segment));
+		result.setTotalStatus(PassengerMilesInfo.Status.valueOf(totalStatus));
+		result.setTotalMiles(totalMiles);
+		return result;
+	}
+
+
 
 	private static Status getTotalStatus(Map<Status, Integer> statusMap) {
 		if (statusMap.isEmpty()) {
@@ -63,5 +90,20 @@ public class AttractionAbOutput {
 
 	public void setSegments(List<Segment> segments) {
 		this.segments = segments;
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		AttractionAbOutput that = (AttractionAbOutput) o;
+		return totalMiles == that.totalMiles &&
+				totalStatus == that.totalStatus &&
+				Objects.equals(segments, that.segments);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(totalStatus, totalMiles, segments);
 	}
 }

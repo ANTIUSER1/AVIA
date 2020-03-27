@@ -15,7 +15,7 @@ public class MilesInterval {
 	 * @param milesMax
 	 * @return
 	 */
-	static MilesInterval of(int milesMin, int milesMax) {
+	public static MilesInterval of(int milesMin, int milesMax) {
 		MilesInterval milesInterval = new MilesInterval();
 		milesInterval.milesMin = milesMin;
 		milesInterval.milesMax = milesMax;
@@ -40,5 +40,16 @@ public class MilesInterval {
 
 	public void setMilesMax(int milesMax) {
 		this.milesMax = milesMax;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("MilesInterval [milesMin=");
+		builder.append(milesMin);
+		builder.append(",    milesMax=");
+		builder.append(milesMax);
+		builder.append("]");
+		return builder.toString();
 	}
 }

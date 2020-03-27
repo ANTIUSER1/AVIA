@@ -52,7 +52,8 @@ public class SpendLkBuilder {
 	}
 
 	/** method for use in ODM */
-	public ResultMilesSpendLk buildResult(SpendInput spendInput) {
+	public ResultMilesSpendLk buildResult(SpendInput spendInput)
+			throws Exception {
 		List<SpendLkRoute> routes = this.getSpendLkRoutes(spendInput);
 		return ResultMilesSpendLk.of(routes);
 	}
@@ -70,13 +71,14 @@ public class SpendLkBuilder {
 	}
 
 	/** method for use in TESTS */
-	public List<SpendLkRoute> getSpendLkRoutes(SpendInput spendInput) {
+	public List<SpendLkRoute> getSpendLkRoutes(SpendInput spendInput)
+			throws Exception {
 		return this.getSpendLkRoutes(spendInput, null);
 	}
 
 	/** method for use in TESTS */
 	public List<SpendLkRoute> getSpendLkRoutes(SpendInput spendInput,
-			String airlineCode) {
+			String airlineCode) throws Exception {
 
 		spendInput.setIsOnlyAfl(true);
 
@@ -92,7 +94,7 @@ public class SpendLkBuilder {
 		return this.buildSpendLkRoutes(spendRoutes, spendInput);
 	}
 
-	public List<Route> getRoutes(SpendInput spendInput) {
+	public List<Route> getRoutes(SpendInput spendInput) throws Exception {
 		return this.spendBuilder.getRoutes(spendInput, null);
 	}
 

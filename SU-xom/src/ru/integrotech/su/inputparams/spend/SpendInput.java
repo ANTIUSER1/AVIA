@@ -1,5 +1,6 @@
 package ru.integrotech.su.inputparams.spend;
 
+import ru.integrotech.airline.utils.StringMethods;
 import ru.integrotech.su.common.spend.ClassOfService;
 
 /**
@@ -49,7 +50,9 @@ public class SpendInput {
 		spendInput.setOrigin(LocationInput.of(originType, originCode));
 		spendInput.setDestination(LocationInput.of(destType, destCode));
 		spendInput.setMilesInterval(MilesInterval.of(milesMin, milesMax));
-		spendInput.setClassOfService(ClassOfService.of(classOfServiceName));
+		if (classOfServiceName != null) {
+			spendInput.setClassOfService(ClassOfService.of(classOfServiceName));
+		}
 		spendInput.setAwardType(awardType);
 		spendInput.setIsOnlyAfl(isOnlyAfl);
 		spendInput.setIsRoundTrip(isRoundTrip);
@@ -127,7 +130,7 @@ public class SpendInput {
 	public void setAwardType(String awardType) {
 
 		if (awardType != null) {
-			awardType = awardType.toLowerCase();
+			awardType = awardType.toUpperCase();
 		}
 
 		this.awardType = awardType;
@@ -148,22 +151,24 @@ public class SpendInput {
 	 * classOfService = ClassOfService.of();<br />
 	 * awardType = all;<br />
 	 */
-	private void initDefaultParameters() {
+	public void initDefaultParameters() {
 
 		if (this.destination == null) {
 			this.destination = LocationInput.of(null, null);
+		} else {
+		    if (StringMethods.isEmpty(this.destination.getLocationType()) &&
+                    StringMethods.isEmpty(this.destination.getLocationCode())) {
+		        this.destination.setLocationType(null);
+		        this.destination.setLocationCode(null);
+            }
+        }
+
+		if (StringMethods.isEmpty(this.awardType)) {
+			this.awardType = "ALL";
 		}
 
-		if (this.milesInterval == null) {
-			this.milesInterval = MilesInterval.of(0, 250000);
-		}
-
-		if (this.classOfService == null) {
-			this.classOfService = ClassOfService.of();
-		}
-
-		if (this.awardType == null) {
-			this.awardType = "all";
+		if (StringMethods.isEmpty(this.lang)) {
+			this.lang = "ru";
 		}
 
 	}
