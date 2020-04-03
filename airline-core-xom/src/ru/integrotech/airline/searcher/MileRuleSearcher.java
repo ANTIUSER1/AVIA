@@ -39,22 +39,40 @@ public class MileRuleSearcher {
 
         for (PassengerMilesInfo info : charges) {
 
+            MilesRule foundRule = null;
+
             if (info.getStatus() == Status.nodata) {
+                foundRule = this.findByFare(info, MilesRule.RULE_TYPE.PF);
+                if (foundRule != null) {
+                    info.setPercent(foundRule.getBonusPercent());
+                } else {
+                    info.setPercent(null);
+                }
                 info.setTotalBonusMiles(0);
                 continue;
             }
 
-            MilesRule foundRule = this.findByTicketDesignator(info);
+            foundRule = this.findByTicketDesignator(info);
             if (foundRule != null) {
                 info.setDistanceCoeff(foundRule.getBonusPercent()/100.00);
                 info.setStatus(Status.full);
+                info.setPercent(-1);
                 continue;
             }
 
-            foundRule = this.findByFare(info);
+            foundRule = this.findByFare(info, MilesRule.RULE_TYPE.PF);
             if (foundRule != null) {
                 info.setDistanceCoeff(foundRule.getBonusPercent()/100.00);
                 info.setStatus(Status.full);
+                info.setPercent(-1);
+                continue;
+            }
+
+            foundRule = this.findByFare(info, MilesRule.RULE_TYPE.SF);
+            if (foundRule != null) {
+                info.setDistanceCoeff(foundRule.getBonusPercent()/100.00);
+                info.setStatus(Status.full);
+                info.setPercent(-1);
                 continue;
             }
 
@@ -62,12 +80,14 @@ public class MileRuleSearcher {
             if (foundRule != null) {
                 info.setDistanceCoeff(foundRule.getBonusPercent()/100.00);
                 info.setStatus(Status.full);
+                info.setPercent(-1);
                 continue;
             }
 
             //if rule was not found
             info.setStatus(Status.nodata);
             info.setTotalBonusMiles(0);
+            info.setPercent(null);
         }
     }
 
@@ -92,7 +112,7 @@ public class MileRuleSearcher {
         return this.findRuleWithMinMiles(result);
     }
 
-    private MilesRule findByFare(PassengerMilesInfo info) {
+    private MilesRule findByFare(PassengerMilesInfo info, MilesRule.RULE_TYPE ruleType) {
 
         List<MilesRule> result = new ArrayList<>();
         String fareCode = info.getFareCode();
@@ -100,7 +120,7 @@ public class MileRuleSearcher {
         if (!StringMethods.isEmpty(fareCode)) {
 
             for (MilesRule rule : this.rulesRegister) {
-                if (rule.getRuleType() == MilesRule.RULE_TYPE.PF || rule.getRuleType() == MilesRule.RULE_TYPE.SF) {
+                if (rule.getRuleType() == ruleType) {
                     if (StringMethods.isFitsByRegexMasks(fareCode, rule.getFareCodeMasks())) {
                         if (this.fitsByIkmRule(rule, info)) {
                             result.add(rule);

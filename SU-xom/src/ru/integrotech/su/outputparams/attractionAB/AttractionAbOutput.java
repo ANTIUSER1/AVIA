@@ -34,12 +34,14 @@ public class AttractionAbOutput {
 	 * */
 	public static AttractionAbOutput of(int totalMiles,
 										String totalStatus,
+										String airlineIATA,
 										String originIATA,
 										String destinationIATA,
 										String status,
 										int miles) {
 		AttractionAbOutput result = new AttractionAbOutput();
 		Segment segment = new Segment();
+		segment.setAirlineIATA(airlineIATA);
 		segment.setOriginIATA(originIATA);
 		segment.setDestinationIATA(destinationIATA);
 		segment.setStatus(PassengerMilesInfo.Status.valueOf(status));

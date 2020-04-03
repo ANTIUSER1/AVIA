@@ -12,6 +12,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "InputSegment")
 public class Segment {
 
+	private String airlineIATA;
+
 	private String originIATA;
 
 	private String destinationIATA;
@@ -22,7 +24,20 @@ public class Segment {
 
 	private String ticketDesignator;
 
-	public String getOriginIATA() {
+    public String getAirlineIATA() {
+        return airlineIATA;
+    }
+
+    public void setAirlineIATA(String airlineIATA) {
+
+        if (airlineIATA != null) {
+            airlineIATA = airlineIATA.toUpperCase();
+        }
+
+        this.airlineIATA = airlineIATA;
+    }
+
+    public String getOriginIATA() {
 		return originIATA;
 	}
 

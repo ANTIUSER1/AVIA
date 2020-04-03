@@ -51,6 +51,8 @@ public class PassengerMilesInfo {
 
 	private Status status;
 
+	private Integer percent;
+
 	public Airport getOrigin() {
 		return origin;
 	}
@@ -155,7 +157,15 @@ public class PassengerMilesInfo {
 		this.additionalDistance = additionalDistance;
 	}
 
-	public int getMinBonusMiles() {
+    public Integer getPercent() {
+        return percent;
+    }
+
+    public void setPercent(Integer percent) {
+        this.percent = percent;
+    }
+
+    public int getMinBonusMiles() {
 		int result = 0;
 		int minBonus = this.airline.getMinMilesCharge();
 		String milesLimitation = this.airline.getMinMilesLimit();

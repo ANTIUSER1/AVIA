@@ -27,6 +27,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                echo 'Current environment:'
                 sh 'env'
                 sh 'mvn -B -DskipTests clean package' 
                 sh 'ant -f deploy-test.xml DeployRulesArchive'

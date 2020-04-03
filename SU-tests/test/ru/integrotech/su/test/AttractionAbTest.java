@@ -58,7 +58,8 @@ public class AttractionAbTest {
     @Test
     public void LED_SVO_QNB() {
         AttractionAbInput input =
-                AttractionAbInput.of("LED",
+                AttractionAbInput.of("SU",
+                                     "LED",
                                      "SVO",
                                      "Q",
                                      "QNB",
@@ -67,6 +68,7 @@ public class AttractionAbTest {
         AttractionAbOutput expectedOutput =
                AttractionAbOutput.of(500,
                                      "full",
+                                     "SU",
                                      "LED",
                                      "SVO",
                                      "full",
@@ -78,7 +80,8 @@ public class AttractionAbTest {
     @Test
     public void SVO_KJA_TD() {
         AttractionAbInput input =
-                AttractionAbInput.of("SVO",
+                AttractionAbInput.of("SU",
+                                     "SVO",
                                      "KJA",
                                      "Q",
                                      "QNB",
@@ -87,6 +90,7 @@ public class AttractionAbTest {
         AttractionAbOutput expectedOutput =
                 AttractionAbOutput.of(0,
                                       "full",
+                                      "SU",
                                       "SVO",
                                       "KJA",
                                       "full",
@@ -98,7 +102,8 @@ public class AttractionAbTest {
     @Test
     public void SVO_KJA_KVTN() {
         AttractionAbInput input =
-                AttractionAbInput.of("SVO",
+                AttractionAbInput.of("SU",
+                                     "SVO",
                                      "KJA",
                                      "K",
                                      "KVTN",
@@ -107,6 +112,7 @@ public class AttractionAbTest {
         AttractionAbOutput expectedOutput =
                 AttractionAbOutput.of(2585,
                                       "full",
+                                      "SU",
                                       "SVO",
                                       "KJA",
                                       "full",
@@ -118,7 +124,8 @@ public class AttractionAbTest {
     @Test
     public void SVO_KJA_NVTN() {
         AttractionAbInput input =
-                AttractionAbInput.of("SVO",
+                AttractionAbInput.of("SU",
+                        "SVO",
                         "KJA",
                         "K",
                         "NVTN",
@@ -127,6 +134,7 @@ public class AttractionAbTest {
         AttractionAbOutput expectedOutput =
                 AttractionAbOutput.of(1551,
                         "full",
+                        "SU",
                         "SVO",
                         "KJA",
                         "full",
@@ -138,7 +146,8 @@ public class AttractionAbTest {
     @Test
     public void SVO_KJA_BPXAS() {
         AttractionAbInput input =
-                AttractionAbInput.of("SVO",
+                AttractionAbInput.of("SU",
+                        "SVO",
                         "KJA",
                         "B",
                         "BPXAS",
@@ -147,6 +156,7 @@ public class AttractionAbTest {
         AttractionAbOutput expectedOutput =
                 AttractionAbOutput.of(4136,
                         "full",
+                        "SU",
                         "SVO",
                         "KJA",
                         "full",
@@ -158,7 +168,8 @@ public class AttractionAbTest {
     @Test
     public void SVO_KJA_CFPL() {
         AttractionAbInput input =
-                AttractionAbInput.of("SVO",
+                AttractionAbInput.of("SU",
+                        "SVO",
                         "KJA",
                         "C",
                         "CFPL",
@@ -167,6 +178,7 @@ public class AttractionAbTest {
         AttractionAbOutput expectedOutput =
                 AttractionAbOutput.of(5170,
                         "full",
+                        "SU",
                         "SVO",
                         "KJA",
                         "full",
@@ -178,7 +190,8 @@ public class AttractionAbTest {
     @Test
     public void SVO_KJA_KFRLN() {
         AttractionAbInput input =
-                AttractionAbInput.of("SVO",
+                AttractionAbInput.of("SU",
+                        "SVO",
                         "KJA",
                         "K",
                         "KFRLN",
@@ -187,6 +200,7 @@ public class AttractionAbTest {
         AttractionAbOutput expectedOutput =
                 AttractionAbOutput.of(4136,
                         "full",
+                        "SU",
                         "SVO",
                         "KJA",
                         "full",
@@ -198,7 +212,8 @@ public class AttractionAbTest {
     @Test
     public void SVO_VVO_KFRLN() {
         AttractionAbInput input =
-                AttractionAbInput.of("SVO",
+                AttractionAbInput.of("SU",
+                        "SVO",
                         "VVO",
                         "K",
                         "KFRLN",
@@ -207,6 +222,7 @@ public class AttractionAbTest {
         AttractionAbOutput expectedOutput =
                 AttractionAbOutput.of(5983,
                         "full",
+                        "SU",
                         "SVO",
                         "VVO",
                         "full",
@@ -218,7 +234,8 @@ public class AttractionAbTest {
     @Test
     public void SVO_VVO_BPXAS() {
         AttractionAbInput input =
-                AttractionAbInput.of("SVO",
+                AttractionAbInput.of("SU",
+                        "SVO",
                         "VVO",
                         "B",
                         "BPXAS",
@@ -227,6 +244,7 @@ public class AttractionAbTest {
         AttractionAbOutput expectedOutput =
                 AttractionAbOutput.of(997,
                         "full",
+                        "SU",
                         "SVO",
                         "VVO",
                         "full",
@@ -238,7 +256,8 @@ public class AttractionAbTest {
     @Test
     public void SVO_KJA_ACTHN() {
         AttractionAbInput input =
-                AttractionAbInput.of("SVO",
+                AttractionAbInput.of("SU",
+                        "SVO",
                         "KJA",
                         "Ф",
                         "ACTHN",
@@ -247,6 +266,7 @@ public class AttractionAbTest {
         AttractionAbOutput expectedOutput =
                 AttractionAbOutput.of(3102,
                         "full",
+                        "SU",
                         "SVO",
                         "KJA",
                         "full",
@@ -258,7 +278,8 @@ public class AttractionAbTest {
     @Test
     public void SVO_KJA_KDYBRVSJDN() {
         AttractionAbInput input =
-                AttractionAbInput.of("SVO",
+                AttractionAbInput.of("SU",
+                        "SVO",
                         "KJA",
                         "Ф",
                         "KDYBRVSJDN",
@@ -267,6 +288,7 @@ public class AttractionAbTest {
         AttractionAbOutput expectedOutput =
                 AttractionAbOutput.of(0,
                         "full",
+                        "SU",
                         "SVO",
                         "KJA",
                         "full",
@@ -278,7 +300,8 @@ public class AttractionAbTest {
     @Test
     public void SVO_KJA_KDSOCSJDN() {
         AttractionAbInput input =
-                AttractionAbInput.of("SVO",
+                AttractionAbInput.of("SU",
+                        "SVO",
                         "KJA",
                         "K",
                         "KDSOCSJDN",
@@ -287,6 +310,7 @@ public class AttractionAbTest {
         AttractionAbOutput expectedOutput =
                 AttractionAbOutput.of(517,
                         "full",
+                        "SU",
                         "SVO",
                         "KJA",
                         "full",
@@ -298,7 +322,8 @@ public class AttractionAbTest {
     @Test
     public void SVO_KJA_KPSE3SSDN() {
         AttractionAbInput input =
-                AttractionAbInput.of("SVO",
+                AttractionAbInput.of("SU",
+                        "SVO",
                         "KJA",
                         "K",
                         "KPSE3SSDN",
@@ -307,6 +332,7 @@ public class AttractionAbTest {
         AttractionAbOutput expectedOutput =
                 AttractionAbOutput.of(0,
                         "full",
+                        "SU",
                         "SVO",
                         "KJA",
                         "full",
@@ -318,7 +344,8 @@ public class AttractionAbTest {
     @Test
     public void SVO_KJA_CID750SC() {
         AttractionAbInput input =
-                AttractionAbInput.of("SVO",
+                AttractionAbInput.of("SU",
+                        "SVO",
                         "KJA",
                         "K",
                         "CID750SC",
@@ -327,6 +354,7 @@ public class AttractionAbTest {
         AttractionAbOutput expectedOutput =
                 AttractionAbOutput.of(0,
                         "full",
+                        "SU",
                         "SVO",
                         "KJA",
                         "full",
@@ -338,7 +366,8 @@ public class AttractionAbTest {
     @Test
     public void SVO_KJA_QEPSCVS() {
         AttractionAbInput input =
-                AttractionAbInput.of("SVO",
+                AttractionAbInput.of("SU",
+                        "SVO",
                         "KJA",
                         "K",
                         "QEPSCVS",
@@ -347,6 +376,7 @@ public class AttractionAbTest {
         AttractionAbOutput expectedOutput =
                 AttractionAbOutput.of(2068,
                         "full",
+                        "SU",
                         "SVO",
                         "KJA",
                         "full",
@@ -358,7 +388,8 @@ public class AttractionAbTest {
     @Test
     public void SVO_KJA_X_Class() {
         AttractionAbInput input =
-                AttractionAbInput.of("SVO",
+                AttractionAbInput.of("SU",
+                        "SVO",
                         "KJA",
                         "X",
                         "XPLKNJB",
@@ -367,6 +398,7 @@ public class AttractionAbTest {
         AttractionAbOutput expectedOutput =
                 AttractionAbOutput.of(0,
                         "full",
+                        "SU",
                         "SVO",
                         "KJA",
                         "full",
@@ -378,7 +410,8 @@ public class AttractionAbTest {
     @Test
     public void SVO_KJA_T_class_TD_FSSLADMA() {
         AttractionAbInput input =
-                AttractionAbInput.of("SVO",
+                AttractionAbInput.of("SU",
+                        "SVO",
                         "KJA",
                         "T",
                         "TPLKNJB",
@@ -387,6 +420,7 @@ public class AttractionAbTest {
         AttractionAbOutput expectedOutput =
                 AttractionAbOutput.of(0,
                         "full",
+                        "SU",
                         "SVO",
                         "KJA",
                         "full",
@@ -398,7 +432,8 @@ public class AttractionAbTest {
     @Test
     public void SVO_KJA_T_Class() {
         AttractionAbInput input =
-                AttractionAbInput.of("SVO",
+                AttractionAbInput.of("SU",
+                        "SVO",
                         "KJA",
                         "T",
                         "TPLKNJB",
@@ -407,6 +442,7 @@ public class AttractionAbTest {
         AttractionAbOutput expectedOutput =
                 AttractionAbOutput.of(1551,
                         "full",
+                        "SU",
                         "SVO",
                         "KJA",
                         "full",
@@ -418,7 +454,8 @@ public class AttractionAbTest {
     @Test
     public void SVO_KJA_W_Class() {
         AttractionAbInput input =
-                AttractionAbInput.of("SVO",
+                AttractionAbInput.of("SU",
+                        "SVO",
                         "KJA",
                         "W",
                         "WPLKNJB",
@@ -427,6 +464,7 @@ public class AttractionAbTest {
         AttractionAbOutput expectedOutput =
                 AttractionAbOutput.of(4136,
                         "full",
+                        "SU",
                         "SVO",
                         "KJA",
                         "full",
@@ -438,7 +476,8 @@ public class AttractionAbTest {
     @Test
     public void SVO_KJA_HID50PLD() {
         AttractionAbInput input =
-                AttractionAbInput.of("SVO",
+                AttractionAbInput.of("SU",
+                        "SVO",
                         "KJA",
                         "H",
                         "HID50PLD",
@@ -447,6 +486,7 @@ public class AttractionAbTest {
         AttractionAbOutput expectedOutput =
                 AttractionAbOutput.of(0,
                         "full",
+                        "SU",
                         "SVO",
                         "KJA",
                         "full",
@@ -458,7 +498,8 @@ public class AttractionAbTest {
     @Test
     public void SVO_KJA_RNSDF() {
         AttractionAbInput input =
-                AttractionAbInput.of("SVO",
+                AttractionAbInput.of("SU",
+                        "SVO",
                         "KJA",
                         "R",
                         "RNSDF",
@@ -467,6 +508,7 @@ public class AttractionAbTest {
         AttractionAbOutput expectedOutput =
                 AttractionAbOutput.of(1551,
                         "full",
+                        "SU",
                         "SVO",
                         "KJA",
                         "full",
@@ -478,7 +520,8 @@ public class AttractionAbTest {
     @Test
     public void SVO_VVO_RNSDF() {
         AttractionAbInput input =
-                AttractionAbInput.of("SVO",
+                AttractionAbInput.of("SU",
+                        "SVO",
                         "VVO",
                         "R",
                         "RNSDF",
@@ -487,6 +530,7 @@ public class AttractionAbTest {
         AttractionAbOutput expectedOutput =
                 AttractionAbOutput.of(997,
                         "full",
+                        "SU",
                         "SVO",
                         "VVO",
                         "full",
@@ -499,7 +543,8 @@ public class AttractionAbTest {
     @Test
     public void SF_01_case() {
         AttractionAbInput input =
-                AttractionAbInput.of("SVO",
+                AttractionAbInput.of("SU",
+                        "SVO",
                         "AER",
                         "W",
                         "YPASSJK",
@@ -508,6 +553,7 @@ public class AttractionAbTest {
         AttractionAbOutput expectedOutput =
                 AttractionAbOutput.of(1276,
                         "full",
+                        "SU",
                         "SVO",
                         "AER",
                         "full",
@@ -520,7 +566,8 @@ public class AttractionAbTest {
     @Test
     public void SF_02_case() {
         AttractionAbInput input =
-                AttractionAbInput.of("SVO",
+                AttractionAbInput.of("SU",
+                        "SVO",
                         "AER",
                         "W",
                         "KID50dfghh",
@@ -529,6 +576,7 @@ public class AttractionAbTest {
         AttractionAbOutput expectedOutput =
                 AttractionAbOutput.of(0,
                         "full",
+                        "SU",
                         "SVO",
                         "AER",
                         "full",
@@ -540,19 +588,21 @@ public class AttractionAbTest {
     @Test
     public void SF_03_case() {
         AttractionAbInput input =
-                AttractionAbInput.of("SVO",
+                AttractionAbInput.of("SU",
+                        "SVO",
                         "LED",
                         "W",
                         "CFGTR",
                         "",
                         "basic");
         AttractionAbOutput expectedOutput =
-                AttractionAbOutput.of(990,
+                AttractionAbOutput.of(1250,
                         "full",
+                        "SU",
                         "SVO",
                         "LED",
                         "full",
-                        990);
+                        1250);
         AttractionAbOutput actualOutput = this.attractionAbBuilder.buildResult(input);
         Assert.assertEquals(actualOutput, expectedOutput);
     }
@@ -560,7 +610,8 @@ public class AttractionAbTest {
     @Test
     public void Nodata_case() {
         AttractionAbInput input =
-                AttractionAbInput.of("KHV",
+                AttractionAbInput.of("SU",
+                        "KHV",
                         "VVO",
                         "W",
                         "",
@@ -569,6 +620,7 @@ public class AttractionAbTest {
         AttractionAbOutput expectedOutput =
                 AttractionAbOutput.of(0,
                         "nodata",
+                        "SU",
                         "KHV",
                         "VVO",
                         "nodata",
@@ -580,7 +632,8 @@ public class AttractionAbTest {
     @Test
     public void TD_case() {
         AttractionAbInput input =
-                AttractionAbInput.of("SVO",
+                AttractionAbInput.of("SU",
+                        "SVO",
                         "LED",
                         "W",
                         "CFGTR",
@@ -589,6 +642,7 @@ public class AttractionAbTest {
         AttractionAbOutput expectedOutput =
                 AttractionAbOutput.of(0,
                         "full",
+                        "SU",
                         "SVO",
                         "LED",
                         "full",
@@ -600,19 +654,21 @@ public class AttractionAbTest {
     @Test
     public void BC_case() {
         AttractionAbInput input =
-                AttractionAbInput.of("SVO",
+                AttractionAbInput.of("SU",
+                        "SVO",
                         "LED",
                         "S",
                         "",
                         "",
                         "basic");
         AttractionAbOutput expectedOutput =
-                AttractionAbOutput.of(792,
+                AttractionAbOutput.of(1000,
                         "full",
+                        "SU",
                         "SVO",
                         "LED",
                         "full",
-                        792);
+                        1000);
         AttractionAbOutput actualOutput = this.attractionAbBuilder.buildResult(input);
         Assert.assertEquals(actualOutput, expectedOutput);
     }
@@ -620,7 +676,8 @@ public class AttractionAbTest {
     @Test
     public void Airport_case_02() {
         AttractionAbInput input =
-                AttractionAbInput.of("SVO",
+                AttractionAbInput.of("SU",
+                        "SVO",
                         "AER",
                         "V",
                         "BFloi",
@@ -629,6 +686,7 @@ public class AttractionAbTest {
         AttractionAbOutput expectedOutput =
                 AttractionAbOutput.of(1702,
                         "full",
+                        "SU",
                         "SVO",
                         "AER",
                         "full",
@@ -642,12 +700,14 @@ public class AttractionAbTest {
         AttractionAbInput input = new AttractionAbInput();
         Data data = new Data();
         Segment inputSegment1 = new Segment();
+        inputSegment1.setAirlineIATA("SU");
         inputSegment1.setOriginIATA("KJA");
         inputSegment1.setDestinationIATA("SVO");
         inputSegment1.setBookingClassCode("PR");
         inputSegment1.setFareBasisCode("PLCRNSDF");
         inputSegment1.setTicketDesignator("DP10");
         Segment inputSegment2 = new Segment();
+        inputSegment2.setAirlineIATA("SU");
         inputSegment2.setOriginIATA("KHV");
         inputSegment2.setDestinationIATA("VVO");
         inputSegment2.setBookingClassCode("R");
@@ -664,11 +724,13 @@ public class AttractionAbTest {
         expectedOutput.setTotalMiles(0);
         expectedOutput.setTotalStatus(PassengerMilesInfo.Status.valueOf("nodata"));
         ru.integrotech.su.outputparams.attractionAB.Segment outputSegment1 = new ru.integrotech.su.outputparams.attractionAB.Segment();
+        outputSegment1.setAirlineIATA("SU");
         outputSegment1.setOriginIATA("KJA");
         outputSegment1.setDestinationIATA("SVO");
         outputSegment1.setStatus(PassengerMilesInfo.Status.valueOf("nodata"));
         outputSegment1.setMiles(0);
         ru.integrotech.su.outputparams.attractionAB.Segment outputSegment2 = new ru.integrotech.su.outputparams.attractionAB.Segment();
+        outputSegment2.setAirlineIATA("SU");
         outputSegment2.setOriginIATA("KHV");
         outputSegment2.setDestinationIATA("VVO");
         outputSegment2.setStatus(PassengerMilesInfo.Status.valueOf("nodata"));
@@ -688,12 +750,14 @@ public class AttractionAbTest {
         AttractionAbInput input = new AttractionAbInput();
         Data data = new Data();
         Segment inputSegment1 = new Segment();
+        inputSegment1.setAirlineIATA("SU");
         inputSegment1.setOriginIATA("SVO");
         inputSegment1.setDestinationIATA("AER");
         inputSegment1.setBookingClassCode("PR");
         inputSegment1.setFareBasisCode("PLCRNSDF");
         inputSegment1.setTicketDesignator("DP10");
         Segment inputSegment2 = new Segment();
+        inputSegment2.setAirlineIATA("SU");
         inputSegment2.setOriginIATA("SVO");
         inputSegment2.setDestinationIATA("PRG");
         inputSegment2.setBookingClassCode("R");
@@ -710,11 +774,13 @@ public class AttractionAbTest {
         expectedOutput.setTotalMiles(500);
         expectedOutput.setTotalStatus(PassengerMilesInfo.Status.valueOf("partial"));
         ru.integrotech.su.outputparams.attractionAB.Segment outputSegment1 = new ru.integrotech.su.outputparams.attractionAB.Segment();
+        outputSegment1.setAirlineIATA("SU");
         outputSegment1.setOriginIATA("SVO");
         outputSegment1.setDestinationIATA("AER");
         outputSegment1.setStatus(PassengerMilesInfo.Status.valueOf("nodata"));
         outputSegment1.setMiles(0);
         ru.integrotech.su.outputparams.attractionAB.Segment outputSegment2 = new ru.integrotech.su.outputparams.attractionAB.Segment();
+        outputSegment2.setAirlineIATA("SU");
         outputSegment2.setOriginIATA("SVO");
         outputSegment2.setDestinationIATA("PRG");
         outputSegment2.setStatus(PassengerMilesInfo.Status.valueOf("full"));
@@ -734,12 +800,14 @@ public class AttractionAbTest {
         AttractionAbInput input = new AttractionAbInput();
         Data data = new Data();
         Segment inputSegment1 = new Segment();
+        inputSegment1.setAirlineIATA("SU");
         inputSegment1.setOriginIATA("KJA");
         inputSegment1.setDestinationIATA("SVO");
         inputSegment1.setBookingClassCode("N");
         inputSegment1.setFareBasisCode("NCFSD");
         inputSegment1.setTicketDesignator("DP10");
         Segment inputSegment2 = new Segment();
+        inputSegment2.setAirlineIATA("SU");
         inputSegment2.setOriginIATA("SVO");
         inputSegment2.setDestinationIATA("PRG");
         inputSegment2.setBookingClassCode("N");
@@ -756,11 +824,13 @@ public class AttractionAbTest {
         expectedOutput.setTotalMiles(3106);
         expectedOutput.setTotalStatus(PassengerMilesInfo.Status.valueOf("full"));
         ru.integrotech.su.outputparams.attractionAB.Segment outputSegment1 = new ru.integrotech.su.outputparams.attractionAB.Segment();
+        outputSegment1.setAirlineIATA("SU");
         outputSegment1.setOriginIATA("KJA");
         outputSegment1.setDestinationIATA("SVO");
         outputSegment1.setStatus(PassengerMilesInfo.Status.valueOf("full"));
         outputSegment1.setMiles(2068);
         ru.integrotech.su.outputparams.attractionAB.Segment outputSegment2 = new ru.integrotech.su.outputparams.attractionAB.Segment();
+        outputSegment2.setAirlineIATA("SU");
         outputSegment2.setOriginIATA("SVO");
         outputSegment2.setDestinationIATA("PRG");
         outputSegment2.setStatus(PassengerMilesInfo.Status.valueOf("full"));
@@ -780,6 +850,7 @@ public class AttractionAbTest {
         AttractionAbInput input = new AttractionAbInput();
         Data data = new Data();
         Segment inputSegment1 = new Segment();
+        inputSegment1.setAirlineIATA("SU");
         inputSegment1.setOriginIATA("KJA");
         inputSegment1.setDestinationIATA("SVO");
         inputSegment1.setBookingClassCode("N");
@@ -787,6 +858,7 @@ public class AttractionAbTest {
         inputSegment1.setTicketDesignator("XDP60");
         Segment inputSegment2 = new Segment();
         inputSegment2.setOriginIATA("SVO");
+        inputSegment2.setAirlineIATA("SU");
         inputSegment2.setDestinationIATA("PRG");
         inputSegment2.setBookingClassCode("N");
         inputSegment2.setFareBasisCode("NCSDF");
@@ -826,12 +898,14 @@ public class AttractionAbTest {
         AttractionAbInput input = new AttractionAbInput();
         Data data = new Data();
         Segment inputSegment1 = new Segment();
+        inputSegment1.setAirlineIATA("SU");
         inputSegment1.setOriginIATA("KJA");
         inputSegment1.setDestinationIATA("SVO");
         inputSegment1.setBookingClassCode("N");
         inputSegment1.setFareBasisCode("NCFSD");
         inputSegment1.setTicketDesignator("XDP60");
         Segment inputSegment2 = new Segment();
+        inputSegment2.setAirlineIATA("SU");
         inputSegment2.setOriginIATA("SVO");
         inputSegment2.setDestinationIATA("PRG");
         inputSegment2.setBookingClassCode("NK");

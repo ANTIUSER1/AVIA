@@ -15,7 +15,8 @@ public class AttractionAbInput {
      *  Static constructor. Use in tests. Create
      *  AttractionAbInput with single segment
      * */
-	public static AttractionAbInput  of(String originIATA,
+	public static AttractionAbInput  of(String airlineIATA,
+										String originIATA,
 										String destinationIATA,
 										String bookingClassCode,
 										String fareBasisCode,
@@ -25,6 +26,7 @@ public class AttractionAbInput {
 	    AttractionAbInput result = new AttractionAbInput();
         Data data = new Data();
         Segment segment = new Segment();
+        segment.setAirlineIATA(airlineIATA);
         segment.setOriginIATA(originIATA);
         segment.setDestinationIATA(destinationIATA);
         segment.setBookingClassCode(bookingClassCode);
