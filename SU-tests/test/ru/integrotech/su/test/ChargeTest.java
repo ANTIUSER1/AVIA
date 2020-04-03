@@ -47,7 +47,7 @@ public class ChargeTest {
 	private Comparator comparator;
 
 	@Before
-	public void init() {
+	public void init() throws Exception {
 		this.comparator = Comparator.of(ChargeRoute.class);
 		this.chargeBuilder = ChargeBuilder.of(MockLoader.getInstance()
 				.getRegisterCache());

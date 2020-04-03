@@ -115,6 +115,10 @@ ru.integrotech.su.outputparams.spend.SpendLkBuilder#concept.label = spend lk bui
 ru.integrotech.su.outputparams.spend.SpendLkBuilder.buildSpendLkRoutes(java.util.List,ru.integrotech.su.inputparams.spend.SpendInput)#phrase.navigation = {this}.buildSpendLkRoutes({0}, {1})
 ru.integrotech.su.outputparams.spend.SpendLkBuilder.replaceUO(java.util.List)#phrase.action = {this}.replaceUO({0})
 
+# ru.integrotech.su.utils.ValidatorCharge
+ru.integrotech.su.utils.ValidatorCharge#concept.label = validator charge
+ru.integrotech.su.utils.ValidatorCharge.validateHardDataCharge(ru.integrotech.su.inputparams.charge.ChargeInput)#phrase.action = {this}.validateHardDataCharge({0})
+
 # ru.integrotech.su.utils.ValidatorSpend
 ru.integrotech.su.utils.ValidatorSpend#concept.label = validator
 ru.integrotech.su.utils.ValidatorSpend.validateHardDataSpend(ru.integrotech.su.inputparams.spend.SpendInput)#phrase.action = {this}.validateHardDataSpend({0})

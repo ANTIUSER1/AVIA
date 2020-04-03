@@ -1,14 +1,14 @@
 package ru.integrotech.su.inputparams;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import ru.integrotech.airline.core.airline.Airline;
 import ru.integrotech.airline.core.location.Airport;
 import ru.integrotech.airline.register.RegisterCache;
 import ru.integrotech.su.common.LocationType;
 import ru.integrotech.su.inputparams.route.RoutesInput;
-import ru.integrotech.su.utils.ValidatorSpendData;
-
-import java.util.HashSet;
-import java.util.Set;
+import ru.integrotech.su.utils.ValidatorInputData;
 
 /**
  * Class for transform string to object data use for transform input parameters <br />
@@ -71,6 +71,7 @@ public class InputParamsTransformer {
 	public Set<Airport> getDestinations(RoutesInput routesInput)
 			throws Exception {
 		String destinationType = routesInput.getDestinationType();
+
 		String destinationCode = routesInput.getDestinationCode();
 		return this.getEndpoints(destinationCode, destinationType);
 	}
@@ -114,18 +115,18 @@ public class InputParamsTransformer {
 
 		if (locationCode != null) {
 			if (locationType.equals(LocationType.airport.toString())) {
-				ValidatorSpendData.testAirport(registerCache, locationCode);
+				ValidatorInputData.testAirport(registerCache, locationCode);
 				result.add(registerCache.getAirport(locationCode));
 			} else if (locationType.equals(LocationType.city.toString())) {
-				ValidatorSpendData.testCity(registerCache, locationCode);
+				ValidatorInputData.testCity(registerCache, locationCode);
 				result.addAll(registerCache.getCity(locationCode)
 						.getAirportMap().values());
 			} else if (locationType.equals(LocationType.country.toString())) {
-				ValidatorSpendData.testCountry(registerCache, locationCode);
+				ValidatorInputData.testCountry(registerCache, locationCode);
 				result.addAll(registerCache.getCountry(locationCode)
 						.getAirportMap().values());
 			} else if (locationType.equals(LocationType.region.toString())) {
-				ValidatorSpendData.testRegion(registerCache, locationCode);
+				ValidatorInputData.testRegion(registerCache, locationCode);
 				result.addAll(registerCache.getRegion(locationCode)
 						.getAirportMap().values());
 			}
