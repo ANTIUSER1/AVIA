@@ -37,7 +37,7 @@ public class AttractionAbBuilder {
 	 * Static constructor <br />
 	 * constructs, then sets up the instance's fields value
 	 *
-	 * @param cache
+	 * @param registerCache
 	 * @return
 	 */
 	public static AttractionAbBuilder of(RegisterCache registerCache) {
@@ -121,32 +121,50 @@ public class AttractionAbBuilder {
 
 		} else if (coeff > 0 && coeff <= 1) {
 
-			int newDistance = (int) (info.getFlightDistance() * coeff);
-			int additionalMiles = 0;
+			int bonusDistance = this.getBonusDistance(info, coeff);
 
-			if (newDistance < info.getMinBonusMiles()) {
-				newDistance = info.getMinBonusMiles();
-			}
-
-			additionalMiles = (int) (tierPassengerFactor * newDistance);
-			info.setTotalBonusMiles(newDistance + additionalMiles);
+			int additionalMiles = (int) (tierPassengerFactor * bonusDistance);
+			info.setTotalBonusMiles(bonusDistance + additionalMiles);
 
 		} else if (coeff > 1) {
 
-			int newDistance = (int) (info.getFlightDistance() * coeff);
+			int bonusDistance = this.getBonusDistance(info, coeff);
+
 			int additionalMiles = 0;
 
-			if (newDistance < info.getMinBonusMiles()) {
-				newDistance = info.getMinBonusMiles();
-				additionalMiles = (int) (tierPassengerFactor * newDistance);
+			if (this.getNewDistance(info, coeff) < info.getMinBonusMiles()) {
+				bonusDistance = info.getMinBonusMiles();
+				additionalMiles = (int) (tierPassengerFactor * bonusDistance);
 
 			} else {
 				additionalMiles = (int) (tierPassengerFactor * info
 						.getFlightDistance());
 			}
 
-			info.setTotalBonusMiles(newDistance + additionalMiles);
+			info.setTotalBonusMiles(bonusDistance + additionalMiles);
 		}
+	}
+
+	private int getNewDistance(PassengerMilesInfo info, double coeff) {
+
+		int result = info.getFlightDistance();
+
+		if (result < info.getMinBonusMiles()) {
+			result = info.getMinBonusMiles();
+		}
+
+		return (int) (result * coeff);
+	}
+
+	private int getBonusDistance(PassengerMilesInfo info, double coeff) {
+
+		int result = this.getNewDistance(info, coeff);
+
+		if (result < info.getMinBonusMiles()) {
+			result = info.getMinBonusMiles();
+		}
+
+		return result;
 	}
 
 }

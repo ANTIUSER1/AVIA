@@ -22,9 +22,8 @@ import ru.integrotech.airline.utils.StringMethods;
 public class AttractionAbUtils {
 
 	private static final String DEFAULT_TIER_LEVEL = "basic";
-	private static final String AFL_IATA_CODE = "SU";
 
-	/**
+    /**
 	 * Static constructor <br />
 	 * constructs, then sets up the instance's fields value
 	 *
@@ -56,13 +55,12 @@ public class AttractionAbUtils {
 			AttractionAbInput input) {
 
 		List<PassengerMilesInfo> result = new ArrayList<>();
-		Airline airline = this.registers.getAirline(AFL_IATA_CODE);
 
 		for (Segment segment : input.getData().getSegments()) {
 
-			Airport origin = this.registers.getAirport(segment.getOriginIATA());
-			Airport destination = this.registers.getAirport(segment
-					.getDestinationIATA());
+			Airline airline = this.registers.getAirline(segment.getAirlineIATA());
+			Airport origin = this.createAirport(segment.getOriginIATA());
+			Airport destination = this.createAirport(segment.getDestinationIATA());
 			Flight flight = null;
 			if (origin != null) {
 				flight = origin.getOutcomeFlight(destination, airline);
@@ -86,5 +84,16 @@ public class AttractionAbUtils {
 
 		return result;
 	}
+
+	private Airport createAirport(String IATACode) {
+	    Airport result = null;
+	    if (this.registers.getAirport(IATACode) != null) {
+	        result = this.registers.getAirport(IATACode);
+        } else {
+	        result = new Airport();
+	        result.setCode(IATACode);
+        }
+	    return result;
+    }
 
 }

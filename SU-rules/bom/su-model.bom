@@ -105,6 +105,23 @@ public class AttractionAbOutput
         java.util.List arg3 domain 0,* class ru.integrotech.su.outputparams.attractionAB.Segment);
 }
 
+public class Segment
+{
+    public string airlineIATA;
+    public string bookingClassCode;
+    public string destinationIATA;
+    public string fareBasisCode;
+    public int miles;
+    public string originIATA;
+    public java.lang.Integer percent;
+    public ru.integrotech.airline.core.info.PassengerMilesInfo.Status status;
+    public string ticketDesignator;
+    public Segment();
+    public boolean equals(object arg);
+    public int hashCode();
+    public static ru.integrotech.su.outputparams.attractionAB.Segment of(ru.integrotech.airline.core.info.PassengerMilesInfo arg);
+}
+
 package ru.integrotech.su.outputparams.charge;
 
 

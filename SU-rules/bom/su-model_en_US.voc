@@ -78,6 +78,27 @@ ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput.segments#phrase.n
 ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput.totalStatus#phrase.action = set the total status of {this} to {total status}
 ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput.totalStatus#phrase.navigation = {total status} of {this}
 
+# ru.integrotech.su.outputparams.attractionAB.Segment
+ru.integrotech.su.outputparams.attractionAB.Segment#concept.label = segment
+ru.integrotech.su.outputparams.attractionAB.Segment.airlineIATA#phrase.action = set the airline IATA of {this} to {airline IATA}
+ru.integrotech.su.outputparams.attractionAB.Segment.airlineIATA#phrase.navigation = {airline IATA} of {this}
+ru.integrotech.su.outputparams.attractionAB.Segment.bookingClassCode#phrase.action = set the booking class code of {this} to {booking class code}
+ru.integrotech.su.outputparams.attractionAB.Segment.bookingClassCode#phrase.navigation = {booking class code} of {this}
+ru.integrotech.su.outputparams.attractionAB.Segment.destinationIATA#phrase.action = set the destination IATA of {this} to {destination IATA}
+ru.integrotech.su.outputparams.attractionAB.Segment.destinationIATA#phrase.navigation = {destination IATA} of {this}
+ru.integrotech.su.outputparams.attractionAB.Segment.fareBasisCode#phrase.action = set the fare basis code of {this} to {fare basis code}
+ru.integrotech.su.outputparams.attractionAB.Segment.fareBasisCode#phrase.navigation = {fare basis code} of {this}
+ru.integrotech.su.outputparams.attractionAB.Segment.miles#phrase.action = set the miles of {this} to {miles}
+ru.integrotech.su.outputparams.attractionAB.Segment.miles#phrase.navigation = {miles} of {this}
+ru.integrotech.su.outputparams.attractionAB.Segment.originIATA#phrase.action = set the origin IATA of {this} to {origin IATA}
+ru.integrotech.su.outputparams.attractionAB.Segment.originIATA#phrase.navigation = {origin IATA} of {this}
+ru.integrotech.su.outputparams.attractionAB.Segment.percent#phrase.action = set the percent of {this} to {percent}
+ru.integrotech.su.outputparams.attractionAB.Segment.percent#phrase.navigation = {percent} of {this}
+ru.integrotech.su.outputparams.attractionAB.Segment.status#phrase.action = set the status of {this} to {status}
+ru.integrotech.su.outputparams.attractionAB.Segment.status#phrase.navigation = {status} of {this}
+ru.integrotech.su.outputparams.attractionAB.Segment.ticketDesignator#phrase.action = set the ticket designator of {this} to {ticket designator}
+ru.integrotech.su.outputparams.attractionAB.Segment.ticketDesignator#phrase.navigation = {ticket designator} of {this}
+
 # ru.integrotech.su.outputparams.charge.ChargeBuilder
 ru.integrotech.su.outputparams.charge.ChargeBuilder#concept.label = charge builder
 ru.integrotech.su.outputparams.charge.ChargeBuilder.getPercent(int,int)#phrase.navigation = {this}.getPercent({0}, {1})
