@@ -15,7 +15,7 @@ import ru.integrotech.su.inputparams.spend.SpendInput;
  *
  */
 public class ValidatorSpend {
-	private static final String SOURCE_OF__MESSAGE = ValidatorSpend.class
+	private static final String SOURCE_OF_MESSAGE = ValidatorSpend.class
 			.toString();
 
 	public void validateHardDataSpend(SpendInput spendInput) throws Exception {
@@ -31,18 +31,23 @@ public class ValidatorSpend {
 	private void testNotNullServiceClass(SpendInput spendInput)
 			throws Exception {
 		if (spendInput.getClassOfService() != null) {
-			String serviceClassName = spendInput.getClassOfService().getClassOfServiceName();
+			String serviceClassName = spendInput.getClassOfService()
+					.getClassOfServiceName();
 			if (StringMethods.isEmpty(serviceClassName)) {
-				throw new UnsupportedParamException(SOURCE_OF__MESSAGE
+				throw new UnsupportedParamException(SOURCE_OF_MESSAGE
 						+ " : Given incorrect ClassOfService value is empty ");
 			} else {
 				try {
 					ServiceClass.SERVICE_CLASS_TYPE.valueOf(serviceClassName);
 				} catch (IllegalArgumentException e) {
-					throw new UnsupportedParamException(SOURCE_OF__MESSAGE
-							+ " : Incorrect input classOfServiceName value." + " Given '"
-							+ serviceClassName + "' ; expected one of "
-							+ EnumMethods.enumToString(ServiceClass.SERVICE_CLASS_TYPE.class));
+					throw new UnsupportedParamException(
+							SOURCE_OF_MESSAGE
+									+ " : Incorrect input classOfServiceName value."
+									+ " Given '"
+									+ serviceClassName
+									+ "' ; expected one of "
+									+ EnumMethods
+											.enumToString(ServiceClass.SERVICE_CLASS_TYPE.class));
 				}
 			}
 		}
@@ -50,7 +55,7 @@ public class ValidatorSpend {
 
 	private void testValidLang(SpendInput spendInput) throws Exception {
 		if (spendInput.getLang() == null) {
-			throw new UnsupportedParamException(SOURCE_OF__MESSAGE
+			throw new UnsupportedParamException(SOURCE_OF_MESSAGE
 					+ " : The Lang point data is empty");
 		}
 	}
@@ -60,7 +65,7 @@ public class ValidatorSpend {
 			int minMil = spendInput.getMilesInterval().getMilesMin();
 			int maxMil = spendInput.getMilesInterval().getMilesMax();
 			if (maxMil < 0 || maxMil <= minMil)
-				throw new UnsupportedParamException(SOURCE_OF__MESSAGE
+				throw new UnsupportedParamException(SOURCE_OF_MESSAGE
 						+ " : Given incorrect milesInterval data: milesMin="
 						+ minMil + "   milesMax=" + maxMil);
 		}
@@ -76,14 +81,18 @@ public class ValidatorSpend {
 	private void testNotNullDestination(SpendInput spendInput)
 			throws UnsupportedParamException {
 		if (spendInput.getDestination() != null) {
-			if (StringMethods.isEmpty(spendInput.getDestination().getLocationType()) &&
-                    !StringMethods.isEmpty(spendInput.getDestination().getLocationCode())) {
-				throw new UnsupportedParamException(SOURCE_OF__MESSAGE
+			if (StringMethods.isEmpty(spendInput.getDestination()
+					.getLocationType())
+					&& !StringMethods.isEmpty(spendInput.getDestination()
+							.getLocationCode())) {
+				throw new UnsupportedParamException(SOURCE_OF_MESSAGE
 						+ " : The type of destination point data is empty");
 			}
-			if (StringMethods.isEmpty(spendInput.getDestination().getLocationCode()) &&
-                    !StringMethods.isEmpty(spendInput.getDestination().getLocationType())) {
-				throw new UnsupportedParamException(SOURCE_OF__MESSAGE
+			if (StringMethods.isEmpty(spendInput.getDestination()
+					.getLocationCode())
+					&& !StringMethods.isEmpty(spendInput.getDestination()
+							.getLocationType())) {
+				throw new UnsupportedParamException(SOURCE_OF_MESSAGE
 						+ " : The code of destination point data is empty");
 			}
 		}
@@ -92,16 +101,16 @@ public class ValidatorSpend {
 	private void testNotNullOrigin(SpendInput spendInput)
 			throws UnsupportedParamException {
 		if (spendInput.getOrigin() == null) {
-			throw new UnsupportedParamException(SOURCE_OF__MESSAGE
+			throw new UnsupportedParamException(SOURCE_OF_MESSAGE
 					+ " : The origin point data is empty");
 		}
 		if (StringMethods.isEmpty(spendInput.getOrigin().getLocationType())) {
-			throw new UnsupportedParamException(SOURCE_OF__MESSAGE
+			throw new UnsupportedParamException(SOURCE_OF_MESSAGE
 					+ " : The type of origin point data does not exists");
 		}
 
 		if (StringMethods.isEmpty(spendInput.getOrigin().getLocationCode())) {
-			throw new UnsupportedParamException(SOURCE_OF__MESSAGE
+			throw new UnsupportedParamException(SOURCE_OF_MESSAGE
 					+ " : The code of origin point data is empty");
 		}
 	}
@@ -111,7 +120,7 @@ public class ValidatorSpend {
 		String locationType = spendInput.getOrigin().getLocationType();
 		if (!EnumMethods.containsLower(LocationType.class, locationType))
 			throw new UnsupportedParamException(
-					SOURCE_OF__MESSAGE
+					SOURCE_OF_MESSAGE
 							+ " : Given "
 							+ locationType
 							+ " for origin locationType value; expected one of the values: "
@@ -122,13 +131,15 @@ public class ValidatorSpend {
 
 			if (locationType != null) {
 
-                if (!EnumMethods.containsLower(LocationType.class, locationType))
-                    throw new UnsupportedParamException(
-                            " Given  "
-                                    + locationType
-                                    + " for destination locationType value; expected one of the values: "
-                                    + EnumMethods.enumToString(LocationType.class));
-            }
+				if (!EnumMethods
+						.containsLower(LocationType.class, locationType))
+					throw new UnsupportedParamException(
+							" Given  '"
+									+ locationType
+									+ "' for destination locationType value; expected one of the values: "
+									+ EnumMethods
+											.enumToString(LocationType.class));
+			}
 		}
 	}
 
@@ -136,7 +147,7 @@ public class ValidatorSpend {
 		try {
 			AWARD_TYPE.valueOf(spendInput.getAwardType());
 		} catch (IllegalArgumentException e) {
-			throw new UnsupportedParamException(SOURCE_OF__MESSAGE
+			throw new UnsupportedParamException(SOURCE_OF_MESSAGE
 					+ " : Incorrect input AWARD_TYPE value." + " Given '"
 					+ spendInput.getAwardType() + "' ; expected one of "
 					+ EnumMethods.enumToString(AWARD_TYPE.class));

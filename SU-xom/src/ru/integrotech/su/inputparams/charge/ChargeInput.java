@@ -75,7 +75,7 @@ public class ChargeInput {
 
 	private TierLevel tierLevel;
 
-	private boolean isRoundTrip;
+	private Boolean isRoundTrip;
 
 	public Airline getAirline() {
 		return airline;
@@ -109,11 +109,11 @@ public class ChargeInput {
 		this.tierLevel = tierLevel;
 	}
 
-	public boolean getIsRoundTrip() {
+	public Boolean getIsRoundTrip() {
 		return isRoundTrip;
 	}
 
-	public void setIsRoundTrip(boolean roundTrip) {
+	public void setIsRoundTrip(Boolean roundTrip) {
 		isRoundTrip = roundTrip;
 	}
 

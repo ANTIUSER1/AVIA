@@ -70,6 +70,7 @@ public class RoutesBuilder {
 		Set<Airport> origins = this.paramsTransformer.getOrigins(routesInput);
 		Set<Airport> destinations = this.paramsTransformer
 				.getDestinations(routesInput);
+
 		boolean exactLocation = this.paramsTransformer
 				.exactLocation(routesInput);
 		Airline airline = this.paramsTransformer.getAirline(routesInput);

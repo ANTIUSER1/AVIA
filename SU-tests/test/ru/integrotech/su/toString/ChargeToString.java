@@ -32,7 +32,7 @@ public class ChargeToString {
 	private ChargeBuilder chargeBuilder;
 
 	@Before
-	public void init() {
+	public void init() throws Exception {
 		this.chargeBuilder = ChargeBuilder.of(MockLoader.getInstance()
 				.getRegisterCache());
 	}

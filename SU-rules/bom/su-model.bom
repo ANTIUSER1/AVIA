@@ -17,9 +17,10 @@ public class ChargeInput
 {
     public ru.integrotech.su.common.Airline airline;
     public ru.integrotech.su.common.Location destination;
-    public boolean isRoundTrip;
+    public java.lang.Boolean isRoundTrip;
     public ru.integrotech.su.common.Location origin;
     public ru.integrotech.su.inputparams.charge.TierLevel tierLevel;
+    public ChargeInput();
     public static ru.integrotech.su.inputparams.charge.ChargeInput of(string arg1, string arg2, string arg3, string arg4, string arg5, string arg6, boolean arg7);
 }
 
@@ -216,6 +217,13 @@ public class SpendLkBuilder
 
 package ru.integrotech.su.utils;
 
+
+public class ValidatorCharge
+{
+    public ValidatorCharge();
+    public void validateHardDataCharge(ru.integrotech.su.inputparams.charge.ChargeInput arg)
+                throws java.lang.Exception;
+}
 
 public class ValidatorSpend
 {
