@@ -45,7 +45,7 @@ public class PassengerMilesInfo {
 
 	private String tickedDesignator;
 
-    private double distanceCoeff;
+    private int distanceCoeff;
 
 	private int totalBonusMiles;
 
@@ -93,11 +93,11 @@ public class PassengerMilesInfo {
 		this.airline = airline;
 	}
 
-	public double getDistanceCoeff() {
+	public int getDistanceCoeff() {
 		return distanceCoeff;
 	}
 
-	public void setDistanceCoeff(double distanceCoeff) {
+	public void setDistanceCoeff(int distanceCoeff) {
 		this.distanceCoeff = distanceCoeff;
 	}
 

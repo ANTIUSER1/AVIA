@@ -88,13 +88,12 @@ public class ValidatorSpend {
 				throw new UnsupportedParamException(SOURCE_OF_MESSAGE
 						+ " : The type of destination point data is empty");
 			}
-			if (StringMethods.isEmpty(spendInput.getDestination()
-					.getLocationCode())
-					&& !StringMethods.isEmpty(spendInput.getDestination()
-							.getLocationType())) {
-				throw new UnsupportedParamException(SOURCE_OF_MESSAGE
-						+ " : The code of destination point data is empty");
-			}
+            if (StringMethods.isEmpty(spendInput.getDestination().getLocationCode())
+                    && !StringMethods.isEmpty(spendInput.getDestination().getLocationType())
+                    && !spendInput.getDestination().getLocationType().equals(LocationType.world.name())) {
+                throw new UnsupportedParamException(SOURCE_OF_MESSAGE
+                        + " : The code of destination point data is empty");
+            }
 		}
 	}
 

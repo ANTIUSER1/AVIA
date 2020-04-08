@@ -399,6 +399,34 @@ public class SpendValidationTest {
 	}
 
 	@Test
+	public void WORLD_REGION() throws Exception {
+		SpendInput spendInput = new SpendInput();
+		spendInput.setOrigin(LocationInput.of("airport", "SVO"));
+		spendInput.setDestination(LocationInput.of("worldRegion", "CIS"));
+		spendInput.setMilesInterval(MilesInterval.of(-1, 100000));
+		spendInput.setClassOfService(ClassOfService.of("economy"));
+		spendInput.setAwardType(null);
+		spendInput.setIsOnlyAfl(true);
+		spendInput.setIsRoundTrip(true);
+		spendInput.setLang("ru");
+		this.validatorSpend.validateHardDataSpend(spendInput);
+	}
+
+    @Test
+    public void WORLD() throws Exception {
+        SpendInput spendInput = new SpendInput();
+        spendInput.setOrigin(LocationInput.of("airport", "SVO"));
+        spendInput.setDestination(LocationInput.of("world", null));
+        spendInput.setMilesInterval(MilesInterval.of(-1, 100000));
+        spendInput.setClassOfService(ClassOfService.of("economy"));
+        spendInput.setAwardType(null);
+        spendInput.setIsOnlyAfl(true);
+        spendInput.setIsRoundTrip(true);
+        spendInput.setLang("ru");
+        this.validatorSpend.validateHardDataSpend(spendInput);
+    }
+
+	@Test
 	public void UP_AND_LOW_CASES() throws Exception {
 		SpendInput spendInput = new SpendInput();
 		spendInput.setOrigin(LocationInput.of("AirPorT", "sVo"));

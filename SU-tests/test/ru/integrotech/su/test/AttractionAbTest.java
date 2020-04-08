@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import ru.integrotech.airline.core.info.PassengerMilesInfo;
+import ru.integrotech.airline.utils.NumberMethods;
 import ru.integrotech.airline.utils.StringMethods;
 import ru.integrotech.su.inputparams.attractionAB.AttractionAbInput;
 import ru.integrotech.su.inputparams.attractionAB.Data;
@@ -54,6 +55,12 @@ public class AttractionAbTest {
             System.out.printf("%-17.17s -> %-15s\n", mask, newMask);
         }
 	}
+
+	@Test
+    public void TestGetPercent() {
+        Assert.assertEquals(NumberMethods.getPercent(25, 50), 13);
+        Assert.assertEquals(NumberMethods.getPercent(25, 49), 12);
+    }
 
     @Test
     public void LED_SVO_QNB() {
@@ -220,13 +227,13 @@ public class AttractionAbTest {
                         "DP10",
                         "basic");
         AttractionAbOutput expectedOutput =
-                AttractionAbOutput.of(5983,
+                AttractionAbOutput.of(5984,
                         "full",
                         "SU",
                         "SVO",
                         "VVO",
                         "full",
-                        5983);
+                        5984);
         AttractionAbOutput actualOutput = this.attractionAbBuilder.buildResult(input);
         Assert.assertEquals(actualOutput, expectedOutput);
     }
@@ -551,13 +558,13 @@ public class AttractionAbTest {
                         "",
                         "basic");
         AttractionAbOutput expectedOutput =
-                AttractionAbOutput.of(1276,
+                AttractionAbOutput.of(1277,
                         "full",
                         "SU",
                         "SVO",
                         "AER",
                         "full",
-                        1276);
+                        1277);
         AttractionAbOutput actualOutput = this.attractionAbBuilder.buildResult(input);
         Assert.assertEquals(actualOutput, expectedOutput);
     }
@@ -691,6 +698,116 @@ public class AttractionAbTest {
                         "AER",
                         "full",
                         1702);
+        AttractionAbOutput actualOutput = this.attractionAbBuilder.buildResult(input);
+        Assert.assertEquals(actualOutput, expectedOutput);
+    }
+
+    @Test
+    public void ROUND_01() {
+        AttractionAbInput input =
+                AttractionAbInput.of("SU",
+                        "SVO",
+                        "SVX",
+                        "E",
+                        "EFOR",
+                        "",
+                        "basic");
+        AttractionAbOutput expectedOutput =
+                AttractionAbOutput.of(1334,
+                        "full",
+                        "SU",
+                        "SVO",
+                        "SVX",
+                        "full",
+                        1334);
+        AttractionAbOutput actualOutput = this.attractionAbBuilder.buildResult(input);
+        Assert.assertEquals(actualOutput, expectedOutput);
+    }
+
+    @Test
+    public void ROUND_02() {
+        AttractionAbInput input =
+                AttractionAbInput.of("SU",
+                        "SVO",
+                        "SVX",
+                        "E",
+                        "ENOR",
+                        "",
+                        "basic");
+        AttractionAbOutput expectedOutput =
+                AttractionAbOutput.of(667,
+                        "full",
+                        "SU",
+                        "SVO",
+                        "SVX",
+                        "full",
+                        667);
+        AttractionAbOutput actualOutput = this.attractionAbBuilder.buildResult(input);
+        Assert.assertEquals(actualOutput, expectedOutput);
+    }
+
+    @Test
+    public void NOT_BASIC_TIER_CODE() {
+        AttractionAbInput input =
+                AttractionAbInput.of("SU",
+                        "SVO",
+                        "LED",
+                        "N",
+                        "NFOR",
+                        "",
+                        "silver");
+        AttractionAbOutput expectedOutput =
+                AttractionAbOutput.of(875,
+                        "full",
+                        "SU",
+                        "SVO",
+                        "LED",
+                        "full",
+                        875);
+        AttractionAbOutput actualOutput = this.attractionAbBuilder.buildResult(input);
+        Assert.assertEquals(actualOutput, expectedOutput);
+    }
+
+    @Test
+    public void BASIC_TIER_CODE() {
+        AttractionAbInput input =
+                AttractionAbInput.of("SU",
+                        "SVO",
+                        "LED",
+                        "N",
+                        "NFOR",
+                        "",
+                        "basic");
+        AttractionAbOutput expectedOutput =
+                AttractionAbOutput.of(750,
+                        "full",
+                        "SU",
+                        "SVO",
+                        "LED",
+                        "full",
+                        750);
+        AttractionAbOutput actualOutput = this.attractionAbBuilder.buildResult(input);
+        Assert.assertEquals(actualOutput, expectedOutput);
+    }
+
+    @Test
+    public void SVO_KJA_NNOR() {
+        AttractionAbInput input =
+                AttractionAbInput.of("SU",
+                        "SVO",
+                        "KJA",
+                        "N",
+                        "NNOR",
+                        "",
+                        "platinum");
+        AttractionAbOutput expectedOutput =
+                AttractionAbOutput.of(2714,
+                        "full",
+                        "SU",
+                        "SVO",
+                        "KJA",
+                        "full",
+                        2714);
         AttractionAbOutput actualOutput = this.attractionAbBuilder.buildResult(input);
         Assert.assertEquals(actualOutput, expectedOutput);
     }
