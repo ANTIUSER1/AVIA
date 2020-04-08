@@ -125,7 +125,8 @@ public class InputParamsTransformer {
 				ValidatorInputData.testCountry(registerCache, locationCode);
 				result.addAll(registerCache.getCountry(locationCode)
 						.getAirportMap().values());
-			} else if (locationType.equals(LocationType.region.toString())) {
+			} else if (locationType.equals(LocationType.region.toString())
+						|| locationType.equals(LocationType.worldregion.toString())) {
 				ValidatorInputData.testRegion(registerCache, locationCode);
 				result.addAll(registerCache.getRegion(locationCode)
 						.getAirportMap().values());

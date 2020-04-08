@@ -97,7 +97,7 @@ public class ChargeValidationAirlineTest {
 		validatorCharge.validateHardDataCharge(chargeInput);
 	}
 
-	@Test(expected = IllegalMonitorStateException.class)
+	@Test(expected = UnsupportedParamException.class)
 	public void AIRLINE_CODE_INCORRECT() throws Exception {
 
 		ChargeInput chargeInput = new ChargeInput();

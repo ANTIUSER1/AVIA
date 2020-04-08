@@ -54,7 +54,7 @@ public class MileRuleSearcher {
 
             foundRule = this.findByTicketDesignator(info);
             if (foundRule != null) {
-                info.setDistanceCoeff(foundRule.getBonusPercent()/100.00);
+                info.setDistanceCoeff(foundRule.getBonusPercent());
                 info.setStatus(Status.full);
                 info.setPercent(-1);
                 continue;
@@ -62,7 +62,7 @@ public class MileRuleSearcher {
 
             foundRule = this.findByFare(info, MilesRule.RULE_TYPE.PF);
             if (foundRule != null) {
-                info.setDistanceCoeff(foundRule.getBonusPercent()/100.00);
+                info.setDistanceCoeff(foundRule.getBonusPercent());
                 info.setStatus(Status.full);
                 info.setPercent(-1);
                 continue;
@@ -70,7 +70,7 @@ public class MileRuleSearcher {
 
             foundRule = this.findByFare(info, MilesRule.RULE_TYPE.SF);
             if (foundRule != null) {
-                info.setDistanceCoeff(foundRule.getBonusPercent()/100.00);
+                info.setDistanceCoeff(foundRule.getBonusPercent());
                 info.setStatus(Status.full);
                 info.setPercent(-1);
                 continue;
@@ -78,7 +78,7 @@ public class MileRuleSearcher {
 
             foundRule = this.findByBookingClass(info);
             if (foundRule != null) {
-                info.setDistanceCoeff(foundRule.getBonusPercent()/100.00);
+                info.setDistanceCoeff(foundRule.getBonusPercent());
                 info.setStatus(Status.full);
                 info.setPercent(-1);
                 continue;

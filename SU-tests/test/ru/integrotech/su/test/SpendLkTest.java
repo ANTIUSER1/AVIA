@@ -441,7 +441,7 @@ public class SpendLkTest {
 	public void SVO_WORLD_01() throws Exception {
 		SpendInput spendInput = SpendInput.of("airport", // from type
 				"SVO",// from
-				null, // to type
+				"world", // to type
 				null, // to
 				-1, // miles min
 				100000, // miles max

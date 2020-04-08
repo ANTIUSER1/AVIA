@@ -43,12 +43,12 @@ public class AttractionAbUtils {
 		this.registers = registers;
 	}
 
-	public double getTierLevelFactor(AttractionAbInput input) {
+	public int getTierLevelFactor(AttractionAbInput input) {
 		String passengerTierLevel = input.getData().getTierCode();
 		if (StringMethods.isEmpty(passengerTierLevel)) {
 			passengerTierLevel = DEFAULT_TIER_LEVEL;
 		}
-		return registers.getLoyaltyMap().get(passengerTierLevel).getFactor() / 100.00;
+		return registers.getLoyaltyMap().get(passengerTierLevel).getFactor();
 	}
 
 	public List<PassengerMilesInfo> toPassengerChargeInfo(
