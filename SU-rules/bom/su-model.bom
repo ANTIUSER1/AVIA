@@ -37,6 +37,18 @@ public class ChargeLoyaltyRequest
     public static ru.integrotech.su.inputparams.chargeLoyalty.ChargeLoyaltyRequest of(string arg1, int arg2, string arg3);
 }
 
+package ru.integrotech.su.inputparams.grouping;
+
+
+public class InputParamsGrouping
+{
+    public string app;
+    public string mapEngine;
+    public java.lang.Integer zoomLevel;
+    public InputParamsGrouping();
+    public string toString();
+}
+
 package ru.integrotech.su.inputparams.spend;
 
 
@@ -157,6 +169,31 @@ public class ChargeLoyaltyResponse
     public ChargeLoyaltyResponse();
     public static ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyResponse of(ru.integrotech.airline.core.info.PassengerLoyaltyInfo arg);
     public static ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyResponse of(string arg1, string arg2);
+}
+
+package ru.integrotech.su.outputparams.grouping;
+
+
+public class GroupingBuilder
+{
+    public GroupingBuilder();
+    public ru.integrotech.su.outputparams.grouping.GroupingTable buildResult(ru.integrotech.su.inputparams.grouping.InputParamsGrouping arg);
+    public static java.lang.String[] getRegisterNames();
+    public static ru.integrotech.su.outputparams.grouping.GroupingBuilder of(ru.integrotech.airline.register.RegisterCache arg);
+}
+
+public class GroupingTable
+{
+    public java.util.List engines domain 0,* class ru.integrotech.su.outputparams.grouping.MapEngine;
+    public GroupingTable();
+}
+
+public class ResultGrouping
+{
+    public string groupingLevel;
+    public ru.integrotech.su.outputparams.grouping.GroupingTable groupingTable;
+    public ResultGrouping();
+    public string toString();
 }
 
 package ru.integrotech.su.outputparams.spend;
