@@ -81,19 +81,29 @@ public class ValidatorSpend {
 	private void testNotNullDestination(SpendInput spendInput)
 			throws UnsupportedParamException {
 		if (spendInput.getDestination() != null) {
-			if (StringMethods.isEmpty(spendInput.getDestination()
-					.getLocationType())
-					&& !StringMethods.isEmpty(spendInput.getDestination()
-							.getLocationCode())) {
-				throw new UnsupportedParamException(SOURCE_OF_MESSAGE
-						+ " : The type of destination point data is empty");
+
+			if (
+
+			StringMethods
+					.isEmpty(spendInput.getDestination().getLocationType())
+					|| spendInput.getDestination().getLocationType()
+							.equals(LocationType.world.name())) {
+				if (!StringMethods.isEmpty(spendInput.getDestination()
+						.getLocationCode())) {
+					throw new UnsupportedParamException(
+							SOURCE_OF_MESSAGE
+									+ " : The code of destination point data must be empty");
+
+				}
+			} else {
+				testValidLocation(spendInput);
+				if (StringMethods.isEmpty(spendInput.getDestination()
+						.getLocationCode())) {
+					throw new UnsupportedParamException(SOURCE_OF_MESSAGE
+							+ " : The type of destination point data is empty");
+				}
 			}
-            if (StringMethods.isEmpty(spendInput.getDestination().getLocationCode())
-                    && !StringMethods.isEmpty(spendInput.getDestination().getLocationType())
-                    && !spendInput.getDestination().getLocationType().equals(LocationType.world.name())) {
-                throw new UnsupportedParamException(SOURCE_OF_MESSAGE
-                        + " : The code of destination point data is empty");
-            }
+
 		}
 	}
 
@@ -114,7 +124,8 @@ public class ValidatorSpend {
 		}
 	}
 
-	private void testValidLocation(SpendInput spendInput) throws Exception {
+	private void testValidLocation(SpendInput spendInput)
+			throws UnsupportedParamException {
 
 		String locationType = spendInput.getOrigin().getLocationType();
 		if (!EnumMethods.containsLower(LocationType.class, locationType))
