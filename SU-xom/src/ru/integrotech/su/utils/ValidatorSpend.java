@@ -22,7 +22,6 @@ public class ValidatorSpend {
 		spendInput.initDefaultParameters();
 		testNotNullLocation(spendInput);
 		testNotNullServiceClass(spendInput);
-		testValidLocation(spendInput);
 		testValidMiles(spendInput);
 		testValidAwards(spendInput);
 		testValidLang(spendInput);
