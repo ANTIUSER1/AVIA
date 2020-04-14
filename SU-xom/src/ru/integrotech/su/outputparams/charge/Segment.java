@@ -30,14 +30,14 @@ class Segment {
 	 * @return
 	 */
 	public static Segment of(Flight flight, Airline airline) {
-		Map<ServiceClass, MilesAmount> milesAmounts = new LinkedHashMap<>();
+		Map<Airline, MilesAmount> milesAmounts = new LinkedHashMap<>();
 		for (PassengerChargeInfo charge : flight.getCarriers().get(airline)
 				.getPassengerChargeInfos()) {
-			if (!milesAmounts.containsKey(charge.getServiceClass())) {
-				milesAmounts.put(charge.getServiceClass(),
+			if (!milesAmounts.containsKey(charge.getAirline())) {
+				milesAmounts.put(charge.getAirline(),
 						MilesAmount.of(charge));
 			} else {
-				milesAmounts.get(charge.getServiceClass()).update(charge);
+				milesAmounts.get(charge.getAirline()).update(charge);
 			}
 		}
 		Segment res = new Segment();
@@ -48,14 +48,14 @@ class Segment {
 	}
 
 	public static Segment of(Flight flight) {
-		Map<ServiceClass, MilesAmount> milesAmounts = new LinkedHashMap<>();
+		Map<Airline, MilesAmount> milesAmounts = new LinkedHashMap<>();
 		for (FlightCarrier carrier : flight.getCarriers().values()) {
 			for (PassengerChargeInfo charge : carrier.getPassengerChargeInfos())
-				if (!milesAmounts.containsKey(charge.getServiceClass())) {
-					milesAmounts.put(charge.getServiceClass(),
+				if (!milesAmounts.containsKey(charge.getAirline())) {
+					milesAmounts.put(charge.getAirline(),
 							MilesAmount.of(charge));
 				} else {
-					milesAmounts.get(charge.getServiceClass()).update(charge);
+					milesAmounts.get(charge.getAirline()).update(charge);
 				}
 		}
 
