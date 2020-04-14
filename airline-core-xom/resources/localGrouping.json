@@ -1,0 +1,107 @@
+[
+	{
+		"mapEngine": "google",
+		"app": "desktop",
+		"groupingLevel": "city",
+		"zoomLevelMin": 5,
+		"zoomLevelMax": 7
+	},
+	{
+		"mapEngine": "google",
+		"app": "desktop",
+		"groupingLevel": "country",
+		"zoomLevelMin": 3,
+		"zoomLevelMax": 5
+	},
+	{
+		"mapEngine": "google",
+		"app": "desktop",
+		"groupingLevel": "region",
+		"zoomLevelMin": 2,
+		"zoomLevelMax": 3
+	},
+	{
+		"mapEngine": "google",
+		"app": "mobile",
+		"groupingLevel": "airport",
+		"zoomLevelMin": 0,
+		"zoomLevelMax": 7
+	},
+	{
+		"mapEngine": "google",
+		"app": "mobile",
+		"groupingLevel": "city",
+		"zoomLevelMin": 7,
+		"zoomLevelMax": 13
+	},
+	{
+		"mapEngine": "google",
+		"app": "mobile",
+		"groupingLevel": "country",
+		"zoomLevelMin": 13,
+		"zoomLevelMax": 26
+	},
+	{
+		"mapEngine": "google",
+		"app": "mobile",
+		"groupingLevel": "region",
+		"zoomLevelMin": 26,
+		"zoomLevelMax": 30
+	},
+	{
+		"mapEngine": "yandex",
+		"app": "desktop",
+		"groupingLevel": "airport",
+		"zoomLevelMin": 0,
+		"zoomLevelMax": 10
+	},
+	{
+		"mapEngine": "yandex",
+		"app": "desktop",
+		"groupingLevel": "city",
+		"zoomLevelMin": 10,
+		"zoomLevelMax": 20
+	},
+	{
+		"mapEngine": "yandex",
+		"app": "desktop",
+		"groupingLevel": "country",
+		"zoomLevelMin": 20,
+		"zoomLevelMax": 30
+	},
+	{
+		"mapEngine": "yandex",
+		"app": "desktop",
+		"groupingLevel": "region",
+		"zoomLevelMin": 30,
+		"zoomLevelMax": 40
+	},
+	{
+		"mapEngine": "yandex",
+		"app": "mobile",
+		"groupingLevel": "airport",
+		"zoomLevelMin": 0,
+		"zoomLevelMax": 7
+	},
+	{
+		"mapEngine": "yandex",
+		"app": "mobile",
+		"groupingLevel": "city",
+		"zoomLevelMin": 7,
+		"zoomLevelMax": 13
+	},
+	{
+		"mapEngine": "yandex",
+		"app": "mobile",
+		"groupingLevel": "country",
+		"zoomLevelMin": 13,
+		"zoomLevelMax": 26
+	},
+	{
+		"mapEngine": "yandex",
+		"app": "mobile",
+		"groupingLevel": "region",
+		"zoomLevelMin": 26,
+		"zoomLevelMax": 30
+	}
+]

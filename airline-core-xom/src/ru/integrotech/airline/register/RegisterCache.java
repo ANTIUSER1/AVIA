@@ -57,6 +57,8 @@ public class RegisterCache {
 
     private Map<String, Integer> loyaltyLevelCodeMap;
 
+    private List<GroupingRecord> groupingRecords;
+
     public Collection<Airline> getAirlines() {
         return this.airlineMap.values();
     }
@@ -129,6 +131,10 @@ public class RegisterCache {
         return loyaltyLevelCodeMap;
     }
 
+    public List<GroupingRecord> getGroupingRecords() {
+        return groupingRecords;
+    }
+
     public void update(String registerName, JsonElement jsonElement) {
         switch (registerName) {
             case "airline":
@@ -170,8 +176,8 @@ public class RegisterCache {
             case "mileAccrualRule":
                 this.initMilesRules(jsonElement);
                 break;
-            case "localLoyaltyLevelCode":
-                this.initLoyaltyLevelCodes(jsonElement);
+            case "localGrouping":
+                this.initGrouping(jsonElement);
                 break;
         }
     }
@@ -442,12 +448,11 @@ public class RegisterCache {
         this.milesRules = new ArrayList<>(Arrays.asList(milesRules));
     }
 
-    //TODO remove after add onlineRegAvail project
-    private void initLoyaltyLevelCodes(JsonElement jsonElement) {
-        LoyaltyLevelCodeRecord[] records = parseJsonElement(LoyaltyLevelCodeRecord[].class, jsonElement);
-        this.loyaltyLevelCodeMap = new HashMap<>();
-        for (LoyaltyLevelCodeRecord record : records) {
-            this.loyaltyLevelCodeMap.put(record.getLevel(), record.getPercent());
+    private void initGrouping(JsonElement jsonElement) {
+        GroupingRecord[] records = parseJsonElement(GroupingRecord[].class, jsonElement);
+        this.groupingRecords = new ArrayList<>();
+        for (GroupingRecord record : records) {
+            this.groupingRecords.add(record);
         }
     }
 

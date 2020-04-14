@@ -18,10 +18,12 @@ try {]]>&#13;<![CDATA[
 } catch (Exception e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
 	loader.release();]]>&#13;<![CDATA[
+	System.out.println("Cache  was released successfully by exception");]]>&#13;<![CDATA[
 	throw e;]]>&#13;<![CDATA[
 } catch (RuntimeException e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
 	loader.release();]]>&#13;<![CDATA[
+	System.out.println("Cache  was released successfully by runtimeException");]]>&#13;<![CDATA[
 	throw e;]]>&#13;<![CDATA[
 }]]></Actions>
       </StartTask>
@@ -31,10 +33,12 @@ try {]]>&#13;<![CDATA[
 } catch (Exception e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
 	loader.release();]]>&#13;<![CDATA[
+	System.out.println("Cache  was released successfully by exception");]]>&#13;<![CDATA[
 	throw e;]]>&#13;<![CDATA[
 } catch (RuntimeException e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
 	loader.release();]]>&#13;<![CDATA[
+	System.out.println("Cache  was released successfully by runtimeException");]]>&#13;<![CDATA[
 	throw e;]]>&#13;<![CDATA[
 }]]></Actions>
       </ActionTask>
@@ -42,9 +46,7 @@ try {]]>&#13;<![CDATA[
         <Actions Language="irl"><![CDATA[try {]]>&#13;<![CDATA[
 ]]>&#13;<![CDATA[
 	routes = chargeBuilder.getRoutes(chargeRequest); ]]>&#13;<![CDATA[
-	]]>&#13;<![CDATA[
 	loyaltyFactor = chargeBuilder.getFactor(chargeRequest); ]]>&#13;<![CDATA[
-	]]>&#13;<![CDATA[
 	foreach (Route route in routes) {]]>&#13;<![CDATA[
 		List flights = route.flights;]]>&#13;<![CDATA[
 		foreach (Flight flight in flights ) {]]>&#13;<![CDATA[
@@ -69,7 +71,7 @@ try {]]>&#13;<![CDATA[
 } catch (RuntimeException e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
 	loader.release();]]>&#13;<![CDATA[
-	System.out.println("Cache  was released successfully by exception");]]>&#13;<![CDATA[
+	System.out.println("Cache  was released successfully by runtimeException");]]>&#13;<![CDATA[
 	throw e;]]>&#13;<![CDATA[
 }]]>&#13;<![CDATA[
 ]]></Actions>
@@ -181,7 +183,7 @@ try {]]>&#13;<![CDATA[
       <Data Name="node_6#x">162.15027</Data>
       <Data Name="node_5#width">115.42681</Data>
       <Data Name="node_6#y">-184.96214</Data>
-      <Data Name="node_0#x">-42.0</Data>
+      <Data Name="node_0#x">-45.0</Data>
       <Data Name="node_0#y">-351.0</Data>
       <Data Name="node_2#x">-38.0</Data>
       <Data Name="node_2#y">100.0</Data>
