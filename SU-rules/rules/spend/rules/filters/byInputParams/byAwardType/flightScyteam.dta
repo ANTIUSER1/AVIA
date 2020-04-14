@@ -37,7 +37,7 @@
       <Partition DefId="C0">
         <Condition>
           <Expression>
-            <Param><![CDATA["ticket"]]></Param>
+            <Param><![CDATA["TICKET"]]></Param>
           </Expression>
           <Partition DefId="C1">
             <Condition>
@@ -74,7 +74,7 @@
         </Condition>
         <Condition>
           <Expression>
-            <Param><![CDATA["upgrade"]]></Param>
+            <Param><![CDATA["UPGRADE"]]></Param>
           </Expression>
           <Partition DefId="C1">
             <Condition>

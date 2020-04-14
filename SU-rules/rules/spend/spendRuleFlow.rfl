@@ -23,7 +23,9 @@
 }]]>&#13;<![CDATA[
 ]]></Actions>
       </ActionTask>
-      <SubflowTask Identifier="spendBaseFlow" Uuid="f9d8a44a-4297-4533-be08-aa9dfdfb4872"/>
+      <SubflowTask Identifier="spendBaseFlow" Uuid="f9d8a44a-4297-4533-be08-aa9dfdfb4872">
+        <InitialActions/>
+      </SubflowTask>
       <SubflowTask Identifier="task_2" Uuid="19499af0-e39d-4363-9172-3ad109605316"/>
       <StopTask Identifier="task_1">
         <Actions Language="irl"><![CDATA[ ]]></Actions>
@@ -68,6 +70,7 @@
       <Data Name="node_1#name">node_2</Data>
       <Data Name="node_2#label">Build routes</Data>
       <Data Name="node_3#width">102.0</Data>
+      <Data Name="node_4#name">node_4</Data>
       <Data Name="node_1#width">24.0</Data>
       <Data Name="node_0#name">node_0</Data>
       <Data Name="node_3#name">node_3</Data>
