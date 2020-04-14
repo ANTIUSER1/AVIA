@@ -2,14 +2,6 @@
 property loadGetterSetterAsProperties "true"
 property origin "xom:/SU-IKM-RULES/SU-xom"
 property uuid "5c7be9dd-1aca-4de3-b95d-b9aeba81ea7c"
-package ru.integrotech.su.inputparams.attractionAB;
-
-
-public class AttractionAbInput
-{
-    public readonly ru.integrotech.su.inputparams.attractionAB.Data data;
-}
-
 package ru.integrotech.su.inputparams.charge;
 
 
@@ -22,19 +14,6 @@ public class ChargeInput
     public ru.integrotech.su.inputparams.charge.TierLevel tierLevel;
     public ChargeInput();
     public static ru.integrotech.su.inputparams.charge.ChargeInput of(string arg1, string arg2, string arg3, string arg4, string arg5, string arg6, boolean arg7);
-}
-
-package ru.integrotech.su.inputparams.chargeLoyalty;
-
-
-public class ChargeLoyaltyRequest
-{
-    public readonly string accountingCode;
-    public readonly ru.integrotech.su.inputparams.chargeLoyalty.Data data;
-    public string paymentType;
-    public readonly int tariffSum;
-    public ChargeLoyaltyRequest();
-    public static ru.integrotech.su.inputparams.chargeLoyalty.ChargeLoyaltyRequest of(string arg1, int arg2, string arg3);
 }
 
 package ru.integrotech.su.inputparams.grouping;
@@ -79,62 +58,6 @@ public class SpendInput
     public static ru.integrotech.su.inputparams.spend.SpendInput of();
 }
 
-package ru.integrotech.su.ioparams;
-
-
-public class CheckOnlineRegistrationAvailable
-{
-    public string airlineCode;
-    public string departureAirportCode;
-    public int flightNumber;
-    public boolean onlineRegistrationAvailable;
-    public ru.integrotech.airline.core.info.PassengerFlightInfo passengerFlightInfo;
-    public java.util.List ssrCodes domain 0,* class string;
-    public CheckOnlineRegistrationAvailable();
-}
-
-package ru.integrotech.su.outputparams.attractionAB;
-
-
-public class AttractionAbBuilder
-{
-    public ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput buildResult(ru.integrotech.su.inputparams.attractionAB.AttractionAbInput arg);
-    public ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput buildResult(java.util.List arg1 domain 0,* class ru.integrotech.airline.core.info.PassengerMilesInfo, 
-        ru.integrotech.su.inputparams.attractionAB.AttractionAbInput arg2);
-    public java.util.List getInfos(ru.integrotech.su.inputparams.attractionAB.AttractionAbInput arg) domain 0,* class ru.integrotech.airline.core.info.PassengerMilesInfo;
-    public int getMultiplication(double[] arg);
-    public static java.lang.String[] getRegisterNames();
-    public double getTierLevelFactor(ru.integrotech.su.inputparams.attractionAB.AttractionAbInput arg);
-    public static ru.integrotech.su.outputparams.attractionAB.AttractionAbBuilder of(ru.integrotech.airline.register.RegisterCache arg);
-}
-
-public class AttractionAbOutput
-{
-    public java.util.List segments domain 0,* class ru.integrotech.su.outputparams.attractionAB.Segment;
-    public int totalMiles;
-    public ru.integrotech.airline.core.info.PassengerMilesInfo.Status totalStatus;
-    public static ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput of(java.util.Map arg1, 
-        int arg2, 
-        java.util.List arg3 domain 0,* class ru.integrotech.su.outputparams.attractionAB.Segment);
-}
-
-public class Segment
-{
-    public string airlineIATA;
-    public string bookingClassCode;
-    public string destinationIATA;
-    public string fareBasisCode;
-    public int miles;
-    public string originIATA;
-    public java.lang.Integer percent;
-    public ru.integrotech.airline.core.info.PassengerMilesInfo.Status status;
-    public string ticketDesignator;
-    public Segment();
-    public boolean equals(object arg);
-    public int hashCode();
-    public static ru.integrotech.su.outputparams.attractionAB.Segment of(ru.integrotech.airline.core.info.PassengerMilesInfo arg);
-}
-
 package ru.integrotech.su.outputparams.charge;
 
 
@@ -156,19 +79,6 @@ public class ResultMilesCharge
     public java.util.List routes domain 0,* class ru.integrotech.su.outputparams.charge.ChargeRoute;
     public ResultMilesCharge();
     public static ru.integrotech.su.outputparams.charge.ResultMilesCharge of(java.util.List arg domain 0,* class ru.integrotech.su.outputparams.charge.ChargeRoute);
-}
-
-package ru.integrotech.su.outputparams.chargeLoyalty;
-
-
-public class ChargeLoyaltyResponse
-{
-    public ru.integrotech.su.outputparams.chargeLoyalty.Data data;
-    public string errCode;
-    public string errMessage;
-    public ChargeLoyaltyResponse();
-    public static ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyResponse of(ru.integrotech.airline.core.info.PassengerLoyaltyInfo arg);
-    public static ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyResponse of(string arg1, string arg2);
 }
 
 package ru.integrotech.su.outputparams.grouping;
