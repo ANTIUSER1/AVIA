@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>commonVariables</name>
+  <uuid>9308602b-3c11-4875-9c9e-b512f3e9a8ab</uuid>
+  <variables name="routes" type="java.util.List" initialValue="" verbalization="routes"/>
+  <variables name="loader" type="ru.integrotech.airline.register.RegisterLoader" initialValue="" verbalization="loader"/>
+</ilog.rules.studio.model.base:VariableSet>
