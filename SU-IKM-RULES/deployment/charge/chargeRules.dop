@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="calcChargedMiles" usingRuleflow="true" ruleflowName="chargeRulesFlow" targetRuleProjectName="SU-IKM-RULES">
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="calcChargedMiles" usingRuleflow="true" ruleflowName="chargeRuleInitFlow" targetRuleProjectName="SU-IKM-RULES">
   <name>chargeRules</name>
   <uuid>ee22f04a-0e2f-402b-aac5-f1326fba3474</uuid>
   <referencedVariables variableName="chargeResponse" variableSetName="chargeParams" direction="OUT">
@@ -8,7 +8,7 @@
   <referencedVariables variableName="chargeRequest" variableSetName="chargeParams">
     <variableSet href="../../rules/chargeParams.var#fdffb488-cc86-4d4f-9884-5ecf59aa309b"/>
   </referencedVariables>
-  <ruleflow href="../../rules/charge/chargeRulesFlow.rfl#422b1f69-2bf0-44d7-b59f-d5d83df861d7"/>
+  <ruleflow href="../../rules/charge/chargeRuleInitFlow.rfl#19107dd1-53e3-4ba3-b5ac-03465a40e8b1"/>
   <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="chargechargeRules_extractor" validator="Default Validator"/>
   <targetRuleProject href="../../../SU-IKM-RULES#589bed8c-1e6b-4ad3-aa0b-40d95f794d5e"/>
 </com.ibm.rules.studio.model.decisionservice:Operation>

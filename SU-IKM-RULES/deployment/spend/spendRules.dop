@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="calcSpendMiles" usingRuleflow="true" ruleflowName="spendRuleFlow" targetRuleProjectName="SU-IKM-RULES">
+  <name>spendRules</name>
+  <uuid>155cb21c-bdaa-4749-85d1-08dbad204ae7</uuid>
+  <referencedVariables variableName="spendRequest" variableSetName="spendParams">
+    <variableSet href="../../rules/spendParams.var#a6b7e65e-a3cb-4f0b-89e8-82ef4c24716e"/>
+  </referencedVariables>
+  <referencedVariables variableName="spendResponse" variableSetName="spendParams" direction="OUT">
+    <variableSet href="../../rules/spendParams.var#a6b7e65e-a3cb-4f0b-89e8-82ef4c24716e"/>
+  </referencedVariables>
+  <ruleflow href="../../rules/spend/spendRuleFlow.rfl#64d106ba-7a24-4585-8a32-3ed5d0f2641a"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="spendspendRules_extractor" validator="Default Validator"/>
+  <targetRuleProject href="../../../SU-IKM-RULES#589bed8c-1e6b-4ad3-aa0b-40d95f794d5e"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

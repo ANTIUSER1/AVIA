@@ -8,7 +8,9 @@
 <Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
   <Body>
     <TaskList>
-      <StartTask Identifier="task_0"/>
+      <StartTask Identifier="task_0">
+        <Actions Language="irl"><![CDATA[System.err.println("1111111112222222222111111111111112222222222");]]></Actions>
+      </StartTask>
       <SubflowTask Identifier="task_1" Uuid="422b1f69-2bf0-44d7-b59f-d5d83df861d7"/>
       <SubflowTask Identifier="task_2" Uuid="ebf2ebf9-e77f-4a13-9b79-e846c95b0297"/>
       <StopTask Identifier="task_3"/>
@@ -31,6 +33,8 @@
       <Data Name="node_1#height">40.0</Data>
       <Data Name="node_3#height">22.0</Data>
       <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_1#name">node_1</Data>
+      <Data Name="node_2#name">node_2</Data>
       <Data Name="node_3#width">22.0</Data>
       <Data Name="node_1#width">134.70703</Data>
       <Data Name="node_0#name">node_0</Data>

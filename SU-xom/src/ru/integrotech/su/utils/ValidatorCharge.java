@@ -45,6 +45,7 @@ public class ValidatorCharge {
 	}
 
 	private void testNotNullTierLevel(ChargeInput chargeInput) throws Exception {
+
 		if (chargeInput.getTierLevel() == null) {
 			throw new UnsupportedParamException(SOURCE_OF_MESSAGE
 					+ " : The TierLevel data is empty");

@@ -12,7 +12,9 @@
         <Actions Language="irl"><![CDATA[validatorCharge=new ValidatorCharge();]]></Actions>
       </StartTask>
       <ActionTask Identifier="ValidateCharge">
-        <Actions Language="irl"><![CDATA[validatorCharge.validateHardDataCharge(chargeRequest);]]></Actions>
+        <Actions Language="irl"><![CDATA[ ]]>&#13;<![CDATA[
+validatorCharge.validateHardDataCharge(chargeRequest);]]>&#13;<![CDATA[
+ ]]></Actions>
       </ActionTask>
       <StopTask Identifier="task_1"/>
     </TaskList>
@@ -31,8 +33,8 @@
       <Data Name="node_2#height">53.402344</Data>
       <Data Name="node_0#height">21.0</Data>
       <Data Name="node_1#name">node_2</Data>
-      <Data Name="node_2#name">node_3</Data>
       <Data Name="node_2#label">Validate Charge</Data>
+      <Data Name="node_2#name">node_3</Data>
       <Data Name="node_0#name">node_0</Data>
       <Data Name="node_2#width">124.72267</Data>
       <Data Name="node_0#width">21.0</Data>
