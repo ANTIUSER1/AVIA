@@ -25,7 +25,7 @@ public class RoutesToString {
 
 	@BeforeClass
 	public static void updateRegisters() {
-		MockLoader.getInstance().updateRegisters(REGISTERS_TYPE.REAL,
+		MockLoader.getInstance().updateRegisters(REGISTERS_TYPE.MOCK,
 				SpendBuilder.getRegisterNames());
 	}
 
@@ -62,10 +62,10 @@ public class RoutesToString {
 	public void printRoutesWithDetails() throws Exception {
 
 		RoutesInput routesInput = RoutesInput.of("Airport", // destination type
-				"KGD", // origin
+				"LED", // origin
 				"aIrport", // destination type
-				"STR", // destination
-				null // airline code
+				"UFA", // destination
+				"su" // airline code
 				);
 
 		List<Route> routes = this.routesBuilder.getRoutes(routesInput);

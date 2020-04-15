@@ -160,13 +160,13 @@ public class ChargeTest {
 	@Test
 	public void PRINT_ACTUAL() throws Exception {
 		ChargeInput chargeInput = ChargeInput.of("airport", // from type
-				"LED", // from
+				"SVO", // from
 				"airport", // to type
-				"UFA", // to
+				"LED", // to
 				null, // airline
 				"gold", // tierLevelCode
 				false // isRound
-				);
+		);
 		List<ChargeRoute> actualCharge = this.chargeBuilder
 				.getChargeRoutes(chargeInput);
 		this.comparator.sort(actualCharge);
@@ -201,6 +201,22 @@ public class ChargeTest {
 				.getChargeRoutes(chargeInput);
 		List<ChargeRoute> expectedCharge = this.getExpected("SVO-LED-00.json");
 		this.comparator.testIsPresent(actualCharge, expectedCharge.get(0));
+	}
+
+	@Test
+	public void SVO_LED_01_multi_airlines() throws Exception {
+		ChargeInput chargeInput = ChargeInput.of("airport", // from type
+				"SVO", // from
+				"airport", // to type
+				"LED", // to
+				null, // airline
+				"gold", // tierLevelCode
+				false // isRound
+		);
+		List<ChargeRoute> actualCharge = this.chargeBuilder
+				.getChargeRoutes(chargeInput);
+		List<ChargeRoute> expectedCharge = this.getExpected("SVO-LED-01.json");
+		this.comparator.testIsEquals(actualCharge, expectedCharge);
 	}
 
 	@Test
