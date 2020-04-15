@@ -163,7 +163,7 @@ public class SpendInput {
             }
         }
 
-        if (this.milesInterval == null || (this.milesInterval.getMilesMin() == 0 && this.milesInterval.getMilesMax() == 0)) {
+        if (this.milesInterval == null) {
             this.milesInterval = MilesInterval.of(10000, 250000);
         }
 

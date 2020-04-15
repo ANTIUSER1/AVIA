@@ -284,7 +284,7 @@ public class SpendValidationTest {
         Assert.assertEquals(spendInput.getMilesInterval().getMilesMax(), 250000);
 	}
 
-    @Test
+    @Test(expected = UnsupportedParamException.class)
     public void MILES_INTERVAL_EMPTY() throws Exception {
         SpendInput spendInput = new SpendInput();
         spendInput.setOrigin(LocationInput.of("airport", "SVO"));
@@ -296,12 +296,38 @@ public class SpendValidationTest {
         spendInput.setIsRoundTrip(true);
         spendInput.setLang("ru");
         this.validatorSpend.validateHardDataSpend(spendInput);
-        this.spendBuilder.getSpendRoutes(spendInput);
-        Assert.assertEquals(spendInput.getMilesInterval().getMilesMin(), 10000);
-        Assert.assertEquals(spendInput.getMilesInterval().getMilesMax(), 250000);
     }
 
-	@Test
+    @Test(expected = UnsupportedParamException.class)
+    public void MILES_INTERVAL() throws Exception {
+        SpendInput spendInput = new SpendInput();
+        spendInput.setOrigin(LocationInput.of("airport", "SVO"));
+        spendInput.setDestination(LocationInput.of("airport", "LED"));
+        spendInput.setMilesInterval(MilesInterval.of(2,1));
+        spendInput.setClassOfService(ClassOfService.of("economy"));
+        spendInput.setAwardType("all");
+        spendInput.setIsOnlyAfl(true);
+        spendInput.setIsRoundTrip(true);
+        spendInput.setLang("ru");
+        this.validatorSpend.validateHardDataSpend(spendInput);
+    }
+
+    @Test(expected = UnsupportedParamException.class)
+    public void MILES_INTERVAL_NEGATIVE() throws Exception {
+        SpendInput spendInput = new SpendInput();
+        spendInput.setOrigin(LocationInput.of("airport", "SVO"));
+        spendInput.setDestination(LocationInput.of("airport", "LED"));
+        spendInput.setMilesInterval(MilesInterval.of(0,-1));
+        spendInput.setClassOfService(ClassOfService.of("economy"));
+        spendInput.setAwardType("all");
+        spendInput.setIsOnlyAfl(true);
+        spendInput.setIsRoundTrip(true);
+        spendInput.setLang("ru");
+        this.validatorSpend.validateHardDataSpend(spendInput);
+    }
+
+
+    @Test
 	public void ROUND_TRIP_NULL() throws Exception {
 		SpendInput spendInput = new SpendInput();
 		spendInput.setOrigin(LocationInput.of("airport", "SVO"));
