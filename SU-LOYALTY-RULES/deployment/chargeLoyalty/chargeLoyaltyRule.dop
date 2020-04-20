@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="chargeLoyalty" usingRuleflow="true" ruleflowName="chargeLoyaltyRuleFlow" targetRuleProjectName="SU-LOYALTY-RULES">
+  <name>chargeLoyaltyRule</name>
+  <uuid>6228ab57-2918-45a7-b04d-708f85cd6d7b</uuid>
+  <referencedVariables variableName="chargeLoyaltyRequest" variableSetName="ruleVariables">
+    <variableSet href="../../rules/ruleVariables.var#5c490078-4ea4-41bf-b3ca-98f2b84b1538"/>
+  </referencedVariables>
+  <referencedVariables variableName="chargeLoyaltyResponse" variableSetName="ruleVariables" direction="OUT">
+    <variableSet href="../../rules/ruleVariables.var#5c490078-4ea4-41bf-b3ca-98f2b84b1538"/>
+  </referencedVariables>
+  <ruleflow href="../../rules/chargeLoyalty/chargeLoyaltyRuleFlow.rfl#b2c72b6b-57f4-48b4-aba0-7aed76459591"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="chargeLoyaltyRule_extractor" validator="Default Validator"/>
+  <targetRuleProject href="../../../SU-LOYALTY-RULES#5ee0df92-953e-41f5-821f-62417320a287"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

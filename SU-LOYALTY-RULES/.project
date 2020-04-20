@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>SU-CHECK_ONLINE_REGISTRATION_AVAILABLE-RULES</name>
+	<name>SU-LOYALTY-RULES</name>
 	<comment></comment>
 	<projects>
 		<project>airline-core-rules</project>
 		<project>airline-core-xom</project>
-		<project>SU-CHECK_ONLINE_REGISTRATION_AVAILABLE-XOM</project>
+		<project>SU-LOYALTY-XOM</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

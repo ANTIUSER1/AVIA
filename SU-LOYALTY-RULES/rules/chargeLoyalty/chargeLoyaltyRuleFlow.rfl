@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
   <name>chargeLoyaltyRuleFlow</name>
-  <uuid>3517a1c7-ad6a-48e6-acbd-39ca43f8b0dc</uuid>
+  <uuid>b2c72b6b-57f4-48b4-aba0-7aed76459591</uuid>
   <locale>ru_RU</locale>
   <categories>any</categories>
   <rfModel>
@@ -37,23 +37,23 @@ passengerLoyaltyInfo = PassengerLoyaltyInfo.of(chargeLoyaltyRequest.paymentType,
       </ActionTask>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="task_3" Ordering="Default">
         <RuleList>
-          <Rule Uuid="ea3849ec-efcc-4c1e-bff5-6cc8c0d8fe1d"/>
-          <Rule Uuid="603be50e-0a00-4baf-979c-4bd02e85e130"/>
+          <Rule Uuid="b26f3323-9e91-4993-b6b8-d91db8322e8f"/>
+          <Rule Uuid="c0dc652f-2b23-45b8-b715-efdf0f740577"/>
         </RuleList>
       </RuleTask>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Validate_tariff_sum" Ordering="Default">
         <RuleList>
-          <Rule Uuid="928af27a-1c4d-44ff-af53-328854024d7c"/>
+          <Rule Uuid="d2e18e80-1f6d-434c-9525-f776448d8eef"/>
         </RuleList>
       </RuleTask>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Get_Percent" Ordering="Default">
         <RuleList>
-          <Rule Uuid="36589c06-08d2-4593-a528-b0b2edcffacb"/>
+          <Rule Uuid="ca6b1b9b-169e-4eb5-a37a-5a5145e4522c"/>
         </RuleList>
       </RuleTask>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Validate_Percent" Ordering="Default">
         <RuleList>
-          <Rule Uuid="bed936f8-5b02-484f-a3e6-133b9f10baac"/>
+          <Rule Uuid="1c1ba081-7636-4071-9e47-876a4de8be20"/>
         </RuleList>
       </RuleTask>
       <StopTask Identifier="task_2"/>

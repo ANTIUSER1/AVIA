@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>validateTariffSum</name>
-  <uuid>928af27a-1c4d-44ff-af53-328854024d7c</uuid>
+  <uuid>d2e18e80-1f6d-434c-9525-f776448d8eef</uuid>
   <locale>en_US</locale>
   <definition><![CDATA[if 
 	 the tariff sum of passengerLoyaltyInfo is at most 0  

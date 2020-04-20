@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>validatePercent</name>
-  <uuid>bed936f8-5b02-484f-a3e6-133b9f10baac</uuid>
+  <uuid>1c1ba081-7636-4071-9e47-876a4de8be20</uuid>
   <locale>en_US</locale>
   <definition><![CDATA[if 
 	 the percent of passengerLoyaltyInfo is -1 

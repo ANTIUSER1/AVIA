@@ -1,0 +1,12 @@
+# Vocabulary Properties
+uuid = ca35c728-122c-4795-9d65-aeec6bb97eef
+
+# ru.integrotech.su.inputparams.chargeLoyalty.ChargeLoyaltyRequest
+ru.integrotech.su.inputparams.chargeLoyalty.ChargeLoyaltyRequest#concept.label = charge loyalty request
+ru.integrotech.su.inputparams.chargeLoyalty.ChargeLoyaltyRequest.accountingCode#phrase.navigation = {accounting code} of {this}
+ru.integrotech.su.inputparams.chargeLoyalty.ChargeLoyaltyRequest.paymentType#phrase.action = set the payment type of {this} to {payment type}
+ru.integrotech.su.inputparams.chargeLoyalty.ChargeLoyaltyRequest.paymentType#phrase.navigation = {payment type} of {this}
+ru.integrotech.su.inputparams.chargeLoyalty.ChargeLoyaltyRequest.tariffSum#phrase.navigation = {tariff sum} of {this}
+
+# ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyResponse
+ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyResponse#concept.label = charge loyalty response
