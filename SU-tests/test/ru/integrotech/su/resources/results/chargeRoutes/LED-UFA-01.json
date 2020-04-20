@@ -89,37 +89,6 @@
             "fareGroups": [
               {
                 "fareGroup": {
-                  "fareGroupCode": "business-1"
-                },
-                "airlineFareGroups": [
-                  {
-                    "farePrefixes": [
-                      "C",
-                      "J"
-                    ],
-                    "milesCharged": 2288,
-                    "milesQualifying": 1830,
-                    "milesBonus": 458
-                  }
-                ]
-              },
-              {
-                "fareGroup": {
-                  "fareGroupCode": "business-2"
-                },
-                "airlineFareGroups": [
-                  {
-                    "farePrefixes": [
-                      "D"
-                    ],
-                    "milesCharged": 1831,
-                    "milesQualifying": 1373,
-                    "milesBonus": 458
-                  }
-                ]
-              },
-              {
-                "fareGroup": {
                   "fareGroupCode": "business-optimum"
                 },
                 "airlineFareGroups": [
@@ -174,6 +143,48 @@
           },
           {
             "airline": {
+              "airlineCode": "OK"
+            },
+            "classOfService": {
+              "classOfServiceCode": "business"
+            },
+            "distance": 915,
+            "fareGroups": [
+              {
+                "fareGroup": {
+                  "fareGroupCode": "business-1"
+                },
+                "airlineFareGroups": [
+                  {
+                    "farePrefixes": [
+                      "C",
+                      "J"
+                    ],
+                    "milesCharged": 2288,
+                    "milesQualifying": 1830,
+                    "milesBonus": 458
+                  }
+                ]
+              },
+              {
+                "fareGroup": {
+                  "fareGroupCode": "business-2"
+                },
+                "airlineFareGroups": [
+                  {
+                    "farePrefixes": [
+                      "D"
+                    ],
+                    "milesCharged": 1831,
+                    "milesQualifying": 1373,
+                    "milesBonus": 458
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "airline": {
               "airlineCode": "SU"
             },
             "classOfService": {
@@ -181,46 +192,6 @@
             },
             "distance": 915,
             "fareGroups": [
-              {
-                "fareGroup": {
-                  "fareGroupCode": "economy-1"
-                },
-                "airlineFareGroups": [
-                  {
-                    "farePrefixes": [
-                      "B",
-                      "H",
-                      "K",
-                      "M",
-                      "T",
-                      "Y"
-                    ],
-                    "milesCharged": 1373,
-                    "milesQualifying": 915,
-                    "milesBonus": 458
-                  }
-                ]
-              },
-              {
-                "fareGroup": {
-                  "fareGroupCode": "economy-2"
-                },
-                "airlineFareGroups": [
-                  {
-                    "farePrefixes": [
-                      "A",
-                      "G",
-                      "L",
-                      "Q",
-                      "U",
-                      "X"
-                    ],
-                    "milesCharged": 750,
-                    "milesQualifying": 500,
-                    "milesBonus": 250
-                  }
-                ]
-              },
               {
                 "fareGroup": {
                   "fareGroupCode": "economy-budget"
@@ -329,6 +300,57 @@
                       "PS",
                       "RS",
                       "XS"
+                    ],
+                    "milesCharged": 750,
+                    "milesQualifying": 500,
+                    "milesBonus": 250
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "airline": {
+              "airlineCode": "OK"
+            },
+            "classOfService": {
+              "classOfServiceCode": "economy"
+            },
+            "distance": 915,
+            "fareGroups": [
+              {
+                "fareGroup": {
+                  "fareGroupCode": "economy-1"
+                },
+                "airlineFareGroups": [
+                  {
+                    "farePrefixes": [
+                      "B",
+                      "H",
+                      "K",
+                      "M",
+                      "T",
+                      "Y"
+                    ],
+                    "milesCharged": 1373,
+                    "milesQualifying": 915,
+                    "milesBonus": 458
+                  }
+                ]
+              },
+              {
+                "fareGroup": {
+                  "fareGroupCode": "economy-2"
+                },
+                "airlineFareGroups": [
+                  {
+                    "farePrefixes": [
+                      "A",
+                      "G",
+                      "L",
+                      "Q",
+                      "U",
+                      "X"
                     ],
                     "milesCharged": 750,
                     "milesQualifying": 500,
@@ -559,53 +581,6 @@
             "fareGroups": [
               {
                 "fareGroup": {
-                  "fareGroupCode": "business-1"
-                },
-                "airlineFareGroups": [
-                  {
-                    "farePrefixes": [
-                      "C",
-                      "J"
-                    ],
-                    "milesCharged": 891,
-                    "milesQualifying": 693,
-                    "milesBonus": 198
-                  }
-                ]
-              },
-              {
-                "fareGroup": {
-                  "fareGroupCode": "business-2"
-                },
-                "airlineFareGroups": [
-                  {
-                    "farePrefixes": [
-                      "D",
-                      "I"
-                    ],
-                    "milesCharged": 792,
-                    "milesQualifying": 594,
-                    "milesBonus": 198
-                  }
-                ]
-              },
-              {
-                "fareGroup": {
-                  "fareGroupCode": "business-3"
-                },
-                "airlineFareGroups": [
-                  {
-                    "farePrefixes": [
-                      "Z"
-                    ],
-                    "milesCharged": 693,
-                    "milesQualifying": 495,
-                    "milesBonus": 198
-                  }
-                ]
-              },
-              {
-                "fareGroup": {
                   "fareGroupCode": "business-optimum"
                 },
                 "airlineFareGroups": [
@@ -660,6 +635,64 @@
           },
           {
             "airline": {
+              "airlineCode": "DL"
+            },
+            "classOfService": {
+              "classOfServiceCode": "business"
+            },
+            "distance": 396,
+            "fareGroups": [
+              {
+                "fareGroup": {
+                  "fareGroupCode": "business-1"
+                },
+                "airlineFareGroups": [
+                  {
+                    "farePrefixes": [
+                      "C",
+                      "J"
+                    ],
+                    "milesCharged": 891,
+                    "milesQualifying": 693,
+                    "milesBonus": 198
+                  }
+                ]
+              },
+              {
+                "fareGroup": {
+                  "fareGroupCode": "business-2"
+                },
+                "airlineFareGroups": [
+                  {
+                    "farePrefixes": [
+                      "D",
+                      "I"
+                    ],
+                    "milesCharged": 792,
+                    "milesQualifying": 594,
+                    "milesBonus": 198
+                  }
+                ]
+              },
+              {
+                "fareGroup": {
+                  "fareGroupCode": "business-3"
+                },
+                "airlineFareGroups": [
+                  {
+                    "farePrefixes": [
+                      "Z"
+                    ],
+                    "milesCharged": 693,
+                    "milesQualifying": 495,
+                    "milesBonus": 198
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "airline": {
               "airlineCode": "SU"
             },
             "classOfService": {
@@ -667,74 +700,6 @@
             },
             "distance": 396,
             "fareGroups": [
-              {
-                "fareGroup": {
-                  "fareGroupCode": "economy-1"
-                },
-                "airlineFareGroups": [
-                  {
-                    "farePrefixes": [
-                      "B",
-                      "H",
-                      "M",
-                      "S",
-                      "Y"
-                    ],
-                    "milesCharged": 446,
-                    "milesQualifying": 297,
-                    "milesBonus": 149
-                  },
-                  {
-                    "farePrefixes": [
-                      "B",
-                      "E",
-                      "H",
-                      "K",
-                      "M",
-                      "W",
-                      "Y"
-                    ],
-                    "milesCharged": 750,
-                    "milesQualifying": 500,
-                    "milesBonus": 250
-                  }
-                ]
-              },
-              {
-                "fareGroup": {
-                  "fareGroupCode": "economy-2"
-                },
-                "airlineFareGroups": [
-                  {
-                    "farePrefixes": [
-                      "K",
-                      "L",
-                      "Q",
-                      "T",
-                      "U"
-                    ],
-                    "milesCharged": 297,
-                    "milesQualifying": 198,
-                    "milesBonus": 99
-                  }
-                ]
-              },
-              {
-                "fareGroup": {
-                  "fareGroupCode": "economy-3"
-                },
-                "airlineFareGroups": [
-                  {
-                    "farePrefixes": [
-                      "V",
-                      "X"
-                    ],
-                    "milesCharged": 149,
-                    "milesQualifying": 99,
-                    "milesBonus": 50
-                  }
-                ]
-              },
               {
                 "fareGroup": {
                   "fareGroupCode": "economy-budget"
@@ -849,6 +814,71 @@
                     "milesBonus": 250
                   }
                 ]
+              }
+            ]
+          },
+          {
+            "airline": {
+              "airlineCode": "DL"
+            },
+            "classOfService": {
+              "classOfServiceCode": "economy"
+            },
+            "distance": 396,
+            "fareGroups": [
+              {
+                "fareGroup": {
+                  "fareGroupCode": "economy-1"
+                },
+                "airlineFareGroups": [
+                  {
+                    "farePrefixes": [
+                      "B",
+                      "H",
+                      "M",
+                      "S",
+                      "Y"
+                    ],
+                    "milesCharged": 446,
+                    "milesQualifying": 297,
+                    "milesBonus": 149
+                  }
+                ]
+              },
+              {
+                "fareGroup": {
+                  "fareGroupCode": "economy-2"
+                },
+                "airlineFareGroups": [
+                  {
+                    "farePrefixes": [
+                      "K",
+                      "L",
+                      "Q",
+                      "T",
+                      "U"
+                    ],
+                    "milesCharged": 297,
+                    "milesQualifying": 198,
+                    "milesBonus": 99
+                  }
+                ]
+              },
+              {
+                "fareGroup": {
+                  "fareGroupCode": "economy-3"
+                },
+                "airlineFareGroups": [
+                  {
+                    "farePrefixes": [
+                      "V",
+                      "X"
+                    ],
+                    "milesCharged": 149,
+                    "milesQualifying": 99,
+                    "milesBonus": 50
+                  }
+                ]
               },
               {
                 "fareGroup": {
@@ -862,6 +892,38 @@
                     "milesCharged": 594,
                     "milesQualifying": 396,
                     "milesBonus": 198
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "airline": {
+              "airlineCode": "KE"
+            },
+            "classOfService": {
+              "classOfServiceCode": "economy"
+            },
+            "distance": 396,
+            "fareGroups": [
+              {
+                "fareGroup": {
+                  "fareGroupCode": "economy-1"
+                },
+                "airlineFareGroups": [
+                  {
+                    "farePrefixes": [
+                      "B",
+                      "E",
+                      "H",
+                      "K",
+                      "M",
+                      "W",
+                      "Y"
+                    ],
+                    "milesCharged": 750,
+                    "milesQualifying": 500,
+                    "milesBonus": 250
                   }
                 ]
               }
@@ -889,16 +951,6 @@
                     "milesCharged": 792,
                     "milesQualifying": 594,
                     "milesBonus": 198
-                  },
-                  {
-                    "farePrefixes": [
-                      "F",
-                      "P",
-                      "R"
-                    ],
-                    "milesCharged": 1250,
-                    "milesQualifying": 1000,
-                    "milesBonus": 250
                   }
                 ]
               },
@@ -929,6 +981,34 @@
                     "milesCharged": 594,
                     "milesQualifying": 396,
                     "milesBonus": 198
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "airline": {
+              "airlineCode": "KE"
+            },
+            "classOfService": {
+              "classOfServiceCode": "first"
+            },
+            "distance": 396,
+            "fareGroups": [
+              {
+                "fareGroup": {
+                  "fareGroupCode": "first-1"
+                },
+                "airlineFareGroups": [
+                  {
+                    "farePrefixes": [
+                      "F",
+                      "P",
+                      "R"
+                    ],
+                    "milesCharged": 1250,
+                    "milesQualifying": 1000,
+                    "milesBonus": 250
                   }
                 ]
               }
