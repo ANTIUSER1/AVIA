@@ -3,9 +3,6 @@
 	<name>SU-CHECK_ONLINE_REGISTRATION_AVAILABLE-RULES</name>
 	<comment></comment>
 	<projects>
-		<project>airline-core-bom</project>
-		<project>airline-core-rules</project>
-		<project>SU-xom</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

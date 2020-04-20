@@ -8,7 +8,7 @@
     <entries xsi:type="ilog.rules.studio.model.xom:LibraryXOMPathEntry" name="org.eclipse.jdt.launching.JRE_CONTAINER" url="file:org.eclipse.jdt.launching.JRE_CONTAINER" kind="LIBRARY" exported="false"/>
     <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="airline-core-bom" url="platform:/airline-core-bom" kind="RULE_PROJECT" exported="true"/>
     <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="airline-core-rules" url="platform:/airline-core-rules" kind="RULE_PROJECT" exported="true"/>
-    <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="SU-xom" url="platform:/SU-xom" kind="JAVA_PROJECT" exported="true"/>
+    <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="SU-CHECK_ONLINE_REGISTRATION_AVAILABLE-XOM" url="platform:/SU-CHECK_ONLINE_REGISTRATION_AVAILABLE-XOM" kind="JAVA_PROJECT" exported="true"/>
   </paths>
   <paths xsi:type="ilog.rules.studio.model.bom:BOMPath" pathID="BOM">
     <entries xsi:type="ilog.rules.studio.model.bom:ProjectBOMEntry" name="airline-core-bom" url="platform:/airline-core-bom" kind="RULE_PROJECT">
