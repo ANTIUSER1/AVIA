@@ -24,19 +24,6 @@ public class ChargeInput
     public static ru.integrotech.su.inputparams.charge.ChargeInput of(string arg1, string arg2, string arg3, string arg4, string arg5, string arg6, boolean arg7);
 }
 
-package ru.integrotech.su.inputparams.chargeLoyalty;
-
-
-public class ChargeLoyaltyRequest
-{
-    public readonly string accountingCode;
-    public readonly ru.integrotech.su.inputparams.chargeLoyalty.Data data;
-    public string paymentType;
-    public readonly int tariffSum;
-    public ChargeLoyaltyRequest();
-    public static ru.integrotech.su.inputparams.chargeLoyalty.ChargeLoyaltyRequest of(string arg1, int arg2, string arg3);
-}
-
 package ru.integrotech.su.inputparams.grouping;
 
 
@@ -142,19 +129,6 @@ public class ResultMilesCharge
     public java.util.List routes domain 0,* class ru.integrotech.su.outputparams.charge.ChargeRoute;
     public ResultMilesCharge();
     public static ru.integrotech.su.outputparams.charge.ResultMilesCharge of(java.util.List arg domain 0,* class ru.integrotech.su.outputparams.charge.ChargeRoute);
-}
-
-package ru.integrotech.su.outputparams.chargeLoyalty;
-
-
-public class ChargeLoyaltyResponse
-{
-    public ru.integrotech.su.outputparams.chargeLoyalty.Data data;
-    public string errCode;
-    public string errMessage;
-    public ChargeLoyaltyResponse();
-    public static ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyResponse of(ru.integrotech.airline.core.info.PassengerLoyaltyInfo arg);
-    public static ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyResponse of(string arg1, string arg2);
 }
 
 package ru.integrotech.su.outputparams.grouping;

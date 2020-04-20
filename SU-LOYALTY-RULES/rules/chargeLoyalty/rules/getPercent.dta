@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
   <name>getPercent</name>
-  <uuid>36589c06-08d2-4593-a528-b0b2edcffacb</uuid>
+  <uuid>ca6b1b9b-169e-4eb5-a37a-5a5145e4522c</uuid>
   <locale>en_US</locale>
   <definition>
 <DT Version="7.0" xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable">

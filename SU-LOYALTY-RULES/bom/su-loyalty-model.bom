@@ -1,0 +1,30 @@
+
+property loadGetterSetterAsProperties "true"
+property origin "xom:/SU-LOYALTY-RULES/SU-xom"
+property uuid "30d85599-aa11-4782-86f9-46656f126ca1"
+package ru.integrotech.su.inputparams.chargeLoyalty;
+
+
+public class ChargeLoyaltyRequest
+{
+    public readonly string accountingCode;
+    public readonly ru.integrotech.su.inputparams.chargeLoyalty.Data data;
+    public string paymentType;
+    public readonly int tariffSum;
+    public ChargeLoyaltyRequest();
+    public static ru.integrotech.su.inputparams.chargeLoyalty.ChargeLoyaltyRequest of(string arg1, int arg2, string arg3);
+}
+
+package ru.integrotech.su.outputparams.chargeLoyalty;
+
+
+public class ChargeLoyaltyResponse
+{
+    public ru.integrotech.su.outputparams.chargeLoyalty.Data data;
+    public string errCode;
+    public string errMessage;
+    public ChargeLoyaltyResponse();
+    public static ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyResponse of(ru.integrotech.airline.core.info.PassengerLoyaltyInfo arg);
+    public static ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyResponse of(string arg1, string arg2);
+}
+

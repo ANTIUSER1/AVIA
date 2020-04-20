@@ -9,13 +9,6 @@ ru.integrotech.su.inputparams.charge.ChargeInput#concept.label = charge input
 ru.integrotech.su.inputparams.charge.ChargeInput.isRoundTrip#phrase.action = make it {round trip} that {this} is round trip
 ru.integrotech.su.inputparams.charge.ChargeInput.isRoundTrip#phrase.navigation = {this} is round trip
 
-# ru.integrotech.su.inputparams.chargeLoyalty.ChargeLoyaltyRequest
-ru.integrotech.su.inputparams.chargeLoyalty.ChargeLoyaltyRequest#concept.label = charge loyalty request
-ru.integrotech.su.inputparams.chargeLoyalty.ChargeLoyaltyRequest.accountingCode#phrase.navigation = {accounting code} of {this}
-ru.integrotech.su.inputparams.chargeLoyalty.ChargeLoyaltyRequest.paymentType#phrase.action = set the payment type of {this} to {payment type}
-ru.integrotech.su.inputparams.chargeLoyalty.ChargeLoyaltyRequest.paymentType#phrase.navigation = {payment type} of {this}
-ru.integrotech.su.inputparams.chargeLoyalty.ChargeLoyaltyRequest.tariffSum#phrase.navigation = {tariff sum} of {this}
-
 # ru.integrotech.su.inputparams.grouping.InputParamsGrouping
 ru.integrotech.su.inputparams.grouping.InputParamsGrouping#concept.label = input params grouping
 ru.integrotech.su.inputparams.grouping.InputParamsGrouping.app#phrase.action = set the app of {this} to {app}
@@ -102,9 +95,6 @@ ru.integrotech.su.outputparams.charge.ChargeBuilder.getRegisterNames()#phrase.na
 ru.integrotech.su.outputparams.charge.ResultMilesCharge#concept.label = result miles charge
 ru.integrotech.su.outputparams.charge.ResultMilesCharge.routes#phrase.action = set the routes of {this} to {route}
 ru.integrotech.su.outputparams.charge.ResultMilesCharge.routes#phrase.navigation = {route} of {this}
-
-# ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyResponse
-ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyResponse#concept.label = charge loyalty response
 
 # ru.integrotech.su.outputparams.grouping.GroupingBuilder
 ru.integrotech.su.outputparams.grouping.GroupingBuilder#concept.label = grouping builder
