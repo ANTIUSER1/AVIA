@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
   <name>onlineRegSsrRestrictions</name>
-  <uuid>5d4373ca-57d9-4a0c-8ca6-f753f4217134</uuid>
+  <uuid>54d8dde9-3e6e-431b-8105-5b189ed8de49</uuid>
   <locale>en_US</locale>
   <definition>
 <DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">

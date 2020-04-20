@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
   <name>checkOnlineRegAvail</name>
-  <uuid>2ec7d036-8b37-4f69-81f3-2a97b4a94bdc</uuid>
+  <uuid>11d78184-bcd5-402c-bfdf-c6fe3c0a8aa3</uuid>
   <locale>en_US</locale>
   <categories>any</categories>
   <rfModel>
