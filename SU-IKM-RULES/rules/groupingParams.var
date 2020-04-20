@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>groupingParams</name>
+  <uuid>cee4dc9f-d354-4547-b747-ee43ab498ea8</uuid>
+  <variables name="groupingRequest" type="ru.integrotech.su.inputparams.grouping.InputParamsGrouping" initialValue="" verbalization="groupingRequest"/>
+  <variables name="groupingResponse" type="ru.integrotech.su.outputparams.grouping.ResultGrouping" initialValue="" verbalization="groupingResponse"/>
+</ilog.rules.studio.model.base:VariableSet>

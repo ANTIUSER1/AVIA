@@ -13,7 +13,7 @@
 loader = RegisterLoader.getInstance(registerNames);]]>&#13;<![CDATA[
 loader.lock();]]>&#13;<![CDATA[
 try {]]>&#13;<![CDATA[
-    RegisterCache cache = loader.registerCache;]]>&#13;<![CDATA[
+    RegisterCache   cache = loader.registerCache;]]>&#13;<![CDATA[
 	chargeBuilder= ChargeBuilder.of(cache);]]>&#13;<![CDATA[
 } catch (Exception e) {]]>&#13;<![CDATA[
 	e.printStackTrace();]]>&#13;<![CDATA[
@@ -69,19 +69,18 @@ try {]]>&#13;<![CDATA[
       <Data Name="node_2#width">23.0</Data>
       <Data Name="node_0#width">21.0</Data>
       <Data Name="node_3#y">-67.0</Data>
-      <Data Name="node_0#x">-39.0</Data>
-      <Data Name="node_0#y">-168.0</Data>
+      <Data Name="node_0#x">-77.0</Data>
+      <Data Name="node_0#y">-210.0</Data>
       <Data Name="node_2#x">-39.0</Data>
       <Data Name="node_3#name">node_3</Data>
       <Data Name="node_2#y">38.0</Data>
-      <Data Name="node_3#x">-39.0</Data>
+      <Data Name="node_3#x">-37.0</Data>
     </ResourceSet>
   </Resources>
   <Properties>
     <imports><![CDATA[import ru.integrotech.su.outputparams.charge.ChargeBuilder;
 import ru.integrotech.airline.register.RegisterLoader;
 import ru.integrotech.airline.register.RegisterCache;
-use chargeBuilder;
 ]]></imports>
   </Properties>
 </Ruleflow></rfModel>

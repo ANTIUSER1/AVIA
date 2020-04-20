@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>calcGrouping</name>
+  <uuid>7684626e-e0a4-4d25-9c9a-37c74c74b9eb</uuid>
+</ilog.rules.studio.model.base:RulePackage>
