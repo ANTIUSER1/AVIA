@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
   <name>checkOnlineRegAvail</name>
-  <uuid>3c50e71e-16d2-47c3-b473-3bca762ace10</uuid>
+  <uuid>a5c06f7e-56e5-4beb-a3d7-bd9ba7e8775c</uuid>
 </ilog.rules.studio.model.base:RulePackage>

@@ -79,20 +79,6 @@ public class SpendInput
     public static ru.integrotech.su.inputparams.spend.SpendInput of();
 }
 
-package ru.integrotech.su.ioparams;
-
-
-public class CheckOnlineRegistrationAvailable
-{
-    public string airlineCode;
-    public string departureAirportCode;
-    public int flightNumber;
-    public boolean onlineRegistrationAvailable;
-    public ru.integrotech.airline.core.info.PassengerFlightInfo passengerFlightInfo;
-    public java.util.List ssrCodes domain 0,* class string;
-    public CheckOnlineRegistrationAvailable();
-}
-
 package ru.integrotech.su.outputparams.attractionAB;
 
 
