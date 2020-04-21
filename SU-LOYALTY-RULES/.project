@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>SU-LOYALTY-RULES</name>
+	<comment></comment>
+	<projects>
+		<project>airline-core-rules</project>
+		<project>airline-core-xom</project>
+		<project>SU-LOYALTY-XOM</project>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>ilog.rules.studio.model.ruleBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>ilog.rules.studio.model.decisionProject</nature>
+		<nature>ilog.rules.studio.model.operationProject</nature>
+		<nature>ilog.rules.studio.model.ruleNature</nature>
+	</natures>
+</projectDescription>
