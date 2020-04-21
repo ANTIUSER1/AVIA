@@ -36,7 +36,7 @@
       <Partition DefId="C0">
         <Condition>
           <Expression>
-            <Param><![CDATA["ticket"]]></Param>
+            <Param><![CDATA["TICKET"]]></Param>
           </Expression>
           <Partition DefId="C1">
             <Condition>
@@ -73,7 +73,7 @@
         </Condition>
         <Condition>
           <Expression>
-            <Param><![CDATA["upgrade"]]></Param>
+            <Param><![CDATA["UPGRADE"]]></Param>
           </Expression>
           <Partition DefId="C1">
             <Condition>
@@ -104,11 +104,11 @@
   <Resources DefaultLocale="en_US">
     <ResourceSet Locale="en_US">
       <Data Name="Definitions(A0)#HeaderText"><![CDATA[Remove bonus]]></Data>
-      <Data Name="Definitions(A0)#Width"><![CDATA[448]]></Data>
+      <Data Name="Definitions(A0)#Width"><![CDATA[461]]></Data>
       <Data Name="Definitions(C0)#HeaderText"><![CDATA[Award type of input params]]></Data>
-      <Data Name="Definitions(C0)#Width"><![CDATA[448]]></Data>
+      <Data Name="Definitions(C0)#Width"><![CDATA[461]]></Data>
       <Data Name="Definitions(C1)#HeaderText"><![CDATA[Type of bonus]]></Data>
-      <Data Name="Definitions(C1)#Width"><![CDATA[449]]></Data>
+      <Data Name="Definitions(C1)#Width"><![CDATA[462]]></Data>
     </ResourceSet>
   </Resources>
 </DT></definition>
