@@ -1,0 +1,54 @@
+
+property loadGetterSetterAsProperties "true"
+property origin "xom:/SU-ATTACTIONAB-RULES/SU-xom"
+property uuid "1849514c-b83a-4ef8-beda-10abb89dfe4b"
+package ru.integrotech.su.inputparams.attractionAB;
+
+
+public class AttractionAbInput
+{
+    public readonly ru.integrotech.su.inputparams.attractionAB.Data data;
+}
+
+package ru.integrotech.su.outputparams.attractionAB;
+
+
+public class AttractionAbBuilder
+{
+    public ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput buildResult(ru.integrotech.su.inputparams.attractionAB.AttractionAbInput arg);
+    public ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput buildResult(java.util.List arg1 domain 0,* class ru.integrotech.airline.core.info.PassengerMilesInfo, 
+        ru.integrotech.su.inputparams.attractionAB.AttractionAbInput arg2);
+    public java.util.List getInfos(ru.integrotech.su.inputparams.attractionAB.AttractionAbInput arg) domain 0,* class ru.integrotech.airline.core.info.PassengerMilesInfo;
+    public int getMultiplication(double[] arg);
+    public static java.lang.String[] getRegisterNames();
+    public double getTierLevelFactor(ru.integrotech.su.inputparams.attractionAB.AttractionAbInput arg);
+    public static ru.integrotech.su.outputparams.attractionAB.AttractionAbBuilder of(ru.integrotech.airline.register.RegisterCache arg);
+}
+
+public class AttractionAbOutput
+{
+    public java.util.List segments domain 0,* class ru.integrotech.su.outputparams.attractionAB.Segment;
+    public int totalMiles;
+    public ru.integrotech.airline.core.info.PassengerMilesInfo.Status totalStatus;
+    public static ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput of(java.util.Map arg1, 
+        int arg2, 
+        java.util.List arg3 domain 0,* class ru.integrotech.su.outputparams.attractionAB.Segment);
+}
+
+public class Segment
+{
+    public string airlineIATA;
+    public string bookingClassCode;
+    public string destinationIATA;
+    public string fareBasisCode;
+    public int miles;
+    public string originIATA;
+    public java.lang.Integer percent;
+    public ru.integrotech.airline.core.info.PassengerMilesInfo.Status status;
+    public string ticketDesignator;
+    public Segment();
+    public boolean equals(object arg);
+    public int hashCode();
+    public static ru.integrotech.su.outputparams.attractionAB.Segment of(ru.integrotech.airline.core.info.PassengerMilesInfo arg);
+}
+

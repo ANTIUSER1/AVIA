@@ -36,6 +36,18 @@ public class InputParamsGrouping
     public string toString();
 }
 
+package ru.integrotech.su.inputparams.grouping;
+
+
+public class InputParamsGrouping
+{
+    public string app;
+    public string mapEngine;
+    public java.lang.Integer zoomLevel;
+    public InputParamsGrouping();
+    public string toString();
+}
+
 package ru.integrotech.su.inputparams.spend;
 
 
@@ -129,6 +141,31 @@ public class ResultMilesCharge
     public java.util.List routes domain 0,* class ru.integrotech.su.outputparams.charge.ChargeRoute;
     public ResultMilesCharge();
     public static ru.integrotech.su.outputparams.charge.ResultMilesCharge of(java.util.List arg domain 0,* class ru.integrotech.su.outputparams.charge.ChargeRoute);
+}
+
+package ru.integrotech.su.outputparams.grouping;
+
+
+public class GroupingBuilder
+{
+    public GroupingBuilder();
+    public ru.integrotech.su.outputparams.grouping.GroupingTable buildResult(ru.integrotech.su.inputparams.grouping.InputParamsGrouping arg);
+    public static java.lang.String[] getRegisterNames();
+    public static ru.integrotech.su.outputparams.grouping.GroupingBuilder of(ru.integrotech.airline.register.RegisterCache arg);
+}
+
+public class GroupingTable
+{
+    public java.util.List engines domain 0,* class ru.integrotech.su.outputparams.grouping.MapEngine;
+    public GroupingTable();
+}
+
+public class ResultGrouping
+{
+    public string groupingLevel;
+    public ru.integrotech.su.outputparams.grouping.GroupingTable groupingTable;
+    public ResultGrouping();
+    public string toString();
 }
 
 package ru.integrotech.su.outputparams.grouping;

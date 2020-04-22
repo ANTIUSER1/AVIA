@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>flightAflBonusRemove</name>
+  <uuid>d2307fe4-fcfc-41ba-b655-384f43c9a1f6</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions 
+	set 'flight' to a flight in the flights of the route ; 
+	set 'bonus' to a bonus in the afl bonuses of flight ; 
+if  'spend builder' .getServiceClassType( spendRequest  ) is not null and 
+	 the service class of bonus  is not 'spend builder' .getServiceClassType( spendRequest  )   
+
+then remove bonus from the afl bonuses of flight ; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

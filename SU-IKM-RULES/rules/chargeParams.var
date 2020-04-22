@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>chargeParams</name>
+  <uuid>fdffb488-cc86-4d4f-9884-5ecf59aa309b</uuid>
+  <variables name="chargeBuilder" type="ru.integrotech.su.outputparams.charge.ChargeBuilder" initialValue="" verbalization="Charge builder"/>
+  <variables name="loyaltyFactor" type="int" initialValue="" verbalization="loyaltyFactor"/>
+  <variables name="chargeRequest" type="ru.integrotech.su.inputparams.charge.ChargeInput" initialValue="" verbalization="chargeRequest"/>
+  <variables name="chargeResponse" type="ru.integrotech.su.outputparams.charge.ResultMilesCharge" initialValue="" verbalization="chargeResponse"/>
+</ilog.rules.studio.model.base:VariableSet>
