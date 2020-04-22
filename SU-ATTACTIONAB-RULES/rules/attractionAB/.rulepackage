@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>attractionAB</name>
+  <uuid>590039f0-bd6a-402f-9d04-7c0bbe960e1c</uuid>
+</ilog.rules.studio.model.base:RulePackage>

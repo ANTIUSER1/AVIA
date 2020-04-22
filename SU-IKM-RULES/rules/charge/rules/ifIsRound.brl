@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>ifIsRound</name>
+  <uuid>d8d0f5b3-9998-49ca-82b7-a3fdbd57450b</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if  chargeRequest is round trip 
+
+then
+set the miles qualifying of the passenger charge info  to the miles qualifying of the passenger charge info  * 2;
+set the miles bonus of the passenger charge info  to the miles bonus of the passenger charge info  * 2;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

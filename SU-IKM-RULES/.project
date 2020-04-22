@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>SU-rules</name>
+	<name>SU-IKM-RULES</name>
 	<comment></comment>
 	<projects>
 		<project>airline-core-bom</project>
 		<project>airline-core-rules</project>
-		<project>airline-core-xom</project>
 		<project>SU-xom</project>
 	</projects>
 	<buildSpec>

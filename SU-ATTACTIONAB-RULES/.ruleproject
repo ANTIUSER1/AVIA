@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.base:RuleProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore" xmlns:ilog.rules.studio.model.bom="http://ilog.rules.studio/model/bom.ecore" xmlns:ilog.rules.studio.model.query="http://ilog.rules.studio/model/query.ecore" xmlns:ilog.rules.studio.model.rule="http://ilog.rules.studio/model/rule.ecore" xmlns:ilog.rules.studio.model.xom="http://ilog.rules.studio/model/xom.ecore" buildMode="DecisionEngine" isADecisionService="true" migrationFlag="3">
-  <name>SU-rules</name>
-  <uuid>acc26832-2255-4fd6-8c0a-3dbd27f5596b</uuid>
+  <name>SU-ATTACTIONAB-RULES</name>
+  <uuid>97cc45eb-8289-44b8-a094-0fd84f905b81</uuid>
   <outputLocation>output</outputLocation>
   <categories>any</categories>
-  <rulesetProperties>{CustomExceptionHandler;ru.integrotech.su.exceptions.SURulesCustomExceptionHandler}| {AutomaticExceptionHandler;true}</rulesetProperties>
   <paths xsi:type="ilog.rules.studio.model.xom:XOMPath" pathID="XOM">
     <entries xsi:type="ilog.rules.studio.model.xom:LibraryXOMPathEntry" name="org.eclipse.jdt.launching.JRE_CONTAINER" url="file:org.eclipse.jdt.launching.JRE_CONTAINER" kind="LIBRARY" exported="false"/>
+    <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="airline-core-bom" url="platform:/airline-core-bom" kind="RULE_PROJECT" exported="true"/>
     <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="airline-core-rules" url="platform:/airline-core-rules" kind="RULE_PROJECT" exported="true"/>
     <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="SU-xom" url="platform:/SU-xom" kind="JAVA_PROJECT" exported="true"/>
-    <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="airline-core-bom" url="platform:/airline-core-bom" kind="RULE_PROJECT"/>
   </paths>
   <paths xsi:type="ilog.rules.studio.model.bom:BOMPath" pathID="BOM">
-    <entries xsi:type="ilog.rules.studio.model.bom:ProjectBOMEntry" name="airline-core-rules" url="platform:/airline-core-rules" kind="RULE_PROJECT">
-      <ruleProject href="airline-core-rules#7697c986-66ca-49ab-b9d0-000cf5809f41"/>
-    </entries>
-    <entries xsi:type="ilog.rules.studio.model.bom:BOMEntry" name="su-model" url="platform:/SU-rules/bom/su-model.bom" origin="xom:/SU-rules//SU-xom"/>
     <entries xsi:type="ilog.rules.studio.model.bom:ProjectBOMEntry" name="airline-core-bom" url="platform:/airline-core-bom" kind="RULE_PROJECT">
       <ruleProject href="airline-core-bom#2a0cbb24-f27f-4f49-b9e0-0357e6de6d44"/>
     </entries>
+    <entries xsi:type="ilog.rules.studio.model.bom:ProjectBOMEntry" name="airline-core-rules" url="platform:/airline-core-rules" kind="RULE_PROJECT">
+      <ruleProject href="airline-core-rules#7697c986-66ca-49ab-b9d0-000cf5809f41"/>
+    </entries>
+    <entries xsi:type="ilog.rules.studio.model.bom:BOMEntry" name="su-attractionab-model" url="platform:/SU-ATTACTIONAB-RULES/bom/su-attractionab-model.bom" origin="xom:/SU-rules//SU-xom"/>
   </paths>
   <modelFolders xsi:type="ilog.rules.studio.model.base:SourceFolder">
     <name>rules</name>
@@ -38,10 +37,4 @@
   <modelFolders xsi:type="com.ibm.rules.studio.model.decisionservice:OperationFolder">
     <name>deployment</name>
   </modelFolders>
-  <orderedMembers>attractionABParams</orderedMembers>
-  <orderedMembers>chargeParams</orderedMembers>
-  <orderedMembers>checkOnlineRegAvail</orderedMembers>
-  <orderedMembers>checkOnlineRegAvailParams</orderedMembers>
-  <orderedMembers>spendLkParams</orderedMembers>
-  <orderedMembers>spendParams</orderedMembers>
 </ilog.rules.studio.model.base:RuleProject>

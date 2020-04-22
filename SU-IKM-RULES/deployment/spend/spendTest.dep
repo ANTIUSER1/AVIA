@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="aflBonus" ruleAppVersion="14.0" managingXom="true">
+<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="aflBonus" ruleAppVersion="41.1" managingXom="true">
   <name>spendTest</name>
-  <uuid>abc23e58-0da4-4402-9fec-3b4ea0925b66</uuid>
+  <uuid>88550d3c-7f55-4c4d-8aa2-188071bbe168</uuid>
   <targets label="Local Server"/>
   <targets label="Test Server"/>
   <operations operationName="spendRules">
-    <operation href="spendRules.dop#d1fea039-24c8-4576-a75c-bae6f1aeb508"/>
+    <operation href="spendRules.dop#155cb21c-bdaa-4749-85d1-08dbad204ae7"/>
     <properties key="ruleset.version">
       <value><![CDATA[1.0]]></value>
     </properties>

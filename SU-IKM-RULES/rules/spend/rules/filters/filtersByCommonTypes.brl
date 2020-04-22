@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>filtersByCommonTypes</name>
+  <uuid>a35212d6-e7d0-4f12-91bb-4929e33aced7</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if 
+	 the route is wrong is false 
+then 
+	'spend builder' .executeFiltersByCommonTypes ( { the route  } , spendRequest   ) ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

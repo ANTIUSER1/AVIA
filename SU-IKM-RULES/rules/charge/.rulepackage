@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>charge</name>
+  <uuid>d3affb0b-f2b1-4b67-8ec0-5861d70ba601</uuid>
+  <orderedMembers>chargeJavaFlow</orderedMembers>
+  <orderedMembers>chargeRuleInitFlow</orderedMembers>
+  <orderedMembers>validatorChargeFlow</orderedMembers>
+  <orderedMembers>chargeRulesFlow</orderedMembers>
+</ilog.rules.studio.model.base:RulePackage>

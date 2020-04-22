@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>getBonusDictance</name>
+  <uuid>faf2eb02-c8bc-432f-9116-88e6258b9d1e</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if 
+	 the distance coeff of the passenger miles info  is 0  
+then 
+	 set the total bonus miles of the passenger miles info  to 0 ; 
+	 print  "bonus distance " + the bonuse distance of the passenger miles info  ; 
+	 
+else set the bonuse distance of the passenger miles info  to 
+		attractionABBuilder .getMultiplication( { the flight distance of the passenger miles info  ,
+												  the distance coeff of the passenger miles info  } ) ; 
+												  
+	print  "bonus distance " + the bonuse distance of the passenger miles info ; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

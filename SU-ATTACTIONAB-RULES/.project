@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>SU-rules</name>
+	<name>SU-ATTACTIONAB-RULES</name>
 	<comment></comment>
 	<projects>
 		<project>airline-core-bom</project>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>attractionABParams</name>
+  <uuid>7e3a73c6-c476-4525-a287-f7cbc5d01089</uuid>
+  <variables name="attractionABRequest" type="ru.integrotech.su.inputparams.attractionAB.AttractionAbInput" initialValue="" verbalization="attractionABRequest"/>
+  <variables name="attractionABResponse" type="ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput" initialValue="" verbalization="attractionABResponse"/>
+  <variables name="attractionABBuilder" type="ru.integrotech.su.outputparams.attractionAB.AttractionAbBuilder" initialValue="" verbalization="attractionABBuilder"/>
+  <variables name="infos" type="java.util.List" initialValue="" verbalization="infos"/>
+</ilog.rules.studio.model.base:VariableSet>

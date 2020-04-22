@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
   <name>commonVariables</name>
-  <uuid>6c533fb8-d206-460e-8ea7-025bdb1a2a79</uuid>
+  <uuid>a4104ebd-fd34-4345-a8ac-68a17b278cd3</uuid>
   <variables name="routes" type="java.util.List" initialValue="" verbalization="routes"/>
   <variables name="loader" type="ru.integrotech.airline.register.RegisterLoader" initialValue="" verbalization="loader"/>
-  <variables name="validatorSpend" type="ru.integrotech.su.utils.ValidatorSpend" initialValue="" verbalization="validatorSpend"/>
-  <variables name="validatorCharge" type="ru.integrotech.su.utils.ValidatorCharge" initialValue="" verbalization="validatorCharge"/>
 </ilog.rules.studio.model.base:VariableSet>
