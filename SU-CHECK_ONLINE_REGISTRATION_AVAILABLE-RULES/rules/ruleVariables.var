@@ -2,5 +2,6 @@
 <ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
   <name>ruleVariables</name>
   <uuid>85d96205-750a-4794-98a3-5d605f326d4d</uuid>
-  <variables name="checkOnlineRegistrationAvailable" type="ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable" initialValue="" verbalization="checkOnlineRegistrationAvailable"/>
+  <variables name="checkOlineRegistrationAvailableRequest" type="ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable" initialValue="" verbalization="checkOlineRegistrationAvailableRequest"/>
+  <variables name="checkOnlineRegistrationAvailableResponse" type="ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable" initialValue="" verbalization="checkOnlineRegistrationAvailableResponse"/>
 </ilog.rules.studio.model.base:VariableSet>
