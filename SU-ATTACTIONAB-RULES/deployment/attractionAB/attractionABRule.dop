@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="calcSegmentsCharge" usingRuleflow="true" ruleflowName="attractionABRuleFlow" targetRuleProjectName="SU-ATTACTIONAB-RULES">
+  <name>attractionABRule</name>
+  <uuid>39eed7ae-5825-4bc5-8dc0-7c390178ec69</uuid>
+  <referencedVariables variableName="attractionABRequest" variableSetName="attractionABParams">
+    <variableSet href="../../rules/attractionABParams.var#7e3a73c6-c476-4525-a287-f7cbc5d01089"/>
+  </referencedVariables>
+  <referencedVariables variableName="attractionABResponse" variableSetName="attractionABParams" direction="OUT">
+    <variableSet href="../../rules/attractionABParams.var#7e3a73c6-c476-4525-a287-f7cbc5d01089"/>
+  </referencedVariables>
+  <ruleflow href="../../rules/attractionAB/attractionABRuleFlow.rfl#afb482e7-08cf-4d86-8b4f-00ef0500ef6b"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="attractionABattractionABRule_extractor" validator="Default Validator"/>
+  <targetRuleProject href="../../../SU-ATTACTIONAB-RULES#97cc45eb-8289-44b8-a094-0fd84f905b81"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

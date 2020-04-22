@@ -10,8 +10,9 @@
     <TaskList>
       <StartTask Identifier="task_0"/>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="check" Ordering="Default">
-        <InitialActions Language="irl"><![CDATA[ checkOnlineRegistrationAvailable.passengerFlightInfo.onlineRegistrationAvailable = true;]]>&#13;<![CDATA[
-insert checkOnlineRegistrationAvailable.passengerFlightInfo;]]></InitialActions>
+        <InitialActions Language="irl"><![CDATA[ checkOlineRegistrationAvailableRequest.passengerFlightInfo.onlineRegistrationAvailable = true;]]>&#13;<![CDATA[
+insert checkOlineRegistrationAvailableRequest.passengerFlightInfo;]]></InitialActions>
+        <FinalActions Language="irl"><![CDATA[checkOnlineRegistrationAvailableResponse = checkOlineRegistrationAvailableRequest;]]></FinalActions>
         <RuleList>
           <Package Name="checkOnlineRegAvail"/>
         </RuleList>
@@ -51,6 +52,8 @@ insert checkOnlineRegistrationAvailable.passengerFlightInfo;]]></InitialActions>
     <imports><![CDATA[import ru.integrotech.airline.core.info.PassengerFlightInfo;
 use checkOnlineRegistrationAvailable;
 use passengerFlightInfo;
+use checkOlineRegistrationAvailableRequest;
+use checkOnlineRegistrationAvailableResponse;
 ]]></imports>
   </Properties>
 </Ruleflow></rfModel>

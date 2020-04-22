@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>calcMiles</name>
+  <uuid>e5149398-c0eb-4a7b-b791-a7f66344c5e8</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if (the min miles limit of the airline of the passenger charge info    is "A"  
+or (the min miles limit of the airline of the passenger charge info   is "I"
+	and the country of the city of the origin of the passenger charge info  is the country of the city of the destination of the passenger charge  info ))
+		and the distance of the passenger charge info   is less than the min miles charge of the airline of the passenger charge  info  
+
+then set the miles of the passenger charge  info  to  the min miles charge of the airline of the passenger charge  info ;  
+
+else set the miles of the passenger charge  info  to the distance of the passenger charge  info ;  
+ ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

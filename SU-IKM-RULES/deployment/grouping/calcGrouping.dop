@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="grouping" usingRuleflow="true" ruleflowName="groupingFlow" targetRuleProjectName="SU-IKM-RULES">
+  <name>calcGrouping</name>
+  <uuid>51144efe-18e4-4f71-94ac-e15ee4995eb0</uuid>
+  <referencedVariables variableName="groupingRequest" variableSetName="groupingParams">
+    <variableSet href="../../rules/groupingParams.var#cee4dc9f-d354-4547-b747-ee43ab498ea8"/>
+  </referencedVariables>
+  <referencedVariables variableName="groupingResponse" variableSetName="groupingParams" direction="OUT">
+    <variableSet href="../../rules/groupingParams.var#cee4dc9f-d354-4547-b747-ee43ab498ea8"/>
+  </referencedVariables>
+  <ruleflow href="../../rules/calcGrouping/groupingFlow.rfl#7d1b6731-34c2-4b49-a2cf-d46f9020cea8"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="groupingcalcGrouping_extractor" validator="Функция проверки по умолчанию"/>
+  <targetRuleProject href="../../../SU-IKM-RULES#589bed8c-1e6b-4ad3-aa0b-40d95f794d5e"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

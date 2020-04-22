@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>byUcAvailiable</name>
+  <uuid>bc077a0f-8547-4789-859f-e77b77c6d83a</uuid>
+</ilog.rules.studio.model.base:RulePackage>

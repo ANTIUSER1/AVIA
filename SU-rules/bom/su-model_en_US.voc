@@ -18,6 +18,15 @@ ru.integrotech.su.inputparams.grouping.InputParamsGrouping.mapEngine#phrase.navi
 ru.integrotech.su.inputparams.grouping.InputParamsGrouping.zoomLevel#phrase.action = set the zoom level of {this} to {zoom level}
 ru.integrotech.su.inputparams.grouping.InputParamsGrouping.zoomLevel#phrase.navigation = {zoom level} of {this}
 
+# ru.integrotech.su.inputparams.grouping.InputParamsGrouping
+ru.integrotech.su.inputparams.grouping.InputParamsGrouping#concept.label = input params grouping
+ru.integrotech.su.inputparams.grouping.InputParamsGrouping.app#phrase.action = set the app of {this} to {app}
+ru.integrotech.su.inputparams.grouping.InputParamsGrouping.app#phrase.navigation = {app} of {this}
+ru.integrotech.su.inputparams.grouping.InputParamsGrouping.mapEngine#phrase.action = set the map engine of {this} to {map engine}
+ru.integrotech.su.inputparams.grouping.InputParamsGrouping.mapEngine#phrase.navigation = {map engine} of {this}
+ru.integrotech.su.inputparams.grouping.InputParamsGrouping.zoomLevel#phrase.action = set the zoom level of {this} to {zoom level}
+ru.integrotech.su.inputparams.grouping.InputParamsGrouping.zoomLevel#phrase.navigation = {zoom level} of {this}
+
 # ru.integrotech.su.inputparams.spend.LocationInput
 ru.integrotech.su.inputparams.spend.LocationInput#concept.label = location input
 ru.integrotech.su.inputparams.spend.LocationInput.locationCode#phrase.action = set the location code of {this} to {location code}
@@ -95,6 +104,20 @@ ru.integrotech.su.outputparams.charge.ChargeBuilder.getRegisterNames()#phrase.na
 ru.integrotech.su.outputparams.charge.ResultMilesCharge#concept.label = result miles charge
 ru.integrotech.su.outputparams.charge.ResultMilesCharge.routes#phrase.action = set the routes of {this} to {route}
 ru.integrotech.su.outputparams.charge.ResultMilesCharge.routes#phrase.navigation = {route} of {this}
+
+# ru.integrotech.su.outputparams.grouping.GroupingBuilder
+ru.integrotech.su.outputparams.grouping.GroupingBuilder#concept.label = grouping builder
+ru.integrotech.su.outputparams.grouping.GroupingBuilder.getRegisterNames()#phrase.navigation = the register name
+
+# ru.integrotech.su.outputparams.grouping.GroupingTable
+ru.integrotech.su.outputparams.grouping.GroupingTable#concept.label = grouping table
+ru.integrotech.su.outputparams.grouping.GroupingTable.engines#phrase.action = set the engines of {this} to {engine}
+ru.integrotech.su.outputparams.grouping.GroupingTable.engines#phrase.navigation = {engine} of {this}
+
+# ru.integrotech.su.outputparams.grouping.ResultGrouping
+ru.integrotech.su.outputparams.grouping.ResultGrouping#concept.label = result grouping
+ru.integrotech.su.outputparams.grouping.ResultGrouping.groupingLevel#phrase.action = set the grouping level of {this} to {grouping level}
+ru.integrotech.su.outputparams.grouping.ResultGrouping.groupingLevel#phrase.navigation = {grouping level} of {this}
 
 # ru.integrotech.su.outputparams.grouping.GroupingBuilder
 ru.integrotech.su.outputparams.grouping.GroupingBuilder#concept.label = grouping builder
