@@ -6,6 +6,4 @@
   <variables name="numberMethods" type="ru.integrotech.airline.utils.NumberMethods" initialValue="" verbalization="numberMethods"/>
   <variables name="chargeLoyaltyRequest" type="ru.integrotech.su.inputparams.chargeLoyalty.ChargeLoyaltyRequest" initialValue="" verbalization="chargeLoyaltyRequest"/>
   <variables name="chargeLoyaltyResponse" type="ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyResponse" initialValue="" verbalization="chargeLoyaltyResponse"/>
-  <variables name="routes" type="java.util.List" initialValue="" verbalization="routes"/>
-  <variables name="loader" type="ru.integrotech.airline.register.RegisterLoader" initialValue="" verbalization="loader"/>
 </ilog.rules.studio.model.base:VariableSet>

@@ -2,7 +2,5 @@
 <ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
   <name>ruleVariables</name>
   <uuid>85d96205-750a-4794-98a3-5d605f326d4d</uuid>
-  <variables name="routes" type="java.util.List" initialValue="" verbalization="routes"/>
-  <variables name="loader" type="ru.integrotech.airline.register.RegisterLoader" initialValue="" verbalization="loader"/>
   <variables name="checkOnlineRegistrationAvailable" type="ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable" initialValue="" verbalization="checkOnlineRegistrationAvailable"/>
 </ilog.rules.studio.model.base:VariableSet>
