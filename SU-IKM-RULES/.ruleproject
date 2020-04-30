@@ -17,7 +17,7 @@
     <entries xsi:type="ilog.rules.studio.model.bom:ProjectBOMEntry" name="airline-core-rules" url="platform:/airline-core-rules" kind="RULE_PROJECT">
       <ruleProject href="airline-core-rules#7697c986-66ca-49ab-b9d0-000cf5809f41"/>
     </entries>
-    <entries xsi:type="ilog.rules.studio.model.bom:BOMEntry" name="su-ikm-model" url="platform:/SU-IKM-RULES/bom/su-ikm-model.bom" origin="xom:/SU-rules//SU-xom"/>
+    <entries xsi:type="ilog.rules.studio.model.bom:BOMEntry" name="su-ikm-model" url="platform:/SU-IKM-RULES/bom/su-ikm-model.bom" origin="xom:/SU-rules//SU-LK-XOM"/>
   </paths>
   <modelFolders xsi:type="ilog.rules.studio.model.base:SourceFolder">
     <name>rules</name>

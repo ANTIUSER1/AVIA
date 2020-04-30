@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>flightScyteam</name>
+  <uuid>302bf964-34d7-4df1-88be-24c9262b4754</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions 
+	set 'flight' to a flight in the flights of the route ; 
+	set 'bonus' to a bonus in the scyteam bonuses of flight ;  
+
+if   the value of bonus  is between the miles min of the miles interval of inputParams    
+	and the miles max of the miles interval of inputParams     
+
+then make it true that bonus  is fits miles interval ; 
+
+else make it false that bonus  is fits miles interval; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

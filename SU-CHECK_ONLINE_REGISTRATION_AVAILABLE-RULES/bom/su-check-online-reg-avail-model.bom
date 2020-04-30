@@ -1,7 +1,7 @@
 
 property loadGetterSetterAsProperties "true"
-property origin "xom:/SU-CHECK_ONLINE_REGISTRATION_AVAILABLE-RULES/SU-xom"
-property uuid "c2369b6a-a308-42f7-8023-2eddc846c8a2"
+property origin "xom:/SU-CHECK_ONLINE_REGISTRATION_AVAILABLE-RULES//SU-CHECK_ONLINE_REGISTRATION_AVAILABLE-XOM"
+property uuid "817fbfb1-dc89-4100-8613-4185ed0dd052"
 package ru.integrotech.su.ioparams;
 
 

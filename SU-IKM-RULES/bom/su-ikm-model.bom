@@ -1,6 +1,6 @@
 
 property loadGetterSetterAsProperties "true"
-property origin "xom:/SU-IKM-RULES/SU-xom"
+property origin "xom:/SU-IKM-RULES/SU-LK-XOM"
 property uuid "5c7be9dd-1aca-4de3-b95d-b9aeba81ea7c"
 package ru.integrotech.su.inputparams.charge;
 

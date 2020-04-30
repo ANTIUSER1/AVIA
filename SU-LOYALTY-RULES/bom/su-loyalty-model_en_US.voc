@@ -1,5 +1,5 @@
 # Vocabulary Properties
-uuid = ca35c728-122c-4795-9d65-aeec6bb97eef
+uuid = 6a2ad09e-75fe-4b5f-8d1d-278e4b0f66dc
 
 # ru.integrotech.su.inputparams.chargeLoyalty.ChargeLoyaltyRequest
 ru.integrotech.su.inputparams.chargeLoyalty.ChargeLoyaltyRequest#concept.label = charge loyalty request
@@ -10,3 +10,7 @@ ru.integrotech.su.inputparams.chargeLoyalty.ChargeLoyaltyRequest.tariffSum#phras
 
 # ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyResponse
 ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyResponse#concept.label = charge loyalty response
+ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyResponse.errCode#phrase.action = set the err code of {this} to {err code}
+ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyResponse.errCode#phrase.navigation = {err code} of {this}
+ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyResponse.errMessage#phrase.action = set the err message of {this} to {err message}
+ru.integrotech.su.outputparams.chargeLoyalty.ChargeLoyaltyResponse.errMessage#phrase.navigation = {err message} of {this}

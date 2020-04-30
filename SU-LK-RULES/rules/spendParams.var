@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>spendParams</name>
+  <uuid>3f63dc81-257f-474f-801a-afaee5c63268</uuid>
+  <variables name="spendBuilder" type="ru.integrotech.su.outputparams.spend.SpendBuilder" initialValue="" verbalization="spend builder"/>
+  <variables name="outputParams" type="ru.integrotech.su.outputparams.spend.ResultMilesSpend" initialValue="" verbalization="outputParams"/>
+  <variables name="inputParams" type="ru.integrotech.su.inputparams.spend.SpendInput" initialValue="" verbalization="inputParams"/>
+</ilog.rules.studio.model.base:VariableSet>
