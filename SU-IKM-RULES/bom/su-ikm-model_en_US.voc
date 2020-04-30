@@ -75,11 +75,6 @@ ru.integrotech.su.outputparams.spend.ResultMilesSpend#concept.label = result mil
 ru.integrotech.su.outputparams.spend.ResultMilesSpend.awardRoutes#phrase.action = set the routes of {this} to {route}
 ru.integrotech.su.outputparams.spend.ResultMilesSpend.awardRoutes#phrase.navigation = {route} of {this}
 
-# ru.integrotech.su.outputparams.spend.ResultMilesSpendLk
-ru.integrotech.su.outputparams.spend.ResultMilesSpendLk#concept.label = result miles spend lk
-ru.integrotech.su.outputparams.spend.ResultMilesSpendLk.awardRoutes#phrase.action = set the routes of {this} to {route}
-ru.integrotech.su.outputparams.spend.ResultMilesSpendLk.awardRoutes#phrase.navigation = {route} of {this}
-
 # ru.integrotech.su.outputparams.spend.SpendBuilder
 ru.integrotech.su.outputparams.spend.SpendBuilder#concept.label = spend builder
 ru.integrotech.su.outputparams.spend.SpendBuilder.bonusSummation(java.util.List)#phrase.action = {this}.bonusSummation({0})
@@ -88,11 +83,6 @@ ru.integrotech.su.outputparams.spend.SpendBuilder.executeFiltersByCommonTypes(ja
 ru.integrotech.su.outputparams.spend.SpendBuilder.executeFiltersByMilesInterval(java.util.List,ru.integrotech.su.inputparams.spend.SpendInput)#phrase.action = {this}.executeFiltersByMilesInterval({0}, {1})
 ru.integrotech.su.outputparams.spend.SpendBuilder.getRegisterNames()#phrase.navigation = the register name
 ru.integrotech.su.outputparams.spend.SpendBuilder.getServiceClassType(ru.integrotech.su.inputparams.spend.SpendInput)#phrase.navigation = {this}.getServiceClassType({0})
-
-# ru.integrotech.su.outputparams.spend.SpendLkBuilder
-ru.integrotech.su.outputparams.spend.SpendLkBuilder#concept.label = spend lk builder
-ru.integrotech.su.outputparams.spend.SpendLkBuilder.buildSpendLkRoutes(java.util.List,ru.integrotech.su.inputparams.spend.SpendInput)#phrase.navigation = {this}.buildSpendLkRoutes({0}, {1})
-ru.integrotech.su.outputparams.spend.SpendLkBuilder.replaceUO(java.util.List)#phrase.action = {this}.replaceUO({0})
 
 # ru.integrotech.su.utils.ValidatorCharge
 ru.integrotech.su.utils.ValidatorCharge#concept.label = validator charge

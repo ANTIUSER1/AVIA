@@ -5,7 +5,7 @@
 	<projects>
 		<project>airline-core-bom</project>
 		<project>airline-core-rules</project>
-		<project>SU-xom</project>
+		<project>SU-IKM-XOM</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
