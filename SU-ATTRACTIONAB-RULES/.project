@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>SU-ATTACTIONAB-RULES</name>
+	<name>SU-ATTRACTIONAB-RULES</name>
 	<comment></comment>
 	<projects>
 		<project>airline-core-bom</project>
 		<project>airline-core-rules</project>
 		<project>airline-core-xom</project>
 		<project>SU-xom</project>
+		<project>SU-ATTRACTIONAB-XOM</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

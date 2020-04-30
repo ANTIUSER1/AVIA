@@ -1,13 +1,16 @@
 
 property loadGetterSetterAsProperties "true"
-property origin "xom:/SU-ATTACTIONAB-RULES/SU-xom"
-property uuid "1849514c-b83a-4ef8-beda-10abb89dfe4b"
+property origin "xom:/SU-ATTRACTIONAB-RULES//SU-ATTRACTIONAB-XOM"
+property uuid "1971418f-4a0c-4de6-be1b-652b451cc2f3"
 package ru.integrotech.su.inputparams.attractionAB;
 
 
 public class AttractionAbInput
 {
-    public readonly ru.integrotech.su.inputparams.attractionAB.Data data;
+    public ru.integrotech.su.inputparams.attractionAB.Data data;
+    public string lang;
+    public AttractionAbInput();
+    public static ru.integrotech.su.inputparams.attractionAB.AttractionAbInput of(string arg1, string arg2, string arg3, string arg4, string arg5, string arg6, string arg7);
 }
 
 package ru.integrotech.su.outputparams.attractionAB;
@@ -15,13 +18,14 @@ package ru.integrotech.su.outputparams.attractionAB;
 
 public class AttractionAbBuilder
 {
+    public AttractionAbBuilder();
     public ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput buildResult(ru.integrotech.su.inputparams.attractionAB.AttractionAbInput arg);
     public ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput buildResult(java.util.List arg1 domain 0,* class ru.integrotech.airline.core.info.PassengerMilesInfo, 
         ru.integrotech.su.inputparams.attractionAB.AttractionAbInput arg2);
     public java.util.List getInfos(ru.integrotech.su.inputparams.attractionAB.AttractionAbInput arg) domain 0,* class ru.integrotech.airline.core.info.PassengerMilesInfo;
     public int getMultiplication(double[] arg);
     public static java.lang.String[] getRegisterNames();
-    public double getTierLevelFactor(ru.integrotech.su.inputparams.attractionAB.AttractionAbInput arg);
+    public int getTierLevelFactor(ru.integrotech.su.inputparams.attractionAB.AttractionAbInput arg);
     public static ru.integrotech.su.outputparams.attractionAB.AttractionAbBuilder of(ru.integrotech.airline.register.RegisterCache arg);
 }
 
@@ -30,9 +34,13 @@ public class AttractionAbOutput
     public java.util.List segments domain 0,* class ru.integrotech.su.outputparams.attractionAB.Segment;
     public int totalMiles;
     public ru.integrotech.airline.core.info.PassengerMilesInfo.Status totalStatus;
+    public AttractionAbOutput();
+    public boolean equals(object arg);
+    public int hashCode();
     public static ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput of(java.util.Map arg1, 
         int arg2, 
         java.util.List arg3 domain 0,* class ru.integrotech.su.outputparams.attractionAB.Segment);
+    public static ru.integrotech.su.outputparams.attractionAB.AttractionAbOutput of(int arg1, string arg2, string arg3, string arg4, string arg5, string arg6, int arg7);
 }
 
 public class Segment
