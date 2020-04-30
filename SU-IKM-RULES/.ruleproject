@@ -4,11 +4,12 @@
   <uuid>589bed8c-1e6b-4ad3-aa0b-40d95f794d5e</uuid>
   <outputLocation>output</outputLocation>
   <categories>any</categories>
+  <rulesetProperties>{CustomExceptionHandler;ru.integrotech.su.exceptions.SURulesCustomExceptionHandler}| {AutomaticExceptionHandler;true}</rulesetProperties>
   <paths xsi:type="ilog.rules.studio.model.xom:XOMPath" pathID="XOM">
     <entries xsi:type="ilog.rules.studio.model.xom:LibraryXOMPathEntry" name="org.eclipse.jdt.launching.JRE_CONTAINER" url="file:org.eclipse.jdt.launching.JRE_CONTAINER" kind="LIBRARY" exported="false"/>
     <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="airline-core-bom" url="platform:/airline-core-bom" kind="RULE_PROJECT" exported="true"/>
     <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="airline-core-rules" url="platform:/airline-core-rules" kind="RULE_PROJECT" exported="true"/>
-    <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="SU-xom" url="platform:/SU-xom" kind="JAVA_PROJECT" exported="true"/>
+    <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="SU-IKM-XOM" url="platform:/SU-IKM-XOM" kind="JAVA_PROJECT" exported="true"/>
   </paths>
   <paths xsi:type="ilog.rules.studio.model.bom:BOMPath" pathID="BOM">
     <entries xsi:type="ilog.rules.studio.model.bom:ProjectBOMEntry" name="airline-core-bom" url="platform:/airline-core-bom" kind="RULE_PROJECT">
@@ -17,7 +18,7 @@
     <entries xsi:type="ilog.rules.studio.model.bom:ProjectBOMEntry" name="airline-core-rules" url="platform:/airline-core-rules" kind="RULE_PROJECT">
       <ruleProject href="airline-core-rules#7697c986-66ca-49ab-b9d0-000cf5809f41"/>
     </entries>
-    <entries xsi:type="ilog.rules.studio.model.bom:BOMEntry" name="su-ikm-model" url="platform:/SU-IKM-RULES/bom/su-ikm-model.bom" origin="xom:/SU-rules//SU-LK-XOM"/>
+    <entries xsi:type="ilog.rules.studio.model.bom:BOMEntry" name="su-ikm-model" url="platform:/SU-IKM-RULES/bom/su-ikm-model.bom" origin="xom:/SU-IKM-RULES/SU-IKM-XOM"/>
   </paths>
   <modelFolders xsi:type="ilog.rules.studio.model.base:SourceFolder">
     <name>rules</name>
