@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.base:RuleProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore" xmlns:ilog.rules.studio.model.bom="http://ilog.rules.studio/model/bom.ecore" xmlns:ilog.rules.studio.model.query="http://ilog.rules.studio/model/query.ecore" xmlns:ilog.rules.studio.model.rule="http://ilog.rules.studio/model/rule.ecore" xmlns:ilog.rules.studio.model.xom="http://ilog.rules.studio/model/xom.ecore" buildMode="DecisionEngine" isADecisionService="true" migrationFlag="3">
-  <name>SU-CHECK_ONLINE_REGISTRATION_AVAILABLE-RULES</name>
-  <uuid>5b8ba247-7143-4ebf-81ae-ff88baf89e37</uuid>
+  <name>SU-LK-RULES</name>
+  <uuid>8bba565f-4a40-42e0-b864-814d4d90a037</uuid>
   <outputLocation>output</outputLocation>
   <categories>any</categories>
   <rulesetProperties>{CustomExceptionHandler;ru.integrotech.su.exceptions.SURulesCustomExceptionHandler}| {AutomaticExceptionHandler;true}</rulesetProperties>
   <paths xsi:type="ilog.rules.studio.model.xom:XOMPath" pathID="XOM">
     <entries xsi:type="ilog.rules.studio.model.xom:LibraryXOMPathEntry" name="org.eclipse.jdt.launching.JRE_CONTAINER" url="file:org.eclipse.jdt.launching.JRE_CONTAINER" kind="LIBRARY" exported="false"/>
-    <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="SU-CHECK_ONLINE_REGISTRATION_AVAILABLE-XOM" url="platform:/SU-CHECK_ONLINE_REGISTRATION_AVAILABLE-XOM" kind="JAVA_PROJECT" exported="true"/>
-    <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="airline-core-rules" url="platform:/airline-core-rules" kind="RULE_PROJECT"/>
+    <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="airline-core-bom" url="platform:/airline-core-bom" kind="RULE_PROJECT" exported="true"/>
+    <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="airline-core-rules" url="platform:/airline-core-rules" kind="RULE_PROJECT" exported="true"/>
+    <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="SU-LK-XOM" url="platform:/SU-LK-XOM" kind="JAVA_PROJECT" exported="true"/>
   </paths>
   <paths xsi:type="ilog.rules.studio.model.bom:BOMPath" pathID="BOM">
+    <entries xsi:type="ilog.rules.studio.model.bom:ProjectBOMEntry" name="airline-core-bom" url="platform:/airline-core-bom" kind="RULE_PROJECT">
+      <ruleProject href="airline-core-bom#2a0cbb24-f27f-4f49-b9e0-0357e6de6d44"/>
+    </entries>
     <entries xsi:type="ilog.rules.studio.model.bom:ProjectBOMEntry" name="airline-core-rules" url="platform:/airline-core-rules" kind="RULE_PROJECT">
       <ruleProject href="airline-core-rules#7697c986-66ca-49ab-b9d0-000cf5809f41"/>
     </entries>
-    <entries xsi:type="ilog.rules.studio.model.bom:BOMEntry" name="su-check-online-reg-avail-model" url="platform:/SU-CHECK_ONLINE_REGISTRATION_AVAILABLE-RULES/bom/su-check-online-reg-avail-model.bom" origin="xom:/SU-CHECK_ONLINE_REGISTRATION_AVAILABLE-RULES//SU-CHECK_ONLINE_REGISTRATION_AVAILABLE-XOM"/>
+    <entries xsi:type="ilog.rules.studio.model.bom:BOMEntry" name="su-ikm-model" url="platform:/SU-LK-RULES/bom/su-ikm-model.bom" origin="xom:/SU-LK-RULES//SU-LK-XOM"/>
   </paths>
   <modelFolders xsi:type="ilog.rules.studio.model.base:SourceFolder">
     <name>rules</name>

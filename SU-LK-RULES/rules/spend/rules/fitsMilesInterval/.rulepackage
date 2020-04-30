@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>fitsMilesInterval</name>
+  <uuid>ed9bd430-746a-4a92-ae21-1b226f64a7cc</uuid>
+</ilog.rules.studio.model.base:RulePackage>

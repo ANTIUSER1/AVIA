@@ -1,5 +1,5 @@
 # Vocabulary Properties
-uuid = 9e393e7a-0897-483c-8cd2-26a4108f054c
+uuid = 9b1959e1-f395-452c-a986-f80a3767223e
 
 # ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable
 ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable#concept.label = check online registration available
@@ -9,7 +9,7 @@ ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.departureAirportCode
 ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.departureAirportCode#phrase.navigation = {departure airport code} of {this}
 ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.flightNumber#phrase.action = set the flight number of {this} to {flight number}
 ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.flightNumber#phrase.navigation = {flight number} of {this}
-ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.onlineRegistrationAvailable#phrase.action = make it {online registration available} that {this} is available
+ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.onlineRegistrationAvailable#phrase.action = make it {online registration available} that {this} is online registration available
 ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.onlineRegistrationAvailable#phrase.navigation = {this} is online registration available
 ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.passengerFlightInfo#phrase.action = set the passenger flight info of {this} to {passenger flight info}
 ru.integrotech.su.ioparams.CheckOnlineRegistrationAvailable.passengerFlightInfo#phrase.navigation = {passenger flight info} of {this}

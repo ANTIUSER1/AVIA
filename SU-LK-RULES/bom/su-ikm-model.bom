@@ -1,0 +1,124 @@
+
+property loadGetterSetterAsProperties "true"
+property origin "xom:/SU-LK-RULES//SU-LK-XOM"
+property uuid "cee201a5-27b7-4e4b-b716-fcc74e6111b9"
+package ru.integrotech.su.inputparams.spend;
+
+
+public class LocationInput
+{
+    public string locationCode;
+    public string locationType;
+    public LocationInput();
+    public static ru.integrotech.su.inputparams.spend.LocationInput of(string arg1, string arg2);
+}
+
+public class MilesInterval
+{
+    public int milesMax;
+    public int milesMin;
+    public MilesInterval();
+    public static ru.integrotech.su.inputparams.spend.MilesInterval of(int arg1, int arg2);
+    public string toString();
+}
+
+public class SpendInput
+{
+    public string awardType;
+    public ru.integrotech.su.common.spend.ClassOfService classOfService;
+    public ru.integrotech.su.inputparams.spend.LocationInput destination;
+    public boolean isOnlyAfl;
+    public object isRoundTrip;
+    public string lang;
+    public ru.integrotech.su.inputparams.spend.MilesInterval milesInterval;
+    public ru.integrotech.su.inputparams.spend.LocationInput origin;
+    public SpendInput();
+    public void initDefaultParameters();
+    public static ru.integrotech.su.inputparams.spend.SpendInput of(string arg1, string arg2, string arg3, string arg4, int arg5, int arg6, string arg7, string arg8, boolean arg9, java.lang.Boolean arg10);
+    public static ru.integrotech.su.inputparams.spend.SpendInput of();
+}
+
+package ru.integrotech.su.outputparams.spend;
+
+
+public class ResultMilesSpend
+{
+    public java.util.List awardRoutes domain 0,* class ru.integrotech.su.outputparams.spend.SpendRoute;
+    public ResultMilesSpend();
+    public static ru.integrotech.su.outputparams.spend.ResultMilesSpend of(java.util.List arg domain 0,* class ru.integrotech.su.outputparams.spend.SpendRoute);
+}
+
+public class ResultMilesSpendLk
+{
+    public java.util.List awardRoutes domain 0,* class ru.integrotech.su.outputparams.spend.SpendLkRoute;
+    public ResultMilesSpendLk();
+    public static ru.integrotech.su.outputparams.spend.ResultMilesSpendLk of(java.util.List arg domain 0,* class ru.integrotech.su.outputparams.spend.SpendLkRoute);
+}
+
+public class SpendBuilder
+{
+    public writeonly ru.integrotech.airline.core.airline.Airline afl;
+    public writeonly ru.integrotech.airline.searcher.BonusSearcher bonusSearcher;
+    public writeonly ru.integrotech.airline.register.RegisterCache cache;
+    public writeonly ru.integrotech.su.outputparams.route.RoutesBuilder routesBuilder;
+    public SpendBuilder();
+    public void bonusSummation(java.util.List arg domain 0,* class ru.integrotech.airline.core.flight.Route);
+    public ru.integrotech.su.outputparams.spend.ResultMilesSpend buildResult(ru.integrotech.su.inputparams.spend.SpendInput arg)
+                throws java.lang.Exception;
+    public ru.integrotech.su.outputparams.spend.ResultMilesSpend buildResult(java.util.List arg1 domain 0,* class ru.integrotech.airline.core.flight.Route, 
+        ru.integrotech.su.inputparams.spend.SpendInput arg2);
+    public java.util.List buildSpendRoutes(java.util.List arg1 domain 0,* class ru.integrotech.airline.core.flight.Route, 
+        ru.integrotech.su.inputparams.spend.SpendInput arg2) domain 0,* class ru.integrotech.su.outputparams.spend.SpendRoute;
+    public void executeAllFilters(java.util.List arg1 domain 0,* class ru.integrotech.airline.core.flight.Route, 
+        ru.integrotech.su.inputparams.spend.SpendInput arg2);
+    public void executeFiltersByCommonTypes(java.util.List arg1 domain 0,* class ru.integrotech.airline.core.flight.Route, 
+        ru.integrotech.su.inputparams.spend.SpendInput arg2);
+    public void executeFiltersByInputParams(java.util.List arg1 domain 0,* class ru.integrotech.airline.core.flight.Route, 
+        ru.integrotech.su.inputparams.spend.SpendInput arg2);
+    public void executeFiltersByMilesInterval(java.util.List arg1 domain 0,* class ru.integrotech.airline.core.flight.Route, 
+        ru.integrotech.su.inputparams.spend.SpendInput arg2);
+    public static java.lang.String[] getRegisterNames();
+    public java.util.List getRoutes(ru.integrotech.su.inputparams.spend.SpendInput arg)
+                throws java.lang.Exception domain 0,* class ru.integrotech.airline.core.flight.Route;
+    public java.util.List getRoutes(ru.integrotech.su.inputparams.spend.SpendInput arg1, string arg2)
+                throws java.lang.Exception domain 0,* class ru.integrotech.airline.core.flight.Route;
+    public ru.integrotech.airline.core.airline.ServiceClass.SERVICE_CLASS_TYPE getServiceClassType(ru.integrotech.su.inputparams.spend.SpendInput arg);
+    public java.util.List getSpendRoutes(ru.integrotech.su.inputparams.spend.SpendInput arg)
+                throws java.lang.Exception domain 0,* class ru.integrotech.su.outputparams.spend.SpendRoute;
+    public java.util.List getSpendRoutes(ru.integrotech.su.inputparams.spend.SpendInput arg1, string arg2)
+                throws java.lang.Exception domain 0,* class ru.integrotech.su.outputparams.spend.SpendRoute;
+    public static ru.integrotech.su.outputparams.spend.SpendBuilder of(ru.integrotech.airline.register.RegisterCache arg);
+    public void updateFitsMilesIntervals(java.util.List arg1 domain 0,* class ru.integrotech.airline.core.flight.Route, 
+        ru.integrotech.su.inputparams.spend.SpendInput arg2);
+}
+
+public class SpendLkBuilder
+{
+    public writeonly ru.integrotech.su.outputparams.spend.SpendBuilder spendBuilder;
+    public SpendLkBuilder();
+    public ru.integrotech.su.outputparams.spend.ResultMilesSpendLk buildResult(ru.integrotech.su.inputparams.spend.SpendInput arg)
+                throws java.lang.Exception;
+    public ru.integrotech.su.outputparams.spend.ResultMilesSpendLk buildResult(java.util.List arg1 domain 0,* class ru.integrotech.airline.core.flight.Route, 
+        ru.integrotech.su.inputparams.spend.SpendInput arg2);
+    public java.util.List buildSpendLkRoutes(java.util.List arg1 domain 0,* class ru.integrotech.su.outputparams.spend.SpendRoute, 
+        ru.integrotech.su.inputparams.spend.SpendInput arg2) domain 0,* class ru.integrotech.su.outputparams.spend.SpendLkRoute;
+    public java.util.List getRoutes(ru.integrotech.su.inputparams.spend.SpendInput arg)
+                throws java.lang.Exception domain 0,* class ru.integrotech.airline.core.flight.Route;
+    public java.util.List getSpendLkRoutes(ru.integrotech.su.inputparams.spend.SpendInput arg)
+                throws java.lang.Exception domain 0,* class ru.integrotech.su.outputparams.spend.SpendLkRoute;
+    public java.util.List getSpendLkRoutes(ru.integrotech.su.inputparams.spend.SpendInput arg1, string arg2)
+                throws java.lang.Exception domain 0,* class ru.integrotech.su.outputparams.spend.SpendLkRoute;
+    public static ru.integrotech.su.outputparams.spend.SpendLkBuilder of(ru.integrotech.su.outputparams.spend.SpendBuilder arg);
+    public void replaceUO(java.util.List arg domain 0,* class ru.integrotech.airline.core.flight.Route);
+}
+
+package ru.integrotech.su.utils;
+
+
+public class ValidatorSpend
+{
+    public ValidatorSpend();
+    public void validateHardDataSpend(ru.integrotech.su.inputparams.spend.SpendInput arg)
+                throws java.lang.Exception;
+}
+

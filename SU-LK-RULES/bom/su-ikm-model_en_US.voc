@@ -1,0 +1,72 @@
+# Vocabulary Properties
+uuid = cd70b95e-02d7-4217-8d95-d6d936d79d74
+
+# ru.integrotech.su.inputparams.spend.LocationInput
+ru.integrotech.su.inputparams.spend.LocationInput#concept.label = location input
+ru.integrotech.su.inputparams.spend.LocationInput.locationCode#phrase.action = set the location code of {this} to {location code}
+ru.integrotech.su.inputparams.spend.LocationInput.locationCode#phrase.navigation = {location code} of {this}
+ru.integrotech.su.inputparams.spend.LocationInput.locationType#phrase.action = set the location type of {this} to {location type}
+ru.integrotech.su.inputparams.spend.LocationInput.locationType#phrase.navigation = {location type} of {this}
+
+# ru.integrotech.su.inputparams.spend.MilesInterval
+ru.integrotech.su.inputparams.spend.MilesInterval#concept.label = miles interval
+ru.integrotech.su.inputparams.spend.MilesInterval.milesMax#phrase.action = set the miles max of {this} to {miles max}
+ru.integrotech.su.inputparams.spend.MilesInterval.milesMax#phrase.navigation = {miles max} of {this}
+ru.integrotech.su.inputparams.spend.MilesInterval.milesMin#phrase.action = set the miles min of {this} to {miles min}
+ru.integrotech.su.inputparams.spend.MilesInterval.milesMin#phrase.navigation = {miles min} of {this}
+
+# ru.integrotech.su.inputparams.spend.SpendInput
+ru.integrotech.su.inputparams.spend.SpendInput#concept.label = spend input
+ru.integrotech.su.inputparams.spend.SpendInput.awardType#phrase.action = set the award type of {this} to {award type}
+ru.integrotech.su.inputparams.spend.SpendInput.awardType#phrase.navigation = {award type} of {this}
+ru.integrotech.su.inputparams.spend.SpendInput.destination#phrase.action = set the destination of {this} to {destination}
+ru.integrotech.su.inputparams.spend.SpendInput.destination#phrase.navigation = {destination} of {this}
+ru.integrotech.su.inputparams.spend.SpendInput.isOnlyAfl#phrase.action = make it {only afl} that {this} is only afl
+ru.integrotech.su.inputparams.spend.SpendInput.isOnlyAfl#phrase.navigation = {this} is only afl
+ru.integrotech.su.inputparams.spend.SpendInput.isRoundTrip#phrase.action = make it {round trip} that {this} is round trip
+ru.integrotech.su.inputparams.spend.SpendInput.isRoundTrip#phrase.navigation = {this} is round trip
+ru.integrotech.su.inputparams.spend.SpendInput.lang#phrase.action = set the lang of {this} to {lang}
+ru.integrotech.su.inputparams.spend.SpendInput.lang#phrase.navigation = {lang} of {this}
+ru.integrotech.su.inputparams.spend.SpendInput.milesInterval#phrase.action = set the miles interval of {this} to {miles interval}
+ru.integrotech.su.inputparams.spend.SpendInput.milesInterval#phrase.navigation = {miles interval} of {this}
+ru.integrotech.su.inputparams.spend.SpendInput.origin#phrase.action = set the origin of {this} to {origin}
+ru.integrotech.su.inputparams.spend.SpendInput.origin#phrase.navigation = {origin} of {this}
+
+# ru.integrotech.su.outputparams.spend.ResultMilesSpend
+ru.integrotech.su.outputparams.spend.ResultMilesSpend#concept.label = result miles spend
+ru.integrotech.su.outputparams.spend.ResultMilesSpend.awardRoutes#phrase.action = set the award routes of {this} to {award route}
+ru.integrotech.su.outputparams.spend.ResultMilesSpend.awardRoutes#phrase.navigation = {award route} of {this}
+
+# ru.integrotech.su.outputparams.spend.ResultMilesSpendLk
+ru.integrotech.su.outputparams.spend.ResultMilesSpendLk#concept.label = result miles spend lk
+ru.integrotech.su.outputparams.spend.ResultMilesSpendLk.awardRoutes#phrase.action = set the award routes of {this} to {award route}
+ru.integrotech.su.outputparams.spend.ResultMilesSpendLk.awardRoutes#phrase.navigation = {award route} of {this}
+
+# ru.integrotech.su.outputparams.spend.SpendBuilder
+ru.integrotech.su.outputparams.spend.SpendBuilder#concept.label = spend builder
+ru.integrotech.su.outputparams.spend.SpendBuilder.afl#phrase.action = set the afl of {this} to {afl}
+ru.integrotech.su.outputparams.spend.SpendBuilder.bonusSummation(java.util.List)#phrase.action = {this}.bonusSummation({0})
+ru.integrotech.su.outputparams.spend.SpendBuilder.buildResult(java.util.List,ru.integrotech.su.inputparams.spend.SpendInput)#phrase.navigation = {this}.buildResult({0}, {1})
+ru.integrotech.su.outputparams.spend.SpendBuilder.buildResult(ru.integrotech.su.inputparams.spend.SpendInput)#phrase.navigation = {this}.buildResult({0})
+ru.integrotech.su.outputparams.spend.SpendBuilder.buildSpendRoutes(java.util.List,ru.integrotech.su.inputparams.spend.SpendInput)#phrase.navigation = {this}.buildSpendRoutes({0}, {1})
+ru.integrotech.su.outputparams.spend.SpendBuilder.cache#phrase.action = set the cache of {this} to {cache}
+ru.integrotech.su.outputparams.spend.SpendBuilder.executeFiltersByCommonTypes(java.util.List,ru.integrotech.su.inputparams.spend.SpendInput)#phrase.action = {this}.executeFiltersByCommonTypes({0}, {1})
+ru.integrotech.su.outputparams.spend.SpendBuilder.executeFiltersByInputParams(java.util.List,ru.integrotech.su.inputparams.spend.SpendInput)#phrase.action = {this}.executeFiltersByInputParams({0}, {1})
+ru.integrotech.su.outputparams.spend.SpendBuilder.executeFiltersByMilesInterval(java.util.List,ru.integrotech.su.inputparams.spend.SpendInput)#phrase.action = {this}.executeFiltersByMilesInterval({0}, {1})
+ru.integrotech.su.outputparams.spend.SpendBuilder.getRegisterNames()#phrase.navigation = the register name
+ru.integrotech.su.outputparams.spend.SpendBuilder.getRoutes(ru.integrotech.su.inputparams.spend.SpendInput)#phrase.navigation = {this}.getRoutes({0})
+ru.integrotech.su.outputparams.spend.SpendBuilder.getRoutes(ru.integrotech.su.inputparams.spend.SpendInput,java.lang.String)#phrase.navigation = {this}.getRoutes({0}, {1})
+ru.integrotech.su.outputparams.spend.SpendBuilder.getServiceClassType(ru.integrotech.su.inputparams.spend.SpendInput)#phrase.navigation = {this}.getServiceClassType({0})
+ru.integrotech.su.outputparams.spend.SpendBuilder.getSpendRoutes(ru.integrotech.su.inputparams.spend.SpendInput)#phrase.navigation = {this}.getSpendRoutes({0})
+ru.integrotech.su.outputparams.spend.SpendBuilder.getSpendRoutes(ru.integrotech.su.inputparams.spend.SpendInput,java.lang.String)#phrase.navigation = {this}.getSpendRoutes({0}, {1})
+ru.integrotech.su.outputparams.spend.SpendBuilder.updateFitsMilesIntervals(java.util.List,ru.integrotech.su.inputparams.spend.SpendInput)#phrase.action = {this}.updateFitsMilesIntervals({0}, {1})
+
+# ru.integrotech.su.outputparams.spend.SpendLkBuilder
+ru.integrotech.su.outputparams.spend.SpendLkBuilder#concept.label = spend lk builder
+ru.integrotech.su.outputparams.spend.SpendLkBuilder.buildResult(java.util.List,ru.integrotech.su.inputparams.spend.SpendInput)#phrase.navigation = {this}.buildResult({0}, {1})
+ru.integrotech.su.outputparams.spend.SpendLkBuilder.buildResult(ru.integrotech.su.inputparams.spend.SpendInput)#phrase.navigation = {this}.buildResult({0})
+ru.integrotech.su.outputparams.spend.SpendLkBuilder.replaceUO(java.util.List)#phrase.action = {this}.replaceUO({0})
+ru.integrotech.su.outputparams.spend.SpendLkBuilder.spendBuilder#phrase.action = set the spend builder of {this} to {spend builder}
+
+# ru.integrotech.su.utils.ValidatorSpend
+ru.integrotech.su.utils.ValidatorSpend#concept.label = validator spend
