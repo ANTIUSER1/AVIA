@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
-  <name>setTotalBonusMiles</name>
-  <uuid>d9a0f499-d738-400c-a68c-f334f3f99551</uuid>
-  <locale>en_US</locale>
-  <definition><![CDATA[then set the total bonus miles of the passenger miles info  
-	to the bonuse distance of the passenger miles info  	+ the additional distance of the passenger miles info  ; ]]></definition>
-</ilog.rules.studio.model.brl:ActionRule>

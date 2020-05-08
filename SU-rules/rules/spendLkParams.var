@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
-  <name>spendLkParams</name>
-  <uuid>472431b7-b337-4afb-a48a-e77d976c5180</uuid>
-  <variables name="spendLkBuilder" type="ru.integrotech.su.outputparams.spend.SpendLkBuilder" initialValue="" verbalization="spend lk builder"/>
-  <variables name="outputParamsLk" type="ru.integrotech.su.outputparams.spend.ResultMilesSpendLk" initialValue="" verbalization="outputParamsLk"/>
-  <variables name="inputParamsLk" type="ru.integrotech.su.inputparams.spend.SpendInput" initialValue="" verbalization="inputParamsLk"/>
-</ilog.rules.studio.model.base:VariableSet>
