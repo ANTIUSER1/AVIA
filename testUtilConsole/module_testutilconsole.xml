@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_testutilconsole" default="compile.module.testutilconsole">
+  <dirname property="module.testutilconsole.basedir" file="${ant.file.module_testutilconsole}"/>
+  
+  <property name="module.jdk.home.testutilconsole" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.testutilconsole" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.testutilconsole" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.testutilconsole" value="-encoding UTF-8 -source 8 -target 1.8 ${compiler.args}"/>
+  
+  <property name="testutilconsole.output.dir" value="${module.testutilconsole.basedir}/target/classes"/>
+  <property name="testutilconsole.testoutput.dir" value="${module.testutilconsole.basedir}/target/test-classes"/>
+  
+  <path id="testutilconsole.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="testutilconsole.module.production.classpath">
+    <path refid="${module.jdk.classpath.testutilconsole}"/>
+    <path refid="library.su-xom.classpath"/>
+    <path refid="library.maven:_log4j:log4j:1.2.17.classpath"/>
+    <path refid="library.maven:_junit:junit:4.12.classpath"/>
+    <path refid="library.maven:_org.hamcrest:hamcrest-core:1.3.classpath"/>
+    <path refid="library.maven:_com.google.code.gson:gson:2.8.6.classpath"/>
+    <path refid="library.log4j-1.2.17.classpath"/>
+  </path>
+  
+  <path id="testutilconsole.runtime.production.module.classpath">
+    <pathelement location="${testutilconsole.output.dir}"/>
+    <path refid="library.su-xom.classpath"/>
+    <path refid="library.maven:_log4j:log4j:1.2.17.classpath"/>
+    <path refid="library.maven:_junit:junit:4.12.classpath"/>
+    <path refid="library.maven:_org.hamcrest:hamcrest-core:1.3.classpath"/>
+    <path refid="library.maven:_com.google.code.gson:gson:2.8.6.classpath"/>
+    <path refid="library.log4j-1.2.17.classpath"/>
+  </path>
+  
+  <path id="testutilconsole.module.classpath">
+    <path refid="${module.jdk.classpath.testutilconsole}"/>
+    <pathelement location="${testutilconsole.output.dir}"/>
+    <path refid="library.su-xom.classpath"/>
+    <path refid="library.maven:_log4j:log4j:1.2.17.classpath"/>
+    <path refid="library.maven:_junit:junit:4.12.classpath"/>
+    <path refid="library.maven:_org.hamcrest:hamcrest-core:1.3.classpath"/>
+    <path refid="library.maven:_com.google.code.gson:gson:2.8.6.classpath"/>
+    <path refid="library.log4j-1.2.17.classpath"/>
+  </path>
+  
+  <path id="testutilconsole.runtime.module.classpath">
+    <pathelement location="${testutilconsole.testoutput.dir}"/>
+    <pathelement location="${testutilconsole.output.dir}"/>
+    <path refid="library.su-xom.classpath"/>
+    <path refid="library.maven:_log4j:log4j:1.2.17.classpath"/>
+    <path refid="library.maven:_junit:junit:4.12.classpath"/>
+    <path refid="library.maven:_org.hamcrest:hamcrest-core:1.3.classpath"/>
+    <path refid="library.maven:_com.google.code.gson:gson:2.8.6.classpath"/>
+    <path refid="library.log4j-1.2.17.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.testutilconsole">
+    <patternset refid="ignored.files"/>
+    <exclude name="out/**"/>
+    <exclude name="out/production/**"/>
+    <exclude name="out/production/testUtilConsole/**"/>
+    <exclude name="out/production/testUtilConsole/META-INF/**"/>
+    <exclude name="target/**"/>
+    <exclude name="target/generated-sources/**"/>
+    <exclude name="target/generated-sources/annotations/**"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.testutilconsole">
+    <patternset refid="excluded.from.module.testutilconsole"/>
+  </patternset>
+  
+  <path id="testutilconsole.module.sourcepath">
+    <dirset dir="${module.testutilconsole.basedir}/../../su-rules">
+      <include name="testUtilConsole/src/main/java"/>
+      <include name="testUtilConsole/src/main/resources"/>
+      <include name="testUtilConsole/target/classes"/>
+      <include name="testUtilConsole"/>
+    </dirset>
+  </path>
+  
+  <path id="testutilconsole.module.test.sourcepath">
+    <dirset dir="${module.testutilconsole.basedir}/../../su-rules">
+      <include name="testUtilConsole/src/test/java"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.testutilconsole" depends="compile.module.testutilconsole.production,compile.module.testutilconsole.tests" description="Compile module testUtilConsole"/>
+  
+  <target name="compile.module.testutilconsole.production" depends="register.custom.compilers" description="Compile module testUtilConsole; production classes">
+    <mkdir dir="${testutilconsole.output.dir}"/>
+    <javac2 destdir="${testutilconsole.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.testutilconsole}/javac">
+      <compilerarg line="${compiler.args.testutilconsole}"/>
+      <bootclasspath refid="testutilconsole.module.bootclasspath"/>
+      <classpath refid="testutilconsole.module.production.classpath"/>
+      <src refid="testutilconsole.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.testutilconsole"/>
+    </javac2>
+    
+    <copy todir="${testutilconsole.output.dir}">
+      <fileset dir="${module.testutilconsole.basedir}/src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.testutilconsole.basedir}/src/main/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.testutilconsole.basedir}/target/classes">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.testutilconsole.basedir}">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.testutilconsole.tests" depends="register.custom.compilers,compile.module.testutilconsole.production" description="compile module testUtilConsole; test classes" unless="skip.tests">
+    <mkdir dir="${testutilconsole.testoutput.dir}"/>
+    <javac2 destdir="${testutilconsole.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.testutilconsole}/javac">
+      <compilerarg line="${compiler.args.testutilconsole}"/>
+      <bootclasspath refid="testutilconsole.module.bootclasspath"/>
+      <classpath refid="testutilconsole.module.classpath"/>
+      <src refid="testutilconsole.module.test.sourcepath"/>
+      <patternset refid="excluded.from.compilation.testutilconsole"/>
+    </javac2>
+    
+    <copy todir="${testutilconsole.testoutput.dir}">
+      <fileset dir="${module.testutilconsole.basedir}/src/test/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="clean.module.testutilconsole" description="cleanup module">
+    <delete dir="${testutilconsole.output.dir}"/>
+    <delete dir="${testutilconsole.testoutput.dir}"/>
+  </target>
+</project>
