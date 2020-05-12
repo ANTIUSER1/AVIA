@@ -11,8 +11,7 @@
 
 	<modules>
 		<module>airline-core-xom</module>
-		<module>SU-xom</module>
-		<module>SU-rules</module>
+		<module>SU-tests</module>
 	</modules>
 
 	<build>

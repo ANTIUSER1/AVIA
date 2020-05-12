@@ -2,9 +2,11 @@
 <classpath>
 	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/SU-xom"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/airline-core-xom"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/gson-2.8.5"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Junit4"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SU-IKM-XOM"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SU-ATTRACTIONAB-XOM"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SU-LK-XOM"/>
 	<classpathentry kind="output" path="target/test/SU-tests"/>
 </classpath>

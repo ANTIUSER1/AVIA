@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
-  <name>byAwardType</name>
-  <uuid>bbb74f2b-77ac-4560-b530-c3265bd74d66</uuid>
-</ilog.rules.studio.model.base:RulePackage>

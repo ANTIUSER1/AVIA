@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
-  <name>validatorVariables</name>
-  <uuid>0569014f-0eff-41f5-8a66-ca50cc1aa189</uuid>
-  <variables name="validatorCharge" type="ru.integrotech.su.utils.ValidatorCharge" initialValue="" verbalization="validatorCharge"/>
-  <variables name="validatorSpend" type="ru.integrotech.su.utils.ValidatorSpend" initialValue="" verbalization="validatorSpend"/>
-</ilog.rules.studio.model.base:VariableSet>

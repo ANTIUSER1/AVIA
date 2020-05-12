@@ -12,7 +12,7 @@
 
     <artifactId>SU-tests</artifactId>
     <packaging>jar</packaging>
-	
+
     <build>
         <sourceDirectory>test</sourceDirectory>
         <plugins>
@@ -27,18 +27,20 @@
     </build>
 	
 	<dependencies>
-		<dependency>
-			<groupId>${project.groupId}</groupId>
-			<artifactId>SU-xom</artifactId>
-			<type>jar</type>
-			<version>${project.version}</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+
+       	<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
 			<version>2.8.5</version>
 		</dependency>
-	</dependencies>
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13</version>
+        </dependency>
+
+    </dependencies>
 
 </project>
