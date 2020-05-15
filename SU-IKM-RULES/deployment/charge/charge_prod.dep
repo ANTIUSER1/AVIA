@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="ikm" ruleAppVersion="2.0" managingXom="true" production="true">
+  <name>charge_prod</name>
+  <uuid>82693b08-822a-4c4b-80a7-6c50dbea659d</uuid>
+  <targets label="odm-kzn-prod-1"/>
+  <targets label="odm-kzn-prod-2"/>
+  <targets label="odm-msk-prod-1"/>
+  <targets label="odm-msk-prod-2"/>
+  <operations operationName="chargeRules">
+    <operation href="chargeRules.dop#ee22f04a-0e2f-402b-aac5-f1326fba3474"/>
+    <properties key="ruleset.version">
+      <value><![CDATA[1.0]]></value>
+    </properties>
+  </operations>
+  <versionPolicies label="Увеличить номера второстепенных версий" ruleset="INCREMENT_MINOR" default="true" recurrent="true">
+    <description><![CDATA[Обновляет второстепенную версию для каждого набора правил. Делает доступной новую версию, но сохраняет предыдущие.]]></description>
+  </versionPolicies>
+  <versionPolicies label="Использовать базовые номера версий" recurrent="true">
+    <description><![CDATA[Использовать номера, указанные в конфигурации развертывания. Этот выпуск заменяет собой последнюю версию каждого набора правил. Используется для оперативных исправлений или разработки.]]></description>
+  </versionPolicies>
+  <versionPolicies label="Номера версий определяются пользователем" ruleset="MANUAL" recurrent="true">
+    <description><![CDATA[Позволяет вам вручную указать собственные номера версий. Используется для оперативных исправлений или обновлений до раннего выпуска.]]></description>
+  </versionPolicies>
+</com.ibm.rules.studio.model.decisionservice:Deployment>
