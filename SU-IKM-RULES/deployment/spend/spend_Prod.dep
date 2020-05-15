@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="aflBonus" managingXom="true" production="true">
-  <name>spendProd</name>
+<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="ikm" ruleAppVersion="2.0" managingXom="true" production="true">
+  <name>spend_Prod</name>
   <uuid>e6a87cb9-015b-40f0-ad56-d5f59dea26b1</uuid>
   <targets label="odm-kzn-prod-1"/>
   <targets label="odm-kzn-prod-2"/>

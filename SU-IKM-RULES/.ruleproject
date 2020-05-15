@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ilog.rules.studio.model.base:RuleProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore" xmlns:ilog.rules.studio.model.bom="http://ilog.rules.studio/model/bom.ecore" xmlns:ilog.rules.studio.model.query="http://ilog.rules.studio/model/query.ecore" xmlns:ilog.rules.studio.model.rule="http://ilog.rules.studio/model/rule.ecore" xmlns:ilog.rules.studio.model.xom="http://ilog.rules.studio/model/xom.ecore" buildMode="DecisionEngine" isADecisionService="true" migrationFlag="3">
+<ilog.rules.studio.model.base:RuleProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore" xmlns:ilog.rules.studio.model.bom="http://ilog.rules.studio/model/bom.ecore" xmlns:ilog.rules.studio.model.xom="http://ilog.rules.studio/model/xom.ecore" buildMode="DecisionEngine" isADecisionService="true" migrationFlag="3">
   <name>SU-IKM-RULES</name>
   <uuid>589bed8c-1e6b-4ad3-aa0b-40d95f794d5e</uuid>
   <outputLocation>output</outputLocation>
@@ -11,7 +11,7 @@
     <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="airline-core-rules" url="platform:/airline-core-rules" kind="RULE_PROJECT" exported="true"/>
     <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="SU-IKM-XOM" url="platform:/SU-IKM-XOM" kind="JAVA_PROJECT" exported="true"/>
   </paths>
-  <paths xsi:type="ilog.rules.studio.model.bom:BOMPath" pathID="BOM">
+  <paths xsi:type="ilog.rules.studio.model.bom:BOMPath" pathID="BOM" pathEntriesModified="true">
     <entries xsi:type="ilog.rules.studio.model.bom:ProjectBOMEntry" name="airline-core-bom" url="platform:/airline-core-bom" kind="RULE_PROJECT">
       <ruleProject href="airline-core-bom#2a0cbb24-f27f-4f49-b9e0-0357e6de6d44"/>
     </entries>
@@ -25,12 +25,6 @@
   </modelFolders>
   <modelFolders xsi:type="ilog.rules.studio.model.bom:BOMFolder">
     <name>bom</name>
-  </modelFolders>
-  <modelFolders xsi:type="ilog.rules.studio.model.rule:TemplateFolder">
-    <name>templates</name>
-  </modelFolders>
-  <modelFolders xsi:type="ilog.rules.studio.model.query:QueryFolder">
-    <name>queries</name>
   </modelFolders>
   <modelFolders xsi:type="ilog.rules.studio.model.base:ResourceFolder">
     <name>resources</name>
