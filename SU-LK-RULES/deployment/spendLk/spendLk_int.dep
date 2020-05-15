@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="aflBonus" managingXom="true" production="true">
-  <name>chargeLoyaltyProd</name>
-  <uuid>53cac0b3-70e8-4f1c-94cc-59a23c0a5dd1</uuid>
-  <targets label="odm-kzn-prod-1"/>
-  <targets label="odm-kzn-prod-2"/>
-  <targets label="odm-msk-prod-1"/>
-  <targets label="odm-msk-prod-2"/>
-  <operations operationName="chargeLoyaltyRule">
-    <operation href="chargeLoyaltyRule.dop#6228ab57-2918-45a7-b04d-708f85cd6d7b"/>
+<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="lk_int" ruleAppVersion="2.0" managingXom="true">
+  <name>spendLk_int</name>
+  <uuid>750837b5-6192-47c0-9a3a-7f6eebe49fd4</uuid>
+  <targets label="Local Server"/>
+  <targets label="Test Server"/>
+  <operations operationName="spendLkRules">
+    <operation href="spendLkRules.dop#3677dab6-2820-489a-ae71-ac361d1b0ae2"/>
     <properties key="ruleset.version">
       <value><![CDATA[1.0]]></value>
     </properties>
