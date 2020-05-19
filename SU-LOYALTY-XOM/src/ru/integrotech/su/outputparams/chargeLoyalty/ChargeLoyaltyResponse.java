@@ -2,14 +2,16 @@ package ru.integrotech.su.outputparams.chargeLoyalty;
 
 //
 import ru.integrotech.airline.core.info.PassengerLoyaltyInfo;
+import ru.integrotech.su.exceptions.PKLExceptionSimple;
 
 public class ChargeLoyaltyResponse {
 
-	public static ChargeLoyaltyResponse of(PassengerLoyaltyInfo info) {
+	public static ChargeLoyaltyResponse of(PassengerLoyaltyInfo info)
+			throws Exception {
 		ChargeLoyaltyResponse result = new ChargeLoyaltyResponse();
 		if (info.getErrCode() != null || info.getErrMessage() != null) {
 			result.setErrCode(info.getErrCode());
-			result.setErrMessage(info.getErrMessage());
+			throw new PKLExceptionSimple(info.getErrMessage());
 		} else {
 			result.setData(Data.of(info));
 		}
