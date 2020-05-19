@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="surules" managingXom="true" production="true">
-  <name>checkOnlineRegAvailProd</name>
-  <uuid>492cea3a-c70b-453f-9c65-0ad157beb9da</uuid>
-  <targets label="odm-kzn-prod-1"/>
-  <targets label="odm-kzn-prod-2"/>
-  <targets label="odm-msk-prod-1"/>
-  <targets label="odm-msk-prod-2"/>
-  <operations operationName="checkOnlineRegAvail.dop">
-    <operation href="checkOnlineRegAvail.dop#6a227056-0241-4755-a99f-c795109f383d"/>
+<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="pkl_int" ruleAppVersion="2.0" managingXom="true">
+  <name>chargeLoyalty_int</name>
+  <uuid>c6350708-5b81-424f-97a9-2e1f88be80c3</uuid>
+  <targets label="Local Server"/>
+  <targets label="Test Server"/>
+  <operations operationName="chargeLoyaltyRule">
+    <operation href="chargeLoyaltyRule.dop#6228ab57-2918-45a7-b04d-708f85cd6d7b"/>
     <properties key="ruleset.version">
       <value><![CDATA[1.0]]></value>
     </properties>

@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="ikmUtils" managingXom="true" production="true">
-  <name>grouping-prod</name>
-  <uuid>e8cd5788-fb67-4f61-b347-8ad100ee0fd0</uuid>
-  <targets label="odm-kzn-prod-1"/>
-  <targets label="odm-kzn-prod-2"/>
-  <targets label="odm-msk-prod-1"/>
-  <targets label="odm-msk-prod-2"/>
-  <operations operationName="calcGrouping">
-    <operation href="calcGrouping.dop#51144efe-18e4-4f71-94ac-e15ee4995eb0"/>
+<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="lk_int" ruleAppVersion="2.0" managingXom="true">
+  <name>spendLk_int</name>
+  <uuid>750837b5-6192-47c0-9a3a-7f6eebe49fd4</uuid>
+  <targets label="Local Server"/>
+  <targets label="Test Server"/>
+  <operations operationName="spendLkRules">
+    <operation href="spendLkRules.dop#3677dab6-2820-489a-ae71-ac361d1b0ae2"/>
     <properties key="ruleset.version">
       <value><![CDATA[1.0]]></value>
     </properties>

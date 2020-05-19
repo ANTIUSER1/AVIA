@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="onlinereg_int" ruleAppVersion="2.0" managingXom="true">
+  <name>checkOnlineRegAvail_Int</name>
+  <uuid>70c04f22-3e06-4e00-b3a5-2f15f4a68023</uuid>
+  <targets label="Local Server"/>
+  <targets label="Test Server"/>
+  <operations operationName="checkOnlineRegAvail.dop">
+    <operation href="checkOnlineRegAvail.dop#6a227056-0241-4755-a99f-c795109f383d"/>
+    <properties key="ruleset.version">
+      <value><![CDATA[1.0]]></value>
+    </properties>
+  </operations>
+  <versionPolicies label="Увеличить номера второстепенных версий" ruleset="INCREMENT_MINOR" recurrent="true">
+    <description><![CDATA[Обновляет второстепенную версию для каждого набора правил. Делает доступной новую версию, но сохраняет предыдущие.]]></description>
+  </versionPolicies>
+  <versionPolicies label="Использовать базовые номера версий" recurrent="true">
+    <description><![CDATA[Использовать номера, указанные в конфигурации развертывания. Этот выпуск заменяет собой последнюю версию каждого набора правил. Используется для оперативных исправлений или разработки.]]></description>
+  </versionPolicies>
+  <versionPolicies label="Номера версий определяются пользователем" ruleset="MANUAL" default="true" recurrent="true">
+    <description><![CDATA[Позволяет вам вручную указать собственные номера версий. Используется для оперативных исправлений или обновлений до раннего выпуска.]]></description>
+  </versionPolicies>
+</com.ibm.rules.studio.model.decisionservice:Deployment>

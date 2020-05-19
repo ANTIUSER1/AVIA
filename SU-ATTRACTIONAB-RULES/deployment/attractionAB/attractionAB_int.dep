@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="aflBonus" managingXom="true" production="true">
-  <name>spendLkProd</name>
-  <uuid>713d9dde-0302-4ca5-8553-75d718fae866</uuid>
-  <targets label="odm-kzn-prod-1"/>
-  <targets label="odm-kzn-prod-2"/>
-  <targets label="odm-msk-prod-1"/>
-  <targets label="odm-msk-prod-2"/>
-  <operations operationName="spendLkRules">
-    <operation href="spendLkRules.dop#3677dab6-2820-489a-ae71-ac361d1b0ae2"/>
+<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="attractionAB_int" ruleAppVersion="2.0" managingXom="true">
+  <name>attractionAB_int</name>
+  <uuid>d8c75848-9a48-48be-86b2-f800c831272f</uuid>
+  <targets label="Local Server"/>
+  <targets label="Test Server"/>
+  <operations operationName="attractionABJava">
+    <operation href="attractionABJava.dop#4a3f457c-a095-49e5-9f1a-a7d3905530c4"/>
     <properties key="ruleset.version">
       <value><![CDATA[1.0]]></value>
     </properties>

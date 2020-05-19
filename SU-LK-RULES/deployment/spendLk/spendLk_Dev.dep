@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="aflBonus" managingXom="true">
-  <name>chargeLoyaltyTest</name>
-  <uuid>1fb06433-0d9e-46ed-a297-95de8ea2215f</uuid>
+<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="lk_dev" ruleAppVersion="2.0" managingXom="true">
+  <name>spendLk_Dev</name>
+  <uuid>3cdc12d6-8f30-439a-9008-b7c36ae7ee90</uuid>
   <targets label="Local Server"/>
   <targets label="Test Server"/>
-  <operations operationName="chargeLoyaltyRule">
-    <operation href="chargeLoyaltyRule.dop#6228ab57-2918-45a7-b04d-708f85cd6d7b"/>
+  <operations operationName="spendLkRules">
+    <operation href="spendLkRules.dop#3677dab6-2820-489a-ae71-ac361d1b0ae2"/>
     <properties key="ruleset.version">
       <value><![CDATA[1.0]]></value>
     </properties>
